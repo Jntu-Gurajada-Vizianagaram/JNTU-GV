@@ -9,7 +9,7 @@ To preview the JNTUGV website locally on your machine, follow these steps:
 1. **Clone the Repository**: You can clone this repository to your local machine using the following command:
    
 ```bash
-git clone https://github.com/JNTU-GV-WEBSITE/FRONTEND.git
+git clone https://github.com/Jntu-Gurajada-Vizianagaram/JNTU-GV.git
 ```
 **Install Dependencies:** Navigate into the cloned repository's directory and install the necessary dependencies using npm:
 ``` bash
