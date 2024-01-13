@@ -1,0 +1,55 @@
+
+.Policies{
+    width: 30%;
+}
+.Policies-Heading h4{
+    color:#f95c39;
+    text-transform: uppercase;
+    display: inline-block;
+    border-bottom: 1px solid #f95c39;
+    margin:1rem 0 10px 2rem;
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2    ;
+}
+.Policies  li{
+    list-style: none;
+    padding: 7px 0;
+    border-bottom: 1px solid #e1e1e1;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+.Policies a{
+    color: #2a5dc8;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: transparent;
+}
+.Policies  a .fa{
+    margin-right: 10px;
+    margin-bottom: 2px;
+    
+}
+.fa{
+    font-family: 'Font Awesome 5 Free';
+    transition: color 0.3s ease-in-out;
+}
+
+.Policies li:hover a {
+    color:#f95c39;
+ }
+ @media screen and (max-width:400px) {
+    .Policies{
+        width: 90%;
+    }
+    .Policies a{
+        color: #2a5dc8;
+        text-transform: uppercase;
+        font-weight: 700;
+
+    } 
+   
+ }

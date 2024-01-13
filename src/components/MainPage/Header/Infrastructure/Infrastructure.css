@@ -1,0 +1,186 @@
+/* Add this to your Infrastructure.css file */
+
+.mainImageGallery {
+  max-width: 80%; /* Adjust the max-width as needed */
+}
+
+.infra-table {
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  .infra-table th, .infra-table td {
+    border: 1px solid #281d1d;
+    padding: 8px;
+    text-align: left;
+  }
+
+  
+  
+  /* Add this to style Library working hours table */
+  .working-hours-table {
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  .working-hours-table th, .working-hours-table td {
+    border: 1px solid #281d1d;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .custom-table {
+    border-collapse: collapse;
+    width: 80%;
+  }
+
+  .custom-table th, .custom-table td {
+    border: 1px solid #281d1d;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .staff-table {
+    border-collapse: collapse;
+    width: 80%;
+  }
+
+  .staff-table th, .staff-table td {
+    border: 1px solid #281d1d;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .BI{
+    color: #2e0669;
+  }
+
+  .image {
+    height: 400px;
+    width: 80vw;
+  }
+  .mainImageGallery {
+    background-color: transparent;
+  }
+  
+  .mianDivIG {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .carouselText {
+    background-color: #690001;
+    width: max-content;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .girls-hostel {
+    border-collapse: collapse;
+    width: 80%;
+  }
+
+  .girls-hostel th, .girls-hostel td {
+    border: 1px solid #281d1d;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .boys-hostel {
+    border-collapse: collapse;
+    width: 80%;
+  }
+
+  .boys-hostel th, .boys-hostel td {
+    border: 1px solid #281d1d;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .supporting-staff {
+    border-collapse: collapse;
+    width: 80%;
+  }
+
+  .supporting-staff th, .supporting-staff td {
+    border: 1px solid #281d1d;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .sports {
+    border-collapse: collapse;
+    width: 80%;
+  }
+
+  .sports th, .sports td {
+    border: 1px solid #281d1d;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .doctors-table {
+    border-collapse: collapse;
+    width: 80%;
+  }
+
+  .doctors-table th, .doctors-table td {
+    border: 1px solid #281d1d;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .supporting-staff {
+    border-collapse: collapse;
+    width: 80%;
+  }
+
+  .supporting-staff th, .supporting-staff td {
+    border: 1px solid #281d1d;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .bank-logo {
+    width: 500px;
+    height: 300px; 
+  }
+
+  .canteen-logo {
+    width: 500px;
+    height: 300px; 
+  }
+
+  .image-container {
+    display: flex;
+  }
+  
+  .sq-logo {
+    width: 500px; /* Adjust the width as needed */
+    height: 300px;
+    margin: 10px; /* Adjust the margin as needed */
+  }
+
+  .image-container {
+    display: flex;
+  }
+  
+  .sac-logo {
+    width: 500px; /* Adjust the width as needed */
+    height: 300px;
+    margin: 10px; /* Adjust the margin as needed */
+  }
+  
+  .gh-logo {
+    width: 500px;
+    height: 300px; 
+  }
+
+  @media (max-width: 767px) {
+  
+    .image{
+      height: 200px;
+    }
+  }
+  
+

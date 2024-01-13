@@ -1,0 +1,78 @@
+.videoTab{
+    margin-left: 25px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+.videoTabCon1{
+    width: 32%;
+    border: 10px;
+    margin-right:15px ;
+    height: 50vh;
+
+}
+
+.videoTabCon2{
+
+    width: 32%;
+    border: 10px;
+    margin-right: 15px;
+}
+
+.videoTabCon3{
+    width: 32%;
+    border: 10px;
+    margin-right:15px ;
+
+}
+
+.fetchVideo{
+    height: 100%;
+    width: 100%;
+}
+
+.videoText{
+    font-weight: 600;
+    font-size: large;
+}
+
+@media (max-width: 767px) {
+    .videoTab{
+        flex-direction: column;
+        width: 100vw;
+        height: fit-content;
+        padding: 0px;
+        margin-left: 0px;
+    }
+    .videoTabCon1{
+        width: 100%;
+        margin-bottom:15px ;
+        height: 50vh;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px;
+
+    }
+    
+    .videoTabCon2{
+        width: 100%;
+        height: 50vh;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-bottom:15px ;
+        padding: 0px;
+
+    }
+    
+    .videoTabCon3{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        height: 50vh;
+        padding: 0px;
+
+    
+    }
+    
+}

@@ -1,0 +1,23 @@
+.required{
+    color: red;
+}
+.cont{
+    display: inline-block;
+    margin: 2vw 25vw;
+}
+
+@media(max-width:900px) {
+    .cont{
+        margin: 0;
+    }
+    .w-50{
+        font-size: 80%;
+        min-width: 100%;
+    }
+    .form-control{
+        max-width: 100%;
+    }
+    .container{
+        min-width: 100%;
+    }
+}

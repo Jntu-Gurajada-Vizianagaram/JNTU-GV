@@ -1,0 +1,301 @@
+.AD-Main {
+  display: flex;
+  flex-direction: column;
+  padding-left: 120px;
+  padding-top: 70px;
+}
+
+.ADallLeftMenu {
+  margin-top: 10px;
+  margin-right: 60px;
+}
+
+.ADallLeftMenu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-weight: bold;
+}
+
+.ADallLeftMenu a.active {
+  color: white; /* Change the active link color as desired */
+}
+
+.allRightContentHeading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #2e0669;
+}
+
+.ADimg img {
+  width: 350px;
+  height: 350px;
+}
+
+.ADh3 {
+  margin: 0;
+  font-size: 25px;
+  margin-top: 10px;
+  color: rgb(20, 6, 63);
+  font-weight: bold;
+}
+
+.ADh4 {
+  margin: 0;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.ADp {
+  font-size: 17px;
+}
+
+.ADhr {
+  border: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+/* Button structure */
+.ADallLeftMenu {
+  display: flex;
+  gap: 70px;
+}
+
+/* Default button style */
+.ADallLeftMenu .menuButton {
+  width: 240px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #370a68;
+  background: #fff;
+}
+
+.profileName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-Image img {
+  width: 242px;
+  height: 242px;
+  border-radius: 242px;
+  background: linear-gradient(158deg, #380f6c 15.34%, #54b0e5 89%);
+}
+
+.profile-Image {
+  height: 260px;
+  width: 260px;
+  border-radius: 260px;
+  background: linear-gradient(158deg, #380f6c 15.34%, #54b0e5 89%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileName h3 {
+  padding-top: 20px;
+  color: var(--531679, #531679);
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.profileName h4 {
+  color: #626262;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 600px;
+  color: var(--primary, #5c5757);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 90px;
+}
+
+.profileDetailsVC {
+  width: 760px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--primary, #5c5757);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 90px;
+}
+
+.profileDetails p {
+  color: var(--primary, #5c5757);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.allRightContent-Profile {
+  display: flex;
+  margin-top: 90px;
+  margin-left: 100px;
+  margin-bottom: 100px;
+}
+
+/* Hover state */
+.ADallLeftMenu .menuButton:hover {
+  background-color: #370a68;
+  color: #fff;
+}
+
+/* Selected state */
+.ADallLeftMenu .menuButton.active {
+  background-color: #2e0669;
+  box-shadow: 0px 4px 22px 0px rgba(123, 124, 134, 0.36);
+}
+
+.a {
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(20, 6, 63);
+}
+.registar-1 {
+  width: 760px;
+  height: 120px;
+  flex-shrink: 0;
+  color: var(--primary, #5c5757);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.registar-2 {
+  width: 655px;
+  /* height: 260px; */
+  flex-shrink: 0;
+  color: var(--primary, #5c5757);
+  font-family: "Poppins", sans-seri;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  padding-bottom: 30px;
+}
+.registar-3,
+.registar-4,
+.registar-5 {
+  padding-bottom: 30px;
+}
+.registar-2 .AD-sub {
+  text-decoration: none;
+  color: #0e0d0d;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.registar-3 .AD-sub {
+  text-decoration: none;
+  color: #0e0d0d;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.registar-4 .AD-sub {
+  text-decoration: none;
+  color: #0e0d0d;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+}
+.registar-5 .AD-sub {
+  text-decoration: none;
+  color: #0e0d0d;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.AD-icon {
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .AD-Main {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+
+  .allRightContent-Profile {
+    margin-left: 0px;
+    margin-top: 30px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .profileDetails {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .registar-1,
+  .registar-2,
+  .registar-3,
+  .registar-4,
+  .registar-5 {
+    width: 100%;
+    height: auto;
+  }
+
+  .ADallLeftMenu .menuButton {
+    width: 120px;
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .ADallLeftMenu {
+    margin-left: 40px;
+    justify-content: space-around;
+    gap: 5px;
+  }
+
+  .profileDetailsVC {
+    width: 100%;
+    margin-left: 0px;
+  }
+}

@@ -1,0 +1,36 @@
+.tableProgramOffered {
+  height: 90vh;
+  width: 80vw;
+  padding-top: 10px;
+  margin-bottom: 50px;
+}
+.searchProgramsOffered {
+  width: 100%;
+}
+.headProgramsOffered {
+  color: #370A68;
+  font-weight: 600;
+  font-size: 26px;
+  width: 400px;
+}
+
+.searchTextProgramsOffered {
+  width: 30%;
+  padding-bottom: 0.5rem;
+  margin-left: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  .searchProgramsOffered {
+    width: 100%;
+  }
+  .tableProgramOffered {
+    height: 80vh;
+    width: 100%;
+  }
+  .searchTextProgramsOffered {
+    width: 50%;
+    padding-bottom: 0.5rem;
+    margin-left: 55%;
+  }
+}

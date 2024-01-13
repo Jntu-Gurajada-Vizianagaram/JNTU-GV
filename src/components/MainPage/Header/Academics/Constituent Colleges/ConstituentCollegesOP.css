@@ -1,0 +1,32 @@
+.allRightContentAOP{
+  margin-top: 10px;
+
+}
+
+.clgnamediv {
+  width: 100px;
+  height: 10vh;
+  text-decoration: none;
+  color: #2e0669;
+  margin-left: 100px;
+  margin-top: 10px;
+}
+
+.clgdiv {
+  margin-top: -20px;
+}
+
+.clgheaddiv {
+  color: #370A68;
+  font-weight: 500;
+  font-size: 26px;
+  /* width: 400px; */
+}
+
+.clgtextdivOP {
+  background-color: whitesmoke;
+  height: 40px;
+  padding: 10px;
+  font-weight: 400;
+  font-size: medium;
+}

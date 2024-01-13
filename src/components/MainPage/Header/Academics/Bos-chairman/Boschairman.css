@@ -1,0 +1,36 @@
+.tableBoschairman {
+    height: 90vh;
+    width: 80vw;
+    padding-top: 10px;
+  }
+  .searchBoschairman {
+    width: 100%;
+  }
+  .headBoschairman {
+    color: #370A68;
+    font-weight: 600;
+    font-size: 26px;
+    width: 400px;
+  }
+  
+  .searchTextBoschairman {
+    width: 30%;
+    padding-bottom: 0.5rem;
+    margin-left: 50%;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .searchBoschairman {
+      width: 100%;
+    }
+    .tableBoschairman {
+      height: 80vh;
+      width: 100%;
+    }
+    .searchTextBoschairman {
+      width: 50%;
+      padding-bottom: 0.5rem;
+      margin-left: 55%;
+    }
+  }
+  

@@ -1,0 +1,112 @@
+
+
+
+.allLeftMenu {
+  list-style-type: none;
+  padding: 0;
+  margin-right: 20px;
+  margin-left: 30px;
+}
+
+.allLeftMenu a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-weight: bold;
+}
+
+.allLeftMenu a.active {
+  color: rgb(9, 9, 9); /* Change the active link color as desired */
+}
+
+.allRightContent {
+  flex-grow: 1;
+}
+
+.allRightContentHeading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #2e0669;
+}
+
+.profileImage {
+  height: 350px;
+  width: 350px;
+}
+
+.ADh3 {
+  margin: 0;
+  font-size: 20px;
+  margin-top: 10px;
+  color: rgb(6, 6, 93);
+  font-weight: bold;
+}
+
+.ADh4 {
+  margin: 0;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.ADp {
+  font-size: 17px;
+}
+
+.ADsub {
+  text-decoration: underline;
+  color: rgb(14, 14, 174);
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.ADhr {
+  border: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+/* Button structure */
+.allLeftMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Default button style */
+.allLeftMenu .menuButton {
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  width: 300px; /* Set a fixed width for your buttons */
+  height: 60px; /* Set a fixed height for your buttons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hover state */
+.allLeftMenu .menuButton:hover {
+  background-color: #690001;
+}
+
+/* Selected state */
+.allLeftMenu .menuButton.active {
+  background-color: #690001;
+}
+
+.exam-main {
+  display: flex;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .exam-main {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,11 @@
+
+
+
+@media (max-width: 767px)  {
+
+    .newsNUpdates{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}

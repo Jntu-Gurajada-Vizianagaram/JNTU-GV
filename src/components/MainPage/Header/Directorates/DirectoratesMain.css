@@ -1,0 +1,88 @@
+.AD-Main-DM {
+  display: flex;
+  /* flex-direction: row; */
+  /* padding-left: 120px; */
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.ADall-LeftMenu {
+  /* margin-top: 10px; */
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.ADall-LeftMenu {
+  margin-top: 10px;
+  margin-right: 60px;
+}
+
+.ADall-LeftMenu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-weight: bold;
+}
+
+.ADall-LeftMenu a.active {
+  color: white; /* Change the active link color as desired */
+}
+
+.ADall-LeftMenu .menuButton {
+  width: 240px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #370a68;
+  background: #fff;
+}
+
+.ADall-LeftMenu .menuButton:hover {
+  background-color: #370a68;
+  color: #fff;
+}
+
+/* Selected state */
+.ADall-LeftMenu .menuButton.active {
+  background-color: #2e0669;
+  box-shadow: 0px 4px 22px 0px rgba(123, 124, 134, 0.36);
+}
+
+.allRightContentProfile {
+  display: block;
+}
+
+.ADimg {
+}
+@media screen and (max-width: 600px) {
+  .AD-Main-DM {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+
+  .allRightContentProfile {
+    margin-left: 0px;
+    margin-top: 30px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ADall-LeftMenu .menuButton {
+    /* width: 120px; */
+    gap: 10px;
+    padding: 5px;
+  }
+}

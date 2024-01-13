@@ -1,0 +1,52 @@
+.allRightContentHolderHeading {
+  color: #370A68;
+  font-weight: 600;
+  font-size: 26px;
+  width: 400px;
+  margin-top: 10px;
+
+}
+.allRightContentHolderContent h6 {
+  /* text-decoration: underline; */
+  font-style: italic;
+  font-weight: 600;
+  /* color: #2e0669; */
+}
+.allRightContentHolderContent p {
+  font-size: 16px;
+  /* letter-spacing: 0.3px; */
+  line-height: 30px;
+  text-align: justify;
+}
+
+
+@media (max-width: 767px) {
+  .actualContainer {
+    flex-direction: column;
+    /* margin-left: 4px; */
+  }
+
+  .allRightContentHolder {
+    width: 95%;
+  }
+  .allRightContentHolderContent{
+    padding:0 5px 0 0;
+  }
+
+  .allRightContentHolderContent h3 {
+    font-size: 18px;
+  }
+
+  .allRightContentHolderContent p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .allRightContentHolderHeading {
+    font-weight: 600;
+    font-size: 26px;
+    width: auto;
+    margin-top: 10px;
+
+  
+  }
+}
