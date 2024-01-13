@@ -50,13 +50,16 @@ function ContactUs() {
           </Typography>
         </RoundedPaper>
       </div>
-
+      
       <iframe
         title="JNTU Vizianagaram Campus Map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.2779091876973!2d83.37309837464375!3d18.151107380356674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3bef0baf9f2a11%3A0xdb0b518115b27e07!2sJNTU-GV%20COLLEGE%20OF%20ENGINEERING%20VIZIANAGARAM!5e0!3m2!1sen!2sin!4v1705165640046!5m2!1sen!2sin"
         width="1100px"
         height="500px"
+        allowfullscreen="true"
+        loading="lazy"
         className="contact-map"
-        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Jawaharlal%20Nehru%20Technological%20University-Gurajada%20College%20Engineering%20Vizianagaram,%20Nh%2043,%20Dwarapudi%20(Post),%20Vizianagaram,%20Andhra%20Pradesh,%20Andhra%20Pradesh%20535003+(Jawaharlal%20Nehru%20Technological%20University-Gurajada%20College%20of%20Engineering%20Vizianagaram)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+        referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
 
       {/* Additional Contact Section */}
