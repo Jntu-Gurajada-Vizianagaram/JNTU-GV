@@ -354,7 +354,7 @@ const Dropdown = () => {
               {" "}
               <Link
                 className="link-btn"
-                to="https://results.jntugv.edu.in"
+                to="https://results.jntukucev.ac.in/"
                 target="_blank"
               >
                 Examination Results
