@@ -74,7 +74,6 @@ function ContactUs() {
               <EmailIcon fontSize="medium" color="primary" /> vc@jntugv.edu.in
             </Typography>
           </RoundedPaper>
-
           {/* Member 2 */}
           <RoundedPaper elevation={2} className="paper-details">
             <Typography variant="h6">
