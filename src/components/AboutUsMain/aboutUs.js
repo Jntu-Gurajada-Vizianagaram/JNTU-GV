@@ -38,14 +38,13 @@ const AboutUs = () => {
 
         <StyledCard>
           <img src={vc} alt="chancellor" className="aboutUs-image" />
-          <p className="aboutUs-name">Prof. Dr. K. Venkatasubbaiah</p>
+          <p className="aboutUs-name">Prof. K. Venkatasubbaiah</p>
           <p className="aboutUs-designation">Hon’ble Vice Chancellor</p>
         </StyledCard>
 
         <StyledCard>
           <img src={registrar} alt="chancellor" className="aboutUs-image" />
-
-          <p className="aboutUs-name">Prof. Dr. G. Jaya Suma</p>
+          <p className="aboutUs-name">Prof. G. Jaya Suma</p>
           <p className="aboutUs-designation">M.Tech (CS&T), Ph.D(CSE)</p>
           <p className="aboutUs-designation">Registrar </p>
         </StyledCard>
