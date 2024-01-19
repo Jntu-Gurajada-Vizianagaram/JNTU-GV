@@ -1,5 +1,14 @@
 export const Data = [
   {
+    description: `Republic Day Notification`,
+    type: "notifications",
+    link: "https://drive.google.com/file/d/1l9r_jPsZRNsp3Ur_0vYC6pgvDVCqeuCw/view?usp=sharing",
+    date: "11",
+    month: "Jan",
+    year: "2024",
+    isLink: true,
+  },
+  {
     description: `Invitation for the inaugural function of University Formation Day Celebrations on 12th January 2024`,
     type: "notifications",
     link: "https://drive.google.com/file/d/1oPfsHV3Tqjce_mQ0rvtd6o5o2seQbAA9/view?usp=sharing",

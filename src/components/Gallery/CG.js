@@ -34,6 +34,13 @@ import gal35 from "../../assets/Gallery/gal35.jpg";
 import gal36 from "../../assets/Gallery/gal36.jpg";
 import gal37 from "../../assets/Gallery/gal37.jpg";
 
+import gal38 from "../../assets/Gallery/gal38.jpg";
+import gal39 from "../../assets/Gallery/gal39.jpg";
+import gal40 from "../../assets/Gallery/gal40.jpg";
+import gal41 from "../../assets/Gallery/gal41.jpg";
+
+
+
 export const CG = [
   {
     image: gal28,
@@ -172,9 +179,17 @@ export const CG = [
     description: "Celebrating release of New Year Calenders at JNTUGV",
   },
   {
+    image: gal40,
+    description: "Celebrating University Formation day 2024",
+  }, {
+    image: gal41,
+    description: "Celebrating University Formation day 2024",
+  },
+  {
     image: gal34,
     description: "Distributing Certificates to the Students at JNTUGV",
   },
+
   {
     image: gal35,
     description: "Team JNTU-GV in Inter University Cricket tournament ",
@@ -184,8 +199,14 @@ export const CG = [
     description: "Team JNTU-GV in Inter University Cricket tournament ",
   },
   {
+    image: gal38,
+    description: "Celebrating University Formation day 2024",
+  }, {
+    image: gal39,
+    description: "Celebrating University Formation day 2024",
+  },
+  {
     image: gal37,
     description: "Team JNTU-GV in Inter University Cricket tournament ",
   },
-
 ];

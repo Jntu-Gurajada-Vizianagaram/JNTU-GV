@@ -10,13 +10,12 @@ import Expo from "../../assets/ImageGalleryPictures/Expo.JPG";
 import imagegallery from "../../assets/ImageGalleryPictures/imageGallery6.jpg";
 import image7 from "../../assets/ImageGalleryPictures/Image7.jpg";
 import image1 from "../../assets/ImageGalleryPictures/image1.jpg";
-import gal27 from "../../assets/ImageGalleryPictures/gal27.jpeg";
 import image8 from "../../assets/ImageGalleryPictures/image8.jpg";
-import banner from "../../assets/ImageGalleryPictures/banner.png";
+import image9 from "../../assets/ImageGalleryPictures/image9.jpg";
+
 
 const images = [
-  banner,
-  gal27,
+  image9,
   image8,
   image1,
   TeachersDay,
