@@ -1,5 +1,14 @@
 export const Data = [
   {
+    description: `R&D-Ph.D-Research Scholars-RRM-Circular`,
+    type: "notifications",
+    link: "https://drive.google.com/file/d/1hF7xBCjh9u4cZHr-ml8Lkp0YHH80zSmc/view?usp=sharing",
+    date: "23",
+    month: "Jan",
+    year: "2024",
+    isLink: true,
+  },
+  {
     description: `Revised Academic Calendar for B. Tech I Year II Semester`,
     type: "notifications",
     link: "https://drive.google.com/file/d/1-8rE6GsyCJn5RBXjHFR-zqkwM0W68mQR/view?usp=sharing",
