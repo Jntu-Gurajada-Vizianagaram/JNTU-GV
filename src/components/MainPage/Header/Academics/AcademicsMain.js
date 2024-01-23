@@ -48,12 +48,12 @@ const AcademicsMain = () => {
           BOS Chairman
         </Link>
         <Link
-          to="calender"
+          to="Calendar"
           className={`menubutton ${
-            location.pathname === "/academics/calender" ? "active" : ""
+            location.pathname === "/academics/Calendar" ? "active" : ""
           }`}
         >
-        Academic Calender
+        Academic Calendar
         </Link>
         <Link
           to="academic-syllabus"

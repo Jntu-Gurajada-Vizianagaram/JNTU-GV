@@ -1,5 +1,14 @@
 export const Data = [
   {
+    description: `Revised Academic Calendar for B. Tech I Year II Semester`,
+    type: "notifications",
+    link: "https://drive.google.com/file/d/1-8rE6GsyCJn5RBXjHFR-zqkwM0W68mQR/view?usp=sharing",
+    date: "23",
+    month: "Jan",
+    year: "2024",
+    isLink: true,
+  },
+  {
     description: `Invitation for the inaugural function of University Formation Day Celebrations on 12th January 2024`,
     type: "notifications",
     link: "https://drive.google.com/file/d/1oPfsHV3Tqjce_mQ0rvtd6o5o2seQbAA9/view?usp=sharing",

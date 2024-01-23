@@ -17,22 +17,23 @@ import "./Calender.css";
 const data = [
   {
     sno: 1,
+    Title: " Revised Academic Calendar for B. Tech I Year II Semester",
+    pdfLink:
+      "https://drive.google.com/file/d/1-8rE6GsyCJn5RBXjHFR-zqkwM0W68mQR/view?usp=sharing",
+  },
+  {
+    sno: 2,
     Title: "Academic Calendar for B.Tech IV-Year",
     pdfLink:
       "https://drive.google.com/file/d/1eekBCszWGkxrJFDxNgDpabta75U2UpUy/view",
   },
   {
-    sno: 2,
+    sno: 3,
     Title: "Academic Calendar for B.Tech III Year II Semester ",
     pdfLink:
       "https://drive.google.com/file/d/11OXj7YlOOWJC61BwbhOVX2YkvqY4L_5v/view",
   },
-  {
-    sno: 3,
-    Title: "Academic Calendar for B. Tech I Year II Semester",
-    pdfLink:
-      "https://drive.google.com/file/d/1-8rE6GsyCJn5RBXjHFR-zqkwM0W68mQR/view?usp=sharing",
-  },
+
   {
     sno: 4,
     Title: "Academic Calendar M.Tech l Year",
@@ -89,7 +90,7 @@ const data = [
 const Calender = () => {
   return (
     <div className="Calender">
-      <div className="calender-title"> Academic Calender</div>
+      <div className="calender-title"> Academic Calendar</div>
       <Accordion
         elevation={20}
         defaultExpanded
@@ -102,7 +103,7 @@ const Calender = () => {
           sx={{ background: "#370A68", color: "white" }}
         >
           <Typography sx={{ width: "50%", flexShrink: 0 }}>
-            2023-2024 Academic Calender
+            2023-2024 Academic Calendar
           </Typography>
         </AccordionSummary>
         <AccordionDetails>

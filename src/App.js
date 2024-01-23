@@ -92,7 +92,7 @@ function App() {
           <Route path="affliated-colleges" element={<AffliatedCollegesOP />} />
           <Route path="bos-chairman" element={<Boschairman />} />
 
-          <Route path="calender" element={<Calender />} />
+          <Route path="Calendar" element={<Calender />} />
           <Route path="academic-syllabus" element={<Syllabus />} />
         </Route>
         <Route path="/administration" element={<AdministrationMain />}>
