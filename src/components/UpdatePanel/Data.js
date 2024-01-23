@@ -2,7 +2,7 @@ export const Data = [
   {
     description: `R&D-Ph.D-Research Scholars-RRM-Circular`,
     type: "notifications",
-    link: "https://drive.google.com/file/d/1hF7xBCjh9u4cZHr-ml8Lkp0YHH80zSmc/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1j7Zid_yNRMZHx2vJVp3VZbL8RwYIMHJ2/view?usp=sharing",
     date: "23",
     month: "Jan",
     year: "2024",
