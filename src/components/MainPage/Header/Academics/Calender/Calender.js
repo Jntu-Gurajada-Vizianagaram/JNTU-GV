@@ -23,58 +23,63 @@ const data = [
   },
   {
     sno: 2,
-    Title: "Academic Calendar for B.Tech III Year II-Semester ",
+    Title: "Academic Calendar for B.Tech III Year II Semester ",
     pdfLink:
       "https://drive.google.com/file/d/11OXj7YlOOWJC61BwbhOVX2YkvqY4L_5v/view",
   },
-
   {
     sno: 3,
-    Title: "Academic Calendar-M.Tech-l-Year",
+    Title: "Academic Calendar for B. Tech I Year II Semester",
+    pdfLink:
+      "https://drive.google.com/file/d/1-8rE6GsyCJn5RBXjHFR-zqkwM0W68mQR/view?usp=sharing",
+  },
+  {
+    sno: 4,
+    Title: "Academic Calendar M.Tech l Year",
     pdfLink:
       "https://drive.google.com/file/d/18SIawj2DntYndNAsjXLA7-3s1f-23G9q/view",
   },
 
   {
-    sno: 4,
+    sno: 5,
     Title: "Academic Calendar for B.Pharmacy I Year",
     pdfLink:
       "https://drive.google.com/file/d/19Zkp0k64ouvlYw2awLs7IY408OqsZcbA/view",
   },
   {
-    sno: 5,
+    sno: 6,
     Title: "Academic Calendar for B.Pharmacy II Year",
     pdfLink:
       "https://drive.google.com/file/d/1IrawmiHcz5rP2le0Q5pXrNyt75psQnzH/view",
   },
 
   {
-    sno: 6,
+    sno: 7,
     Title: "Academic Calendar for Pharm-D I Year",
     pdfLink:
       "https://drive.google.com/file/d/1WP--NiUYNNfPR1nJrqGR5bOEQsP84s7b/view",
   },
   {
-    sno: 7,
+    sno: 8,
     Title: "Academic Calendar for Pharm-D II Year",
     pdfLink:
       "https://drive.google.com/file/d/1C98jPJyDk3AY9ZgcZ0l2YCfmxzBIq9y5/view",
   },
   {
-    sno: 8,
+    sno: 9,
     Title: "Academic Calendar for Pharm-D III Year",
     pdfLink:
       "https://drive.google.com/file/d/1KTU0LGyTzSQN6SwKRTiUoCC8HYkxP56H/view",
   },
 
   {
-    sno: 9,
+    sno: 10,
     Title: "Academic Calendar for MBA & MCA",
     pdfLink:
       "https://drive.google.com/file/d/12h7w_EuGdnR3gqAEyM68HcLmUIx26qaI/view",
   },
   {
-    sno: 10,
+    sno: 11,
     Title: "Academic Calendar for M-Tech & M-Pharmacy",
     pdfLink:
       "https://drive.google.com/file/d/18SIawj2DntYndNAsjXLA7-3s1f-23G9q/view",
