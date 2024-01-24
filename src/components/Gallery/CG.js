@@ -33,11 +33,13 @@ import gal34 from "../../assets/Gallery/gal34.jpg";
 import gal35 from "../../assets/Gallery/gal35.jpg";
 import gal36 from "../../assets/Gallery/gal36.jpg";
 import gal37 from "../../assets/Gallery/gal37.jpg";
-
 import gal38 from "../../assets/Gallery/gal38.jpg";
 import gal39 from "../../assets/Gallery/gal39.jpg";
 import gal40 from "../../assets/Gallery/gal40.jpg";
 import gal41 from "../../assets/Gallery/gal41.jpg";
+import gal42 from "../../assets/Gallery/gal42.jpg";
+import gal43 from "../../assets/Gallery/gal43.jpg";
+
 
 
 
@@ -201,12 +203,26 @@ export const CG = [
   {
     image: gal38,
     description: "Celebrating University Formation day 2024",
-  }, {
+  },
+  {
     image: gal39,
     description: "Celebrating University Formation day 2024",
   },
+
+  {
+    image: gal42,
+    description: "JNTU-GV men's chess team in the Inter South Zone Competition",
+  },
+  {
+    image: gal43,
+    description: "JNTU-GV men's chess team in the Inter South Zone Competition",
+  },
+
   {
     image: gal37,
     description: "Team JNTU-GV in Inter University Cricket tournament ",
   },
+
+
+
 ];
