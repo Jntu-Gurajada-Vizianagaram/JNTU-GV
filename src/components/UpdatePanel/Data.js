@@ -3,7 +3,7 @@ export const Data = [
     description: `AP Development Dialogue JNTUGV`,
     type: "notifications",
     link: "https://drive.google.com/file/d/11eAmiga7tl0diSIGHzLntck6dFooV-j3/view?usp=sharing",
-    date: "28",
+    date: "27",
     month: "Jan",
     year: "2024",
     isLink: true,
