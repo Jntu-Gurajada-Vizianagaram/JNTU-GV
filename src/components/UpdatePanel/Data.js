@@ -1,5 +1,16 @@
 export const Data = [
   {
+    description: `AP Development Dialogue JNTUGV`,
+    type: "notifications",
+    link: "https://drive.google.com/file/d/11eAmiga7tl0diSIGHzLntck6dFooV-j3/view?usp=sharing",
+    date: "23",
+    month: "Jan",
+    year: "2024",
+    isLink: true,
+  },
+
+
+  {
     description: `R&D-Ph.D-Research Scholars-RRM-Circular`,
     type: "notifications",
     link: "https://drive.google.com/file/d/1j7Zid_yNRMZHx2vJVp3VZbL8RwYIMHJ2/view?usp=sharing",
