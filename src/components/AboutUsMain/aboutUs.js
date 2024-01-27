@@ -18,6 +18,7 @@ const AboutUs = () => {
     height: "350px",
     flexShrink: " 0",
     alignItems: "center",
+    justifyItems: "center",
 
     "@media (max-width: 600px)": {
       width: "300px",

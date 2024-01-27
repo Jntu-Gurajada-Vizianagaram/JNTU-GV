@@ -10,7 +10,7 @@
   color: white;
   font-size: 36px;
   margin: 20px 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* Rest of your CSS styles */
@@ -46,10 +46,11 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100%)); /* Adjust the value to eliminate any gap */
+    transform: translateX(
+      calc(-100%)
+    ); /* Adjust the value to eliminate any gap */
   }
 }
-
 
 .enlarged-image {
   position: fixed;

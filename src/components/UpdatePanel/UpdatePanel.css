@@ -6,6 +6,7 @@
   display: flex;
   gap: 74px;
   justify-content: center;
+  padding-bottom: 40px;
 }
 
 .updatesContainer {
@@ -19,8 +20,8 @@
   overflow-y: scroll;
 }
 
-.notifications-title{
-  font-family: 'Inter', sans-serif;
+.notifications-title {
+  font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;
   color: #2e0669;
@@ -42,6 +43,7 @@
   top: 0;
   border-radius: 7px;
   justify-content: space-around;
+  margin-top: 95px;
 }
 
 .updateBox {
@@ -61,8 +63,10 @@
   border: 0.08rem solid #2e0669;
   border-radius: 0.2rem;
   display: inline-flex;
+  width: 65px;
   height: 70%;
   font-size: 14px;
+  justify-content: center;
 }
 
 .dateDiv {
@@ -74,6 +78,7 @@
 }
 
 .monYear {
+  padding-top: 5px;
   margin-left: 0.2rem;
   display: inline-block;
   justify-content: center;
@@ -128,8 +133,7 @@
     margin: 0.5rem 0.5rem 0.5rem 1px;
   }
 
-  .updatesContainer{
+  .updatesContainer {
     width: 100vw;
   }
-
 }

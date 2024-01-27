@@ -12,15 +12,12 @@ import NewsAndEvents from "./components/NewsAndEvents/NewsAndEvents";
 function Homepage() {
   return (
     <div>
-     
       <ImageGallery />
       <AboutUs />
       {/* <Scrollbar className="update-panel"/> */}
       <UpdatePanel className="update-panel" />
       <NewsAndEvents />
       <Gallery />
-      <br />
-      
     </div>
   );
 }

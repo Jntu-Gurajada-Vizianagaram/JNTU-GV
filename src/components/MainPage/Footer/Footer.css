@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   background-image: url(../../../assets/footer.svg);
-  background-size: cover; 
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   color: aliceblue;
+  padding-top: 20px;
 }
 
 .container1Footer {
@@ -113,7 +114,6 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  
 }
 
 .BelowBar-links {
@@ -127,7 +127,7 @@
   color: white;
 }
 
-.Below-Social-links:hover{
+.Below-Social-links:hover {
   transform: scale(1.5);
 }
 
