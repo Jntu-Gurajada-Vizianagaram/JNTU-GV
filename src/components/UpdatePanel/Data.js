@@ -1,5 +1,15 @@
 export const Data = [
   {
+    description: `Republic Day Images`,
+    type: "notifications",
+    link: "republic-day",
+    date: "29",
+    month: "Jan",
+    year: "2024",
+    isLink: true,
+  },
+
+  {
     description: `AP Development Dialogue JNTUGV`,
     type: "notifications",
     link: "https://drive.google.com/file/d/11eAmiga7tl0diSIGHzLntck6dFooV-j3/view?usp=sharing",
@@ -8,7 +18,6 @@ export const Data = [
     year: "2024",
     isLink: true,
   },
-
 
   {
     description: `R&D-Ph.D-Research Scholars-RRM-Circular`,
@@ -55,7 +64,8 @@ export const Data = [
     month: "Dec",
     year: "2023",
     isLink: true,
-  }, {
+  },
+  {
     description: `Revised Academic calanders for B. Tech III year II Semester AY 2023-24`,
     type: "notifications",
     link: "https://drive.google.com/file/d/11OXj7YlOOWJC61BwbhOVX2YkvqY4L_5v/view?usp=drivesdk",
@@ -72,7 +82,8 @@ export const Data = [
     month: "Dec",
     year: "2023",
     isLink: true,
-  }, {
+  },
+  {
     description: `Revaluation of I B. Tech I Semester Supplementary Examinations July -2023 `,
     type: "notifications",
     link: "https://drive.google.com/file/d/19XoZcL50EhcyfsF-XW0zLGmTT-B9okty/view?usp=sharing",
@@ -80,7 +91,8 @@ export const Data = [
     month: "Dec",
     year: "2023",
     isLink: true,
-  }, {
+  },
+  {
     description: `Application form for Revaluation`,
     type: "notifications",
     link: "https://drive.google.com/file/d/1ORgylAzE_1NJ9lkjOGlhEDghv2vSP6yu/view?usp=sharing",
@@ -97,7 +109,8 @@ export const Data = [
     month: "Dec",
     year: "2023",
     isLink: true,
-  }, {
+  },
+  {
     description: `Revaluation of I B. Tech I Semester Supplementary Examinations July -2023 `,
     type: "examination",
     link: "https://drive.google.com/file/d/19XoZcL50EhcyfsF-XW0zLGmTT-B9okty/view?usp=sharing",
@@ -105,7 +118,8 @@ export const Data = [
     month: "Dec",
     year: "2023",
     isLink: true,
-  }, {
+  },
+  {
     description: `Application form for Revaluation`,
     type: "examination",
     link: "https://drive.google.com/file/d/1ORgylAzE_1NJ9lkjOGlhEDghv2vSP6yu/view?usp=sharing",
@@ -127,7 +141,8 @@ export const Data = [
     description: `Pre-Ph.D. Examination-2023-Notification`,
     type: "notifications",
     link: "https://drive.google.com/file/d/1cJrdKJ7GP0HumNrP7M1Iq2YFVRXWu4S5/view?usp=sharing",
-    displaylink: " https://docs.google.com/forms/d/10BCpsGBxsfzIkqQgXdR21DIdu37DedMqMsAiHMdyoCY/edit?pli=1",
+    displaylink:
+      " https://docs.google.com/forms/d/10BCpsGBxsfzIkqQgXdR21DIdu37DedMqMsAiHMdyoCY/edit?pli=1",
     displaytext: "Register",
     date: "14",
     month: "Dec",
@@ -162,7 +177,8 @@ export const Data = [
     month: "Dec",
     year: "2023",
     isLink: true,
-  }, {
+  },
+  {
     description: "JNTUGV_3-1-R20 Supple TIME TABLE December 2023",
     type: "notifications",
     link: "https://drive.google.com/file/d/16EPIsRX3jeRbI2e-MZMaV9O6pG_-aOF9/view?usp=sharing",
@@ -170,7 +186,8 @@ export const Data = [
     month: "Dec",
     year: "2023",
     isLink: true,
-  }, {
+  },
+  {
     description: "JNTUGV_3-1-R19 Supple TIME TABLE December 2023",
     type: "notifications",
     link: "https://drive.google.com/file/d/1Tp8iVEUmHyTjRvKleICh8M9TBC5Yjnox/view?usp=sharing",
@@ -187,7 +204,8 @@ export const Data = [
     month: "Dec",
     year: "2023",
     isLink: true,
-  }, {
+  },
+  {
     description: "JNTUGV_3-1-R20 Supple TIME TABLE December 2023",
     type: "examination",
     link: "https://drive.google.com/file/d/16EPIsRX3jeRbI2e-MZMaV9O6pG_-aOF9/view?usp=sharing",
@@ -195,7 +213,8 @@ export const Data = [
     month: "Dec",
     year: "2023",
     isLink: true,
-  }, {
+  },
+  {
     description: "JNTUGV_3-1-R19 Supple TIME TABLE December 2023",
     type: "examination",
     link: "https://drive.google.com/file/d/1Tp8iVEUmHyTjRvKleICh8M9TBC5Yjnox/view?usp=sharing",
@@ -214,7 +233,8 @@ export const Data = [
     isLink: true,
   },
   {
-    description: "JNTUGV-DAA-UGC 2(f), 12(B) and Autonomous Status-Change of Affiliation from JNTUK, Kakinada to JNTUGV, Vizianagaram",
+    description:
+      "JNTUGV-DAA-UGC 2(f), 12(B) and Autonomous Status-Change of Affiliation from JNTUK, Kakinada to JNTUGV, Vizianagaram",
     type: "notifications",
     link: "https://drive.gooexaminationle.com/file/d/1MoCjsG1Fb_bLTgt-tZxuEzFDOMRHm0gQ/view?usp=sharing",
     date: "06",
@@ -239,7 +259,8 @@ export const Data = [
     month: "Nov",
     year: "2023",
     isLink: true,
-  }, {
+  },
+  {
     description: "IV-I B.Tech R16 Supple-Time Table-Dec-2023 ",
     type: "examination",
     link: "https://drive.google.com/file/d/1vIXgi5138lBTyPm1rIR-kX36Tbll8u9x/view?usp=sharing",
@@ -256,7 +277,8 @@ export const Data = [
     month: "Nov",
     year: "2023",
     isLink: true,
-  }, {
+  },
+  {
     description: "Revised IV-I B.Tech R20 Regular-Time Table-Dec-2023",
     type: "examination",
     link: "https://drive.google.com/file/d/19fQCUNwdVYZ96kRgH7q12H3uz2nNoZXz/view?usp=sharing",
@@ -282,8 +304,10 @@ export const Data = [
     month: "Nov",
     year: "2023",
     isLink: true,
-  }, {
-    description: "Academic Calendar for I Year Pharma D for the Academic Year 2023-24",
+  },
+  {
+    description:
+      "Academic Calendar for I Year Pharma D for the Academic Year 2023-24",
     type: "notifications",
     link: "https://drive.google.com/file/d/1WP--NiUYNNfPR1nJrqGR5bOEQsP84s7b/view?usp=sharing",
     date: "28",
@@ -292,7 +316,8 @@ export const Data = [
     isLink: true,
   },
   {
-    description: "Academic Calendar for I Year B Pharmacy for the Academic Year 2023-24 ",
+    description:
+      "Academic Calendar for I Year B Pharmacy for the Academic Year 2023-24 ",
     type: "notifications",
     link: "https://drive.google.com/file/d/19Zkp0k64ouvlYw2awLs7IY408OqsZcbA/view?usp=sharing",
     date: "28",

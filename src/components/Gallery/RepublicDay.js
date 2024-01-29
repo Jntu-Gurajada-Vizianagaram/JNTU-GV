@@ -3,6 +3,8 @@ import IconButton from "@mui/material/IconButton";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import "./RepublicDay.css";
+import { Link } from "react-router-dom";
+import { MdOutlineArrowBackIos } from "react-icons/md";
 
 const importAll = (r) => r.keys().map(r);
 const imageContext = require.context(
@@ -26,7 +28,12 @@ const RepublicDay = () => {
   };
 
   return (
-    <div className="republic-day-main">
+    <div className="republic-day-main" >
+      <Link to="/gallery" className="back-to-home">
+        <MdOutlineArrowBackIos />
+        Back to Gallery
+      </Link>
+
       <div className="rp-scroll-container">
         <div className="rp-imagescroll">
           {images.map((image, index) => (
@@ -43,7 +50,13 @@ const RepublicDay = () => {
         </div>
       </div>
 
-      <div style={{ display: "flex", justifyContent: "center", paddingTop:"30px" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: "30px",
+        }}
+      >
         <div className="rp-icons">
           <IconButton onClick={handlePrevClick}>
             <ChevronLeftIcon />
