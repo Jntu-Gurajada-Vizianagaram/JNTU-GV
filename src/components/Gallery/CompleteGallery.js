@@ -19,15 +19,18 @@ function CompleteGallery() {
   return (
     <div className="complete-gallery-container">
       <h1>Gallery of JNTUGV</h1>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <Link to="/" className="back-to-home">
-          <MdOutlineArrowBackIos />
-          Back to Homepage
+
+      <Link to="/" className="back-to-home">
+        <MdOutlineArrowBackIos />
+        Back to Homepage
+      </Link>
+      <div>
+        <Link to="/republic-day" className="republic-day">
+          Republic Day Images
         </Link>
       </div>
       {/* Link to the homepage */}
       <div className="image-grid">
-        
         {images.map((imageObj, index) => (
           <div key={index} className="image-wrapper">
             <img
