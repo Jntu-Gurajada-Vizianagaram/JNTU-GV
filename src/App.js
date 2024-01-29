@@ -67,6 +67,7 @@ import MusicClub from "./components/MainPage/Header/Infrastructure/MusicClub/Mus
 import Studentactivityclub from "./components/MainPage/Header/Infrastructure/Studentactivityclub/Studentactivityclub";
 import Footer from "./components/MainPage/Footer/Footer";
 import Dropdown from "./components/MainPage/Header/Dropdown";
+import RepublicDay from "./components/Gallery/RepublicDay";
 
 
 function App() {
@@ -141,6 +142,7 @@ function App() {
         <Route path="/grievance-form" element={<Grievance />} />
         <Route path="/news-and-events" element={<NewsAndEvents/>} />
         <Route path="/gallery" element={<CompleteGallery />} />
+        <Route path="/republic-day" element={<RepublicDay />} />
 
         <Route path="/infrastructure" element={<InfrastructureMain />}>
           <Route path="about-library" element={<Library />} />
