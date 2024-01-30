@@ -1,0 +1,70 @@
+.republic-day-main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.rp-imagescroll {
+  display: flex;
+  overflow-x: scroll;
+  width: 100vw;
+}
+
+.rp-thumbnail {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc;
+}
+.back-to-home{
+  padding-left: 10px;
+}
+
+.back-to-home:hover {
+  /* padding-left: 10px; */
+  transform: scale(1.1);
+}
+
+.rp-thumbnail img {
+  width: 100px; /* Adjust the width as needed */
+  height: 10vh;
+}
+
+.rp-thumbnail.active {
+  border-color: #007bff;
+}
+
+.rp-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Adjust the font size as needed */
+  cursor: pointer;
+  color: #000; /* Icon color */
+  margin: 0 10px; /* Adjust margin as needed */
+}
+
+.rp-icons:hover {
+  color: #007bff; /* Change color on hover if desired */
+}
+
+@media only screen and (max-width: 768px) {
+  .rp-imagescroll {
+    /* width: 100%; */
+    height: 100px;
+  }
+
+  .rp-thumbnail img {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px;
+  }
+
+  .rp-imageDisplay img {
+    width: 80vw;
+    height: 40vh;
+  }
+
+  .rp-icons {
+    margin: 0px;
+  }
+}
