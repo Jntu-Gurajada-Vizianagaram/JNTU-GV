@@ -4,13 +4,12 @@ import "./ImageGallery.css";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TeachersDay from "../../assets/ImageGalleryPictures/TeachersDay.jpg";
-import Expo from "../../assets/ImageGalleryPictures/Expo.JPG";
 import imagegallery from "../../assets/ImageGalleryPictures/imageGallery6.jpg";
 import image7 from "../../assets/ImageGalleryPictures/Image7.jpg";
 import image1 from "../../assets/ImageGalleryPictures/image1.jpg";
+import image6 from "../../assets/ImageGalleryPictures/image6.jpg";
 import image8 from "../../assets/ImageGalleryPictures/image8.jpg";
 import image9 from "../../assets/ImageGalleryPictures/image9.jpg";
-
 import Rimage10 from "../../assets/ImageGalleryPictures/Rimage10.jpg";
 import Rimage11 from "../../assets/ImageGalleryPictures/Rimage11.jpg";
 import Rimage12 from "../../assets/ImageGalleryPictures/Rimage12.jpg";
@@ -22,6 +21,7 @@ import Rimage14 from "../../assets/ImageGalleryPictures/Rimage14.jpg";
 
 
 const images = [
+  image6,
   Rimage13,
   Rimage11,
   Rimage12,
@@ -32,7 +32,6 @@ const images = [
   image1,
   TeachersDay,
   image7,
-  Expo,
   imagegallery,
 ];
 
