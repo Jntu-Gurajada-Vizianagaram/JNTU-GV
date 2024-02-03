@@ -128,7 +128,7 @@ function UpdatePanel() {
             }}
             onClick={() => handleWorkshop("Conferences")}
           >
-            Workshops{" "}
+            Academic Events
           </button>
           <button
             style={{
