@@ -1,5 +1,115 @@
 export const Data = [
   {
+    description: `III B.TECH II Semester supplementary examination(R20) Time Table Feburary 2024`,
+    type: "notifications",
+    link: "https://drive.google.com/file/d/1AEAnC_4YFLUOXE7RibYY-VgY0d-V9PzV/view?usp=drive_link",
+    date: "06",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  }, {
+    description: `III B.TECH II Semester supplementary examination(R19) Time Table Feburary 2024`,
+    type: "notifications",
+    link: "https://drive.google.com/file/d/1rHeZs7EUd1n7WNIDXXrVCnF7ETgflNjY/view?usp=drive_link",
+    date: "06",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  },
+  {
+    description: `III B.TECH II Semester supplementary examination(R16) Time Table February 2024`,
+    type: "notifications",
+    link: "https://drive.google.com/file/d/1aG6RIjWAIuQPQf1t1hTjkbQ9gAMd2zGy/view?usp=drive_link",
+    date: "06",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  },
+
+
+  {
+    description: `II B.TECH II Semester supplementary examination(R19) Time Table Feburary 2024`,
+    type: "notifications",
+    link: "https://drive.google.com/file/d/1a6z3appuWrVzvVgGwS4zsEKYSvpatXpC/view?usp=drive_link",
+    date: "06",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  }, {
+    description: `II B.TECH II Semester supplementary examination(R20) Time Table Feburary 2024`,
+    type: "notifications",
+    link: "https://drive.google.com/file/d/1vk933oLzTp08cgFthLVX71P_l_6-GYDC/view?usp=drive_link",
+    date: "06",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  }, {
+    description: `II B.TECH II Semester supplementary examination(R16) Time Table Feburary 2024`,
+    type: "notifications",
+    link: "https://drive.google.com/file/d/1zP3LT1wGWbYdfXqSvLEtn-8qBYJMD6h2/view?usp=drive_link",
+    date: "06",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  },
+
+  {
+    description: `III B.TECH II Semester supplementary examination(R20) Time Table Feburary 2024`,
+    type: "examination",
+    link: "https://drive.google.com/file/d/1AEAnC_4YFLUOXE7RibYY-VgY0d-V9PzV/view?usp=drive_link",
+    date: "06",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  }, {
+    description: `III B.TECH II Semester supplementary examination(R19) Time Table Feburary 2024`,
+    type: "examination",
+    link: "https://drive.google.com/file/d/1rHeZs7EUd1n7WNIDXXrVCnF7ETgflNjY/view?usp=drive_link",
+    date: "06",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  },
+  {
+    description: `III B.TECH II Semester supplementary examination(R16) Time Table February 2024`,
+    type: "examination",
+    link: "https://drive.google.com/file/d/1aG6RIjWAIuQPQf1t1hTjkbQ9gAMd2zGy/view?usp=drive_link",
+    date: "06",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  },
+
+
+  {
+    description: `II B.TECH II Semester supplementary examination(R19) Time Table Feburary 2024`,
+    type: "examination",
+    link: "https://drive.google.com/file/d/1a6z3appuWrVzvVgGwS4zsEKYSvpatXpC/view?usp=drive_link",
+    date: "06",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  }, {
+    description: `II B.TECH II Semester supplementary examination(R20) Time Table Feburary 2024`,
+    type: "examination",
+    link: "https://drive.google.com/file/d/1vk933oLzTp08cgFthLVX71P_l_6-GYDC/view?usp=drive_link",
+    date: "06",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  }, {
+    description: `II B.TECH II Semester supplementary examination Time Table Feburary 2024`,
+    type: "examination",
+    link: "https://drive.google.com/file/d/1zP3LT1wGWbYdfXqSvLEtn-8qBYJMD6h2/view?usp=drive_link",
+    date: "06",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  },
+
+
+
+  {
     description: `Republic Day Images`,
     type: "notifications",
     link: "republic-day",
