@@ -10,6 +10,8 @@ import image1 from "../../assets/ImageGalleryPictures/image1.jpg";
 import image6 from "../../assets/ImageGalleryPictures/image6.jpg";
 import image8 from "../../assets/ImageGalleryPictures/image8.jpg";
 import image9 from "../../assets/ImageGalleryPictures/image9.jpg";
+import image10 from "../../assets/ImageGalleryPictures/image10.jpg";
+import image11 from "../../assets/ImageGalleryPictures/image11.jpg";
 import Rimage10 from "../../assets/ImageGalleryPictures/Rimage10.jpg";
 import Rimage11 from "../../assets/ImageGalleryPictures/Rimage11.jpg";
 import Rimage12 from "../../assets/ImageGalleryPictures/Rimage12.jpg";
@@ -21,6 +23,8 @@ import Rimage14 from "../../assets/ImageGalleryPictures/Rimage14.jpg";
 
 
 const images = [
+  image11,
+  image10,
   image6,
   Rimage13,
   Rimage11,
