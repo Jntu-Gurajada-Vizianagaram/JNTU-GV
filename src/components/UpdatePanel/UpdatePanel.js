@@ -154,7 +154,7 @@ function UpdatePanel() {
           </button>
         </div>
         <div className="updatesContainer">
-          {displayData.map((entry,index) => (
+          {displayData.map((entry, index) => (
             <div key={index}>
               <div className="updateBox">
                 <div className="dateTimeContainer">
@@ -178,13 +178,13 @@ function UpdatePanel() {
                   </a>
                   {daysAgo(`${entry.month} ${entry.date}, ${entry.year}`) <=
                     5 && (
-                    <img src={newGif} alt="newimg" height="20vh" width="50vh" />
-                  )}
+                      <img src={newGif} alt="newimg" height="20vh" width="50vh" />
+                    )}
 
                   <div>
                     {/* condition for button*/}
                     {entry.displaytext && (
-                      <Button variant="text">
+                      <Button variant="outlined" color="inherit" sx={{backgroundColor: "370a68" }}>
                         <a
                           href={entry.displaylink}
                           target="_blank"
