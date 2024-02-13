@@ -6,7 +6,7 @@ export const Data = [
     displaylink:
       "https://forms.gle/vzLG5mwbe25yTgEy8",
     displaytext: "Register",
-    date: "15",
+    date: "07",
     month: "Feb",
     year: "2024",
     isLink: true,
@@ -18,7 +18,7 @@ export const Data = [
     displaylink:
       "https://forms.gle/vzLG5mwbe25yTgEy8",
     displaytext: "Register",
-    date: "15",
+    date: "07",
     month: "Feb",
     year: "2024",
     isLink: true,
