@@ -1,5 +1,29 @@
 export const Data = [
   {
+    description: `One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV`,
+    type: "workshop",
+    link: "https://drive.google.com/file/d/1T65NKCwMG_r71JQmtTMKrvzBHb7vHewu/view?usp=drive_link",
+    displaylink:
+      "https://forms.gle/vzLG5mwbe25yTgEy8",
+    displaytext: "Register",
+    date: "15",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  },
+  {
+    description: `One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV`,
+    type: "notifications",
+    link: "https://drive.google.com/file/d/1T65NKCwMG_r71JQmtTMKrvzBHb7vHewu/view?usp=drive_link",
+    displaylink:
+      "https://forms.gle/vzLG5mwbe25yTgEy8",
+    displaytext: "Register",
+    date: "15",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  },
+  {
     description: `III B.TECH II Semester supplementary examination(R20) Time Table Feburary 2024`,
     type: "notifications",
     link: "https://drive.google.com/file/d/1AEAnC_4YFLUOXE7RibYY-VgY0d-V9PzV/view?usp=drive_link",
