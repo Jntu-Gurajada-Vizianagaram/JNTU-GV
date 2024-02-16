@@ -50,6 +50,13 @@ import gal54 from "../../assets/Gallery/gal54.jpg";
 import gal55 from "../../assets/Gallery/gal55.jpg";
 
 
+import gal56 from "../../assets/Gallery/gal56.jpg";
+import gal57 from "../../assets/Gallery/gal57.jpeg";
+import gal58 from "../../assets/Gallery/gal58.jpeg";
+import gal59 from "../../assets/Gallery/gal59.jpeg";
+
+
+
 
 
 
@@ -257,6 +264,23 @@ export const CG = [
   }, {
     image: gal55,
     description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
+  },
+
+
+
+
+  {
+    image: gal56,
+    description: "One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV",
+  }, {
+    image: gal57,
+    description: "One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV",
+  }, {
+    image: gal58,
+    description: "One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV",
+  }, {
+    image: gal59,
+    description: "One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV",
   },
 
 ];
