@@ -1,14 +1,27 @@
+import Inauguration from "../../assets/Gallery/Inauguration Event/WhatsApp Image 2024-02-16 at 14.57.53 (1).jpeg";
+import Republic from "../../assets/Gallery/Republic Day/IMG-20240129-WA0001.jpg";
+
 export const Data = [
   {
-    description: `Inauguration Event of JNTU-GV`,
-    type: "notifications",
+    description: `Inauguration Event at JNTU-GV`,
+    type: "events",
     link: `/inauguration-event`,
+    image: Inauguration,
     date: "16",
     month: "Feb",
     year: "2024",
     isLink: true,
   },
-
+  {
+    description: `Republic Day at JNTU-GV`,
+    type: "events",
+    link: `/republic-day`,
+    image: Republic,
+    date: "16",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  },
   {
     description: `One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV`,
     type: "workshop",
