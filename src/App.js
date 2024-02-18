@@ -68,6 +68,7 @@ import Studentactivityclub from "./components/MainPage/Header/Infrastructure/Stu
 import Footer from "./components/MainPage/Footer/Footer";
 import Dropdown from "./components/MainPage/Header/Dropdown";
 import RepublicDay from "./components/Gallery/RepublicDay";
+import Inauguration from "./components/Gallery/Inauguration";
 
 
 function App() {
@@ -143,6 +144,7 @@ function App() {
         <Route path="/news-and-events" element={<NewsAndEvents/>} />
         <Route path="/gallery" element={<CompleteGallery />} />
         <Route path="/republic-day" element={<RepublicDay />} />
+        <Route path="/inauguration-event" element={<Inauguration />} />
 
         <Route path="/infrastructure" element={<InfrastructureMain />}>
           <Route path="about-library" element={<Library />} />
