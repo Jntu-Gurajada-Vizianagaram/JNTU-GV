@@ -1,4 +1,8 @@
+import Inauguration from "../../assets/Gallery/Inauguration Event/WhatsApp Image 2024-02-16 at 14.57.53 (1).jpeg";
+import Republic from "../../assets/Gallery/Republic Day/IMG-20240129-WA0001.jpg";
+
 export const Data = [
+
   {
     description: `JNTUGV-DAA-"Certificate Verification - Admissions" for (M.Tech,M.Pharmacy,MBA,MCA,B.Pharma D(PB),Pharma D Programs) for the Academic Year 2023-24`,
     type: "notifications",
@@ -8,12 +12,32 @@ export const Data = [
     year: "2024",
     isLink: true,
   },
+
+  {
+    description: `Inauguration Event at JNTU-GV`,
+    type: "events",
+    link: `/inauguration-event`,
+    image: Inauguration,
+    date: "16",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  },
+  {
+    description: `Republic Day at JNTU-GV`,
+    type: "events",
+    link: `/republic-day`,
+    image: Republic,
+    date: "16",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  },
   {
     description: `One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV`,
     type: "workshop",
     link: "https://drive.google.com/file/d/1T65NKCwMG_r71JQmtTMKrvzBHb7vHewu/view?usp=drive_link",
-    displaylink:
-      "https://forms.gle/vzLG5mwbe25yTgEy8",
+    displaylink: "https://forms.gle/vzLG5mwbe25yTgEy8",
     displaytext: "Register",
     date: "13",
     month: "Feb",
@@ -24,8 +48,7 @@ export const Data = [
     description: `One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV`,
     type: "notifications",
     link: "https://drive.google.com/file/d/1T65NKCwMG_r71JQmtTMKrvzBHb7vHewu/view?usp=drive_link",
-    displaylink:
-      "https://forms.gle/vzLG5mwbe25yTgEy8",
+    displaylink: "https://forms.gle/vzLG5mwbe25yTgEy8",
     displaytext: "Register",
     date: "13",
     month: "Feb",
@@ -40,7 +63,8 @@ export const Data = [
     month: "Feb",
     year: "2024",
     isLink: true,
-  }, {
+  },
+  {
     description: `III B.TECH II Semester supplementary examination(R19) Time Table Feburary 2024`,
     type: "notifications",
     link: "https://drive.google.com/file/d/1rHeZs7EUd1n7WNIDXXrVCnF7ETgflNjY/view?usp=drive_link",
@@ -59,7 +83,6 @@ export const Data = [
     isLink: true,
   },
 
-
   {
     description: `II B.TECH II Semester supplementary examination(R19) Time Table Feburary 2024`,
     type: "notifications",
@@ -68,7 +91,8 @@ export const Data = [
     month: "Feb",
     year: "2024",
     isLink: true,
-  }, {
+  },
+  {
     description: `II B.TECH II Semester supplementary examination(R20) Time Table Feburary 2024`,
     type: "notifications",
     link: "https://drive.google.com/file/d/1vk933oLzTp08cgFthLVX71P_l_6-GYDC/view?usp=drive_link",
@@ -76,7 +100,8 @@ export const Data = [
     month: "Feb",
     year: "2024",
     isLink: true,
-  }, {
+  },
+  {
     description: `II B.TECH II Semester supplementary examination(R16) Time Table Feburary 2024`,
     type: "notifications",
     link: "https://drive.google.com/file/d/1zP3LT1wGWbYdfXqSvLEtn-8qBYJMD6h2/view?usp=drive_link",
@@ -94,7 +119,8 @@ export const Data = [
     month: "Feb",
     year: "2024",
     isLink: true,
-  }, {
+  },
+  {
     description: `III B.TECH II Semester supplementary examination(R19) Time Table Feburary 2024`,
     type: "examination",
     link: "https://drive.google.com/file/d/1rHeZs7EUd1n7WNIDXXrVCnF7ETgflNjY/view?usp=drive_link",
@@ -113,7 +139,6 @@ export const Data = [
     isLink: true,
   },
 
-
   {
     description: `II B.TECH II Semester supplementary examination(R19) Time Table Feburary 2024`,
     type: "examination",
@@ -122,7 +147,8 @@ export const Data = [
     month: "Feb",
     year: "2024",
     isLink: true,
-  }, {
+  },
+  {
     description: `II B.TECH II Semester supplementary examination(R20) Time Table Feburary 2024`,
     type: "examination",
     link: "https://drive.google.com/file/d/1vk933oLzTp08cgFthLVX71P_l_6-GYDC/view?usp=drive_link",
@@ -130,7 +156,8 @@ export const Data = [
     month: "Feb",
     year: "2024",
     isLink: true,
-  }, {
+  },
+  {
     description: `II B.TECH II Semester supplementary examination Time Table Feburary 2024`,
     type: "examination",
     link: "https://drive.google.com/file/d/1zP3LT1wGWbYdfXqSvLEtn-8qBYJMD6h2/view?usp=drive_link",
@@ -139,8 +166,6 @@ export const Data = [
     year: "2024",
     isLink: true,
   },
-
-
 
   {
     description: `Republic Day Images`,

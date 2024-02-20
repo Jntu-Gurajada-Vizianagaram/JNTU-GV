@@ -3,6 +3,10 @@ import newGif from "../../assets/new.gif";
 import { useState } from "react";
 import { Data } from "./Data";
 import { Button } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 
 function UpdatePanel() {
   const examinationList = [];
@@ -10,12 +14,11 @@ function UpdatePanel() {
   const workshopList = [];
   const recruitmentList = [];
   const sportsList = [];
+  const eventsList = [];
 
   const [displayData, setDisplayData] = useState(notificationList);
 
   const [activeButton, setActiveButton] = useState("Notifications");
-
-  // const [events, setEvents] = useState([]);
 
   const buttonStyles = {
     backgroundColor: "white",
@@ -28,7 +31,6 @@ function UpdatePanel() {
   };
 
   const currentDate = new Date();
-  // const isCurrentMonth = currentDate.getMonth() === Data.month;
 
   const daysAgo = (notificationDate) => {
     const notificationDateTime = new Date(notificationDate);
@@ -37,36 +39,29 @@ function UpdatePanel() {
     const daysDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
     return daysDifference;
   };
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch(
-  //         "http://api.jntugv.edu.in/api/updates/getevents"
-  //       );
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       const data = await response.json();
-  //       setEvents(data); // Update state with the fetched data
-  //     } catch (error) {
-  //       console.error("Error:", error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
 
   Data.forEach((entry) => {
-    if (entry.type === "notifications") {
-      notificationList.push(entry);
-    } else if (entry.type === "recruitment") {
-      recruitmentList.push(entry);
-    } else if (entry.type === "examination") {
-      examinationList.push(entry);
-    } else if (entry.type === "workshop") {
-      workshopList.push(entry);
-    } else if (entry.type === "sports") {
-      sportsList.push(entry);
+    switch (entry.type) {
+      case "notifications":
+        notificationList.push(entry);
+        break;
+      case "recruitment":
+        recruitmentList.push(entry);
+        break;
+      case "examination":
+        examinationList.push(entry);
+        break;
+      case "workshop":
+        workshopList.push(entry);
+        break;
+      case "sports":
+        sportsList.push(entry);
+        break;
+      case "events":
+        eventsList.push(entry);
+        break;
+      default:
+        break;
     }
   });
 
@@ -74,25 +69,34 @@ function UpdatePanel() {
     setDisplayData(notificationList);
     setActiveButton(button);
   };
+
   const handleRecruitment = (button) => {
     setDisplayData(recruitmentList);
     setActiveButton(button);
   };
+
   const handleexamination = (button) => {
     setDisplayData(examinationList);
     setActiveButton(button);
   };
+
   const handleWorkshop = (button) => {
     setDisplayData(workshopList);
     setActiveButton(button);
   };
+
   const handleSports = (button) => {
     setDisplayData(sportsList);
     setActiveButton(button);
   };
 
+  const handleEvents = (button) => {
+    setDisplayData(eventsList);
+    setActiveButton(button);
+  };
+
   return (
-    <div>
+    <div id="events">
       <h1 className="notifications-title">Notifications</h1>
       <div className="updateComponent">
         <div className="updateButtons">
@@ -141,7 +145,6 @@ function UpdatePanel() {
           >
             Exams
           </button>
-
           <button
             style={{
               ...buttonStyles,
@@ -152,57 +155,107 @@ function UpdatePanel() {
           >
             Sports
           </button>
+          <button
+            style={{
+              ...buttonStyles,
+              backgroundColor: activeButton === "Events" ? "#370a68" : "white",
+              color: activeButton === "Events" ? "white" : "black",
+            }}
+            onClick={() => handleEvents("Events")}
+          >
+            Events
+          </button>
         </div>
         <div className="updatesContainer">
           {displayData.map((entry, index) => (
-            <div key={index}>
-              <div className="updateBox">
-                <div className="dateTimeContainer">
-                  <div className="dateDiv">{entry.date}</div>
-                  <div className="monYear">
-                    <div className="monthDiv">{entry.month}</div>
-                    <div className="yearDiv">{entry.year}</div>
+            <>
+              <div key={index} className="updateBox">
+                {entry.type === "events" ? (
+                  <div className="eventBox">
+                    <a href={entry.link} style={{ textDecoration: "none" }}>
+                      <Card
+                        sx={{
+                          width: "350px",
+                          backgroundColor: "#370A68",
+                          height: "250px",
+                        }}
+                      >
+                        <CardMedia
+                          component="img"
+                          height="194"
+                          image={entry.image}
+                          alt="Paella dish"
+                        />
+                        <CardContent>
+                          <Typography variant="body1" color="white">
+                            {entry.description}
+                          </Typography>
+                        </CardContent>
+                      </Card>
+                    </a>
                   </div>
-                </div>
-                <div className="updateDescription">
-                  <a
-                    href={entry.link || "#"}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{
-                      textDecoration: "none",
-                      color: "rgb(55, 10, 104)",
-                    }}
-                  >
-                    {entry.description}
-                  </a>
-                  {daysAgo(`${entry.month} ${entry.date}, ${entry.year}`) <=
-                    5 && (
-                      <img src={newGif} alt="newimg" height="20vh" width="50vh" />
-                    )}
-
-                  <div>
-                    {/* condition for button*/}
-                    {entry.displaytext && (
-                      <Button variant="outlined" color="inherit" sx={{backgroundColor: "370a68" }}>
-                        <a
-                          href={entry.displaylink}
-                          target="_blank"
-                          rel="noreferrer"
-                          style={{
-                            textDecoration: "none",
-                            color: "rgb(55, 10, 104)",
-                          }}
-                        >
-                          {entry.displaytext}
-                        </a>
-                      </Button>
-                    )}
-                  </div>
-                </div>
+                ) : (
+                  <>
+                    <div className="dateTimeContainer">
+                      <div className="dateDiv">{entry.date}</div>
+                      <div className="monYear">
+                        <div className="monthDiv">{entry.month}</div>
+                        <div className="yearDiv">{entry.year}</div>
+                      </div>
+                    </div>
+                    <div className="updateDescription">
+                      <a
+                        href={entry.link || "#"}
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{
+                          textDecoration: "none",
+                          color: "rgb(55, 10, 104)",
+                        }}
+                      >
+                        {entry.description}
+                      </a>
+                      {daysAgo(`${entry.month} ${entry.date}, ${entry.year}`) <=
+                        5 && (
+                        <img
+                          src={newGif}
+                          alt="newimg"
+                          height="20vh"
+                          width="50vh"
+                        />
+                      )}
+                      <div>
+                        {/* condition for button*/}
+                        {entry.displaytext && (
+                          <Button
+                            variant="outlined"
+                            color="inherit"
+                            sx={{ backgroundColor: "370a68" }}
+                          >
+                            <a
+                              href={entry.displaylink}
+                              target="_blank"
+                              rel="noreferrer"
+                              style={{
+                                textDecoration: "none",
+                                color: "rgb(55, 10, 104)",
+                              }}
+                            >
+                              {entry.displaytext}
+                            </a>
+                          </Button>
+                        )}
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
-              <div className="updateDivSeparator"></div>
-            </div>
+              {entry.type === "events" ? (
+                <></>
+              ) : (
+                <div className="updateDivSeparator"></div>
+              )}
+            </>
           ))}
         </div>
       </div>

@@ -8,6 +8,17 @@
   justify-content: center;
 }
 
+.eventBox {
+  display: flex;
+  /* gap: 40px; */
+  /* flex-wrap: wrap; */
+}
+
+.eventBox-main {
+  display: flex;
+  flex-direction: column;
+}
+
 .updatesContainer {
   min-height: 60vh;
   border: 2px solid #370a68;
@@ -19,8 +30,8 @@
   overflow-y: scroll;
 }
 
-.notifications-title{
-  font-family: 'Inter', sans-serif;
+.notifications-title {
+  font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;
   color: #2e0669;
@@ -128,8 +139,7 @@
     margin: 0.5rem 0.5rem 0.5rem 1px;
   }
 
-  .updatesContainer{
+  .updatesContainer {
     width: 100vw;
   }
-
 }

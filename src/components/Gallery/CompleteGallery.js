@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "./CompleteGallery.css";
 import { CG } from "./CG";
 import { MdOutlineArrowBackIos } from "react-icons/md";
+// import Events from "../../ui/events";
 
 function CompleteGallery() {
   const images = CG ? [...CG].reverse() : [];
@@ -24,11 +25,20 @@ function CompleteGallery() {
         <MdOutlineArrowBackIos />
         Back to Homepage
       </Link>
-      <div>
+
+
+      <div className="gallery-links">
         <Link to="/republic-day" className="republic-day">
           Republic Day Images
         </Link>
+
+        <Link to="/inauguration-event" className="republic-day">
+          Inauguration Event
+        </Link>
       </div>
+
+
+
       {/* Link to the homepage */}
       <div className="image-grid">
         {images.map((imageObj, index) => (
