@@ -54,6 +54,13 @@ import gal56 from "../../assets/Gallery/gal56.jpg";
 import gal57 from "../../assets/Gallery/gal57.jpeg";
 import gal58 from "../../assets/Gallery/gal58.jpeg";
 import gal59 from "../../assets/Gallery/gal59.jpeg";
+import gal60 from "../../assets/Gallery/gal60.jpeg";
+import gal61 from "../../assets/Gallery/gal61.jpeg";
+import gal62 from "../../assets/Gallery/gal62.jpeg";
+import gal63 from "../../assets/Gallery/gal63.jpeg";
+import gal64 from "../../assets/Gallery/gal64.jpeg";
+
+
 
 
 
@@ -249,7 +256,7 @@ export const CG = [
   }, {
     image: gal48,
     description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
-  },{
+  }, {
     image: gal50,
     description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
   }, {
@@ -258,7 +265,24 @@ export const CG = [
   }, {
     image: gal53,
     description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
+  },
+
+
+  {
+    image: gal61,
+    description: "Technical Symposium will be held on the 6th and 7th of the month.",
   }, {
+    image: gal62,
+    description: "Technical Symposium will be held on the 6th and 7th of the month.",
+  }, {
+    image: gal63,
+    description: "Technical Symposium will be held on the 6th and 7th of the month.",
+  }, {
+    image: gal64,
+    description: "Technical Symposium will be held on the 6th and 7th of the month.",
+  },
+
+  {
     image: gal54,
     description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
   }, {
@@ -275,6 +299,10 @@ export const CG = [
   }, {
     image: gal57,
     description: "One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV",
+  },
+  {
+    image: gal60,
+    description: "Technical Symposium will be held on the 6th and 7th of the month.",
   }, {
     image: gal58,
     description: "One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV",
