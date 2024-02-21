@@ -4,6 +4,15 @@ import Republic from "../../assets/Gallery/Republic Day/IMG-20240129-WA0001.jpg"
 export const Data = [
 
   {
+    description: `DAA/JNTU-GV Request to clear outstanding dues of Affiliation / University common Services Fee up to Academic Year 2022-2023 to the University`,
+    type: "notifications",
+    link: "https://drive.google.com/file/d/1wvMsPf1MNoIbqnW9EpgTnqR8HEfPE8E3/view?usp=drive_link",
+    date: "21",
+    month: "Feb",
+    year: "2024",
+    isLink: true,
+  },
+  {
     description: `JNTUGV-DAA-"Certificate Verification - Admissions" for (M.Tech,M.Pharmacy,MBA,MCA,B.Pharma D(PB),Pharma D Programs) for the Academic Year 2023-24`,
     type: "notifications",
     link: "https://drive.google.com/file/d/1Gqn1-8NppKWISHsYLi0tNDw7PLrah3Gp/view?usp=drive_link",
@@ -12,7 +21,6 @@ export const Data = [
     year: "2024",
     isLink: true,
   },
-
   {
     description: `Inauguration Event at JNTU-GV`,
     type: "events",
