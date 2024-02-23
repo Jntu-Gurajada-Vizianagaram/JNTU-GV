@@ -13,7 +13,7 @@ const NewsAndEvents = () => {
             <img
               src={image.image}
               alt={`JNTUGV ${image.description}`}
-              height="200px"
+              height="250px"
               width="300px"
             />
             <div className="desc-cont">
