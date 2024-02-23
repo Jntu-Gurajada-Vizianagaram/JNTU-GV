@@ -60,6 +60,11 @@ import gal62 from "../../assets/Gallery/gal62.jpeg";
 import gal63 from "../../assets/Gallery/gal63.jpeg";
 import gal64 from "../../assets/Gallery/gal64.jpeg";
 
+import gal65 from "../../assets/Gallery/gal65.jpg";
+import gal66 from "../../assets/Gallery/gal66.jpg";
+import gal67 from "../../assets/Gallery/gal67.jpg";
+
+
 
 
 
@@ -289,6 +294,13 @@ export const CG = [
     image: gal55,
     description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
   },
+  {
+    image: gal65,
+    description: "9 students of JNTU-GV got placed",
+  }, {
+    image: gal66,
+    description: "9 students of JNTU-GV got placed",
+  },
 
 
 
@@ -300,9 +312,14 @@ export const CG = [
     image: gal57,
     description: "One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV",
   },
+
   {
     image: gal60,
     description: "Technical Symposium will be held on the 6th and 7th of the month.",
+  },
+  {
+    image: gal67,
+    description: "9 students of JNTU-GV got placed",
   }, {
     image: gal58,
     description: "One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV",
