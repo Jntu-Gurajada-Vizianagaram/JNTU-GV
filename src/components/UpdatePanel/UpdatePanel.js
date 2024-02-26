@@ -1,12 +1,9 @@
 import "./UpdatePanel.css";
-import newGif from "../../assets/new.gif";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Data } from "./Data";
-import { Button } from "@mui/material";
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
+import Notification from "./Notification";
+
+// import CircularProgress from "@mui/material/CircularProgress";
 
 function UpdatePanel() {
   const examinationList = [];
@@ -19,6 +16,7 @@ function UpdatePanel() {
   const [displayData, setDisplayData] = useState(notificationList);
 
   const [activeButton, setActiveButton] = useState("Notifications");
+  const [apiData, setApiData] = useState([]);
 
   const buttonStyles = {
     backgroundColor: "white",
@@ -30,19 +28,26 @@ function UpdatePanel() {
     borderRadius: "7px",
   };
 
-  const currentDate = new Date();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://api.jntugv.edu.in/api/updates/allnotifications"
+        );
+        const apiData = await response.json();
+        const localData = Data;
+        const mergedData = [...apiData, ...localData];
+        setApiData(mergedData);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
 
-  const daysAgo = (notificationDate) => {
-    const notificationDateTime = new Date(notificationDate);
-    const timeDifference =
-      currentDate.getTime() - notificationDateTime.getTime();
-    const daysDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
-    return daysDifference;
-  };
-
-  Data.forEach((entry) => {
-    switch (entry.type) {
-      case "notifications":
+  apiData.forEach((entry) => {
+    switch (entry.update_type) {
+      case "notification":
         notificationList.push(entry);
         break;
       case "recruitment":
@@ -94,6 +99,21 @@ function UpdatePanel() {
     setDisplayData(eventsList);
     setActiveButton(button);
   };
+
+  const notificationData = apiData
+    .map(
+      (entry) =>
+        entry.update_type === "notification" && {
+          title: entry.title,
+          description: entry.description,
+          day: entry.day,
+          month: entry.month,
+          year: entry.year,
+          file_link: entry.file_link,
+          update_type: entry.update_type,
+        }
+    )
+    .filter(Boolean);
 
   return (
     <div id="events">
@@ -166,98 +186,11 @@ function UpdatePanel() {
             Events
           </button>
         </div>
-        <div className="updatesContainer">
-          {displayData.map((entry, index) => (
-            <>
-              <div key={index} className="updateBox">
-                {entry.type === "events" ? (
-                  <div className="eventBox">
-                    <a href={entry.link} style={{ textDecoration: "none" }}>
-                      <Card
-                        sx={{
-                          width: "350px",
-                          backgroundColor: "#370A68",
-                          height: "250px",
-                        }}
-                      >
-                        <CardMedia
-                          component="img"
-                          height="194"
-                          image={entry.image}
-                          alt="Paella dish"
-                        />
-                        <CardContent>
-                          <Typography variant="body1" color="white">
-                            {entry.description}
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </a>
-                  </div>
-                ) : (
-                  <>
-                    <div className="dateTimeContainer">
-                      <div className="dateDiv">{entry.date}</div>
-                      <div className="monYear">
-                        <div className="monthDiv">{entry.month}</div>
-                        <div className="yearDiv">{entry.year}</div>
-                      </div>
-                    </div>
-                    <div className="updateDescription">
-                      <a
-                        href={entry.link || "#"}
-                        target="_blank"
-                        rel="noreferrer"
-                        style={{
-                          textDecoration: "none",
-                          color: "rgb(55, 10, 104)",
-                        }}
-                      >
-                        {entry.description}
-                      </a>
-                      {daysAgo(`${entry.month} ${entry.date}, ${entry.year}`) <=
-                        5 && (
-                        <img
-                          src={newGif}
-                          alt="newimg"
-                          height="20vh"
-                          width="50vh"
-                        />
-                      )}
-                      <div>
-                        {/* condition for button*/}
-                        {entry.displaytext && (
-                          <Button
-                            variant="outlined"
-                            color="inherit"
-                            sx={{ backgroundColor: "370a68" }}
-                          >
-                            <a
-                              href={entry.displaylink}
-                              target="_blank"
-                              rel="noreferrer"
-                              style={{
-                                textDecoration: "none",
-                                color: "rgb(55, 10, 104)",
-                              }}
-                            >
-                              {entry.displaytext}
-                            </a>
-                          </Button>
-                        )}
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
-              {entry.type === "events" ? (
-                <></>
-              ) : (
-                <div className="updateDivSeparator"></div>
-              )}
-            </>
-          ))}
-        </div>
+        {activeButton === "Notifications" ? (
+          <Notification displayData={notificationData} />
+        ) : (
+          <Notification displayData={displayData} />
+        )}
       </div>
     </div>
   );
