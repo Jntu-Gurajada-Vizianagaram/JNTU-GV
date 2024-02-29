@@ -64,6 +64,12 @@ import gal65 from "../../assets/Gallery/gal65.jpg";
 import gal66 from "../../assets/Gallery/gal66.jpg";
 import gal67 from "../../assets/Gallery/gal67.jpg";
 
+import gal68 from "../../assets/Gallery/gal68.jpeg";
+import gal69 from "../../assets/Gallery/gal69.jpeg";
+import gal70 from "../../assets/Gallery/gal70.jpeg";
+import gal71 from "../../assets/Gallery/gal71.jpeg";
+
+
 
 
 
@@ -316,10 +322,13 @@ export const CG = [
   {
     image: gal60,
     description: "Technical Symposium will be held on the 6th and 7th of the month.",
-  },
-  {
+  }, {
     image: gal67,
     description: "9 students of JNTU-GV got placed",
+  },
+  {
+    image: gal71,
+    description: "Technical Symposium in JNTU-GV",
   }, {
     image: gal58,
     description: "One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV",
@@ -327,5 +336,24 @@ export const CG = [
     image: gal59,
     description: "One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV",
   },
+
+
+
+  {
+    image: gal68,
+    description: "Technical Symposium in JNTU-GV",
+  },
+  {
+    image: gal69,
+    description: "Technical Symposium in JNTU-GV",
+  },
+  {
+    image: gal70,
+    description: "Technical Symposium in JNTU-GV",
+  },
+
+
+
+
 
 ];
