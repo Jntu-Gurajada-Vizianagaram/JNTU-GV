@@ -6,7 +6,7 @@ export const Data = [
   {
     title: `Pre PhD Regular Examiantions Time table 2024`,
     update_type: "notification",
-    link: "https://drive.google.com/file/d/1oT_jHONRreC8IY7uJCLVtg9RZtZ-GQRI/view?usp=drive_link",
+    file_link: "https://drive.google.com/file/d/1oT_jHONRreC8IY7uJCLVtg9RZtZ-GQRI/view?usp=drive_link",
     day: "29",
     month: "Feb",
     year: "2024",
@@ -16,7 +16,7 @@ export const Data = [
   {
     title: `DAA/JNTU-GV Request to clear outstanding dues of Affiliation / University common Services Fee up to Academic Year 2022-2023 to the University`,
     update_type: "notification",
-    link: "https://drive.google.com/file/d/1wvMsPf1MNoIbqnW9EpgTnqR8HEfPE8E3/view?usp=drive_link",
+    file_link: "https://drive.google.com/file/d/1wvMsPf1MNoIbqnW9EpgTnqR8HEfPE8E3/view?usp=drive_link",
     day: "21",
     month: "Feb",
     year: "2024",
@@ -25,7 +25,7 @@ export const Data = [
   {
     title: `JNTUGV-DAA-"Certificate Verification - Admissions" for (M.Tech,M.Pharmacy,MBA,MCA,B.Pharma D(PB),Pharma D Programs) for the Academic Year 2023-24`,
     update_type: "notification",
-    link: "https://drive.google.com/file/d/1Gqn1-8NppKWISHsYLi0tNDw7PLrah3Gp/view?usp=drive_link",
+    file_link: "https://drive.google.com/file/d/1Gqn1-8NppKWISHsYLi0tNDw7PLrah3Gp/view?usp=drive_link",
     day: "20",
     month: "Feb",
     year: "2024",
@@ -34,7 +34,7 @@ export const Data = [
   {
     title: `Inauguration Event at JNTU-GV`,
     update_type: "events",
-    link: `/inauguration-event`,
+    file_link: `/inauguration-event`,
     image: Inauguration,
     day: "16",
     month: "Feb",
