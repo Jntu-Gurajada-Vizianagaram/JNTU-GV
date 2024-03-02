@@ -69,6 +69,11 @@ import gal69 from "../../assets/Gallery/gal69.jpeg";
 import gal70 from "../../assets/Gallery/gal70.jpeg";
 import gal71 from "../../assets/Gallery/gal71.jpeg";
 
+import gal72 from "../../assets/Gallery/gal72.jpeg";
+import gal73 from "../../assets/Gallery/gal73.jpeg";
+import gal74 from "../../assets/Gallery/gal74.jpeg";
+
+
 
 
 
@@ -277,8 +282,6 @@ export const CG = [
     image: gal53,
     description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
   },
-
-
   {
     image: gal61,
     description: "Technical Symposium will be held on the 6th and 7th of the month.",
@@ -292,7 +295,6 @@ export const CG = [
     image: gal64,
     description: "Technical Symposium will be held on the 6th and 7th of the month.",
   },
-
   {
     image: gal54,
     description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
@@ -307,10 +309,6 @@ export const CG = [
     image: gal66,
     description: "9 students of JNTU-GV got placed",
   },
-
-
-
-
   {
     image: gal56,
     description: "One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV",
@@ -336,9 +334,6 @@ export const CG = [
     image: gal59,
     description: "One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV",
   },
-
-
-
   {
     image: gal68,
     description: "Technical Symposium in JNTU-GV",
@@ -351,9 +346,15 @@ export const CG = [
     image: gal70,
     description: "Technical Symposium in JNTU-GV",
   },
-
-
-
-
+  {
+    image: gal72,
+    description: "Technical Symposium in JNTU-GV",
+  },{
+    image: gal73,
+    description: "Technical Symposium in JNTU-GV",
+  },{
+    image: gal74,
+    description: "Technical Symposium in JNTU-GV",
+  },
 
 ];
