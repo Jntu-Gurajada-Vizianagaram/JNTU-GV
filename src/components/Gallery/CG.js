@@ -73,6 +73,12 @@ import gal72 from "../../assets/Gallery/gal72.jpeg";
 import gal73 from "../../assets/Gallery/gal73.jpeg";
 import gal74 from "../../assets/Gallery/gal74.jpeg";
 
+import gal75 from "../../assets/Gallery/gal75.jpeg";
+import gal76 from "../../assets/Gallery/gal76.jpeg";
+import gal77 from "../../assets/Gallery/gal77.jpeg";
+import gal78 from "../../assets/Gallery/gal78.jpeg";
+
+
 
 
 
@@ -339,6 +345,16 @@ export const CG = [
     description: "Technical Symposium in JNTU-GV",
   },
   {
+    image: gal76,
+    description: "Technical Symposium in JNTU-GV",
+  }, {
+    image: gal77,
+    description: "Technical Symposium in JNTU-GV",
+  }, {
+    image: gal78,
+    description: "Technical Symposium in JNTU-GV",
+  },
+  {
     image: gal69,
     description: "Technical Symposium in JNTU-GV",
   },
@@ -349,12 +365,19 @@ export const CG = [
   {
     image: gal72,
     description: "Technical Symposium in JNTU-GV",
-  },{
+  },
+
+  {
+    image: gal75,
+    description: "Mechano Technical Symposium in JNTU-GV",
+  },
+
+  {
     image: gal73,
     description: "Technical Symposium in JNTU-GV",
-  },{
+  }, {
     image: gal74,
-    description: "Technical Symposium in JNTU-GV",
+    description: "Cresense Technical Symposium in JNTU-GV",
   },
 
 ];
