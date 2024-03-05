@@ -1,5 +1,4 @@
 import "./BelowBar.css";
-// import Grievance from "../GrievanceForm/GrievanceForm";
 import { Link } from "react-router-dom";
 import {
   FaFacebook,
@@ -55,12 +54,6 @@ function BelowBar() {
         </a>
       </div>
       <div className="belowbar-seconddiv">
-        {/* <a
-          href="https://mail.google.com/a/jntugv.edu.in"
-          className="Below-Social-links"
-        >
-          Login
-        </a> */}
         <Link
           to="./GrievanceForm"
           className="Below-Social-links"
