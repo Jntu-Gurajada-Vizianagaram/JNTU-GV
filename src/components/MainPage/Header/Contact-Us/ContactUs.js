@@ -74,7 +74,10 @@ function ContactUs() {
               <CallIcon fontSize="medium" color="primary" /> 08922 222606{" "}
             </Typography>
             <Typography variant="p">
-              <EmailIcon fontSize="medium" color="primary" /> vc@jntugv.edu.in
+              <EmailIcon fontSize="medium" color="primary" /> ps2vc@jntugv.edu.in
+            </Typography>
+            <Typography variant="p">
+              <EmailIcon fontSize="medium" color="primary" /> pa2vc@jntugv.edu.in
             </Typography>
           </RoundedPaper>
           {/* Member 2 */}
