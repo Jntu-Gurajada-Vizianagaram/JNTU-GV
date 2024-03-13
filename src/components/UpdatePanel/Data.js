@@ -4,6 +4,29 @@ import Republic from "../../assets/Gallery/Republic Day/IMG-20240129-WA0001.jpg"
 export const Data = [
 
   {
+    title: `REPORT ON  ONE DAY ORIENTATION PROGRAM ON BCDE ACTIVIES AND BENEFITS HELD ON 15-02-2024 AT JNTU-GV, VIZIANAGARAM`,
+    update_type: "BCDE",
+    file_link: "https://drive.google.com/file/d/1iTXRJiQX9qdvM5R9tg0Rv6N31EeRj94u/view?usp=sharing",
+    day: "13",
+    month: "Mar",
+    year: "2024",
+    isLink: true,
+  },
+  {
+    title: `REPORT OF THE 3 DAY ATL WORKSHOP HELD FROM 28-02-2024 TO 02-03-2024 AT LENDI`,
+    update_type: "BCDE",
+    file_link: "https://drive.google.com/file/d/19U2QXgGNufX5uS5UGbYyVfG9GL4mKsCN/view?usp=sharing",
+    day: "13",
+    month: "Mar",
+    year: "2024",
+    isLink: true,
+  },
+
+
+
+
+
+  {
     title: `Pre PhD Regular Examiantions Time table 2024`,
     update_type: "notification",
     file_link: "https://drive.google.com/file/d/1oT_jHONRreC8IY7uJCLVtg9RZtZ-GQRI/view?usp=drive_link",

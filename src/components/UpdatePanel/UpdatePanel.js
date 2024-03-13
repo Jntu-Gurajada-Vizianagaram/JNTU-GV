@@ -12,6 +12,7 @@ function UpdatePanel() {
   const recruitmentList = [];
   const sportsList = [];
   const eventsList = [];
+  const bcdeList = [];
 
   const [displayData, setDisplayData] = useState(notificationList);
 
@@ -65,6 +66,9 @@ function UpdatePanel() {
       case "events":
         eventsList.push(entry);
         break;
+      case "BCDE":
+        bcdeList.push(entry);
+        break;
       default:
         break;
     }
@@ -100,6 +104,10 @@ function UpdatePanel() {
     setActiveButton(button);
   };
 
+  const handleBcde = (button) => {
+    setDisplayData(bcdeList);
+    setActiveButton(button);
+  };
   const notificationData = apiData
     .map(
       (entry) =>
@@ -184,6 +192,16 @@ function UpdatePanel() {
             onClick={() => handleEvents("Events")}
           >
             Events
+          </button>
+          <button
+            style={{
+              ...buttonStyles,
+              backgroundColor: activeButton === "BCDE" ? "#370a68" : "white",
+              color: activeButton === "BCDE" ? "white" : "black",
+            }}
+            onClick={() => handleBcde("BCDE")}
+          >
+            BCDE
           </button>
         </div>
         {activeButton === "Notifications" ? (
