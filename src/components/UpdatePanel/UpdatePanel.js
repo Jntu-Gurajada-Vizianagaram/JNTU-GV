@@ -68,6 +68,7 @@ function UpdatePanel() {
         break;
       case "BCDE":
         bcdeList.push(entry);
+        break;
       default:
         break;
     }
