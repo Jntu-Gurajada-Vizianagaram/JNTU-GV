@@ -8,13 +8,13 @@ import { MdOutlineArrowBackIos } from "react-icons/md";
 
 const importAll = (r) => r.keys().map(r);
 const imageContext = require.context(
-    "../../assets/Gallery/Womensday celebrations 2024/",
+    "../../assets/Gallery/Cresense 2K24/",
     false,
     /\.(jpeg)$/
 );
 const images = importAll(imageContext);
 
-const WomensDay = () => {
+const Cresense = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const handlePrevClick = () => {
@@ -43,7 +43,7 @@ const WomensDay = () => {
                                 }`}
                             onClick={() => setCurrentIndex(index)}
                         >
-                            <img src={image} alt={`Women's Day ${index + 1}`} />
+                            <img src={image} alt={`Cresense ${index + 1}`} />
                         </div>
                     ))}
                 </div>
@@ -79,4 +79,4 @@ const WomensDay = () => {
     );
 };
 
-export default WomensDay;
+export default Cresense;

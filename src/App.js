@@ -71,6 +71,7 @@ import RepublicDay from "./components/Gallery/RepublicDay";
 import Inauguration from "./components/Gallery/Inauguration";
 import WomensDay from "./components/Gallery/WomensDay";
 import Eisen from "./components/Gallery/Eisen";
+import Cresense from "./components/Gallery/Cresense";
 
 
 function App() {
@@ -149,6 +150,8 @@ function App() {
         <Route path="/inauguration-event" element={<Inauguration />} />
         <Route path="/womens-day" element={<WomensDay />} />
         <Route path="/eisen-2k24" element={<Eisen />} />
+        <Route path="/cresense-2k24" element={<Cresense />} />
+
 
 
 

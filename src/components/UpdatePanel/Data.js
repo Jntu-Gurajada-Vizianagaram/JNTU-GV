@@ -2,8 +2,11 @@ import Inauguration from "../../assets/Gallery/Inauguration Event/WhatsApp Image
 import Republic from "../../assets/Gallery/Republic Day/IMG-20240129-WA0001.jpg";
 import WomensDay from "../../assets/Gallery/Womensday celebrations 2024/WhatsApp Image 2024-03-13 at 16.15.46.jpeg";
 import Eisen from "../../assets/Gallery/Eisen 2K24/IMG_20240306_112031.jpg";
+import Cresense from "../../assets/Gallery/Cresense 2K24/IMG_20240301_110135.jpeg";
 
 export const Data = [
+
+
 
   {
     title: `Women's Day celebration 2024`,
@@ -24,7 +27,16 @@ export const Data = [
     year: "2024",
     isLink: true,
   },
-
+  {
+    title: `Cresense 2K24`,
+    update_type: "events",
+    file_link: `/cresense-2k24`,
+    image: Cresense,
+    day: "1",
+    month: "Mar",
+    year: "2024",
+    isLink: true,
+  },
 
 
 

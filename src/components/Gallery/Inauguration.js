@@ -44,7 +44,7 @@ const Inauguration = () => {
               }`}
               onClick={() => setCurrentIndex(index)}
             >
-              <img src={image} alt={`Republic Day ${index + 1}`} />
+              <img src={image} alt={`Inauguration ${index + 1}`} />
             </div>
           ))}
         </div>
