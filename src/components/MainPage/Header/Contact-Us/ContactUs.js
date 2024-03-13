@@ -93,9 +93,9 @@ function ContactUs() {
       ></iframe>
 
       {/* Additional Contact Section */}
-      {/* <div className="additional-contact-section ">
+      <div className="additional-contact-section ">
         <div className="contact-cards">
-          <RoundedPaper elevation={2} className="paper-details">
+          {/* <RoundedPaper elevation={2} className="paper-details">
             <Typography variant="h6">
               <strong>Vice Chancellor Peshi</strong>{" "}
             </Typography>
@@ -125,7 +125,7 @@ function ContactUs() {
               <EmailIcon fontSize="medium" color="primary" />{" "}
               pa2registrarjntugv@gmail.com
             </Typography>
-          </RoundedPaper>
+          </RoundedPaper> */}
 
           <RoundedPaper elevation={2} className="paper-details">
             <Typography variant="h6">
@@ -140,7 +140,7 @@ function ContactUs() {
             </Typography>
           </RoundedPaper>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

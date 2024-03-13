@@ -1,6 +1,7 @@
 import React from "react";
 import vc from "../../../../../assets/AdminDirectoratesImages/vc.png";
 import "../AdminandDirectorates.css"; // Import your CSS file here
+import { MdOutlineMailOutline } from "react-icons/md";
 function ViceChancellor() {
   return (
     <div className="allRightContent-Profile">
@@ -10,6 +11,10 @@ function ViceChancellor() {
         </div>
         <h3>Prof.Dr.K.Venkatasubbaiah</h3>
         <h4>Hon’ble Vice-Chancellor</h4>
+        <p>
+          <MdOutlineMailOutline width="40px" />
+          vc@jntugv.edu.in
+        </p>
       </div>
       <div className="profileDetailsVC">
         <p>
