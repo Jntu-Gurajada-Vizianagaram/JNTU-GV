@@ -69,6 +69,8 @@ import Footer from "./components/MainPage/Footer/Footer";
 import Dropdown from "./components/MainPage/Header/Dropdown";
 import RepublicDay from "./components/Gallery/RepublicDay";
 import Inauguration from "./components/Gallery/Inauguration";
+import WomensDay from "./components/Gallery/WomensDay";
+import Eisen from "./components/Gallery/Eisen";
 
 
 function App() {
@@ -141,10 +143,14 @@ function App() {
         </Route>
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/grievance-form" element={<Grievance />} />
-        <Route path="/news-and-events" element={<NewsAndEvents/>} />
+        <Route path="/news-and-events" element={<NewsAndEvents />} />
         <Route path="/gallery" element={<CompleteGallery />} />
         <Route path="/republic-day" element={<RepublicDay />} />
         <Route path="/inauguration-event" element={<Inauguration />} />
+        <Route path="/womens-day" element={<WomensDay />} />
+        <Route path="/eisen-2k24" element={<Eisen />} />
+
+
 
         <Route path="/infrastructure" element={<InfrastructureMain />}>
           <Route path="about-library" element={<Library />} />
