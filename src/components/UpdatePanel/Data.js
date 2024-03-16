@@ -42,7 +42,15 @@ export const Data = [
 
 
 
-
+  {
+    title: `A PROGRAMME ON ANDHRA PRADESH DEVELOPMENT DIALOGUE DAY 29-01-2024 AT JNTU-GV VIZIANAGARAM`,
+    update_type: "BCDE",
+    file_link: "https://drive.google.com/file/d/1vvd-EzxvaFR_8hp6bE2ZsicoSNPF0-KA/view?usp=sharing",
+    day: "16",
+    month: "Mar",
+    year: "2024",
+    isLink: true,
+  },
 
 
 
