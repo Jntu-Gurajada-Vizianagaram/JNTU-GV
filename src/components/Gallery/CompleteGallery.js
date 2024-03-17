@@ -35,13 +35,14 @@ function CompleteGallery() {
         </Link>
         <Link to="/cresense-2k24" className="republic-day">
           Cresense 2K24
-        </Link><Link to="/inauguration-event" className="republic-day">
-          Inauguration Event
         </Link>
+        {/*  <Link to="/inauguration-event" className="republic-day">
+          Inauguration Event
+  </Link>*/}
         <Link to="/republic-day" className="republic-day">
           Republic Day Images
         </Link>
-</div>
+      </div>
 
 
 
