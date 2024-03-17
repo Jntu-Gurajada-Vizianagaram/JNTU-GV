@@ -40,14 +40,14 @@ import gal41 from "../../assets/Gallery/gal41.jpg";
 import gal42 from "../../assets/Gallery/gal42.jpg";
 import gal43 from "../../assets/Gallery/gal43.jpg";
 
-import gal46 from "../../assets/Gallery/gal46.jpg";
-import gal47 from "../../assets/Gallery/gal47.jpg";
-import gal48 from "../../assets/Gallery/gal48.jpg";
-import gal50 from "../../assets/Gallery/gal50.jpg";
-import gal52 from "../../assets/Gallery/gal52.jpg";
-import gal53 from "../../assets/Gallery/gal53.jpg";
-import gal54 from "../../assets/Gallery/gal54.jpg";
-import gal55 from "../../assets/Gallery/gal55.jpg";
+// import gal46 from "../../assets/Gallery/gal46.jpg";
+// import gal47 from "../../assets/Gallery/gal47.jpg";
+// import gal48 from "../../assets/Gallery/gal48.jpg";
+// import gal50 from "../../assets/Gallery/gal50.jpg";
+// import gal52 from "../../assets/Gallery/gal52.jpg";
+// import gal53 from "../../assets/Gallery/gal53.jpg";
+// import gal54 from "../../assets/Gallery/gal54.jpg";
+// import gal55 from "../../assets/Gallery/gal55.jpg";
 
 
 import gal56 from "../../assets/Gallery/gal56.jpg";
@@ -83,16 +83,6 @@ import gal80 from "../../assets/Gallery/gal80.jpeg";
 import gal81 from "../../assets/Gallery/gal81.jpeg";
 import gal82 from "../../assets/Gallery/gal82.jpeg";
 import gal83 from "../../assets/Gallery/gal83.jpeg";
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -277,25 +267,25 @@ export const CG = [
     description: "Team JNTU-GV in Inter University Cricket tournament ",
   },
 
-  {
-    image: gal46,
-    description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
-  }, {
-    image: gal47,
-    description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
-  }, {
-    image: gal48,
-    description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
-  }, {
-    image: gal50,
-    description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
-  }, {
-    image: gal52,
-    description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
-  }, {
-    image: gal53,
-    description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
-  },
+  // {
+  //   image: gal46,
+  //   description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
+  // }, {
+  //   image: gal47,
+  //   description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
+  // }, {
+  //   image: gal48,
+  //   description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
+  // }, {
+  //   image: gal50,
+  //   description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
+  // }, {
+  //   image: gal52,
+  //   description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
+  // }, {
+  //   image: gal53,
+  //   description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
+  // },
   {
     image: gal61,
     description: "Technical Symposium will be held on the 6th and 7th of the month.",
@@ -309,13 +299,13 @@ export const CG = [
     image: gal64,
     description: "Technical Symposium will be held on the 6th and 7th of the month.",
   },
-  {
-    image: gal54,
-    description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
-  }, {
-    image: gal55,
-    description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
-  },
+  // {
+  //   image: gal54,
+  //   description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
+  // }, {
+  //   image: gal55,
+  //   description: "Hon'ble Education Minister Botsa Satyanarayana inaugurates transformative facilities, paving the way for a brighter future at our university ",
+  // },
   {
     image: gal65,
     description: "9 students of JNTU-GV got placed",
