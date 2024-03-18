@@ -1,85 +1,82 @@
 import React from "react";
 import "./App.css";
-import Homepage from "./Homepage";
-// import BelowBar from "./components/BelowBar/BelowBar";
-import Header from "./components/MainPage/Header/Header";
 
-import AboutJNTUGV from "./components/MainPage/Header/Aboutus/AboutJNTUGV/AboutJNTUGV";
-import Vision from "./components/MainPage/Header/Aboutus/Vision/Vision";
-import Mission from "./components/MainPage/Header/Aboutus/Mission/Mission";
-import Chancellor from "./components/MainPage/Header/Administration/Chancellor/Chancellor";
-import ViceChancellor from "./components/MainPage/Header/Administration/ViceChancellor/ViceChancellor";
-import Registrar from "./components/MainPage/Header/Administration/Registrar/Registrar";
-import AcademicAudit from "./components/MainPage/Header/Directorates/AcademicAudit/AcademicAudit";
-import AcademicPlanning from "./components/MainPage/Header/Directorates/AcademicPlanning/AcademicPlanning";
-import Admissions from "./components/MainPage/Header/Directorates/Admissions/Admissions";
-import AlumniRelations from "./components/MainPage/Header/Directorates/AlumniRelations/AlumniRelations";
-import Empowerment from "./components/MainPage/Header/Directorates/Empowerment/Empowerment";
-import Evaluation from "./components/MainPage/Header/Directorates/Evaluation/Evaluation";
-import FacultyDevelopmentCell from "./components/MainPage/Header/Directorates/FacultyDevelopmentCell/FacultyDevelopmentCell";
-import IQAC from "./components/MainPage/Header/Directorates/IQAC/IQAC";
-import Placements from "./components/MainPage/Header/Directorates/Placements/Placements";
-import Research from "./components/MainPage/Header/Directorates/Research/Research";
-import SportsAdministration from "./components/MainPage/Header/Directorates/SportsAdministration/SportsAdministration";
 import { Route, Routes } from "react-router-dom";
-import AcademicsOP from "./components/MainPage/Header/Academics/Programs Offered/AcademicsOP";
-import ConstituentCollegesOP from "./components/MainPage/Header/Academics/Constituent Colleges/ConstituentCollegesOP";
-import AdmissionsOP from "./components/MainPage/Header/Academics/Admissions/AdmissionsOP";
-import AffliatedCollegesOP from "./components/MainPage/Header/Academics/Affliated Colleges/AffliatedCollegesOP";
-import Boschairman from "./components/MainPage/Header/Academics/Bos-chairman/Boschairman";
 
-import Calender from "./components/MainPage/Header/Academics/Calender/Calender";
-import ContactUs from "./components/MainPage/Header/Contact-Us/ContactUs";
-import AboutusMain from "./components/MainPage/Header/Aboutus/AboutusMain";
-import AcademicsMain from "./components/MainPage/Header/Academics/AcademicsMain";
-import AdministrationMain from "./components/MainPage/Header/Administration/AdministrationMain";
-import DirectoratesMain from "./components/MainPage/Header/Directorates/DirectoratesMain";
-import ExaminationMain from "./components/MainPage/Header/Examinations/ExaminationMain";
-import EvaluationExam from "./components/MainPage/Header/Examinations/EvaluationExam";
-import Controller from "./components/MainPage/Header/Examinations/Controller";
-import ControllerSDC from "./components/MainPage/Header/Examinations/ControllerSDC";
-import Controller1 from "./components/MainPage/Header/Examinations/Controller1";
-import Controller2 from "./components/MainPage/Header/Examinations/Controller2";
-import Controller3 from "./components/MainPage/Header/Examinations/Controller3";
-import ControllerPG from "./components/MainPage/Header/Examinations/ControllerPG";
-import ExamResults from "./components/MainPage/Header/Examinations/ExamResults";
+// import BelowBar from "./components/BelowBar/BelowBar";
+import Header from "./components/MainPage/NavBar/Header";
+
+import AboutJNTUGV from "./components/MainPage/NavBar/Aboutus/AboutJNTUGV";
+import Vision from "./components/MainPage/NavBar/Aboutus/Vision";
+import Mission from "./components/MainPage/NavBar/Aboutus/Mission";
+import Chancellor from "./components/MainPage/NavBar/Administration/Chancellor";
+import ViceChancellor from "./components/MainPage/NavBar/Administration/ViceChancellor";
+import Registrar from "./components/MainPage/NavBar/Administration/Registrar";
+import AcademicAudit from "./components/MainPage/NavBar/Directorates/AcademicAudit";
+import AcademicPlanning from "./components/MainPage/NavBar/Directorates/AcademicPlanning";
+import Admissions from "./components/MainPage/NavBar/Directorates/Admissions";
+import AlumniRelations from "./components/MainPage/NavBar/Directorates/AlumniRelations";
+import Empowerment from "./components/MainPage/NavBar/Directorates/Empowerment";
+import Evaluation from "./components/MainPage/NavBar/Directorates/Evaluation";
+import FacultyDevelopmentCell from "./components/MainPage/NavBar/Directorates/FacultyDevelopmentCell";
+import IQAC from "./components/MainPage/NavBar/Directorates/IQAC";
+import Placements from "./components/MainPage/NavBar/Directorates/Placements";
+import Research from "./components/MainPage/NavBar/Directorates/Research";
+import SportsAdministration from "./components/MainPage/NavBar/Directorates/SportsAdministration";
+import AcademicsOP from "./components/MainPage/NavBar/Academics/Programs Offered/AcademicsOP";
+import ConstituentCollegesOP from "./components/MainPage/NavBar/Academics/Constituent Colleges/ConstituentCollegesOP";
+import AdmissionsOP from "./components/MainPage/NavBar/Academics/Admissions/AdmissionsOP";
+import AffliatedCollegesOP from "./components/MainPage/NavBar/Academics/Affliated Colleges/AffliatedCollegesOP";
+import Boschairman from "./components/MainPage/NavBar/Academics/Bos-chairman/Boschairman";
+
+import Calender from "./components/MainPage/NavBar/Academics/Calender/Calender";
+import ContactUs from "./components/MainPage/NavBar/Contact-Us/ContactUs";
+import AboutusMain from "./components/MainPage/NavBar/Aboutus/AboutusMain";
+import AcademicsMain from "./components/MainPage/NavBar/Academics/AcademicsMain";
+import AdministrationMain from "./components/MainPage/NavBar/Administration/AdministrationMain";
+import DirectoratesMain from "./components/MainPage/NavBar/Directorates/DirectoratesMain";
+import ExaminationMain from "./components/MainPage/NavBar/Examinations/ExaminationMain";
+import EvaluationExam from "./components/MainPage/NavBar/Examinations/EvaluationExam";
+import Controller from "./components/MainPage/NavBar/Examinations/Controller";
+import ControllerSDC from "./components/MainPage/NavBar/Examinations/ControllerSDC";
+import Controller1 from "./components/MainPage/NavBar/Examinations/Controller1";
+import Controller2 from "./components/MainPage/NavBar/Examinations/Controller2";
+import Controller3 from "./components/MainPage/NavBar/Examinations/Controller3";
+import ControllerPG from "./components/MainPage/NavBar/Examinations/ControllerPG";
+import ExamResults from "./components/MainPage/NavBar/Examinations/ExamResults";
 import Grievance from "./components/GrievanceForm/GrievanceForm";
-import Results from "./components/MainPage/Results/Results-main";
-import R13 from "./components/MainPage/Results/r13";
-import R20 from "./components/MainPage/Results/r20";
-import R16 from "./components/MainPage/Results/r16";
-import R19 from "./components/MainPage/Results/r19";
-import Chairpersons from "./components/MainPage/Header/Administration/Chairpersons/Chairpersons";
+
+import Chairpersons from "./components/MainPage/NavBar/Administration/Chairpersons/Chairpersons";
 import NewsAndEvents from "./components/NewsAndEvents/NewsAndEvents";
 import CompleteGallery from "./components/Gallery/CompleteGallery";
-import Syllabus from "./components/MainPage/Header/Academics/Syllabus/Syllabus";
-import InfrastructureMain from "./components/MainPage/Header/Infrastructure/InfrastructureMain";
-import Library from "./components/MainPage/Header/Infrastructure/Library/Library";
-import Hostels from "./components/MainPage/Header/Infrastructure/Hostels/Hostels";
-import SportsandFitness from "./components/MainPage/Header/Infrastructure/SportsandFitness/SportsandFitness";
-import Dispensary from "./components/MainPage/Header/Infrastructure/Dispensary/Dispensary";
-import Banks from "./components/MainPage/Header/Infrastructure/Banks/Banks";
-import EngineeringCell from "./components/MainPage/Header/Infrastructure/EngineeringCell/EngineeringCell";
-import Canteen from "./components/MainPage/Header/Infrastructure/Canteen/Canteen";
-import StaffQuarters from "./components/MainPage/Header/Infrastructure/StaffQuarters/StaffQuarters";
-import GuestHouse from "./components/MainPage/Header/Infrastructure/GuestHouse/GuestHouse";
-import MusicClub from "./components/MainPage/Header/Infrastructure/MusicClub/MusicClub";
-import Studentactivityclub from "./components/MainPage/Header/Infrastructure/Studentactivityclub/Studentactivityclub";
+import Syllabus from "./components/MainPage/NavBar/Academics/Syllabus/Syllabus";
+import InfrastructureMain from "./components/MainPage/NavBar/Infrastructure/InfrastructureMain";
+import Library from "./components/MainPage/NavBar/Infrastructure/Library/Library";
+import Hostels from "./components/MainPage/NavBar/Infrastructure/Hostels/Hostels";
+import SportsandFitness from "./components/MainPage/NavBar/Infrastructure/SportsandFitness/SportsandFitness";
+import Dispensary from "./components/MainPage/NavBar/Infrastructure/Dispensary/Dispensary";
+import Banks from "./components/MainPage/NavBar/Infrastructure/Banks/Banks";
+import EngineeringCell from "./components/MainPage/NavBar/Infrastructure/EngineeringCell/EngineeringCell";
+import Canteen from "./components/MainPage/NavBar/Infrastructure/Canteen/Canteen";
+import StaffQuarters from "./components/MainPage/NavBar/Infrastructure/StaffQuarters/StaffQuarters";
+import GuestHouse from "./components/MainPage/NavBar/Infrastructure/GuestHouse/GuestHouse";
+import MusicClub from "./components/MainPage/NavBar/Infrastructure/MusicClub/MusicClub";
+import Studentactivityclub from "./components/MainPage/NavBar/Infrastructure/Studentactivityclub/Studentactivityclub";
 import Footer from "./components/MainPage/Footer/Footer";
-import Dropdown from "./components/MainPage/Header/Dropdown";
-import RepublicDay from "./components/Gallery/RepublicDay";
-import Inauguration from "./components/Gallery/Inauguration";
-import WomensDay from "./components/Gallery/WomensDay";
-import Eisen from "./components/Gallery/Eisen";
-import Cresense from "./components/Gallery/Cresense";
-
+import NavBar from "./components/MainPage/NavBar/NavBar";
+import RepublicDay from "./components/Events/RepublicDay";
+import Inauguration from "./components/Events/Inauguration";
+import WomensDay from "./components/Events/WomensDay";
+import Eisen from "./components/Events/Eisen";
+import Cresense from "./components/Events/Cresense";
+import Homepage from "./components/HomePage/Homepage";
 
 function App() {
   return (
     <div>
       {/* <BelowBar /> */}
       <Header />
-      <Dropdown />
+      <NavBar />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about-us" element={<AboutusMain />}>
@@ -105,7 +102,6 @@ function App() {
           <Route path="vice-chancellor" element={<ViceChancellor />} />
           <Route path="registrar" element={<Registrar />} />
           <Route path="chairpersons" element={<Chairpersons />} />
-
         </Route>
         <Route path="/directorates" element={<DirectoratesMain />}>
           <Route path="academic-audit" element={<AcademicAudit />} />{" "}
@@ -136,29 +132,25 @@ function App() {
           <Route path="controller-pg" element={<ControllerPG />} />
           <Route path="examresults" element={<ExamResults />} />
         </Route>
-        <Route path="/results" element={<Results />}>
-          <Route path="r13" element={<R13 />} />
-          <Route path="r16" element={<R16 />} />
-          <Route path="r19" element={<R19 />} />
-          <Route path="r20" element={<R20 />} />
-        </Route>
+
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/grievance-form" element={<Grievance />} />
         <Route path="/news-and-events" element={<NewsAndEvents />} />
         <Route path="/gallery" element={<CompleteGallery />} />
-        <Route path="/republic-day" element={<RepublicDay />} />
-        <Route path="/inauguration-event" element={<Inauguration />} />
-        <Route path="/womens-day" element={<WomensDay />} />
-        <Route path="/eisen-2k24" element={<Eisen />} />
-        <Route path="/cresense-2k24" element={<Cresense />} />
 
-
-
+        <Route path="/events/republic-day" element={<RepublicDay />} />
+        <Route path="/events/inauguration-event" element={<Inauguration />} />
+        <Route path="/events/womens-day" element={<WomensDay />} />
+        <Route path="/events/eisen-2k24" element={<Eisen />} />
+        <Route path="/events/cresense-2k24" element={<Cresense />} />
 
         <Route path="/infrastructure" element={<InfrastructureMain />}>
           <Route path="about-library" element={<Library />} />
           <Route path="about-hostels" element={<Hostels />} />
-          <Route path="about-sports-and-fitness" element={<SportsandFitness />} />
+          <Route
+            path="about-sports-and-fitness"
+            element={<SportsandFitness />}
+          />
           <Route path="about-dispensary" element={<Dispensary />} />
           <Route path="about-banks" element={<Banks />} />
           <Route path="about-engineering-cell" element={<EngineeringCell />} />
@@ -166,9 +158,11 @@ function App() {
           <Route path="about-staff-quarters" element={<StaffQuarters />} />
           <Route path="about-guest-house" element={<GuestHouse />} />
           <Route path="about-music-club" element={<MusicClub />} />
-          <Route path="about-student-activity-club" element={<Studentactivityclub />} />
+          <Route
+            path="about-student-activity-club"
+            element={<Studentactivityclub />}
+          />
         </Route>
-
       </Routes>
       <Footer />
     </div>
