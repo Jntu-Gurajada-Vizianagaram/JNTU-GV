@@ -84,6 +84,10 @@ import gal81 from "../../assets/Gallery/gal81.jpeg";
 import gal82 from "../../assets/Gallery/gal82.jpeg";
 import gal83 from "../../assets/Gallery/gal83.jpeg";
 
+import gal84 from "../../assets/Gallery/gal84.jpeg";
+import gal85 from "../../assets/Gallery/gal85.jpeg";
+
+
 
 
 
@@ -384,11 +388,20 @@ export const CG = [
   {
     image: gal83,
     description: "K. Dinesh of JNTU GV wins bronze at 2023-24 Inter-University Kickboxing Championship",
-  },
-  {
+  }, {
     image: gal73,
     description: "Technical Symposium in JNTU-GV",
+  },
+
+
+  {
+    image: gal85,
+    description: "ITYUKTA 2K24 Technical Symposium in JNTU-GV",
   }, {
+    image: gal84,
+    description: "ITYUKTA 2K24 Technical Symposium in JNTU-GV",
+  },
+  {
     image: gal74,
     description: "Cresense Technical Symposium in JNTU-GV",
   },
