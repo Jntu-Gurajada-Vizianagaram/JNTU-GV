@@ -1,5 +1,5 @@
 import "./NewsandEvent.css";
-import { CG } from "../Gallery/CG.js";
+import { CG } from "../../Gallery/CG.js";
 
 const NewsAndEvents = () => {
   const recentImages = CG.slice(-6); // Get the last 10 images from CG.js

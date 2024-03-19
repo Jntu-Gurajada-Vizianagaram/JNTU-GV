@@ -47,7 +47,7 @@ import ExamResults from "./components/MainPage/NavBar/Examinations/ExamResults";
 import Grievance from "./components/GrievanceForm/GrievanceForm";
 
 import Chairpersons from "./components/MainPage/NavBar/Administration/Chairpersons/Chairpersons";
-import NewsAndEvents from "./components/NewsAndEvents/NewsAndEvents";
+import NewsAndEvents from "./components/HomePage/NewsAndEvents/NewsAndEvents";
 import CompleteGallery from "./components/Gallery/CompleteGallery";
 import Syllabus from "./components/MainPage/NavBar/Academics/Syllabus/Syllabus";
 import InfrastructureMain from "./components/MainPage/NavBar/Infrastructure/InfrastructureMain";
