@@ -6,7 +6,7 @@ import "../../App.css";
 import "./Homepage.css";
 import ImageGallery from "./ImageGallery/ImageGallery";
 import AboutUs from "./AboutUsMain/aboutUs";
-import NewsAndEvents from "../NewsAndEvents/NewsAndEvents";
+import NewsAndEvents from "./NewsAndEvents/NewsAndEvents";
 import UpdatePanel from "../UpdatePanel/UpdatePanel";
 import Gallery from "../Gallery/Gallery";
 

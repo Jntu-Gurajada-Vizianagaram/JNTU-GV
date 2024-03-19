@@ -5,6 +5,17 @@ import Eisen from "../../assets/Gallery/Eisen 2K24/IMG_20240306_112031.jpg";
 import Cresense from "../../assets/Gallery/Cresense 2K24/IMG_20240301_110135.jpeg";
 
 export const Data = [
+
+  {
+    title: `Report on LIP Training Program by master trainers at JNTUGV on 11-03-2024`,
+    update_type: "BCDE",
+    file_link:
+      "https://drive.google.com/file/d/1JbJkk_W-p_Qk00t8PqB0IMKXekmyQ7AM/view?usp=drive_link",
+    day: "19",
+    month: "Mar",
+    year: "2024",
+    isLink: true,
+  },
   {
     title: `Women's Day celebration 2024`,
     update_type: "events",
