@@ -144,6 +144,17 @@ function UpdatePanel() {
             style={{
               ...buttonStyles,
               backgroundColor:
+                activeButton === "Examinations" ? "#370a68" : "white",
+              color: activeButton === "Examinations" ? "white" : "black",
+            }}
+            onClick={() => handleexamination("Examinations")}
+          >
+            Exams
+          </button>
+          <button
+            style={{
+              ...buttonStyles,
+              backgroundColor:
                 activeButton === "Recruitment" ? "#370a68" : "white",
               color: activeButton === "Recruitment" ? "white" : "black",
             }}
@@ -162,17 +173,7 @@ function UpdatePanel() {
           >
             Academic Events
           </button>
-          <button
-            style={{
-              ...buttonStyles,
-              backgroundColor:
-                activeButton === "Examinations" ? "#370a68" : "white",
-              color: activeButton === "Examinations" ? "white" : "black",
-            }}
-            onClick={() => handleexamination("Examinations")}
-          >
-            Exams
-          </button>
+    
           <button
             style={{
               ...buttonStyles,
