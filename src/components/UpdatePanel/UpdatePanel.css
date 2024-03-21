@@ -120,7 +120,6 @@
 @media (max-width: 767px) {
   .updateButtons {
     width: auto;
-    /* height: fit-content; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -141,5 +140,15 @@
 
   .updatesContainer {
     width: 100vw;
+  }
+
+  .updateButtons{
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .updateBox{
+    justify-content: center;
+    margin-left: 10px;
   }
 }

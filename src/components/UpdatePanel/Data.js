@@ -3,6 +3,7 @@ import Republic from "../../assets/Gallery/Republic Day/IMG-20240129-WA0001.jpg"
 import WomensDay from "../../assets/Gallery/Womensday celebrations 2024/WhatsApp Image 2024-03-13 at 16.15.46.jpeg";
 import Eisen from "../../assets/Gallery/Eisen 2K24/IMG_20240306_112031.jpg";
 import Cresense from "../../assets/Gallery/Cresense 2K24/IMG_20240301_110135.jpeg";
+import Eclectique from "../../assets/Gallery/Eclectique 2K24/1f8e87ff-ace4-496e-96bd-997ed08b9edf.jpg"
 
 export const Data = [
 
@@ -17,6 +18,17 @@ export const Data = [
     isLink: true,
   },
   {
+    title: `Eclectique  2K24`,
+    update_type: "events",
+    file_link: `/events/eclectique-2k24`,
+    image: Eclectique,
+    day: "8",
+    month: "Mar",
+    year: "2024",
+    isLink: true,
+  },
+
+  {
     title: `Women's Day celebration 2024`,
     update_type: "events",
     file_link: `/events/womens-day`,
@@ -26,8 +38,9 @@ export const Data = [
     year: "2024",
     isLink: true,
   },
+
   {
-    title: `EISEN 2K24`,
+    title: `Eisen 2K24`,
     update_type: "events",
     file_link: `/events/eisen-2k24`,
     image: Eisen,
