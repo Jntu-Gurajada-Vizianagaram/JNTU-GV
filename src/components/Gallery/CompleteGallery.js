@@ -27,19 +27,22 @@ function CompleteGallery() {
       </Link>
 
       <div className="gallery-links">
-        <Link to="/events/womens-day" className="republic-day">
+        <Link to="/events/eclectique-2k24" className="event-day">
+          Eclectique 2K24 
+        </Link>
+        <Link to="/events/womens-day" className="event-day">
           Women's Day
-        </Link>{" "}
-        <Link to="/events/eisen-2k24" className="republic-day">
+        </Link>
+        <Link to="/events/eisen-2k24" className="event-day">
           Eisen 2K24
         </Link>
-        <Link to="/events/cresense-2k24" className="republic-day">
+        <Link to="/events/cresense-2k24" className="event-day">
           Cresense 2K24
         </Link>
-        {/*  <Link to="/events/inauguration-event" className="republic-day">
+        {/*  <Link to="/events/inauguration-event" className="event-day">
           Inauguration Event
           </Link>*/}
-        <Link to="/events/republic-day" className="republic-day">
+        <Link to="/events/republic-day" className="event-day">
           Republic Day Images
         </Link>
       </div>

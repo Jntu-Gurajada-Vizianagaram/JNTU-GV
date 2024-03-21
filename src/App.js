@@ -70,6 +70,7 @@ import WomensDay from "./components/Events/WomensDay";
 import Eisen from "./components/Events/Eisen";
 import Cresense from "./components/Events/Cresense";
 import Homepage from "./components/HomePage/Homepage";
+import Eclectique from "./components/Events/Eclectique ";
 
 function App() {
   return (
@@ -143,6 +144,8 @@ function App() {
         <Route path="/events/womens-day" element={<WomensDay />} />
         <Route path="/events/eisen-2k24" element={<Eisen />} />
         <Route path="/events/cresense-2k24" element={<Cresense />} />
+        <Route path="/events/eclectique-2k24" element={<Eclectique />} />
+
 
         <Route path="/infrastructure" element={<InfrastructureMain />}>
           <Route path="about-library" element={<Library />} />
