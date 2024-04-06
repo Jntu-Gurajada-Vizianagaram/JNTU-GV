@@ -87,6 +87,8 @@ import gal83 from "../../assets/Gallery/gal83.jpeg";
 import gal84 from "../../assets/Gallery/gal84.jpeg";
 import gal85 from "../../assets/Gallery/gal85.jpeg";
 
+import gal87 from "../../assets/Gallery/gal87.jpg";
+import gal88 from "../../assets/Gallery/gal88.jpg";
 
 
 
@@ -392,14 +394,20 @@ export const CG = [
     image: gal73,
     description: "Technical Symposium in JNTU-GV",
   },
-
-
   {
     image: gal85,
     description: "ITYUKTA 2K24 Technical Symposium in JNTU-GV",
   }, {
     image: gal84,
     description: "ITYUKTA 2K24 Technical Symposium in JNTU-GV",
+  },
+  {
+    image: gal87,
+    description: "Jagat Jeevan Jayanti celebrations in JNTU-GV ",
+  },
+  {
+    image: gal88,
+    description: "Jagat Jeevan Jayanti celebrations in JNTU-GV",
   },
   {
     image: gal74,

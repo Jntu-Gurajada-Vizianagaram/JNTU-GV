@@ -27,8 +27,12 @@ function CompleteGallery() {
       </Link>
 
       <div className="gallery-links">
+
+        <Link to="/events/ityuktha-2k24" className="event-day">
+          Ityuktha 2K24
+        </Link>
         <Link to="/events/eclectique-2k24" className="event-day">
-          Eclectique 2K24 
+          Eclectique 2K24
         </Link>
         <Link to="/events/womens-day" className="event-day">
           Women's Day

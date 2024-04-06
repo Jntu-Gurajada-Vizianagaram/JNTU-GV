@@ -71,6 +71,7 @@ import Eisen from "./components/Events/Eisen";
 import Cresense from "./components/Events/Cresense";
 import Homepage from "./components/HomePage/Homepage";
 import Eclectique from "./components/Events/Eclectique ";
+import Ityuktha from "./components/Events/Ityuktha";
 
 function App() {
   return (
@@ -145,6 +146,8 @@ function App() {
         <Route path="/events/eisen-2k24" element={<Eisen />} />
         <Route path="/events/cresense-2k24" element={<Cresense />} />
         <Route path="/events/eclectique-2k24" element={<Eclectique />} />
+        <Route path="/events/ityuktha-2k24" element={<Ityuktha />} />
+
 
 
         <Route path="/infrastructure" element={<InfrastructureMain />}>
