@@ -16,7 +16,12 @@ import Rimage12 from "../../../assets/ImageGalleryPictures/Rimage12.jpg";
 import Rimage13 from "../../../assets/ImageGalleryPictures/Rimage13.jpg";
 import Rimage14 from "../../../assets/ImageGalleryPictures/Rimage14.jpg";
 
+import gal86 from "../../../assets/ImageGalleryPictures/gal86.jpeg";
+
+
+
 const images = [
+  gal86,
   image11,
   image10,
   Rimage13,

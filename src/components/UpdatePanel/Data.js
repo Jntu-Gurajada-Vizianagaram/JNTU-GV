@@ -4,8 +4,21 @@ import WomensDay from "../../assets/Gallery/Womensday celebrations 2024/WhatsApp
 import Eisen from "../../assets/Gallery/Eisen 2K24/IMG_20240306_112031.jpg";
 import Cresense from "../../assets/Gallery/Cresense 2K24/IMG_20240301_110135.jpeg";
 import Eclectique from "../../assets/Gallery/Eclectique 2K24/1f8e87ff-ace4-496e-96bd-997ed08b9edf.jpg"
+import Ityuktha from "../../assets/Gallery/Ityuktha 2K24/WhatsApp Image 2024-03-30 at 14.16.17.jpeg"
 
 export const Data = [
+
+  {
+    title: `Ityuktha  2K24`,
+    update_type: "events",
+    file_link: `/events/ityuktha-2k24`,
+    image: Ityuktha,
+    day: "16",
+    month: "Mar",
+    year: "2024",
+    isLink: true,
+  },
+
 
   {
     title: `Report on LIP Training Program by master trainers at JNTUGV on 11-03-2024`,
