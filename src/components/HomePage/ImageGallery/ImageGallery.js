@@ -1,40 +1,27 @@
-import React from "react";
-import "./ImageGallery.css";
-
+import React, { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import image8 from "../../../assets/ImageGalleryPictures/image8.jpg";
-import image1 from "../../../assets/ImageGalleryPictures/image1.jpg";
-
-import image9 from "../../../assets/ImageGalleryPictures/image9.jpg";
-import image10 from "../../../assets/ImageGalleryPictures/image10.jpg";
-import image11 from "../../../assets/ImageGalleryPictures/image11.jpg";
-import Rimage10 from "../../../assets/ImageGalleryPictures/Rimage10.jpg";
-import Rimage11 from "../../../assets/ImageGalleryPictures/Rimage11.jpg";
-import Rimage12 from "../../../assets/ImageGalleryPictures/Rimage12.jpg";
-import Rimage13 from "../../../assets/ImageGalleryPictures/Rimage13.jpg";
-import Rimage14 from "../../../assets/ImageGalleryPictures/Rimage14.jpg";
-
-import gal86 from "../../../assets/ImageGalleryPictures/gal86.jpeg";
-
-
-
-const images = [
-  gal86,
-  image11,
-  image10,
-  Rimage13,
-  Rimage11,
-  Rimage12,
-  Rimage14,
-  Rimage10,
-  image9,
-  image8,
-  image1,
-];
+import "./ImageGallery.css";
 
 function ImageGallery() {
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch(
+          "https://api.jntugv.edu.in/api/webadmin/carousel-images"
+        );
+        const apiData = await response.json();
+        console.log(apiData);
+        setImages(apiData);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchImages();
+  }, []);
+
   return (
     <div className="mainDivIG">
       <div className="mainImageGallery">
@@ -43,8 +30,8 @@ function ImageGallery() {
             <Carousel.Item key={index}>
               <img
                 className="ig-image"
-                src={image}
-                alt={`Slide ${index + 1}`}
+                src={image.imglink}
+                alt={`Slide ${image.description}`}
               />
               <Carousel.Caption>
                 <div className="carouselText"></div>
