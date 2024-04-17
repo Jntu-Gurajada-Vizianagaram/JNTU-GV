@@ -161,7 +161,7 @@ const NavBar = () => {
                   {item.icon} {item.label}
                 </div>
               ) : (
-                <div className="drop-icon">
+                <div className="drop-icon" onClick={handleMenuToggle}>
                   <Link to={item.path}>
                     {item.icon} {item.label}
                   </Link>

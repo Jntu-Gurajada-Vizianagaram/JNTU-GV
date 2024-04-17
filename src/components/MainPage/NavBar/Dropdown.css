@@ -40,7 +40,7 @@ button {
 }
 
 .dropbtn:hover {
-  /* background-color: #2e0669; */
+  width: 100%;
   color: #ffffff;
 }
 
@@ -93,6 +93,7 @@ button:hover {
     display: flex;
     color: #ffffff;
     justify-content: flex-start;
+    align-self: flex-start;
   }
 
   .menu-off-options {
@@ -106,5 +107,6 @@ button:hover {
 
   .topnav {
     height: auto;
+    flex-direction: column;
   }
 }
