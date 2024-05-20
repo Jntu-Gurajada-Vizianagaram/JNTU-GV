@@ -125,7 +125,7 @@ const NavBar = () => {
         },
         {
           label: "Examination Results",
-          path: "https://results.jntukucev.ac.in/",
+          path: "https://ums.campx.in/jntugv/jntugv/results",
         }, // External link
         // Add more sub-items as needed
       ],
