@@ -1,338 +1,399 @@
 export const columns = [
   { id: "SNo", label: "SNo" },
   {
-    id: "ProgrammeName",
-    label: "Programme Name",
+    id: "BranchName",
+    label: "Branch Name",
     minWidth: 170,
     align: "center",
   },
+  
   {
-    id: "ProgrammeCode",
-    label: "Programme Code",
+    id: "APEAPCETCode",
+    label: "AP EAPCET Code",
     minWidth: 170,
     align: "center",
   },
+
   {
-    id: "Course",
-    label: "Course Type",
+    id: "JNTUGVBranchCode",
+    label: "JNTUGV Branch Code",
     minWidth: 170,
     align: "center",
   },
-  {
-    id: "Duration",
-    label: "Duration",
-    minWidth: 170,
-    align: "center",
-  },
+  // {
+  //   id: "Course",
+  //   label: "Course Type",
+  //   minWidth: 170,
+  //   align: "center",
+  // },
+  // {
+  //   id: "Duration",
+  //   label: "Duration",
+  //   minWidth: 170,
+  //   align: "center",
+  // },
+  
 ];
 
 export const rows = [
   {
-    SNo: "1",
-    ProgrammeName: "Civil Engineering",
-    ProgrammeCode: "01",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 1,
+      "BranchName": "B. Tech - Civil Engineering",
+      "APEAPCETCode": "CIV",
+      "JNTUGVBranchCode": "01"
   },
   {
-    SNo: "2",
-    ProgrammeName: "Electrical & Electronics Engineering",
-    ProgrammeCode: "02",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 2,
+      "BranchName": "B. Tech - Electrical & Electronics Engineering",
+      "APEAPCETCode": "EEE",
+      "JNTUGVBranchCode": "02"
   },
   {
-    SNo: "3",
-    ProgrammeName: "Mechanical Engineering",
-    ProgrammeCode: "03",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 3,
+      "BranchName": "B. Tech - Mechanical Engineering",
+      "APEAPCETCode": "MEC",
+      "JNTUGVBranchCode": "03"
   },
   {
-    SNo: "4",
-    ProgrammeName: "Electronics and Communication Engineering",
-    ProgrammeCode: "04",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 4,
+      "BranchName": "B. Tech - Electronics and Communication Engineering",
+      "APEAPCETCode": "ECE",
+      "JNTUGVBranchCode": "04"
   },
   {
-    SNo: "5",
-    ProgrammeName: "Computer Science Engineering",
-    ProgrammeCode: "05",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 5,
+      "BranchName": "B. Tech - Computer Science Engineering",
+      "APEAPCETCode": "CSE",
+      "JNTUGVBranchCode": "05"
   },
   {
-    SNo: "6",
-    ProgrammeName: "Chemical Engineering",
-    ProgrammeCode: "08",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 6,
+      "BranchName": "B. Tech - Computer Science Technology",
+      "APEAPCETCode": "CST",
+      "JNTUGVBranchCode": "06"
   },
   {
-    SNo: "7",
-    ProgrammeName: "Information Technology",
-    ProgrammeCode: "12",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 7,
+      "BranchName": "B. Tech - Computer Science & Information Technology",
+      "APEAPCETCode": "CIT",
+      "JNTUGVBranchCode": "07"
   },
   {
-    SNo: "8",
-    ProgrammeName: "Computer Science and Systems Engineering",
-    ProgrammeCode: "15",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 8,
+      "BranchName": "B. Tech - Chemical Engineering",
+      "APEAPCETCode": "CHE",
+      "JNTUGVBranchCode": "08"
   },
   {
-    SNo: "9",
-    ProgrammeName: "Bio- Technology",
-    ProgrammeCode: "23",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 9,
+      "BranchName": "B. Tech - Electronics and Instrumentation Engineering",
+      "APEAPCETCode": "EIE",
+      "JNTUGVBranchCode": "10"
   },
   {
-    SNo: "10",
-    ProgrammeName: "Automobile Engineering",
-    ProgrammeCode: "24",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 10,
+      "BranchName": "B. Tech - Bio-Medical Engineering",
+      "APEAPCETCode": " ",
+      "JNTUGVBranchCode": "11"
   },
   {
-    SNo: "11",
-    ProgrammeName: "CSE( Artificial Intelligence)",
-    ProgrammeCode: "43",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 11,
+      "BranchName": "B. Tech - Information Technology",
+      "APEAPCETCode": "INF",
+      "JNTUGVBranchCode": "12"
   },
   {
-    SNo: "12",
-    ProgrammeName: "CSE( Data Science)",
-    ProgrammeCode: "44",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 12,
+      "BranchName": "B. Tech - Electronics and Control Engineering",
+      "APEAPCETCode": " ",
+      "JNTUGVBranchCode": "13"
   },
   {
-    SNo: "13",
-    ProgrammeName: "CSE (Artificial Intelligence and Data Science)",
-    ProgrammeCode: "45",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 13,
+      "BranchName": "B. Tech - Electronics & Communication Technology",
+      "APEAPCETCode": "ECT",
+      "JNTUGVBranchCode": "14"
   },
   {
-    SNo: "14",
-    ProgrammeName: "CSE ( Cyber Security)",
-    ProgrammeCode: "46",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 14,
+      "BranchName": "B. Tech - Computer Science and Systems Engineering",
+      "APEAPCETCode": "CSS",
+      "JNTUGVBranchCode": "15"
   },
   {
-    SNo: "15",
-    ProgrammeName: "CSE( Internet of Things)",
-    ProgrammeCode: "49",
-    Course: "B.Tech",
-    Duration: "4 Years",
+      "SNo": 15,
+      "BranchName": "B. Tech - Electronics and Computer Engineering",
+      "APEAPCETCode": "ECM",
+      "JNTUGVBranchCode": "19"
   },
   {
-    SNo: "16",
-    ProgrammeName: "Environmental Engineering & Management",
-    ProgrammeCode: "01",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 16,
+      "BranchName": "B. Tech - Aeronautical Engineering",
+      "APEAPCETCode": " ",
+      "JNTUGVBranchCode": "21"
   },
   {
-    SNo: "17",
-    ProgrammeName: "Renewable Energy",
-    ProgrammeCode: "02",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 17,
+      "BranchName": "B. Tech - Instrumentation and Control Engineering",
+      "APEAPCETCode": " ",
+      "JNTUGVBranchCode": "22"
   },
   {
-    SNo: "18",
-    ProgrammeName: "Bio-Technology",
-    ProgrammeCode: "03",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 18,
+      "BranchName": "B. Tech - Bio-Technology",
+      "APEAPCETCode": "BIO",
+      "JNTUGVBranchCode": "23"
   },
   {
-    SNo: "19",
-    ProgrammeName: "CAD/CAM",
-    ProgrammeCode: "04",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 19,
+      "BranchName": "B. Tech - Automobile Engineering",
+      "APEAPCETCode": "AUT",
+      "JNTUGVBranchCode": "24"
   },
   {
-    SNo: "20",
-    ProgrammeName: "Computer Science",
-    ProgrammeCode: "05",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 20,
+      "BranchName": "B. Tech - Mining Engineering",
+      "APEAPCETCode": "MIN",
+      "JNTUGVBranchCode": "26"
   },
   {
-    SNo: "21",
-    ProgrammeName: "Petroleum Engineering",
-    ProgrammeCode: "08",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 21,
+      "BranchName": "B. Tech - Petroleum Technology / Petroleum Engineering",
+      "APEAPCETCode": "PET/PEE",
+      "JNTUGVBranchCode": "27"
   },
   {
-    SNo: "22",
-    ProgrammeName: "Power Electronics & Systems",
-    ProgrammeCode: "12",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 22,
+      "BranchName": "B. Tech - Petrochemical Engineering",
+      "APEAPCETCode": " ",
+      "JNTUGVBranchCode": "28"
   },
   {
-    SNo: "23",
-    ProgrammeName: "Machine Design",
-    ProgrammeCode: "15",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 23,
+      "BranchName": "B. Tech - Aviation Engineering",
+      "APEAPCETCode": " ",
+      "JNTUGVBranchCode": "30"
   },
   {
-    SNo: "24",
-    ProgrammeName: "Highway Engineering",
-    ProgrammeCode: "23",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 24,
+      "BranchName": "B. Tech - Aircraft Maintenance Engineering",
+      "APEAPCETCode": " ",
+      "JNTUGVBranchCode": "31"
   },
   {
-    SNo: "25",
-    ProgrammeName: "Material Science & Technology",
-    ProgrammeCode: "24",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 25,
+      "BranchName": "B. Tech - Metallurgical Engineering",
+      "APEAPCETCode": "MET",
+      "JNTUGVBranchCode": "34"
   },
   {
-    SNo: "26",
-    ProgrammeName: "Power Electronics",
-    ProgrammeCode: "43",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 26,
+      "BranchName": "B. Tech - Power Engineering",
+      "APEAPCETCode": " ",
+      "JNTUGVBranchCode": "35"
   },
   {
-    SNo: "27",
-    ProgrammeName: "Electrical Machine & Drives",
-    ProgrammeCode: "44",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 27,
+      "BranchName": "B. Tech - Agriculture Engineering",
+      "APEAPCETCode": "AGR",
+      "JNTUGVBranchCode": "35"
   },
   {
-    SNo: "28",
-    ProgrammeName: "Systems and Signal Processing",
-    ProgrammeCode: "45",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 28,
+      "BranchName": "Architecture (B. Arch)",
+      "APEAPCETCode": " ",
+      "JNTUGVBranchCode": "40"
   },
   {
-    SNo: "29",
-    ProgrammeName: "Communication Engineering & Signal Processing",
-    ProgrammeCode: "46",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 29,
+      "BranchName": "B. Pharmacy",
+      "APEAPCETCode": " ",
+      "JNTUGVBranchCode": "42"
   },
   {
-    SNo: "30",
-    ProgrammeName: "Computers and Communication Engineering",
-    ProgrammeCode: "49",
-    Course: "M.Tech",
-    Duration: "2 Years",
+      "SNo": 30,
+      "BranchName": "B. Tech - CSE (Artificial Intelligence and Machine Learning)",
+      "APEAPCETCode": "CSIVI",
+      "JNTUGVBranchCode": "43"
   },
   {
-    SNo: "31",
-    ProgrammeName: "Pharm. D (PB)",
-    ProgrammeCode: "01",
-    Course: "Pharm.D",
-    Duration: "6 Years",
+      "SNo": 31,
+      "BranchName": "B. Tech - CSE (Artificial Intelligence)",
+      "APEAPCETCode": " ",
+      "JNTUGVBranchCode": "44"
   },
   {
-    SNo: "32",
-    ProgrammeName: "Pharmaceutical Chemistry",
-    ProgrammeCode: "02",
-    Course: "M.Pharmacy",
-    Duration: "2 Years",
+      "SNo": 32,
+      "BranchName": "B. Tech - CSE (Data Science)",
+      "APEAPCETCode": "CSD",
+      "JNTUGVBranchCode": "45"
   },
   {
-    SNo: "33",
-    ProgrammeName: "Pharmaceutics",
-    ProgrammeCode: "03",
-    Course: "M.Pharmacy",
-    Duration: "2 Years",
+      "SNo": 33,
+      "BranchName": "B. Tech - CSE (Artificial Intelligence and Data Science)",
+      "APEAPCETCode": "CAD",
+      "JNTUGVBranchCode": "45"
   },
   {
-    SNo: "34",
-    ProgrammeName: "Pharmaceutical Analysis & Quality Assurance",
-    ProgrammeCode: "04",
-    Course: "M.Pharmacy",
-    Duration: "2 Years",
+      "SNo": 34,
+      "BranchName": "B. Tech - CSE (Cyber Security)",
+      "APEAPCETCode": "CSC",
+      "JNTUGVBranchCode": "46"
   },
   {
-    SNo: "35",
-    ProgrammeName: "Bio-Technology",
-    ProgrammeCode: "05",
-    Course: "M.Pharmacy",
-    Duration: "2 Years",
+      "SNo": 35,
+      "BranchName": "B. Tech - CSE (Internet of Things and Cyber Security including Block Chain Technology)",
+      "APEAPCETCode": "CIC",
+      "JNTUGVBranchCode": "47"
   },
   {
-    SNo: "36",
-    ProgrammeName: "Pharmacy Practice Course",
-    ProgrammeCode: "08",
-    Course: "M.Pharmacy",
-    Duration: "2 Years",
+      "SNo": 36,
+      "BranchName": "B. Tech - CSE (Computer Science and Business System)",
+      "APEAPCETCode": " ",
+      "JNTUGVBranchCode": "48"
   },
   {
-    SNo: "37",
-    ProgrammeName: "Pharmaceutical Analysis and Quality Control",
-    ProgrammeCode: "12",
-    Course: "M.Pharmacy",
-    Duration: "2 Years",
+      "SNo": 37,
+      "BranchName": "B. Tech - CSE (Internet of Things)",
+      "APEAPCETCode": "CSO",
+      "JNTUGVBranchCode": "49"
   },
   {
-    SNo: "38",
-    ProgrammeName: "Quality Assurance and Regularity Affairs",
-    ProgrammeCode: "15",
-    Course: "M.Pharmacy",
-    Duration: "2 Years",
+      "SNo": 38,
+      "BranchName": "B. Tech - ECE (Electronics & Communication Technology)",
+      "APEAPCETCode": " ",
+      "JNTUGVBranchCode": "50"
   },
   {
-    SNo: "39",
-    ProgrammeName: "Agribusiness Management/ Entrepreneurship",
-    ProgrammeCode: "01",
-    Course: "MBA",
-    Duration: "2 Years",
+      "SNo": 39,
+      "BranchName": "B. Tech - Food Engineering",
+      "APEAPCETCode": "FDE",
+      "JNTUGVBranchCode": "51"
   },
   {
-    SNo: "40",
-    ProgrammeName: "Master in Hospital Administration",
-    ProgrammeCode: "02",
-    Course: "MBA",
-    Duration: "2 Years",
+      "SNo": 40,
+      "BranchName": "B. Tech - ECE (Internet of Things)",
+      "APEAPCETCode": " ",
+      "JNTUGVBranchCode": "52"
   },
   {
-    SNo: "41",
-    ProgrammeName: "Logistics and Supply Chain Management",
-    ProgrammeCode: "03",
-    Course: "MBA",
-    Duration: "2 Years",
+      "SNo": 41,
+      "BranchName": "B. Tech - ME (Robotics)",
+      "APEAPCETCode": "MRB",
+      "JNTUGVBranchCode": "53"
   },
   {
-    SNo: "42",
-    ProgrammeName: "Big Data Analysis",
-    ProgrammeCode: "04",
-    Course: "MBA",
-    Duration: "2 Years",
+      "SNo": 42,
+      "BranchName": "B. Tech - Artificial Intelligence and Data Science",
+      "APEAPCETCode": "AID",
+      "JNTUGVBranchCode": "54"
   },
   {
-    SNo: "43",
-    ProgrammeName: "Digital Marketing",
-    ProgrammeCode: "05",
-    Course: "MBA",
-    Duration: "2 Years",
+      "SNo": 43,
+      "BranchName": "B. Tech - Pharmaceutical Engineering",
+      "APEAPCETCode": "PHE",
+      "JNTUGVBranchCode": "55"
   },
   {
-    SNo: "44",
-    ProgrammeName: "MBA(Pharmaceutical Management)",
-    ProgrammeCode: "08",
-    Course: "MBA",
-    Duration: "2 Years",
+      "SNo": 44,
+      "BranchName": "B. Tech - Aerospace Engineering",
+      "APEAPCETCode": "ASE",
+      "JNTUGVBranchCode": "56"
   },
-];
+  {
+      "SNo": 45,
+      "BranchName": "B. Tech - Computer Science and Business System",
+      "APEAPCETCode": "CSB",
+      "JNTUGVBranchCode": "57"
+  },
+  {
+      "SNo": 46,
+      "BranchName": "B. Tech - CSE (Big Data Analytics)",
+      "APEAPCETCode": "CBA",
+      "JNTUGVBranchCode": "58"
+  },
+  {
+      "SNo": 47,
+      "BranchName": "B. Tech - Cyber Security",
+      "APEAPCETCode": "CS",
+      "JNTUGVBranchCode": "59"
+  },
+  {
+      "SNo": 48,
+      "BranchName": "B. Tech - Internet of Thing",
+      "APEAPCETCode": "IOT",
+      "JNTUGVBranchCode": "60"
+  },
+  {
+      "SNo": 49,
+      "BranchName": "B. Tech - Artificial Intelligence and Machine Learning",
+      "APEAPCETCode": "AIM",
+      "JNTUGVBranchCode": "61"
+  },
+  {
+      "SNo": 50,
+      "BranchName": "B. Tech - Computer Science and Design",
+      "APEAPCETCode": "CSG",
+      "JNTUGVBranchCode": "62"
+  },
+  {
+      "SNo": 51,
+      "BranchName": "B. Tech - CSE (Regional Language)",
+      "APEAPCETCode": "CSE",
+      "JNTUGVBranchCode": "63"
+  },
+  {
+      "SNo": 52,
+      "BranchName": "B. Tech - Robotics",
+      "APEAPCETCode": "RBT",
+      "JNTUGVBranchCode": "64"
+  },
+  {
+      "SNo": 53,
+      "BranchName": "B. Tech - Computer Science and Engineering and Business Systems",
+      "APEAPCETCode": "CSEB",
+      "JNTUGVBranchCode": "65"
+  },
+  {
+      "SNo": 54,
+      "BranchName": "B. Tech - Electronics Engineering (VLSI Design and Technology)",
+      "APEAPCETCode": "ET",
+      "JNTUGVBranchCode": "66"
+  },
+  {
+      "SNo": 55,
+      "BranchName": "B. Tech - Artificial Intelligence",
+      "APEAPCETCode": "AI",
+      "JNTUGVBranchCode": "67"
+  },
+  {
+      "SNo": 56,
+      "BranchName": "B. Tech - Computer Science",
+      "APEAPCETCode": "COS",
+      "JNTUGVBranchCode": "68"
+  },
+  {
+      "SNo": 57,
+      "BranchName": "B. Tech - ECE (Industry Integrated)",
+      "APEAPCETCode": "EII",
+      "JNTUGVBranchCode": "20"
+  },
+  {
+      "SNo": 58,
+      "BranchName": "B. Tech - Electronics and Communication (Advanced Communication Technology)",
+      "APEAPCETCode": "ECA",
+      "JNTUGVBranchCode": "18"
+  },
+  {
+      "SNo": 59,
+      "BranchName": "UG- BBA (Bachelor of Business Administration)",
+      "APEAPCETCode": "BBA",
+      "JNTUGVBranchCode": "69"
+  },
+  {
+      "SNo": 60,
+      "BranchName": "UG- BCA (Bachelor of Computer Application)",
+      "APEAPCETCode": "BCA",
+      "JNTUGVBranchCode": "70"
+  }
+]

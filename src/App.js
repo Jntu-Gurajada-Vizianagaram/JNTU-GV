@@ -82,9 +82,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about-us" element={<AboutusMain />}>
-          <Route path="about-jntugv" element={<AboutJNTUGV />} />
-          <Route path="vision" element={<Vision />} />
-          <Route path="mission" element={<Mission />} />
+          <Route path="about-jntugv" element={<AboutJNTUGV id="about-jntugv" />} />
+          <Route path="vision" element={<AboutJNTUGV id="vision" />} />
+          <Route path="mission" element={<AboutJNTUGV id="mission" />} />
         </Route>
         <Route path="/academics" element={<AcademicsMain />}>
           <Route
