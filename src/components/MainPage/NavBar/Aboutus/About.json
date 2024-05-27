@@ -1,0 +1,29 @@
+{
+    "sections": [
+      {
+        "id": "mission",
+        "title": "Mission",
+        "content": [
+          "To orchestrate an unparalleled symphony of intellectual rigor and academic distinction, sculpting minds through innovative pedagogies, cutting-edge research, thus forging individuals capable of leading transformative change in their chosen fields.",
+          "To foster a mission of community synergy, university engages with and uplifts the rural community through initiatives that transcend educational boundarie enriching environment within our academic sphere.",
+          "To foster a global perspective and a culture of scholarly inquiry, the university endeavors to instill in our students a thirst for knowledge that transcends borders, encouraging them to explore diverse perspectives and engage in rigorous scholarly endeavors that contribute not only to their personal growth but also to the global academic discourse."
+        ]
+      },
+      {
+        "id": "vision",
+        "title": "Vision",
+        "content": [
+          "JNTU-GV is envisaged as an epitome of scholastic empowerment for the rural milieu, wherein the harmonious intersection of academic prowess, community involvement, inclusiveness, research, and global outlook culminates in the cultivation of erudite individuals poised to make substantive contributions to societal advancement."
+        ]
+      },
+      {
+        "id": "about-jntugv",
+        "title": "About JNTUGV",
+        "content": [
+          "JNTU College of Engineering, Vizianagaram was established in the year 2007 as a constituent College of JNTU Hyderabad. JNTU Hyderabad was trifurcated into three Universities by the Andhra Pradesh Act No. 30 of 2008 and since 24th August 2008, the College has become the constituent college of JNTU Kakinada. Vide University Act No.22 of 2021, JNTU Kakinada is bifurcated and Jawaharlal Nehru Technological University Gurajada, Vizianagaram come into existence as a separate University vide G.O.Ms.No.3, dated: 12-01-2022.",
+          "The university is spread across six districts i.e Vizianagaram, Visakhapatnam, Srikakulam, Parvathipuram Manyam, Alluri Sitharama Raju and Anakapalli. There are 2 constituent colleges and 37 affiliated colleges under its jurisdiction and catering education in different Engineering, Pharmacy and Management departments."
+        ]
+      }
+    ]
+  }
+  

@@ -7,8 +7,8 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/MainPage/NavBar/Header";
 
 import AboutJNTUGV from "./components/MainPage/NavBar/Aboutus/AboutJNTUGV";
-import Vision from "./components/MainPage/NavBar/Aboutus/Vision";
-import Mission from "./components/MainPage/NavBar/Aboutus/Mission";
+// import Vision from "./components/MainPage/NavBar/Aboutus/Vision";
+// import Mission from "./components/MainPage/NavBar/Aboutus/Mission";
 import Chancellor from "./components/MainPage/NavBar/Administration/Chancellor";
 import ViceChancellor from "./components/MainPage/NavBar/Administration/ViceChancellor";
 import Registrar from "./components/MainPage/NavBar/Administration/Registrar";
@@ -82,9 +82,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about-us" element={<AboutusMain />}>
-          <Route path="about-jntugv" element={<AboutJNTUGV />} />
-          <Route path="vision" element={<Vision />} />
-          <Route path="mission" element={<Mission />} />
+          <Route path="about-jntugv" element={<AboutJNTUGV id="about-jntugv" />} />
+          <Route path="vision" element={<AboutJNTUGV id="vision" />} />
+          <Route path="mission" element={<AboutJNTUGV id="mission" />} />
         </Route>
         <Route path="/academics" element={<AcademicsMain />}>
           <Route

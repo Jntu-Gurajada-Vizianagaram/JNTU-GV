@@ -13,19 +13,15 @@ function Mission() {
           {/* Profile description */}
           <p className="a"></p>
           <Typography variant="p">
-            ❖ To provide high quality technical education through a creative
-            balance of academia and industry by adopting highly effective
-            teaching learning processes.
+            ❖ To orchestrate an unparalleled symphony of intellectual rigor and academic distinction, sculpting minds through innovative pedagogies, cutting-edge research, thus forging individuals capable of leading transformative change in their chosen fields.
           </Typography>
           <br />
           <Typography variant="p">
-            ❖ To promote multidisciplinary research with a global perspective to
-            attain professional excellence.
+            ❖ To foster a mission of community synergy, university engages with and uplifts the rural community through initiatives that transcend educational boundarie enriching environment within our academic sphere.
           </Typography>
           <br />
           <Typography variant="p">
-            ❖ To establish standards that inculcate ethical and moral values
-            that contribute to growth in the Career and development of society.
+            ❖ To foster a global perspective and a culture of scholarly inquiry, university endeavors to instill in our students a thirst for knowledge that transcends borders, encouraging them to explore diverse perspectives and engage in rigorous scholarly endeavors that contribute not only to their personal growth but also to the global academic discourse.
           </Typography>
         </div>
       </div>

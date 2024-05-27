@@ -10,10 +10,7 @@ function Vision() {
         <div className="allRightContentHeading">Vision</div>
         <div className="allRight-ContentProfile">
           <Typography>
-            ❖ To emerge as a premier technical Institution in the field of
-            engineering and research with a focus to produce professionally
-            competent and socially sensitive engineers capable of working in a
-            multidisciplinary global environment.
+            ❖ JNTU-GV is envisaged as an epitome of scholastic empowerment for the rural milieu, wherein the harmonious intersection of academic prowess, community involvement, inclusiveness, research, and global outlook culminates in the cultivation of erudite individuals poised to make substantive contributions to societal advancement.
           </Typography>
         </div>
       </div>
