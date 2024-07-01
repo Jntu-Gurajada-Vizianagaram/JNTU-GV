@@ -10,8 +10,8 @@ import {
   Drafts as DraftsIcon,
   Menu as MenuIcon,
 } from "@mui/icons-material";
-
 import "./Dropdown.css";
+import Search from "./Search/Search";
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -80,7 +80,7 @@ const NavBar = () => {
         { label: "Academic Audit", path: "/directorates/academic-audit" },
         { label: "Evaluation", path: "/directorates/evaluation" },
         { label: "Admissions", path: "/directorates/admissions" },
-        { label: "IIIT & Placements", path: "/directorates/placements" },
+        { label: "Industrial Relations & Placements", path: "/directorates/placements" },
         { label: "Research & Development", path: "/directorates/research" },
         { label: "Alumni Relations", path: "/directorates/alumni-relations" },
         {
@@ -157,12 +157,12 @@ const NavBar = () => {
           <div key={index} className="dropdown">
             <div className="dropbtn">
               {item.subItems ? (
-                <div className="drop-icon">
+                <div className="drop-icon d-flex align-items-center">
                   {item.icon} {item.label}
                 </div>
               ) : (
                 <div className="drop-icon" onClick={handleMenuToggle}>
-                  <Link to={item.path}>
+                  <Link className="d-flex align-items-center" to={item.path}>
                     {item.icon} {item.label}
                   </Link>
                 </div>
@@ -182,6 +182,7 @@ const NavBar = () => {
           </div>
         ))}
       </div>
+      <Search/>
     </nav>
   );
 };

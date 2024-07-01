@@ -1,42 +1,129 @@
+
 .ig-image {
-  height: 400px;
-  width: 60vw;
+  max-height: 60vh;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0.20rem 1.20rem 0 rgba(255, 255, 255, 0.1);
+  margin: 30px 0;
+  object-fit: cover;
 }
+
 .mainImageGallery {
   background-color: transparent;
-  width: 60vw;
+  width: 100%;
+  max-width: 50vw;
+  margin: 0 auto;
+}
+
+.leftDivGallery {
+  width: 100%;
+  max-width: 30vw;
+  height: auto;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  padding: 1rem;
+}
+
+.leftDivGallery h3 {
+  color: #55b2e7;
+}
+
+.leftDivGallery p {
+  color: #2F4F4F;
+  text-align: justify;
+}
+
+.leftDivGallery .view-more {
+  background-color: #55b2e7;
+  color: white;
 }
 
 .mainDivIG {
-  margin-left: 10%;
-  margin-right: 10%;
+  height: auto;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  background-image: linear-gradient(90deg, white 50%, #370a68 100%);
+  padding: 1rem;
 }
+
 .carouselText {
   background-color: #690001;
+  color: white;
   width: max-content;
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0.5rem;
 }
 
-@media (max-width: 600px) {
-  .image {
-    height: 200px;
-  }
-
+@media screen and (max-width: 1200px) {
   .mainDivIG {
-    margin: 0;
+    flex-direction: column;
+    background-image: linear-gradient(180deg, white 50%, #370a68 100%);
   }
 
-  .ig-image {
-    height: 200px;
-    width: 100%;
+  .leftDivGallery {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
-  .mainImageGallery{
-    width: 100vw;
+  .mainImageGallery {
+    max-width: 80%;
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainDivIG {
+    flex-direction: column;
+    background-image: linear-gradient(180deg, white 50%, #370a68 100%);
+  }
+
+  .leftDivGallery {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .mainImageGallery {
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+
+  .leftDivGallery h3 {
+    font-size: 1.5rem;
+  }
+
+  .leftDivGallery p {
+    font-size: 1rem;
+  }
+
+  .leftDivGallery .view-more {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .leftDivGallery h3 {
+    font-size: 1.25rem;
+  }
+
+  .leftDivGallery p {
+    font-size: 0.875rem;
+  }
+
+  .leftDivGallery .view-more {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .carouselText {
+    font-size: 0.75rem;
+    padding: 0.25rem;
   }
 }

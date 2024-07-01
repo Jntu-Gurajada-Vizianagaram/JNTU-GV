@@ -65,8 +65,8 @@ const Notification = ({ displayData }) => {
                     }}
                   >
                     {entry.title}
-                  </a>
-                  {daysAgo(`${entry.month} ${entry.day}, ${entry.year}`) <=
+
+                    {daysAgo(`${entry.month} ${entry.day}, ${entry.year}`) <=
                     5 && (
                       <img
                         src={newGif}
@@ -75,6 +75,8 @@ const Notification = ({ displayData }) => {
                         width="50vh"
                       />
                     )}
+                  </a>
+                 
                   <div>
                     {/* condition for button*/}
                     {entry.external_text && (

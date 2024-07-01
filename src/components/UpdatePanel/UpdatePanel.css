@@ -1,3 +1,6 @@
+#events{
+  background-color:white;
+}
 .updateComponent {
   margin: 1rem 1rem 1rem 1rem;
   overflow-y: scroll;

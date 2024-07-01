@@ -1,14 +1,16 @@
-/* Dropdown.css */
 .topnav {
-  background-image: linear-gradient(to right, #370a68, #55b2e7);
+  background-image: linear-gradient(to left, #370a68, #55b2e7);
   display: flex;
   align-items: center;
-  text-align: center;
   justify-content: center;
-  height: 50px;
-  /* width: 90vw; */
-  margin-left: auto;
-  margin-right: auto;
+  position: sticky;
+  top: 3.44rem; /* Adjust based on the height of the header when not scrolled */
+  z-index: 999;
+  transition: top 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  height: auto;
 }
 
 button {
@@ -23,9 +25,7 @@ button {
 .topnav a {
   display: block;
   color: white;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
+  padding: 5px 10px;
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
@@ -33,7 +33,6 @@ button {
 
 .dropbtn {
   color: white;
-  padding-top: 10px;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -48,6 +47,9 @@ button {
   position: relative;
   display: inline-block;
 }
+.drop-icon{
+ 
+}
 
 .dropdown-content {
   display: none;
@@ -55,8 +57,7 @@ button {
   background-color: #2e0669;
   box-shadow: 1px 7px 15px 2px rgba(0, 0, 0, 0.2);
   z-index: 5;
-  height: 20px;
-  width: 500px;
+  width: 200px; /* Adjusted width */
 }
 
 .dropdown-content button {
@@ -81,19 +82,19 @@ button:hover {
 
 .dropdown:hover .dropdown-content {
   display: block;
-  width: 200px;
 }
 
 .menu-icon {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1010px) {
   .menu-icon {
     display: flex;
     color: #ffffff;
     justify-content: flex-start;
     align-self: flex-start;
+    padding: 10px;
   }
 
   .menu-off-options {
@@ -103,10 +104,39 @@ button:hover {
   .menu-on-options {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
   .topnav {
     height: auto;
     flex-direction: column;
+    position: sticky;
   }
+
+  .dropdown-content {
+    position: relative;
+    width: 100%;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .topnav a {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .dropbtn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px){
+  .topnav {
+    height: auto;
+    flex-direction: column;
+    position: sticky;
+    top: 4.7rem;
+  }
+
 }
