@@ -1,6 +1,6 @@
 import React from "react";
 import "../Administration/AdminandDirectorates.css"; // Import your CSS file here
-import registrar from "../../../../assets/AdminDirectoratesImages/registrar.jpeg";
+import dirp from "../../../../assets/AdminDirectoratesImages/dir&p.jpg";
 
 
 function Placements() {
@@ -8,7 +8,7 @@ function Placements() {
     <div className="mainContainer">
       <div className="allRightContent">
         <div className="allRightContentHeading">
-          Director of IIIT & Placements
+          Director I/C Industrial Relations & Placements
         </div>
         <br></br>
         <div className="allRightContentProfile">
@@ -16,101 +16,87 @@ function Placements() {
           <center>
             <div className="ADimg">
               <img
-                src={registrar}
+                src={dirp}
                 alt="Profile"
               />
             </div>
             <div className="profileName">
-              <h3 className="ADh3">Dr.G.Jaya Suma</h3>
-              <h3 className="ADh3">Director of IIIT & Placements</h3>
+              <h3 className="ADh3">Dr.G.J. Naga Raju</h3>
+              <h3 className="ADh3">Director I/C Industrial Relations & Placements</h3>
             </div>
             <div className="profileDesignation">
               <h4 className="ADh4">
-                Professor of Dept. of Information Technology
+              Associate Professor of Physics
               </h4>
             </div>
           </center>
           <hr />
           {/* Profile description */}
-          <p>Email: dfdp@jntugv.edu.in</p>
+          <p>Email: dirp@jntugv.edu.in</p>
           <hr></hr>
 
           <p>
-            Dr. G. Jaya Suma, present working as a Professor in Department of
-            Information Technology, Registrar, Director (i/c) of Industry
-            Institute Interaction Placements & Training & Director(i/c) of
-            Faculty Development Cell and Executive Council member of JNTUGV -
-            Vizianagaram, AP. Completed her B.Tech (CS&SE), MTech (CS&T),
-            Ph.D(CSE). Having experience of 22 plus years Teaching, Research and
-            Administration of Engineering Education
+          Dr. G. J. N. Raju, Associate Professor of Physics, received Doctorate in Nuclear Physics from Andhra University in the year 2006. Dr. Raju completed M.Tech (Computer Science and Technology) in 2010 from GITAM University and M.Sc. (Nuclear Physics) in 2000 from Andhra University, Visakhapatnam. He has nearly 20 years of teaching experience at University level. Dr. Raju received two Best Paper presentation awards at DAE conferences and received five academic awards from various organizations and Universities. He authored two textbooks titled as “Nano Physics” and “Basic Engineering Physics” and authored four book chapters. He filed two Indian patents and received two UK patent grant certificates. Dr. Raju served the institution in various capacities like Head of the Dept. of BS&HSS, Officer  in-charge Examinations, R & D co-ordinator, NBA, NAAC, and AICTE co-ordinator at Department level, BoS Chairperson and as a member, etc. 
           </p>
 
-          <p className="ADsub">Administration Contributions</p>
+          <p className="ADsub">Research Experience</p>
           <p>
-            ❖ Served as Head, Department of Information Technology, university
-            college of Engineering, since 2014 to August 2022.
+            ❖ Senior Research Fellow (13-07-2004  to 30-03-2006) <br />
+            Dept. of Nuclear Physics, Andhra University, Visakhapatnam-530 003, India / Council of Scientific and Industrial Research (CSIR), Govt. of India.
+
           </p>
           <p>
-            ❖ Special Officer of New Engineering College, JNTU-GV, Kurupam since
-            from May 2020 to October 2022.
+            ❖ Project Fellow  (02-12-2003  to 12-07-2004)<br />
+            “Trace elemental analysis in biological and environmental samples by PIXE technique”              Funded by UGC-DAE Consortium for Scientific Research, Kolkata Centre, India.
+
           </p>
           <p>
-            ❖ IQAC Coordinator, university college of Engineering January 2020
-            to September 2022.
+            ❖ Junior Research Fellow (30-09-04-2000  to 31-03-2003) <br />
+            “Online studies of K and Lx-ray ion intensity ratios using heavy ions”
+            Funded by UGC-DAE Consortium for Scientific Research, Kolkata Centre, India
+
+          </p>
+      
+          <p className="ADsub">Research Projects Completed </p>
+          <p>
+            ❖ “Diagnosis of ovarian cancer using decision tree classification of trace elemental data obtained by applying ion beam analysis” under DST-FTS, Young Scientist Scheme (DST SR/FTP/PS-139/2011), Total cost of the project: Rs. 21,84,000/- 
           </p>
           <p>
-            ❖ SPOC of university college of Engineering for NPTEL Online Courses
-            to till date.
+            ❖ 	“Acquisition and analysis of trace elemental data obtained from biological samples of breast cancer patients using analytical techniques” under UGC Major Research Projects (42-831/2013(SR): Co-Investigator), Total cost of the project: Rs.13,54,800/-
+          </p>
+          <p>❖ 	“Multi elemental mapping of blood serum of diabetes mellitus patients using synchrotron radiation based florescence spectroscopy” UGC-DAE Consortium for Scientific Research, Indore Centre, Govt. of India (CSR-IC-BL-60/CRS-177/2016-17/841):
+            Co-Investigator, Total cost of the project: Rs.7,68,600/- (Per Year)
+          </p>
+
+          <p className="ADsub">Research Publications</p>
+          <p>
+            ❖ Research Paper in Journals <span id="spanSpace"> :64</span> <br/>
+            (Scopus Indexed:46 & UGC approved:18)
           </p>
           <p>
-            ❖ Convener for Women Empowerment & Grievance Cell, JNTUK, University
-            College of Engineering from September 2017 to till date.
+            ❖ Papers presented at conference Symposia	 <span id="spanSpace">:48  </span> <br/>
+            (organized by DAE-BRNS, BARC&Universities)
+          </p>
+          <p>❖ Workshops attended <span id="spanSpace"> :27</span> </p>
+          <p>
+            ❖ FDP’s / Course works <span id="spanSpace">:18 </span><br/>
+            (NPTEL/Academic Staff Colleges)                
           </p>
           <p>
-            ❖ Secretary & Member for Women Empowerment & Grievance Cell from
-            January 2014-August 2017.
-          </p>
-          <p className="ADsub">Academic Contributions</p>
-          <p>
-            ❖ Specialization of Artificial Intelligence, Data Mining, Machine
-            Learning, Deep Learning, Soft Computing, and Internet of Things.
+            ❖ Scopus h-index <span id="spanSpace"> :12</span> <br/>
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=6506204413">(https://www.scopus.com/authid/detail.uri?authorId=6506204413)</a>                
           </p>
           <p>
-            ❖ Authored Book Titled “Artificial Intelligence & Machine
-            Learning-2022.
+            ❖ Google h-index<span id="spanSpace">  :16</span> <br/>
+            <a href="https://scholar.google.co.in/citations?user=S7TNMfsAAAAJ&hl=en">(https://scholar.google.co.in/citations?user=S7TNMfsAAAAJ&hl=en)</a>                
           </p>
-          <p>❖ Awarded CMI Level 5 in Management and Leadership-2021.</p>
-          <p>❖ Awarded Out Standing Women in Engineering-VIWA-2017.</p>
-          <p>❖ Awarded Woman Researcher in Science and Technology-2020.</p>
-          <p>
-            ❖ Chairperson BOS, Dept. of Information Technology. (2017-2022).
+          <p className="ADsub">Research Students Under Supervision</p>
+          <p>❖ Awarded Ph.D’s<span id="spanSpace">:03 </span> </p>
+          <p>❖ Pursing Ph.D’s<span id="spanSpace">:07  </span><br/>
+          (Supervisor & Co-Supervisor)
+            
           </p>
-          <p>
-            ❖ Member of Board of Studies for 3 years (2007-2010) in the Dept of
-            CSE, GIT, GITAM University.
-          </p>
-          <p className="ADsub">Research Contributions</p>
-          <p>
-            ❖ Awarded Six PhDs and Eight Scholars are working for PhD at
-            present.
-          </p>
-          <p>❖ Published 3 patents.</p>
-          <p>
-            ❖ Published 54 International Journals, 20 International Conferences,
-            2 National Conferences.
-          </p>
-          <p>❖ Published 5 Book chapters.</p>
-          <p>
-            ❖ 32 workshops Organized, 58 Attended, 5 Chaired sessions in
-            international Conferences, and 32 technical talks delivered.
-          </p>
-          <p className="ADsub">Professional Contributions</p>
-          <p>❖ Member of CSI (ID – 01170956).</p>
-          <p>❖ Senior Fellow of IEEE-92245858.</p>
-          <p>❖ Member of ISTE- (ID – LM44520).</p>
-          <p>
-            ❖ Faculty sponsor of IEEE WIE and faculty sponsor of ACM CHAPTER.
-          </p>
+        
         </div>
       </div>
     </div>

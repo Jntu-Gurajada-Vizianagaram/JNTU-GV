@@ -252,7 +252,10 @@
 .AD-icon {
   padding-right: 10px;
 }
-
+#spanSpace{
+  position: absolute;
+  left: 50rem;
+}
 @media screen and (max-width: 600px) {
   .AD-Main {
     display: flex;
@@ -299,3 +302,4 @@
     margin-left: 0px;
   }
 }
+
