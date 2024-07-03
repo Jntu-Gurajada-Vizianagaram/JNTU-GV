@@ -47,10 +47,6 @@ button {
   position: relative;
   display: inline-block;
 }
-.drop-icon{
- 
-}
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -92,14 +88,27 @@ button:hover {
   .menu-icon {
     display: flex;
     color: #ffffff;
-    justify-content: flex-start;
-    align-self: flex-start;
+    /* justify-content: space-around;
+    align-self: space-around; */
     padding: 10px;
   }
+.bigSearch{
+  display: none;
+}
+.menu-search{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  width: 100%;
+}
 
   .menu-off-options {
     display: none;
   }
+#seach-icon{
+  color: black;
+}
 
   .menu-on-options {
     display: flex;
