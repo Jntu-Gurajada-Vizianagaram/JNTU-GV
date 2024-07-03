@@ -29,12 +29,12 @@ const NavBar = () => {
   const dropdownItems = [
     {
       icon: <HomeIcon />,
-      label: "HOME",
+      label: " HOME",
       path: "/",
     },
     {
       icon: <ApartmentIcon />,
-      label: "ABOUT US",
+      label: " ABOUT US",
       path: "/about-us",
       subItems: [
         { label: "About JNTU-GV", path: "/about-us/about-jntugv" },
@@ -44,7 +44,7 @@ const NavBar = () => {
     },
     {
       icon: <GroupsIcon />,
-      label: "ADMINISTRATION",
+      label: " ADMINISTRATION",
       path: "/administration",
       subItems: [
         { label: "Chancellor", path: "/administration/chancellor" },
@@ -55,7 +55,7 @@ const NavBar = () => {
     },
     {
       icon: <SchoolIcon />,
-      label: "ACADEMICS",
+      label: " ACADEMICS",
       path: "/academics",
       subItems: [
         { label: "Programs offered", path: "/academics/programs-offered" },
@@ -73,7 +73,7 @@ const NavBar = () => {
     },
     {
       icon: <PersonIcon />,
-      label: "DIRECTORATES",
+      label: " DIRECTORATES",
       path: "/directorates",
       subItems: [
         { label: "Academic Planning", path: "/directorates/academic-planning" },
@@ -92,7 +92,7 @@ const NavBar = () => {
     },
     {
       icon: <DescriptionIcon />,
-      label: "EXAMINATIONS",
+      label: " EXAMINATIONS",
       path: "/examination",
       subItems: [
         {
@@ -132,7 +132,7 @@ const NavBar = () => {
     },
     {
       icon: <DraftsIcon />,
-      label: "CONTACT US",
+      label: " CONTACT US",
       path: "/contact-us",
     },
     // Add more dropdown items as needed
@@ -148,9 +148,13 @@ const NavBar = () => {
 
   return (
     <nav className="topnav">
-      <div className="menu-icon" onClick={handleMenuToggle}>
-        <MenuIcon />
-        MENU
+      <div className="menu-search">
+        <div className="menu-icon" onClick={handleMenuToggle}>
+          <MenuIcon />MENU
+        </div>
+        <div className="menu-icon" id="seach-icon">
+          <Search />
+        </div>
       </div>
       <div className={menuState ? "menu-on-options" : "menu-off-options"}>
         {dropdownItems.map((item, index) => (
@@ -158,12 +162,12 @@ const NavBar = () => {
             <div className="dropbtn">
               {item.subItems ? (
                 <div className="drop-icon d-flex align-items-center">
-                  {item.icon} {item.label}
+                  {item.icon }<span className="ms-2"></span> { item.label}
                 </div>
               ) : (
                 <div className="drop-icon" onClick={handleMenuToggle}>
-                  <Link className="d-flex align-items-center" to={item.path}>
-                    {item.icon} {item.label}
+                  <Link className="px-0 d-flex align-items-center" to={item.path}>
+                    {item.icon}<span className="ms-2" ></span>{item.label}
                   </Link>
                 </div>
               )}
@@ -182,7 +186,9 @@ const NavBar = () => {
           </div>
         ))}
       </div>
-      <Search/>
+      <div className="bigSearch">
+      <Search />
+      </div>
     </nav>
   );
 };

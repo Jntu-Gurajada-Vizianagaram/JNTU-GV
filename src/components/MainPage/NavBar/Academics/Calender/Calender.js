@@ -31,14 +31,33 @@ const data = {
     },
    
     {
-      Title: "Academic Calendar for Pharm-D IV and V Year",
+      Title: "Academic Calendar for B.Pharmacy II Year",
       pdfLink:
-        "https://drive.google.com/file/d/1DbS9SfUlT2BLiWGpNgu24AFKBieSDtWy/view?usp=sharing",
+        "https://drive.google.com/file/d/1nYJsXSxp0cJ1K1KvcR18DZKm5YsB5lIr/view?usp=sharing",
     },
     {
+      Title: "Academic Calendar for B.Pharmacy III Year",
+      pdfLink:
+        "https://drive.google.com/file/d/1dper2t-KqHJxOEsj9rlENfS1j-yqPOCa/view?usp=sharing 3rd",
+    },{
       Title: "Academic Calendar for B.Pharmacy IV Year",
       pdfLink:
         "https://drive.google.com/file/d/1krcUXGw7FoLzNy1Q0H6RWaTISO6msCTJ/view?usp=sharing",
+    },
+    {
+      Title: "Academic Calendar for Pharm-D II Year",
+      pdfLink:
+        "https://drive.google.com/file/d/1mGisItZYPdVJJy6IiVNEioLpJwBwzOXJ/view?usp=sharing",
+    },
+    {
+      Title: "Academic Calendar for Pharm-D III Year",
+      pdfLink:
+        "https://drive.google.com/file/d/1RzKC8HrA589vpgQqrFVc75aQEwFbEhph/view?usp=sharing",
+    },
+    {
+      Title: "Academic Calendar for Pharm-D IV and V Year",
+      pdfLink:
+        "https://drive.google.com/file/d/1DbS9SfUlT2BLiWGpNgu24AFKBieSDtWy/view?usp=sharing",
     },
     {
       Title: "Academic Calendar for D.Pharmacy VI Year",

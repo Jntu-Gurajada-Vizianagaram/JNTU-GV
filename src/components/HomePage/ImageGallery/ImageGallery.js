@@ -47,7 +47,7 @@ function ImageGallery() {
                 alt={`Slide ${image.description}`}
               />
               <Carousel.Caption>
-                <div className="carouselText">{image.description}</div>
+                {/* <div className="carouselText">{image.description}</div> */}
               </Carousel.Caption>
             </Carousel.Item>
           ))}
