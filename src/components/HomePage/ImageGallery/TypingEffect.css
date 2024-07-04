@@ -1,0 +1,42 @@
+.typing-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Inter', sans-serif
+  }
+  
+  .typing-container h1 {
+    color: #55b2e7;
+    font-size: 2rem;
+    font-weight: 750;
+    display: inline-block;
+    overflow: hidden;
+    white-space: pre-wrap; /* Allow text to wrap onto multiple lines */
+  }
+  
+  .caret {
+    border-right: 0.15em solid #55b2e7;
+    animation: blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #55b2e7;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .typing-container h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .typing-container h1 {
+      font-size: 1.5rem;
+    }
+  }
+  

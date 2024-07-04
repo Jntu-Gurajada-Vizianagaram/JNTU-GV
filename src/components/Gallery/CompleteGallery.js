@@ -3,19 +3,26 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "./CompleteGallery.css";
 import { CG } from "./CG";
 import { MdOutlineArrowBackIos } from "react-icons/md";
-// import Events from "../../ui/events";
+import ImageModal from "../HomePage/NewsAndEvents/ImageModal";
 
 function CompleteGallery() {
   const images = CG ? [...CG].reverse() : [];
+  const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
-
-  const handleImageClick = (image, description) => {
-    setSelectedImage({ image, description });
+  const [selectedDescription, setSelectedDescription] = useState('');
+   
+  const handleShowModal = (image, description) => {
+    setSelectedImage(image);
+    setSelectedDescription(description);
+    setShowModal(true);
   };
 
-  const handleClose = () => {
+  const handleCloseModal = () => {
+    setShowModal(false);
     setSelectedImage(null);
+    setSelectedDescription('');
   };
+
 
   return (
     <div className="complete-gallery-container">
@@ -60,19 +67,22 @@ function CompleteGallery() {
               alt={`JNTUGV ${images.length - index}`}
               className="grid-image"
               onClick={() =>
-                handleImageClick(imageObj.image, imageObj.description)
+                handleShowModal(imageObj.image, imageObj.description)
               }
             />
           </div>
         ))}
       </div>
-      {selectedImage && (
-        <div className="enlarged-image">
-          <img src={selectedImage.image} alt={`JNTUGV`} />
-          <p>{selectedImage.description}</p>
-          <button onClick={handleClose}>Back</button>
-        </div>
-      )}
+      <ImageModal
+        show={showModal}
+        handleClose={handleCloseModal}
+        imageSrc={selectedImage}
+        imageDescription={selectedDescription}
+      />
+      
+
+
+
     </div>
   );
 }

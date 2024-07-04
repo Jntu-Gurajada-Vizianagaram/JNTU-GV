@@ -2,49 +2,50 @@ import React, { useState } from "react";
 import "./Gallery.css";
 import { CG } from "./CG"; // Import the array of image objects from CG.js
 import { Link } from "react-router-dom";
+import ImageModal from "../HomePage/NewsAndEvents/ImageModal";
 
 function Gallery() {
-  const recentImages = CG.slice(-15); // Get the last 10 images from CG.js
-
+  const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedDescription, setSelectedDescription] = useState('');
 
-  const duplicatedImages = [
-    ...recentImages,
-    ...recentImages,
-    ...recentImages,
-    ...recentImages,
-  ];
+  const recentImages = CG.slice(-20); // Get the last 15 images from CG.js
 
-  const handleImageClick = (image) => {
+  const handleShowModal = (image, description) => {
     setSelectedImage(image);
+    setSelectedDescription(description);
+    setShowModal(true);
   };
 
-  const handleClose = () => {
+  const handleCloseModal = () => {
+    setShowModal(false);
     setSelectedImage(null);
+    setSelectedDescription('');
   };
+
 
   return (
     <div className="gallery-container">
       <h1 className="gallery-heading">Gallery</h1>
       <div className="image-gallery">
         <div className="image-scroll">
-          {duplicatedImages.map((image, index) => (
+          {recentImages.map((image, index) => (
             <img
               key={index}
               src={image.image}
               alt={`JNTUGV ${image.description}`}
-              onClick={() => handleImageClick(image)}
+              onClick={() => handleShowModal(image.image, image.description)}
             />
           ))}
         </div>
       </div>
 
-      {selectedImage && (
-        <div className="enlarged-image">
-          <img src={selectedImage.image} alt={`JNTUGV`} />
-          <button onClick={handleClose}>Back</button>
-        </div>
-      )}
+      <ImageModal
+        show={showModal}
+        handleClose={handleCloseModal}
+        imageSrc={selectedImage}
+        imageDescription={selectedDescription}
+      />
 
       {/* Hyperlink at the bottom right corner */}
       <Link
