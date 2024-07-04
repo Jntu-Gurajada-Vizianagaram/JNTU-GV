@@ -4,6 +4,38 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./ImageGallery.css";
 import { Link } from "react-router-dom";
 
+import './TypingEffect.css';
+
+const TypingEffect = () => {
+  const [displayedText, setDisplayedText] = useState('');
+  const fullText = 'Welcome to JNTU Gurajada, Vizianagaram';
+  const typingSpeed = 100; // Adjust typing speed (milliseconds)
+
+  useEffect(() => {
+    let currentText = '';
+    let charIndex = 0;
+
+    const typeCharacter = () => {
+      if (charIndex < fullText.length) {
+        currentText += fullText[charIndex];
+        setDisplayedText(currentText);
+        charIndex++;
+        setTimeout(typeCharacter, typingSpeed);
+      }
+    };
+
+    typeCharacter();
+  }, []);
+
+  return (
+    <div className="typing-container">
+      <h1>{displayedText}<span className="caret"></span></h1>
+    </div>
+  );
+};
+
+
+
 function ImageGallery() {
   const [images, setImages] = useState([]);
 
@@ -27,7 +59,8 @@ function ImageGallery() {
    
     <div className="mainDivIG">
       <div className="leftDivGallery">
-        <h2 className="welcome">Welcome to JNTU Gurajada, Vizianagaram</h2>
+        {/* <h2 className="welcome">Welcome to JNTU Gurajada, Vizianagaram</h2> */}
+        <TypingEffect/>
         <p>
           At JNTU Gurajada, Vizianagaram, we are dedicated to sculpting minds through innovative teaching, cutting-edge research, and a vibrant community engagement. Our mission is to empower students with a thirst for knowledge that transcends borders.
           <br />
