@@ -24,7 +24,7 @@
   padding: 1rem;
 }
 
-.leftDivGallery h3 {
+.leftDivGallery h2 {
   color: #55b2e7;
 }
 
@@ -36,6 +36,9 @@
 .leftDivGallery .view-more {
   background-color: #55b2e7;
   color: white;
+}
+.welcome{
+  font-weight:700;
 }
 
 .mainDivIG {

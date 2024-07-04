@@ -27,11 +27,11 @@ function ImageGallery() {
    
     <div className="mainDivIG">
       <div className="leftDivGallery">
-        <h3>Welcome to JNTU Gurajada, Vizianagaram</h3>
+        <h2 className="welcome">Welcome to JNTU Gurajada, Vizianagaram</h2>
         <p>
-          At JNTU Gurajada, Vizianagaram, we are dedicated to sculpting minds through innovative teaching, cutting-edge research, and a vibrant community engagement. Our mission is to empower students with a thirst for knowledge that transcends borders, preparing them to lead transformative change in their fields.
+          At JNTU Gurajada, Vizianagaram, we are dedicated to sculpting minds through innovative teaching, cutting-edge research, and a vibrant community engagement. Our mission is to empower students with a thirst for knowledge that transcends borders.
           <br />
-          Located across six districts, offering diverse programs in Engineering, Pharmacy, and Management. With a rich history and a vision to foster scholastic empowerment and societal advancement, JNTU-GV stands as a beacon of academic excellence and community synergy.
+          Located across six districts, offering diverse programs in Engineering, Pharmacy, and Management. With a rich history JNTU-GV stands as a beacon of academic excellence and community synergy.
         </p>
         <Link to="/about-us/about-jntugv">
           <button type="button" className="btn view-more btn-info">View More</button>
@@ -46,9 +46,11 @@ function ImageGallery() {
                 src={image.imglink}
                 alt={`Slide ${image.description}`}
               />
-              <Carousel.Caption>
-                {/* <div className="carouselText">{image.description}</div> */}
-              </Carousel.Caption>
+              {image.description !== "NA" && (
+                <Carousel.Caption>
+                  <div className="carouselText">{image.description}</div>
+                </Carousel.Caption>
+              )}
             </Carousel.Item>
           ))}
         </Carousel>

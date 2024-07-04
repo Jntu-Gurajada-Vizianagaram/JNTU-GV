@@ -10,7 +10,6 @@ import registrar from "../../../assets/AdminDirectoratesImages/registrar.jpeg";
 const AboutUs = () => {
 
   return (
-    <div className="zindex">
     <div className="aboutUs">
       <div className="container">
         <div className="row justify-content-center">
@@ -27,7 +26,7 @@ const AboutUs = () => {
           </div>
 
           <div className="col-md-4 mb-4">
-          <Link to="administration/chancellor" className="more-link row justify-content-center">
+          <Link to="administration/vice-chancellor" className="more-link row justify-content-center">
             <div className="aboutUs-card">
               <img src={vc} alt="vice-chancellor" className="aboutUs-image" />
               <p className="aboutUs-name">Prof. K. Venkatasubbaiah</p>
@@ -38,7 +37,7 @@ const AboutUs = () => {
           </div>
 
           <div className="col-md-4 mb-4">
-          <Link to="administration/chancellor" className="more-link row justify-content-center">
+          <Link to="administration/registrar" className="more-link row justify-content-center">
             <div className="aboutUs-card">
               <img src={registrar} alt="registrar" className="aboutUs-image" />
               <p className="aboutUs-name">Prof. G. Jaya Suma</p>
@@ -50,7 +49,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

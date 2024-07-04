@@ -83,6 +83,9 @@ button:hover {
 .menu-icon {
   display: none;
 }
+.bigSearch{
+  margin-left: 8rem;
+}
 
 @media screen and (max-width: 1010px) {
   .menu-icon {
