@@ -50,6 +50,7 @@ import Chairpersons from "./components/MainPage/NavBar/Administration/Chairperso
 import NewsAndEvents from "./components/HomePage/NewsAndEvents/NewsAndEvents";
 import CompleteGallery from "./components/Gallery/CompleteGallery";
 import Syllabus from "./components/MainPage/NavBar/Academics/Syllabus/Syllabus";
+import Regulations from "./components/MainPage/NavBar/Academics/Regulations/Regulations";
 import InfrastructureMain from "./components/MainPage/NavBar/Infrastructure/InfrastructureMain";
 import Library from "./components/MainPage/NavBar/Infrastructure/Library/Library";
 import Hostels from "./components/MainPage/NavBar/Infrastructure/Hostels/Hostels";
@@ -98,6 +99,7 @@ function App() {
 
           <Route path="Calendar" element={<Calender />} />
           <Route path="academic-syllabus" element={<Syllabus />} />
+          <Route path="academic-regulations" element={<Regulations />} />
         </Route>
         <Route path="/administration" element={<AdministrationMain />}>
           <Route path="chancellor" element={<Chancellor />} />{" "}

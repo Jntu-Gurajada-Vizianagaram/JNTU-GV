@@ -63,6 +63,14 @@ const AcademicsMain = () => {
         >
           Academic Syllabus
         </Link>
+        <Link
+          to="academic-regulations"
+          className={`menubutton ${
+            location.pathname === "/academics/academic-regulations" ? "active" : ""
+          }`}
+        >
+          Academic Regulations
+        </Link>
       </div>
       <Outlet />
     </div>
