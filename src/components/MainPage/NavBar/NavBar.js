@@ -68,6 +68,7 @@ const NavBar = () => {
         { label: "BOS Chairman", path: "/academics/bos-chairman" },
         { label: "Academic Calendar", path: "/academics/Calendar" },
         { label: "Academic Syllabus", path: "/academics/academic-syllabus" },
+        { label: "Academic Regulations", path: "/academics/academic-regulations" }
         // Add more sub-items as needed
       ],
     },

@@ -156,8 +156,8 @@ const Calender = () => {
   const academicYears = Object.keys(data); // Get the academic years from the data object
 
   return (
-    <div className="Calender">
-      <div className="calender-title">Academic Calendar</div>
+    <div className="regulations">
+      <div className="regulations-title">Academic Calendar</div>
       {academicYears.map((year) => (
         <Accordion elevation={20} defaultExpanded className="accordion-affiliated" key={year}>
           <AccordionSummary
