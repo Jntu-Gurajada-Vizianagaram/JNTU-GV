@@ -30,7 +30,12 @@ export const Central_Facilites = [
 
   {
     title: "Training & Placement",
-    link: "/",
+    link: "https://placementcell.jntugv.edu.in/",
+  },
+
+  {
+    title: "Research and Development Cell",
+    link: "https://rdcell.jntugv.edu.in/",
   },
 
   {
