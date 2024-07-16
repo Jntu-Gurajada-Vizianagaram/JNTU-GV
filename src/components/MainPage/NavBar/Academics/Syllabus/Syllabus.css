@@ -1,6 +1,7 @@
 .syllabus {
-    height: 90vh;
+    min-height: 90vh;
     /* width: 60vw; */
+    
     padding-top: 10px;
   }
   
