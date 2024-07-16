@@ -16,14 +16,14 @@ import "./Regulations.css";
 const data = {
   "UG": [
     {
-      Title: "R23 Academic Regulation for B. Tech",
+      Title: "R23 Regulation for B. Tech",
       pdfLink: "https://drive.google.com/file/d/1lOTQWSiua52MgwaVkMa2BfWszRCzHabb/view?usp=sharing"
     },
     ],
 
     "Ph.D": [
     {
-      Title: "Academic Regulations and Guidelines for Ph.D (AY2022-23)",
+      Title: "JNTU-GV-2022 Admitted PhD Scholars",
       pdfLink: "https://drive.google.com/file/d/100EBmm37-4PWZdkPMQnS8K-0g19X1JhD/view?usp=sharing"
     },
     ],
