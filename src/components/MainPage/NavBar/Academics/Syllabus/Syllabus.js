@@ -71,7 +71,7 @@ const data = {
           sno: 8,
           branch: "Computer Science and Engineering (Data Science)",
           pdfLink:
-            "https://drive.google.com/file/d/1Nytz4jctxjKVyOUM1UAiO3YHhOmmGFka/view?usp=drive_link",
+            "https://drive.google.com/file/d/1OjbXp6GrzQ0Rk8AZMV0Xji-_XqBPExd4/view?usp=sharing",
         },
         {
           sno: 9,
