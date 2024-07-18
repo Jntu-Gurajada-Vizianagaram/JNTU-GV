@@ -4,7 +4,7 @@ import "./aboutUs.css";
 import { Link } from "react-router-dom";
 
 import chancellor from "../../../assets/AdminDirectoratesImages/chancellor.jpeg";
-import vc from "../../../assets/AdminDirectoratesImages/vc.png";
+import vc from "../../../assets/AdminDirectoratesImages/doe.png";
 import registrar from "../../../assets/AdminDirectoratesImages/registrar.jpeg";
 
 const AboutUs = () => {
@@ -29,8 +29,8 @@ const AboutUs = () => {
           <Link to="administration/vice-chancellor" className="more-link row justify-content-center">
             <div className="aboutUs-card">
               <img src={vc} alt="vice-chancellor" className="aboutUs-image" />
-              <p className="aboutUs-name">Prof. K. Venkatasubbaiah</p>
-              <p className="aboutUs-designation">Hon’ble Vice Chancellor</p>
+              <p className="aboutUs-name">Dr. D. Rajya Lakshmi</p>
+              <p className="aboutUs-designation">Hon’ble Vice Chancellor(i/c)</p>
               <br/>
             </div>
             </Link>
