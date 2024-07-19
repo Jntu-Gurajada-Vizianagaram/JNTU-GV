@@ -73,14 +73,16 @@ import Cresense from "./components/Events/Cresense";
 import Homepage from "./components/HomePage/Homepage";
 import Eclectique from "./components/Events/Eclectique ";
 import Ityuktha from "./components/Events/Ityuktha";
-
+import ScrollToTop from "./components/HomePage/AboutUsMain/ScrollToTop";
 function App() {
   return (
     <div>
       {/* <BelowBar /> */}
       <Header />
       <NavBar />
+      <ScrollToTop/>
       <Routes>
+        
         <Route path="/" element={<Homepage />} />
         <Route path="/about-us" element={<AboutusMain />}>
           <Route path="about-jntugv" element={<AboutJNTUGV id="about-jntugv" />} />

@@ -26,8 +26,12 @@
 .news-and-events-container {
   height: 200px;
   width: 300px;
+  transition: all 400ms ease-in-out;
 }
-
+.news-and-events-container:hover{
+  transform: translateY(-0.625rem); /* -10px */
+  box-shadow: 0 0.4rem 1.7rem 0 rgba(0, 0, 0, 0.9); /* 0px 10px 30px */
+}
 .news-and-events-container img {
   height: 100%;
   width: 100%;
