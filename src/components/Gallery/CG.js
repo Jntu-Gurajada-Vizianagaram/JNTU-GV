@@ -89,6 +89,8 @@ import gal85 from "../../assets/Gallery/gal85.jpeg";
 
 import gal87 from "../../assets/Gallery/gal87.jpg";
 import gal88 from "../../assets/Gallery/gal88.jpg";
+import gal89 from "../../assets/Gallery/gal89.jpg";
+import gal90 from "../../assets/Gallery/gal90.jpeg";
 
 
 
@@ -395,6 +397,10 @@ export const CG = [
     description: "Technical Symposium in JNTU-GV",
   },
   {
+    image: gal74,
+    description: "Cresense Technical Symposium in JNTU-GV",
+  },
+  {
     image: gal85,
     description: "ITYUKTA 2K24 Technical Symposium in JNTU-GV",
   }, {
@@ -405,13 +411,21 @@ export const CG = [
     image: gal87,
     description: "Jagat Jeevan Jayanti celebrations in JNTU-GV ",
   },
+  
+  {
+    image: gal90,
+    description: "Dr. D . Rajya Lakshmi as JNTU-GV in-charge VC",
+  },
+  {
+    image: gal89,
+    description: "Dr. D . Rajya Lakshmi as VC in-charge of JNTU-GV",
+  },
+ 
+ 
   {
     image: gal88,
     description: "Jagat Jeevan Jayanti celebrations in JNTU-GV",
   },
-  {
-    image: gal74,
-    description: "Cresense Technical Symposium in JNTU-GV",
-  },
+  
 
 ];
