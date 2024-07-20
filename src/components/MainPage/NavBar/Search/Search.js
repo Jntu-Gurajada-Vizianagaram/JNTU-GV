@@ -21,7 +21,14 @@ const Search = () => {
   };
 
   const handleNavigation = (path) => {
-    navigate(path);
+
+   if (path.startsWith("http") || path.startsWith("https")) {
+      // Handle external links
+      window.open(path, "_blank", "noopener,noreferrer");
+    } else {
+      // Handle internal links
+      navigate(path);
+    }
     setQuery(""); // Clear the search input
     setFilteredItems([]); // Clear the search results
   };

@@ -119,6 +119,8 @@ function UpdatePanel() {
           year: entry.year,
           file_link: entry.file_link,
           update_type: entry.update_type,
+          external_text: entry.external_text,
+          external_link: entry.external_link
         }
     )
     .filter(Boolean);

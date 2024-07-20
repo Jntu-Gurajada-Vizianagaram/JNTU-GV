@@ -43,7 +43,7 @@ const data = {
         
         {
           sno: 4,
-          branch: "Mechanical Engineering and Automobile Engineering",
+          branch: "Mechanical Engineering",
           pdfLink:
             "https://drive.google.com/file/d/14gdUrWlCAHHJHwtRmYkjET59AWbP1EaY/view?usp=drive_link",
         },
@@ -102,6 +102,18 @@ const data = {
           branch: "Information Technology",
           pdfLink:
             "https://drive.google.com/file/d/1HeLmB5gohd1Zohz4HVjWBnH2DKIkfb_v/view?usp=drive_link",
+        },
+        {
+          sno: 14,
+          branch: "Artificial Intelligence",
+          pdfLink:
+            "https://drive.google.com/file/d/1tTQi0bppS1EL_y9IB44Dg3KTpABtxqpO/view?usp=sharing",
+        },
+        {
+          sno: 15,
+          branch: "Automobile Engineering",
+          pdfLink:
+            "https://drive.google.com/file/d/12m_-2ACbpDfOpNhJzxbrP9roPdTuO7Dv/view?usp=sharing",
         },
       ],
     },
