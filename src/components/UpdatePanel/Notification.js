@@ -86,7 +86,7 @@ const Notification = ({ displayData }) => {
                         sx={{ backgroundColor: "370a68" }}
                       >
                         <a
-                          href={entry.external_text}
+                          href={entry.external_link}
                           target="_blank"
                           rel="noreferrer"
                           style={{

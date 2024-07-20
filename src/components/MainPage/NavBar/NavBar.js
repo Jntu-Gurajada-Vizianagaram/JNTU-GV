@@ -126,7 +126,7 @@ const NavBar = () => {
         },
         {
           label: "Examination Results",
-          path: "https://ums.campx.in/jntugv/jntugv/results",
+          path: "https://jntugv.campx.in/jntugv/ums/results",
         }, // External link
         // Add more sub-items as needed
       ],
@@ -139,13 +139,23 @@ const NavBar = () => {
     // Add more dropdown items as needed
   ];
 
-  const DropdownItem = ({ path, label }) => (
-    <button onClick={() => handleNavigation(path)}>
-      <Link className="link-btn" to={path}>
+  const DropdownItem = ({ path, label }) => {
+    const isExternal = path.startsWith("http");
+
+    return isExternal ? (
+     <button > <a className="link-btn" href={path} target="_blank" rel="noopener noreferrer">
         {label}
-      </Link>
-    </button>
-  );
+      </a>
+      </button>
+    ) : (
+      <button onClick={() => handleNavigation(path)}>
+        <Link className="link-btn" to={path}>
+          {label}
+        </Link>
+      </button>
+    );
+  };
+
 
   return (
     <nav className="topnav">
