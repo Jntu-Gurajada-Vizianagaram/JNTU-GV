@@ -16,6 +16,10 @@ import "./Calender.css";
 const data = {
   "2024-2025": [
     {
+      Title: "Academic calendar for B. Tech I Year",
+      pdfLink: "https://drive.google.com/file/d/1Nx23wt4KmEGtbyP_1osLVXvN7XYeGmE9/view?usp=sharing"
+    },
+    {
       Title: "Academic calendar for B. Tech II Year",
       pdfLink: "https://drive.google.com/file/d/152978TmWC9bFxScPgnl4trqUDqn-6m1-/view?usp=sharing"
     },
@@ -29,7 +33,18 @@ const data = {
       pdfLink:
         "https://drive.google.com/file/d/1Pkbz4tBRuRi8WeJo3dpOly0XYX0g8DU8/view?usp=sharing",
     },
+
+    {
+      Title: "Academic Calendar for M.Tech II-Year",
+      pdfLink:
+        "https://drive.google.com/file/d/1k6AB3AkJ6SZOGb3g__LlpNAl9Fd9j7nt/view?usp=drive_link",
+    },
    
+    {
+      Title: "Academic Calendar for MCA and MBA II-Year",
+      pdfLink:
+        "https://drive.google.com/file/d/1CWsA2ROiZv8vwO9Y2v49d3ARUtjOemo8/view?usp=drive_link",
+    },
     {
       Title: "Academic Calendar for B.Pharmacy II Year",
       pdfLink:
@@ -63,6 +78,11 @@ const data = {
       Title: "Academic Calendar for D.Pharmacy VI Year",
       pdfLink:
         "https://drive.google.com/file/d/1sGuHdQ2vF2siB_b4-4rScMfBNF4m_dP0/view?usp=sharing",
+    },
+    {
+      Title: "Academic Calendar for M.Pharmacy II Year",
+      pdfLink:
+        "https://drive.google.com/file/d/1pa3GYKkgYyF-FgjAgGJ2x6mCoo4lAiur/view?usp=drive_link",
     }
     ],
 
