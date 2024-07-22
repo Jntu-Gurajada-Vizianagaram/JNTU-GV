@@ -23,7 +23,7 @@ const data = {
           sno: 1,
           branch: "Civil Engineering",
           pdfLink:
-            "https://drive.google.com/file/d/1v3YoFxv3nvjef-1CBPxnCHfAJP4CEboO/view?usp=sharing",
+            "https://drive.google.com/file/d/1QEwF0t_9ZLGkQKeop3ZgehQdzIqEVEvx/view?usp=sharing",
         },
 
         {
@@ -45,7 +45,7 @@ const data = {
           sno: 4,
           branch: "Mechanical Engineering",
           pdfLink:
-            "https://drive.google.com/file/d/14gdUrWlCAHHJHwtRmYkjET59AWbP1EaY/view?usp=drive_link",
+            "https://drive.google.com/file/d/13HtZ-n3qLJpXJinanpthqwyMvCi2tokP/view?usp=sharing",
         },
         {
           sno: 5,
