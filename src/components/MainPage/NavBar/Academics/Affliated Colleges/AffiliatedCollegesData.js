@@ -225,6 +225,16 @@ export const rowsEngg = [
     wURL: "https://www.sitam.co.in/",
     Type: "Permanent",
   },
+  {
+    SNo: 27,
+    CollegeCode: "PC",
+    CollegeName: "N S Raju Institute of Engineering and Technology Dakamarri(V), Bheemunipatnam(M)",
+    District: "VSP",
+    "College Type": "Engineering",
+    wURL: "https://www.nsriet.edu.in/",
+    Type: "Temporary",
+  },
+
 ];
 
 export const rowsPharmacy = [
