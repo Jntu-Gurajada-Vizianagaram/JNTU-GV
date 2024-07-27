@@ -7,8 +7,6 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/MainPage/NavBar/Header";
 
 import AboutJNTUGV from "./components/MainPage/NavBar/Aboutus/AboutJNTUGV";
-// import Vision from "./components/MainPage/NavBar/Aboutus/Vision";
-// import Mission from "./components/MainPage/NavBar/Aboutus/Mission";
 import Chancellor from "./components/MainPage/NavBar/Administration/Chancellor";
 import ViceChancellor from "./components/MainPage/NavBar/Administration/ViceChancellor";
 import Registrar from "./components/MainPage/NavBar/Administration/Registrar";
@@ -144,7 +142,6 @@ function App() {
         <Route path="/anti-ragging" element={<Antiragging />}>
           <Route path="about" element={<AboutUS />} />
           <Route path="committee" element={<Committee />} />
-          
         </Route>
 
         <Route path="/contact-us" element={<ContactUs />} />
