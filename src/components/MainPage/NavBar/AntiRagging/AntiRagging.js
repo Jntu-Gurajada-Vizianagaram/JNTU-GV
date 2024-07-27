@@ -10,7 +10,7 @@ const Antiragging = () => {
         <Link
           to="about"
           className={`menubutton ${
-            location.pathname === "/anti-ragging/about-us" ? "active" : ""
+            location.pathname === "/anti-ragging/about" ? "active" : ""
           }`}
         >
           About
@@ -18,7 +18,7 @@ const Antiragging = () => {
         <Link
           to="committee"
           className={`menubutton ${
-            location.pathname === "/anti-ragging/ragging-committee" ? "active" : ""
+            location.pathname === "/anti-ragging/committee" ? "active" : ""
           }`}
         >
           Committee Members
