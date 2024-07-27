@@ -1,0 +1,66 @@
+.Antiragging-Main {
+    display: flex;
+    margin-left: 30px;
+  }
+  
+  .allLeftMenuAOP {
+    margin-top: 30px;
+    margin-right: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .allLeftMenuAOP .menubutton {
+    width: 240px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #370a68;
+    background: #fff;
+    gap: 15px;
+    font-weight: 600;
+  }
+  
+  /* Hover state */
+  .allLeftMenuAOP .menubutton:hover {
+    background-color: #370a68;
+    color: #fff;
+  }
+  
+  /* Selected state */
+  .allLeftMenuAOP .menubutton.active {
+    background-color: #370a68;
+    color: #fff;
+    box-shadow: 0px 4px 22px 0px rgba(123, 124, 134, 0.36);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .Antiragging-Main {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+    }
+  
+    .allLeftMenuAOP .menubutton {
+      width: fit-content;
+      height: auto;
+      padding: 5px;
+    }
+  
+    .allLeftMenuAOP{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  

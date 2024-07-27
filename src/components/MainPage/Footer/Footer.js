@@ -8,6 +8,7 @@ import {
   Constituent_Colleges,
   JntuGv_Units,
   Grievance,
+  Student_Corner
 } from "./FooterData.js";
 import {
   FaFacebook,
@@ -147,6 +148,26 @@ function Footer() {
               </div>
             ))}
           </div>
+
+           {/* Student Corner */}
+           <p className="subheadingFooter">Student Corner</p>
+          <hr className="subFooter" />
+          <div>
+            {Student_Corner.map((item, index) => (
+              <div key={index}>
+                <p>
+                  <Link
+                    to={item.link}
+                    className="sublinksFooter"
+                    target="_blankx "
+                  >
+                    {item.title}
+                  </Link>
+                </p>
+              </div>
+            ))}
+          </div>
+          
           {/* <p className="subheadingFooter">Grievances</p>
           <hr className="subFooter" />
           <div>

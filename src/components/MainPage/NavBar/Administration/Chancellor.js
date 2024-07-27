@@ -9,7 +9,7 @@ function Chancellor() {
       {/* Profile information */}
       <div className="profileName">
         <div className="profile-Image">
-          <img src={chancellor} alt="Profile" />
+          <img src={chancellor} alt="Profile"/>
         </div>
         <h3>Shri Justice(Retd.) Syed Abdul Nazeer</h3>
         <h4>Hon’ble Governor of Andhra Pradesh</h4>

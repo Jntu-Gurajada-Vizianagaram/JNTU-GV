@@ -74,6 +74,9 @@ import Homepage from "./components/HomePage/Homepage";
 import Eclectique from "./components/Events/Eclectique ";
 import Ityuktha from "./components/Events/Ityuktha";
 import ScrollToTop from "./components/HomePage/AboutUsMain/ScrollToTop";
+import Antiragging from "./components/MainPage/NavBar/AntiRagging/AntiRagging";
+import Committee from "./components/MainPage/NavBar/AntiRagging/Commitee/Committee";
+import AboutUS from "./components/MainPage/NavBar/AntiRagging/AboutUS/AboutUs"
 function App() {
   return (
     <div>
@@ -137,6 +140,11 @@ function App() {
           <Route path="controller3" element={<Controller3 />} />
           <Route path="controller-pg" element={<ControllerPG />} />
           <Route path="examresults" element={<ExamResults />} />
+        </Route>
+        <Route path="/anti-ragging" element={<Antiragging />}>
+          <Route path="about" element={<AboutUS />} />
+          <Route path="committee" element={<Committee />} />
+          
         </Route>
 
         <Route path="/contact-us" element={<ContactUs />} />
