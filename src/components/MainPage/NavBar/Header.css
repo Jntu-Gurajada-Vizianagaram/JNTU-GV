@@ -1,8 +1,8 @@
 .header-container {
-  /* display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
   
   background-color: white;
   /* padding: 0.5rem; */
@@ -13,13 +13,6 @@
   top: 0;
 }
 
-.subHeader{
-  margin: 0;
-   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
 .header-container.scrolled {
   padding: 0.5rem 1rem;
   transition: all 0.1s ease-in;
@@ -41,6 +34,11 @@
   /* flex: 1; */
   text-align: center;
   transition: opacity 0.3s ease;
+}
+.ragging{
+  text-align: right;
+  background-color: #55b2e7;
+  color: white;
 }
 .header-container.scrolled .header-text h1 {
   font-size: 1.4rem;

@@ -40,11 +40,11 @@ export const Central_Facilites = [
 
   {
     title: "National Service Scheme (NSS)",
-    link: "/",
+    link: "https://nssmodule-lokeshs-projects-192c4de5.vercel.app/",
   },
   {
     title: "Anti Ragging Committee",
-    link: "/",
+    link: "/anti-ragging/committee",
   },
 ];
 

@@ -35,7 +35,6 @@ const AboutUs = () => {
       <Card className="about-us-card">
         <CardMedia
           component="img"
-          height="400"
           image={content.image}
           alt="Anti-Ragging"
           className="about-us-image"
