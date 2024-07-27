@@ -2,26 +2,25 @@ import React from "react";
 import registrar from "../../../../assets/AdminDirectoratesImages/registrar.jpeg";
 import "./AdminandDirectorates.css"; // Import your CSS file here
 import tick from "../../../../assets/StyleImages/tick.svg";
-// import mailIcon from "../../../../../assets/StyleImages/mailIcon.svg";
 import { MdOutlineMailOutline } from "react-icons/md";
 
 function Registrar() {
   return (
     <div className="allRightContent-Profile">
       {/* Profile information */}
-
       <div className="profileName">
         <div className="profile-Image">
           <img src={registrar} alt="Profile" />
         </div>
         <h3>Prof.Dr.G.Jaya Suma</h3>
         <h4>Professor of Dept.of Information Technology</h4>
-        <p>
-          <MdOutlineMailOutline width="40px" />
+        <p className="profileEmail">
+          <MdOutlineMailOutline size="20px" />
           registrar@jntugv.edu.in
         </p>
       </div>
       <div className="profileDetails">
+        <div className="contributions">
         <div className="registar-1">
           <p>
             Dr. G. Jaya Suma, present working as a Professor in Department of
@@ -30,11 +29,12 @@ function Registrar() {
             Faculty Development Cell and Executive Council member of JNTUGV -
             Vizianagaram, AP. Completed her B.Tech (CS&SE), MTech (CS&T),
             Ph.D(CSE). Having experience of 22 plus years Teaching, Research and
-            Administration of Engineering Education
+            Administration of Engineering Education.
           </p>
         </div>
         <div className="registar-2">
           <p className="AD-sub">Administration Contributions</p>
+          
           <p>
             <img src={tick} alt="Icon" className="AD-icon" /> Served as Head,
             Department of Information Technology, university college of
@@ -140,6 +140,7 @@ function Registrar() {
             <img src={tick} alt="Icon" className="AD-icon" /> Faculty sponsor of
             IEEE WIE and faculty sponsor of ACM CHAPTER.
           </p>
+        </div>
         </div>
       </div>
     </div>

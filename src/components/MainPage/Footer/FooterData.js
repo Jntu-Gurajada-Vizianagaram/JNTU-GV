@@ -127,3 +127,13 @@ export const Grievance = [
     link:"mailto:recruitmentgrievances@jntugv.edu.in"
 },
 ]
+export const Student_Corner = [
+  {
+      title: "Anti Ragging",
+      link:"/anti-ragging/about"
+  },
+  {
+    title: "NSS",
+    link:"https://nssmodule-lokeshs-projects-192c4de5.vercel.app/"
+},
+]

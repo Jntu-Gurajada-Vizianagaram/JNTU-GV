@@ -18,7 +18,15 @@ function ViceChancellor() {
       </div>
       <div className="profileDetailsVC">
       <p>
-            Dr. D. Rajya Lakshmi obtained her BTech in Electronics and
+          Dr. D. Rajya Lakshmi is the incharge Vice-Chancellor of
+          Jawaharlal Nehru Technological University, Gurajada, Vizianagaram. She
+          is an academician par excellence, a beloved teacher, and a focused
+          leader with the vision to improve Indian education to internationally
+          approved standards.
+
+          </p>
+      <p>
+            She obtained her BTech in Electronics and
             Communications Engineering from Andhra University, M.Tech in
             Computer Science from Andhra University, and PhD from JNTU
             Hyderabad, India. She is currently working as Professor in the

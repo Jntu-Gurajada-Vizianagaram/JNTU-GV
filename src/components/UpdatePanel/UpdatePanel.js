@@ -47,10 +47,14 @@ function UpdatePanel() {
   }, []);
 
   apiData.forEach((entry) => {
+
+
+    notificationList.push(entry);
+
+    // Push entry to its specific list
     switch (entry.update_type) {
       case "notification":
-        notificationList.push(entry);
-        break;
+        break; // already pushed to notificationList above
       case "recruitment":
         recruitmentList.push(entry);
         break;
