@@ -13,6 +13,7 @@ function UpdatePanel() {
   const sportsList = [];
   const eventsList = [];
   const bcdeList = [];
+  const tenderList =[];
 
   const [displayData, setDisplayData] = useState(notificationList);
 
@@ -59,8 +60,9 @@ function UpdatePanel() {
         recruitmentList.push(entry);
         break;
       case "examination":
-        examinationList.push(entry);
-        break;
+      case "exams":
+            examinationList.push(entry);
+            break;
       case "workshop":
         workshopList.push(entry);
         break;
@@ -73,6 +75,10 @@ function UpdatePanel() {
       case "BCDE":
         bcdeList.push(entry);
         break;
+      case "tender":
+          tenderList.push(entry);
+          break;
+
       default:
         break;
     }
@@ -97,6 +103,10 @@ function UpdatePanel() {
     setDisplayData(workshopList);
     setActiveButton(button);
   };
+  const handleTenders = (button) => {
+    setDisplayData(tenderList);
+    setActiveButton(button);
+  };
 
   const handleSports = (button) => {
     setDisplayData(sportsList);
@@ -115,7 +125,7 @@ function UpdatePanel() {
   const notificationData = apiData
     .map(
       (entry) =>
-        entry.update_type === "notification" && {
+        ({
           title: entry.title,
           description: entry.description,
           day: entry.day,
@@ -125,7 +135,7 @@ function UpdatePanel() {
           update_type: entry.update_type,
           external_text: entry.external_text,
           external_link: entry.external_link
-        }
+        })
     )
     .filter(Boolean);
 
@@ -209,6 +219,17 @@ function UpdatePanel() {
             onClick={() => handleBcde("BCDE")}
           >
             BCDE
+          </button>
+
+          <button
+            style={{
+              ...buttonStyles,
+              backgroundColor: activeButton === "tenders" ? "#370a68" : "white",
+              color: activeButton === "tenders" ? "white" : "black",
+            }}
+            onClick={() => handleTenders("tenders")}
+          >
+            Tenders
           </button>
         </div>
         {activeButton === "Notifications" ? (
