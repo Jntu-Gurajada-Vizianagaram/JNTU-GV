@@ -94,6 +94,7 @@ import gal90 from "../../assets/Gallery/gal90.jpeg";
 import gal91 from "../../assets/Gallery/gal91.jpg";
 import gal92 from "../../assets/Gallery/gal92.jpg";
 import gal93 from "../../assets/Gallery/gal93.jpg";
+import gal94 from "../../assets/Gallery/gal94.jpg";
 
 
 
@@ -442,7 +443,10 @@ export const CG = [
     image: gal88,
     description: "Jagat Jeevan Jayanti celebrations in JNTU-GV",
   },
-
+  {
+    image: gal94,
+    description: "Environmental Protection with plants",
+  },
 
 
   
