@@ -23,7 +23,7 @@ const data = {
           sno: 1,
           branch: "Civil Engineering",
           pdfLink:
-            "https://drive.google.com/file/d/1QEwF0t_9ZLGkQKeop3ZgehQdzIqEVEvx/view?usp=sharing",
+            "https://drive.google.com/file/d/1QDjfTrwjHj15UGaDTUqzYIpcrt8C18xt/view?usp=sharing",
         },
 
         {
@@ -37,7 +37,7 @@ const data = {
           sno: 3,
           branch: "Electrical and Electronic Engineering",
           pdfLink:
-            "https://drive.google.com/file/d/1D0ul690rNQgz3hMEaEPcx83aq-abnkeN/view?usp=sharing",
+            "https://drive.google.com/file/d/1_rRYo1S76dmS11CYI1vA_w3FyWh6iEq7/view?usp=drive_link",
         },
        
         
@@ -45,7 +45,7 @@ const data = {
           sno: 4,
           branch: "Mechanical Engineering",
           pdfLink:
-            "https://drive.google.com/file/d/13HtZ-n3qLJpXJinanpthqwyMvCi2tokP/view?usp=sharing",
+            "https://drive.google.com/file/d/1L6q2UbCFpt_52UAUT2i2EbPddS6cuaeH/view?usp=drive_link",
         },
         {
           sno: 5,
