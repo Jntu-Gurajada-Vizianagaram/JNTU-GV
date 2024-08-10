@@ -97,6 +97,7 @@ import gal93 from "../../assets/Gallery/gal93.jpg";
 import gal94 from "../../assets/Gallery/gal94.jpg";
 import gal96 from "../../assets/Gallery/gal96.jpg";
 import gal97 from "../../assets/Gallery/gal97.jpg";
+import gal98 from "../../assets/Gallery/gal98.jpg";
 
 
 
@@ -439,11 +440,11 @@ export const CG = [
     description: "Dr. D . Rajya Lakshmi as VC in-charge of JNTU-GV",
   },
  
- 
   {
     image: gal88,
     description: "Jagat Jeevan Jayanti celebrations in JNTU-GV",
   },
+
   {
     image: gal94,
     description: "Environmental Protection with plants",
@@ -453,12 +454,15 @@ export const CG = [
     image: gal96,
     description: "Environmental protection with plants",
   },
+
   {
     image: gal97,
     description: "Tree plantation under NSS",
   },
 
-
-  
+  {
+    image: gal98,
+    description: "Swachh Bharat under the leadership of JNTU GV NSS volunteers"
+  }
 
 ];
