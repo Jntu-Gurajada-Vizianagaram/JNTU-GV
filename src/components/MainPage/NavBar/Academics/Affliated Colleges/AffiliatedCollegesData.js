@@ -235,6 +235,16 @@ export const rowsEngg = [
     Type: "Temporary",
   },
 
+  {
+    SNo: 28,
+    CollegeCode: "V1",
+    CollegeName: " Behara College of Engineering and Technology",
+    District: "VSP",
+    "College Type": "Engineering",
+    wURL: "http://WWW.bcet.in",
+    Type: "Temporary",
+  },
+
 ];
 
 export const rowsPharmacy = [

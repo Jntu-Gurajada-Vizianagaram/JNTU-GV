@@ -421,6 +421,7 @@ export const CG = [
     image: gal84,
     description: "ITYUKTA 2K24 Technical Symposium in JNTU-GV",
   },
+  
   {
     image: gal87,
     description: "Jagat Jeevan Jayanti celebrations in JNTU-GV ",
