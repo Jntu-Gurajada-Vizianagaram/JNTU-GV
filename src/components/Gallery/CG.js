@@ -98,7 +98,7 @@ import gal94 from "../../assets/Gallery/gal94.jpg";
 import gal96 from "../../assets/Gallery/gal96.jpg";
 import gal97 from "../../assets/Gallery/gal97.jpg";
 import gal98 from "../../assets/Gallery/gal98.jpg";
-
+import gal99 from "../../assets/Gallery/gal99.jpg";
 
 
 export const CG = [
@@ -464,6 +464,12 @@ export const CG = [
   {
     image: gal98,
     description: "Swachh Bharat under the leadership of JNTU GV NSS volunteers"
-  }
+  },
+
+  {
+    image: gal99,
+    description: "Celebration of Rhythm Day"
+  },
+ 
 
 ];
