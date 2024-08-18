@@ -99,6 +99,8 @@ import gal96 from "../../assets/Gallery/gal96.jpg";
 import gal97 from "../../assets/Gallery/gal97.jpg";
 import gal98 from "../../assets/Gallery/gal98.jpg";
 import gal99 from "../../assets/Gallery/gal99.jpg";
+import gal100 from "../../assets/Gallery/gal100.jpg";
+import gal101 from "../../assets/Gallery/gal101.jpg";
 
 
 export const CG = [
@@ -470,6 +472,14 @@ export const CG = [
     image: gal99,
     description: "Celebration of Rhythm Day"
   },
- 
+  {
+    
+    image: gal100,
+    description: "In-charge VC D participated in independence celebrations at JNTU GV."
+  },
+  {
+    image: gal101,
+    description: "In-charge VC D participated in independence celebrations at JNTU GV."
+  },
 
 ];
