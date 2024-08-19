@@ -1,6 +1,3 @@
-
-
-
 .allLeftMenu {
   list-style-type: none;
   padding: 0;
@@ -21,6 +18,7 @@
 
 .allRightContent {
   flex-grow: 1;
+  padding: 0 20px; /* Add some padding for better spacing */
 }
 
 .allRightContentHeading {
@@ -28,11 +26,26 @@
   font-weight: bold;
   text-align: center;
   color: #2e0669;
+  margin-bottom: 20px; /* Add space below the heading */
 }
 
 .profileImage {
-  height: 350px;
-  width: 350px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.profileImage img {
+  width: 100%;
+  height: auto;
+  max-width: 300px; /* Limits the maximum width */
+  max-height: 310px; /* Limits the maximum height */
+  border-radius: 10%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the space, preventing distortion */
 }
 
 .ADh3 {
@@ -41,16 +54,20 @@
   margin-top: 10px;
   color: rgb(6, 6, 93);
   font-weight: bold;
+  text-align: center; /* Centered text */
 }
 
 .ADh4 {
   margin: 0;
   font-size: 15px;
   margin-top: 5px;
+  text-align: center; /* Centered text */
 }
 
 .ADp {
   font-size: 17px;
+  line-height: 1.6; /* Better readability with line spacing */
+  margin-bottom: 10px; /* Add space between paragraphs */
 }
 
 .ADsub {
@@ -104,9 +121,42 @@
   margin-top: 30px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .exam-main {
     display: flex;
     flex-direction: column;
+    margin-left: 10px; /* Reduced margin on smaller screens */
+    margin-right: 10px;
+  }
+
+  .allRightContent {
+    padding: 0 10px; /* Less padding on smaller screens */
+  }
+
+  .profileImage img {
+    max-width: 250px; /* Reduces size on smaller screens */
+    max-height: 250px;
+  }
+
+  .allLeftMenu .menuButton {
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Auto height for better responsiveness */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profileImage img {
+    width: 70%;
+    height: auto;
+    max-width: 250px; 
+    max-height: 250px;
+  }
+
+  .ADh3, .ADh4 {
+    font-size: 18px;
+  }
+
+  .ADp {
+    font-size: 16px;
   }
 }
