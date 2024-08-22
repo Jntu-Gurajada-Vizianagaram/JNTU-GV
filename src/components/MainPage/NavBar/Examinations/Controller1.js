@@ -24,13 +24,14 @@ function Controller1() {
             <h3>Dr. Chinta Neelima Devi</h3>
           </div>
           <div className="profileDesignation">
-            <h4 className="regularStyleH4">Additional Controller of Examinations 1</h4><br></br>
+            <h4 className="regularStyleH4">Additional Controller of Examinations 1</h4>
+            <h5>for I B.Tech, IV B.Tech and IV B.Pharmacy</h5><br></br>
             <h3>Assistant Professor in the Department of Mechanical Engineering</h3>
           </div>
           </center>
           <hr />
           {/* Profile description */}
-          <p>Email: ace1@jntugv.edu.in</p>
+          <p>Email: ace4@jntugv.edu.in</p>
           <hr />
           <p>Dr. Chinta Neelima Devi is having 15 + years of teaching experience. She got B.Tech from JNTUH, Hyderabad, 
           Master of Engineering -M.E. (CAD/CAM) from Andhra University and Ph.D from National Institute of Technology (NIT), Warangal. </p>
