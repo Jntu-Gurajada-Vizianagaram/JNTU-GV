@@ -101,7 +101,7 @@ import gal98 from "../../assets/Gallery/gal98.jpg";
 import gal99 from "../../assets/Gallery/gal99.jpg";
 import gal100 from "../../assets/Gallery/gal100.jpg";
 import gal101 from "../../assets/Gallery/gal101.jpg";
-
+import gal102 from "../../assets/Gallery/gal102.jpg";
 
 export const CG = [
   {
@@ -480,6 +480,10 @@ export const CG = [
   {
     image: gal101,
     description: "In-charge VC D participated in independence celebrations at JNTU GV."
+  },
+  {
+    image: gal102,
+    description: "IIT Chennai Professor Prasad Patnaik"
   },
 
 ];
