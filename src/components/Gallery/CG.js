@@ -102,6 +102,9 @@ import gal99 from "../../assets/Gallery/gal99.jpg";
 import gal100 from "../../assets/Gallery/gal100.jpg";
 import gal101 from "../../assets/Gallery/gal101.jpg";
 import gal102 from "../../assets/Gallery/gal102.jpg";
+import gal103 from "../../assets/Gallery/gal103.jpg";
+import gal104 from "../../assets/Gallery/gal104.jpg";
+import gal105 from "../../assets/Gallery/gal105.jpg";
 
 export const CG = [
   {
@@ -485,5 +488,19 @@ export const CG = [
     image: gal102,
     description: "IIT Chennai Professor Prasad Patnaik"
   },
+  {
+    image: gal103,
+    description: "Incharge VC professor D. Rajyalakshmi said to think creatively"
+  },
+  {
+    image: gal104,
+    description: "Incharge VC Professor D. Rajyalakshmi said students should become job providers not job seekers"
+  },
+  {
+    image: gal105,
+    description: "Ideation BootCamp at JNTUGV"
+  },
+
+
 
 ];
