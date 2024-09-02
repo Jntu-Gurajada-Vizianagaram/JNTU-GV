@@ -1,6 +1,6 @@
 import React from "react";
 import "../Administration/AdminandDirectorates.css"; // Import your CSS file here
-import doe from "../../../../assets/AdminDirectoratesImages/doe.png";
+import doe from "../../../../assets/AdminDirectoratesImages/da.jpg";
 
 function Evaluation() {
   return (
@@ -15,12 +15,12 @@ function Evaluation() {
               <img src={doe} alt="Profile" />
             </div>
             <div className="profileName">
-              <h3 className="ADh3">Dr.D.Rajya Lakshmi</h3>
+              <h3 className="ADh3">Dr. K. Babulu</h3>
               <h3 className="ADh3">Director of Evaluation</h3>
             </div>
             <div className="profileDesignation">
               <h4 className="ADh4">
-                Professor of Dept. of Computer Science and Engineering
+              Professor of Dept. of Electronics and Communications Engineering
               </h4>
             </div>
           </center>
@@ -28,39 +28,136 @@ function Evaluation() {
           {/* Profile description */}
           <p>Email: de@jntugv.edu.in</p>
           <hr></hr>
-          <p>
-            Dr. D. Rajya Lakshmi obtained her BTech in Electronics and
-            Communications Engineering from Andhra University, M.Tech in
-            Computer Science from Andhra University, and PhD from JNTU
-            Hyderabad, India. She is currently working as Professor in the
-            Department of Computer Science and Engineering at JNTUGV,
-            Vizianagaram, India.
-          </p>
+          <p className="ADsub">Educational Qualifications:</p>
+        <p>
+          ❖ B.E from Andhra University with Electronics and Communication
+          Engineering.
+        </p>
+        <p>❖ M.Tech from REC, Warangal with Electronic Instrumentation.</p>
+        <p>
+          ❖ Ph.D from J.N.T. University, Anantapur in the area of VLSI& Embedded
+          System Design.
+        </p>
 
-          <p>
-            Her research interests arevested in the area of Image Processing,
-            Machine Learning, Data Mining and Software Engineering. She accrued
-            a total teaching experience of around 29 years in which she found
-            her calling with academia and is pursuing her passion serving in
-            various capacities as Professor,Principal, Vice Principal Academics,
-            HOD, CSE & IT,BoSmemberBoS Chairperson, Academic Council Member,
-            Regional Co-Ordinator for APSLPRB, Co-Ordinator for campus wide
-            network, Member Research Review Committee at Department of CSE,
-            JNTUK, Co-Ordinator for AP POLYCET, APEMACET, Member, CAC, INTUK,
-            UCEN&UCEKfive emerging courses.
-          </p>
-          <p>
-            She has more than 75 research publications in various National,
-            International Journals and Conferences, Book Chapters, Books
-            andPatents published to her credit. With over 29 years of
-            experience, Dr. D. Rajya Lakshmi is well reputed for her Guest
-            Lectures on various topics spanning from Image Processing to Career
-            Advancement and is widely known for her commitment to teaching and
-            catering to students needs at large.She guided 13 students to
-            completion of their Ph.D and is guiding08 Ph.D students. Dr. Rajya
-            Lakshmi is known for her unique initiatives like Women Empowerment
-            and makes her mark in the roles that she adorns.
-          </p>
+        <p className="ADsub">Industrial Experience:</p>
+        <p>
+          ❖ “Engineer Trainee” in Vijaya Electronics Pvt.Ltd, Hyderabad for a
+          period of 1year and 6 months.
+        </p>
+        <p>
+          ❖ “Instrumentation Engineer” in Andhra Paper Mills Ltd. Rajahmundry
+          for a period of 6 Months.
+        </p>
+
+        <p className="ADsub">Teaching Experience:</p>
+        <p>
+          ❖ “Lecturer in the Department of ECE”, at NBKR Institute of Science &
+          Technology, Vidyanagar for a Period of 1 year.
+        </p>
+        <p>
+          ❖ “Assistant Professor in the Department of ECE”, at NBKR Institute of
+          Science & Technology, Vidyanagar for a period of 2 years and 6 months.
+        </p>
+        <p>
+          ❖ “Associate Professor in the Department of ECE”, at NBKR Institute of
+          Science & Technology, Vidyanagar for a period of 3 years.
+        </p>
+        <p>
+          ❖ “Associate Professor in the Department of ECE”, at JNTU College of
+          Engineering, Anantapur for a period of 4 years
+        </p>
+        <p>
+          ❖ “Associate Professor in the Department of ECE”, at University
+          College of Engineering, JNTUK, Kakinada for a period of 3 years and 5
+          months.
+        </p>
+        <p>
+          ❖ “Professor in the Department of ECE”, at University College of
+          Engineering, JNTUK, Kakinada for a period of 9 years and 11 months.
+        </p>
+        <p>
+          ❖ “Professor in the Department of ECE”, at University College of
+          Engineering, JNTUK, Vizianagaram for a period of 1 year and 3 months.
+        </p>
+        <p>
+          ❖ Working as “Professor in the Department of ECE”, at JNTU-GV College
+          of Engineering (CEV), Vizianagaram since January 2022.
+        </p>
+
+        <p className="ADsub">Memberships:</p>
+        <p>❖ Life Member of ISTE.</p>
+        <p>❖ Fellow of IETE (F235351).</p>
+        <p>❖ Fellow of IE (F1184004).</p>
+
+        <p className="ADsub">Administrative Responsibilities:</p>
+        <p>
+          ❖ Director, Director Research & Development and Admissions (i/c),
+          JNTU-GV, Vizianagaram.
+        </p>
+        <p>
+          ❖ Director, Library Science & Entrepreneurs Development Centre, JNTUK,
+          Kakinada.
+        </p>
+        <p>❖ Controller of Examinations at JNTUK, Kakinada.</p>
+        <p>
+          ❖ BOS Chairman for ECE Department at University College of Engineering
+          (Autonomous), JNTUK, Kakinada during 2014-2015.
+        </p>
+        <p>
+          ❖ Head of ECE Department at University College of Engineering, JNTUK,
+          Kakinada.
+        </p>
+        <p>
+          ❖ Procurement Nodal Officer for TEQIP-II at University College of
+          Engineering, JNTUK, Kakinada.
+        </p>
+        <p>
+          ❖ BOS Member for JNTUK, Kakinada, JNTUA, Anantapur and SVUCE,
+          Tirupati.
+        </p>
+        <p>
+          ❖ Taskforce Committee Member for Private Engineering Colleges in Ranga
+          Reddy District, Andhra Pradesh.
+        </p>
+        <p>❖ Additional controller of Examinations at JNTUK, Kakinada</p>
+        <p>
+          ❖ Convener and Member for Fact Finding Committees of JNTUA, Anatapur,
+          JNTUK, Kakinada and JNTU-GV, Vizianagaram.
+        </p>
+        <p>
+          ❖ In-Charge Head of ECE Department at JNTU College of Engineering,
+          Anantapur.
+        </p>
+        <p>
+          ❖ Staff Coordinator for IEEE Student branch at JNTU College of
+          Engineering, Anantapur.
+        </p>
+        <p>
+          ❖ Student Union Coordinator at JNTU College of Engineering, Anantapur.
+        </p>
+        <p>
+          ❖ Executive Member for ISTE Student chapter at NBKR Institute of
+          Science & Technology, Vidyanagar.
+        </p>
+
+        <p className="ADsub">List of Publications:</p>
+        <p>❖ International Journals: 47.</p>
+        <p>❖ National Journals: 02</p>
+        <p>❖ International Conferences : 31</p>
+        <p>❖ National Conferences : 14</p>
+
+        <p className="ADsub">Ph.D s:</p>
+        <p>❖ Number of Ph.D s Awarded: 05.</p>
+        <p>❖ Number of Ph.D Scholars Pursing: 08.</p>
+
+        <p className="ADsub">Others:</p>
+        <p>❖ AWARDS: 05.</p>
+        <p>❖ SHORT TERM TRAINING PROGRAMS (STTP) ATTEND: 03.</p>
+        <p>❖ WORKSHOPS ATTENED: 11.</p>
+        <p>❖ REFRESHER COURSE/TRAINING PROGRAMMES ATTENED: 04.</p>
+        <p>❖ CONFERENCES/TRAINING PROGRAMMES/ WORKSHOPS CONDUCTED: 11.</p>
+        <p>❖ RESOURCE PERSON: 10.</p>
+        <p>❖ CHAIR PERSON: 01.</p>
         </div>
       </div>
     </div>

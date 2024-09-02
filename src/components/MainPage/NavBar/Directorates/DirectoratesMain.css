@@ -62,14 +62,23 @@
 .allRightContentProfile {
   display: block;
 }
-
+.allRightContentProfile img{
+  width: 100%;
+  height: auto;
+  max-width: 300px; /* Limits the maximum width */
+  max-height: 310px; /* Limits the maximum height */
+  border-radius: 5%; /* Makes the image circular */
+  object-fit: cover;
+}
 @media screen and (max-width: 600px) {
   .AD-Main-DM {
     display: flex;
     flex-direction: column;
     padding-left: 20px;
     padding-top: 10px;
+    margin-left: 0;
   }
+  
 
   .allRightContentProfile {
     margin-left: 0px;
