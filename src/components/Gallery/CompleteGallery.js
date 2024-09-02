@@ -1,16 +1,39 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./CompleteGallery.css";
-import { CG } from "./CG";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import ImageModal from "../HomePage/NewsAndEvents/ImageModal";
 
 function CompleteGallery() {
-  const images = CG ? [...CG].reverse() : [];
+  const [images, setImages] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedDescription, setSelectedDescription] = useState('');
-   
+
+  // Fetch images from the API
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch("https://api.jntugv.edu.in/api/gallery/all-gallery-images");
+        const data = await response.json();
+        
+        // Extract images from all events
+        const allImages = data.map(photo => ({
+            image: photo.imagelink,
+            description: photo.description,
+          }))
+       
+        
+        // Reverse the images array to match previous behavior
+        setImages(allImages.reverse());
+      } catch (error) {
+        console.error("Failed to fetch images:", error);
+      }
+    };
+
+    fetchImages();
+  }, []);
+
   const handleShowModal = (image, description) => {
     setSelectedImage(image);
     setSelectedDescription(description);
@@ -23,7 +46,6 @@ function CompleteGallery() {
     setSelectedDescription('');
   };
 
-
   return (
     <div className="complete-gallery-container">
       <h1>Gallery of JNTUGV</h1>
@@ -34,7 +56,6 @@ function CompleteGallery() {
       </Link>
 
       <div className="gallery-links">
-
         <Link to="/events/ityuktha-2k24" className="event-day">
           Ityuktha 2K24
         </Link>
@@ -50,15 +71,11 @@ function CompleteGallery() {
         <Link to="/events/cresense-2k24" className="event-day">
           Cresense 2K24
         </Link>
-        {/*  <Link to="/events/inauguration-event" className="event-day">
-          Inauguration Event
-          </Link>*/}
         <Link to="/events/republic-day" className="event-day">
           Republic Day Images
         </Link>
       </div>
 
-      {/* Link to the homepage */}
       <div className="image-grid">
         {images.map((imageObj, index) => (
           <div key={index} className="image-wrapper">
@@ -79,10 +96,6 @@ function CompleteGallery() {
         imageSrc={selectedImage}
         imageDescription={selectedDescription}
       />
-      
-
-
-
     </div>
   );
 }
