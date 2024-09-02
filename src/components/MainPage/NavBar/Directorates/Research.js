@@ -1,6 +1,6 @@
 import React from "react";
 import "../Administration/AdminandDirectorates.css"; // Import your CSS file here
-import da from "../../../../assets/AdminDirectoratesImages/da.jpg";
+import drd from "../../../../assets/AdminDirectoratesImages/dr&d.jpg";
 
 function Research() {
   return (
@@ -15,7 +15,7 @@ function Research() {
           <div className="ADimg">
             <center>
               <img
-                src={da}
+                src={drd}
                 alt="Profile"
               />
             </center>
@@ -23,28 +23,27 @@ function Research() {
         </div>
         <center>
           <div className="profileName">
-            <h3 className="ADh3">Dr. K. Babulu</h3>
+            <h3 className="ADh3">Dr.G.Swami Naidu</h3>
             <h3 className="ADh3">
               Director of Research & Development
             </h3>
           </div>
           <div className="profileDesignation">
             <h4 className="ADh4">
-              Professor of Dept. of Electronics and Communications Engineering
+            Professor of Metallurgical Engineering
             </h4>
           </div>
         </center>
         <hr />
         {/* Profile description */}
-        <p>Email: da@jntugv.edu.in</p>
+        <p>Email: drd@jntugv.edu.in</p>
         <hr></hr>
 
-        <p className="ADsub">Educational Qualifications:</p>
+        {/* <p className="ADsub">Educational Qualifications:</p> */}
         <p>
-          ❖ B.E from Andhra University with Electronics and Communication
-          Engineering.
+        Dr.G.Swami Naidu, Professor of Metallurgical Engineering & Vice Principal(Administration) received State Best Teacher Award-2016 from Department of Higher Education, Government of Andhra Pradesh
         </p>
-        <p>❖ M.Tech from REC, Warangal with Electronic Instrumentation.</p>
+        {/* <p>❖ M.Tech from REC, Warangal with Electronic Instrumentation.</p>
         <p>
           ❖ Ph.D from J.N.T. University, Anantapur in the area of VLSI& Embedded
           System Design.
@@ -168,7 +167,7 @@ function Research() {
         <p>❖ REFRESHER COURSE/TRAINING PROGRAMMES ATTENED: 04.</p>
         <p>❖ CONFERENCES/TRAINING PROGRAMMES/ WORKSHOPS CONDUCTED: 11.</p>
         <p>❖ RESOURCE PERSON: 10.</p>
-        <p>❖ CHAIR PERSON: 01.</p>
+        <p>❖ CHAIR PERSON: 01.</p> */}
       </div>
     </div>
   );
