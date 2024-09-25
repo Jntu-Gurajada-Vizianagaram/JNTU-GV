@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import "./CompleteGallery.css";
+import React, { useEffect, useState } from "react";
 import { MdOutlineArrowBackIos } from "react-icons/md";
+import { Link } from "react-router-dom";
 import ImageModal from "../HomePage/NewsAndEvents/ImageModal";
+import "./CompleteGallery.css";
 
 function CompleteGallery() {
   const [images, setImages] = useState([]);
@@ -25,7 +25,7 @@ function CompleteGallery() {
        
         
         // Reverse the images array to match previous behavior
-        setImages(allImages.reverse());
+        setImages(allImages);
       } catch (error) {
         console.error("Failed to fetch images:", error);
       }
@@ -82,6 +82,7 @@ function CompleteGallery() {
             <img
               src={imageObj.image}
               alt={`JNTUGV ${images.length - index}`}
+              loading="lazy"
               className="grid-image"
               onClick={() =>
                 handleShowModal(imageObj.image, imageObj.description)

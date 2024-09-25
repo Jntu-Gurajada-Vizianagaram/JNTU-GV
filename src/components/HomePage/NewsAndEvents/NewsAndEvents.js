@@ -1,11 +1,11 @@
-import React, { useState,useEffect } from "react";
-import "./NewsandEvent.css";
-import ImageModal from "./ImageModal";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useEffect, useState } from "react";
+import ImageModal from "./ImageModal";
+import "./NewsandEvent.css";
 
 const NewsAndEvents = () => {
   const [images, setImages] = useState([]);
-
+  const [evenImages, setEvenImages] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedDescription, setSelectedDescription] = useState('');
@@ -17,12 +17,16 @@ const NewsAndEvents = () => {
         const data = await response.json();
         
         // Extract images from all events
-        const allImages = data.map(photo => ({
-            image: photo.imagelink,
-            description: photo.description,
-          }))
+        const evenImages = data
+        .filter(photo => photo.id % 2 === 0)
+        .map(photo => ({
+          image: photo.imagelink,
+          description: photo.description,
+        }))
+        .reverse();
+      
+      setEvenImages(evenImages.slice(-6));
        
-        setImages(allImages);
       } catch (error) {
         console.error("Failed to fetch images:", error);
       }
@@ -31,7 +35,6 @@ const NewsAndEvents = () => {
     fetchImages();
   }, []);
 
-  const recentImages = images.slice(-6); 
   const handleShowModal = (image, description) => {
     setSelectedImage(image);
     setSelectedDescription(description);
@@ -48,7 +51,7 @@ const NewsAndEvents = () => {
     <div className="news-and-events">
       <h1> Latest News and Events</h1>
       <div className="news-and-events-display">
-        {recentImages.map((image, index) => (
+        {evenImages.map((image,index) => (
           <div key={index} className="news-and-events-container">
             <img
               src={image.image}
@@ -62,7 +65,7 @@ const NewsAndEvents = () => {
               <div className="desc-container">{image.description}</div>
             </div>
           </div>
-        ))}
+          ))}
       </div>
       <ImageModal
         show={showModal}
