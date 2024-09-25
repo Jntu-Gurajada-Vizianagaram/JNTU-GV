@@ -4,7 +4,6 @@ import ImageModal from "./ImageModal";
 import "./NewsandEvent.css";
 
 const NewsAndEvents = () => {
-  const [images, setImages] = useState([]);
   const [evenImages, setEvenImages] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -25,8 +24,7 @@ const NewsAndEvents = () => {
         }))
         .reverse();
       
-      setEvenImages(evenImages.slice(-6));
-       
+        setEvenImages(evenImages.slice(-6));
       } catch (error) {
         console.error("Failed to fetch images:", error);
       }
