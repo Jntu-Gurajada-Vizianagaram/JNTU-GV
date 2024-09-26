@@ -1,7 +1,7 @@
-import React, { useState,useEffect } from "react";
-import "./Gallery.css";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ImageModal from "../HomePage/NewsAndEvents/ImageModal";
+import "./Gallery.css";
 
 function Gallery() {
   const [images, setImages] = useState([]);
@@ -14,7 +14,7 @@ function Gallery() {
       try {
         const response = await fetch("https://api.jntugv.edu.in/api/gallery/all-gallery-images");
         const data = await response.json();
-        
+        console.log(data)
         // Extract images from all events
         const allImages = data.map(photo => ({
             image: photo.imagelink,
@@ -61,6 +61,8 @@ function Gallery() {
               src={image.image}
               alt={`JNTUGV ${image.description}`}
               onClick={() => handleShowModal(image.image, image.description)}
+              className="gallery-image"
+              loading="lazy"
             />
           ))}
         </div>
