@@ -9,6 +9,7 @@ import AboutUs from "./AboutUsMain/aboutUs";
 import NewsAndEvents from "./NewsAndEvents/NewsAndEvents";
 import UpdatePanel from "../UpdatePanel/UpdatePanel";
 import Gallery from "../Gallery/Gallery";
+import Youtube from "./Youtube/Youtube";
 
 function Homepage() {
   return (
@@ -18,6 +19,7 @@ function Homepage() {
       {/* <Scrollbar className="update-panel"/> */}
       <UpdatePanel className="update-panel" />
       <NewsAndEvents />
+      <Youtube/>
       <Gallery />
       <br />
     </div>

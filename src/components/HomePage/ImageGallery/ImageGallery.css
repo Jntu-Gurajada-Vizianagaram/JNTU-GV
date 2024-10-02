@@ -52,7 +52,7 @@
   padding: 1rem;
 }
 
-.carouselText {
+/* .carouselText {
   background-color: #690001;
   color: white;
   width: max-content;
@@ -60,6 +60,18 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0.5rem;
+} */
+
+.carouselText {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  word-wrap: break-word; /* Break words that are too long */
+  white-space: normal; /* Allow text to wrap onto the next line */
+  max-width: 100%; /* Ensure the caption fits within the container */
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 1200px) {
