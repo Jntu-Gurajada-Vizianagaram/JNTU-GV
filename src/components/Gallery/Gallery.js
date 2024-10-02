@@ -33,7 +33,7 @@ function Gallery() {
   }, []);
 
 
-  const recentImages = images.slice(-15); // Get the last 15 images from CG.js
+  const recentImages = images.slice(3); // Get the 18 images from CG.js
 
 
 
