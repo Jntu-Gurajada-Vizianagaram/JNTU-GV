@@ -27,7 +27,7 @@ const Youtube = () => {
             <iframe
               width="100%"
               height="315"
-              src="https://www.youtube.com/embed/Lr-e4JxRXWU"
+              src="https://www.youtube.com/embed/FGI9jT37RoA?si=-eDzkmzD-QYt9JXL"
               title="YouTube live video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

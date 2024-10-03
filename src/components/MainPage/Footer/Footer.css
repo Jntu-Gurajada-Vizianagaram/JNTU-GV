@@ -113,9 +113,10 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  
 }
-
+.BelowBar:hover {
+  color: orange;
+}
 .BelowBar-links {
   display: flex;
   padding-left: 5px;

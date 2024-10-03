@@ -75,6 +75,7 @@ import ScrollToTop from "./components/HomePage/AboutUsMain/ScrollToTop";
 import Antiragging from "./components/MainPage/NavBar/AntiRagging/AntiRagging";
 import Committee from "./components/MainPage/NavBar/AntiRagging/Commitee/Committee";
 import AboutUS from "./components/MainPage/NavBar/AntiRagging/AboutUS/AboutUs"
+import PrivacyPolicy from "./components/MainPage/Footer/PrivacyPolicy";
 function App() {
   return (
     <div>
@@ -178,6 +179,8 @@ function App() {
             element={<Studentactivityclub />}
           />
         </Route>
+        <Route path="/privacy" element={<PrivacyPolicy />}></Route>
+
       </Routes>
       <Footer />
     </div>

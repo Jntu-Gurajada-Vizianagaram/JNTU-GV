@@ -239,7 +239,14 @@ function Footer() {
             </a>
           </div>
         </div>
-
+      <div>  
+        <Link
+                    to="/privacy"
+                    className="BelowBar sublinksFooter"
+                    target="_blankx "
+                  >
+                    Privacy & Policy
+                  </Link></div>
       {/* Copyright  */}
       <div className="mobilefooter">
         <p>© Copyright 2023 JNTU-GV Vizianagaram. All Rights Reserved.</p>
