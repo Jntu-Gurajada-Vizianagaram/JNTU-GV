@@ -35,7 +35,7 @@ export const Central_Facilites = [
 
   {
     title: "Research and Development Cell",
-    link: "https://rdcell.jntugv.edu.in/",
+    link: "https://drd.jntugv.edu.in/",
   },
 
   {
