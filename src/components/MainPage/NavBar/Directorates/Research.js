@@ -38,6 +38,9 @@ function Research() {
         {/* Profile description */}
         <p>Email: dr@jntugv.edu.in
         </p>
+        <p>Website: <a href="https://drd.jntugv.edu.in/">https://drd.jntugv.edu.in/</a>
+        </p>
+
         <hr></hr>
 
         {/* <p className="ADsub">Educational Qualifications:</p> */}
