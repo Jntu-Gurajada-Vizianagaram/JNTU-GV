@@ -19,6 +19,10 @@ const data = {
       Title: "R23 Regulation for B. Tech",
       pdfLink: "https://drive.google.com/file/d/1lOTQWSiua52MgwaVkMa2BfWszRCzHabb/view?usp=sharing"
     },
+    {
+      Title: "R24 Regulation for BBA",
+      pdfLink: "https://api.jntugv.edu.in/media/JNTUGV-UG-BBA.-%20R24%20Regulations%20.pdf"
+    }
     ],
 
     "Ph.D": [

@@ -248,8 +248,9 @@ function Footer() {
                     Privacy & Policy
                   </Link></div>
       {/* Copyright  */}
-      <div className="mobilefooter">
-        <p>© Copyright 2023 JNTU-GV Vizianagaram. All Rights Reserved.</p>
+      <div className="mobilefooter ">
+        <p>© Copyright 2024 <a className="sublinksFooter " href="http://jntugv.edu.in"> <strong>JNTU-GV Vizianagaram</strong> </a>. All Rights Reserved.</p>
+        <p>Designed and Developed by <strong>Digital Monitoring Cell ,JNTU-GV</strong></p>
       </div>
     </div>
   );
