@@ -43,7 +43,6 @@
 .mobilefooter {
   text-align: center;
   font-size: small;
-  color: white;
 }
 
 .subFooter {
@@ -136,8 +135,6 @@
 .belowbar-seconddiv {
   gap: 10px;
 }
-
-.
 
 @media (max-width: 767px) {
   .mainFooter {
