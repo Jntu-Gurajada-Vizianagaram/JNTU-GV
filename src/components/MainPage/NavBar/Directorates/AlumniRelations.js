@@ -37,7 +37,7 @@ function AlumniRelations() {
         </center>
         <hr />
         {/* Profile description */}
-        <p>Email: daa@jntugv.edu.in</p>
+        <p>Email: dar@jntugv.edu.in</p>
         <hr></hr>
         <p className="ADsub">Administrative Positions</p>
         <p>
