@@ -33,7 +33,11 @@ function Placements() {
           <hr />
           {/* Profile description */}
           <p>Email: dirp@jntugv.edu.in</p>
+          <p>Website: <a href="https://dirp.jntugv.edu.in/">https://dirp.jntugv.edu.in/</a>
+          </p>
           <hr></hr>
+
+
 
           <p>
           Dr. G. J. N. Raju, Associate Professor of Physics, received Doctorate in Nuclear Physics from Andhra University in the year 2006. Dr. Raju completed M.Tech (Computer Science and Technology) in 2010 from GITAM University and M.Sc. (Nuclear Physics) in 2000 from Andhra University, Visakhapatnam. He has nearly 20 years of teaching experience at University level. Dr. Raju received two Best Paper presentation awards at DAE conferences and received five academic awards from various organizations and Universities. He authored two textbooks titled as “Nano Physics” and “Basic Engineering Physics” and authored four book chapters. He filed two Indian patents and received two UK patent grant certificates. Dr. Raju served the institution in various capacities like Head of the Dept. of BS&HSS, Officer  in-charge Examinations, R & D co-ordinator, NBA, NAAC, and AICTE co-ordinator at Department level, BoS Chairperson and as a member, etc. 
