@@ -9,15 +9,7 @@ const Youtube = () => {
         {/* First YouTube Live Video */}
         <Grid item xs={12} sm={6}>
           <div className="youtube-video">
-            <iframe
-              width="100%"
-              height="315"
-              src="https://www.youtube.com/embed/R5cmL_FsdP0"
-              title="YouTube live video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/8oUvW7h6TXw?si=f8YRXCFe0rACsx9S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </Grid>
 
@@ -27,7 +19,7 @@ const Youtube = () => {
             <iframe
               width="100%"
               height="315"
-              src="https://www.youtube.com/embed/FGI9jT37RoA?si=-eDzkmzD-QYt9JXL"
+              src="https://www.youtube.com/embed/4HOC6P8N28Q?si=X9TOjU5v3G4tZbdZ"
               title="YouTube live video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
