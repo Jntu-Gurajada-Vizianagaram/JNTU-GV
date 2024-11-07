@@ -137,13 +137,13 @@ function Footer() {
             {JntuGv_Units.map((item, index) => (
               <div key={index}>
                 <p>
-                  <Link
-                    to={item.link}
+                  <a
+                   href={item.link}
                     className="sublinksFooter"
                     target="_blankx "
                   >
                     {item.title}
-                  </Link>
+                  </a>
                 </p>
               </div>
             ))}
@@ -250,7 +250,7 @@ function Footer() {
       {/* Copyright  */}
       <div className="mobilefooter ">
         <p>© Copyright 2024 <a className="sublinksFooter " href="http://jntugv.edu.in"> <strong>JNTU-GV Vizianagaram</strong> </a>. All Rights Reserved.</p>
-        <p>Designed and Developed by <a className="sublinksFooter " href="https://dmc-cell.vercel.app/"><strong>Digital Monitoring Cell ,JNTU-GV</strong></a></p>
+        <p>Designed and Developed by <a className="sublinksFooter " href="https://dmc.jntugv.edu.in "><strong>Digital Monitoring Cell ,JNTU-GV</strong></a></p>
       </div>
     </div>
   );
