@@ -40,7 +40,7 @@ export const Central_Facilites = [
 
   {
     title: "National Service Scheme (NSS)",
-    link: "https://nssmodule-lokeshs-projects-192c4de5.vercel.app/",
+    link: "https://nss.jntugv.edu.in",
   },
   {
     title: "Anti Ragging Committee",
@@ -96,16 +96,16 @@ export const University_Hostels = [
 
 export const JntuGv_Units = [
   {
-    title: "DMC",
-    link: "/",
+    title: "Digital Monitoring Cell",
+    link: " https://dmc.jntugv.edu.in ",
   },
   {
     title: "IQAC",
-    link: "/",
+    link: "https://iqac.jntugv.edu.in ",
   },
   {
     title: "Sports",
-    link: "/",
+    link: "https://sports.jntugv.edu.in",
   },
   {
     title: "Library",
@@ -134,6 +134,6 @@ export const Student_Corner = [
   },
   {
     title: "NSS",
-    link:"https://nssmodule-lokeshs-projects-192c4de5.vercel.app/"
+    link:"https://nss.jntugv.edu.in"
 },
 ]
