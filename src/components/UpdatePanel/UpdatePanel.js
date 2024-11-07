@@ -176,7 +176,7 @@ function UpdatePanel() {
             }}
             onClick={() => handleRecruitment("Recruitment")}
           >
-            Recruitment 2023
+            Recruitment
           </button>
           <button
             style={{
