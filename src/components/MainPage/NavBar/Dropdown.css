@@ -29,6 +29,7 @@ button {
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
+  font-weight: bold;
 }
 
 .dropbtn {
@@ -36,6 +37,7 @@ button {
   padding: 10px;
   display: flex;
   align-items: center;
+  font-weight: bold;
 }
 
 .dropbtn:hover {
