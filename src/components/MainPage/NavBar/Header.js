@@ -19,6 +19,7 @@ const Header = () => {
 
   return (
     
+     
     <div className={`header-container ${isScrolled ? "scrolled" : ""}`}>
       <img src={myImage} alt="JNTUV_LOGO" className="logo" />
       <div className="header-text">
@@ -26,7 +27,9 @@ const Header = () => {
         <h5 className="location">VIZIANAGARAM-535 003, A.P</h5>
         {!isScrolled && <h6 className="location">(Established by Andhra Pradesh Act No.22 of 2021)</h6>}
       </div>
+      
     </div>
+    
   );
 };
 

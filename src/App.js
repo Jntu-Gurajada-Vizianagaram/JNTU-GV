@@ -76,10 +76,12 @@ import Antiragging from "./components/MainPage/NavBar/AntiRagging/AntiRagging";
 import Committee from "./components/MainPage/NavBar/AntiRagging/Commitee/Committee";
 import AboutUS from "./components/MainPage/NavBar/AntiRagging/AboutUS/AboutUs"
 import PrivacyPolicy from "./components/MainPage/Footer/PrivacyPolicy";
+import HeaderTop from "./components/MainPage/NavBar/HeaderTop";
 function App() {
   return (
     <div>
       {/* <BelowBar /> */}
+      <HeaderTop/>
       <Header />
       <NavBar />
       <ScrollToTop/>
