@@ -72,20 +72,21 @@ function ImageGallery() {
       </div>
       <div className="mainImageGallery">
         <Carousel fade>
-          {images.map((image, index) => (
-            <Carousel.Item key={index}>
-              <img
-                className="ig-image"
-                src={image.imglink}
-                alt={`Slide ${image.description}`}
-              />
-              {image.description !== "NA" && (
-                <Carousel.Caption>
-                  <div className="carouselText">{image.description}</div>
-                </Carousel.Caption>
-              )}
-            </Carousel.Item>
-          ))}
+        {Array.isArray(images) && images.map((image, index) => (
+  <Carousel.Item key={index}>
+    <img
+      className="ig-image"
+      src={image.imglink}
+      alt={`Slide ${image.description}`}
+    />
+    {image.description !== "NA" && (
+      <Carousel.Caption>
+        <div className="carouselText">{image.description}</div>
+      </Carousel.Caption>
+    )}
+  </Carousel.Item>
+))}
+
         </Carousel>
       </div>
     </div>

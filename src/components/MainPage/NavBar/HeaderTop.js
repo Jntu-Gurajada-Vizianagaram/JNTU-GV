@@ -2,6 +2,7 @@ import {React, useState,useEffect} from 'react'
 import { Link } from "react-router-dom";
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import PersonOffIcon from '@mui/icons-material/PersonOff';
+
 const HeaderTop = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -31,7 +32,7 @@ const HeaderTop = () => {
 const NavBar = () => {
   const links=[
     {"icon":<PersonOffIcon/>, "name": `ANTI-RAGGING`, "path": "/anti-ragging/about" },
-    { "icon":<PsychologyIcon/>, "name": `IDEACLUB`, "path": "http://ideaclub.jntugv.edu.in" }
+    { "icon":<PsychologyIcon/>, "name": `IDEACLUB`, "path": "http://ideaclub.jntugv.edu.in" },
   ]
 
   return (
