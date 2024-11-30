@@ -13,6 +13,7 @@ import {
 import "./Dropdown.css";
 import Search from "./Search/Search";
 
+
 const NavBar = () => {
   const navigate = useNavigate();
   const [menuState, setMenuState] = useState(false);
