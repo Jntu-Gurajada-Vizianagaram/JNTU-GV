@@ -71,7 +71,7 @@ export const Constituent_Colleges = [
   },
   {
     title:"JNTU-GV Tribal College of Engineering, Kurupam",
-    link:"http://jntugvk.ucev.in/"
+    link:"https://teck.jntugv.edu.in/"
   }
 ];
 
