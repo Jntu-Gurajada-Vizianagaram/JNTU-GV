@@ -71,8 +71,6 @@ const NavBar = () => {
             .custom-navbar .nav-link {
               font-size: 0.7rem; /* Even smaller size for phones */
             }
-              .topnavbar{
-              display:none;}
           }
         `}
       </style>
