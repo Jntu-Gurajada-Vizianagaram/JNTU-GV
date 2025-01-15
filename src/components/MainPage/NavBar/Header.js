@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import myImage from "./jntugvcev.jpg";
 import "./Header.css";
-
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -21,6 +20,7 @@ const Header = () => {
     
      
     <div className={`header-container ${isScrolled ? "scrolled" : ""}`}>
+     
       <img src={myImage} alt="JNTUV_LOGO" className="logo" />
       <div className="header-text">
         <h1 className="university-name">JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY GURAJADA VIZIANAGARAM</h1>
