@@ -34,7 +34,7 @@ export const searchItems = [
     { path: "/examination/controller2", label: "Additional Controller of Examinations-2" },
     { path: "/examination/controller3", label: "Additional Controller of Examinations-3" },
     { path: "/examination/controller-pg", label: "Additional Controller of Examinations-PG" },
-    { path: "https://jntugv.campx.in/jntugv/ums/results", label: "Examination Results" }, // External link
+    { path: "https://exams.jntugv.edu.in/results", label: "Examination Results" }, // External link
     { path: "/contact-us", label: "Contact Us" },
 
     { path: "/anti-ragging/about", label: "Anti-Ragging" },
