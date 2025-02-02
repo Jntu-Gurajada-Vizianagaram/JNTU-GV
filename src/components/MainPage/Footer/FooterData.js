@@ -137,3 +137,10 @@ export const Student_Corner = [
     link:"https://nss.jntugv.edu.in"
 },
 ]
+
+export const Others = [
+  {
+      title: "Ombudsman",
+      link:"https://drive.google.com/file/d/15riRLxVtiJOrtLiYWmh7kvIQlTLV7Ocl/view?usp=sharing"
+  }
+]
