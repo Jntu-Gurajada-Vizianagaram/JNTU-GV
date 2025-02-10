@@ -37,6 +37,9 @@ function AcademicAudit() {
         <hr />
         {/* Profile description */}
         <p>Email: daa@jntugv.edu.in</p>
+        <p>Website: <a href="https://daa.jntugv.edu.in/">https://daa.jntugv.edu.in/</a>
+        </p>
+
         <hr></hr>
         <p>
           Dr. Ramisetty Rajeswara Rao is presently working as Director(i/c)

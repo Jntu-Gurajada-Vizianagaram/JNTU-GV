@@ -176,7 +176,7 @@ function UpdatePanel() {
             }}
             onClick={() => handleRecruitment("Recruitment")}
           >
-            Recruitment 2023
+            Recruitment
           </button>
           <button
             style={{
@@ -208,6 +208,7 @@ function UpdatePanel() {
             }}
             onClick={() => handleEvents("Events")}
           >
+            
             Events
           </button>
           <button

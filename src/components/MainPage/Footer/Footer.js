@@ -174,20 +174,20 @@ function Footer() {
             {JntuGv_Units.map((item, index) => (
               <div key={index}>
                 <p>
-                  <Link
-                    to={item.link}
+                  <a
+                   href={item.link}
                     className="sublinksFooter"
                     target="_blankx "
                   >
                     {item.title}
-                  </Link>
+                  </a>
                 </p>
               </div>
             ))}
           </div>
 
            {/* Student Corner */}
-           <p className="subheadingFooter">Student Corner</p>
+          <p className="subheadingFooter">Student Corner</p>
           <hr className="subFooter" />
           <div>
             {Student_Corner.map((item, index) => (
@@ -204,6 +204,10 @@ function Footer() {
               </div>
             ))}
           </div>
+
+         
+
+
           
           {/* <p className="subheadingFooter">Grievances</p>
           <hr className="subFooter" />
@@ -276,10 +280,18 @@ function Footer() {
             </a>
           </div>
         </div>
-
+      <div>  
+        <Link
+                    to="/privacy"
+                    className="BelowBar sublinksFooter"
+                    target="_blankx "
+                  >
+                    Privacy & Policy
+                  </Link></div>
       {/* Copyright  */}
-      <div className="mobilefooter">
-        <p>© Copyright 2023 JNTU-GV Vizianagaram. All Rights Reserved.</p>
+      <div className="mobilefooter ">
+        <p>© Copyright 2024 <a className="sublinksFooter " href="http://jntugv.edu.in"> <strong>JNTU-GV Vizianagaram</strong> </a>. All Rights Reserved.</p>
+        <p>Designed and Developed by <a className="sublinksFooter " href="https://dmc.jntugv.edu.in "><strong>Digital Monitoring Cell ,JNTU-GV</strong></a></p>
       </div>
     </div>
   );

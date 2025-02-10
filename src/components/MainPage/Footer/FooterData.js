@@ -35,12 +35,12 @@ export const Central_Facilites = [
 
   {
     title: "Research and Development Cell",
-    link: "https://rdcell.jntugv.edu.in/",
+    link: "https://drd.jntugv.edu.in/",
   },
 
   {
     title: "National Service Scheme (NSS)",
-    link: "https://nssmodule-lokeshs-projects-192c4de5.vercel.app/",
+    link: "https://nss.jntugv.edu.in",
   },
   {
     title: "Anti Ragging Committee",
@@ -71,7 +71,7 @@ export const Constituent_Colleges = [
   },
   {
     title:"JNTU-GV Tribal College of Engineering, Kurupam",
-    link:"http://jntugvk.ucev.in/"
+    link:"https://teck.jntugv.edu.in/"
   }
 ];
 
@@ -96,16 +96,16 @@ export const University_Hostels = [
 
 export const JntuGv_Units = [
   {
-    title: "DMC",
-    link: "/",
+    title: "Digital Monitoring Cell",
+    link: " https://dmc.jntugv.edu.in ",
   },
   {
     title: "IQAC",
-    link: "/",
+    link: "https://iqac.jntugv.edu.in ",
   },
   {
     title: "Sports",
-    link: "/",
+    link: "https://sports.jntugv.edu.in",
   },
   {
     title: "Library",
@@ -134,6 +134,13 @@ export const Student_Corner = [
   },
   {
     title: "NSS",
-    link:"https://nssmodule-lokeshs-projects-192c4de5.vercel.app/"
+    link:"https://nss.jntugv.edu.in"
 },
+]
+
+export const Others = [
+  {
+      title: "Ombudsman",
+      link:"https://drive.google.com/file/d/15riRLxVtiJOrtLiYWmh7kvIQlTLV7Ocl/view?usp=sharing"
+  }
 ]

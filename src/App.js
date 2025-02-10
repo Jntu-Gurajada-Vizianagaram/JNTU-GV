@@ -75,15 +75,19 @@ import ScrollToTop from "./components/HomePage/AboutUsMain/ScrollToTop";
 import Antiragging from "./components/MainPage/NavBar/AntiRagging/AntiRagging";
 import Committee from "./components/MainPage/NavBar/AntiRagging/Commitee/Committee";
 import AboutUS from "./components/MainPage/NavBar/AntiRagging/AboutUS/AboutUs"
+import PrivacyPolicy from "./components/MainPage/Footer/PrivacyPolicy";
+import HeaderTop from "./components/MainPage/NavBar/HeaderTop";
+import Sitemap from "./components/MainPage/NavBar/Sitemap";
 function App() {
   return (
     <div>
       {/* <BelowBar /> */}
+      <HeaderTop/>
       <Header />
       <NavBar />
       <ScrollToTop/>
       <Routes>
-        
+        <Route path="/sitemap" element={<Sitemap/>}/>
         <Route path="/" element={<Homepage />} />
         <Route path="/about-us" element={<AboutusMain />}>
           <Route path="about-jntugv" element={<AboutJNTUGV id="about-jntugv" />} />
@@ -178,6 +182,8 @@ function App() {
             element={<Studentactivityclub />}
           />
         </Route>
+        <Route path="/privacy" element={<PrivacyPolicy />}></Route>
+
       </Routes>
       <Footer />
     </div>
