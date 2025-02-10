@@ -1,15 +1,3 @@
-import "./Footer.css";
-import { Link } from "react-router-dom";
-import {
-  Administration_Wing,
-  Central_Facilites,
-  Online_Courses,
-  University_Hostels,
-  Constituent_Colleges,
-  JntuGv_Units,
-  Grievance,
-  Student_Corner
-} from "./FooterData.js";
 import {
   FaFacebook,
   FaInstagram,
@@ -17,6 +5,33 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import "./Footer.css";
+import {
+  Administration_Wing,
+  Central_Facilites,
+  Constituent_Colleges,
+  Grievance,
+  JntuGv_Units,
+  Online_Courses,
+  Others,
+  Student_Corner,
+  University_Hostels,
+} from "./FooterData.js";
+
+
+const removeTrackingParams = (url) => {
+  const urlObj = new URL(url, window.location.origin);
+  
+  // Remove any parameters that start with '_gl' or '_ga'
+  Array.from(urlObj.searchParams.keys()).forEach(param => {
+    if (param.startsWith('_ga') || param.startsWith('_gl')) {
+      urlObj.searchParams.delete(param);
+    }
+  });
+
+  return urlObj.toString();
+};
 
 function Footer() {
   return (
@@ -59,6 +74,28 @@ function Footer() {
               </div>
             ))}
           </div>
+          <p className="subheadingFooter">Others</p>
+          <hr className="subFooter" />
+          <div>
+            {Others.map((item, index) => (
+              <div key={index}>
+                <p>
+                  <Link
+                    to={item.link}
+                    className="sublinksFooter"
+                    target="_blank "
+                  >
+                    {item.title}
+                  </Link>
+                </p>
+              </div>
+            ))}
+          </div>
+
+
+
+
+
         </div>
 
         {/* Central_Facilites */}
@@ -102,7 +139,7 @@ function Footer() {
               <div key={index}>
                 <p>
                   <Link
-                    to={item.link}
+                    to={removeTrackingParams(item.link)}
                     className="sublinksFooter"
                     target="_blank"
                     rel="noreferrer"
@@ -159,7 +196,7 @@ function Footer() {
                   <Link
                     to={item.link}
                     className="sublinksFooter"
-                    target="_blankx "
+                    target="_blank"
                   >
                     {item.title}
                   </Link>

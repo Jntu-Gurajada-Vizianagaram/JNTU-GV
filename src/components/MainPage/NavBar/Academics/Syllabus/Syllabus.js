@@ -59,14 +59,12 @@ const data = {
           pdfLink:
             "https://drive.google.com/file/d/1PTTL7B3o39WR07hvrCcgBkayX9bT2XoZ/view?usp=drive_link",
         },
-       
         {
           sno: 7,
           branch: "Artificial Intelligence & Data Science",
           pdfLink:
             "https://drive.google.com/file/d/1Nytz4jctxjKVyOUM1UAiO3YHhOmmGFka/view?usp=drive_link",
         },
-
         {
           sno: 8,
           branch: "Computer Science and Engineering (Data Science)",
