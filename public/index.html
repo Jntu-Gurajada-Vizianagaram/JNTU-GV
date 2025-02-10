@@ -25,13 +25,16 @@
   -->
   <title>JNTU-GV</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-C7DF0JF0L1"></script>
-  <script>
+  <!-- <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
-    gtag('config', 'G-C7DF0JF0L1');
-  </script>
+    // Correctly initializing Google Analytics with the 'allowLinker' set to false
+    gtag('config', 'G-C7DF0JF0L1', {
+        'allowLinker': false  // Disable appending URL parameters for cross-domain tracking
+    }); -->
+</script>
 </head>
 
 <body>

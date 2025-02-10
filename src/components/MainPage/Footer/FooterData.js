@@ -67,7 +67,7 @@ export const Online_Courses = [
 export const Constituent_Colleges = [
   {
     title: "JNTU-GV College of Engineering, Vizianagaram",
-    link: "https://jntugvcev.edu.in/",
+    link: "https://jntugvcev.edu.in",
   },
   {
     title:"JNTU-GV Tribal College of Engineering, Kurupam",
