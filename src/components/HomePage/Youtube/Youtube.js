@@ -25,8 +25,8 @@ const Youtube = () => {
               src="https://www.youtube.com/embed/4HOC6P8N28Q?si=X9TOjU5v3G4tZbdZ"
               title="YouTube live video player"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;web-share"
-              referrerPolicy='strivt-origin-cross-origin"'
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             ></iframe>
           </div>
