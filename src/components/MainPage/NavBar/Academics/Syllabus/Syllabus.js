@@ -59,14 +59,12 @@ const data = {
           pdfLink:
             "https://api.jntugv.edu.in/media/JNTUGV-UG-B.Tech.-AI&ML-_R23_Regulations.pdf",
         },
-       
         {
           sno: 6,
           branch: "Artificial Intelligence & Data Science",
           pdfLink:
             "https://api.jntugv.edu.in/media/JNTUGV-UG-B.Tech.-AI&DS-_R23_Regulations.pdf",
         },
-
         {
           sno: 7,
           branch: "Computer Science and Engineering (Data Science)",
