@@ -1,8 +1,8 @@
 import React from "react";
+import { MdOutlineMailOutline } from "react-icons/md";
 import vc from "../../../../assets/AdminDirectoratesImages/doe.png";
 import tick from "../../../../assets/StyleImages/tick.svg";
 import "./AdminandDirectorates.css"; // Import your CSS file here
-import { MdOutlineMailOutline } from "react-icons/md";
 function ViceChancellor() {
   return (
     <div className="allRightContent-Profile">
@@ -30,21 +30,16 @@ function ViceChancellor() {
           </p>
         </div>
         <div className="registar-2">
-          <p className="AD-sub">Honors</p>
-          
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Life Member of CSI, ISTE, BMEI.
+         <p className="AD-sub">Academic Qualifications</p>
+         <p>
+           <img src={tick} alt="Icon" className="AD-icon" /> Ph.D., Computer Science & Engineering, JNTUH, Hyderabad.
           </p>
           <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> BOS Chairperson, for CSE & IT Departments-JNTUGV- Vizianagaram.
+            <img src={tick} alt="Icon" className="AD-icon" /> M.Tech., Computer Science & Engineering, Andhra University.
           </p>
           <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> BOS Chairperson, for Emerging Courses, JNTUK.
+            <img src={tick} alt="Icon" className="AD-icon" /> B.E. Electronics , SRKR College of Engineering, Bhimavaram, Andhra Pradesh.
           </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Regional Coordinator for Andhra Pradesh State Level Police Recruitment Board, A. P.
-          </p>
-         
         </div>
         <div className="registar-3">
           <p className="AD-sub">Academic Excellence</p>
@@ -166,6 +161,22 @@ Web Applications Built with Java Script - Part of the book series: Intelligent S
 Reference
           </p>
         
+        </div>
+        <div className="registar-7">
+        <p className="AD-sub">Honors</p>
+          
+          <p>
+            <img src={tick} alt="Icon" className="AD-icon" /> Life Member of CSI, ISTE, BMEI.
+          </p>
+          <p>
+            <img src={tick} alt="Icon" className="AD-icon" /> BOS Chairperson, for CSE & IT Departments-JNTUGV- Vizianagaram.
+          </p>
+          <p>
+            <img src={tick} alt="Icon" className="AD-icon" /> BOS Chairperson, for Emerging Courses, JNTUK.
+          </p>
+          <p>
+            <img src={tick} alt="Icon" className="AD-icon" /> Regional Coordinator for Andhra Pradesh State Level Police Recruitment Board, A. P.
+          </p>
         </div>
         </div>
       </div>
