@@ -70,12 +70,7 @@
   margin-bottom: 10px; /* Add space between paragraphs */
 }
 
-.ADsub {
-  text-decoration: underline;
-  color: rgb(14, 14, 174);
-  font-size: 17px;
-  font-weight: bold;
-}
+
 
 .ADhr {
   border: 1px solid #ccc;

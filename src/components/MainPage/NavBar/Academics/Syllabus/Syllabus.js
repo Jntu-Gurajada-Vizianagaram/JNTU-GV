@@ -39,92 +39,105 @@ const data = {
           pdfLink:
             "https://drive.google.com/file/d/1_rRYo1S76dmS11CYI1vA_w3FyWh6iEq7/view?usp=drive_link",
         },
-       
-        
+
         {
           sno: 4,
           branch: "Mechanical Engineering",
           pdfLink:
             "https://drive.google.com/file/d/1L6q2UbCFpt_52UAUT2i2EbPddS6cuaeH/view?usp=drive_link",
         },
+
         // {
         //   sno: 5,
         //   branch: "Computer Science and Engineering (Internet of Things)",
         //   pdfLink:
         //     "https://drive.google.com/file/d/1JDY5M4GK_NUb8MKIWi07BJuonQwKXFr4/view?usp=drive_link",
         // },
+
         {
           sno: 5,
           branch: "Artificial Intelligence & Machine Learning",
           pdfLink:
             "https://api.jntugv.edu.in/media/JNTUGV-UG-B.Tech.-AI&ML-_R23_Regulations.pdf",
         },
+
         {
           sno: 6,
           branch: "Artificial Intelligence & Data Science",
           pdfLink:
             "https://api.jntugv.edu.in/media/JNTUGV-UG-B.Tech.-AI&DS-_R23_Regulations.pdf",
         },
+
         {
           sno: 7,
           branch: "Computer Science and Engineering (Data Science)",
           pdfLink:
             "https://drive.google.com/file/d/1OjbXp6GrzQ0Rk8AZMV0Xji-_XqBPExd4/view?usp=sharing",
         },
+
         {
           sno:8,
           branch: "Computer Science and Engineering (AI&DS)",
           pdfLink:
           "https://api.jntugv.edu.in/media/JNTUGV-UG-B.Tech.-AI&DS-_R23_Regulations.pd"
         },
+
         // {
         //   sno: 9,
         //   branch: "Computer Science and Engineering (IOT and Cyber security including BCT)",
         //   pdfLink:
         //     "https://drive.google.com/file/d/1gsdaPVZ0iPD8vBHAvNk4YE6f6RuQo8Tr/view?usp=drive_link",
         // },
+
         {
           sno: 9,
           branch: "Computer Science and Engineering (Cyber security)",
           pdfLink:
             "https://drive.google.com/file/d/1rInHyz4Y0Jv34NIqgQTiml-nDPLzxx6S/view?usp=drive_link",
         },
+
         {
           sno: 10,
           branch: "Computer Science and Engineering (Artificial Intelligence & Machine Learning)",
           pdfLink:
             "https://api.jntugv.edu.in/media/JNTUGV-UG-B.Tech.-CSE(AI&ML)-_R23_Regulations.pdf",
         },
+
         {
           sno: 11,
           branch: "Computer Science and Engineering",
           pdfLink:
             "https://drive.google.com/file/d/1ZE-YD-by4-nM5JaD5fA-c_YBzbW6bCbd/view?usp=drive_link",
         },
+
         {
           sno: 12,
           branch: "Information Technology",
           pdfLink:
             "https://drive.google.com/file/d/1HeLmB5gohd1Zohz4HVjWBnH2DKIkfb_v/view?usp=drive_link",
         },
+
         {
           sno: 13,
           branch: "Artificial Intelligence",
           pdfLink:
             "https://drive.google.com/file/d/1tTQi0bppS1EL_y9IB44Dg3KTpABtxqpO/view?usp=sharing",
         },
+
         {
           sno:14,
           branch:"Computer Science and Engineering (Artificial Intelligrnce)",
           pdfLink:
             "https://drive.google.com/file/d/1tTQi0bppS1EL_y9IB44Dg3KTpABtxqpO/view?usp=sharing"
         },
+
         {
           sno: 15,
           branch: "Automobile Engineering",
           pdfLink:
             "https://drive.google.com/file/d/12m_-2ACbpDfOpNhJzxbrP9roPdTuO7Dv/view?usp=sharing",
         },
+        
       ],
     },
   },

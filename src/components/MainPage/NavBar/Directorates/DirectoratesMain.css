@@ -70,6 +70,12 @@
   border-radius: 5%; /* Makes the image circular */
   object-fit: cover;
 }
+.ADsub {
+  text-decoration: underline;
+  color: rgb(14, 14, 174);
+  font-size: 17px;
+  font-weight: bold;
+}
 @media screen and (max-width: 600px) {
   .AD-Main-DM {
     display: flex;

@@ -38,7 +38,7 @@ function Controller1() {
           <p>She has published 30+ International Journals and attended 21 International and National Conferences. She has published 4 books and got research project under RUSA 2.0 of worth 10 lakhs from 01-06-2024 to 31-5-2026.She was acted as CAD/CAM Text Book reviewer for Oxford International Press.</p>
           <p>She got UNIVERSITY MERITORIOUS TEACHER AWARD FOR MECHANICAL ENGINEERING DEPARTMENT  in September 2022.</p>
            <br/>
-           <h5>Positions Held/Handling</h5>
+           <h5 className="ADsub">Positions Held/Handling</h5>
            <p>Serving as Officer –In charge of Library ,JNTUGV-College of Engineering Vizianagaram (A) </p>
             <p>Served as Head of the Mechanical Engineering from 04-08-2022 to 05-08-2024</p>
             <p>Served as I/c Head of the Mechanical Engineering from 21-12-2018 to 03-08-2022</p>
