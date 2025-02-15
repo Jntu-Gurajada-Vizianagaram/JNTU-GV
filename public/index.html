@@ -34,7 +34,25 @@
     gtag('config', 'G-C7DF0JF0L1', {
         'allowLinker': false  // Disable appending URL parameters for cross-domain tracking
     }); -->
-</script>
+  
+<!-- </script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    // Initializing Google Analytics with 'allowLinker' set to false
+    gtag('config', 'G-C7DF0JF0L1', {
+        'allowLinker': false,  // Disable appending URL parameters for cross-domain tracking
+        'send_page_view': false  // Disable sending page view hits
+    });
+
+    // Manually send page view hits if needed
+    gtag('event', 'page_view', {
+        'page_location': window.location.href,
+        'page_path': window.location.pathname,
+        'page_title': document.title
+    });
 </head>
 
 <body>
