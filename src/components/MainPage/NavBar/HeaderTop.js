@@ -35,7 +35,7 @@ const NavBar = () => {
     { "icon":null, "name": `Ideaclub`, "path": "https://ideaclub.jntugv.edu.in" },
     {"icon":null, "name": `GreenCampus`, "path": "https://greencampus.jntugv.edu.in"},
     {"icon":null, "name": `MoUs`, "path": "https://mou.jntugv.edu.in"},
-
+    {"icon":null, "name": `Events`, "path": "https://events.jntugv.edu.in"},
     
   ]
 
@@ -62,10 +62,13 @@ const NavBar = () => {
           .custom-navbar .nav-link {
            font-size: 0.9rem;/* Default size */
           }
+
           @media (max-width: 768px) {
             .custom-navbar .nav-link {
               font-size: 0.8rem; /* Smaller size for tablets */
             }
+              .topnavbar{
+              display:none;}
           }
           @media (max-width: 576px) {
             .custom-navbar .nav-link {
