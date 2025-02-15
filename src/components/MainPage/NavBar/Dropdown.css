@@ -86,8 +86,12 @@ button:hover {
   display: none;
 }
 .bigSearch{
-  margin-left: 8rem;
+  margin-left: 6rem;
 }
+.quick-links-hidden {
+  display: none;
+}
+
 
 @media screen and (max-width: 1010px) {
   .menu-icon {
@@ -143,6 +147,9 @@ button:hover {
 
   .dropbtn {
     width: 100%;
+  }
+  .quick-links-hidden {
+    display: block;
   }
 }
 @media screen and (max-width: 767px){
