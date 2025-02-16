@@ -141,7 +141,7 @@ const NavBar = () => {
     {
       icon: <LinkIcon />,
       className: "quick-links-hidden",
-      label: " Quick Links",
+      label: " QUICK LINKS",
       path: "/quicklinks",
       subItems: [
         {
