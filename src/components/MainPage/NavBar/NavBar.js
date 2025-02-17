@@ -12,7 +12,7 @@ import {
 } from "@mui/icons-material";
 import "./Dropdown.css";
 import Search from "./Search/Search";
-
+import LinkIcon from '@mui/icons-material/Link';
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -137,6 +137,42 @@ const NavBar = () => {
       label: " CONTACT US",
       path: "/contact-us",
     },
+
+    {
+      icon: <LinkIcon />,
+      className: "quick-links-hidden",
+      label: " QUICK LINKS",
+      path: "/quicklinks",
+      subItems: [
+        {
+          label: "Anti-Ragging",
+          path: "/anti-ragging/about",
+        },
+        {
+          label: "Ideaclub",
+          path: "https://ideaclub.jntugv.edu.in",
+        },
+        {
+          label: "GreenCampus",
+          path: "https://greencampus.jntugv.edu.in",
+        },
+        {
+          label: "MoUs",
+          path: "https://mou.jntugv.edu.in",
+        },
+        {
+          label: "Events",
+          path: "https://events.jntugv.edu.in",
+        },
+        // External link
+        // Add more sub-items as needed
+      ],
+    },
+
+
+
+
+
     // Add more dropdown items as needed
   ];
 
@@ -170,7 +206,7 @@ const NavBar = () => {
       </div>
       <div className={menuState ? "menu-on-options" : "menu-off-options"}>
         {dropdownItems.map((item, index) => (
-          <div key={index} className="dropdown">
+          <div key={index} className={`dropdown ${item.className || ""}`}>
             <div className="dropbtn">
               {item.subItems ? (
                 <div className="drop-icon d-flex align-items-center">
