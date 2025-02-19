@@ -1,5 +1,5 @@
 import React from 'react';
-import Controller3i from "../../../../assets/ExaminationImages/Controller3i.jpg";
+import Controller3i from "../../../../assets/ExaminationImages/ACE3.jpg";
 import './Examinations.css'; 
 
 function Controller3() {
@@ -21,7 +21,7 @@ function Controller3() {
         
           </div>
           <div className="profileName">
-            <h3>Mr. N Venkatesh</h3>
+            <h3>Mr.D D V Sivaram Rolangi</h3>
           </div>
           <div className="profileDesignation">
             <h4 className="regularStyleH4">Additional Controller of Examinations 3</h4><br></br>
@@ -32,9 +32,23 @@ function Controller3() {
           {/* Profile description */}
           <p>Email: ace3@jntugv.edu.in</p>
           <hr />
-          {/* <p>Mr.G.Appala Naidu having a total of 15 years of experience in teaching and research. He worked as Officer in-charge of Examinations, Deputy Warden and presently working as NSS Programme officer and Additional Controller of Examinations.</p>
-          <p>Mr.G.Appala Naidu has published 19 research papers in various international/national journals and conferences. His research area is Analog VLSI.</p> */}
-        </div>
+          <p>Mr.D D V Sivaram Rolangi, currently working as Assistant Professor in Department of Computer Science and Engineering, University College of Engineering Vizianagaram-JNTU-GV, Vizianagaram, completed his B. Tech in Computer Science and Engineering from V R Siddhartha Engineering College, Vijayawada. M.Tech in Information Technology and  currently pursuing his Ph.D under Visveswaraya PhD scheme  from Andhra University College of Engineering , Andhra University, Visakhapatnam.  </p>
+          <p>His areas of interests include Theoretical Computer Science, Compiler technologies, Network programming. He has about 19 years of experience in teaching. His research interests include Machine learning, Computer vision, Deep learning, IoT and Assistive Technologies. </p>
+        
+        <p className="ADsub">Additional Roles carried out so far :</p>
+<p>❖ Network & systems coordinator.</p>
+<p>❖ Deputy Warden. </p>
+<p>❖ Training & Placement Officer (TPO).</p>
+<p>❖ Officer In charge of Hostels (OIH).</p>
+
+
+
+<p className="ADsub">Present administrative roles: </p>
+<p>❖ Dispensary Coordinator </p>
+<p>❖ Public Relations Officer(PRO) of JNTUGV </p>
+<p>❖ Additional Controller of Examinations -III ( ACE-3)</p>
+
+</div>
       </div>
     </div>
   );

@@ -78,6 +78,7 @@ import AboutUS from "./components/MainPage/NavBar/AntiRagging/AboutUS/AboutUs"
 import PrivacyPolicy from "./components/MainPage/Footer/PrivacyPolicy";
 import HeaderTop from "./components/MainPage/NavBar/HeaderTop";
 import Sitemap from "./components/MainPage/NavBar/Sitemap";
+import Chatbot from "./components/MainPage/Chatbot/Chatbot";
 function App() {
   return (
     <div>
@@ -185,6 +186,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />}></Route>
 
       </Routes>
+      <Chatbot/>
       <Footer />
     </div>
   );
