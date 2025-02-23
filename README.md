@@ -30,7 +30,7 @@ Thank you for your interest and support!
 
 ## Developers:
 Lead Developers: 
-Haneesh Bandaru (@haneesh)
+Haneesh Bandaru [@haneesh]
 Harsha Vivek (@harsha)
 
 Co-Developers:
