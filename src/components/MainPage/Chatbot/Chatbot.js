@@ -52,13 +52,14 @@ const Chatbot = () => {
           }}
           className="chatbot-popup"
         >
-          <iframe 
+        <iframe 
             src="https://copilotstudio.microsoft.com/environments/Default-b840b537-3a4c-43e1-8f92-1a2e4e4246e7/bots/cr56d_agent1/webchat?_version_=2"
             frameBorder="0"
             style={{
               width: '100%',
               height: '100%'
             }}
+            title="GVtron" // Added title for accessibility
           />
         </div>
       )}
