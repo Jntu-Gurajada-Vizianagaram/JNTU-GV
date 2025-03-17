@@ -48,7 +48,7 @@ const Chatbot = () => {
             borderRadius: "10px",
             boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
             overflow: "hidden",
-            zIndex: 999, // Ensures it stays on top
+            zIndex: 999999, // Ensures it stays on top
           }}
           className="chatbot-popup"
         >

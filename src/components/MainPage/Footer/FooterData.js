@@ -142,5 +142,9 @@ export const Others = [
   {
       title: "Ombudsman",
       link:"https://drive.google.com/file/d/15riRLxVtiJOrtLiYWmh7kvIQlTLV7Ocl/view?usp=sharing"
-  }
+  },
+  {
+    title: "RTI",
+    link:"https://rti.jntugv.edu.in",
+}
 ]
