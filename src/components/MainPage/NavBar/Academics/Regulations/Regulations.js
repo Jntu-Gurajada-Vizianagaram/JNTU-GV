@@ -24,6 +24,12 @@ const data = {
       pdfLink: "https://api.jntugv.edu.in/media/JNTUGV-UG-BBA.-%20R24%20Regulations%20.pdf"
     }
     ],
+    "PG": [
+    {
+      Title: "R24 Regulation for MBA",
+      pdfLink: "https://api.jntugv.edu.in/media/R24%20MBA%20Regulations.pdf"
+    }
+    ],
 
     "Ph.D": [
     {
