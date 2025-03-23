@@ -79,6 +79,7 @@ import PrivacyPolicy from "./components/MainPage/Footer/PrivacyPolicy";
 import HeaderTop from "./components/MainPage/NavBar/HeaderTop";
 import Sitemap from "./components/MainPage/NavBar/Sitemap";
 import Chatbot from "./components/MainPage/Chatbot/Chatbot";
+
 function App() {
   return (
     <div>
