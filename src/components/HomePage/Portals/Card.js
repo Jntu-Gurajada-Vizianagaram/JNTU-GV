@@ -25,7 +25,7 @@ const Card = ({ title, image, link }) => {
                 </div>
                 <p className="card-footer">
                   <a href={link}>
-                    <button type="button" className="btn btn-dark">Visit Here</button>
+                    <button type="button" className="btn">Visit Here</button>
                   </a>
                 </p>
               </div>
@@ -95,8 +95,8 @@ const StyledWrapper = styled.div`
 
   .back-content {
     position: absolute;
-    width: 98%;
-    height: 98%;
+    width: 97%;
+    height: 99%;
     background-color: #151515;
     border-radius: 5px;
     color: white;
@@ -116,11 +116,11 @@ const StyledWrapper = styled.div`
   }
 
   .back-content img {
-    width: 100%; /* Ensure the image takes full width */
-    height: 100%; /* Ensure the image takes full height */
-    object-fit: cover; /* Prevent distortion and ensure the image covers the area */
-    object-position: center; /* Center the image */
-    border-radius: 5px; /* Match the card's border radius */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
   }
 
   .card:hover .content {
@@ -226,6 +226,31 @@ const StyledWrapper = styled.div`
 
     @media (max-width: 480px) {
       font-size: 6px;
+    }
+  }
+
+  .btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #333;
+    }
+
+    @media (max-width: 768px) {
+      padding: 6px 12px;
+      font-size: 10px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 4px 8px;
+      font-size: 8px;
     }
   }
 
