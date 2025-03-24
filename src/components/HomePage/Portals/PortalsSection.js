@@ -3,47 +3,48 @@ import styled from 'styled-components';
 import Card from './Card';
 
 const websiteData = [
+ 
   {
     "id": 1,
-    "title": "Directorate of Academic Audit Cell",
-    "image": "DAA.jpg",
-    "link": "https://daa.jntugv.edu.in/"
-  },
-  {
-    "id": 2,
     "title": "Directorate of Academic Planning",
     "image": "DAP.jpg",
     "link": "https://dap.jntugv.edu.in/"
   },
   {
+    "id": 2,
+    "title": "Directorate of Academic Audit Cell",
+    "image": "DAA.jpg",
+    "link": "https://daa.jntugv.edu.in/"
+  },
+  {
     "id": 3,
+    "title": "JNTUGV Examination Results",
+    "image": "RESULTS.jpg",
+    "link": "https://exams.jntugv.edu.in/results"
+  },
+  {
+    "id": 4,
     "title": "Directorate of Industrial Relations and Placements",
     "image": "DIRP.jpg",
     "link": "https://dirp.jntugv.edu.in/"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Directorate Research & Development",
     "image": "DRD.jpg",
     "link": "https://drd.jntugv.edu.in/"
   },
   {
-    "id": 5,
-    "title": "National Service Scheme",
-    "image": "NSS.jpg",
-    "link": "https://nss.jntugv.edu.in/"
-  },
-  {
     "id": 6,
-    "title": "Digital Monitoring Cell",
-    "image": "DMC.jpg",
-    "link": "https://dmc.jntugv.edu.in/"
-  },
-  {
-    "id": 7,
     "title": "Internal Quality Assurance Cell",
     "image": "IQAC.jpg",
     "link": "https://iqac.jntugv.edu.in/"
+  },
+  {
+    "id": 7,
+    "title": "National Service Scheme",
+    "image": "NSS.jpg",
+    "link": "https://nss.jntugv.edu.in/"
   },
   {
     "id": 8,
@@ -53,10 +54,13 @@ const websiteData = [
   },
   {
     "id": 9,
-    "title": "JNTUGV Examination Results",
-    "image": "RESULTS.jpg",
-    "link": "https://exams.jntugv.edu.in/results"
+    "title": "Digital Monitoring Cell",
+    "image": "DMC.jpg",
+    "link": "https://dmc.jntugv.edu.in/"
   },
+ 
+
+  
 ];
 
 const Portals = () => {
