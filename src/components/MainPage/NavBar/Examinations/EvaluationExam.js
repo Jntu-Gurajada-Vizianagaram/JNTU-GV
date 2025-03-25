@@ -10,7 +10,7 @@ function EvaluationExam() {
       </div>
       <div className="allRightContent">
         <div className="allRightContentHeading">
-          Director of Evaluation
+          Director of Evaluation (i/c)
         </div>
         <br></br>
         <div className="allRightContentProfile">
@@ -25,7 +25,7 @@ function EvaluationExam() {
             <h3>Dr. K. Babulu</h3>
           </div>
           <div className="profileDesignation">
-            <h4 className="regularStyleH4">Director of Evaluation</h4><br></br>
+            <h4 className="regularStyleH4">Director of Evaluation (i/c)</h4><br></br>
             <h3>              Professor of Dept. of Electronics and Communications Engineering            </h3>
           </div>
           </center>

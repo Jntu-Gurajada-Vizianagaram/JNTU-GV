@@ -31,6 +31,7 @@ function Controller() {
           <hr />
           {/* Profile description */}
           <p>Email: ce@jntugv.edu.in</p>
+          <p>Phone: 08922 294997</p>
           <hr />
           <p>Dr. R. Gurunadha, an esteemed Associate Professor in the Department of Electronics & Communication Engineering (ECE) at JNTU-GV, CEV, Vizianagaram, is a distinguished academic and researcher with a rich background in engineering and technology. With his extensive experience and contributions to the field, he has become a pivotal figure in shaping the future of electronics and communication engineering education and research.</p>
           <h6 className="ADsub">Educational Background:</h6> <p>

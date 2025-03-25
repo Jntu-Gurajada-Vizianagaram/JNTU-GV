@@ -140,6 +140,18 @@ const data = {
         
       ],
     },
+
+    R24:{
+      PG: [
+        {
+          sno: 1,
+          branch: "MASTER OF BUSINESS ADMINISTRATION ",
+          pdfLink:
+            "https://api.jntugv.edu.in/media/R24%20MBA%20Syllabus.pdf",
+        },
+      ]
+
+    }
   },
 };
 

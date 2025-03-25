@@ -10,6 +10,7 @@ import NewsAndEvents from "./NewsAndEvents/NewsAndEvents";
 import UpdatePanel from "../UpdatePanel/UpdatePanel";
 import Gallery from "../Gallery/Gallery";
 import Youtube from "./Youtube/Youtube";
+import Portals from "./Portals/PortalsSection";
 
 function Homepage() {
   return (
@@ -18,8 +19,12 @@ function Homepage() {
       <AboutUs />
       {/* <Scrollbar className="update-panel"/> */}
       <UpdatePanel className="update-panel" />
+      <Portals/>
       <NewsAndEvents />
+
+     
       <Youtube/>
+       
       <Gallery />
       <br />
     </div>
@@ -27,3 +32,7 @@ function Homepage() {
 }
 
 export default Homepage;
+
+
+
+
