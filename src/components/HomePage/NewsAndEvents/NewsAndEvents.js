@@ -4,7 +4,7 @@ import ImageModal from "./ImageModal";
 import "./NewsandEvent.css";
 
 const NewsAndEvents = () => {
-  const [evenImages, setEvenImages] = useState([]);
+  const [latestEvents, setLatestEvents] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedDescription, setSelectedDescription] = useState('');
@@ -14,17 +14,26 @@ const NewsAndEvents = () => {
       try {
         const response = await fetch("https://api.jntugv.edu.in/api/gallery/all-gallery-images");
         const data = await response.json();
-        
-        // Extract images from all events
-        const evenImages = data
-        .filter(photo => photo.id % 2 === 0)
-        .map(photo => ({
-          image: photo.imagelink,
-          description: photo.description,
-        }))
-        .reverse();
-      
-        setEvenImages(evenImages.slice(-6));
+
+        // Step 1: Sort by ID in descending order (most recent first)
+        const sortedData = data.sort((a, b) => b.id - a.id);
+
+        // Step 2: Filter only even IDs and unique descriptions
+        const seenDescriptions = new Set();
+        const uniqueEvents = [];
+
+        for (const photo of sortedData) {
+          if (photo.id % 2 === 0 && !seenDescriptions.has(photo.description)) {
+            seenDescriptions.add(photo.description);
+            uniqueEvents.push({
+              image: photo.imagelink,
+              description: photo.description,
+            });
+          }
+          if (uniqueEvents.length >= 6) break; // Limit to 6 recent events
+        }
+
+        setLatestEvents(uniqueEvents);
       } catch (error) {
         console.error("Failed to fetch images:", error);
       }
@@ -47,24 +56,23 @@ const NewsAndEvents = () => {
 
   return (
     <div className="news-and-events">
-      <h1> Latest News and Events</h1>
+      <h1>Latest News and Events</h1>
       <div className="news-and-events-display">
-        {evenImages.map((image,index) => (
+        {latestEvents.map((item, index) => (
           <div key={index} className="news-and-events-container">
             <img
-              src={image.image}
-              alt={`JNTUGV ${image.description}`}
-              height="250px"
-              width="300px"
-              onClick={() => handleShowModal(image.image, image.description)}
+              src={item.image}
+              alt={`JNTUGV ${item.description}`}
+              onClick={() => handleShowModal(item.image, item.description)}
               style={{ cursor: 'pointer' }}
             />
             <div className="desc-cont">
-              <div className="desc-container">{image.description}</div>
+              <div className="desc-container">{item.description}</div>
             </div>
           </div>
-          ))}
+        ))}
       </div>
+
       <ImageModal
         show={showModal}
         handleClose={handleCloseModal}

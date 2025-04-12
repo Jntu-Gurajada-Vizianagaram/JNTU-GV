@@ -1,39 +1,133 @@
-import { Container, Grid } from '@mui/material'; // Using Material-UI components
-import React from 'react';
-import './Youtube.css'; // Import the CSS file
+import React, { useState } from 'react';
+import Slider from 'react-slick';
+import './Youtube.css' 
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  Dialog,
+  DialogContent,
+  Box
+} from '@mui/material';
 
-const Youtube = () => {
+const videos = [
+  {
+    id: 'NVZ9koF6pFY',
+    title: 'JNTU-GV CEV Autonomous Sports Day 2025 (Part 1)',
+    
+  },
+  {
+    id: '_5WjFlrbrZU',
+    title: 'JNTU-GV CEV Autonomous Sports Day 2025 (Part 2)',
+   
+  },
+  {
+    id: 'hRNQfUUPV5c',
+    title: 'JNTU-GV CEV Annual Day Event (Part 3)04-04-2025',
+
+  },
+  {
+    id: 'mCINzWh3AF4',
+    title: 'JNTU-GV CEV Annual Day Event (Part 2) 04-04-2025',
+    
+  },
+  {
+    id: '9o75Bv05MJs',
+    title: 'JNTU-GV CEV Annual Day Event (Part 1) 04-04-2025',
+
+  },
+  {
+    id: 'fxgVpqB43yE',
+    title: 'Motivational Session by Sri VV Lakshmi Narayana (JD) CBI X (JD)',
+  },
+   {
+    id: 'qMmk5l2kjeE',
+    title: "Hon'ble Vice-Chancellor's (i/c) Speech on Republic Day (JNTUGV)",
+  },
+  {
+    id: '4HOC6P8N28Q',
+    title: "Jawaharlal Nehru Technological University - Gurajada Vizianagaram Drone View",
+  },
+];
+
+const YouTubeCarousel = () => {
+  const [open, setOpen] = useState(false);
+  const [activeVideo, setActiveVideo] = useState(null);
+
+  const handleOpen = (videoId) => {
+    setActiveVideo(videoId);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setActiveVideo(null);
+  };
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 600,
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  };
+
   return (
-    <Container className="youtube-container">
-      <Grid container spacing={4} justifyContent="center">
-        {/* First YouTube Live Video */}
-        <Grid item xs={12} sm={6}>
-          <div className="youtube-video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/qMmk5l2kjeE?si=MdR76d27y7OIkcO6" title="YouTube video player" 
-          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-           referrerpolicy="strict-origin-when-cross-origin" 
-           allowfullscreen
-           ></iframe> </div>
-        </Grid>
+    <Box sx={{ px: 3, py: 5 }}>
 
-        {/* Second YouTube Live Video */}
-        <Grid item xs={12} sm={6}>
-          <div className="youtube-video">
-            <iframe
+      <h1 className='heading'>Univeristy Youtube Channel</h1>
+
+      <Slider {...settings}>
+        {videos.map((video, index) => (
+          <Box key={index} px={1}>
+            <Card onClick={() => handleOpen(video.id)} sx={{ cursor: 'pointer', height: '100%' }}>
+              <CardMedia
+                component="img"
+                height="200"
+                image={`https://img.youtube.com/vi/${video.id}/0.jpg`}
+                alt={video.title}
+              />
+              <CardContent>
+                <Typography variant="h6">{video.title}</Typography>
+                <Typography variant="body2" color="text.secondary">
+                  
+                </Typography>
+              </CardContent>
+            </Card>
+          </Box>
+        ))}
+      </Slider>
+
+      <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
+        <DialogContent sx={{ p: 0 }}>
+          {activeVideo && (
+            <Box
+              component="iframe"
               width="100%"
-              height="315"
-              src="https://www.youtube.com/embed/4HOC6P8N28Q?si=X9TOjU5v3G4tZbdZ"
-              title="YouTube live video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
+              height="60vh"
+              src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-            ></iframe>
-          </div>
-        </Grid>
-      </Grid>
-    </Container>
+            />
+          )}
+        </DialogContent>
+      </Dialog>
+    </Box>
   );
 };
 
-export default Youtube;
+export default YouTubeCarousel;

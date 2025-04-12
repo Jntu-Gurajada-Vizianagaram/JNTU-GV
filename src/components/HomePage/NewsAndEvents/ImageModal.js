@@ -7,7 +7,7 @@ const ImageModal = ({ show, handleClose, imageSrc, imageDescription }) => (
       <Modal.Title>{imageDescription}</Modal.Title>
     </Modal.Header>
     <Modal.Body>
-      <img src={imageSrc} alt={imageDescription} style={{ width: '100%' }} />
+      <img src={imageSrc} alt={imageDescription} style={{ width: '100%', borderRadius: '10px' }} />
     </Modal.Body>
     <Modal.Footer>
       <Button variant="secondary" onClick={handleClose}>
