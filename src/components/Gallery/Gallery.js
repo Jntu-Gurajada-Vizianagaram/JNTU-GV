@@ -14,15 +14,14 @@ function Gallery() {
       try {
         const response = await fetch("https://api.jntugv.edu.in/api/gallery/all-gallery-images");
         const data = await response.json();
-        console.log(data);
 
-        // Extract images from all events and limit to first 10
-        const allImages = data.slice(0, 15).map(photo => ({
-            image: photo.imagelink,
-            description: photo.description,
-          }));
-        
-        setImages(allImages);  // Set the images state with the first 10 images
+        // Duplicate to simulate continuous scroll
+        const allImages = data.slice(0, 20).map(photo => ({
+          image: photo.imagelink,
+          description: photo.description,
+        }));
+        const duplicated = [...allImages, ...allImages];
+        setImages(duplicated);
       } catch (error) {
         console.error("Failed to fetch images:", error);
       }
@@ -46,19 +45,24 @@ function Gallery() {
   return (
     <div className="gallery-container">
       <h1 className="gallery-heading">Gallery</h1>
+
       <div className="image-gallery">
-        <div className="image-scroll">
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image.image}
-              alt={`JNTUGV ${image.description}`}
-              onClick={() => handleShowModal(image.image, image.description)}
-              className="gallery-image"
-              loading="lazy"
-            />
-          ))}
-        </div>
+      <div className="image-scroll">
+  {images.map((image, index) => (
+    <div
+      key={index}
+      className="gallery-image-wrapper"
+      onClick={() => handleShowModal(image.image, image.description)}
+    >
+      <img
+        src={image.image}
+        alt={`JNTUGV ${image.description}`}
+        className="gallery-image"
+        loading="lazy"
+      />
+    </div>
+  ))}
+</div>
       </div>
 
       <ImageModal
@@ -68,14 +72,7 @@ function Gallery() {
         imageDescription={selectedDescription}
       />
 
-      {/* Hyperlink at the bottom right corner */}
-      <Link
-        to="/gallery" // Replace with your desired link
-        rel="noopener noreferrer"
-        style={{
-          color: "#ffffff", // White text color
-        }}
-      >
+      <Link to="/gallery" className="show-all-link">
         Show All
       </Link>
     </div>
