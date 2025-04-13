@@ -87,7 +87,14 @@ const YouTubeCarousel = () => {
   return (
     <Box sx={{ px: 3, py: 5 }}>
 
-      <h1 className='heading'>Univeristy Youtube Channel</h1>
+<div className="youtube-logo-wrapper">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+    alt="YouTube"
+    className="youtube-logo-banner"
+  />
+</div>
+
 
       <Slider {...settings}>
         {videos.map((video, index) => (
@@ -101,8 +108,8 @@ const YouTubeCarousel = () => {
               />
               <CardContent>
                 <Typography variant="h6">{video.title}</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  
+                <Typography variant="body2" color="text.secondary">  
+                               
                 </Typography>
               </CardContent>
             </Card>
