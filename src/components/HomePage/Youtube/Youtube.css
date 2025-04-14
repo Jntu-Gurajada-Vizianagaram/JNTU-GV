@@ -1,9 +1,20 @@
-.heading {
-  font-family: "Inter", sans-serif;
-display: flex;
-justify-content: center;
-color: #2e0669;
-margin-top: 0px;
-font-weight: 600; /* Optional: Adjust font size */
-  margin-bottom: 20px; /* Optional: Add margin below the heading */
+.youtube-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.youtube-logo-banner {
+  width: 200px;
+  max-width: 80%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.youtube-logo-banner:hover {
+  transform: scale(1.05);
+}
+.MuiCard-root:hover {
+  transform: translateY(-5px);
 }

@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ImageModal from "../HomePage/NewsAndEvents/ImageModal";
 import "./Gallery.css";
+import CircularProgress from "@mui/material/CircularProgress";
 
 function Gallery() {
   const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedDescription, setSelectedDescription] = useState('');
@@ -14,8 +16,6 @@ function Gallery() {
       try {
         const response = await fetch("https://api.jntugv.edu.in/api/gallery/all-gallery-images");
         const data = await response.json();
-
-        // Duplicate to simulate continuous scroll
         const allImages = data.slice(0, 20).map(photo => ({
           image: photo.imagelink,
           description: photo.description,
@@ -24,6 +24,8 @@ function Gallery() {
         setImages(duplicated);
       } catch (error) {
         console.error("Failed to fetch images:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -46,24 +48,30 @@ function Gallery() {
     <div className="gallery-container">
       <h1 className="gallery-heading">Gallery</h1>
 
-      <div className="image-gallery">
-      <div className="image-scroll">
-  {images.map((image, index) => (
-    <div
-      key={index}
-      className="gallery-image-wrapper"
-      onClick={() => handleShowModal(image.image, image.description)}
-    >
-      <img
-        src={image.image}
-        alt={`JNTUGV ${image.description}`}
-        className="gallery-image"
-        loading="lazy"
-      />
-    </div>
-  ))}
-</div>
-      </div>
+      {loading ? (
+        <div className="spinner-wrapper">
+          <CircularProgress style={{ color: "#00c2ff" }} />
+        </div>
+      ) : (
+        <div className="image-gallery">
+          <div className="image-scroll">
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className="gallery-image-wrapper"
+                onClick={() => handleShowModal(image.image, image.description)}
+              >
+                <img
+                  src={image.image}
+                  alt={`JNTUGV ${image.description}`}
+                  className="gallery-image"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       <ImageModal
         show={showModal}

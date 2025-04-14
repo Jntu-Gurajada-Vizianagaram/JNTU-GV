@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Carousel } from "react-bootstrap";
+import { Carousel, Spinner } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./ImageGallery.css";
 import { Link } from "react-router-dom";
-
 import './TypingEffect.css';
 
 const TypingEffect = () => {
   const [displayedText, setDisplayedText] = useState('');
   const fullText = 'Welcome to JNTU Gurajada, Vizianagaram';
-  const typingSpeed = 100; // Adjust typing speed (milliseconds)
+  const typingSpeed = 100;
 
   useEffect(() => {
     let currentText = '';
@@ -34,10 +33,9 @@ const TypingEffect = () => {
   );
 };
 
-
-
 function ImageGallery() {
   const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -46,21 +44,20 @@ function ImageGallery() {
           "https://api.jntugv.edu.in/api/webadmin/carousel-images"
         );
         const apiData = await response.json();
-        console.log(apiData);
         setImages(apiData);
+        setLoading(false); // Turn off loading after images are fetched
       } catch (err) {
         console.log(err);
+        setLoading(false); // Even on error, turn off loading
       }
     };
     fetchImages();
   }, []);
 
   return (
-   
     <div className="mainDivIG">
       <div className="leftDivGallery">
-        {/* <h2 className="welcome">Welcome to JNTU Gurajada, Vizianagaram</h2> */}
-        <TypingEffect/>
+        <TypingEffect />
         <p>
           At JNTU Gurajada, Vizianagaram, we are dedicated to sculpting minds through innovative teaching, cutting-edge research, and a vibrant community engagement. Our mission is to empower students with a thirst for knowledge that transcends borders.
           <br />
@@ -70,24 +67,31 @@ function ImageGallery() {
           <button type="button" className="btn view-more btn-info">View More</button>
         </Link>
       </div>
-      <div className="mainImageGallery">
-        <Carousel fade>
-        {Array.isArray(images) && images.map((image, index) => (
-  <Carousel.Item key={index}>
-    <img
-      className="ig-image"
-      src={image.imglink}
-      alt={`Slide ${image.description}`}
-    />
-    {image.description !== "NA" && (
-      <Carousel.Caption>
-        <div className="carouselText">{image.description}</div>
-      </Carousel.Caption>
-    )}
-  </Carousel.Item>
-))}
 
-        </Carousel>
+      <div className="mainImageGallery">
+        {loading ? (
+          <div className="spinner-container">
+            <Spinner animation="grow" variant="primary" />
+            <p>Loading images...</p>
+          </div>
+        ) : (
+          <Carousel fade>
+            {Array.isArray(images) && images.map((image, index) => (
+              <Carousel.Item key={index}>
+                <img
+                  className="ig-image"
+                  src={image.imglink}
+                  alt={`Slide ${image.description}`}
+                />
+                {image.description !== "NA" && (
+                  <Carousel.Caption>
+                    <div className="carouselText">{image.description}</div>
+                  </Carousel.Caption>
+                )}
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        )}
       </div>
     </div>
   );
