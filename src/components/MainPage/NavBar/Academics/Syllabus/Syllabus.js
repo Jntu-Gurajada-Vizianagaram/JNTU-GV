@@ -142,6 +142,14 @@ const data = {
     },
 
     R24:{
+      UG: [
+        {
+          sno: 1,
+          branch: "JNTU-GV BBA  & BBA (Honors) full syllabus.pdf ",
+          pdfLink:
+            "https://drive.google.com/file/d/1tlkmDFN_XUCHoKs2bzKcgAXy0wfqQM20/view?usp=sharing",
+        },
+      ],
       PG: [
         {
           sno: 1,
