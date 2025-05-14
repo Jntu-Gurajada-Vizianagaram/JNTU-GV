@@ -23,28 +23,28 @@ const data = {
           sno: 1,
           branch: "Civil Engineering",
           pdfLink:
-            "https://api.jntugv.edu.in/media/B.Tech-R23-CIVIL%20Engineering%20syllabus%2030-7-2024.pdf",
+            "https://drive.google.com/file/d/1QDjfTrwjHj15UGaDTUqzYIpcrt8C18xt/view?usp=sharing",
         },
 
         {
           sno: 2,
           branch: "Electronics and Communication Engineering",
           pdfLink:
-            "https://api.jntugv.edu.in/media/JNTUGV-R23%20ECE%20Syllabus.pdf",
+            "https://drive.google.com/file/d/1YJdaXP-4ywSob7Q3GpBKRlOXeleNi4ny/view?usp=sharing",
         },
         
         {
           sno: 3,
           branch: "Electrical and Electronic Engineering",
           pdfLink:
-            "https://api.jntugv.edu.in/media/B.Tech-R23-EEE%20syllabus%20%2030-07-2024.pdf",
+            "https://drive.google.com/file/d/1_rRYo1S76dmS11CYI1vA_w3FyWh6iEq7/view?usp=drive_link",
         },
 
         {
           sno: 4,
           branch: "Mechanical Engineering",
           pdfLink:
-            "https://api.jntugv.edu.in/media/B.Tech-R23-Mechanical%20Engineering%20Syllabus%2030-7-2024.pdf",
+            "https://drive.google.com/file/d/1L6q2UbCFpt_52UAUT2i2EbPddS6cuaeH/view?usp=drive_link",
         },
 
         // {
@@ -72,14 +72,14 @@ const data = {
           sno: 7,
           branch: "Computer Science and Engineering (Data Science)",
           pdfLink:
-            "https://api.jntugv.edu.in/media/JNTUGV-R23%20CSE(DS)%20Syllabus.pdf",
+            "https://drive.google.com/file/d/1OjbXp6GrzQ0Rk8AZMV0Xji-_XqBPExd4/view?usp=sharing",
         },
 
         {
           sno:8,
           branch: "Computer Science and Engineering (AI&DS)",
           pdfLink:
-          "https://api.jntugv.edu.in/media/JNTUGV-UG-B.Tech.-AI&DS-_R23_Regulations.pdf",
+          "https://api.jntugv.edu.in/media/JNTUGV-UG-B.Tech.-AI&DS-_R23_Regulations.pd"
         },
 
         // {
@@ -93,7 +93,7 @@ const data = {
           sno: 9,
           branch: "Computer Science and Engineering (Cyber security)",
           pdfLink:
-            "https://api.jntugv.edu.in/media/JNTUGV-R23%20CSE(CS)%20Syllabus.pdf",
+            "https://drive.google.com/file/d/1rInHyz4Y0Jv34NIqgQTiml-nDPLzxx6S/view?usp=drive_link",
         },
 
         {
@@ -107,35 +107,35 @@ const data = {
           sno: 11,
           branch: "Computer Science and Engineering",
           pdfLink:
-            "https://api.jntugv.edu.in/media/JNTUGV-R23%20CSE%20Syllabus.pdf",
+            "https://drive.google.com/file/d/1ZE-YD-by4-nM5JaD5fA-c_YBzbW6bCbd/view?usp=drive_link",
         },
 
         {
           sno: 12,
           branch: "Information Technology",
           pdfLink:
-            "https://api.jntugv.edu.in/media/JNTUGV-R23%20IT%20Syllabus.pdf",
+            "https://drive.google.com/file/d/1HeLmB5gohd1Zohz4HVjWBnH2DKIkfb_v/view?usp=drive_link",
         },
 
         {
           sno: 13,
           branch: "Artificial Intelligence",
           pdfLink:
-            "https://api.jntugv.edu.in/media/14.ARTIFICIAL%20INTELLIGENCE%20-R23%20Course%20Strcture%20&%20Syallabus.pdf",
+            "https://drive.google.com/file/d/1tTQi0bppS1EL_y9IB44Dg3KTpABtxqpO/view?usp=sharing",
         },
 
         {
           sno:14,
           branch:"Computer Science and Engineering (Artificial Intelligrnce)",
           pdfLink:
-            "https://api.jntugv.edu.in/media/14.ARTIFICIAL%20INTELLIGENCE%20-R23%20Course%20Strcture%20&%20Syallabus.pdf"
+            "https://drive.google.com/file/d/1tTQi0bppS1EL_y9IB44Dg3KTpABtxqpO/view?usp=sharing"
         },
 
         {
           sno: 15,
           branch: "Automobile Engineering",
           pdfLink:
-            "https://api.jntugv.edu.in/media/15.JNTUGV-UG-B.Tech-R23-Automobile%20Engg%20Syllabus.pdf",
+            "https://drive.google.com/file/d/12m_-2ACbpDfOpNhJzxbrP9roPdTuO7Dv/view?usp=sharing",
         },
         
       ],
