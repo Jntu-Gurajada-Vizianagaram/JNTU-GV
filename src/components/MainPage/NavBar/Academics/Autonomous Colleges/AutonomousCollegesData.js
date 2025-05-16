@@ -63,13 +63,14 @@ export const rowsEngg = [
     "College Type": "Engineering",
     wURL: "https://www.raghuinsttech.com/",
   },
+ 
   {
     SNo: 9,
-    CollegeCode: "81",
-    CollegeName: "Avanthi Inst of Engineering & Technology, Narsipatnam",
-    District: "ANKP",
+    CollegeCode: "Q7",
+    CollegeName: "Avanthi Institute of Engineering & Technology, Bhogapuram",
+    District: "VZM",
     "College Type": "Engineering",
-    wURL: "https://avanthienggcollege.ac.in/",
+    wURL: "http://aietta.ac.in/",
   },
     
 
