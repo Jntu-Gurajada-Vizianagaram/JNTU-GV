@@ -180,14 +180,15 @@ export const rowsEngg = [
     wURL: "https://www.lendi.org/",
     Type: "Permanent",
   },
-  {
+  
+   {
     SNo: 20,
-    CollegeCode: "Q7",
-    CollegeName: "Avanthi Institute of Engineering & Technology,Bhogapuram",
-    District: "VZM",
+    CollegeCode: "81",
+    CollegeName: "Avanthi Inst of Engineering & Technology, Narsipatnam",
+    District: "ANKP",
     "College Type": "Engineering",
-    wURL: "http://aietta.ac.in/",
-    Type: "Permanent",
+    wURL: "https://avanthienggcollege.ac.in/",
+     Type: "Permanent",
   },
   {
     SNo: 21,
@@ -285,6 +286,7 @@ export const rowsPharmacy = [
     wURL: "https://avanthipharma.ac.in/",
     Type: "Temporary",
   },
+  
   {
     SNo: 6,
     CollegeCode: "HH",
