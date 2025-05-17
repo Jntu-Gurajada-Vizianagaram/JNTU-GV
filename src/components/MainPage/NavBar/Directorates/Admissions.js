@@ -1,6 +1,8 @@
 import React from "react";
 import "../Administration/AdminandDirectorates.css"; // Import your CSS file here
+
 import da from "../../../../assets/AdminDirectoratesImages/da.jpg";
+
 
 
 function Admissions() {
@@ -37,7 +39,7 @@ function Admissions() {
         {/* Profile description */}
         <p>Email: da@jntugv.edu.in</p>
         <hr></hr>
-        
+
         <p className="ADsub">Educational Qualifications:</p>
         <p>
           ❖ B.E from Andhra University with Electronics and Communication
@@ -48,7 +50,7 @@ function Admissions() {
           ❖ Ph.D from J.N.T. University, Anantapur in the area of VLSI& Embedded
           System Design.
         </p>
-        
+
         <p className="ADsub">Industrial Experience:</p>
         <p>
           ❖ “Engineer Trainee” in Vijaya Electronics Pvt.Ltd, Hyderabad for a
@@ -58,7 +60,7 @@ function Admissions() {
           ❖ “Instrumentation Engineer” in Andhra Paper Mills Ltd. Rajahmundry
           for a period of 6 Months.
         </p>
-        
+
         <p className="ADsub">Teaching Experience:</p>
         <p>
           ❖ “Lecturer in the Department of ECE”, at NBKR Institute of Science &
@@ -93,12 +95,12 @@ function Admissions() {
           ❖ Working as “Professor in the Department of ECE”, at JNTU-GV College
           of Engineering (CEV), Vizianagaram since January 2022.
         </p>
-        
+
         <p className="ADsub">Memberships:</p>
         <p>❖ Life Member of ISTE.</p>
         <p>❖ Fellow of IETE (F235351).</p>
         <p>❖ Fellow of IE (F1184004).</p>
-        
+
         <p className="ADsub">Administrative Responsibilities:</p>
         <p>
           ❖ Director, Director Research & Development and Admissions (i/c),
@@ -149,17 +151,17 @@ function Admissions() {
           ❖ Executive Member for ISTE Student chapter at NBKR Institute of
           Science & Technology, Vidyanagar.
         </p>
-        
+
         <p className="ADsub">List of Publications:</p>
         <p>❖ International Journals: 47.</p>
         <p>❖ National Journals: 02</p>
         <p>❖ International Conferences : 31</p>
         <p>❖ National Conferences : 14</p>
-        
+
         <p className="ADsub">Ph.D s:</p>
         <p>❖ Number of Ph.D s Awarded: 05.</p>
         <p>❖ Number of Ph.D Scholars Pursing: 08.</p>
-        
+
         <p className="ADsub">Others:</p>
         <p>❖ AWARDS: 05.</p>
         <p>❖ SHORT TERM TRAINING PROGRAMS (STTP) ATTEND: 03.</p>
@@ -168,6 +170,7 @@ function Admissions() {
         <p>❖ CONFERENCES/TRAINING PROGRAMMES/ WORKSHOPS CONDUCTED: 11.</p>
         <p>❖ RESOURCE PERSON: 10.</p>
         <p>❖ CHAIR PERSON: 01.</p>
+        
       </div>
     </div>
   );

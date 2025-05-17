@@ -1,6 +1,8 @@
 import React from 'react';
 import './Examinations.css'; 
+
 import doe from "../../../../assets/AdminDirectoratesImages/da.jpg";
+
 
 
 function EvaluationExam() {
@@ -10,7 +12,7 @@ function EvaluationExam() {
       </div>
       <div className="allRightContent">
         <div className="allRightContentHeading">
-          Director of Evaluation (i/c)
+          Director of Evaluation
         </div>
         <br></br>
         <div className="allRightContentProfile">
@@ -25,8 +27,8 @@ function EvaluationExam() {
             <h3>Dr. K. Babulu</h3>
           </div>
           <div className="profileDesignation">
-            <h4 className="regularStyleH4">Director of Evaluation (i/c)</h4><br></br>
-            <h3>              Professor of Dept. of Electronics and Communications Engineering            </h3>
+            <h4 className="regularStyleH4">Director of Evaluation</h4><br></br>
+            <h3>        Professor of Dept. of Electronics and Communications Engineering           </h3>
           </div>
           </center>
           <hr />
@@ -34,7 +36,9 @@ function EvaluationExam() {
           <p>Email: de@jntugv.edu.in</p>
           <hr />
           <hr></hr>
-          <p className="ADsub">Educational Qualifications:</p>
+
+
+        <p className="ADsub">Educational Qualifications:</p>
         <p>
           ❖ B.E from Andhra University with Electronics and Communication
           Engineering.
@@ -163,7 +167,8 @@ function EvaluationExam() {
         <p>❖ REFRESHER COURSE/TRAINING PROGRAMMES ATTENED: 04.</p>
         <p>❖ CONFERENCES/TRAINING PROGRAMMES/ WORKSHOPS CONDUCTED: 11.</p>
         <p>❖ RESOURCE PERSON: 10.</p>
-        <p>❖ CHAIR PERSON: 01.</p>  </div>
+        <p>❖ CHAIR PERSON: 01.</p>
+  </div>
       </div>
     </div>
   );
