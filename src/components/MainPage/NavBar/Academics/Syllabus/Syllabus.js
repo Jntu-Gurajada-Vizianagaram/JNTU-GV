@@ -142,6 +142,13 @@ const data = {
     },
 
     R24:{
+      UG: [
+        {
+          sno: 1,
+          branch: "JNTU-GV-BBA & BBA(Honors) Full Syllabus",
+          pdfLink: "https://api.jntugv.edu.in/media/JNTU-GV BBA  & BBA (Honors) full syllabus.pdf",
+        }
+      ],
       PG: [
         {
           sno: 1,
