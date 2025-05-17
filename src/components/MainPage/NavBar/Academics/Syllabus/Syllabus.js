@@ -151,8 +151,187 @@ const data = {
         },
       ]
 
+    },
+    R13:{
+      UG: [
+        {
+          sno: 1,
+          branch: 'Aeronautical Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Aeronautical%20Engineering-R13.pdf"
+        },
+        {
+          sno: 2,
+          branch: 'Civil Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Civil-R13.pdf"
+        },
+        {
+          sno: 3,
+          branch: 'Computer Science and Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/CSE-R13.pdf"
+        },
+        {
+          sno: 4,
+          branch: 'Electrical and Electronics Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/EEE-R13.pdf"
+        },
+        {
+          sno: 5,
+          branch: 'Electronics and Communication Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/ECE-R13.pdf"
+        },
+        {
+          sno: 6,
+          branch: 'Information Technology',
+          pdfLink: "https://api.jntugv.edu.in/media/IT-R13.pdf"
+        },
+        {
+          sno: 7,
+          branch: 'Mechanical Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Mechanical%20Engineering-R13.pdf"
+        },
+        {
+          sno: 8,
+          branch: 'Mining Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/MINING%20ENGG-R13.pdf"
+        },
+        {
+          sno: 9,
+          branch: 'Petrochemical Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/PETROCHEMICAL%20ENGINEERING-R13.pdf"
+        },
+        {
+          sno: 10,
+          branch: 'Chemical Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Chemical%20Engineering-R13.pdf"
+        },
+        {
+          sno: 11,
+          branch: 'Metallurgical Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Metllurgical-R13.pdf"
+        },
+        {
+          sno: 12,
+          branch: 'Biotechnology',
+          pdfLink: "https://api.jntugv.edu.in/media/Biotechnology-R13.pdf"
+        },
+        {
+          sno: 13,
+          branch: 'Petroleum Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Petroleum%20Engineering%20-%20R13.pdf"
+        },
+        {
+          sno: 14,
+          branch: 'Electronics and Instrumentation Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/EIE-R13.pdf"
+        },
+        {
+          sno: 15,
+          branch: 'Electronics and Computer Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/ELECTRONICS%20AND%20COMPUTER%20ENGINEERING-R13.pdf"
+        },
+        {
+          sno: 16,
+          branch: 'Automobile Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/AUTOMOBILE%20ENGG-R13.pdf"
+        },
+        {
+          sno: 17,
+          branch: 'Agricultural Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Agricultural%20Engineering-R13.pdf"
+        },
+        {
+          sno: 18,
+          branch: 'B.Pharmacy',
+          pdfLink: "https://api.jntugv.edu.in/media/B.Pharmacy-R13.pdf"
+        }
+
+      ]
+    },
+    R16: {
+      UG: [
+        {
+          sno: 1,
+          branch: 'Aeronautical Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Aeronautical%20Engineering.pdf"
+        },
+        {
+          sno: 2,
+          branch: 'Civil Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Civil%20Engineering.pdf"
+        },
+        {
+          sno: 3,
+          branch: 'Computer Science and Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/CSE%20R16.pdf"
+        },
+        {
+          sno: 4,
+          branch: 'Electrical and Electronics Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/EEE.pdf"
+        },
+        {
+          sno: 5,
+          branch: 'Electronics and Communication Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/ECE.pdf"
+        },
+        {
+          sno: 6,
+          branch: 'Information Technology',
+          pdfLink: "https://api.jntugv.edu.in/media/IT.pdf"
+        },
+        {
+          sno: 7,
+          branch: 'Mechanical Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Mechanical%20Engineering%20R16.pdf"
+        },
+        {
+          sno: 8,
+          branch: 'Mining Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Mining%20Engieering%2019082016.pdf"
+        },
+        {
+          sno: 9,
+          branch: 'Petrochemical Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Ptrochemical%20Engineering.pdf"
+        },
+        {
+          sno: 10,
+          branch: 'Chemical Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Chemical%20Engineering.pdf"
+        },
+        {
+          sno: 11,
+          branch: 'Metallurgical Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Metallurgical%20Engineering.pdf"
+        },
+        {
+          sno: 12,
+          branch: 'Biotechnology',
+          pdfLink: "https://api.jntugv.edu.in/media/Biotechnology.pdf"
+        },
+        {
+          sno: 13,
+          branch: 'Petroleum Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Petroleum%20Engineering.pdf"
+        },
+        {
+          sno: 14,
+          branch: 'Electronics and Instrumentation Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/EIE.pdf"
+        },
+        {
+          sno: 15,
+          branch: 'Automobile Engineering',
+          pdfLink: "https://api.jntugv.edu.in/media/Automobile%20Engineering.pdf"
+        },
+        {
+          sno: 16,
+          branch: 'B.Pharmacy',
+          pdfLink: "https://api.jntugv.edu.in/media/B.Pharmacy.pdf"
+        }
+      ]
     }
-  },
+  }
 };
 
 const Syllabus = () => {
