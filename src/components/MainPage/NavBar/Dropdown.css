@@ -50,12 +50,20 @@ button {
   display: inline-block;
 }
 .dropdown-content {
-  display: none;
+  
+  margin-top: 8px;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   background-color: #2e0669;
   box-shadow: 1px 7px 15px 2px rgba(0, 0, 0, 0.2);
   z-index: 5;
-  width: 200px; /* Adjusted width */
+  width: 200px;
+  transform: translateY(-10px); /* start slightly above */
+  transition: opacity 1s ease, transform 1s ease, visibility 0.3s ease;
+  border-top:3px solid #55b2e7;
+  border-bottom:3px solid #55b2e7;
+
 }
 
 .dropdown-content button {
@@ -79,7 +87,12 @@ button:hover {
 }
 
 .dropdown:hover .dropdown-content {
+  
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
   display: block;
+  
 }
 
 .menu-icon {
@@ -132,9 +145,11 @@ button:hover {
   }
 
   .dropdown-content {
+    display: none;
     position: relative;
     width: 100%;
   }
+  
 
   .dropdown {
     width: 100%;
@@ -158,6 +173,10 @@ button:hover {
     flex-direction: column;
     position: sticky;
     top: 4.7rem;
+  }
+
+  .dropdown-content{
+    display: none;
   }
 
 }

@@ -2,17 +2,9 @@
 // Type:"Permanent"
 
 export const rowsEngg = [
+
   {
     SNo: 1,
-    CollegeCode: "81",
-    CollegeName: "Avanthi Inst of Engineering & Technology,Narsipatnam",
-    District: "ANKP",
-    "College Type": "Engineering",
-    wURL: "https://avanthienggcollege.ac.in/",
-    Type: "Permanent",
-  },
-  {
-    SNo: 2,
     CollegeCode: "U4",
     CollegeName: "Dadi Inst of Engg & Tech, Anakapalli",
     District: "ANKP",
@@ -21,7 +13,7 @@ export const rowsEngg = [
     Type: "Permanent",
   },
   {
-    SNo: 3,
+    SNo: 2,
     CollegeCode: "6E",
     CollegeName:
       "Gonna Institute of Information Technology & Science, Aganampudi",
@@ -31,7 +23,7 @@ export const rowsEngg = [
     Type: "Temporary",
   },
   {
-    SNo: 4,
+    SNo: 3,
     CollegeCode: "6J",
     CollegeName: "Simhadhri Educational Socity Group of Inst, Sabbavaram",
     District: "ANKP",
@@ -40,7 +32,7 @@ export const rowsEngg = [
     Type: "Temporary",
   },
   {
-    SNo: 5,
+    SNo: 4,
     CollegeCode: "A5",
     CollegeName: "Aditya Inst of Tech & Manag, Tekkali",
     District: "SKL",
@@ -49,7 +41,7 @@ export const rowsEngg = [
     Type: "Permanent",
   },
   {
-    SNo: 6,
+    SNo: 5,
     CollegeCode: "MT",
     CollegeName:
       "Sri Venkateswara College of Engineering & Technology, Etcherla",
@@ -59,7 +51,7 @@ export const rowsEngg = [
     Type: "Temporary",
   },
   {
-    SNo: 7,
+    SNo: 6,
     CollegeCode: "W6",
     CollegeName: "Sri Sivani College Of Engg,Chilakalapalem,Srikakulam",
     District: "SKL",
@@ -68,7 +60,7 @@ export const rowsEngg = [
     Type: "Temporary",
   },
   {
-    SNo: 8,
+    SNo: 7,
     CollegeCode: "98",
     CollegeName: "Raghu Engineering College, Bheemili",
     District: "VSP",
@@ -77,7 +69,7 @@ export const rowsEngg = [
     Type: "Permanent",
   },
   {
-    SNo: 9,
+    SNo: 8,
     CollegeCode: "L3",
     CollegeName: "Vignans Institute of Information Technology, Gajuwaka",
     District: "VSP",
@@ -86,7 +78,7 @@ export const rowsEngg = [
     Type: "Permanent",
   },
   {
-    SNo: 10,
+    SNo: 9,
     CollegeCode: "L6",
     CollegeName: "Chaitanya Engineering College,Madhurawada",
     District: "VSP",
@@ -95,7 +87,7 @@ export const rowsEngg = [
     Type: "Temporary",
   },
   {
-    SNo: 11,
+    SNo: 10,
     CollegeCode: "NM",
     CollegeName: "Vignans Institute of Engineering for Women, Gajuwaka",
     District: "VSP",
@@ -104,7 +96,7 @@ export const rowsEngg = [
     Type: "Permanent",
   },
   {
-    SNo: 12,
+    SNo: 11,
     CollegeCode: "NR",
     CollegeName: "Baba Institute of Technology & Science, Madhurawada",
     District: "VSP",
@@ -113,7 +105,7 @@ export const rowsEngg = [
     Type: "Temporary",
   },
   {
-    SNo: 13,
+    SNo: 12,
     CollegeCode: "NT",
     CollegeName: "Visakha Institute of Engineering & Technology, Narava",
     District: "VSP",
@@ -122,7 +114,7 @@ export const rowsEngg = [
     Type: "Permanent",
   },
   {
-    SNo: 14,
+    SNo: 13,
     CollegeCode: "NU",
     CollegeName:
       "Nadimpalli  Satyanarayana Raju Institute of Technology, Sontyam",
@@ -132,7 +124,7 @@ export const rowsEngg = [
     Type: "Permanent",
   },
   {
-    SNo: 16,
+    SNo: 14,
     CollegeCode: "6F",
     CollegeName: "Sai Ganapathi Engineering College, Anandapuram",
     District: "VSP",
@@ -142,7 +134,7 @@ export const rowsEngg = [
   },
 
   {
-    SNo: 18,
+    SNo: 15,
     CollegeCode: "34",
     CollegeName: "GMR Institute of Technology,Rajam",
     District: "VZM",
@@ -151,7 +143,7 @@ export const rowsEngg = [
     Type: "Permanent",
   },
   {
-    SNo: 19,
+    SNo: 16,
     CollegeCode: "33",
     CollegeName: "MVGR College of Engineering, Chinthalavalasa.",
     District: "VZM",
@@ -160,7 +152,7 @@ export const rowsEngg = [
     Type: "Permanent",
   },
   {
-    SNo: 20,
+    SNo: 17,
     CollegeCode: "99",
     CollegeName:
       "Avanthis St. Theressa Institute of Engineering & Technology, Garividi",
@@ -170,7 +162,7 @@ export const rowsEngg = [
     Type: "Temporary",
   },
   {
-    SNo: 21,
+    SNo: 18,
 
     CollegeCode: "HQ",
     CollegeName: "Avanthis Research & Technological Academy, Bhogapuram",
@@ -180,7 +172,7 @@ export const rowsEngg = [
     Type: "Temporary",
   },
   {
-    SNo: 22,
+    SNo: 19,
     CollegeCode: "KD",
     CollegeName: "Lendi Institute of Engineering & Technology, Denkada",
     District: "VZM",
@@ -188,17 +180,18 @@ export const rowsEngg = [
     wURL: "https://www.lendi.org/",
     Type: "Permanent",
   },
-  {
-    SNo: 23,
-    CollegeCode: "Q7",
-    CollegeName: "Avanthi Institute of Engineering & Technology,Bhogapuram",
-    District: "VZM",
+  
+   {
+    SNo: 20,
+    CollegeCode: "81",
+    CollegeName: "Avanthi Inst of Engineering & Technology, Narsipatnam",
+    District: "ANKP",
     "College Type": "Engineering",
-    wURL: "http://aietta.ac.in/",
-    Type: "Permanent",
+    wURL: "https://avanthienggcollege.ac.in/",
+     Type: "Permanent",
   },
   {
-    SNo: 24,
+    SNo: 21,
     CollegeCode: "6C",
     CollegeName:
       "Miracle Educational Society Group of Institutions, Bhogapuram",
@@ -208,7 +201,7 @@ export const rowsEngg = [
     Type: "Permanent",
   },
   {
-    SNo: 25,
+    SNo: 22,
     CollegeCode: "8K",
     CollegeName: "Gokul Group of Institutions, Bobbili",
     District: "VZM",
@@ -217,7 +210,7 @@ export const rowsEngg = [
     Type: "Temporary",
   },
   {
-    SNo: 26,
+    SNo: 23,
     CollegeCode: "B6",
     CollegeName: "Satya Institute of Technology & Management, Gajularega.",
     District: "VZM",
@@ -226,7 +219,7 @@ export const rowsEngg = [
     Type: "Permanent",
   },
   {
-    SNo: 27,
+    SNo: 24,
     CollegeCode: "PC",
     CollegeName: "N S Raju Institute of Engineering and Technology Dakamarri(V), Bheemunipatnam(M)",
     District: "VSP",
@@ -236,7 +229,7 @@ export const rowsEngg = [
   },
 
   {
-    SNo: 28,
+    SNo: 25,
     CollegeCode: "V1",
     CollegeName: " Behara College of Engineering and Technology",
     District: "VSP",
@@ -293,6 +286,7 @@ export const rowsPharmacy = [
     wURL: "https://avanthipharma.ac.in/",
     Type: "Temporary",
   },
+  
   {
     SNo: 6,
     CollegeCode: "HH",

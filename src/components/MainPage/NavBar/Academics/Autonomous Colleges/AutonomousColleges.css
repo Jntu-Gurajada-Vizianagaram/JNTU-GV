@@ -1,0 +1,52 @@
+.autonomousColleges {
+  /* height: 90vh; */
+  width: 80vw;
+  padding-top: 10px;
+}
+
+.accordion-autonomous {
+  margin-top: 20px;
+}
+
+.autonomousColleges-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #370A68;
+}
+
+tr:nth-child(even +) {
+  background-color: #f2f2f2;
+}
+
+.autonomousColleges-search {
+  width: max-content;
+  padding-bottom: 0.4rem;
+  margin-left: 70%;
+}
+
+@media screen and (max-width: 500px) {
+  .autonomousColleges {
+    padding-top: 4rem;
+    margin-left: 0px;
+    width: 99%;
+  }
+
+  .table-container {
+    width: 100%;
+    padding: 0rem;
+  }
+
+  .autonomousColleges-search {
+    width: 50%;
+    padding-bottom: 0.5rem;
+    margin-left: 50%;
+  }
+
+  .autonomousColleges-title {
+    padding-left: 0rem;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    font-size: 26px;
+    color: #690001;
+  }
+}

@@ -66,6 +66,7 @@ const NavBar = () => {
           path: "/academics/constituent-colleges",
         },
         { label: "Affiliated Colleges", path: "/academics/affliated-colleges" },
+        { label: "Autonomous Colleges", path: "/academics/autonomous-colleges" },
         { label: "BOS Chairman", path: "/academics/bos-chairman" },
         { label: "Academic Calendar", path: "/academics/Calendar" },
         { label: "Academic Syllabus", path: "/academics/academic-syllabus" },

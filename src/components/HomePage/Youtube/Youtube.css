@@ -1,39 +1,20 @@
-/* Styles for the YouTube component */
+.youtube-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
 
-/* Background styling */
-.youtube-background {
-    background-color: #f0f4f7;
-    /* background-image: linear-gradient(135deg, rgba(0, 123, 255, 0.5) 0%, rgba(0, 123, 255, 0.1) 100%); */
-    padding: 40px 0;
-  }
-  
-  .youtube-container {
-    padding: 20px 0;
-  }
-  
-  .youtube-video {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  }
-  
-  .youtube-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 600px) {
-    .youtube-container {
-      padding: 10px 0;
-    }
-  
-    .youtube-video iframe {
-      height: 215px;
-    }
-  }
-  
+.youtube-logo-banner {
+  width: 200px;
+  max-width: 80%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.youtube-logo-banner:hover {
+  transform: scale(1.05);
+}
+.MuiCard-root:hover {
+  transform: translateY(-5px);
+}

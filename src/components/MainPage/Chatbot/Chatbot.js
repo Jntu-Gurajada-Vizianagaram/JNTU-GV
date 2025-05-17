@@ -69,8 +69,8 @@ const Chatbot = () => {
         {`
           @media (max-width: 768px) {
             .chatbot-icon {
-              width: 45px !important;
-              height: 45px !important;
+              width: 60px !important;
+              height: 60px !important;
             }
             .chatbot-popup {
               width: 90% !important;
@@ -83,8 +83,8 @@ const Chatbot = () => {
           
           @media (max-width: 480px) {
             .chatbot-icon {
-              width: 40px !important;
-              height: 40px !important;
+              width: 60px !important;
+              height: 60px !important;
             }
             .chatbot-popup {
               width: 95% !important;

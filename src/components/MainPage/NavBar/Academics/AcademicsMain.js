@@ -39,6 +39,17 @@ const AcademicsMain = () => {
         >
           Affiliated Colleges
         </Link>
+
+        <Link
+          to="autonomous-colleges"
+          className={`menubutton ${
+            location.pathname === "/academics/autonomous-colleges" ? "active" : ""
+          }`}
+        >
+          Autonomous Colleges
+        </Link>
+
+
         <Link
           to="bos-chairman"
           className={`menubutton ${

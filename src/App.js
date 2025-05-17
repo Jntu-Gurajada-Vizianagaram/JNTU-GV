@@ -1,5 +1,8 @@
 import React from "react";
 import "./App.css";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 import { Route, Routes } from "react-router-dom";
 
@@ -25,6 +28,9 @@ import AcademicsOP from "./components/MainPage/NavBar/Academics/Programs Offered
 import ConstituentCollegesOP from "./components/MainPage/NavBar/Academics/Constituent Colleges/ConstituentCollegesOP";
 import AdmissionsOP from "./components/MainPage/NavBar/Academics/Admissions/AdmissionsOP";
 import AffliatedCollegesOP from "./components/MainPage/NavBar/Academics/Affliated Colleges/AffliatedCollegesOP";
+import AutonomousColleges from "./components/MainPage/NavBar/Academics/Autonomous Colleges/AutonomousColleges";
+
+
 import Boschairman from "./components/MainPage/NavBar/Academics/Bos-chairman/Boschairman";
 
 import Calender from "./components/MainPage/NavBar/Academics/Calender/Calender";
@@ -104,6 +110,7 @@ function App() {
           <Route path="programs-offered" element={<AcademicsOP />} />
           <Route path="admissions" element={<AdmissionsOP />} />
           <Route path="affliated-colleges" element={<AffliatedCollegesOP />} />
+          <Route path="autonomous-colleges" element={<AutonomousColleges />} />
           <Route path="bos-chairman" element={<Boschairman />} />
 
           <Route path="Calendar" element={<Calender />} />
