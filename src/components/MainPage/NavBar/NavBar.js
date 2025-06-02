@@ -165,6 +165,9 @@ const NavBar = () => {
           label: "Events",
           path: "https://events.jntugv.edu.in",
         },
+        {
+          label:""
+        }
         // External link
         // Add more sub-items as needed
       ],
