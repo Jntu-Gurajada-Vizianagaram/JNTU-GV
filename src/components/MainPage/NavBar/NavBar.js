@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import {
-  Home as HomeIcon,
   Apartment as ApartmentIcon,
-  Groups as GroupsIcon,
-  School as SchoolIcon,
-  Person as PersonIcon,
   Description as DescriptionIcon,
   Drafts as DraftsIcon,
+  Groups as GroupsIcon,
+  Home as HomeIcon,
   Menu as MenuIcon,
+  Person as PersonIcon,
+  School as SchoolIcon,
 } from "@mui/icons-material";
+import LinkIcon from '@mui/icons-material/Link';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Dropdown.css";
 import Search from "./Search/Search";
-import LinkIcon from '@mui/icons-material/Link';
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -166,7 +166,8 @@ const NavBar = () => {
           path: "https://events.jntugv.edu.in",
         },
         {
-          label:""
+          label:"Yogandhra",
+          path:"https://yogandhra.jntugv.edu.in",
         }
         // External link
         // Add more sub-items as needed
