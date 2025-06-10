@@ -10,7 +10,7 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Calender.css";
 
 const staticData = {
@@ -212,13 +212,20 @@ const Calender = () => {
     return parseInt(yearB) - parseInt(yearA);
   });
 
+  const [expandedYear, setExpandedYear] = useState(null);
+
+  const handleAccordionChange = (year) => (event, isExpanded) => {
+    setExpandedYear(isExpanded ? year : null);
+  };
+
   return (
     <div className="Calender">
       <div className="calender-title">Academic Calendar</div>
       {academicYears.map((year) => (
         <Accordion 
           elevation={20} 
-          defaultExpanded={false}
+          expanded={expandedYear === year}
+          onChange={handleAccordionChange(year)}
           className="accordion-affiliated" 
           key={year}
         >
