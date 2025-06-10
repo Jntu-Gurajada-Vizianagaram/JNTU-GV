@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
   Accordion,
-  AccordionSummary,
   AccordionDetails,
+  AccordionSummary,
   Table,
+  TableBody,
+  TableCell,
   TableHead,
   TableRow,
-  TableCell,
-  TableBody,
   Typography,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import React, { useEffect, useState } from "react";
 import "./Calender.css";
 
 const staticData = {
@@ -178,7 +178,7 @@ const Calender = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://api.jntugv.edu.in/api/updates/allnotifications"); // Replace with the actual API endpoint
+        const response = await fetch("https://api.jntugv.edu.in/api/updates/allnotifications");
         const result = await response.json();
 
         const filteredData = result.filter(item => item.update_type === "calendar");
@@ -205,39 +205,74 @@ const Calender = () => {
     fetchData();
   }, []);
 
-  const academicYears = Object.keys(data);
+  // Sort academic years in descending order (most recent first)
+  const academicYears = Object.keys(data).sort((a, b) => {
+    const [yearA] = a.split('-');
+    const [yearB] = b.split('-');
+    return parseInt(yearB) - parseInt(yearA);
+  });
 
   return (
     <div className="Calender">
       <div className="calender-title">Academic Calendar</div>
       {academicYears.map((year) => (
-        <Accordion elevation={20} defaultExpanded className="accordion-affiliated" key={year}>
+        <Accordion 
+          elevation={20} 
+          defaultExpanded={false}
+          className="accordion-affiliated" 
+          key={year}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
             aria-controls={`panel-${year}-content`}
             id={`panel-${year}-header`}
-            sx={{ background: "#370A68", color: "white" }}
+            sx={{ 
+              background: "#370A68", 
+              color: "white",
+              '&:hover': {
+                background: "#4a0d8a"
+              }
+            }}
           >
-            <Typography sx={{ width: "50%", flexShrink: 0 }}>
+            <Typography sx={{ width: "50%", flexShrink: 0, fontWeight: 500 }}>
               {year} Academic Calendar
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ padding: "16px" }}>
             <Table>
-              <TableHead sx={{ background: "#3F6DD13D" }}>
+              <TableHead>
                 <TableRow>
-                  <TableCell>S.no</TableCell>
-                  <TableCell>Title</TableCell>
-                  <TableCell>Calendar Link</TableCell>
+                  <TableCell sx={{ background: "#3F6DD13D", fontWeight: 600 }}>S.no</TableCell>
+                  <TableCell sx={{ background: "#3F6DD13D", fontWeight: 600 }}>Title</TableCell>
+                  <TableCell sx={{ background: "#3F6DD13D", fontWeight: 600 }}>Calendar Link</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 {data[year].map((row, index) => (
-                  <TableRow key={index + 1}>
+                  <TableRow 
+                    key={index + 1}
+                    sx={{ 
+                      '&:hover': { 
+                        background: "#f5f5f5" 
+                      }
+                    }}
+                  >
                     <TableCell>{index + 1}</TableCell>
                     <TableCell>{row.Title}</TableCell>
                     <TableCell>
-                      <a href={row.pdfLink} target="_blank" rel="noopener noreferrer">
+                      <a 
+                        href={row.pdfLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        style={{
+                          color: "#370A68",
+                          textDecoration: "none",
+                          fontWeight: 500,
+                          '&:hover': {
+                            textDecoration: "underline"
+                          }
+                        }}
+                      >
                         Download
                       </a>
                     </TableCell>
