@@ -1,18 +1,18 @@
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Tab,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Tabs,
-  Typography,
+    Accordion,
+    AccordionDetails,
+    AccordionSummary,
+    Tab,
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableRow,
+    Tabs,
+    Typography,
 } from "@mui/material";
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Syllabus.css";
 
 const data = {
@@ -30,21 +30,21 @@ const data = {
           sno: 2,
           branch: "Electronics and Communication Engineering",
           pdfLink:
-            "https://api.jntugv.edu.in/media/JNTUGV-R23%20ECE%20Syllabus.pdf",
+        "https://api.jntugv.edu.in/media/B.Tech-JNTUGV-R23-ECE%20Course%20Structure%20and%20Syllabus.pdf",
         },
         
         {
           sno: 3,
           branch: "Electrical and Electronic Engineering",
           pdfLink:
-            "https://api.jntugv.edu.in/media/B.Tech-R23-EEE%20syllabus%20%2030-07-2024.pdf",
+            "https://api.jntugv.edu.in/media/EEE-R23-JNTU-GV%20-B.Tech-Course%20Structure%20and%20Syllabus.pdf",
         },
 
         {
           sno: 4,
           branch: "Mechanical Engineering",
           pdfLink:
-            "https://api.jntugv.edu.in/media/B.Tech-R23-Mechanical%20Engineering%20Syllabus%2030-7-2024.pdf",
+            "https://api.jntugv.edu.in/media/B.Tech-R23-Mechanical%20Engineering%20Course%20Structure%20and%20Syllabus.pdf",
         },
 
         // {
@@ -135,7 +135,7 @@ const data = {
           sno: 15,
           branch: "Automobile Engineering",
           pdfLink:
-            "https://api.jntugv.edu.in/media/15.JNTUGV-UG-B.Tech-R23-Automobile%20Engg%20Syllabus.pdf",
+            "https://api.jntugv.edu.in/media/Automobile%20Engg..-R23-JNTU-GV%20B.Tech-Course%20Structure%20and%20Syllabus.pdf",
         },
         
       ],
