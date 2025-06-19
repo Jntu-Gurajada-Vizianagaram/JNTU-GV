@@ -12,8 +12,9 @@ function UpdatePanel() {
   const recruitmentList = [];
   const sportsList = [];
   const eventsList = [];
-  const bcdeList = [];
+  
   const tenderList =[];
+  const syllabusList =[];
 
   const [displayData, setDisplayData] = useState(notificationList);
 
@@ -50,32 +51,41 @@ function UpdatePanel() {
   apiData.forEach((entry) => {
 
 
-    notificationList.push(entry);
+    
 
     // Push entry to its specific list
     switch (entry.update_type) {
       case "notification":
-        break; // already pushed to notificationList above
+        notificationList.push(entry);
+        break; 
       case "recruitment":
+        notificationList.push(entry);
         recruitmentList.push(entry);
         break;
       case "examination":
       case "exams":
+            notificationList.push(entry);
             examinationList.push(entry);
             break;
       case "workshop":
+        notificationList.push(entry);
         workshopList.push(entry);
         break;
       case "sports":
+        notificationList.push(entry);
         sportsList.push(entry);
         break;
       case "events":
+        notificationList.push(entry);
         eventsList.push(entry);
         break;
-      case "BCDE":
-        bcdeList.push(entry);
+      
+      case "syllabus":
+        syllabusList.push(entry);
         break;
+        
       case "tender":
+          notificationList.push(entry);
           tenderList.push(entry);
           break;
 
@@ -86,6 +96,10 @@ function UpdatePanel() {
 
   const handleNotification = (button) => {
     setDisplayData(notificationList);
+    setActiveButton(button);
+  };
+  const handleSyllabus = (button) => {
+    setDisplayData(syllabusList);
     setActiveButton(button);
   };
 
@@ -118,26 +132,8 @@ function UpdatePanel() {
     setActiveButton(button);
   };
 
-  const handleBcde = (button) => {
-    setDisplayData(bcdeList);
-    setActiveButton(button);
-  };
-  const notificationData = apiData
-    .map(
-      (entry) =>
-        ({
-          title: entry.title,
-          description: entry.description,
-          day: entry.day,
-          month: entry.month,
-          year: entry.year,
-          file_link: entry.file_link,
-          update_type: entry.update_type,
-          external_text: entry.external_text,
-          external_link: entry.external_link
-        })
-    )
-    .filter(Boolean);
+ 
+ const notificationData = notificationList;
 
   return (
     <div id="events">
@@ -155,6 +151,16 @@ function UpdatePanel() {
             target="_blank"
           >
             Notifications
+          </button>
+          <button
+            style={{
+              ...buttonStyles,
+              backgroundColor: activeButton === "syllabus" ? "#370a68" : "white",
+              color: activeButton === "syllabus" ? "white" : "black",
+            }}
+            onClick={() => handleSyllabus("syllabus")}
+          >
+            Syllabus
           </button>
           <button
             style={{
@@ -211,16 +217,8 @@ function UpdatePanel() {
             
             Events
           </button>
-          <button
-            style={{
-              ...buttonStyles,
-              backgroundColor: activeButton === "BCDE" ? "#370a68" : "white",
-              color: activeButton === "BCDE" ? "white" : "black",
-            }}
-            onClick={() => handleBcde("BCDE")}
-          >
-            BCDE
-          </button>
+          
+          
 
           <button
             style={{

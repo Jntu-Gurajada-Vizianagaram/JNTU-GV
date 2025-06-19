@@ -15,6 +15,7 @@ const Notification = ({ displayData }) => {
     return daysDifference;
   };
 
+  
   return (
 
     <div className="updatesContainer">
