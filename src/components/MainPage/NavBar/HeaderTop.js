@@ -36,6 +36,7 @@ const NavBar = () => {
     {"icon":null, "name": `GreenCampus`, "path": "https://greencampus.jntugv.edu.in"},
     {"icon":null, "name": `MoUs`, "path": "https://mou.jntugv.edu.in"},
     {"icon":null, "name": `Events`, "path": "https://events.jntugv.edu.in"},
+    {"icon":null, "name": `Yogandhra`, "path": "https://yogandhra.jntugv.edu.in" },
     
   ]
 
