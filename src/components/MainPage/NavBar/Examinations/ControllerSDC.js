@@ -1,6 +1,5 @@
-import React from 'react';
-import ControllerSDCi from "../../../../assets/ExaminationImages/ControllerSDCi.jpg";
-import './Examinations.css'; 
+import Controller3i from '../../../../assets/ExaminationImages/ACE3.jpg';
+import './Examinations.css';
 
 function ControllerSDC() {
   return (
@@ -17,24 +16,38 @@ function ControllerSDC() {
           <center>
           <div className="profileImage">
             
-          <img src = {ControllerSDCi} alt="Profile" />
+          <img src = {Controller3i} alt="Profile" width={290}/>
         
           </div>
           <div className="profileName">
-            <h3>Dr. Ch.Bindu Madhuri</h3>
+            <h3>Mr. D D V Sivaram Rolangi</h3>
           </div>
           <div className="profileDesignation">
-            <h4 className="regularStyleH4">Additional Controller of Examinations SDC</h4><br></br>
-            <h3>Assistant Professor, Department of IT</h3>
+            <h4 className="regularStyleH4">Additional Controller of Examinations (SDC)</h4><br></br>
+            <h3>Assistant Professor, Department of Computer Science & Engineering</h3>
           </div>
           </center>
           <hr />
           {/* Profile description */}
           <p>Email: acesdc@jntugv.edu.in</p>
           <hr />
-          <p>Dr Ch Bindu Madhuri is having a total of 17 years of experience in teaching and research. She worked as Officer in-charge of Examinations, APSSDC Skill development coordinator, Deputy Warden and presently working as Nodal Officer Biometric Attendance and Additional Controller of Examinations.</p>
-          <p>Dr Ch Bindu Madhuri is a member of IEEE. She published 20 research papers in various international/national journals and conferences. She is an editorial board member and reviewer of many international journals. She is currently guiding 8 research scholars as Supervisor/Co- Supervisor for their PhD degrees. Her research areas include the Artificial Intelligence, Machine Learning, Deep Learning, and Natural Language Processing.</p>
-        </div>
+          <p>Mr. D D V Sivaram Rolangi, currently working as Assistant Professor in Department of Computer Science and Engineering, University College of Engineering Vizianagaram-JNTU-GV, Vizianagaram, completed his B. Tech in Computer Science and Engineering from V R Siddhartha Engineering College, Vijayawada. M.Tech in Information Technology and  currently pursuing his Ph.D under Visveswaraya PhD scheme  from Andhra University College of Engineering , Andhra University, Visakhapatnam.  </p>
+          <p>His areas of interests include Theoretical Computer Science, Compiler technologies, Network programming. He has about 19 years of experience in teaching. His research interests include Machine learning, Computer vision, Deep learning, IoT and Assistive Technologies. </p>
+        
+        <p className="ADsub">Additional Roles carried out so far :</p>
+<p>❖ Network & systems coordinator.</p>
+<p>❖ Deputy Warden. </p>
+<p>❖ Training & Placement Officer (TPO).</p>
+<p>❖ Officer In charge of Hostels (OIH).</p>
+
+
+
+<p className="ADsub">Present administrative roles: </p>
+<p>❖ Dispensary Coordinator </p>
+<p>❖ Public Relations Officer(PRO) of JNTUGV </p>
+<p>❖ Additional Controller of Examinations -III ( ACE-3)</p>
+<p>❖ Additional Controller of Examinations-SDC</p>
+</div>
       </div>
     </div>
   );

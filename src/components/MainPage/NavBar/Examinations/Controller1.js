@@ -1,6 +1,5 @@
-import React from 'react';
 import Controller1i from "../../../../assets/ExaminationImages/Controller1i.jpg";
-import './Examinations.css'; 
+import './Examinations.css';
 
 function Controller1() {
   return (
@@ -25,7 +24,7 @@ function Controller1() {
           </div>
           <div className="profileDesignation">
             <h4 className="regularStyleH4">Additional Controller of Examinations 1</h4>
-            <h5>for I B.Tech, IV B.Tech and IV B.Pharmacy</h5><br></br>
+            <h5>for IV B.Tech and IV B.Pharmacy</h5><br></br>
             <h3>Assistant Professor in the Department of Mechanical Engineering</h3>
           </div>
           </center>
