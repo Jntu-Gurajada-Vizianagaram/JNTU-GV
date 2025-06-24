@@ -24,7 +24,6 @@ function Controller() {
             </div>
             <div className="profileDesignation">
               <h4 className="regularStyleH4">Controller of Examinations</h4>
-              <h5>for I B.Tech Examinations</h5>
               <h3>Associate Professor, Department of Electronics & Communications Engineering</h3>
             </div>
           </center>
