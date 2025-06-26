@@ -1,7 +1,7 @@
-import "./UpdatePanel.css";
 import { useEffect, useState } from "react";
 import { Data } from "./Data";
 import Notification from "./Notification";
+import "./UpdatePanel.css";
 
 // import CircularProgress from "@mui/material/CircularProgress";
 
@@ -55,9 +55,9 @@ function UpdatePanel() {
 
     // Push entry to its specific list
     switch (entry.update_type) {
-      case "notification":
-        notificationList.push(entry);
-        break; 
+      case "notification" || "calendar":
+              notificationList.push(entry);
+        break;
       case "recruitment":
         notificationList.push(entry);
         recruitmentList.push(entry);
