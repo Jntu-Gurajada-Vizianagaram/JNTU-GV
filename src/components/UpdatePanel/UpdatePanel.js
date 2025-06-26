@@ -1,7 +1,7 @@
-import "./UpdatePanel.css";
 import { useEffect, useState } from "react";
 import { Data } from "./Data";
 import Notification from "./Notification";
+import "./UpdatePanel.css";
 
 // import CircularProgress from "@mui/material/CircularProgress";
 
@@ -12,7 +12,7 @@ function UpdatePanel() {
   const recruitmentList = [];
   const sportsList = [];
   const eventsList = [];
-  
+  const calendarList = [];
   const tenderList =[];
   const syllabusList =[];
 
@@ -49,15 +49,10 @@ function UpdatePanel() {
   }, []);
 
   apiData.forEach((entry) => {
-
-
-    
-
-    // Push entry to its specific list
     switch (entry.update_type) {
-      case "notification":
-        notificationList.push(entry);
-        break; 
+      case "notification" ||"notice" || "circular":
+              notificationList.push(entry);
+        break;
       case "recruitment":
         notificationList.push(entry);
         recruitmentList.push(entry);
@@ -79,11 +74,13 @@ function UpdatePanel() {
         notificationList.push(entry);
         eventsList.push(entry);
         break;
-      
+      case "calendar":
+        notificationList.push(entry);
+        calendarList.push(entry);
+        break;
       case "syllabus":
         syllabusList.push(entry);
         break;
-        
       case "tender":
           notificationList.push(entry);
           tenderList.push(entry);
@@ -117,6 +114,12 @@ function UpdatePanel() {
     setDisplayData(workshopList);
     setActiveButton(button);
   };
+
+  const handleCalendar = (button) => {
+    setDisplayData(calendarList);
+    setActiveButton(button);
+      };
+
   const handleTenders = (button) => {
     setDisplayData(tenderList);
     setActiveButton(button);
@@ -166,6 +169,17 @@ function UpdatePanel() {
             style={{
               ...buttonStyles,
               backgroundColor:
+                activeButton === "Calendar" ? "#370a68" : "white",
+              color: activeButton === "Calendar" ? "white" : "black",
+            }}
+            onClick={() => handleCalendar("Calendar")}
+                      >
+                                   Academic Calendars
+                                              </button>
+          <button
+            style={{
+              ...buttonStyles,
+              backgroundColor:
                 activeButton === "Examinations" ? "#370a68" : "white",
               color: activeButton === "Examinations" ? "white" : "black",
             }}
@@ -193,7 +207,7 @@ function UpdatePanel() {
             }}
             onClick={() => handleWorkshop("Conferences")}
           >
-            Academic Events
+            Academic Events || Conferences
           </button>
     
           <button
