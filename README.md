@@ -13,7 +13,7 @@ git clone https://github.com/Jntu-Gurajada-Vizianagaram/JNTU-GV.git
 ```
 **Install Dependencies:** Navigate into the cloned repository's directory and install the necessary dependencies using npm:
 ``` bash
-cd FRONTEND
+cd JNTU-GV
 npm install
 ```
 **Start the Development Server:** After installing the dependencies, you can start the development server to view the website in your browser:
@@ -21,12 +21,9 @@ npm install
 npm start
 ```
 ## Live Website
-You can also access the live version of the JNTUGV website by visiting the following link: [Click Here]((https://jntugv.edu.in/))
+You can also access the live version of the JNTUGV website by visiting the following link: [Click Here](https://jntugv.edu.in/)
 
 
-Feel free to explore the website, and if you encounter any issues, have suggestions, or would like to contribute to the development of the website, please don't hesitate to create issues or pull requests in this repository. We welcome your feedback and contributions to help us improve the JNTUGV website.
-
-Thank you for your interest and support!
 ## Developers
 
 | Role           | Name             | GitHub Profile                          |
@@ -36,4 +33,8 @@ Thank you for your interest and support!
 | Co-Developer   | Anil Sinthu      | [@anilsinthu73](https://github.com/anilsinthu73) |
 
 
+## Acknowledgements and Contributions
 
+Feel free to explore the website, and if you encounter any issues, have suggestions, or would like to contribute to the development of the website, please don't hesitate to create issues or pull requests in this repository. We welcome your feedback and contributions to help us improve the JNTUGV website.
+
+Thank you for your interest and support!
