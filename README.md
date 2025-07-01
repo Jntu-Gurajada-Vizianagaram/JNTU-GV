@@ -27,13 +27,13 @@ You can also access the live version of the JNTUGV website by visiting the follo
 Feel free to explore the website, and if you encounter any issues, have suggestions, or would like to contribute to the development of the website, please don't hesitate to create issues or pull requests in this repository. We welcome your feedback and contributions to help us improve the JNTUGV website.
 
 Thank you for your interest and support!
+## Developers
 
-## Developers:
-Lead Developers: 
-Haneesh Bandaru [@haneesh]
-Harsha Vivek (@harsha)
+| Role           | Name             | GitHub Profile                          |
+|----------------|------------------|------------------------------------------|
+| Lead Developer | Haneesh Bandaru  | [@haneesh](https://github.com/haneesh)   |
+| Lead Developer | Harsha Vivek     | [@harsha](https://github.com/harsha)     |
+| Co-Developer   | Anil Sinthu      | [@anilsinthu73](https://github.com/anilsinthu73) |
 
-Co-Developers:
-Anil Sinthu (@anilsinthu73)
 
 
