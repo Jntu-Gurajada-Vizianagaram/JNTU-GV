@@ -50,7 +50,9 @@ function UpdatePanel() {
 
   apiData.forEach((entry) => {
     switch (entry.update_type) {
-      case "notification" ||"notice" || "circular":
+      case "notification" :
+      case "notice":
+      case "circular":
               notificationList.push(entry);
         break;
       case "recruitment":
