@@ -27,7 +27,7 @@ const data = {
            "https://api.jntugv.edu.in/media/JNTUGV%20R25-MBA%20Syllabus.pdf"
         },
       ]
-    R24 : {
+ },
     R23: {
       UG: [
         {
