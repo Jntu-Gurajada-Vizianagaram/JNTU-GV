@@ -16,7 +16,18 @@ import { useState } from "react";
 import "./Syllabus.css";
 
 const data = {
-  year: {
+  year: { 
+        R25:{
+         
+      PG: [
+        {
+          sno: 1,
+          branch: "MASTER OF BUSINESS ADMINISTRATION ",
+          pdfLink:
+           "https://api.jntugv.edu.in/media/JNTUGV%20R25-MBA%20Syllabus.pdf"
+        },
+      ]
+    R24 : {
     R23: {
       UG: [
         {
