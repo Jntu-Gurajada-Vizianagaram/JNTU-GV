@@ -32,6 +32,7 @@ const data = {
       {
        Title: "R25 Regulation for MBA" ,
        pdfLink: "https://api.jntugv.edu.in/media/JNTUGV%20R25-MBA%20Syllabus.pdf"
+},
     ],
 
     "Ph.D": [
