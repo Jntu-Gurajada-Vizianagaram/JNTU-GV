@@ -51,7 +51,7 @@ function UpdatePanel() {
   apiData.forEach((entry) => {
     switch (entry.update_type) {
       case "notification" :
-      case "notice":
+      case "regulation":
       case "circular":
               notificationList.push(entry);
         break;
@@ -64,7 +64,9 @@ function UpdatePanel() {
             notificationList.push(entry);
             examinationList.push(entry);
             break;
-      case "workshop":
+      case "workshop" :
+      case "conference":
+      case "seminar":
         notificationList.push(entry);
         workshopList.push(entry);
         break;
@@ -209,7 +211,7 @@ function UpdatePanel() {
             }}
             onClick={() => handleWorkshop("Conferences")}
           >
-            Academic Events || Conferences
+          Conferences
           </button>
     
           <button
