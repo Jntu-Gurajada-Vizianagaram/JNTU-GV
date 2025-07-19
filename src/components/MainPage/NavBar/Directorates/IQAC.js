@@ -80,5 +80,8 @@ function IQAC() {
         <p>❖ Active in quality assurance activities and IQAC coordination</p>
       </div>
     </div>
+
+);
+    }
   
-export default IQAC;
+export default IQAC ;
