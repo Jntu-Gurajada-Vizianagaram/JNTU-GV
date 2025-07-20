@@ -21,7 +21,7 @@ function IQAC() {
           <div className="profileName">
             <h3 className="ADh3">Dr. S Kalesha Vali</h3>
             <h3 className="ADh3">
-              Director of Internal Quality Assurance Cell
+              Director <sup>i/c</sup>, Internal Quality Assurance Cell (IQAC)
             </h3>
           </div>
           <div className="profileDesignation">

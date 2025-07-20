@@ -28,7 +28,11 @@ const data = {
     {
       Title: "R24 Regulation for MBA",
       pdfLink: "https://api.jntugv.edu.in/media/R24%20MBA%20Regulations.pdf"
-    }
+    },
+      {
+       Title: "R25 Regulation for MBA" ,
+       pdfLink: "https://api.jntugv.edu.in/media/JNTUGV%20R25-MBA%20Syllabus.pdf"
+},
     ],
 
     "Ph.D": [

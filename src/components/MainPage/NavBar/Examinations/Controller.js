@@ -1,4 +1,3 @@
-import React from 'react';
 import Controlleri from "../../../../assets/ExaminationImages/Controlleri.jpg";
 import './Examinations.css';
 
@@ -24,7 +23,7 @@ function Controller() {
               <h3>Dr. R. Gurunadha</h3>
             </div>
             <div className="profileDesignation">
-              <h4 className="regularStyleH4">Controller of Examinations</h4><br></br>
+              <h4 className="regularStyleH4">Controller of Examinations</h4>
               <h3>Associate Professor, Department of Electronics & Communications Engineering</h3>
             </div>
           </center>

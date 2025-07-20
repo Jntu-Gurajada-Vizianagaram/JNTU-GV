@@ -1,178 +1,100 @@
-import React from "react";
-import "../Administration/AdminandDirectorates.css"; // Import your CSS file here
 import dap from "../../../../assets/AdminDirectoratesImages/dap.jpg";
-
+import "../Administration/AdminandDirectorates.css";
 
 function AcademicPlanning() {
-  
   return (
     <div className="mainContainer">
       <div className="allRightContent">
         <div className="allRightContentHeading">
           Director of Academic Planning
         </div>
-        <br></br>
+        <br />
         <div className="allRightContentProfile">
-          {/* Profile information */}
           <div className="ADimg">
             <center>
-              <img
-                src={dap}
-                alt="Profile"
-              />
+              <img src={dap} alt="Dr. K. Chandra Bhushana Rao" />
             </center>
           </div>
         </div>
         <center>
           <div className="profileName">
             <h3 className="ADh3">Dr. K. Chandra Bhushana Rao</h3>
-            <h3 className="ADh3">
-              Director of Academic Planning
-            </h3>
+            <h3 className="ADh3">Director of Academic Planning</h3>
           </div>
           <div className="profileDesignation">
             <h4 className="ADh4">
-              Professor of Dept. of Electronics and Communication Engineering
+              Professor & Head, Dept. of Electronics and Communication Engineering
             </h4>
-          </div>
+            </div>
         </center>
         <hr />
-        {/* Profile description */}
         <p>Email: dap@jntugv.edu.in</p>
-        <p>Website: <a href="https://dap.jntugv.edu.in/">https://dap.jntugv.edu.in/</a>
-        </p>
-        <hr></hr>
         <p>
-          Dr. Kota. Chandrabhushana Rao, completed his B.E, M.E and PhD in ECE
-          from AU, Visakhapatnam during1992, 1995 and 2005 respectively. Having
-          experience of 29 years in teaching, research and administration of
-          engineering education. Worked as Principal, Dean, Professor and HoD in
-          reputed private institutions during 1992-2012 in A.P. At present,
-          working as a Professor and HoD of ECE at UCEV-JNTUK-Vizianagaram, A.P.
+          Website:{" "}
+          <a href="https://dap.jntugv.edu.in/" target="_blank" rel="noreferrer">
+            https://dap.jntugv.edu.in/
+          </a>
+        </p>
+        <hr />
+
+        <p>
+          Dr. Kota Chandra Bhushana Rao completed his B.E, M.E, and Ph.D. in
+          Electronics and Communication Engineering from Andhra University,
+          Visakhapatnam, in 1992, 1995, and 2005 respectively, under the
+          supervision of Prof. G.S.N. Raju (Former Vice-Chancellor, AU). He has
+          over 29 years of teaching, research, and administrative experience in
+          engineering education.
+        </p>
+        <p>
+          He has served as Assistant Professor, Associate Professor, Professor,
+          HOD, Dean, and Principal in reputed institutions like GITAM and MVGR
+          (1992–2012). Since 2013, he has been with JNTU Vizianagaram (UCEV),
+          he served  as Head, ECE;  and Director of IQAC. currently serving as Professor and  Director of Academic Planning (DAP).
         </p>
 
         <p className="ADsub">Achievements:</p>
-        <p>❖ Senior member, IEEE since 2016.</p>
-        <p>❖ Professor of ECE since Jan.2016.</p>
-        <p>❖ HoD of ECE –UCEV since Feb.2017.</p>
-        <p>❖ Published TWO Indian Patents; TWO copy rights;</p>
-        <p>
-          ❖ Published 67 research papers, in reputed Journals and conference
-          proceedings.
-        </p>
-        <p>
-          ❖ Guided TWO PhDs and seven scholars are working for PhD at present
-        </p>
-        <p>
-          ❖ Visited UK and Thailand to present research papers and chaired
-          technical sessions.
-        </p>
-        <p>❖ Chaired several International conferences in India and abroad.</p>
-        <p>
-          ❖ Fellow of IETE, Life member-ISTE, Life member-SEMC(I), LM- ISSS(
-          IISc), Member- IAENG.
-        </p>
-        <p>
-          ❖ Research board member, Anna university, Vignan university, Integral
-          university.
-        </p>
-        <p>❖ Chairman, BoS, ECE –UCEV-JNTUK since 2017.</p>
-        
+        <p>❖ Senior Member, IEEE since 2016.</p>
+        <p>❖ Professor of ECE since Jan 2016.</p>
+        <p>❖ HOD of ECE, UCEV since Feb 2017.</p>
+        <p>❖ Two Indian patents and two copyrights published.</p>
+        <p>❖ 72+ research publications in reputed journals and conferences.</p>
+        <p>❖ One Ph.D. awarded; seven scholars currently under supervision.</p>
+        <p>❖ International visits: UK and Thailand for paper presentations and technical sessions.</p>
+        <p>❖ Chaired technical sessions in international conferences in India and abroad.</p>
+        <p>❖ Fellow of IETE; Life Member of ISTE, SEMC(I), ISSS (IISc); Member IAENG.</p>
+        <p>❖ Member, Research Boards – Anna University, Vignan University, Integral University.</p>
+        <p>❖ Chairman, BoS-ECE, UCEV-JNTUK since 2017.</p>
+
         <p className="ADsub">Recognitions:</p>
-        <p>❖ Evaluator- NBA since 2009.</p>
-        <p>❖ EVC-Member, AICTE and Evaluator of NBA;</p>
-        <p>❖ Obtained Level 5-CMI-UK- certificate.</p>
-        <p>
-          ❖ Having National recognitions and associations with NAAC, NBA, MSME,
-          CII, WIPRO, TCS andAICTE, learned and practiced quality SOPs to serve
-          higher education in India.
-        </p>
-        <p>
-          ❖ Identified by AICTE as one of the 200 participants across India for
-          UK-India EducationResearch Initiative (UKIERI) scheme and completed
-          CMI certification during 2015-16.
-        </p>
-        <p>❖ Visited DUDLEY college of UK-Birmingham on invitation.</p>
-        <p>❖ Expert member, RIFD Bureau of AICTE.</p>
-        <p>
-          ❖ GB member and BoS member in reputed autonomous colleges appointed by
-          JNTUK.
-        </p>
-        <p>❖ Coordinator for NAAC and NBA at UCEV-JNTUK during 2013-19.</p>
-        <p>
-          ❖ NBA and NAAC- Consultant and trainer-so far guided Fifteen
-          institutions successfully.
-        </p>
-        <p>❖ Resource person for ESCI-Hyderabad.</p>
-        <p>❖ Chairman- CPRC- SAMEER Visakhapatnam.</p>
-        
-        <p className="ADsub">Involvement in accreditations:</p>
-        <p>
-          ❖ Expert member of National Board of Accreditation (NBA) since 2011,
-          involved as member, with Mock-accreditation team for Washington Accord
-          (WA) regulations during Dec2012 withProf. Unnikrishnan, Advisor for
-          INDIA, Washington Accord, USA.
-        </p>
-        <p>
-          ❖ Visited more than 20-good institutions for accreditation, as expert
-          member of NBA so far.
-        </p>
-        <p>❖ Conducted Three OBA- OBE workshops of NBA at UCEV-JNTUK.</p>
-        <p>
-          ❖ Conducted several OBE-OBA workshops across India at Jammu,
-          Tamilnadu, MP, Maharashtra, Uttar Pradesh, Rajasthan, Haryana,
-          Telangana, AP and other states.
-        </p>
-        
-        <p className="ADsub">
-          Given guidance towards NBA (SAR) OBE-OBA and NAAC (new SSR) to
-        </p>
-        <p>❖ SRKR Engg.College, a 30 year old institution at Bhimavaram.</p>
-        <p>❖ Jayam COE, Dharmapuri, Tamilnadu.</p>
-        <p>❖ Sona COE, salem , Tamilnadu.</p>
-        <p>❖ Anna university COE, Trichy.</p>
-        <p>❖ K.J. Somaih COE, Mumbai.</p>
-        <p>
-          ❖ Learningware, winzest of Hyderabad towards Tier-1 and Tier-II
-          formats of NBA.
-        </p>
-        <p>❖ VIIT- and VIEW at duvvada for SAR preparation.</p>
-        <p>❖ Swarnandhra Group of colleges at Narsapur.</p>
-        <p>❖ Vignan university at Guntur for NBA-SAR preparation.</p>
-        <p>❖ VVIT-Guntur for SAR Preparation and SSR preparation.</p>
-        <p>❖ GVP college of Engineering for Women, Visakhapatnam.</p>
-        <p>
-          ❖ NBA and NAAC guidance has been given to many other reputed
-          engineering colleges in A.P., Telangana, Maharashtra, Madhya Pradesh,
-          Jammu, Uttar Pradesh and Tamilnadu.
-        </p>
-        <p>
-          ❖ Conducted OBE-OBA workshops at Ujjain College of Engineering, MP,
-          Bikaner College of Engineering- Rajasthan, Integral university,
-          Lucknow and at ESCI chapter-Jammu.
-        </p>
-      
+        <p>❖ NBA Evaluator since 2009.</p>
+        <p>❖ Member, EVC and Expert, AICTE.</p>
+        <p>❖ CMI-UK Level 5 Certificate through UKIERI-AICTE (2015–16).</p>
+        <p>❖ Recognized by AICTE for UKIERI-India initiative; one among 200 across India.</p>
+        <p>❖ Invited to Dudley College, UK – Birmingham.</p>
+        <p>❖ GB and BoS Member in several autonomous colleges via JNTUK.</p>
+        <p>❖ NAAC and NBA Coordinator at UCEV (2013–2019).</p>
+        <p>❖ Consultant and trainer for 15+ institutions in NBA/NAAC.</p>
+        <p>❖ Resource Person for ESCI, Hyderabad.</p>
+        <p>❖ Chairman, Core Project Review Committee (CPRC), SAMEER Visakhapatnam (since 2019).</p>
+
+        <p className="ADsub">Involvement in Accreditations:</p>
+        <p>❖ NBA Expert since 2011; participated in WA Mock Evaluation (2012).</p>
+        <p>❖ Visited 20+ institutions as NBA Expert.</p>
+        <p>❖ Conducted OBE-OBA Workshops at UCEV and across India (Jammu, Tamil Nadu, MP, UP, Rajasthan, etc.).</p>
+
+        <p className="ADsub">Guidance for Institutions:</p>
+        <p>❖ Guided NBA/NAAC processes for: SRKR, Jayam COE, Sona COE, Anna Univ COE, KJ Somaiya COE, GVP Women, VVIT, VIIT, Swarnandhra, Vignan Univ, and others.</p>
+
         <p className="ADsub">Other Achievements:</p>
-        <p>
-          ❖ Guided several students to acquire core jobs in ISRO, SAMEER, BSNL
-          and other reputed organizations.
-        </p>
-        <p>
-          ❖ Obtained good feedback from students at UCEV and other institutes
-          where I worked and taught.
-        </p>
-        <p>❖ Trained Contract faculty towards NBA, NAAC at UCEV.</p>
-        <p>❖ Established RUSA project facilities at ECE Department.</p>
-        <p>❖ Established SC/ST book bank at Library of UCEV during 2013-15.</p>
-        <p>❖ TCS MoU under TAAP is executed during 2015 as TPO at UCEV.</p>
-        <p>❖ Executed THREE MoUs with ECE department during 2020-21.</p>
-        <p>
-          ❖ Trained students through Virtual labs using mobile app- first of its
-          kind!
-        </p>
-        <p>
-          ❖ Given about 23 webinars as Resource person during 2020-21 Lock down.
-        </p>
+        <p>❖ Guided students to placements in ISRO, SAMEER, BSNL, and other PSUs.</p>
+        <p>❖ Excellent feedback from students across institutes.</p>
+        <p>❖ Trained contract faculty in NBA/NAAC at UCEV.</p>
+        <p>❖ Established RUSA project labs in ECE.</p>
+        <p>❖ SC/ST Book Bank established (2013–15).</p>
+        <p>❖ Initiated MoU with TCS under TAAP as TPO (2015).</p>
+        <p>❖ Executed 3 MoUs for ECE Dept. (2020–21).</p>
+        <p>❖ Pioneered mobile-based Virtual Labs training.</p>
+        <p>❖ Delivered 23 webinars during 2020–21 lockdown as a resource person.</p>
       </div>
     </div>
   );

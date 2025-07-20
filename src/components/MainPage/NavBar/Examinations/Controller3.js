@@ -1,6 +1,5 @@
-import React from 'react';
 import Controller3i from "../../../../assets/ExaminationImages/ACE3.jpg";
-import './Examinations.css'; 
+import './Examinations.css';
 
 function Controller3() {
   return (
@@ -21,10 +20,11 @@ function Controller3() {
         
           </div>
           <div className="profileName">
-            <h3>Mr.D D V Sivaram Rolangi</h3>
+            <h3>Mr. D D V Sivaram Rolangi</h3>
           </div>
           <div className="profileDesignation">
-            <h4 className="regularStyleH4">Additional Controller of Examinations 3</h4><br></br>
+            <h4 className="regularStyleH4">Additional Controller of Examinations 3</h4>
+            <h5>for III B.Tech and III B.Pharmacy</h5>
             <h3>Assistant Professor, Department of Computer Science & Engineering</h3>
           </div>
           </center>
@@ -32,7 +32,7 @@ function Controller3() {
           {/* Profile description */}
           <p>Email: ace3@jntugv.edu.in</p>
           <hr />
-          <p>Mr.D D V Sivaram Rolangi, currently working as Assistant Professor in Department of Computer Science and Engineering, University College of Engineering Vizianagaram-JNTU-GV, Vizianagaram, completed his B. Tech in Computer Science and Engineering from V R Siddhartha Engineering College, Vijayawada. M.Tech in Information Technology and  currently pursuing his Ph.D under Visveswaraya PhD scheme  from Andhra University College of Engineering , Andhra University, Visakhapatnam.  </p>
+          <p>Mr. D D V Sivaram Rolangi, currently working as Assistant Professor in Department of Computer Science and Engineering, University College of Engineering Vizianagaram-JNTU-GV, Vizianagaram, completed his B. Tech in Computer Science and Engineering from V R Siddhartha Engineering College, Vijayawada. M.Tech in Information Technology and  currently pursuing his Ph.D under Visveswaraya PhD scheme  from Andhra University College of Engineering , Andhra University, Visakhapatnam.  </p>
           <p>His areas of interests include Theoretical Computer Science, Compiler technologies, Network programming. He has about 19 years of experience in teaching. His research interests include Machine learning, Computer vision, Deep learning, IoT and Assistive Technologies. </p>
         
         <p className="ADsub">Additional Roles carried out so far :</p>
@@ -47,6 +47,7 @@ function Controller3() {
 <p>❖ Dispensary Coordinator </p>
 <p>❖ Public Relations Officer(PRO) of JNTUGV </p>
 <p>❖ Additional Controller of Examinations -III ( ACE-3)</p>
+<p>❖ Additional Controller of Examinations-SDC</p>
 
 </div>
       </div>
