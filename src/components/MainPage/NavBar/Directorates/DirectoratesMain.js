@@ -52,7 +52,7 @@ const DirectoratesMain = () => {
             location.pathname === "/directorates/placements" ? "active" : ""
           }`}
         >
-          Director i/c Industrial Relations & Placements
+          Director of Industrial Relations & Placements
         </Link>
 
         <Link

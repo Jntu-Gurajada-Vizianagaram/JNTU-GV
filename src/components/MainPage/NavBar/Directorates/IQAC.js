@@ -77,7 +77,7 @@ function IQAC() {
 
         <p className="ADsub">Research Contributions :</p>
         <p><img src={tick} alt="Icon" className="AD-icon" /> Areas of Research include Algebra, Lattice theory and Mathematical Modelling (Epidemic models).</p>
-        <p><img src={tick} alt="Icon" className="AD-icon" /> Awarded 5 Ph.Ds., 2 M.Phils., 12 Scholars are working for Ph. D at present.</p>
+        <p><img src={tick} alt="Icon" className="AD-icon" /> Awarded 5 Ph.Ds., 2 M.Phils.,  submitted 2 Ph.Ds., 12 Scholars are working for Ph. D at present.</p>
         <p><img src={tick} alt="Icon" className="AD-icon" /> Published 2 patents.</p>
         <p><img src={tick} alt="Icon" className="AD-icon" /> Published 52 papers in National/International journals, 12 papers presented in Conferences.</p>
         <p><img src={tick} alt="Icon" className="AD-icon" /> Organised 01 Conference, 08 Workshops, attended workshops/Short term Courses/seminars 37, Chaired sessions 04 and delivered 06 talks.</p>
@@ -88,10 +88,10 @@ function IQAC() {
         <p className="ADsub">Professional Contributions :</p>
         <p><img src={tick} alt="Icon" className="AD-icon" /> Life member, Andhra Pradesh Society for Mathematical Sciences (Regd. No. 1310/1986).</p>
         <p><img src={tick} alt="Icon" className="AD-icon" /> Life member, Prof. Minakshi Sundaram Memorial Society (Regd. No. 103/2010).</p>
-        <p><img src={tick} alt="Icon" className="AD-icon" /> Served as Vice-President for Andhra Pradesh Society for Mathematical Sciences (Regd. No. 1310/1986) for 2 years.</p>
+        <p><img src={tick} alt="Icon" className="AD-icon" /> Served as Vice-President , Andhra Pradesh Society for Mathematical Sciences (Regd. No. 1310/1986) for 2 years.</p>
 
         <p className="ADsub">Societal Contributions :</p>
-        <p><img src={tick} alt="Icon" className="AD-icon" /> Worked as Treasurer/ Secretary for Moulana Abul Kamal Azaad Trust (Regd. No: 78/2003) for 20 years.</p>
+        <p><img src={tick} alt="Icon" className="AD-icon" /> Worked as Member / Treasurer , Moulana Abul Kamal Azaad Trust (Regd. No: 78/2003) for 20 years.</p>
         <p><img src={tick} alt="Icon" className="AD-icon" /> Member, Islamic Centre (Regd.No.58/1969), Visakhapatnam since 2015.</p>
         <p><img src={tick} alt="Icon" className="AD-icon" /> Served as President, Teachers Association, UCEV (Regd.No.153/2013) for one year.</p>
 
@@ -100,7 +100,7 @@ function IQAC() {
         <p><img src={tick} alt="Icon" className="AD-icon" /> Conferred with SOMASS Award for proficiency in Mathematics at Post Graduation Studies.</p>
         <p><img src={tick} alt="Icon" className="AD-icon" /> Secured Certificate of Merit and a Medal issued by ROTARY CLUB International Rajahmundry, for higher proficiency in Post Graduation Studies.</p>
         <p><img src={tick} alt="Icon" className="AD-icon" /> Won B.R.M. Memorial Medal for proficiency in Mathematics at School level.</p>
-        <p><img src={tick} alt="Icon" className="AD-icon" /> Stood College Topper at Degree and PG level.</p>
+        <p><img src={tick} alt="Icon" className="AD-icon" /> College Topper at Degree and PG level.</p>
       </div>
     </div>
   );
