@@ -42,6 +42,7 @@
 }
 
 .mainDivIG {
+  flex-direction: row;
   height: auto;
   min-height: 80vh;
   display: flex;

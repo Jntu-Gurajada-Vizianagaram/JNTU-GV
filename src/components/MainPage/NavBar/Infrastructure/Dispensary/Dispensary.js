@@ -15,8 +15,8 @@ const images = [
 ];
   function ImageGallery() {
     return (
-      <div className="mianDivIG">
-        <div className="mainImageGallery">
+      <div className="InframainDivIG">
+        <div className="InfraImageGallery">
           <Carousel fade>
             {images.map((image, index) => (
               <Carousel.Item key={index}>

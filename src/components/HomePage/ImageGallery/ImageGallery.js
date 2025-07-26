@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Carousel, Spinner } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./ImageGallery.css";
+import { useEffect, useState } from "react";
+import { Carousel, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./ImageGallery.css";
 import './TypingEffect.css';
 
 const TypingEffect = () => {
@@ -68,7 +68,7 @@ function ImageGallery() {
         </Link>
       </div>
 
-      <div className="mainImageGallery">
+      <div className="InfraImageGallery">
         {loading ? (
           <div className="spinner-container">
             <Spinner animation="grow" variant="primary" />
