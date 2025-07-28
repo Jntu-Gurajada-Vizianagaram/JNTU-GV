@@ -68,7 +68,7 @@ function ImageGallery() {
         </Link>
       </div>
 
-      <div className="InfraImageGallery">
+      <div className="mainImageGallery">
         {loading ? (
           <div className="spinner-container">
             <Spinner animation="grow" variant="primary" />
