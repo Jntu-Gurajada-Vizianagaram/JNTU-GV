@@ -8,7 +8,7 @@ function Placements() {
     <div className="mainContainer">
       <div className="allRightContent">
         <div className="allRightContentHeading">
-          Director<sup>i/c</sup> Industrial Relations & Placements
+          Director of Industrial Relations & Placements
         </div>
         <br></br>
         <div className="allRightContentProfile">
@@ -22,7 +22,7 @@ function Placements() {
             </div>
             <div className="profileName">
               <h3 className="ADh3">Dr.G.J. Naga Raju</h3>
-              <h3 className="ADh3">Director<sup>i/c</sup> Industrial Relations & Placements</h3>
+              <h3 className="ADh3">Director <sup>i/c</sup>  of Industrial Relations & Placements</h3>
             </div>
             <div className="profileDesignation">
               <h4 className="ADh4">

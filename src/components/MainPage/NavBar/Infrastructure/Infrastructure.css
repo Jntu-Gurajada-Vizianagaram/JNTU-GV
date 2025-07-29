@@ -1,6 +1,16 @@
 /* Add this to your Infrastructure.css file */
+.inframainDivIG {
+    margin-left: 10%;
+    margin-right: 10%;
+} 
 
-.mainImageGallery {
+.infraIamgeGallery {
+    display: flex;
+    flex-direction: column; /* Change to column for better stacking */
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* Light background for contrast */
+    padding: 20px;
   max-width: 80%; /* Adjust the max-width as needed */
 }
 
@@ -59,8 +69,11 @@
     height: 400px;
     width: 80vw;
   }
-  .mainImageGallery {
-    background-color: transparent;
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between images */
   }
   
   .mianDivIG {

@@ -1,8 +1,7 @@
-import React from "react";
-import "../Infrastructure.css";
 import Typography from "@mui/material/Typography";
-import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Carousel } from "react-bootstrap";
+import "../Infrastructure.css";
 import image1 from "./Images/1.jpg";
 import image2 from "./Images/2.jpg";
 import image3 from "./Images/3.jpg";
@@ -20,8 +19,8 @@ const images = [
 ];
   function ImageGallery() {
     return (
-      <div className="mianDivIG">
-        <div className="mainImageGallery">
+      <div className="inframainDivIG">
+        <div className="infraImageGallery">
           <Carousel fade>
             {images.map((image, index) => (
               <Carousel.Item key={index}>
