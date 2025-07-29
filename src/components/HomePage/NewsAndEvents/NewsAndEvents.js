@@ -18,7 +18,6 @@ const NewsAndEvents = () => {
         const data = await response.json();
 
         const sortedData = data.sort((a, b) => b.id - a.id);
-
         const seenDescriptions = new Set();
         const uniqueEvents = [];
 
@@ -67,33 +66,46 @@ const NewsAndEvents = () => {
 
   return (
     <div className="news-and-events">
-      <h1 className="text-center my-4">Latest News and Events</h1>
+      <h1 className="text-center mb-4">Latest News and Events</h1>
 
       {loading ? (
-        <div className="spinner-container d-flex justify-content-center">
-          <div className="spinner-grow text-primary" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
+        <div className="spinner-container">
+          <div className="spinner-grow text-primary" role="status" />
         </div>
       ) : (
-        <div className="news-and-events-display d-flex flex-wrap justify-content-center">
-          {latestEvents.map((item, index) => (
-            <div key={index} className="news-and-events-container m-3 text-center">
-              <img
-                src={item.image}
-                alt={item.title}
-                onClick={() => handleShowModal(item.image, item.title, item.description)}
-                className="img-fluid"
-                style={{ maxHeight: '200px', cursor: 'pointer' }}
-              />
-              <div className="desc-cont mt-2">
-                <div className="desc-container fw-bold">{item.title}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
+  <div className="news-and-events-display">
+  {latestEvents.slice(0, 4).map((item, index) => (
+    <div key={index} className="news-and-events-container">
+      <img
+        src={item.image}
+        alt={item.title}
+        onClick={() => handleShowModal(item.image, item.title, item.description)}
+      />
+      <div className="desc-cont">
+        <div className="desc-container fw-bold">{item.title}</div>
+      </div>
+    </div>
+  ))}
 
+  {/* Second row with 2 cards centered */}
+  <div className="news-and-events-second-row">
+    {latestEvents.slice(4, 6).map((item, index) => (
+      <div key={index} className="news-and-events-container">
+        <img
+          src={item.image}
+          alt={item.title}
+          onClick={() => handleShowModal(item.image, item.title, item.description)}
+        />
+        <div className="desc-cont">
+          <div className="desc-container fw-bold">{item.title}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+      )}
       <ImageModal
         show={showModal}
         handleClose={handleCloseModal}
