@@ -1,0 +1,84 @@
+.notification-ticker-wrapper {
+  background-color: #f3effa;
+  border-top: 3px solid #340468;
+  border-bottom: 3px solid #340468;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  width: 100%;
+  display: none;
+}
+
+.notification-header {
+  display: flex;
+  align-items: center;
+  background-color: #340468;
+  color: #fff;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.notification-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.ticker-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.ticker-content {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker-scroll 30s linear infinite;
+  animation-delay: 0ms;
+  will-change: transform;
+}
+
+.ticker-item {
+  display: inline-block;
+  padding: 0 50px;
+  font-size: 0.95rem;
+  color: #340468;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.ticker-item:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+    .notification-ticker-wrapper {
+        display: block;
+    }
+  .ticker-item {
+    padding: 0 30px;
+    font-size: 0.85rem;
+  }
+
+  .notification-header {
+    font-size: 0.9rem;
+  }
+
+  .notification-icon {
+    font-size: 1rem;
+  }
+}

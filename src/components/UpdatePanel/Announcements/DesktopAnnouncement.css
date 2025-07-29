@@ -1,0 +1,96 @@
+.announcement-wrapper {
+  max-width: 76%;
+  margin: 0 auto;
+  padding-bottom: 0;
+  border-radius: 12px;
+  background: #f5f5f5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.notification-header {
+  display: flex;
+  align-items: center;
+  background-color: #340468;
+  color: #fff;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.notification-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+
+
+
+
+.notification-container {
+  position: relative;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.notification-box {
+  position: absolute;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: opacity 0.8s ease, transform 0.8s ease, font-size 0.8s ease;
+  opacity: 0;
+  transform: scale(0.7);
+  text-align: center;
+  max-width: 98%;
+}
+
+.notification-box.visible {
+  opacity: 1;
+  transform: scale(1);
+  font-size: 1.05rem;
+}
+
+.notification-box.hidden {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+/* 🔧 Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+  .announcement-wrapper {
+    
+    display: none;
+  }
+
+  .notification-container {
+    height: 40px;
+
+  }
+
+  .notification-box {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  
+
+  .notification-container {
+    height: auto;
+    min-height: 40px;
+  }
+
+  .notification-box {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
