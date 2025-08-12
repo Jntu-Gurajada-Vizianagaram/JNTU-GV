@@ -1,11 +1,7 @@
 
 .aboutUs {
   background-color: #370b69;
-  background-image: linear-gradient(
-    transparent,
-    transparent 320px,
-    rgba(255, 255, 255,0.9) 370px
-  );
+ 
   padding-top:4.75rem ;
 }
 
@@ -15,7 +11,9 @@
   border-radius: 0.9375rem; /* 15px */
   cursor: pointer;
   box-shadow: 0 0.20rem 1.20rem 0 rgba(255, 255, 255, 0.1); /* 0px 4px 20px */
-  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  background-color: #fff;
+   
+ 
   width: 85%;
   height: auto;
   flex-shrink: 0;
@@ -35,11 +33,13 @@
   height: 10.5rem; 
   border-radius: 50%;
   margin-top: 3.125rem; 
-  margin-bottom: 0.625rem; 
+  margin-bottom: 0.625rem;
+  border: 3px solid #370b69 ;
 }
 
+
 .aboutUs-name {
-  color: whitesmoke;
+  color: #370b69;
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem; 
   font-style: normal;
@@ -79,13 +79,11 @@
   .aboutUs-name {
     font-size: 1.125rem;
     line-height: 1.5;
-    color:#370b69;
+  
   }
 
   .aboutUs-designation {
     font-size: 0.75rem; 
     }
-   .aboutUs-card{
-    background:linear-gradient(360deg, #fff 0%, rgba(255, 255, 255, 0) 100%)
-   }
+   
 }

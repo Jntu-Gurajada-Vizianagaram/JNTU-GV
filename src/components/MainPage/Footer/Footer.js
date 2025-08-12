@@ -227,9 +227,8 @@ function Footer() {
       <hr className="footerHr" />
       <div className="subcontainer3Footer">
         {/* Contact Us */}
-        <p className="subheadingFooter">Contact Us :</p>
-        <p>
-          JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY-GURAJADA
+        <p className="subheadingFooter">Contact Us: </p>
+        <p className="px-2"> JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY-GURAJADA
           VIZIANAGARAM,DWARAPUDI, VIZIANAGARAM, ANDHRA PRADESH - 535 003, Andhra
           Pradesh, INDIA.
         </p>
