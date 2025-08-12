@@ -1,63 +1,67 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { Carousel, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./ImageGallery.css";
-import './TypingEffect.css';
+import "./TypingEffect.css";
 
-const TypingEffect = () => {
-  const [displayedText, setDisplayedText] = useState('');
-  const fullText = 'Welcome to JNTU Gurajada, Vizianagaram';
-  const typingSpeed = 100;
+const TypingEffect = ({ text, speed = 100 }) => {
+  const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
-    let currentText = '';
-    let charIndex = 0;
+    setDisplayedText(""); // Reset on text change
+    let index = 0;
+    let timerId;
 
-    const typeCharacter = () => {
-      if (charIndex < fullText.length) {
-        currentText += fullText[charIndex];
-        setDisplayedText(currentText);
-        charIndex++;
-        setTimeout(typeCharacter, typingSpeed);
+    const type = () => {
+      if (index < text.length) {
+        setDisplayedText(text.slice(0, index + 1)); // Use slice instead of appending
+        index++;
+        timerId = setTimeout(type, speed);
       }
     };
 
-    typeCharacter();
-  }, []);
+    type();
+    return () => clearTimeout(timerId); // Cleanup
+  }, [text, speed]);
 
   return (
     <div className="typing-container">
-      <h1>{displayedText}<span className="caret"></span></h1>
+      <h1>
+        {displayedText}
+        <span className="caret"></span>
+      </h1>
     </div>
   );
 };
+
 
 function ImageGallery() {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await fetch(
-          "https://api.jntugv.edu.in/api/webadmin/carousel-images"
-        );
-        const apiData = await response.json();
-        setImages(apiData);
-        setLoading(false); // Turn off loading after images are fetched
-      } catch (err) {
-        console.log(err);
-        setLoading(false); // Even on error, turn off loading
-      }
-    };
-    fetchImages();
+  const fetchImages = useCallback(async () => {
+    try {
+      const response = await fetch(
+        "https://api.jntugv.edu.in/api/webadmin/carousel-images"
+      );
+      const apiData = await response.json();
+      setImages(apiData);
+    } catch (err) {
+      console.error("Image fetch failed:", err);
+    } finally {
+      setLoading(false);
+    }
   }, []);
+
+  useEffect(() => {
+    fetchImages();
+  }, [fetchImages]);
 
   return (
     <div className="mainDivIG">
       <div className="leftDivGallery">
-        <TypingEffect />
+        <TypingEffect text="Welcome to JNTU Gurajada, Vizianagaram" speed={100} />
         <p>
           At JNTU Gurajada, Vizianagaram, we are dedicated to sculpting minds through innovative teaching, cutting-edge research, and a vibrant community engagement. Our mission is to empower students with a thirst for knowledge that transcends borders.
           <br />
@@ -68,29 +72,36 @@ function ImageGallery() {
         </Link>
       </div>
 
-      <div className="mainImageGallery">
+      <div className="mainImageGallery fixed-carousel-height">
         {loading ? (
-          <div className="spinner-container">
-            <Spinner animation="grow" variant="primary" />
-            <p>Loading images...</p>
+          <div className="spinner-placeholder">
+            <Spinner animation="grow" variant="primary" role="status" />
           </div>
         ) : (
-          <Carousel fade>
-            {Array.isArray(images) && images.map((image, index) => (
-              <Carousel.Item key={index}>
-                <img
-                  className="ig-image"
-                  src={image.imglink}
-                  alt={`Slide ${image.description}`}
-                />
-                {image.description !== "NA" && (
-                  <Carousel.Caption>
-                    <div className="carouselText">{image.description}</div>
-                  </Carousel.Caption>
-                )}
-              </Carousel.Item>
-            ))}
-          </Carousel>
+         <Carousel fade interval={4000}>
+  {images.map((image, index) => (
+    <Carousel.Item key={index}>
+      <img
+        className="ig-image"
+        src={image.imglink}
+        alt={image.description !== "NA" ? image.description : `Slide ${index + 1}`}
+        width="1200"
+        height="400"
+        {...(index === 0
+          ? { fetchpriority: "high" } // First image: high priority
+          : { loading: "lazy" }       // Other images: lazy load
+        )}
+        style={{ objectFit: "cover" }}
+      />
+      {image.description !== "NA" && (
+        <Carousel.Caption>
+          <div className="carouselText">{image.description}</div>
+        </Carousel.Caption>
+      )}
+    </Carousel.Item>
+  ))}
+</Carousel>
+
         )}
       </div>
     </div>
