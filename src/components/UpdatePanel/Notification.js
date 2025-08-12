@@ -48,8 +48,10 @@ const Notification = ({ displayData }) => {
               </div>
             ) : (
               <>
-                <div className="dateTimeContainer">
-                  <div className="dateDiv">{entry.day}</div>
+                <div className="dateTimeContainer px-2 py-2">
+                  <div className="dateDiv">
+                <span>{entry.day < 10 ? `0${entry.day}` : entry.day}</span>                   
+                    </div>
                   <div className="monYear">
                     <div className="monthDiv">{entry.month}</div>
                     <div className="yearDiv">{entry.year}</div>
@@ -95,7 +97,7 @@ const Notification = ({ displayData }) => {
                             color: "rgb(55, 10, 104)",
                           }}
                         >
-                          {entry.external_text}
+                          Click Here
                         </a>
                       </Button>
                     )}
