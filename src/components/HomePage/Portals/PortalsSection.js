@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Card from './Card';
 
@@ -58,7 +57,13 @@ const websiteData = [
     "image": "DMC.jpg",
     "link": "https://dmc.jntugv.edu.in/"
   },
- 
+ {
+"id" : 10,
+"title": "Online Coures",
+'image': "Online Courses.png",
+"link": "https://emergingtechnologiesbyjntugv.netlify.app/"
+
+ },
 
   
 ];
