@@ -60,7 +60,7 @@ const websiteData = [
  {
 "id" : 10,
 "title": "Certification Courses",
-'image': "Online Courses.png",
+'image': "Certification_courses.jpg",
 "link": "https://emergingtechnologiesbyjntugv.netlify.app/"
 
  },
