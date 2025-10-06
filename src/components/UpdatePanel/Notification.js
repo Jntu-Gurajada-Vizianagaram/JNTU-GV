@@ -97,7 +97,7 @@ const Notification = ({ displayData }) => {
                             color: "rgb(55, 10, 104)",
                           }}
                         >
-                          Click Here
+                          {entry.external_text}
                         </a>
                       </Button>
                     )}
