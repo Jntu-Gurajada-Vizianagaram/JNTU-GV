@@ -17,6 +17,16 @@ const ConstituentCollegesOP = () => {
         </a>
         <a
           className="clgnamediv"
+          href="https://jntugvcpsv.jntugv.edu.in/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="clgtextdivOP">
+            JNTU-GV College of Pharmaceutical Sciences, Vizianagaram
+          </div>
+        </a>
+        <a
+          className="clgnamediv"
           href="https://teck.jntugv.edu.in/"
           target="_blank"
           rel="noreferrer"

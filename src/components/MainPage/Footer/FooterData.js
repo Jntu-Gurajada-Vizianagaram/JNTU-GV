@@ -70,9 +70,13 @@ export const Constituent_Colleges = [
     link: "https://jntugvcev.edu.in",
   },
   {
-    title:"JNTU-GV Tribal College of Engineering, Kurupam",
-    link:"https://teck.jntugv.edu.in/"
-  }
+    title: "JNTU-GV College of  Pharmaceutical Sciences, Vizianagaram",
+    link: "https://jntugvcpsv.jntugv.edu.in/",
+  },
+  {
+    title: "JNTU-GV Tribal College of Engineering, Kurupam",
+    link: "https://teck.jntugv.edu.in/",
+  },
 ];
 
 export const University_Hostels = [
