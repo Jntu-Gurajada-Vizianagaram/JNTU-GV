@@ -23,10 +23,10 @@ const NewsAndEvents = () => {
 
         for (const photo of sortedData) {
           if (
-            photo.id % 2 === 0 &&
             !seenDescriptions.has(photo.description) &&
             photo.imagelink &&
             photo.event_name &&
+            !
             photo.description
           ) {
             seenDescriptions.add(photo.description);

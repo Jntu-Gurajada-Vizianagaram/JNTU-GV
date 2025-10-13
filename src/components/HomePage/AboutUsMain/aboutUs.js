@@ -1,11 +1,10 @@
-import React from "react";
 import "./aboutUs.css";
 
 import { Link } from "react-router-dom";
 
 import chancellor from "../../../assets/AdminDirectoratesImages/chancellor.jpeg";
-import vc from "../../../assets/AdminDirectoratesImages/doe.png";
 import registrar from "../../../assets/AdminDirectoratesImages/registrar.jpeg";
+import vc from "../../../assets/AdminDirectoratesImages/vc.png";
 
 const AboutUs = () => {
 
@@ -29,8 +28,8 @@ const AboutUs = () => {
           <Link to="administration/vice-chancellor" className="more-link row justify-content-center">
             <div className="aboutUs-card">
               <img src={vc} alt="vice-chancellor" className="aboutUs-image" />
-              <p className="aboutUs-name">Dr. D. Rajya Lakshmi</p>
-              <p className="aboutUs-designation">Hon’ble Vice Chancellor(i/c)</p>
+              <p className="aboutUs-name">Prof. Vissakodeti Venkata Subba Rao</p>
+              <p className="aboutUs-designation">Hon’ble Vice Chancellor</p>
               <br/>
             </div>
             </Link>
