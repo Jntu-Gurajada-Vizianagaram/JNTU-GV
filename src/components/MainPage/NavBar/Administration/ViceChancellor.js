@@ -16,19 +16,19 @@ function ViceChancellor() {
         </p>
       </div>
 
-      <div className="profileDetails">
+      {/* <div className="profileDetails">
         <div className="contributions">
         <div className="registar-1">
           <p>
          Prof. Vissakodeti Venkata Subba Rao is the Vice-Chancellor of
-          Jawaharlal Nehru Technological University, Gurajada, Vizianagaram. She
+          Jawaharlal Nehru Technological University, Gurajada, Vizianagaram. He
           is an academician par excellence, a beloved teacher, and a focused
           leader with the vision to improve Indian education to internationally
           approved standards.
           </p>
         </div>
-      
-        {/* <div className="registar-2">
+        
+        <div className="registar-2">
          <p className="AD-sub">Academic Qualifications</p>
          <p>
            <img src={tick} alt="Icon" className="AD-icon" /> Ph.D., Computer Science & Engineering, JNTUH, Hyderabad.
@@ -182,9 +182,9 @@ Reference
 
 
     </div> */}
-      </div>
-        </div>
+
     </div>
+
     
   );
 }
