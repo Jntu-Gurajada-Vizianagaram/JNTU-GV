@@ -61,7 +61,7 @@ import CompleteGallery from "./components/Gallery/CompleteGallery";
 import ScrollToTop from "./components/HomePage/AboutUsMain/ScrollToTop";
 import Homepage from "./components/HomePage/Homepage";
 import NewsAndEvents from "./components/HomePage/NewsAndEvents/NewsAndEvents";
-import Chatbot from "./components/MainPage/Chatbot/Chatbot";
+// import Chatbot from "./components/MainPage/Chatbot/Chatbot";
 import Footer from "./components/MainPage/Footer/Footer";
 import PrivacyPolicy from "./components/MainPage/Footer/PrivacyPolicy";
 import Regulations from "./components/MainPage/NavBar/Academics/Regulations/Regulations";
@@ -195,7 +195,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />}></Route>
 
       </Routes>
-      <Chatbot/>
+      {/* <Chatbot/> */}
       <Footer />
     </div>
   );

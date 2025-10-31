@@ -18,15 +18,16 @@ const NewsAndEvents = () => {
         const data = await response.json();
 
         const sortedData = data.sort((a, b) => b.id - a.id);
+
         const seenDescriptions = new Set();
         const uniqueEvents = [];
 
         for (const photo of sortedData) {
           if (
+            photo.id % 2 === 0 &&
             !seenDescriptions.has(photo.description) &&
             photo.imagelink &&
             photo.event_name &&
-            !
             photo.description
           ) {
             seenDescriptions.add(photo.description);
@@ -66,11 +67,13 @@ const NewsAndEvents = () => {
 
   return (
     <div className="news-and-events">
-      <h1 className="text-center mb-4">Latest News and Events</h1>
+      <h1 className="text-center mb-4 notifications-title" >Latest News and Events</h1>
 
       {loading ? (
         <div className="spinner-container">
           <div className="spinner-grow text-primary" role="status" />
+
+
         </div>
       ) : (
   <div className="news-and-events-display">
