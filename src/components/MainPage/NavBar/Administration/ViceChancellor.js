@@ -8,7 +8,7 @@ function ViceChancellor() {
         <div className="profile-Image">
           <img src={vc} alt="Profile" />
         </div>
-        <h3>Prof. Vissakodeti Venkata Subba Rao</h3>
+        <h3>Prof. V V Subba Rao</h3>
         <h4>Hon’ble Vice-Chancellor</h4>
         <p>
           <MdOutlineMailOutline width="40px" />

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import axios from 'axios';
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 import "./Grievance.css";
 
 const InputField = ({ label, type, name, value, onChange, required = false }) => (
@@ -20,6 +20,13 @@ const InputField = ({ label, type, name, value, onChange, required = false }) =>
 );
 
 const Grievance = () => {
+   const EMAILJS_SERVICE_ID = "service_mpi2myc";
+  const EMAILJS_TEMPLATE_ID = "template_7p08hjm"; 
+  const EMAILJS_PUBLIC_KEY = "i-pATD4P1oocD86xd";
+
+ // const formRef = useRef();
+  const fileInputRef = useRef();
+
   const initialState = {
     rollno: "",
     email: "",
@@ -30,10 +37,12 @@ const Grievance = () => {
     category: "",
     msg: "",
     date: "",
-    file: null,
   };
 
   const [formData, setFormData] = useState(initialState);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,77 +53,270 @@ const Grievance = () => {
   };
 
   const handleFileChange = (e) => {
-    setFormData({
-      ...formData,
-      file: e.target.files[0],
-    });
+    setSelectedFile(e.target.files[0]);
   };
 
-  const sendMail = async () => {
-    alert("Sending Mail...");
-    const form = new FormData();
-    for (const key in formData) {
-      form.append(key, formData[key]);
-    }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
 
     try {
-      const response = await axios.post("http://117.221.101.104:8888/api/mailing/send-grievance", form);
-      if (response.data.success === true) {
-        alert("Grievance Mail Sent");
-      } else {
-        alert("No response");
+      // Prepare template parameters
+      const templateParams = {
+        student_rollno: formData.rollno,
+        student_email: formData.email,
+        student_name: formData.name,
+        phone_number: formData.phno,
+        aadhar_number: formData.adhaarno,
+        college_name: formData.collegename,
+        grievance_category: formData.category,
+        grievance_message: formData.msg,
+        incident_date: formData.date,
+        submission_date: new Date().toLocaleDateString(),
+        submission_time: new Date().toLocaleTimeString(),
+        attachment_name: selectedFile ? selectedFile.name : 'No attachment',
+      };
+
+      // Method 1: Using send (without file attachment)
+      const result = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      // If you need file attachment, you'll need to use a different approach
+      // as EmailJS free tier has limitations with file attachments
+      
+      if (result.text === 'OK') {
+        setSubmitStatus('success');
+        setFormData(initialState);
+        setSelectedFile(null);
+        if (fileInputRef.current) {
+          fileInputRef.current.value = '';
+        }
+        alert('Grievance submitted successfully!');
       }
+      
     } catch (error) {
-      alert("Error sending grievance: " + error.message);
+      console.error('Error sending grievance:', error);
+      setSubmitStatus('error');
+      alert('Failed to submit grievance. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
+  };
+
+  // Alternative method if you want to use sendForm (requires form element)
+  // const handleSubmitWithForm = async (e) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+
+  //   try {
+  //     // This method requires the actual form element
+  //     const result = await emailjs.sendForm(
+  //       EMAILJS_SERVICE_ID,
+  //       EMAILJS_TEMPLATE_ID,
+  //       formRef.current,
+  //       EMAILJS_PUBLIC_KEY
+  //     );
+
+  //     if (result.text === 'OK') {
+  //       setSubmitStatus('success');
+  //       setFormData(initialState);
+  //       setSelectedFile(null);
+  //       alert('Grievance submitted successfully!');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error sending grievance:', error);
+  //     setSubmitStatus('error');
+  //     alert('Failed to submit grievance. Please try again.');
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
+  const isFormValid = () => {
+    return (
+      formData.rollno &&
+      formData.email &&
+      formData.name &&
+      formData.phno &&
+      formData.adhaarno &&
+      formData.collegename &&
+      formData.category &&
+      formData.msg &&
+      formData.date
+    );
   };
 
   return (
-    <div className="container w-50 cont">
-      <div className="form-control mb-3">
-        <div>
-          <center>
-            <h1>JNTUGV Student Grievance Form</h1>
-          </center>
+    <div className="container grievance-container">
+      <div className="grievance-card">
+        <div className="grievance-header">
+          <h1>JNTUGV Student Grievance Form</h1>
         </div>
-        <hr />
-        <div style={{ color: "red" }}>* denotes a required field</div>
-      </div>
-      <form>
-        <InputField label="Student Roll Number" type="text" name="rollno" value={formData.rollno} onChange={handleChange} required />
-        <InputField label="Email" type="email" name="email" value={formData.email} onChange={handleChange} required />
-        <InputField label="Full Name" type="text" name="name" value={formData.name} onChange={handleChange} required />
-        <InputField label="Aadhar Number" type="number" name="adhaarno" value={formData.adhaarno} onChange={handleChange} required />
-        <InputField label="College Name" type="text" name="collegename" value={formData.collegename} onChange={handleChange} required />
-        <InputField label="Phone Number" type="number" name="phno" value={formData.phno} onChange={handleChange} required />
-        <InputField label="Category of Grievance" type="text" name="category" value={formData.category} onChange={handleChange} required />
-        <div className="form-floating mb-3">
-          <textarea
-            style={{ height: "22vh" }}
-            className="form-control"
-            placeholder="Detailed Description of the Grievance"
-            name="msg"
-            value={formData.msg}
-            onChange={handleChange}
-            required
+        
+        <div className="required-note">
+          <span className="required">*</span> Required fields
+        </div>
+
+        {/* Method 1: Using send() - Recommended */}
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-md-6">
+              <InputField 
+                label="Student Roll Number" 
+                type="text" 
+                name="rollno" 
+                value={formData.rollno} 
+                onChange={handleChange} 
+                required 
+              />
+            </div>
+            <div className="col-md-6">
+              <InputField 
+                label="Email" 
+                type="email" 
+                name="email" 
+                value={formData.email} 
+                onChange={handleChange} 
+                required 
+              />
+            </div>
+          </div>
+
+          <InputField 
+            label="Full Name" 
+            type="text" 
+            name="name" 
+            value={formData.name} 
+            onChange={handleChange} 
+            required 
           />
-          <label className="form-label">
-            Detailed Description of the Grievance <span className="required">*</span>
-          </label>
-        </div>
-        <InputField label="Date of Incident" type="date" name="date" value={formData.date} onChange={handleChange} required />
-        <div className="mb-3">
-          <label className="form-label">
-            Any Supporting Documents (Attachment) <span className="required">*</span>
-          </label>
-          <input type="file" className="form-control" name="file" required onChange={handleFileChange} />
-        </div>
-        <div className="form-floating m-5">
-          <button className="btn btn-success w-100" type="button" onClick={sendMail}>
-            Send Grievance
-          </button>
-        </div>
-      </form>
+
+          <div className="row">
+            <div className="col-md-6">
+              <InputField 
+                label="Aadhar Number" 
+                type="text" 
+                name="adhaarno" 
+                value={formData.adhaarno} 
+                onChange={handleChange} 
+                required 
+              />
+            </div>
+            <div className="col-md-6">
+              <InputField 
+                label="Phone Number" 
+                type="tel" 
+                name="phno" 
+                value={formData.phno} 
+                onChange={handleChange} 
+                required 
+              />
+            </div>
+          </div>
+
+          <InputField 
+            label="College Name" 
+            type="text" 
+            name="collegename" 
+            value={formData.collegename} 
+            onChange={handleChange} 
+            required 
+          />
+
+          <InputField 
+            label="Category of Grievance" 
+            type="text" 
+            name="category" 
+            value={formData.category} 
+            onChange={handleChange} 
+            required 
+          />
+
+          <div className="form-floating mb-3">
+            <textarea
+              style={{ height: "120px" }}
+              className="form-control"
+              placeholder="Detailed Description of the Grievance"
+              name="msg"
+              value={formData.msg}
+              onChange={handleChange}
+              required
+            />
+            <label className="form-label">
+              Detailed Description <span className="required">*</span>
+            </label>
+          </div>
+
+          <InputField 
+            label="Date of Incident" 
+            type="date" 
+            name="date" 
+            value={formData.date} 
+            onChange={handleChange} 
+            required 
+          />
+
+          <div className="mb-3">
+            <label className="form-label">
+              Supporting Document (Optional)
+            </label>
+            <input 
+              ref={fileInputRef}
+              type="file" 
+              className="form-control" 
+              name="file" 
+              onChange={handleFileChange}
+              accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+            />
+            <div className="form-text">
+              {selectedFile ? `Selected: ${selectedFile.name}` : 'PDF, DOC, JPG, PNG (Max 5MB)'}
+            </div>
+          </div>
+
+          <div className="form-floating mt-4">
+            <button 
+              className={`submit-btn ${isSubmitting ? 'loading' : ''}`}
+              type="submit"
+              disabled={!isFormValid() || isSubmitting}
+            >
+              {isSubmitting ? 'Submitting...' : 'Submit Grievance'}
+            </button>
+          </div>
+
+          {submitStatus === 'success' && (
+            <div className="alert success" role="alert">
+              Grievance submitted successfully!
+            </div>
+          )}
+
+          {submitStatus === 'error' && (
+            <div className="alert error" role="alert">
+              Failed to submit. Please try again.
+            </div>
+          )}
+        </form>
+
+        {/* Method 2: Using sendForm() - Alternative approach */}
+        {/* <form ref={formRef} onSubmit={handleSubmitWithForm} style={{display: 'none'}}>
+          <input type="hidden" name="student_rollno" value={formData.rollno} />
+          <input type="hidden" name="student_email" value={formData.email} />
+          <input type="hidden" name="student_name" value={formData.name} />
+          <input type="hidden" name="phone_number" value={formData.phno} />
+          <input type="hidden" name="aadhar_number" value={formData.adhaarno} />
+          <input type="hidden" name="college_name" value={formData.collegename} />
+          <input type="hidden" name="grievance_category" value={formData.category} />
+          <input type="hidden" name="grievance_message" value={formData.msg} />
+          <input type="hidden" name="incident_date" value={formData.date} />
+          <input type="hidden" name="submission_date" value={new Date().toLocaleDateString()} />
+          <input type="hidden" name="submission_time" value={new Date().toLocaleTimeString()} />
+          <input type="hidden" name="attachment_name" value={selectedFile ? selectedFile.name : 'No attachment'} />
+        </form> */}
+      </div>
     </div>
   );
 };

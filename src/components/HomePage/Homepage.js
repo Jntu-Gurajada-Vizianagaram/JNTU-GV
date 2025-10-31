@@ -11,13 +11,16 @@ import UpdatePanel from "../UpdatePanel/UpdatePanel";
 import Gallery from "../Gallery/Gallery";
 import Youtube from "./Youtube/Youtube";
 import Portals from "./Portals/PortalsSection";
-
+import AnnouncementMobile from "./Announcements/MobileAnnouncement";
+import Colleges from "./ConstituentColleges/Colleges";
 function Homepage() {
   return (
     <div>
+      <AnnouncementMobile/>
       <ImageGallery />
       <AboutUs />
-      {/* <Scrollbar className="update-panel"/> */}
+      <Colleges/>
+
       <UpdatePanel className="update-panel" />
       <Portals/>
       <NewsAndEvents />

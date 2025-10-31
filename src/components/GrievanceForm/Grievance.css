@@ -1,23 +1,118 @@
-.required{
-    color: red;
-}
-.cont{
-    display: inline-block;
-    margin: 2vw 25vw;
+.grievance-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-@media(max-width:900px) {
-    .cont{
-        margin: 0;
-    }
-    .w-50{
-        font-size: 80%;
-        min-width: 100%;
-    }
-    .form-control{
-        max-width: 100%;
-    }
-    .container{
-        min-width: 100%;
-    }
+.grievance-card {
+  background: white;
+  border-radius: 8px;
+  border: 2px solid #370a68;
+  padding: 2rem;
+}
+
+.grievance-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #55b2e7;
+}
+
+.grievance-header h1 {
+  color: #370a68;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.required-note {
+  color: #370a68;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.required {
+  color: #370a68;
+  font-weight: bold;
+}
+
+.form-control {
+  border: 1px solid #370a68;
+  border-radius: 4px;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  border-color: #55b2e7;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(85, 178, 231, 0.2);
+}
+
+.form-label {
+  color: #370a68;
+  font-weight: 500;
+}
+
+.submit-btn {
+  background: #370a68;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #55b2e7;
+}
+
+.submit-btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.alert {
+  padding: 12px;
+  border-radius: 4px;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.alert.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.form-text {
+  color: #370a68;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .grievance-container {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+  
+  .grievance-card {
+    padding: 1rem;
+  }
+  
+  .grievance-header h1 {
+    font-size: 1.5rem;
+  }
 }

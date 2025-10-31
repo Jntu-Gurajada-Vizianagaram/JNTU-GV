@@ -71,7 +71,7 @@ const websiteData = [
 const Portals = () => {
   return (
     <Container>
-      <h1 className='heading'>Website Portals</h1>
+      <h1 className='notifications-title'>Website Portals</h1>
       <CardGrid>
         {websiteData.map((website) => (
           <Card
@@ -96,23 +96,35 @@ const Container = styled.div`
   justify-content: center;
   color: #2e0669;
   margin-top: 30px;
-  font-weight: 600; /* Optional: Adjust font size */
-    margin-bottom: 20px; /* Optional: Add margin below the heading */
+  font-weight: 600; 
+    margin-bottom: 20px;
   }
+   
+
+  .notifications-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #55b2e7;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
 `;
 
 const CardGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 cards per row on larger devices */
+  grid-template-columns: repeat(5, 1fr); 
   gap: 20px;
   padding: 20px;
 
   @media (max-width: 1200px) {
-    grid-template-columns: repeat(4, 1fr); /* 4 cards per row on medium devices */
+    grid-template-columns: repeat(4, 1fr); 
   }
 
   @media (max-width: 860px) {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 

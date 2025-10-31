@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { Data } from "./Data";
 import Notification from "./Notification";
 import "./UpdatePanel.css";
-import DesktopAnnouncement from "./Announcements/DesktopAnnouncement";
-import MobileAnnouncement from "./Announcements/MobileAnnouncement";
 
 // import CircularProgress from "@mui/material/CircularProgress";
 
@@ -146,9 +144,8 @@ function UpdatePanel() {
 
   return (
     <div id="events">
-      <div className="notifications-title"></div>
-      <DesktopAnnouncement/>
-      <MobileAnnouncement/>
+      <div className="notifications-title">Notifications</div>
+     
       <div className="updateComponent">
         <div className="updateButtons">
           <button
