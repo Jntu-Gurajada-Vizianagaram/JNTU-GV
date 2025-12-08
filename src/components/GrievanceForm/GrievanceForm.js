@@ -108,35 +108,6 @@ const Grievance = () => {
     }
   };
 
-  // Alternative method if you want to use sendForm (requires form element)
-  // const handleSubmitWithForm = async (e) => {
-  //   e.preventDefault();
-  //   setIsSubmitting(true);
-
-  //   try {
-  //     // This method requires the actual form element
-  //     const result = await emailjs.sendForm(
-  //       EMAILJS_SERVICE_ID,
-  //       EMAILJS_TEMPLATE_ID,
-  //       formRef.current,
-  //       EMAILJS_PUBLIC_KEY
-  //     );
-
-  //     if (result.text === 'OK') {
-  //       setSubmitStatus('success');
-  //       setFormData(initialState);
-  //       setSelectedFile(null);
-  //       alert('Grievance submitted successfully!');
-  //     }
-  //   } catch (error) {
-  //     console.error('Error sending grievance:', error);
-  //     setSubmitStatus('error');
-  //     alert('Failed to submit grievance. Please try again.');
-  //   } finally {
-  //     setIsSubmitting(false);
-  //   }
-  // };
-
   const isFormValid = () => {
     return (
       formData.rollno &&
@@ -301,21 +272,7 @@ const Grievance = () => {
           )}
         </form>
 
-        {/* Method 2: Using sendForm() - Alternative approach */}
-        {/* <form ref={formRef} onSubmit={handleSubmitWithForm} style={{display: 'none'}}>
-          <input type="hidden" name="student_rollno" value={formData.rollno} />
-          <input type="hidden" name="student_email" value={formData.email} />
-          <input type="hidden" name="student_name" value={formData.name} />
-          <input type="hidden" name="phone_number" value={formData.phno} />
-          <input type="hidden" name="aadhar_number" value={formData.adhaarno} />
-          <input type="hidden" name="college_name" value={formData.collegename} />
-          <input type="hidden" name="grievance_category" value={formData.category} />
-          <input type="hidden" name="grievance_message" value={formData.msg} />
-          <input type="hidden" name="incident_date" value={formData.date} />
-          <input type="hidden" name="submission_date" value={new Date().toLocaleDateString()} />
-          <input type="hidden" name="submission_time" value={new Date().toLocaleTimeString()} />
-          <input type="hidden" name="attachment_name" value={selectedFile ? selectedFile.name : 'No attachment'} />
-        </form> */}
+       
       </div>
     </div>
   );

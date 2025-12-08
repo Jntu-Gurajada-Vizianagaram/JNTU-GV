@@ -7,6 +7,7 @@ import {
   Menu as MenuIcon,
   Person as PersonIcon,
   School as SchoolIcon,
+  Verified  as CertificateIcon
 } from "@mui/icons-material";
 import LinkIcon from '@mui/icons-material/Link';
 import React, { useState } from "react";
@@ -133,6 +134,19 @@ const NavBar = () => {
         // Add more sub-items as needed
       ],
     },
+
+    {
+      icon: <CertificateIcon />,
+      label: " PG Certification Courses",
+      path: "/contact-us",
+      subItems: [
+        {
+          label: "PGCPAITL",
+          path: "https://pgcpaitl.jntugv.edu.in",
+        },]
+    },
+
+
     {
       icon: <DraftsIcon />,
       label: " CONTACT US",
