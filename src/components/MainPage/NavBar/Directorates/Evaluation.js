@@ -6,7 +6,7 @@ function Evaluation() {
   return (
     <div className="mainContainer">
       <div className="allRightContent">
-        <div className="allRightContentHeading">Director of Evaluation</div>
+        <div className="allRightContentHeading">Director of Evaluation & Admissions</div>
         <br></br>
         <div className="allRightContentProfile">
           {/* Profile information */}
@@ -16,7 +16,7 @@ function Evaluation() {
             </div>
             <div className="profileName">
               <h3 className="ADh3">Dr. K. Babulu</h3>
-              <h3 className="ADh3">Director of Evaluation i/c</h3>
+              <h3 className="ADh3">Director of Evaluation & Admissions</h3>
             </div>
             <div className="profileDesignation">
               <h4 className="ADh4">
@@ -26,7 +26,7 @@ function Evaluation() {
           </center>
           <hr />
           {/* Profile description */}
-          <p>Email: de@jntugv.edu.in</p>
+          <p>Email: de@jntugv.edu.in, da@jntugv.edu.in</p>
           <hr></hr>
           <p className="ADsub">Educational Qualifications:</p>
         <p>
