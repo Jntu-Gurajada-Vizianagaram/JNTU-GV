@@ -14,19 +14,19 @@ const DirectoratesMain = () => {
               : ""
           }`}
         >
-          Director of Academic Planning
+              Director of Academic Audit and Planning
         </Link>
 
 
 
-        <Link
+        {/* <Link
           to="academic-audit"
           className={`menuButton ${
             location.pathname === "/directorates/academic-audit" ? "active" : ""
           }`}
         >
           Director of Academic Audit
-        </Link>
+        </Link> */}
 
         <Link
           to="evaluation"
@@ -34,9 +34,9 @@ const DirectoratesMain = () => {
             location.pathname === "/directorates/evaluation" ? "active" : ""
           }`}
         >
-          Director of Evaluation
+          Director of Evaluation & Admissions
         </Link>
-
+{/* 
         <Link
           to="admissions"
           className={`menuButton ${
@@ -44,7 +44,7 @@ const DirectoratesMain = () => {
           }`}
         >
           Director of Admissions
-        </Link>
+        </Link> */}
 
         <Link
           to="placements"

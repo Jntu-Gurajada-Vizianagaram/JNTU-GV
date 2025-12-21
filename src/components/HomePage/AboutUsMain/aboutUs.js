@@ -18,7 +18,7 @@ const AboutUs = () => {
     {
       id: 2,
       name: "Prof. V V Subba Rao",
-      designation: "",
+      designation: "Ph.D., Computer Science & Engineering",
       role: "Hon'ble Vice Chancellor",
       image: vc,
       link: "administration/vice-chancellor"

@@ -5,9 +5,7 @@ function AcademicPlanning() {
   return (
     <div className="mainContainer">
       <div className="allRightContent">
-        <div className="allRightContentHeading">
-          Director of Academic Planning
-        </div>
+        
         <br />
         <div className="allRightContentProfile">
           <div className="ADimg">
@@ -19,7 +17,7 @@ function AcademicPlanning() {
         <center>
           <div className="profileName">
             <h3 className="ADh3">Dr. K. Chandra Bhushana Rao</h3>
-            <h3 className="ADh3">Director of Academic Planning</h3>
+            <h3 className="ADh3"> Director of Academic Audit and Planning</h3>
           </div>
           <div className="profileDesignation">
             <h4 className="ADh4">
@@ -28,12 +26,13 @@ function AcademicPlanning() {
             </div>
         </center>
         <hr />
-        <p>Email: dap@jntugv.edu.in</p>
+        <p>Email: dap@jntugv.edu.in, daa@jntugv.edu.in</p>
+        
         <p>
           Website:{" "}
           <a href="https://dap.jntugv.edu.in/" target="_blank" rel="noreferrer">
             https://dap.jntugv.edu.in/
-          </a>
+          </a>, <a href="https://daa.jntugv.edu.in/">https://daa.jntugv.edu.in/</a>
         </p>
         <hr />
 
