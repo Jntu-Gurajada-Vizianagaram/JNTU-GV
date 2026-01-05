@@ -1,5 +1,5 @@
-import "./aboutUs.css";
 import { Link } from "react-router-dom";
+import "./aboutUs.css";
 
 import chancellor from "../../../assets/AdminDirectoratesImages/chancellor.jpeg";
 import registrar from "../../../assets/AdminDirectoratesImages/registrar.jpeg";
@@ -18,7 +18,7 @@ const AboutUs = () => {
     {
       id: 2,
       name: "Prof. V V Subba Rao",
-      designation: "Ph.D., Computer Science & Engineering",
+      designation: "Ph.D from IIT Kharagpur",
       role: "Hon'ble Vice Chancellor",
       image: vc,
       link: "administration/vice-chancellor"
