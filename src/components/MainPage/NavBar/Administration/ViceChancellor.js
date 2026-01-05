@@ -1,7 +1,5 @@
-import React from "react";
 import { MdOutlineMailOutline } from "react-icons/md";
 import vc from "../../../../assets/AdminDirectoratesImages/vc.jpg";
-import tick from "../../../../assets/StyleImages/tick.svg";
 import "./AdminandDirectorates.css";
 
 function ViceChancellor() {
@@ -36,7 +34,7 @@ function ViceChancellor() {
           </div>
 
           {/* Academic Qualifications */}
-          <div className="registar-2">
+          {/* <div className="registar-2">
             <p className="AD-sub">Academic Qualifications</p>
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
@@ -51,10 +49,10 @@ function ViceChancellor() {
               B.E., Electronics Engineering, SRKR College of Engineering,
               Bhimavaram.
             </p>
-          </div>
+          </div> */}
 
           {/* Academic Excellence */}
-          <div className="registar-3">
+          {/* <div className="registar-3">
             <p className="AD-sub">Academic Excellence</p>
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
@@ -75,10 +73,10 @@ function ViceChancellor() {
               <img src={tick} alt="Icon" className="AD-icon" />
               Certified Database Associate on DB2 & Associate Developer – IBM.
             </p>
-          </div>
+          </div> */}
 
           {/* Administrative Positions */}
-          <div className="registar-4">
+          {/* <div className="registar-4">
             <p className="AD-sub">Administrative Positions</p>
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
@@ -104,10 +102,10 @@ function ViceChancellor() {
               <img src={tick} alt="Icon" className="AD-icon" />
               BOS Chairperson for CSE & IT Departments – JNTU-GV.
             </p>
-          </div>
+          </div> */}
 
           {/* Research Contributions */}
-          <div className="registar-5">
+         {/* <div className="registar-5">
             <p className="AD-sub">Research Contributions</p>
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
@@ -126,10 +124,10 @@ function ViceChancellor() {
               Published nearly 100 research papers in reputed journals and
               conferences.
             </p>
-          </div>
+          </div> */}
 
           {/* Books */}
-          <div className="registar-6">
+          {/* <div className="registar-6">
             <p className="AD-sub">Books & Publications</p>
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
@@ -148,10 +146,10 @@ function ViceChancellor() {
               <img src={tick} alt="Icon" className="AD-icon" />
               Practical Guide to Ethical Hacking & Information Security.
             </p>
-          </div>
+          </div> */}
 
           {/* Honors */}
-          <div className="registar-7">
+          {/* <div className="registar-7">
             <p className="AD-sub">Honors & Memberships</p>
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
@@ -165,7 +163,7 @@ function ViceChancellor() {
               <img src={tick} alt="Icon" className="AD-icon" />
               Regional Coordinator – AP State Police Recruitment Board.
             </p>
-          </div>
+          </div> */}
 
         </div>
       </div>
