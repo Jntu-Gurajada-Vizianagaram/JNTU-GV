@@ -1,5 +1,5 @@
-import "./aboutUs.css";
 import { Link } from "react-router-dom";
+import "./aboutUs.css";
 
 import chancellor from "../../../assets/AdminDirectoratesImages/chancellor.jpeg";
 import registrar from "../../../assets/AdminDirectoratesImages/registrar.jpeg";
@@ -23,6 +23,7 @@ const AboutUs = () => {
   image: vc,
   link: "administration/vice-chancellor"
 },
+
 
     {
       id: 3,

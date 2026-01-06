@@ -1,4 +1,3 @@
-import React from "react";
 import { MdOutlineMailOutline } from "react-icons/md";
 import vc from "../../../../assets/AdminDirectoratesImages/vc.png";
 import tick from "../../../../assets/StyleImages/tick.svg";
