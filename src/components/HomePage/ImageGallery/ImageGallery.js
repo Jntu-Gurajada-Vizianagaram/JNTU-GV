@@ -15,7 +15,7 @@ const TypingEffect = ({ text, speed = 100 }) => {
 
     const type = () => {
       if (index < text.length) {
-        setDisplayedText(text.slice(0, index + 1)); // Use slice instead of appending
+        setDisplayedText(text.slice(0, index + 1));
         index++;
         timerId = setTimeout(type, speed);
       }
@@ -88,8 +88,8 @@ function ImageGallery() {
         width="1200"
         height="400"
         {...(index === 0
-          ? { fetchpriority: "high" } // First image: high priority
-          : { loading: "lazy" }       // Other images: lazy load
+          ? { fetchpriority: "high" } 
+          : { loading: "lazy" }      
         )}
         style={{ objectFit: "cover" }}
       />

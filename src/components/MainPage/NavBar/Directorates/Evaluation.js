@@ -16,7 +16,8 @@ function Evaluation() {
             </div>
             <div className="profileName">
               <h3 className="ADh3">Dr. K. Babulu</h3>
-              <h3 className="ADh3">Director of Evaluation & Admissions</h3>
+              <h3 className="ADh3">Director <sup>i/c</sup> of Evaluation </h3>&
+             <h3> Director of Admissions</h3>
             </div>
             <div className="profileDesignation">
               <h4 className="ADh4">

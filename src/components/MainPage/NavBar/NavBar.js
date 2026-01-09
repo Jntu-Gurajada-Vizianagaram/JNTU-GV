@@ -52,6 +52,7 @@ const NavBar = () => {
         { label: "Chancellor", path: "/administration/chancellor" },
         { label: "Vice Chancellor", path: "/administration/vice-chancellor" },
         { label: "Registrar", path: "/administration/registrar" },
+        { label: "Officer on Special Duty (OSD)", path: "/administration/osd" },
         // Add more sub-items as needed
       ],
     },
@@ -67,11 +68,17 @@ const NavBar = () => {
           path: "/academics/constituent-colleges",
         },
         { label: "Affiliated Colleges", path: "/academics/affliated-colleges" },
-        { label: "Autonomous Colleges", path: "/academics/autonomous-colleges" },
+        {
+          label: "Autonomous Colleges",
+          path: "/academics/autonomous-colleges",
+        },
         { label: "BOS Chairman", path: "/academics/bos-chairman" },
         { label: "Academic Calendar", path: "/academics/Calendar" },
         { label: "Academic Syllabus", path: "/academics/academic-syllabus" },
-        { label: "Academic Regulations", path: "/academics/academic-regulations" }
+        {
+          label: "Academic Regulations",
+          path: "/academics/academic-regulations",
+        },
         // Add more sub-items as needed
       ],
     },
@@ -80,17 +87,25 @@ const NavBar = () => {
       label: " DIRECTORATES",
       path: "/directorates",
       subItems: [
-        { label: "Academic Audit and Planning", path: "/directorates/academic-planning" },
+        {
+          label: "Academic Audit and Planning",
+          path: "/directorates/academic-planning",
+        },
         // { label: "Academic Audit", path: "/directorates/academic-audit" },
         { label: "Evaluation & Admissions", path: "/directorates/evaluation" },
         // { label: "Admissions", path: "/directorates/admissions" },
-        { label: "Industrial Relations & Placements", path: "/directorates/placements" },
+
         { label: "Research & Development", path: "/directorates/research" },
-        { label: "Alumni Relations", path: "/directorates/alumni-relations" },
+        {
+          label: "Industrial Relations & Placements",
+          path: "/directorates/placements",
+        },
         {
           label: "Internal Quality Assurance Cell",
           path: "/directorates/iqac",
         },
+        { label: "Alumni Relations", path: "/directorates/alumni-relations" },
+
         // Add more sub-items as needed
       ],
     },
@@ -143,9 +158,9 @@ const NavBar = () => {
         {
           label: "PGCPAITL",
           path: "https://pgcpaitl.jntugv.edu.in",
-        },]
+        },
+      ],
     },
-
 
     {
       icon: <DraftsIcon />,
@@ -180,17 +195,13 @@ const NavBar = () => {
           path: "https://events.jntugv.edu.in",
         },
         {
-          label:"Yogandhra",
-          path:"https://yogandhra.jntugv.edu.in",
-        }
+          label: "Yogandhra",
+          path: "https://yogandhra.jntugv.edu.in",
+        },
         // External link
         // Add more sub-items as needed
       ],
     },
-
-
-
-
 
     // Add more dropdown items as needed
   ];

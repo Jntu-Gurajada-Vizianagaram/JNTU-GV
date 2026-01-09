@@ -157,3 +157,63 @@
     padding: 0.25rem;
   }
 }
+
+.overlayIG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+  border-radius: 15px;
+}
+.announcementBannerIG{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 2rem 0;
+  border-radius: 15px;
+  /* background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5ub3VuY2VtZW50fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60'); */
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0.20rem 1.20rem 0 rgba(0, 0, 0, 0.2);
+}
+.annoucementTextIG {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 0 1rem;
+}
+.announcementHeaderIG {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.annoucementTextIG h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.annoucementTextIG p {
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 768px) {
+  .annoucementTextIG h1 {
+    font-size: 2rem;
+  }
+
+  .annoucementTextIG p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .annoucementTextIG h1 {
+    font-size: 1.5rem;
+  }
+
+  .annoucementTextIG p {
+    font-size: 0.875rem;
+  }
+}

@@ -25,7 +25,7 @@ function Research() {
           <div className="profileName">
             <h3 className="ADh3">Prof.G.Swami Naidu</h3>
             <h3 className="ADh3">
-              Director of Research & Development
+              Director <sup>i/c</sup> of Research & Development
             </h3>
           </div>
           <div className="profileDesignation">

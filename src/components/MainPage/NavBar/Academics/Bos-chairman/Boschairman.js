@@ -74,7 +74,7 @@ function Boschairman() {
       </div>
       <div className="searchBoschairman">
         <Paper sx={{ width: "100%", overflow: "hidden" }}>
-          <TableContainer sx={{ maxHeight: 440 }}>
+          <TableContainer sx={{ maxHeight: 800 }}>
             <Table stickyHeader aria-label="sticky table">
               <TableHead>
                 <TableRow>

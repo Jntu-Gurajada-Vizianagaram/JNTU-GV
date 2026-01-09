@@ -11,11 +11,11 @@ export default function ChairPersonTable({ columns, rows }) {
         initialState={{
           pagination: {
             paginationModel: {
-              pageSize: 8,
+              pageSize: 15,
             },
           },
         }}
-        pageSizeOptions={[8, 25, 100]}
+        pageSizeOptions={[15, 25, 50,100]}
         disableRowSelectionOnClick
       />
     </Box>

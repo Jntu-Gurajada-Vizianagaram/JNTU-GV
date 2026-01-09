@@ -23,7 +23,7 @@ function AlumniRelations() {
           <div className="profileName">
             <h3 className="ADh3">Prof. Dr. G. Jaya Suma</h3>
             <h3 className="ADh3">
-              Director of Alumni Relations
+              Director <sup>i/c</sup> of Alumni Relations
             </h3>
           </div>
 
