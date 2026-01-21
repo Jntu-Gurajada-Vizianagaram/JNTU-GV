@@ -6,7 +6,7 @@ const DirectoratesMain = () => {
   return (
     <div className="AD-Main-DM">
       <div className="ADall-LeftMenu">
-      <Link
+        <Link
           to="academic-planning"
           className={`menuButton ${
             location.pathname === "/directorates/academic-planning"
@@ -14,10 +14,8 @@ const DirectoratesMain = () => {
               : ""
           }`}
         >
-              Director of Academic Audit and Planning
+          Director of Academic Audit and Planning
         </Link>
-
-
 
         {/* <Link
           to="academic-audit"
@@ -36,7 +34,7 @@ const DirectoratesMain = () => {
         >
           Director of Evaluation & Admissions
         </Link>
-{/* 
+        {/* 
         <Link
           to="admissions"
           className={`menuButton ${
@@ -47,21 +45,21 @@ const DirectoratesMain = () => {
         </Link> */}
 
         <Link
-          to="placements"
-          className={`menuButton ${
-            location.pathname === "/directorates/placements" ? "active" : ""
-          }`}
-        >
-          Director of Industrial Relations & Placements
-        </Link>
-
-        <Link
           to="research"
           className={`menuButton ${
             location.pathname === "/directorates/research" ? "active" : ""
           }`}
         >
           Director of Research & Development
+        </Link>
+
+        <Link
+          to="placements"
+          className={`menuButton ${
+            location.pathname === "/directorates/placements" ? "active" : ""
+          }`}
+        >
+          Director of Industrial Relations & Placements
         </Link>
 
         {/* <Link
@@ -76,6 +74,15 @@ const DirectoratesMain = () => {
         </Link> */}
 
         <Link
+          to="iqac"
+          className={`menuButton ${
+            location.pathname === "/directorates/iqac" ? "active" : ""
+          }`}
+        >
+          Director of Internal Quality Assurance Cell
+        </Link>
+
+        <Link
           to="alumni-relations"
           className={`menuButton ${
             location.pathname === "/directorates/alumni-relations"
@@ -86,15 +93,6 @@ const DirectoratesMain = () => {
           Director of Alumni Relations
         </Link>
 
-        <Link
-          to="iqac"
-          className={`menuButton ${
-            location.pathname === "/directorates/iqac" ? "active" : ""
-          }`}
-        >
-          Director of Internal Quality Assurance Cell
-        </Link>
-
         {/* <Link
           to="empowerment"
           className={`menuButton ${
@@ -103,7 +101,7 @@ const DirectoratesMain = () => {
         >
           Director of Empowerment of Women & Grievances
         </Link> */}
-        
+
         {/* <Link
           to="sports-administration"
           className={`menuButton ${

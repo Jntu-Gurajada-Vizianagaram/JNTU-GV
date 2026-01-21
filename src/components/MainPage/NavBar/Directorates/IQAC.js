@@ -38,7 +38,7 @@ function IQAC() {
                 </p>
         <hr />
         <p>
-          Dr. S Kalesha Vali is currently working as Professor of Mathematics in the department of BS&HSS, OSD(i/c) to the Hon’ble Vice-Chancellor and Director(i/c), IQAC at JNTUGV, Vizianagaram. Received his M.Sc., M.Phil., Ph. D degrees in Mathematics from Andhra University, Visakhapatnam. He is having 28 years of teaching and Research experience in reputed Engineering Colleges/Universities. He received Two medals and Two awards. Published more than 50 research papers in reputed Journals and published 2 Patents. Guided 5 Ph.Ds 2 M. Phils and guiding 12 Ph.Ds. Completed one funded research project and authored two textbooks.
+          Dr. S Kalesha Vali is currently working as Professor of Mathematics in the department of BS&HSS, OSD to the Hon’ble Vice-Chancellor and Director(i/c), IQAC at JNTUGV, Vizianagaram. Received his M.Sc., M.Phil., Ph. D degrees in Mathematics from Andhra University, Visakhapatnam. He is having 28 years of teaching and Research experience in reputed Engineering Colleges/Universities. He received Two medals and Two awards. Published more than 50 research papers in reputed Journals and published 2 Patents. Guided 5 Ph.Ds 2 M. Phils and guiding 12 Ph.Ds. Completed one funded research project and authored two textbooks.
         </p>
 
         <p className="ADsub">Teaching experience :</p>

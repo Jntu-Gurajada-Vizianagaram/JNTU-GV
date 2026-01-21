@@ -7,12 +7,12 @@ export const pgRows = [
   {
     id: 1,
     specialization: "Civil Engineering",
-    name: "Dr.K.C.B.Rao, Prof in ECE & Director of Academic Planning",
+    name: "Dr. Vazeer Mahammood , Professor in Civl Engineering, Andhra University",
   },
   {
     id: 2,
-    specialization: "CSE - Computer Science and Engineering - Cyber Scurity ",
-    name: "Dr.D.Rajya Lakshmi, Prof in CSE & Director of Evaluation",
+    specialization: "CSE - Computer Science and Engineering  ",
+    name: "Dr. R. Rajeshwara Rao, Prof in CSE & Principal <sup>i/c</sup> of JNTU-GV CEV(A)",
   },
   {
     id: 3,

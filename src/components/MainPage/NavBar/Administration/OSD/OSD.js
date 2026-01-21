@@ -22,7 +22,7 @@ function OSD() {
         <center>
           <div className="profileName">
             <h3 className="ADh3">Dr. Shaik Kalesha Vali</h3>
-            <h3 className="ADh3">Officer on Special Duty <sup>i/c </sup> to Hon’ble Vice-Chancellor</h3>
+            <h3 className="ADh3">Officer on Special Duty to Hon’ble Vice-Chancellor</h3>
           </div>
           <div className="profileDesignation">
             <h4 className="ADh4">
