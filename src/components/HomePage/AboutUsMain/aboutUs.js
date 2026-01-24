@@ -15,14 +15,16 @@ const AboutUs = () => {
       image: chancellor,
       link: "administration/chancellor"
     },
-    {
-      id: 2,
-      name: "Prof. V V Subba Rao",
-      designation: "Ph.D from IIT Kharagpur",
-      role: "Hon'ble Vice Chancellor",
-      image: vc,
-      link: "administration/vice-chancellor"
-    },
+  {
+  id: 2,
+  name: "Prof. V. V. Subba Rao",
+  designation: "Ph.D., Mechanical Engineering (IIT Kharagpur)",
+  role: "Hon’ble Vice-Chancellor",
+  image: vc,
+  link: "administration/vice-chancellor"
+},
+
+
     {
       id: 3,
       name: "Prof. G. Jaya Suma",

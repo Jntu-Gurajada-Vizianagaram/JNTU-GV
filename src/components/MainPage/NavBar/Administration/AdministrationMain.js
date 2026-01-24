@@ -31,6 +31,15 @@ const AdministrationMain = () => {
         >
           Registrar
         </Link>
+        <Link
+          to="osd"
+          className={`menuButton ${
+            location.pathname === "/administration/osd" ? "active" : ""
+          }`}
+        >
+          Officer on Special Duty (OSD)
+        </Link>
+        
         {/* <Link
           to="chairpersons"
           className={`menuButton ${

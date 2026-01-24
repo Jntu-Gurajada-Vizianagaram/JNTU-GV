@@ -1,4 +1,4 @@
-import dap from "../../../../assets/AdminDirectoratesImages/dap.jpg";
+import dap from "../../../../assets/AdminDirectoratesImages/dap.jpeg";
 import "../Administration/AdminandDirectorates.css";
 
 function AcademicPlanning() {
@@ -21,7 +21,7 @@ function AcademicPlanning() {
           </div>
           <div className="profileDesignation">
             <h4 className="ADh4">
-              Professor & Head, Dept. of Electronics and Communication Engineering
+              Professor of Dept. of Electronics and Communication Engineering
             </h4>
             </div>
         </center>
@@ -48,16 +48,16 @@ function AcademicPlanning() {
           He has served as Assistant Professor, Associate Professor, Professor,
           HOD, Dean, and Principal in reputed institutions like GITAM and MVGR
           (1992–2012). Since 2013, he has been with JNTU Vizianagaram (UCEV),
-          he served  as Head, ECE;  and Director of IQAC. currently serving as Professor and  Director of Academic Planning (DAP).
+          he served  as Head, ECE;  and Director of IQAC. currently serving as Professor and  Director of Academic Audit and Planning (DAAP).
         </p>
 
         <p className="ADsub">Achievements:</p>
         <p>❖ Senior Member, IEEE since 2016.</p>
         <p>❖ Professor of ECE since Jan 2016.</p>
-        <p>❖ HOD of ECE, UCEV since Feb 2017.</p>
+        <p>❖ Served as Head of ECE, UCEV</p>
         <p>❖ Two Indian patents and two copyrights published.</p>
         <p>❖ 72+ research publications in reputed journals and conferences.</p>
-        <p>❖ One Ph.D. awarded; seven scholars currently under supervision.</p>
+        <p>❖ Four Ph.D.s awarded; Eight scholars currently under supervision.</p>
         <p>❖ International visits: UK and Thailand for paper presentations and technical sessions.</p>
         <p>❖ Chaired technical sessions in international conferences in India and abroad.</p>
         <p>❖ Fellow of IETE; Life Member of ISTE, SEMC(I), ISSS (IISc); Member IAENG.</p>

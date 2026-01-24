@@ -9,7 +9,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { ugColumns, ugRows } from "./Ugdata.js"; // Import named exports from Ugdata
-import { pgColumns, pgRows } from "./Pgdata.js"; // Import named exports from Pgdata
+// import { pgColumns, pgRows } from "./Pgdata.js"; // Import named exports from Pgdata
 import ChairPersonTable from "./ChairPersonTable.js";
 
 export default function Chairpersons() {
@@ -46,14 +46,14 @@ export default function Chairpersons() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>CHAIRPERSONS OF BOARDS OF STUDIES(U.G.)</Typography>
+          <Typography>CHAIRPERSONS OF BOARDS OF STUDIES(U.G. & P.G.)</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <ChairPersonTable columns={ugColumns} rows={ugRows} />
         </AccordionDetails>
       </Accordion>
 
-      <Accordion
+      {/* <Accordion
         expanded={expanded === "panel2"}
         onChange={handleChange("panel2")}
       >
@@ -67,7 +67,7 @@ export default function Chairpersons() {
         <AccordionDetails>
           <ChairPersonTable columns={pgColumns} rows={pgRows} />
         </AccordionDetails>
-      </Accordion>
+      </Accordion> */}
 
       {/* Other Accordions or content here */}
     </div>

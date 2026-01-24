@@ -6,7 +6,6 @@ function AcademicAudit() {
   
   return (
     <div className="mainContainer">
-  
       <div className="allRightContent">
         <div className="allRightContentHeading">Director of Academic Audit</div>
         <br></br>
@@ -14,19 +13,14 @@ function AcademicAudit() {
           {/* Profile information */}
           <div className="ADimg">
             <center>
-              <img
-                src={daa}
-                alt="Profile"
-              />
+              <img src={daa} alt="Profile" />
             </center>
           </div>
         </div>
         <center>
           <div className="profileName">
-            <h3 className="ADh3">Dr. R. Rajeswara Rao</h3>
-            <h3 className="ADh3">
-              Director of Academic Audit
-            </h3>
+            <h3 className="ADh3">Dr. K. Chandra Bhushana Rao</h3>
+            <h3 className="ADh3">Director of Academic Audit</h3>
           </div>
           <div className="profileDesignation">
             <h4 className="ADh4">
@@ -37,60 +31,103 @@ function AcademicAudit() {
         <hr />
         {/* Profile description */}
         <p>Email: daa@jntugv.edu.in</p>
-        <p>Website: <a href="https://daa.jntugv.edu.in/">https://daa.jntugv.edu.in/</a>
+        <p>
+          Website:{" "}
+          <a href="https://daa.jntugv.edu.in/">https://daa.jntugv.edu.in/</a>
         </p>
 
         <hr></hr>
         <p>
-          Dr. Ramisetty Rajeswara Rao is presently working as Director(i/c)
-          Academic Audit, JNTU-GV, Vizianagaram. Dr. Rao completed his B. Tech
-          in CSE in the year 1999 from V.R. Siddhartha Engineering College,
-          Vijayawada. M.Tech in CSE from JNTUH-Hyderabad in the year 2003, PhD
-          in CSE from JNTUH-Hyderabad in the year 2010. Dr. Rao pursued his Post
-          Doc in University of Missouri, Colombia, USA in the year 2019.. Dr.
-          Rao is having 20 + Years of Teaching Experience in the field of
-          Computer Science and Engineering. Dr. Rao served as officer in charge
-          of Hostels and Head of the Department, Vice Principal and
-          Principal(i/c) JNTUK, UCEV, Vizianagaram. JNTUK University College of
-          Engineering, Vizianagaram got NBA accreditation for CSE, ECE and
-          Mechanical for 3 years during his leadership as NBA Co-coordinator. He
-          also served the institution as IQAC Co-Ordinator. He authored one
-          monograph titled with{" "}
-          <strong>
-            “Automatic Text Independent Speaker Recognition using Source
-            Feature”
-          </strong>{" "}
-          (Lap LABERT Publishing GmbH Co. KG, Germany) in the year 2012 and Two
-          Text-Books titled{" "}
-          <strong>
-            “Cloud Computing and virtualization” (BSP Publications)
-          </strong>{" "}
-          in the year 2014 and Software Engineering-A New Approach in the year
-          2018. Dr. Rao is Expert Visit Committee Member to{" "}
-          <strong>AICTE, New Delhi</strong>. He is a state level committee
-          member for Curriculum Development for the{" "}
-          <strong>
-            state of Andhra Pradesh appointed by AP-State Council for Higher
-            Education (APSCHE)
-          </strong>{" "}
-          for Computer Science & Engineering. Eight students have received{" "}
-          <strong>
-            Ph. D degree under his guidance from JNTUH-Hyderabad and
-            JNTU-Kakinada
-          </strong>
-          . To his credit he had published papers in{" "}
-          <strong>ACM, ELSEVIER, SPRINGER</strong> and other reputed journals.
-          He authored 86 Journals, presented papers in 35 conferences and
-          chaired 23 session chairs and gave 43 invited talks in various reputed
-          colleges in Andhra Pradesh and Telengana. Prof. Rao received{" "}
-          <strong>Best Researcher</strong> Award from JNUK, Kakinada on 28th
-          December, 2018. He received <strong>VIDYA RATAN</strong> award from
-          T.E.H.E.G, New Delhi for the year 2011. Dr. Rao is recipient of Jyesta
-          Acharya Award from Bharat Education Excellence Awards, Visakhapatnam,
-          India. He is an academic advisor to National Cyber Safety and Security
-          Standards (NCSSS). He is a Member of CSI and Sr. Member of IEEE. His
-          Areas of Interest are Artificial Intelligence, Speech Processing,
-          Pattern Recognition, NLP and Cloud Computing.
+          Dr. Kota Chandra Bhushana Rao completed his B.E, M.E, and Ph.D. in
+          Electronics and Communication Engineering from Andhra University,
+          Visakhapatnam, in 1992, 1995, and 2005 respectively, under the
+          supervision of Prof. G.S.N. Raju (Former Vice-Chancellor, AU). He has
+          over 29 years of teaching, research, and administrative experience in
+          engineering education.
+        </p>
+        <p>
+          He has served as Assistant Professor, Associate Professor, Professor,
+          HOD, Dean, and Principal in reputed institutions like GITAM and MVGR
+          (1992–2012). Since 2013, he has been with JNTU Vizianagaram (UCEV), he
+          served as Head, ECE; and Director of IQAC. currently serving as
+          Professor and Director of Academic Audit and Planning (DAAP).
+        </p>
+
+        <p className="ADsub">Achievements:</p>
+        <p>❖ Senior Member, IEEE since 2016.</p>
+        <p>❖ Professor of ECE since Jan 2016.</p>
+        <p>❖ Served as Head of ECE, UCEV</p>
+        <p>❖ Two Indian patents and two copyrights published.</p>
+        <p>❖ 72+ research publications in reputed journals and conferences.</p>
+        <p>
+          ❖ Four Ph.D.s awarded; Eight scholars currently under supervision.
+        </p>
+        <p>
+          ❖ International visits: UK and Thailand for paper presentations and
+          technical sessions.
+        </p>
+        <p>
+          ❖ Chaired technical sessions in international conferences in India and
+          abroad.
+        </p>
+        <p>
+          ❖ Fellow of IETE; Life Member of ISTE, SEMC(I), ISSS (IISc); Member
+          IAENG.
+        </p>
+        <p>
+          ❖ Member, Research Boards – Anna University, Vignan University,
+          Integral University.
+        </p>
+        <p>❖ Chairman, BoS-ECE, UCEV-JNTUK since 2017.</p>
+
+        <p className="ADsub">Recognitions:</p>
+        <p>❖ NBA Evaluator since 2009.</p>
+        <p>❖ Member, EVC and Expert, AICTE.</p>
+        <p>❖ CMI-UK Level 5 Certificate through UKIERI-AICTE (2015–16).</p>
+        <p>
+          ❖ Recognized by AICTE for UKIERI-India initiative; one among 200
+          across India.
+        </p>
+        <p>❖ Invited to Dudley College, UK – Birmingham.</p>
+        <p>❖ GB and BoS Member in several autonomous colleges via JNTUK.</p>
+        <p>❖ NAAC and NBA Coordinator at UCEV (2013–2019).</p>
+        <p>❖ Consultant and trainer for 15+ institutions in NBA/NAAC.</p>
+        <p>❖ Resource Person for ESCI, Hyderabad.</p>
+        <p>
+          ❖ Chairman, Core Project Review Committee (CPRC), SAMEER Visakhapatnam
+          (since 2019).
+        </p>
+
+        <p className="ADsub">Involvement in Accreditations:</p>
+        <p>
+          ❖ NBA Expert since 2011; participated in WA Mock Evaluation (2012).
+        </p>
+        <p>❖ Visited 20+ institutions as NBA Expert.</p>
+        <p>
+          ❖ Conducted OBE-OBA Workshops at UCEV and across India (Jammu, Tamil
+          Nadu, MP, UP, Rajasthan, etc.).
+        </p>
+
+        <p className="ADsub">Guidance for Institutions:</p>
+        <p>
+          ❖ Guided NBA/NAAC processes for: SRKR, Jayam COE, Sona COE, Anna Univ
+          COE, KJ Somaiya COE, GVP Women, VVIT, VIIT, Swarnandhra, Vignan Univ,
+          and others.
+        </p>
+
+        <p className="ADsub">Other Achievements:</p>
+        <p>
+          ❖ Guided students to placements in ISRO, SAMEER, BSNL, and other PSUs.
+        </p>
+        <p>❖ Excellent feedback from students across institutes.</p>
+        <p>❖ Trained contract faculty in NBA/NAAC at UCEV.</p>
+        <p>❖ Established RUSA project labs in ECE.</p>
+        <p>❖ SC/ST Book Bank established (2013–15).</p>
+        <p>❖ Initiated MoU with TCS under TAAP as TPO (2015).</p>
+        <p>❖ Executed 3 MoUs for ECE Dept. (2020–21).</p>
+        <p>❖ Pioneered mobile-based Virtual Labs training.</p>
+        <p>
+          ❖ Delivered 23 webinars during 2020–21 lockdown as a resource person.
         </p>
       </div>
     </div>

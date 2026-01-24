@@ -1,5 +1,6 @@
 import { MdOutlineMailOutline } from "react-icons/md";
-import vc from "../../../../assets/AdminDirectoratesImages/vc.jpg";
+import vc from "../../../../assets/AdminDirectoratesImages/vc.png";
+import tick from "../../../../assets/StyleImages/tick.svg";
 import "./AdminandDirectorates.css";
 
 function ViceChancellor() {
@@ -25,145 +26,103 @@ function ViceChancellor() {
           {/* Intro */}
           <div className="registar-1">
             <p>
-              Prof. Vissakodeti Venkata Subba Rao is the Vice-Chancellor of
-              Jawaharlal Nehru Technological University, Gurajada, Vizianagaram.
-              He is an academician par excellence, a dedicated teacher, and a
-              visionary leader committed to elevating Indian technical
-              education to global standards.
+              Prof. V. V. Subba Rao is the Vice-Chancellor of Jawaharlal Nehru
+              Technological University – Gurajada, Vizianagaram. He is a
+              Professor of Mechanical Engineering with extensive academic and
+              administrative experience in technical education.
             </p>
           </div>
 
-          {/* Academic Qualifications */}
-          {/* <div className="registar-2">
+          {/* Qualifications */}
+          <div className="registar-2">
             <p className="AD-sub">Academic Qualifications</p>
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
-              Ph.D., Computer Science & Engineering, JNTUH, Hyderabad.
+              Ph.D. from IIT Kharagpur.
             </p>
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
-              M.Tech., Computer Science & Engineering, Andhra University.
+              Post-Doctoral Fellowship from Hoseo University, South Korea.
             </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              B.E., Electronics Engineering, SRKR College of Engineering,
-              Bhimavaram.
-            </p>
-          </div> */}
+          </div>
 
-          {/* Academic Excellence */}
-          {/* <div className="registar-3">
-            <p className="AD-sub">Academic Excellence</p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              Award for “Valuable Ideas towards Vision of SWARNA ANDHRA 2047”
-              presented by Sri Nara Chandrababu Naidu, Hon’ble CM of A.P.
-            </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              Outstanding Leadership Legacy Award – Council for Skills and
-              Competencies.
-            </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              Elected as “Meritorious Teacher” by Dr. Kodela Siva Prasad,
-              Hon’ble First Speaker of Andhra Pradesh.
-            </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              Certified Database Associate on DB2 & Associate Developer – IBM.
-            </p>
-          </div> */}
+          {/* Experience */}
+          <div className="registar-3">
+            <p className="AD-sub">Professional Experience</p>
 
-          {/* Administrative Positions */}
-          {/* <div className="registar-4">
+            <p>
+              <img src={tick} alt="Icon" className="AD-icon" />
+              Lecturer, BMS College of Engineering, Bangalore (Nov 1993 – Sep 1994).
+            </p>
+
+            <p>
+              <img src={tick} alt="Icon" className="AD-icon" />
+              Assistant Professor, JNTU College of Engineering, Kakinada
+              (Sep 1994 – Apr 2003).
+            </p>
+
+            <p>
+              <img src={tick} alt="Icon" className="AD-icon" />
+              Associate Professor, JNTU College of Engineering, Kakinada
+              (May 2003 – Aug 2006).
+            </p>
+
+            <p>
+              <img src={tick} alt="Icon" className="AD-icon" />
+              Head, Department of Mechanical Engineering, JNTU College of
+              Engineering, Kakinada (Sep 2006 – Mar 2007).
+            </p>
+
+            <p>
+              <img src={tick} alt="Icon" className="AD-icon" />
+              Officer In-charge of Hostels, JNTU College of Engineering,
+              Pulivendula (Oct 2008 – Jan 2009).
+            </p>
+
+            <p>
+              <img src={tick} alt="Icon" className="AD-icon" />
+              Officer In-charge of Examinations, University College of
+              Engineering, Kakinada.
+            </p>
+          </div>
+
+          {/* Administrative Roles */}
+          <div className="registar-4">
             <p className="AD-sub">Administrative Positions</p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              Vice-Chancellor (i/c), JNTU-GV, Vizianagaram – from 19 July 2024.
-            </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              Director of Evaluation, JNTU-GV – Oct 2022 to Aug 2024.
-            </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              Principal & HOD (CSE), JNTUK-UCEN, Narasaraopet – 2018 to 2019.
-            </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              Vice-Principal (Academics) & HOD, CSE – 2016 to 2018.
-            </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              Director (i/c), Women Empowerment & Grievances Cell – JNTUGV.
-            </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              BOS Chairperson for CSE & IT Departments – JNTU-GV.
-            </p>
-          </div> */}
 
-          {/* Research Contributions */}
-         {/* <div className="registar-5">
-            <p className="AD-sub">Research Contributions</p>
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
-              Ph.Ds Awarded: 15 | Submitted: 02 | Guiding: 15.
+              Director, Foreign Universities Relations, JNTUK Kakinada
+              (Sep 2016 – Jun 2017).
             </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              External Funded Projects – Completed: 01 | Ongoing: 02.
-            </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              Patents – Granted: 01 | Published: 03.
-            </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              Published nearly 100 research papers in reputed journals and
-              conferences.
-            </p>
-          </div> */}
 
-          {/* Books */}
-          {/* <div className="registar-6">
-            <p className="AD-sub">Books & Publications</p>
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
-              Investigating Fraudulent Medical Claims using Machine Learning –
-              Handbook of AI, 2023.
+              Registrar, JNTUK Kakinada (Jun 2017 – Dec 2019).
             </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              Clustering Based Band Selection – Lambert Academic Publishing.
-            </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              Water Quality Prediction of Aqua Ponds – 2019.
-            </p>
-            <p>
-              <img src={tick} alt="Icon" className="AD-icon" />
-              Practical Guide to Ethical Hacking & Information Security.
-            </p>
-          </div> */}
 
-          {/* Honors */}
-          {/* <div className="registar-7">
-            <p className="AD-sub">Honors & Memberships</p>
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
-              Life Member of CSI, ISTE, BMEI.
+              Principal, University College of Engineering, Narasaraopet
+              (Dec 2019 – Jul 2023).
             </p>
+
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
-              BOS Chairperson – Emerging Courses, JNTUK.
+              Convener, AP EAPCET-2025.
             </p>
+
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
-              Regional Coordinator – AP State Police Recruitment Board.
+              Rector, JNTUK (Jul 2025).
             </p>
-          </div> */}
+
+            <p>
+              <img src={tick} alt="Icon" className="AD-icon" />
+              Vice-Chancellor, JNTU-GV, Vizianagaram
+              (from 13-10-2025 onwards).
+            </p>
+          </div>
 
         </div>
       </div>
