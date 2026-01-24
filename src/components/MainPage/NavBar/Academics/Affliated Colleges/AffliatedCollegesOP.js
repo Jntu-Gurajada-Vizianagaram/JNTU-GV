@@ -144,7 +144,10 @@ const AffliatedCollegesOP = () => {
         </Accordion>
 
       </div>
+
+      <p align="right">As per the latest update on 24-01-2026</p>
     </div>
+
   );
 };
 

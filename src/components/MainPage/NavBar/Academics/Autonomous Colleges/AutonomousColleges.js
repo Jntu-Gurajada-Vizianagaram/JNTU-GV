@@ -107,6 +107,7 @@ const AutonomousColleges = () => {
         <AutonomousCollegeTable rows={rowsEngg} categoryName="Engineering Colleges" />
         <AutonomousCollegeTable rows={rowsPharmacy} categoryName="Pharmacy Colleges" />
       </div>
+      <p align="right">As per the latest update on 24-01-2026</p>
     </div>
   );
 };
