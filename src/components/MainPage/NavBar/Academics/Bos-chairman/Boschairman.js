@@ -1,18 +1,16 @@
-import React from "react";
-import "./Boschairman.css";
 import Paper from "@mui/material/Paper";
+import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
+import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
-import { rows } from "./Boschairmandata";
-import { columns } from "./Boschairmandata";
-import { tableCellClasses } from "@mui/material/TableCell";
-import { styled } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
+import React from "react";
+import "./Boschairman.css";
+import { columns, rows } from "./Boschairmandata";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -34,7 +32,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 function Boschairman() {
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [rowsPerPage, setRowsPerPage] = React.useState(6);
   const [filteredRows, setFilteredRows] = React.useState(rows);
 
   const inputHandler = (e) => {
@@ -117,7 +115,7 @@ function Boschairman() {
             </Table>
           </TableContainer>
           <TablePagination
-            rowsPerPageOptions={[10, 25, filteredRows.length]}
+            rowsPerPageOptions={[filteredRows.length % 6]}
             component="div"
             count={filteredRows.length}
             rowsPerPage={rowsPerPage}

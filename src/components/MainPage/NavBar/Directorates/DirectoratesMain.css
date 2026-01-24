@@ -27,7 +27,8 @@
 }
 
 .ADall-LeftMenu a.active {
-  color: white; /* Change the active link color as desired */
+  color: white;
+  /* Change the active link color as desired */
 }
 
 .ADall-LeftMenu .menuButton {
@@ -61,21 +62,28 @@
 
 .allRightContentProfile {
   display: block;
+  width: 100%;
 }
-.allRightContentProfile img{
+
+.allRightContentProfile img {
   width: 100%;
   height: auto;
-  max-width: 300px; /* Limits the maximum width */
-  max-height: 310px; /* Limits the maximum height */
-  border-radius: 5%; /* Makes the image circular */
+  max-width: 300px;
+  /* Limits the maximum width */
+  max-height: 310px;
+  /* Limits the maximum height */
+  border-radius: 5%;
+  /* Makes the image circular */
   object-fit: cover;
 }
+
 .ADsub {
   text-decoration: underline;
   color: rgb(14, 14, 174);
   font-size: 17px;
   font-weight: bold;
 }
+
 @media screen and (max-width: 600px) {
   .AD-Main-DM {
     display: flex;
@@ -84,7 +92,7 @@
     padding-top: 10px;
     margin-left: 0;
   }
-  
+
 
   .allRightContentProfile {
     margin-left: 0px;
