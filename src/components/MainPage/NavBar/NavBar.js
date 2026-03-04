@@ -182,9 +182,13 @@ const NavBar = () => {
           label: "Ideaclub",
           path: "https://ideaclub.jntugv.edu.in",
         },
+        // {
+        //   label: "GreenCampus",
+        //   path: "https://greencampus.jntugv.edu.in",
+        // },
         {
-          label: "GreenCampus",
-          path: "https://greencampus.jntugv.edu.in",
+          label: "Youth Oppurtunities",
+          path: "https://uyopportunities.jntugv.edu.in/",
         },
         {
           label: "MoUs",
@@ -194,10 +198,10 @@ const NavBar = () => {
           label: "Events",
           path: "https://events.jntugv.edu.in",
         },
-        {
-          label: "Yogandhra",
-          path: "https://yogandhra.jntugv.edu.in",
-        },
+        // {
+        //   label: "Yogandhra",
+        //   path: "https://yogandhra.jntugv.edu.in",
+        // },
         // External link
         // Add more sub-items as needed
       ],
