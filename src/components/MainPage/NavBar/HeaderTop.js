@@ -33,10 +33,11 @@ const NavBar = () => {
   const links=[
     {"icon":null, "name": `Anti-Ragging`, "path": "/anti-ragging/about" },
     { "icon":null, "name": `Ideaclub`, "path": "https://ideaclub.jntugv.edu.in" },
-    {"icon":null, "name": `GreenCampus`, "path": "https://greencampus.jntugv.edu.in"},
+    // {"icon":null, "name": `GreenCampus`, "path": "https://greencampus.jntugv.edu.in"},
+    {"icon":null, "name": `Youth Oppurtunities` , "path":"https://uyopportunities.jntugv.edu.in/"},
     {"icon":null, "name": `MoUs`, "path": "https://mou.jntugv.edu.in"},
     {"icon":null, "name": `Events`, "path": "https://events.jntugv.edu.in"},
-    {"icon":null, "name": `Yogandhra`, "path": "https://yogandhra.jntugv.edu.in" },
+    // {"icon":null, "name": `Yogandhra`, "path": "https://yogandhra.jntugv.edu.in" },
     
   ]
 
