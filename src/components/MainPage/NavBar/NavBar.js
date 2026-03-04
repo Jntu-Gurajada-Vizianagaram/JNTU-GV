@@ -187,7 +187,7 @@ const NavBar = () => {
         //   path: "https://greencampus.jntugv.edu.in",
         // },
         {
-          label: "Youth Oppurtunities",
+          label: " Job Opportunities",
           path: "https://uyopportunities.jntugv.edu.in/",
         },
         {
