@@ -7,7 +7,8 @@ import {
   Menu as MenuIcon,
   Person as PersonIcon,
   School as SchoolIcon,
-  Verified  as CertificateIcon
+  Verified as CertificateIcon,
+  Work as WorkIcon
 } from "@mui/icons-material";
 import LinkIcon from '@mui/icons-material/Link';
 import React, { useState } from "react";
@@ -163,6 +164,12 @@ const NavBar = () => {
     },
 
     {
+      icon: <WorkIcon />,
+      label: "Job Oppurtunites",
+      path: "https://uyopportunities.jntugv.edu.in/",
+    },
+
+    {
       icon: <DraftsIcon />,
       label: " CONTACT US",
       path: "/contact-us",
@@ -214,7 +221,7 @@ const NavBar = () => {
     const isExternal = path.startsWith("http");
 
     return isExternal ? (
-     <button > <a className="link-btn" href={path} target="_blank" rel="noopener noreferrer">
+      <button > <a className="link-btn" href={path} target="_blank" rel="noopener noreferrer">
         {label}
       </a>
       </button>
@@ -244,7 +251,7 @@ const NavBar = () => {
             <div className="dropbtn">
               {item.subItems ? (
                 <div className="drop-icon d-flex align-items-center">
-                  {item.icon }<span className="ms-2"></span> { item.label}
+                  {item.icon}<span className="ms-2"></span> {item.label}
                 </div>
               ) : (
                 <div className="drop-icon" onClick={handleMenuToggle}>
@@ -269,7 +276,7 @@ const NavBar = () => {
         ))}
       </div>
       <div className="bigSearch">
-      <Search />
+        <Search />
       </div>
     </nav>
   );

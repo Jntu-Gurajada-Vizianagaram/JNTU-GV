@@ -1,6 +1,6 @@
 import React from 'react';
-import ControllerPg from '../../../../assets/ExaminationImages/ACEPG.jpg'; 
-import './Examinations.css'; 
+import AnilImage from "../../../../assets/ExaminationImages/Ace2.jpeg";
+import './Examinations.css';
 
 function ControllerPG() {
   return (
@@ -15,28 +15,51 @@ function ControllerPG() {
         <div className="allRightContentProfile">
           {/* Profile information */}
           <center>
-          <div className="profileImage">
-            
-          <img src = {ControllerPg} alt="Profile" />
-        
+          <div className="profile-Image">
+            <img src={AnilImage} alt="Profile" />
           </div>
           <div className="profileName">
-            <h3>Dr A.V.PapaRao</h3>
+            <h3>Mr. Anil Wurity</h3>
           </div>
           <div className="profileDesignation">
-            <h4 className="regularStyleH4">Additional Controller of Examinations PG</h4><br></br>
-            <h3>Assistant Professor of Mathematics</h3>
+            <h4 className="regularStyleH4">Additional Controller of Examinations PG</h4>
+            <br></br>
+            <h3>Assistant Professor, Dept. of Information Technology</h3>
           </div>
           </center>
           <hr />
           {/* Profile description */}
-          <p>Email: acepg@jntugv.edu.in</p>
-          <hr />
-          <p>Dr A.V.PapaRao presently working as Assistant Professor of Mathematics in JNTU GV, University College of Engineering Vizianagaram, Andhra Pradesh. He has 20 years of research and 24 years of academic experience. </p>
-         
-          <p>He published 70 papers in national and international journals. He authored Four books and Nine book chapters. He presented 45 papers in various national and international conferences and 40 workshops. </p>
-          <p> His area of interest is mathematical modelling in ecology, epidemiology and medicine.  Three scholars are success fully completed Ph.D. under his guidance. Presently 6 scholars are working under his guidance. He served as Deputy warden, officer InCharge of examinations . In charge Head, Sports coordinator. </p>
-      
+          <p>Email: acepg@jntugv.edu.in, ace2@jntugv.edu.in</p>
+            <hr />
+            <p className="ADsub">Educational Qualifications:</p>
+            <p>❖ M.Tech in Computer Science and Technology (2009–2011) from GITAM University, Visakhapatnam.</p>
+            <p>❖ B.Tech in Information Technology (2002–2006) from Al-Ameer College of Engineering and Information Technology, affiliated to JNTU Hyderabad.</p>
+
+            <p className="ADsub">Professional Experience:</p>
+            <p>❖ Additional Controller of Examinations – PG, JNTU-GV.</p>
+            <p>❖ Additional Controller of Examinations – 2, JNTU-GV.</p>
+            <p>❖ Digital Monitoring Cell Coordinator, JNTU-GV from 2022 - 2026.</p>
+            <p>❖ Jan 2013 – Present: Assistant Professor, Department of Information Technology, JNTU-GV Vizianagaram.</p>
+            <p>❖ Sept 2011 – Jan 2013: Assistant Professor, Department of Computer Science Engineering, Gokul Institute of Technology and Sciences, Bobbili.</p>
+
+            <p className="ADsub">Administrative Service in this Institution:</p>
+            <p>❖ Appointed to act upon and maintain JNTUK-CoEeRD related processes in the college (29 October 2014).</p>
+            <p>❖ Served as Deputy Warden for Boys Hostel (Feb 2016 – Mar 2019).</p>
+            <p>❖ Worked as Network and System Coordinator for the college (Mar 2019 – Present).</p>
+
+            <p className="ADsub">Research Interests:</p>
+            <p>❖ Machine Learning</p>
+            <p>❖ Internet of Things</p>
+            <p>❖ Network Security</p>
+
+            <p className="ADsub">Professional Memberships:</p>
+            <p>❖ Associate Member (Life Member), The Institution of Engineers (India).</p>
+
+            <p className="ADsub">Invited Talks:</p>
+            <p>❖ “A Day with Pandas and NumPy” – Two Day Workshop on Advanced Python Toolkits, Visakha Institute of Engineering and Technology, Visakhapatnam (19–20 Sept 2018).</p>
+
+            <p className="ADsub">Internship:</p>
+            <p>❖ Completed Internship Project under ExcelR & APSSDC Faculty Development Program on Data Science (June 2020).</p>
         </div>
       </div>
     </div>

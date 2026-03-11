@@ -14,7 +14,7 @@ function Controller1() {
         <div className="allRightContentProfile">
           {/* Profile information */}
           <center>
-          <div className="profileImage">
+          <div className="profile-Image">
             
           <img src = {Controller1i} alt="Profile" />
         

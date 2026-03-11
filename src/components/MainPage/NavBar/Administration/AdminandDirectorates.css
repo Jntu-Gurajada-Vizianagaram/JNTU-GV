@@ -39,7 +39,8 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-.AD-icon{
+
+.AD-icon {
   width: 15px;
   height: 15px;
   margin-right: 10px;
@@ -65,30 +66,34 @@
 
 .profile-Image {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 330px;
   margin-bottom: 15px;
-  border-radius: 50%;
+  border-radius: 25px;
   overflow: hidden;
-  background: linear-gradient(to right, #370a68, #4a90e2);
-  padding: 5px; /* Adjust this to match the desired border width */
+  /* background: linear-gradient(to right, #370a68, #4a90e2); */
+  padding: 5px;
+  /* Adjust this to match the desired border width */
 }
 
 .profile-Image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 25px;
   display: block;
   background: white;
-  padding: 5px; /* Adjust this to match the desired border width */
+  padding: 5px;
+  /* Adjust this to match the desired border width */
 }
+
 .AD-sub {
   text-decoration: underline;
   color: rgb(14, 14, 174);
   font-size: 17px;
   font-weight: bold;
 }
+
 .profileName h3 {
   color: #531679;
   font-family: "Poppins", sans-serif;
@@ -117,7 +122,7 @@
   margin: 10px 0;
 }
 
-.contributions{
+.contributions {
   text-align: left;
 }
 

@@ -18,7 +18,7 @@ function EvaluationExam() {
         <div className="allRightContentProfile">
           {/* Profile information */}
           <center>
-          <div className="profileImage">
+          <div className="profile-Image">
             
           <img src = {doe} alt="Profile" />
         
