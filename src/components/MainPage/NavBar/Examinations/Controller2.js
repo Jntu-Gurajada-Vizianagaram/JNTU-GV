@@ -1,5 +1,5 @@
 import React from 'react';
-import AnilImage from "../../../../assets/ExaminationImages/Ace2.jpeg";
+import Controller3i from '../../../../assets/ExaminationImages/ACE3.jpg';
 import './Examinations.css';
 
 function Controller2() {
@@ -16,51 +16,39 @@ function Controller2() {
           {/* Profile information */}
           <center>
           <div className="profile-Image">
-            <img src={AnilImage} alt="Profile" />
+            
+          <img src = {Controller3i} alt="Profile" width={290}/>
+        
           </div>
           <div className="profileName">
-            <h3>Mr. Anil Wurity</h3>
+            <h3>Mr. D D V Sivaram Rolangi</h3>
           </div>
           <div className="profileDesignation">
-            <h4 className="regularStyleH4">Additional Controller of Examinations 2</h4>
-            <br></br>
-            <h3>Assistant Professor, Dept. of Information Technology</h3>
+            <h4 className="regularStyleH4">Additional Controller of Examinations-2</h4><br></br>
+            <h3>Assistant Professor, Department of Computer Science & Engineering</h3>
           </div>
           </center>
           <hr />
           {/* Profile description */}
-          <p>Email: ace2@jntugv.edu.in, acepg@jntugv.edu.in</p>
-            <hr />
-            <p className="ADsub">Educational Qualifications:</p>
-            <p>❖ M.Tech in Computer Science and Technology (2009–2011) from GITAM University, Visakhapatnam.</p>
-            <p>❖ B.Tech in Information Technology (2002–2006) from Al-Ameer College of Engineering and Information Technology, affiliated to JNTU Hyderabad.</p>
+          <p>Email: ace2@jntugv.edu.in</p>
+          <hr />
+          <p>Mr. D D V Sivaram Rolangi, currently working as Assistant Professor in Department of Computer Science and Engineering, University College of Engineering Vizianagaram-JNTU-GV, Vizianagaram, completed his B. Tech in Computer Science and Engineering from V R Siddhartha Engineering College, Vijayawada. M.Tech in Information Technology and  currently pursuing his Ph.D under Visveswaraya PhD scheme  from Andhra University College of Engineering , Andhra University, Visakhapatnam.  </p>
+          <p>His areas of interests include Theoretical Computer Science, Compiler technologies, Network programming. He has about 19 years of experience in teaching. His research interests include Machine learning, Computer vision, Deep learning, IoT and Assistive Technologies. </p>
+        
+        <p className="ADsub">Additional Roles carried out so far :</p>
+<p>❖ Network & systems coordinator.</p>
+<p>❖ Deputy Warden. </p>
+<p>❖ Training & Placement Officer (TPO).</p>
+<p>❖ Officer In charge of Hostels (OIH).</p>
 
-            <p className="ADsub">Professional Experience:</p>
-            <p>❖ Additional Controller of Examinations – 2, JNTU-GV.</p>
-            <p>❖ Additional Controller of Examinations – PG, JNTU-GV.</p>
-            <p>❖ Digital Monitoring Cell Coordinator, JNTU-GV from 2022 - 2026.</p>
-            <p>❖ Jan 2013 – Present: Assistant Professor, Department of Information Technology, JNTU-GV Vizianagaram.</p>
-            <p>❖ Sept 2011 – Jan 2013: Assistant Professor, Department of Computer Science Engineering, Gokul Institute of Technology and Sciences, Bobbili.</p>
 
-            <p className="ADsub">Administrative Service in this Institution:</p>
-            <p>❖ Appointed to act upon and maintain JNTUK-CoEeRD related processes in the college (29 October 2014).</p>
-            <p>❖ Served as Deputy Warden for Boys Hostel (Feb 2016 – Mar 2019).</p>
-            <p>❖ Worked as Network and System Coordinator for the college (Mar 2019 – Present).</p>
 
-            <p className="ADsub">Research Interests:</p>
-            <p>❖ Machine Learning</p>
-            <p>❖ Internet of Things</p>
-            <p>❖ Network Security</p>
-
-            <p className="ADsub">Professional Memberships:</p>
-            <p>❖ Associate Member (Life Member), The Institution of Engineers (India).</p>
-
-            <p className="ADsub">Invited Talks:</p>
-            <p>❖ “A Day with Pandas and NumPy” – Two Day Workshop on Advanced Python Toolkits, Visakha Institute of Engineering and Technology, Visakhapatnam (19–20 Sept 2018).</p>
-
-            <p className="ADsub">Internship:</p>
-            <p>❖ Completed Internship Project under ExcelR & APSSDC Faculty Development Program on Data Science (June 2020).</p>
-        </div>
+<p className="ADsub">Present administrative roles: </p>
+<p>❖ Dispensary Coordinator </p>
+<p>❖ Public Relations Officer(PRO) of JNTUGV </p>
+<p>❖ Additional Controller of Examinations -III ( ACE-3)</p>
+<p>❖ Additional Controller of Examinations-2</p>
+</div>
       </div>
     </div>
   );

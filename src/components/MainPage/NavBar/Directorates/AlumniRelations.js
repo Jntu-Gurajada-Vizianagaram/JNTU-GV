@@ -1,6 +1,7 @@
 import React from "react";
 import "../Administration/AdminandDirectorates.css";
-import registrar from "../../../../assets/AdminDirectoratesImages/registrar.jpeg";
+// import registrar from "../../../../assets/AdminDirectoratesImages/registrar.jpeg";
+import daap from "../../../../assets/AdminDirectoratesImages/jayasuma_daap.jpeg";
 
 function AlumniRelations() {
   return (
@@ -14,7 +15,7 @@ function AlumniRelations() {
         <div className="allRightContentProfile">
           <div className="ADimg">
             <center>
-              <img src={registrar} alt="Profile" />
+              <img src={daap} alt="Profile" />
             </center>
           </div>
         </div>
@@ -39,22 +40,33 @@ function AlumniRelations() {
         <p>Email: dar@jntugv.edu.in</p>
 
         <hr></hr>
+        
+        <div className="registar-1">
+          <p>
+            Dr. G. Jaya Suma, present working as a Professor in Department of
+            Information Technology, Director of Academic Audit and Planning, Director (i/c) of Alumni Relations , Executive Council member of JNTUGV -
+            Vizianagaram, AP. Completed her B.Tech (CS&SE), MTech (CS&T),
+            Ph.D(CSE). Having experience of 22 plus years Teaching, Research and
+            Administration of Engineering Education.
+          </p>
+        </div>
 
         <p className="ADsub">Administrative Positions</p>
 
         <p>
-          ❖ Presently working as Registrar and Director of Alumni Relations,
-          JNTU-GV, Vizianagaram.
+          ❖ Currently Director of Academic Audit and Planning, JNTUGV, Vizianagaram since from November 2022.
         </p>
         <p>
-          ❖ Director (i/c) of Industry Institute Interaction, Placements & Training,
-          JNTUGV.
+          ❖ Former Registrar of JNTU-GV from 2024-2026.
         </p>
         <p>
-          ❖ Director (i/c) of Faculty Development Cell, JNTUGV.
+          ❖ Director (i/c) of Alumni Relations, JNTU-GV, Vizianagaram.
         </p>
         <p>
-          ❖ Executive Council Member, JNTUGV, Vizianagaram.
+          ❖ Executive Council Member, JNTUGV, Vizianagaram since from November 2022.
+        </p>
+        <p>
+          ❖ Served as Director (i/c) of Industry Institute Interaction Placements & Training & Director(i/c) of Faculty Development Cell and Executive Council member of JNTUGV -
         </p>
         <p>
           ❖ Served as Head, Department of Information Technology, University College

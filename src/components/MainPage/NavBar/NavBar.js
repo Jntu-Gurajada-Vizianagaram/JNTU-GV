@@ -90,7 +90,7 @@ const NavBar = () => {
       subItems: [
         {
           label: "Academic Audit and Planning",
-          path: "/directorates/academic-planning",
+          path: "/directorates/academic-audit-planning",
         },
         // { label: "Academic Audit", path: "/directorates/academic-audit" },
         { label: "Evaluation & Admissions", path: "/directorates/evaluation" },

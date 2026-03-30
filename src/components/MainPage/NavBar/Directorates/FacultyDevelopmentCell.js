@@ -1,6 +1,7 @@
 import React from "react";
 import "../Administration/AdminandDirectorates.css"; // Import your CSS file here
-import registrar from "../../../../assets/AdminDirectoratesImages/registrar.jpeg";
+// import registrar from "../../../../assets/AdminDirectoratesImages/registrar.jpeg";
+import daap from "../../../../assets/AdminDirectoratesImages/jayasuma_daap.jpeg";
 
 
 function FacultyDevelopmentCell() {
@@ -16,7 +17,7 @@ function FacultyDevelopmentCell() {
           <center>
             <div className="ADimg">
               <img
-                src={registrar}
+                src={daap}
                 alt="Profile"
               />
             </div>
@@ -37,15 +38,22 @@ function FacultyDevelopmentCell() {
 
           <p>
             Dr. G. Jaya Suma, present working as a Professor in Department of
-            Information Technology, Registrar, Director (i/c) of Industry
-            Institute Interaction Placements & Training & Director(i/c) of
-            Faculty Development Cell and Executive Council member of JNTUGV -
+            Information Technology, Director of Academic Audit and Planning, Director (i/c) of Alumni Relations , Executive Council member of JNTUGV -
             Vizianagaram, AP. Completed her B.Tech (CS&SE), MTech (CS&T),
             Ph.D(CSE). Having experience of 22 plus years Teaching, Research and
             Administration of Engineering Education
           </p>
 
           <p className="ADsub">Administration Contributions</p>
+          <p>
+            ❖ Currently Director of Academic Audit and Planning, JNTUGV, Vizianagaram since from November 2022.
+          </p>
+          <p>
+            ❖ Executive Council member of JNTUGV, Vizianagaram since from November 2022.
+          </p>
+          <p>
+            ❖ Former Registrar of JNTU-GV from 2024-2026.
+          </p>
           <p>
             ❖ Served as Head, Department of Information Technology, university
             college of Engineering, since 2014 to August 2022.

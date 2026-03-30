@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import "./aboutUs.css";
 
 import chancellor from "../../../assets/AdminDirectoratesImages/chancellor.jpeg";
-import registrar from "../../../assets/AdminDirectoratesImages/registrar.jpeg";
+// import registrar from "../../../assets/AdminDirectoratesImages/registrar.jpeg";
+import registrar from "../../../assets/AdminDirectoratesImages/registrar_new.jpeg";
 import vc from "../../../assets/AdminDirectoratesImages/vc.png";
 
 const AboutUs = () => {
@@ -15,21 +16,21 @@ const AboutUs = () => {
       image: chancellor,
       link: "administration/chancellor"
     },
-  {
-  id: 2,
-  name: "Prof. V. V. Subba Rao",
-  designation: "Ph.D., Mechanical Engineering (IIT Kharagpur)",
-  role: "Hon’ble Vice-Chancellor",
-  image: vc,
-  link: "administration/vice-chancellor"
-},
+    {
+      id: 2,
+      name: "Prof. V. V. Subba Rao",
+      designation: "Ph.D., Mechanical Engineering (IIT Kharagpur)",
+      role: "Hon’ble Vice-Chancellor",
+      image: vc,
+      link: "administration/vice-chancellor"
+    },
 
 
     {
       id: 3,
-      name: "Prof. G. Jaya Suma",
-      designation: "M.Tech (CS&T), Ph.D(CSE)",
-      role: "Registrar",
+      name: "Prof. D. Rajya Lakshmi",
+      designation: "M.Tech, Ph.D",
+      role: "Registrar i/c",
       image: registrar,
       link: "administration/registrar"
     }
@@ -40,25 +41,25 @@ const AboutUs = () => {
       <h2 className="about-heading">Administration</h2>
       <div className="administration-grid">
         {administrationData.map((person) => (
-          <Link 
-            to={person.link} 
-            className="more-link" 
+          <Link
+            to={person.link}
+            className="more-link"
             key={person.id}
           >
             <div className="aboutUs-card">
               <div className="aboutUs-image-container">
-                <img 
-                  src={person.image} 
-                  alt={person.name} 
-                  className="aboutUs-image" 
+                <img
+                  src={person.image}
+                  alt={person.name}
+                  className="aboutUs-image"
                   loading="lazy"
                 />
               </div>
               <div className="aboutUs-content">
                 <p className="aboutUs-name">{person.name}</p>
-                {person.designation?(
+                {person.designation ? (
                   <p className="aboutUs-designation">{person.designation}</p>
-                ): <br></br>}
+                ) : <br></br>}
                 <p className="aboutUs-designation highlight">{person.role}</p>
               </div>
             </div>

@@ -20,6 +20,7 @@ import Registrar from "./components/MainPage/NavBar/Administration/Registrar";
 import ViceChancellor from "./components/MainPage/NavBar/Administration/ViceChancellor";
 import AcademicAudit from "./components/MainPage/NavBar/Directorates/AcademicAudit";
 import AcademicPlanning from "./components/MainPage/NavBar/Directorates/AcademicPlanning";
+import AcademicAuditPlanning from "./components/MainPage/NavBar/Directorates/AcademicAuditPlanning";
 import Admissions from "./components/MainPage/NavBar/Directorates/Admissions";
 import AlumniRelations from "./components/MainPage/NavBar/Directorates/AlumniRelations";
 import Empowerment from "./components/MainPage/NavBar/Directorates/Empowerment";
@@ -90,12 +91,12 @@ function App() {
   return (
     <div>
       {/* <BelowBar /> */}
-      <HeaderTop/>
+      <HeaderTop />
       <Header />
       <NavBar />
-      <ScrollToTop/>
+      <ScrollToTop />
       <Routes>
-        <Route path="/sitemap" element={<Sitemap/>}/>
+        <Route path="/sitemap" element={<Sitemap />} />
         <Route path="/" element={<Homepage />} />
         <Route path="/about-us" element={<AboutusMain />}>
           <Route path="about-jntugv" element={<AboutJNTUGV id="about-jntugv" />} />
@@ -127,6 +128,7 @@ function App() {
         <Route path="/directorates" element={<DirectoratesMain />}>
           <Route path="academic-audit" element={<AcademicAudit />} />{" "}
           <Route path="academic-planning" element={<AcademicPlanning />} />
+          <Route path="academic-audit-planning" element={<AcademicAuditPlanning />} />
           <Route path="admissions" element={<Admissions />} />
           <Route path="alumni-relations" element={<AlumniRelations />} />{" "}
           <Route path="empowerment" element={<Empowerment />} />
