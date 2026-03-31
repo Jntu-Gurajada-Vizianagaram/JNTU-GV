@@ -12,7 +12,7 @@ export const pgRows = [
   {
     id: 2,
     specialization: "CSE - Computer Science and Engineering  ",
-    name: "Dr. R. Rajeshwara Rao, Prof in CSE & Principal <sup>i/c</sup> of JNTU-GV CEV(A)",
+    name: "Dr. R. Rajeshwara Rao, Prof in CSE & Principal <sup>i/c</sup> of JNTU-GV College of Engineering (CEV) (A)(A)",
   },
   {
     id: 3,

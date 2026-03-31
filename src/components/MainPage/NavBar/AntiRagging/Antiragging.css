@@ -1,66 +1,106 @@
 .Antiragging-Main {
-    display: flex;
-    margin-left: 30px;
+  padding: 20px 0;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.antiragging-merged-container {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.antiragging-main-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.antiragging-banner-image {
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.antiragging-title {
+  color: #370a68;
+  font-weight: 700 !important;
+  margin: 30px 0 !important;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.antiragging-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background-color: #f4c430;
+  border-radius: 2px;
+}
+
+.antiragging-info-grid {
+  margin-top: 20px;
+}
+
+.antiragging-section-title {
+  color: #370a68;
+  font-weight: 600 !important;
+  margin-top: 20px !important;
+  margin-bottom: 10px !important;
+  border-left: 5px solid #f4c430;
+  padding-left: 15px;
+}
+
+.antiragging-section-text {
+  color: #444;
+  line-height: 1.8 !important;
+  text-align: justify;
+  padding-left: 20px;
+}
+
+.antiragging-table-title {
+  color: #370a68;
+  font-weight: 700 !important;
+  margin-top: 50px !important;
+  margin-bottom: 30px !important;
+}
+
+.antiragging-table-container {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 8px !important;
+  border: 1px solid #eee;
+}
+
+.antiragging-email-link {
+  color: #370a68;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.antiragging-email-link:hover {
+  text-decoration: underline;
+  color: #f4c430;
+}
+
+@media screen and (max-width: 768px) {
+  .antiragging-banner-image {
+    height: 200px;
   }
   
-  .allLeftMenuAOP {
-    margin-top: 30px;
-    margin-right: 60px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .antiragging-title {
+    font-size: 1.8rem !important;
   }
   
-  .allLeftMenuAOP .menubutton {
-    width: 240px;
-    height: 60px;
-    flex-shrink: 0;
-    border-radius: 7px;
-    color: black;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #370a68;
-    background: #fff;
-    gap: 15px;
-    font-weight: 600;
+  .antiragging-table-title {
+    font-size: 1.6rem !important;
   }
-  
-  /* Hover state */
-  .allLeftMenuAOP .menubutton:hover {
-    background-color: #370a68;
-    color: #fff;
+
+  .antiragging-section-text {
+    padding-left: 10px;
   }
-  
-  /* Selected state */
-  .allLeftMenuAOP .menubutton.active {
-    background-color: #370a68;
-    color: #fff;
-    box-shadow: 0px 4px 22px 0px rgba(123, 124, 134, 0.36);
-  }
-  
-  @media screen and (max-width: 600px) {
-    .Antiragging-Main {
-      display: flex;
-      flex-direction: column;
-      margin-left: 10px;
-    }
-  
-    .allLeftMenuAOP .menubutton {
-      width: fit-content;
-      height: auto;
-      padding: 5px;
-    }
-  
-    .allLeftMenuAOP{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-  }
+}
   

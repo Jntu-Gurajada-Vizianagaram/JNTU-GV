@@ -1,199 +1,169 @@
-/* Add this to your Infrastructure.css file */
-.inframainDivIG {
-    margin-left: 10%;
-    margin-right: 10%;
-} 
-
-.infraIamgeGallery {
-    display: flex;
-    flex-direction: column; /* Change to column for better stacking */
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f0f0; /* Light background for contrast */
-    padding: 20px;
-  max-width: 80%; /* Adjust the max-width as needed */
+.infra-container {
+  display: flex !important;
+  flex-direction: row;
+  min-height: 100vh;
+  padding: 30px 10%;
+  gap: 40px;
 }
 
+.infra-left-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 240px;
+}
+
+.infra-item-link {
+  width: 240px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  box-shadow: 0px 4px 22px 0px rgba(123, 124, 134, 0.36);
+  color: black;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #370a68;
+  background: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.infra-item-link:hover {
+  background-color: #2e0669;
+  color: #fff !important;
+}
+
+.infra-item-link.active {
+  background-color: #2e0669;
+  color: #fff !important;
+}
+
+.infra-content-area {
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 0 20px;
+}
+
+.infra-content-area-header {
+  border-bottom: 2px solid #370a68;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.infra-content-area-header h3 {
+  color: #2e0669;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.infra-profile-container {
+  width: 100%;
+}
+
+.infra-profile-details {
+  margin-top: 24px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.infra-sub-heading {
+  text-decoration: underline;
+  color: rgb(14, 14, 174);
+  font-size: 17px;
+  font-weight: bold;
+  display: block;
+  margin: 20px 0 10px 0;
+}
+
+/* Image styles */
+.infra-logo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid #370a68;
+  margin: 10px auto;
+  display: block;
+}
+
+.infra-image-gallery-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.infra-gallery-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #370a68;
+}
+
+/* Table styles */
 .infra-table {
-    border-collapse: collapse;
-    width: 80%;
-  }
-  
-  .infra-table th, .infra-table td {
-    border: 1px solid #281d1d;
-    padding: 8px;
-    text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.infra-table th {
+  background-color: #370a68;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.infra-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.infra-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.infra-accent-text {
+  color: #370a68;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1024px) {
+  .infra-container {
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 30px;
   }
 
-  
-  
-  /* Add this to style Library working hours table */
-  .working-hours-table {
-    border-collapse: collapse;
-    width: 80%;
-  }
-  
-  .working-hours-table th, .working-hours-table td {
-    border: 1px solid #281d1d;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .custom-table {
-    border-collapse: collapse;
-    width: 80%;
-  }
-
-  .custom-table th, .custom-table td {
-    border: 1px solid #281d1d;
-    padding: 8px;
-    text-align: left;
-  }
-
-  .staff-table {
-    border-collapse: collapse;
-    width: 80%;
-  }
-
-  .staff-table th, .staff-table td {
-    border: 1px solid #281d1d;
-    padding: 8px;
-    text-align: left;
-  }
-
-  .BI{
-    color: #2e0669;
-  }
-
-  .image {
-    height: 400px;
-    width: 80vw;
-  }
-  .image-container {
-    display: flex;
+  .infra-left-menu {
+    min-width: 100%;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Space between images */
-  }
-  
-  .mianDivIG {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-  .carouselText {
-    background-color: #690001;
-    width: max-content;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .girls-hostel {
-    border-collapse: collapse;
-    width: 80%;
+    gap: 15px;
   }
 
-  .girls-hostel th, .girls-hostel td {
-    border: 1px solid #281d1d;
-    padding: 8px;
-    text-align: left;
+  .infra-item-link {
+    width: calc(50% - 10px);
+    height: 50px;
+    font-size: 0.9rem;
   }
 
-  .boys-hostel {
-    border-collapse: collapse;
-    width: 80%;
+  .infra-gallery-image {
+    height: 250px;
   }
+}
 
-  .boys-hostel th, .boys-hostel td {
-    border: 1px solid #281d1d;
-    padding: 8px;
-    text-align: left;
+@media screen and (max-width: 600px) {
+  .infra-item-link {
+    width: 100%;
   }
-
-  .supporting-staff {
-    border-collapse: collapse;
-    width: 80%;
-  }
-
-  .supporting-staff th, .supporting-staff td {
-    border: 1px solid #281d1d;
-    padding: 8px;
-    text-align: left;
-  }
-
-  .sports {
-    border-collapse: collapse;
-    width: 80%;
-  }
-
-  .sports th, .sports td {
-    border: 1px solid #281d1d;
-    padding: 8px;
-    text-align: left;
-  }
-
-  .doctors-table {
-    border-collapse: collapse;
-    width: 80%;
-  }
-
-  .doctors-table th, .doctors-table td {
-    border: 1px solid #281d1d;
-    padding: 8px;
-    text-align: left;
-  }
-
-  .supporting-staff {
-    border-collapse: collapse;
-    width: 80%;
-  }
-
-  .supporting-staff th, .supporting-staff td {
-    border: 1px solid #281d1d;
-    padding: 8px;
-    text-align: left;
-  }
-
-  .bank-logo {
-    width: 500px;
-    height: 300px; 
-  }
-
-  .canteen-logo {
-    width: 500px;
-    height: 300px; 
-  }
-
-  .image-container {
-    display: flex;
-  }
-  
-  .sq-logo {
-    width: 500px; /* Adjust the width as needed */
-    height: 300px;
-    margin: 10px; /* Adjust the margin as needed */
-  }
-
-  .image-container {
-    display: flex;
-  }
-  
-  .sac-logo {
-    width: 500px; /* Adjust the width as needed */
-    height: 300px;
-    margin: 10px; /* Adjust the margin as needed */
-  }
-  
-  .gh-logo {
-    width: 500px;
-    height: 300px; 
-  }
-
-  @media (max-width: 767px) {
-  
-    .image{
-      height: 200px;
-    }
-  }
-  
-
+}

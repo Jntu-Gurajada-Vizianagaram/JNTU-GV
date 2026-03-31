@@ -53,6 +53,7 @@ const NavBar = () => {
         { label: "Chancellor", path: "/administration/chancellor" },
         { label: "Vice Chancellor", path: "/administration/vice-chancellor" },
         { label: "Registrar", path: "/administration/registrar" },
+        { label: "Chairpersons", path: "/administration/chairpersons" },
         { label: "Officer on Special Duty (OSD)", path: "/administration/osd" },
         // Add more sub-items as needed
       ],
@@ -92,10 +93,7 @@ const NavBar = () => {
           label: "Academic Audit and Planning",
           path: "/directorates/academic-audit-planning",
         },
-        // { label: "Academic Audit", path: "/directorates/academic-audit" },
         { label: "Evaluation & Admissions", path: "/directorates/evaluation" },
-        // { label: "Admissions", path: "/directorates/admissions" },
-
         { label: "Research & Development", path: "/directorates/research" },
         {
           label: "Industrial Relations & Placements",
@@ -106,8 +104,9 @@ const NavBar = () => {
           path: "/directorates/iqac",
         },
         { label: "Alumni Relations", path: "/directorates/alumni-relations" },
-
-        // Add more sub-items as needed
+        // { label: "Faculty Development Cell", path: "/directorates/faculty-development-cell" },
+        // { label: "Sports Administration", path: "/directorates/sports-administration" },
+        // { label: "Empowerment of Women & Grievances", path: "/directorates/empowerment" },
       ],
     },
     {
@@ -117,7 +116,7 @@ const NavBar = () => {
       subItems: [
         {
           label: "Director of Evaluation",
-          path: "/examination/director-evaluation",
+          path: "/examination/director",
         },
         {
           label: "Controller of Examinations",
@@ -146,26 +145,28 @@ const NavBar = () => {
         {
           label: "Examination Results",
           path: "https://exams.jntugv.edu.in/results",
-        }, // External link
-        // Add more sub-items as needed
+        },
       ],
     },
-
     {
       icon: <CertificateIcon />,
-      label: " PG Certification Courses",
+      label: "CERTIFICATION COURSES",
       path: "/contact-us",
       subItems: [
         {
           label: "PGCPAITL",
           path: "https://pgcpaitl.jntugv.edu.in",
         },
+        {
+          label: "Emerging Technologies",
+          path: "https://emergingtechnologies.jntugv.edu.in"
+        }
       ],
     },
 
     {
       icon: <WorkIcon />,
-      label: "Job Oppurtunites",
+      label: "JOB OPPORTUNITIES",
       path: "https://uyopportunities.jntugv.edu.in/",
     },
 
@@ -275,9 +276,7 @@ const NavBar = () => {
           </div>
         ))}
       </div>
-      <div className="bigSearch">
-        <Search />
-      </div>
+
     </nav>
   );
 };
