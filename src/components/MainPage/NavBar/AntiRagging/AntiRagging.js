@@ -1,30 +1,34 @@
-import { Link, Outlet, useLocation } from "react-router-dom";
+import React from "react";
+import AntiRaggingContent from "./AntiRaggingContent";
 import './Antiragging.css'
 
 const Antiragging = () => {
-  const location = useLocation();
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="Antiragging-Main">
       <div className="allLeftMenuAOP">
-        <Link
-          to="about"
-          className={`menubutton ${
-            location.pathname === "/anti-ragging/about" ? "active" : ""
-          }`}
+        <button
+          onClick={() => scrollToSection('about')}
+          className="menubutton"
         >
           About
-        </Link>
-        <Link
-          to="committee"
-          className={`menubutton ${
-            location.pathname === "/anti-ragging/committee" ? "active" : ""
-          }`}
+        </button>
+        <button
+          onClick={() => scrollToSection('committee')}
+          className="menubutton"
         >
           Committee Members
-        </Link>
+        </button>
       </div>
-      <Outlet />
+      <div className="antiragging-content-wrapper">
+        <AntiRaggingContent />
+      </div>
     </div>
   );
 };

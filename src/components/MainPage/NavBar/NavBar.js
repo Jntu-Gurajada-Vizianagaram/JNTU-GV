@@ -7,7 +7,8 @@ import {
   Menu as MenuIcon,
   Person as PersonIcon,
   School as SchoolIcon,
-  Verified  as CertificateIcon
+  Verified as CertificateIcon,
+  Work as WorkIcon
 } from "@mui/icons-material";
 import LinkIcon from '@mui/icons-material/Link';
 import React, { useState } from "react";
@@ -52,6 +53,7 @@ const NavBar = () => {
         { label: "Chancellor", path: "/administration/chancellor" },
         { label: "Vice Chancellor", path: "/administration/vice-chancellor" },
         { label: "Registrar", path: "/administration/registrar" },
+        { label: "Chairpersons", path: "/administration/chairpersons" },
         { label: "Officer on Special Duty (OSD)", path: "/administration/osd" },
         // Add more sub-items as needed
       ],
@@ -89,12 +91,9 @@ const NavBar = () => {
       subItems: [
         {
           label: "Academic Audit and Planning",
-          path: "/directorates/academic-planning",
+          path: "/directorates/academic-audit-planning",
         },
-        // { label: "Academic Audit", path: "/directorates/academic-audit" },
         { label: "Evaluation & Admissions", path: "/directorates/evaluation" },
-        // { label: "Admissions", path: "/directorates/admissions" },
-
         { label: "Research & Development", path: "/directorates/research" },
         {
           label: "Industrial Relations & Placements",
@@ -105,8 +104,9 @@ const NavBar = () => {
           path: "/directorates/iqac",
         },
         { label: "Alumni Relations", path: "/directorates/alumni-relations" },
-
-        // Add more sub-items as needed
+        // { label: "Faculty Development Cell", path: "/directorates/faculty-development-cell" },
+        // { label: "Sports Administration", path: "/directorates/sports-administration" },
+        // { label: "Empowerment of Women & Grievances", path: "/directorates/empowerment" },
       ],
     },
     {
@@ -116,7 +116,7 @@ const NavBar = () => {
       subItems: [
         {
           label: "Director of Evaluation",
-          path: "/examination/director-evaluation",
+          path: "/examination/director",
         },
         {
           label: "Controller of Examinations",
@@ -145,21 +145,29 @@ const NavBar = () => {
         {
           label: "Examination Results",
           path: "https://exams.jntugv.edu.in/results",
-        }, // External link
-        // Add more sub-items as needed
+        },
       ],
     },
-
     {
       icon: <CertificateIcon />,
-      label: " PG Certification Courses",
+      label: "CERTIFICATION COURSES",
       path: "/contact-us",
       subItems: [
         {
           label: "PGCPAITL",
           path: "https://pgcpaitl.jntugv.edu.in",
         },
+        {
+          label: "Emerging Technologies",
+          path: "https://emergingtechnologies.jntugv.edu.in"
+        }
       ],
+    },
+
+    {
+      icon: <WorkIcon />,
+      label: "JOB OPPORTUNITIES",
+      path: "https://uyopportunities.jntugv.edu.in/",
     },
 
     {
@@ -182,9 +190,13 @@ const NavBar = () => {
           label: "Ideaclub",
           path: "https://ideaclub.jntugv.edu.in",
         },
+        // {
+        //   label: "GreenCampus",
+        //   path: "https://greencampus.jntugv.edu.in",
+        // },
         {
-          label: "GreenCampus",
-          path: "https://greencampus.jntugv.edu.in",
+          label: " Job Opportunities",
+          path: "https://uyopportunities.jntugv.edu.in/",
         },
         {
           label: "MoUs",
@@ -194,10 +206,10 @@ const NavBar = () => {
           label: "Events",
           path: "https://events.jntugv.edu.in",
         },
-        {
-          label: "Yogandhra",
-          path: "https://yogandhra.jntugv.edu.in",
-        },
+        // {
+        //   label: "Yogandhra",
+        //   path: "https://yogandhra.jntugv.edu.in",
+        // },
         // External link
         // Add more sub-items as needed
       ],
@@ -210,7 +222,7 @@ const NavBar = () => {
     const isExternal = path.startsWith("http");
 
     return isExternal ? (
-     <button > <a className="link-btn" href={path} target="_blank" rel="noopener noreferrer">
+      <button > <a className="link-btn" href={path} target="_blank" rel="noopener noreferrer">
         {label}
       </a>
       </button>
@@ -240,7 +252,7 @@ const NavBar = () => {
             <div className="dropbtn">
               {item.subItems ? (
                 <div className="drop-icon d-flex align-items-center">
-                  {item.icon }<span className="ms-2"></span> { item.label}
+                  {item.icon}<span className="ms-2"></span> {item.label}
                 </div>
               ) : (
                 <div className="drop-icon" onClick={handleMenuToggle}>
@@ -264,9 +276,7 @@ const NavBar = () => {
           </div>
         ))}
       </div>
-      <div className="bigSearch">
-      <Search />
-      </div>
+
     </nav>
   );
 };

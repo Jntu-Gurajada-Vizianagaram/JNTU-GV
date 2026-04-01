@@ -1,154 +1,87 @@
+// 1. Administration Wing
 export const Administration_Wing = [
-  {
-    title: "Chancellor",
-    link: "/administration/chancellor",
-  },
-  {
-    title: "Vice Chancellor",
-    link: "/administration/vice-chancellor",
-  },
-  {
-    title: "Registrar",
-    link: "/administration/registrar",
-  },
-  {
-    title: "Program Offered",
-    link: "/academics/programs-offered",
-  },
-
-  {
-    title: "Affliated Colleges",
-    link: "/academics/affliated-colleges",
-  },
+  { title: "Chancellor", link: "/administration/chancellor" },
+  { title: "Vice Chancellor", link: "/administration/vice-chancellor" },
+  { title: "Registrar", link: "/administration/registrar" },
+  { title: "Officer on Special Duty (OSD)", link: "/administration/osd" },
+  { title: "Chairpersons", link: "/administration/chairpersons" },
 ];
 
-export const Central_Facilites = [
-  {
-    title: "Dr.YSR Central Library",
-    link: "/",
-  },
-
-  {
-    title: "Training & Placement",
-    link: "https://placementcell.jntugv.edu.in/",
-  },
-
-  {
-    title: "Research and Development Cell",
-    link: "https://drd.jntugv.edu.in/",
-  },
-
-  {
-    title: "National Service Scheme (NSS)",
-    link: "https://nss.jntugv.edu.in",
-  },
-  {
-    title: "Anti Ragging Committee",
-    link: "/anti-ragging/committee",
-  },
-];
-
-export const Online_Courses = [
-  {
-    title: "Swayam Central",
-    link: "/",
-  },
-  {
-    title: "UGC MOOCs: A Vertical of SWAYAM",
-    link: "/",
-  },
-
-  {
-    title: "Dr.YSR Central Library",
-    link: "/",
-  },
-];
-
+// 2. Constituent Colleges
 export const Constituent_Colleges = [
   {
-    title: "JNTU-GV College of Engineering, Vizianagaram",
+    title: "JNTU-GV College of Engineering, Vizianagaram (CEV)",
     link: "https://jntugvcev.edu.in",
   },
   {
-    title: "JNTU-GV College of  Pharmaceutical Sciences, Vizianagaram",
+    title: "JNTU-GV College of Pharmaceutical Sciences, Vizianagaram (CPSV)",
     link: "https://jntugvcpsv.jntugv.edu.in/",
   },
   {
-    title: "JNTU-GV Tribal College of Engineering, Kurupam",
+    title: "JNTU-GV Tribal College of Engineering, Kurupam (TECK)",
     link: "https://teck.jntugv.edu.in/",
   },
 ];
 
-export const University_Hostels = [
-  {
-    title: "Gostani",
-    link: "/",
-  },
-  {
-    title: "Vegavathi",
-    link: "/",
-  },
-  {
-    title: "nagavalli",
-    link: "/",
-  },
-  {
-    title: "vamsadhara",
-    link: "/",
-  },
+// 3. Academic & Research
+export const Academic_Research = [
+  { title: "Programs Offered", link: "/academics/programs-offered" },
+  { title: "Admissions", link: "/academics/admissions" },
+  { title: "Affiliated Colleges", link: "/academics/affliated-colleges" },
+  { title: "Research and Development Cell", link: "https://drd.jntugv.edu.in/" },
+  { title: "Training & Placement", link: "https://placementcell.jntugv.edu.in/" },
+  { title: "Dr.YSR Central Library", link: "/infrastructure/about-library" },
 ];
 
-export const JntuGv_Units = [
-  {
-    title: "Digital Monitoring Cell",
-    link: " https://dmc.jntugv.edu.in ",
-  },
-  {
-    title: "IQAC",
-    link: "https://iqac.jntugv.edu.in ",
-  },
-  {
-    title: "Sports",
-    link: "https://sports.jntugv.edu.in",
-  },
-  {
-    title: "Library",
-    link: "/",
-  },
-  {
-    title: "Incubation Center",
-    link: "/",
-  },
+// 4. Campus Infrastructure
+export const Campus_Infrastructure = [
+  { title: "University Hostels", link: "/infrastructure/about-hostels" },
+  { title: "Engineering Cell", link: "/infrastructure/about-engineering-cell" },
+  { title: "Guest House", link: "/infrastructure/about-guest-house" },
+  { title: "Staff Quarters", link: "/infrastructure/about-staff-quarters" },
+  { title: "Canteen", link: "/infrastructure/about-canteen" },
+  { title: "Bank", link: "/infrastructure/about-banks" },
+  { title: "Dispensary", link: "/infrastructure/about-dispensary" },
 ];
 
-export const Grievance = [
-  {
-      title: "Student Grievance",
-      link:"/grievance-form"
-  },
-  {
-    title: "Recruitment Grievance",
-    link:"mailto:recruitmentgrievances@jntugv.edu.in"
-},
-]
+// 5. University Cells
+export const University_Cells = [
+  { title: "Digital Monitoring Cell (DMC)", link: "https://dmc.jntugv.edu.in" },
+  { title: "IQAC", link: "https://iqac.jntugv.edu.in" },
+  { title: "Incubation Center", link: "/infrastructure/about-incubation-center" },
+];
+
+// 6. Student Corner & Activities
 export const Student_Corner = [
-  {
-      title: "Anti Ragging",
-      link:"/anti-ragging/about"
-  },
-  {
-    title: "NSS",
-    link:"https://nss.jntugv.edu.in"
-},
-]
+  { title: "Anti-Ragging", link: "/anti-ragging/about" },
+  { title: "NSS", link: "https://nss.jntugv.edu.in" },
+  { title: "Sports & Fitness", link: "/infrastructure/about-sports-and-fitness" },
+  { title: "Music Club", link: "/infrastructure/about-music-club" },
+  { title: "Student Activity Club", link: "/infrastructure/about-student-activity-club" },
+];
 
-export const Others = [
+// 7. Governance & Disclosure
+export const Governance_Disclosure = [
+  { title: "RTI", link: "https://rti.jntugv.edu.in" },
+  { title: "Ombudsman", link: "https://drive.google.com/file/d/15riRLxVtiJOrtLiYWmh7kvIQlTLV7Ocl/view?usp=sharing" },
+  { title: "Student Grievance", link: "/grievance-form" },
+  { title: "Recruitment Grievance", link: "mailto:recruitmentgrievances@jntugv.edu.in" },
+];
+
+// 8. Online Courses 
+export const Online_Courses = [
+  { title: "Swayam Central", link: "https://swayam.gov.in/" },
+  { title: "UGC MOOCs", link: "http://ugcmoocs.inflibnet.ac.in/" },
   {
-      title: "Ombudsman",
-      link:"https://drive.google.com/file/d/15riRLxVtiJOrtLiYWmh7kvIQlTLV7Ocl/view?usp=sharing"
+    title: "ACM Digital Library",
+    link: "https://dl.acm.org/"
   },
   {
-    title: "RTI",
-    link:"https://rti.jntugv.edu.in",
-}
-]
+    title: "IEEE Xplore Digital Library",
+    link: "https://ieeexplore.ieee.org/Xplore/home.jsp"
+  },
+  {
+    title: "Springer",
+    link: "https://link.springer.com/"
+  },
+];

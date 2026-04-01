@@ -29,7 +29,7 @@ You can also access the live version of the JNTUGV website by visiting the follo
 | Role           | Name             | GitHub Profile                          |
 |----------------|------------------|------------------------------------------|
 | Lead Developer | Haneesh Bandaru  | [@haneesh](https://github.com/haneesh)   |
-| Lead Developer | Harsha Vivek     | [@harsha](https://github.com/harsha)     |
+| Lead Developer | Harsha Vivek     | [@harsha-vivek03](https://github.com/harsha-vivek03)     |
 | Co-Developer   | Anil Sinthu      | [@anilsinthu73](https://github.com/anilsinthu73) |
 
 

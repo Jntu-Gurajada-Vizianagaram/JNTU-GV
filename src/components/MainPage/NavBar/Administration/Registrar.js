@@ -1,146 +1,90 @@
 import React from "react";
-import registrar from "../../../../assets/AdminDirectoratesImages/registrar.jpeg";
-import "./AdminandDirectorates.css"; // Import your CSS file here
-import tick from "../../../../assets/StyleImages/tick.svg";
+import registrar from "../../../../assets/AdminDirectoratesImages/registrar_new.jpeg";
 import { MdOutlineMailOutline } from "react-icons/md";
+import tick from "../../../../assets/StyleImages/tick.svg";
 
 function Registrar() {
   return (
-    <div className="allRightContent-Profile">
-      {/* Profile information */}
-      <div className="profileName">
-        <div className="profile-Image">
-          <img src={registrar} alt="Profile" />
+    <div className="admin-profile-container">
+      {/* Profile Section */}
+      <center>
+        <div className="admin-profile-image">
+          <img src={registrar} alt="Registrar Profile" />
         </div>
-        <h3>Prof.Dr.G.Jaya Suma</h3>
-        <h4>Professor of Dept.of Information Technology</h4>
-        <p className="profileEmail">
-          <MdOutlineMailOutline size="20px" />
-          registrar@jntugv.edu.in
-        </p>
-      </div>
-      <div className="profileDetails">
+        <div className="admin-profile-name">
+          <h3>Prof. D. Rajya Lakshmi</h3>
+          <h3>Registrar</h3>
+          <h4>Professor of Computer Science & Engineering</h4>
+          <p className="admin-profile-email">
+            <MdOutlineMailOutline size="20px" />
+            rajyalakshmi.cse@jntugvcev.edu.in
+          </p>
+        </div>
+      </center>
+
+      {/* Profile Details */}
+      <div className="admin-profile-details">
         <div className="contributions">
-        <div className="registar-1">
-          <p>
-            Dr. G. Jaya Suma, present working as a Professor in Department of
-            Information Technology, Registrar, Director (i/c) of Industry
-            Institute Interaction Placements & Training & Director(i/c) of
-            Faculty Development Cell and Executive Council member of JNTUGV -
-            Vizianagaram, AP. Completed her B.Tech (CS&SE), MTech (CS&T),
-            Ph.D(CSE). Having experience of 22 plus years Teaching, Research and
-            Administration of Engineering Education.
-          </p>
-        </div>
-        <div className="registar-2">
-          <p className="AD-sub">Administration Contributions</p>
-          
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Served as Head,
-            Department of Information Technology, university college of
-            Engineering, since 2014 to August 2022.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Special Officer of
-            New Engineering College, JNTU-GV, Kurupam since from May 2020 to
-            October 2022.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> IQAC Coordinator,
-            university college of Engineering January 2020 to September 2022.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> SPOC of university
-            college of Engineering for NPTEL Online Courses to till date.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Convener for Women
-            Empowerment & Grievance Cell, JNTUK, University College of
-            Engineering from September 2017 to till date.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Secretary & Member
-            for Women Empowerment & Grievance Cell from January 2014-August
-            2017.
-          </p>
-        </div>
-        <div className="registar-3">
-          <p className="AD-sub">Academic Contributions</p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Specialization of
-            Artificial Intelligence, Data Mining, Machine Learning, Deep
-            Learning, Soft Computing, and Internet of Things.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Authored Book
-            Titled “Artificial Intelligence & Machine Learning-2022.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Awarded CMI Level
-            5 in Management and Leadership-2021.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Awarded Out
-            Standing Women in Engineering-VIWA-2017.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Awarded Woman
-            Researcher in Science and Technology-2020.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Chairperson BOS,
-            Dept. of Information Technology. (2017-2022).
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Member of Board of
-            Studies for 3 years (2007-2010) in the Dept of CSE, GIT, GITAM
-            University.
-          </p>
-        </div>
-        <div className="registar-4">
-          <p className="AD-sub">Research Contributions</p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Awarded Six PhDs
-            and Eight Scholars are working for PhD at present.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Published 3
-            patents.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Published 54
-            International Journals, 20 International Conferences, 2 National
-            Conferences.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Published 5 Book
-            chapters.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> 32 workshops
-            Organized, 58 Attended, 5 Chaired sessions in international
-            Conferences, and 32 technical talks delivered.
-          </p>
-        </div>
-        <div className="registar-5">
-          <p className="AD-sub">Professional Contributions</p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Member of CSI (ID
-            – 01170956).
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Senior Fellow of
-            IEEE-92245858.
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Member of ISTE-
-            (ID – LM44520).
-          </p>
-          <p>
-            <img src={tick} alt="Icon" className="AD-icon" /> Faculty sponsor of
-            IEEE WIE and faculty sponsor of ACM CHAPTER.
-          </p>
-        </div>
+          {/* Bio */}
+          <div className="registar-1">
+            <p>
+              Prof. D. Rajya Lakshmi is currently serving as the Registrar of JNTU-GV, Vizianagaram.
+              She previously served as the Vice-Chancellor (i/c) from July 2024. She is a Professor in
+              the Department of Computer Science and Engineering with over 30 years of teaching,
+              research, and administrative experience.
+            </p>
+          </div>
+
+          {/* Administrative Contributions */}
+          <div className="registar-2">
+            <p className="admin-sub-heading">Administrative Contributions</p>
+            <p><img src={tick} alt="tick" /> Registrar, JNTU-GV, Vizianagaram (Present)</p>
+            <p><img src={tick} alt="tick" /> Vice-Chancellor (i/c), JNTU-GV (From July 2024)</p>
+            <p><img src={tick} alt="tick" /> Director of Evaluation, JNTU-GV (Oct 2022 – Aug 2024)</p>
+            <p><img src={tick} alt="tick" /> Director of Women Empowerment & Grievances (i/c)</p>
+            <p><img src={tick} alt="tick" /> Principal & HOD (CSE), JNTUK Narasaraopet</p>
+            <p><img src={tick} alt="tick" /> Vice Principal (Academics), JNTUK Narasaraopet</p>
+            <p><img src={tick} alt="tick" /> Professor & HOD, CSE Department</p>
+            <p><img src={tick} alt="tick" /> BOS Chairperson (CSE & IT)</p>
+            <p><img src={tick} alt="tick" /> Academic Senate Member</p>
+          </div>
+
+          {/* Academic Qualifications */}
+          <div className="registar-3">
+            <p className="admin-sub-heading">Academic Qualifications</p>
+            <p><img src={tick} alt="tick" /> Ph.D in Computer Science & Engineering (JNTU Hyderabad)</p>
+            <p><img src={tick} alt="tick" /> M.Tech in Computer Science & Engineering – Andhra University</p>
+            <p><img src={tick} alt="tick" /> B.E. in Electronics – Andhra University</p>
+            <p><img src={tick} alt="tick" /> Diploma in Electronics & Post Diploma in Computer Applications</p>
+            <p><img src={tick} alt="tick" /> National Merit Scholar</p>
+          </div>
+
+          {/* Research Contributions */}
+          <div className="registar-4">
+            <p className="admin-sub-heading">Research Contributions</p>
+            <p><img src={tick} alt="tick" /> 65+ International Journal Publications</p>
+            <p><img src={tick} alt="tick" /> 25 Conference Publications</p>
+            <p><img src={tick} alt="tick" /> 15 PhDs Awarded</p>
+            <p><img src={tick} alt="tick" /> 4 Patents Published</p>
+            <p><img src={tick} alt="tick" /> Funded Research Projects (Completed & Ongoing)</p>
+          </div>
+
+          {/* Books & Certifications */}
+          <div className="registar-5">
+            <p className="admin-sub-heading">Books & Certifications</p>
+            <p><img src={tick} alt="tick" /> Books on Artificial Intelligence, Machine Learning & Cyber Security</p>
+            <p><img src={tick} alt="tick" /> IBM Certified Database Associate</p>
+            <p><img src={tick} alt="tick" /> IBM Certified Application Developer</p>
+            <p><img src={tick} alt="tick" /> FDPs in Machine Learning, Cyber Security, Data Science</p>
+          </div>
+
+          {/* Professional Memberships */}
+          <div className="registar-6">
+            <p className="admin-sub-heading">Professional Memberships</p>
+            <p><img src={tick} alt="tick" /> Life Member – CSI</p>
+            <p><img src={tick} alt="tick" /> Life Member – ISTE</p>
+            <p><img src={tick} alt="tick" /> Member – BMEI</p>
+          </div>
         </div>
       </div>
     </div>

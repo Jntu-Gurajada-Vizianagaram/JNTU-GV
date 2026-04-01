@@ -2,20 +2,20 @@ import React from "react";
 import daap from "../../../../assets/AdminDirectoratesImages/jayasuma_daap.jpeg";
 import { MdOutlineMailOutline } from "react-icons/md";
 
-function FacultyDevelopmentCell() {
+function AcademicAuditPlanning() {
   return (
     <div className="dir-profile-container">
       {/* Profile Header Block */}
       <div className="dir-profile-header">
         <div className="dir-profile-image">
-          <img src={daap} alt="Dr. G. Jaya Suma" />
+          <img src={daap} alt="Prof. Dr. G. Jaya Suma" />
         </div>
         <div className="dir-profile-info">
-          <h3>Dr. G. Jaya Suma</h3>
-          <h4>Director of Faculty Development Cell</h4>
+          <h3>Prof. Dr. G. Jaya Suma</h3>
+          <h4>Director of Academic Audit and Planning</h4>
           <h4>Professor, Dept. of Information Technology</h4>
           <p className="dir-profile-email">
-            <MdOutlineMailOutline size="20px" /> dfdp@jntugv.edu.in
+            <MdOutlineMailOutline size="20px" /> daa@jntugv.edu.in, dap@jntugv.edu.in
           </p>
         </div>
       </div>
@@ -29,11 +29,11 @@ function FacultyDevelopmentCell() {
         <p className="dir-sub-heading">Administration Contributions</p>
         <p>❖ Currently Director of Academic Audit and Planning, JNTU-GV since from November 2022.</p>
         <p>❖ Executive Council member of JNTU-GV since from November 2022.</p>
-        <p>❖ Former Registrar of JNTU-GV from 2024-2026.</p>
+        <p>❖ Former Registrar of JNTU-GV from 2024-2026</p>
         <p>❖ Served as Head, Department of Information Technology, university college of Engineering, since 2014 to August 2022.</p>
         <p>❖ Special Officer of New Engineering College, JNTU-GV, Kurupam since from May 2020 to October 2022.</p>
         <p>❖ IQAC Coordinator, JNTU-GV College of Engineering (CEV) (A) January 2020 to September 2022.</p>
-        <p>❖ SPOC of JNTU-GV College of Engineering (CEV) (A) for NPTEL Online Courses to till date.</p>
+        <p>❖ SPOC of university college of Engineering for NPTEL Online Courses to till date.</p>
         <p>❖ Convener for Women Empowerment & Grievance Cell, JNTUK, University College of Engineering from September 2017 to till date.</p>
         <p>❖ Secretary & Member for Women Empowerment & Grievance Cell from January 2014-August 2017.</p>
 
@@ -63,4 +63,4 @@ function FacultyDevelopmentCell() {
   );
 }
 
-export default FacultyDevelopmentCell;
+export default AcademicAuditPlanning;

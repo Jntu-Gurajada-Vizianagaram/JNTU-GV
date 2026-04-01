@@ -1,134 +1,64 @@
 import React from "react";
-import "../Administration/AdminandDirectorates.css"; // Import your CSS file here
-import daa from "../../../../assets/AdminDirectoratesImages/daa.jpeg";
+import daap from "../../../../assets/AdminDirectoratesImages/jayasuma_daap.jpeg";
+import { MdOutlineMailOutline } from "react-icons/md";
 
 function AcademicAudit() {
-  
   return (
-    <div className="mainContainer">
-      <div className="allRightContent">
-        <div className="allRightContentHeading">Director of Academic Audit</div>
-        <br></br>
-        <div className="allRightContentProfile">
-          {/* Profile information */}
-          <div className="ADimg">
-            <center>
-              <img src={daa} alt="Profile" />
-            </center>
-          </div>
+    <div className="dir-profile-container">
+      {/* Profile Header Block */}
+      <div className="dir-profile-header">
+        <div className="dir-profile-image">
+          <img src={daap} alt="Prof. Dr. G. Jaya Suma" />
         </div>
-        <center>
-          <div className="profileName">
-            <h3 className="ADh3">Dr. K. Chandra Bhushana Rao</h3>
-            <h3 className="ADh3">Director of Academic Audit</h3>
-          </div>
-          <div className="profileDesignation">
-            <h4 className="ADh4">
-              Professor of Dept. of Computer Science and Engineering
-            </h4>
-          </div>
-        </center>
-        <hr />
-        {/* Profile description */}
-        <p>Email: daa@jntugv.edu.in</p>
+        <div className="dir-profile-info">
+          <h3>Prof. Dr. G. Jaya Suma</h3>
+          <h4>Director of Academic Audit</h4>
+          <h4>Professor, Dept. of Information Technology</h4>
+          <p className="dir-profile-email">
+            <MdOutlineMailOutline size="20px" /> daa@jntugv.edu.in
+          </p>
+        </div>
+      </div>
+
+      {/* Profile Details Block */}
+      <div className="dir-profile-details">
         <p>
-          Website:{" "}
-          <a href="https://daa.jntugv.edu.in/">https://daa.jntugv.edu.in/</a>
+          Dr. G. Jaya Suma, present working as a Professor in Department of Information Technology, Director of Academic Audit and Planning, Director (i/c) of Alumni Relations, Executive Council member of JNTU-GV - Vizianagaram, AP. Completed her B.Tech (CS&SE), MTech (CS&T), Ph.D(CSE). Having experience of 22 plus years Teaching, Research and Administration of Engineering Education.
         </p>
 
-        <hr></hr>
-        <p>
-          Dr. Kota Chandra Bhushana Rao completed his B.E, M.E, and Ph.D. in
-          Electronics and Communication Engineering from Andhra University,
-          Visakhapatnam, in 1992, 1995, and 2005 respectively, under the
-          supervision of Prof. G.S.N. Raju (Former Vice-Chancellor, AU). He has
-          over 29 years of teaching, research, and administrative experience in
-          engineering education.
-        </p>
-        <p>
-          He has served as Assistant Professor, Associate Professor, Professor,
-          HOD, Dean, and Principal in reputed institutions like GITAM and MVGR
-          (1992–2012). Since 2013, he has been with JNTU Vizianagaram (UCEV), he
-          served as Head, ECE; and Director of IQAC. currently serving as
-          Professor and Director of Academic Audit and Planning (DAAP).
-        </p>
+        <p className="dir-sub-heading">Administration Contributions</p>
+        <p>❖ Currently Director of Academic Audit and Planning, JNTU-GV since from November 2022.</p>
+        <p>❖ Executive Council member of JNTU-GV since from November 2022.</p>
+        <p>❖ Former Registrar of JNTU-GV from 2024-2026</p>
+        <p>❖ Served as Director (i/c) of Industry Institute Interaction Placements & Training & Director(i/c) of Faculty Development Cell and Executive Council member of JNTU-GV.</p>
+        <p>❖ Served as Head, Department of Information Technology, university college of Engineering, since 2014 to August 2022.</p>
+        <p>❖ Special Officer of New Engineering College, JNTU-GV, Kurupam since from May 2020 to October 2022.</p>
+        <p>❖ IQAC Coordinator, JNTU-GV College of Engineering (CEV) (A) January 2020 to September 2022.</p>
+        <p>❖ SPOC of university college of Engineering for NPTEL Online Courses to till date.</p>
+        <p>❖ Convener for Women Empowerment & Grievance Cell, JNTUK, University College of Engineering from September 2017 to till date.</p>
+        <p>❖ Secretary & Member for Women Empowerment & Grievance Cell from January 2014-August 2017.</p>
 
-        <p className="ADsub">Achievements:</p>
-        <p>❖ Senior Member, IEEE since 2016.</p>
-        <p>❖ Professor of ECE since Jan 2016.</p>
-        <p>❖ Served as Head of ECE, UCEV</p>
-        <p>❖ Two Indian patents and two copyrights published.</p>
-        <p>❖ 72+ research publications in reputed journals and conferences.</p>
-        <p>
-          ❖ Four Ph.D.s awarded; Eight scholars currently under supervision.
-        </p>
-        <p>
-          ❖ International visits: UK and Thailand for paper presentations and
-          technical sessions.
-        </p>
-        <p>
-          ❖ Chaired technical sessions in international conferences in India and
-          abroad.
-        </p>
-        <p>
-          ❖ Fellow of IETE; Life Member of ISTE, SEMC(I), ISSS (IISc); Member
-          IAENG.
-        </p>
-        <p>
-          ❖ Member, Research Boards – Anna University, Vignan University,
-          Integral University.
-        </p>
-        <p>❖ Chairman, BoS-ECE, UCEV-JNTUK since 2017.</p>
+        <p className="dir-sub-heading">Academic Contributions</p>
+        <p>❖ Specialization of Artificial Intelligence, Data Mining, Machine Learning, Deep Learning, Soft Computing, and Internet of Things.</p>
+        <p>❖ Authored Book Titled “Artificial Intelligence & Machine Learning-2022.</p>
+        <p>❖ Awarded CMI Level 5 in Management and Leadership-2021.</p>
+        <p>❖ Awarded Out Standing Women in Engineering-VIWA-2017.</p>
+        <p>❖ Awarded Woman Researcher in Science and Technology-2020.</p>
+        <p>❖ Chairperson BOS, Dept. of Information Technology. (2017-2022).</p>
+        <p>❖ Member of Board of Studies for 3 years (2007-2010) in the Dept of CSE, GIT, GITAM University.</p>
 
-        <p className="ADsub">Recognitions:</p>
-        <p>❖ NBA Evaluator since 2009.</p>
-        <p>❖ Member, EVC and Expert, AICTE.</p>
-        <p>❖ CMI-UK Level 5 Certificate through UKIERI-AICTE (2015–16).</p>
-        <p>
-          ❖ Recognized by AICTE for UKIERI-India initiative; one among 200
-          across India.
-        </p>
-        <p>❖ Invited to Dudley College, UK – Birmingham.</p>
-        <p>❖ GB and BoS Member in several autonomous colleges via JNTUK.</p>
-        <p>❖ NAAC and NBA Coordinator at UCEV (2013–2019).</p>
-        <p>❖ Consultant and trainer for 15+ institutions in NBA/NAAC.</p>
-        <p>❖ Resource Person for ESCI, Hyderabad.</p>
-        <p>
-          ❖ Chairman, Core Project Review Committee (CPRC), SAMEER Visakhapatnam
-          (since 2019).
-        </p>
+        <p className="dir-sub-heading">Research Contributions</p>
+        <p>❖ Awarded Six PhDs and Eight Scholars are working for PhD at present.</p>
+        <p>❖ Published 3 patents.</p>
+        <p>❖ Published 54 International Journals, 20 International Conferences, 2 National Conferences.</p>
+        <p>❖ Published 5 Book chapters.</p>
+        <p>❖ 32 workshops Organized, 58 Attended, 5 Chaired sessions in international Conferences, and 32 technical talks delivered.</p>
 
-        <p className="ADsub">Involvement in Accreditations:</p>
-        <p>
-          ❖ NBA Expert since 2011; participated in WA Mock Evaluation (2012).
-        </p>
-        <p>❖ Visited 20+ institutions as NBA Expert.</p>
-        <p>
-          ❖ Conducted OBE-OBA Workshops at UCEV and across India (Jammu, Tamil
-          Nadu, MP, UP, Rajasthan, etc.).
-        </p>
-
-        <p className="ADsub">Guidance for Institutions:</p>
-        <p>
-          ❖ Guided NBA/NAAC processes for: SRKR, Jayam COE, Sona COE, Anna Univ
-          COE, KJ Somaiya COE, GVP Women, VVIT, VIIT, Swarnandhra, Vignan Univ,
-          and others.
-        </p>
-
-        <p className="ADsub">Other Achievements:</p>
-        <p>
-          ❖ Guided students to placements in ISRO, SAMEER, BSNL, and other PSUs.
-        </p>
-        <p>❖ Excellent feedback from students across institutes.</p>
-        <p>❖ Trained contract faculty in NBA/NAAC at UCEV.</p>
-        <p>❖ Established RUSA project labs in ECE.</p>
-        <p>❖ SC/ST Book Bank established (2013–15).</p>
-        <p>❖ Initiated MoU with TCS under TAAP as TPO (2015).</p>
-        <p>❖ Executed 3 MoUs for ECE Dept. (2020–21).</p>
-        <p>❖ Pioneered mobile-based Virtual Labs training.</p>
-        <p>
-          ❖ Delivered 23 webinars during 2020–21 lockdown as a resource person.
-        </p>
+        <p className="dir-sub-heading">Professional Contributions</p>
+        <p>❖ Member of CSI (ID – 01170956).</p>
+        <p>❖ Senior Fellow of IEEE-92245858.</p>
+        <p>❖ Member of ISTE- (ID – LM44520).</p>
+        <p>❖ Faculty sponsor of IEEE WIE and faculty sponsor of ACM CHAPTER.</p>
       </div>
     </div>
   );

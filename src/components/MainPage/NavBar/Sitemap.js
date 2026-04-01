@@ -63,7 +63,7 @@ const dropdownItems = [
   {
     label: "CONSTITUENT COLLEGES",
     subItems: [
-      { label: "JNTUGV College of e", path: "/constituent-colleges/engineering" },
+      { label: "JNTU-GV College of e", path: "/constituent-colleges/engineering" },
       { label: "Pharmacy College", path: "/constituent-colleges/pharmacy" },
     ],
   },

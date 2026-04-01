@@ -14,7 +14,7 @@ const AboutusMain = () => {
             location.pathname === "/about-us/about-jntugv" ? "active" : ""
           }`}
         >
-          About JNTUGV
+          About JNTU-GV
         </Link>
         <Link
           to="vision"
