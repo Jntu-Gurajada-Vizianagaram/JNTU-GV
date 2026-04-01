@@ -53,7 +53,6 @@ const NavBar = () => {
         { label: "Chancellor", path: "/administration/chancellor" },
         { label: "Vice Chancellor", path: "/administration/vice-chancellor" },
         { label: "Registrar", path: "/administration/registrar" },
-        { label: "Chairpersons", path: "/administration/chairpersons" },
         { label: "Officer on Special Duty (OSD)", path: "/administration/osd" },
         // Add more sub-items as needed
       ],

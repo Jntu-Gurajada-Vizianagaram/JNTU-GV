@@ -1,16 +1,18 @@
 .admin-main-container {
   display: flex !important;
-  flex-direction: row;
+  flex-direction: column;
   min-height: 100vh;
-  padding: 30px 10%;
-  gap: 40px;
+  padding: 20px 10%;
+  gap: 20px;
 }
 
 .admin-left-menu {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  min-width: 240px;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  min-width: 140px;
 }
 
 .admin-menu-button {

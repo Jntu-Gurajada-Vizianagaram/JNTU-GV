@@ -27,9 +27,9 @@ function AcademicAuditPlanning() {
         </p>
 
         <p className="dir-sub-heading">Administration Contributions</p>
-        <p>❖ Currently Director of Academic Audit and Planning, JNTU-GV since from November 2022.</p>
-        <p>❖ Executive Council member of JNTU-GV since from November 2022.</p>
         <p>❖ Former Registrar of JNTU-GV from 2024-2026</p>
+        <p>❖ Currently Director of Academic Audit and Planning, JNTU-GV since from March 2026.</p>
+        <p>❖ Executive Council member of JNTU-GV since from November 2022 to September 2025</p>
         <p>❖ Served as Head, Department of Information Technology, university college of Engineering, since 2014 to August 2022.</p>
         <p>❖ Special Officer of New Engineering College, JNTU-GV, Kurupam since from May 2020 to October 2022.</p>
         <p>❖ IQAC Coordinator, JNTU-GV College of Engineering (CEV) (A) January 2020 to September 2022.</p>

@@ -91,7 +91,7 @@ function ImageGallery() {
                 <img
                   className="ig-image"
                   src={image.imglink}
-                  alt={image.name !== "NA" ? image.name : image.description}
+                  alt={image.title !== "NA" ? image.title : image.description}
                   width="1200"
                   height="400"
                   {...(index === 0
@@ -100,9 +100,9 @@ function ImageGallery() {
                   )}
                   style={{ objectFit: "cover" }}
                 />
-                {image.description !== "NA" && (
+                {image.title !== "NA" && (
                   <Carousel.Caption>
-                    <div className="carouselText">{image.name}</div>
+                    <div className="carouselText">{image.title}</div>
                   </Carousel.Caption>
                 )}
               </Carousel.Item>

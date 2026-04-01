@@ -13,8 +13,6 @@ const AdministrationMain = () => {
         return "Registrar";
       case "/administration/osd":
         return "Officer on Special Duty (OSD)";
-      case "/administration/chairpersons":
-        return "Chairpersons";
       default:
         return "Administration";
     }
@@ -50,13 +48,6 @@ const AdministrationMain = () => {
             }`}
         >
           Officer on Special Duty (OSD)
-        </Link>
-        <Link
-          to="chairpersons"
-          className={`admin-menu-button ${location.pathname === "/administration/chairpersons" ? "active" : ""
-            }`}
-        >
-          Chairpersons
         </Link>
       </div>
       <div className="admin-right-content">

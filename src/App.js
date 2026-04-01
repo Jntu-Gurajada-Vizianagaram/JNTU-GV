@@ -121,7 +121,6 @@ function App() {
             <Route path="chancellor" element={<Chancellor />} />{" "}
             <Route path="vice-chancellor" element={<ViceChancellor />} />
             <Route path="registrar" element={<Registrar />} />
-            <Route path="chairpersons" element={<Chairpersons />} />
             <Route path="osd" element={<OSD />} />
           </Route>
           <Route path="/directorates" element={<DirectoratesMain />}>
