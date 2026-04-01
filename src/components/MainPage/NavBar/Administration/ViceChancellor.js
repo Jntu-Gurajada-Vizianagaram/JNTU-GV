@@ -1,26 +1,26 @@
+import React from "react";
 import { MdOutlineMailOutline } from "react-icons/md";
 import vc from "../../../../assets/AdminDirectoratesImages/vc.png";
 import tick from "../../../../assets/StyleImages/tick.svg";
-import "./AdminandDirectorates.css";
 
 function ViceChancellor() {
   return (
-    <div className="allRightContent-Profile">
-      {/* Profile Header */}
-      <div className="profileName">
-        <div className="profile-Image">
+    <div className="admin-profile-container">
+      {/* Profile information */}
+      <center>
+        <div className="admin-profile-image">
           <img src={vc} alt="Profile" />
         </div>
-        <h3>Prof. V. V. Subba Rao</h3>
-        <h4>Hon’ble Vice-Chancellor</h4>
-        <p className="profileEmail">
-          <MdOutlineMailOutline size="20px" />
-          vc@jntugv.edu.in
-        </p>
-      </div>
-
-      {/* Profile Details */}
-      <div className="profileDetails">
+        <div className="admin-profile-name">
+          <h3>Prof. V. V. Subba Rao</h3>
+          <h4>Hon’ble Vice-Chancellor</h4>
+          <p className="admin-profile-email">
+            <MdOutlineMailOutline size="20px" />
+            vc@jntugv.edu.in
+          </p>
+        </div>
+      </center>
+      <div className="admin-profile-details">
         <div className="contributions">
 
           {/* Intro */}
@@ -35,7 +35,7 @@ function ViceChancellor() {
 
           {/* Qualifications */}
           <div className="registar-2">
-            <p className="AD-sub">Academic Qualifications</p>
+            <p className="admin-sub-heading">Academic Qualifications</p>
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
               Ph.D. from IIT Kharagpur.
@@ -47,8 +47,8 @@ function ViceChancellor() {
           </div>
 
           {/* Experience */}
-          <div className="registar-3">
-            <p className="AD-sub">Professional Experience</p>
+          <div className="admin-profile-details">
+            <p className="admin-sub-heading">Professional Experience</p>
 
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
@@ -88,7 +88,7 @@ function ViceChancellor() {
 
           {/* Administrative Roles */}
           <div className="registar-4">
-            <p className="AD-sub">Administrative Positions</p>
+            <p className="admin-sub-heading">Administrative Positions</p>
 
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
@@ -103,7 +103,7 @@ function ViceChancellor() {
 
             <p>
               <img src={tick} alt="Icon" className="AD-icon" />
-              Principal, University College of Engineering, Narasaraopet
+              Principal, JNTU-GV College of Engineering (CEV) (A), Narasaraopet
               (Dec 2019 – Jul 2023).
             </p>
 

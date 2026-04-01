@@ -12,12 +12,12 @@ export const ugRows = [
   {
     id: 2,
     specialization: "CSE - Computer Science and Engineering",
-    name: "Dr. R. Rajeswara Rao, Professor in CSE & Principal <sup>i/c</sup> of JNTU-GV CEV(A)",
+    name: "Dr. R. Rajeswara Rao,  College of Engineering (CEV) (A)College of Engineering (CEV) (A)(A)",
   },
   {
     id: 3,
     specialization: "EEE - Electrical and Electronics Engineering",
-    name: "Dr. K. Sri Kumar, Professor in EEE , JNTU-GV CEV",
+    name: "Dr. K. Sri Kumar,  College of Engineering (CEV) (A)College of Engineering (CEV) (A)",
   },
   {
     id: 4,
@@ -27,22 +27,22 @@ export const ugRows = [
   {
     id: 5,
     specialization: "ECE - Electronics and Communications Engineering",
-    name: "Dr. K.C.B.Rao, Professor in ECE & Director of Academic Audit & Planning, JNTU-GV",
+    name: "Dr. K.C.B.Rao,  College of Engineering (CEV) (A)",
   },
   {
     id: 6,
     specialization: "AI & ET , MCA",
-    name: "Dr.G.Jaya Suma, Professor in IT & Registrar, JNTU-GV",
+    name: "Dr.G.Jaya Suma,  College of Engineering (CEV) (A)",
   },
   {
     id: 7,
     specialization: "Metallurgical Engineering",
-    name: "Dr.Swami Naidu.G, Professor in Metallurgical Engineering & Director <sup>i/c</sup>, R&D, JNTU-GV",
+    name: "Dr.Swami Naidu.G,  College of Engineering (CEV) (A)",
   },
   {
     id: 8,
     specialization: "Humanities and Basic Sciences",
-    name: "Dr.S.Kalesha Vali, Professor in Mathematics & Director <sup>i/c</sup>, IQAC, JNTU-GV",
+    name: "Dr.S.Kalesha Vali,  College of Engineering (CEV) (A)",
   },
   {
     id: 9,
@@ -52,12 +52,12 @@ export const ugRows = [
   {
     id: 10,
     specialization: "BBA & MBA",
-    name: "Dr.P. SeeDevi, HOD, Dept. of MBA & Asst. Prof. in Commerce, JNTU-GV CEV",
+    name: "Dr.P. SeeDevi, HOD, Dept. of MBA & Asst. Prof. in Commerce, JNTU-GV College of Engineering (CEV) (A)",
   },
   {
     id: 11,
     specialization: "BCA (UG)",
-    name: "Dr.P.Aruna Kumari, HOD & Asst. Prof. in CSE, JNTU-GV CEV",
+    name: "Dr.P.Aruna Kumari, HOD & Asst. Prof. in CSE, JNTU-GV College of Engineering (CEV) (A)",
   },
   // {
   //   id: 12,

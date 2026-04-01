@@ -46,7 +46,14 @@ function ImageGallery() {
         "https://api.jntugv.edu.in/api/webadmin/carousel-images"
       );
       const apiData = await response.json();
-      setImages(apiData);
+
+      // Sort the images by date, newest first
+      const sortedData = apiData.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      // Keep only the 5 most recent images for the carousel
+      const recentImages = sortedData.slice(0, 5);
+
+      setImages(recentImages);
     } catch (err) {
       console.error("Image fetch failed:", err);
     } finally {
@@ -78,29 +85,29 @@ function ImageGallery() {
             <Spinner animation="grow" variant="primary" role="status" />
           </div>
         ) : (
-         <Carousel fade interval={4000}>
-  {images.map((image, index) => (
-    <Carousel.Item key={index}>
-      <img
-        className="ig-image"
-        src={image.imglink}
-        alt={image.description !== "NA" ? image.description : `Slide ${index + 1}`}
-        width="1200"
-        height="400"
-        {...(index === 0
-          ? { fetchpriority: "high" } 
-          : { loading: "lazy" }      
-        )}
-        style={{ objectFit: "cover" }}
-      />
-      {image.description !== "NA" && (
-        <Carousel.Caption>
-          <div className="carouselText">{image.description}</div>
-        </Carousel.Caption>
-      )}
-    </Carousel.Item>
-  ))}
-</Carousel>
+          <Carousel fade interval={4000}>
+            {images.map((image, index) => (
+              <Carousel.Item key={index}>
+                <img
+                  className="ig-image"
+                  src={image.imglink}
+                  alt={image.name !== "NA" ? image.name : image.description}
+                  width="1200"
+                  height="400"
+                  {...(index === 0
+                    ? { fetchpriority: "high" }
+                    : { loading: "lazy" }
+                  )}
+                  style={{ objectFit: "cover" }}
+                />
+                {image.description !== "NA" && (
+                  <Carousel.Caption>
+                    <div className="carouselText">{image.name}</div>
+                  </Carousel.Caption>
+                )}
+              </Carousel.Item>
+            ))}
+          </Carousel>
 
         )}
       </div>

@@ -135,7 +135,7 @@ export const rowsEngg = [
     CollegeName: "Miracle Educational Society Group of Institutions, Bhogapuram",
     District: "Vizianagaram",
     CollegeType: "Engineering",
-    wURL: "http://www.miracleeducationalsociety.com/",
+    wURL: "https://miracle.edu.in",
     Address: "Miracle City, Bhogapuram - 535216, Vizianagaram Dist",
     PrincipalName: "Dr. A. Arjuna Rao",
     Phone: "94408 03924",

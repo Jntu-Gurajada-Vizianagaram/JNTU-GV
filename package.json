@@ -1,6 +1,6 @@
 {
   "name": "universitywebsite",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -11,16 +11,11 @@
     "@mui/x-data-grid": "^6.18.0",
     "@popperjs/core": "^2.11.8",
     "@react-spring/web": "^9.7.3",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.1",
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.11.0",
     "clsx": "^2.1.1",
     "framer-motion": "^6.5.1",
-    "jquery": "^3.7.1",
-    "jquery.marquee": "^1.6.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.8.0",
     "react-data-grid": "^7.0.0-beta.40",
@@ -30,10 +25,13 @@
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.3",
-    "reactstrap": "^9.2.0",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^6.1.16",
-    "tailwind-merge": "^3.0.2",
+    "styled-components": "^6.1.16"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -16,7 +16,7 @@ export const columns = [
 
   {
     id: "JNTUGVBranchCode",
-    label: "JNTUGV Branch Code",
+    label: "JNTU-GV Branch Code",
     minWidth: 170,
     align: "center",
   },

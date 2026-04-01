@@ -1,55 +1,48 @@
+import React from "react";
 import Controller3i from "../../../../assets/ExaminationImages/ACE3.jpg";
-import './Examinations.css';
+import { MdOutlineMailOutline } from "react-icons/md";
 
 function Controller3() {
   return (
-    <div className="mainContainer">
-      <div className="allLeftMenu">
-      </div>
-      <div className="allRightContent">
-        <div className="allRightContentHeading">
-          Additional Controller of Examinations-3
+    <div className="exam-profile-container">
+      {/* Profile Section */}
+      <center>
+        <div className="exam-profile-image">
+          <img src={Controller3i} alt="Profile" />
         </div>
-        <br></br>
-        <div className="allRightContentProfile">
-          {/* Profile information */}
-          <center>
-          <div className="profile-Image">
-            
-          <img src = {Controller3i} alt="Profile" width={290}/>
-        
-          </div>
-          <div className="profileName">
-            <h3>Mr. D D V Sivaram Rolangi</h3>
-          </div>
-          <div className="profileDesignation">
-            <h4 className="regularStyleH4">Additional Controller of Examinations 3</h4>
-            <h5>for III B.Tech and III B.Pharmacy</h5>
-            <h3>Assistant Professor, Department of Computer Science & Engineering</h3>
-          </div>
-          </center>
-          <hr />
-          {/* Profile description */}
-          <p>Email: ace3@jntugv.edu.in</p>
-          <hr />
-          <p>Mr. D D V Sivaram Rolangi, currently working as Assistant Professor in Department of Computer Science and Engineering, University College of Engineering Vizianagaram-JNTU-GV, Vizianagaram, completed his B. Tech in Computer Science and Engineering from V R Siddhartha Engineering College, Vijayawada. M.Tech in Information Technology and  currently pursuing his Ph.D under Visveswaraya PhD scheme  from Andhra University College of Engineering , Andhra University, Visakhapatnam.  </p>
-          <p>His areas of interests include Theoretical Computer Science, Compiler technologies, Network programming. He has about 19 years of experience in teaching. His research interests include Machine learning, Computer vision, Deep learning, IoT and Assistive Technologies. </p>
-        
-        <p className="ADsub">Additional Roles carried out so far :</p>
-<p>❖ Network & systems coordinator.</p>
-<p>❖ Deputy Warden. </p>
-<p>❖ Training & Placement Officer (TPO).</p>
-<p>❖ Officer In charge of Hostels (OIH).</p>
+        <div className="exam-profile-name">
+          <h3>Mr. D D V Sivaram Rolangi</h3>
+          <h4>Additional Controller of Examinations 3</h4>
+          <h6>for III B.Tech and III B.Pharmacy</h6>
+          <h4>Assistant Professor, Department of Computer Science & Engineering</h4>
+          <p className="exam-profile-email">
+            <MdOutlineMailOutline size="20px" /> ace3@jntugv.edu.in
+          </p>
+        </div>
+      </center>
 
+      <hr />
+      
+      {/* Profile Details */}
+      <div className="exam-profile-details">
+        <p>
+          Mr. D D V Sivaram Rolangi, currently working as Assistant Professor, Department of Information Technology, JNTU-GV College of Engineering (CEV) (A)College of Engineering (CEV) (A) Vizianagaram-JNTU-GV, Vizianagaram, completed his B. Tech in Computer Science and Engineering from V R Siddhartha Engineering College, Vijayawada. M.Tech in Information Technology and currently pursuing his Ph.D under Visveswaraya PhD scheme from Andhra JNTU-GV College of Engineering (CEV) (A), Andhra University, Visakhapatnam.
+        </p>
+        <p>
+          His areas of interests include Theoretical Computer Science, Compiler technologies, Network programming. He has about 19 years of experience in teaching. His research interests include Machine learning, Computer vision, Deep learning, IoT and Assistive Technologies.
+        </p>
 
+        <p className="exam-sub-heading">Additional Roles carried out so far :</p>
+        <p>❖ Network & systems coordinator.</p>
+        <p>❖ Deputy Warden.</p>
+        <p>❖ Training & Placement Officer (TPO).</p>
+        <p>❖ Officer In charge of Hostels (OIH).</p>
 
-<p className="ADsub">Present administrative roles: </p>
-<p>❖ Dispensary Coordinator </p>
-<p>❖ Public Relations Officer(PRO) of JNTUGV </p>
-<p>❖ Additional Controller of Examinations -III ( ACE-3)</p>
-<p>❖ Additional Controller of Examinations-SDC</p>
-
-</div>
+        <p className="exam-sub-heading">Present administrative roles: </p>
+        <p>❖ Dispensary Coordinator</p>
+        <p>❖ Public Relations Officer(PRO) of JNTU-GV</p>
+        <p>❖ Additional Controller of Examinations -III ( ACE-3)</p>
+        <p>❖ Additional Controller of Examinations-SDC</p>
       </div>
     </div>
   );

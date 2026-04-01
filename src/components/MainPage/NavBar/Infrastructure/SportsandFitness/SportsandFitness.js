@@ -1,3 +1,4 @@
+import React from "react";
 import Typography from "@mui/material/Typography";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel } from "react-bootstrap";
@@ -17,233 +18,121 @@ const images = [
   image5,
   image6,
 ];
-  function ImageGallery() {
-    return (
-      <div className="inframainDivIG">
-        <div className="infraImageGallery">
-          <Carousel fade>
-            {images.map((image, index) => (
-              <Carousel.Item key={index}>
-                <img className="image" src={image} alt={`Slide ${index + 1}`} />
-                <Carousel.Caption>
-                  <div className="carouselText"></div>
-                </Carousel.Caption>
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </div>
-      </div>
-    );
-  }
-  
-  
+
+function ImageGallery() {
+  return (
+    <div className="infra-image-gallery-container">
+      <Carousel fade>
+        {images.map((image, index) => (
+          <Carousel.Item key={index}>
+            <img className="infra-gallery-image" src={image} alt={`Slide ${index + 1}`} />
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </div>
+  );
+}
 
 function SportsandFitness() {
   return (
-    <div className="ABOUTmainContainer">
-      <div className="allRightContent">
-        <div className="allRightContentHeading">Sports & Fitness</div><hr />
-        <ImageGallery />
+    <div className="infra-profile-container">
+      <div className="infra-content-area-header">
+        <h3>Sports & Fitness</h3>
+      </div>
+      <ImageGallery />
 
-        <div className="allRightContentProfile">
-          {/* Profile information */}
-          <center></center>
-          <hr />
-          {/* Profile description */}
-          
-          <h5 className="BI">Department of Physical Education  </h5>
-          <Typography>
-          The Central Library, established in June 2008, is a proud partner in the institute’s 
-          march towards its vision playing a vital role in acquisition, organization, and dissemination 
-          of knowledge. Library has a large collection of books covering various branches of Engineering, 
-          Technology, and Science and Humanities and its related fields. The library is well protected
-           with CCTV Security systems.
-          </Typography><br />
-          <h5 className="BI">Sports Co-ordinator</h5>
-          <Typography>R .Gurunadha</Typography><br />
-          <h5 className="BI">Activities</h5>
-          ❖ Organizing Intramural and Extramural competitions and preparing the students for the same.<br />
-          ❖ Encouraging student participation in Inter-collegiate, Inter University and other open tournaments in the country.<br />
-          ❖ Organizing Inter-Collegiate tournaments, Inter University tournaments & coaching camps and open tournaments in various sports and games.<br />
-          ❖ Organizing tournaments for Teaching and Non-Teaching staff.<br /><br />
-          <h5 className="BI">Staff</h5>
-          <Typography><b>Faculty members</b></Typography>
-          <table className="staff-table">
-      <thead>
-        <tr>
-          <th>S.No</th>
-          <th>Name</th>
-          <th>Designation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Dr. G.P. Raju</td>
-          <td>Assistant Professor</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Mr. M. Gowree Sankararao</td>
-          <td>Lecturer in Physical Education</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Mr. K. Naga Raju</td>
-          <td>Lecturer in Physical Education</td>
-        </tr>
-      </tbody>
-    </table><br />
-    <Typography><b>Non-teaching staff</b></Typography>
-    <table className="staff-table">
-      <thead>
-        <tr>
-          <th>S.No</th>
-          <th>Name</th>
-          <th>Designation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mr. T. Naidu</td>
-          <td>Attender</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Mr. V. Swamy</td>
-          <td>Attender</td>
-        </tr>
-      </tbody>
-    </table><br />
-          <h5 className="BI">Play Fields
-          </h5>
-          <table className="sports">
-      <thead>
-        <tr>
-          <th>S.No</th>
-          <th>Play Fields</th>
-          <th>Numbers</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>01</td>
-          <td>ATHLETICS TRACK (200 Mts)</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>02</td>
-          <td>BASKET-BALL</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>03</td>
-          <td>BADMINTON</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>04</td>
-          <td>BALL BADMINTON</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>05</td>
-          <td>CRICKET PRACTICE PITCH</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>06</td>
-          <td>CRICKET GROUND</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>07</td>
-          <td>FOOT BALL</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>08</td>
-          <td>HAND BALL</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>09</td>
-          <td>HOCKEY FIELD</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>KABADDI</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>KHO-KHO</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>TENNIS COURT</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td>TENNI COIT</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td>THROW BALL</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td>TABLE- TENNIS(INDOOR)</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>16</td>
-          <td>VOLLEY-BALL</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>17</td>
-          <td>WALKERS TRACK</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>18</td>
-          <td>12 STATIONS MULTIGYM</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>19</td>
-          <td>16 STATIONS MULTI GYM</td>
-          <td>1</td>
-        </tr>
-      </tbody>
-    </table><br />
-    <h5 className="BI">Contact information</h5>
-    <Typography>
-    Address : Department of Physical Education, Jawaharlal Nehru Technological 
-    University Gurajada Vizianagaram, Dwarapudi (Post), Vizianagram – 535003, Andhra Pradesh, India.<br />
-    Phone : (o) 08922-277918 Mobile: 9849777784<br />
-    College Extn. : 76<br />
-    Email ID : phyedu@jntukucev.ac.in, gogula. raju@yahoo.com , gogula.raju@gmail.com
-    </Typography>
-          
+      <div className="infra-profile-details">
+        <h5 className="infra-sub-heading">Department of Physical Education</h5>
+        <Typography variant="body1" sx={{ lineHeight: 1.8, mb: 3 }}>
+          The Department of Physical Education at JNTU-GV is dedicated to fostering a culture of health, fitness, and sportsmanship among students. 
+          The university provides extensive facilities and professional guidance to ensure that students excel both in academics and sports.
+        </Typography>
 
-          
-
-       
-
-          
-          
-
-
-
+        <h5 className="infra-sub-heading">Sports Co-ordinator</h5>
+        <div style={{ marginBottom: '24px' }}>
+          <Typography variant="h6" className="infra-accent-text">Sri R. Gurunadha</Typography>
         </div>
+
+        <h5 className="infra-sub-heading">Key Activities</h5>
+        <Typography variant="body1" sx={{ lineHeight: 1.8, mb: 3 }}>
+          ❖ Organizing Intramural and Extramural competitions and preparing students for the same.<br />
+          ❖ Encouraging student participation in Inter-collegiate, Inter-University, and other open national tournaments.<br />
+          ❖ Hosting Inter-Collegiate tournaments, coaching camps, and open sports events.<br />
+          ❖ Organizing sports tournaments for both Teaching and Non-Teaching staff members.
+        </Typography>
+
+        <h5 className="infra-sub-heading">Department Staff</h5>
+        <Typography variant="subtitle1" sx={{ fontWeight: 'bold', mb: 1 }}>Faculty Members</Typography>
+        <table className="infra-table">
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Name</th>
+              <th>Designation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Dr. G.P. Raju</td><td>Assistant Professor</td></tr>
+            <tr><td>2</td><td>Mr. M. Gowree Sankararao</td><td>Lecturer in Physical Education</td></tr>
+            <tr><td>3</td><td>Mr. K. Naga Raju</td><td>Lecturer in Physical Education</td></tr>
+          </tbody>
+        </table>
+
+        <div style={{ marginTop: '24px' }}>
+          <Typography variant="subtitle1" sx={{ fontWeight: 'bold', mb: 1 }}>Non-Teaching Staff</Typography>
+          <table className="infra-table">
+            <thead>
+              <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Designation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Mr. T. Naidu</td><td>Attender</td></tr>
+              <tr><td>2</td><td>Mr. V. Swamy</td><td>Attender</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h5 className="infra-sub-heading">Sports Facilities & Play Fields</h5>
+        <table className="infra-table">
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Play Fields / Facility</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>01</td><td>Athletics Track (200 Mts)</td><td>1</td></tr>
+            <tr><td>02</td><td>Basketball Courts</td><td>2</td></tr>
+            <tr><td>03</td><td>Badminton Courts</td><td>4</td></tr>
+            <tr><td>04</td><td>Ball Badminton Courts</td><td>2</td></tr>
+            <tr><td>05</td><td>Cricket Practice Pitches</td><td>2</td></tr>
+            <tr><td>06</td><td>Cricket Ground</td><td>1</td></tr>
+            <tr><td>07</td><td>Football Field</td><td>1</td></tr>
+            <tr><td>08</td><td>Handball Court</td><td>1</td></tr>
+            <tr><td>09</td><td>Hockey Field</td><td>1</td></tr>
+            <tr><td>10</td><td>Kabaddi Courts</td><td>2</td></tr>
+            <tr><td>11</td><td>Kho-Kho Courts</td><td>2</td></tr>
+            <tr><td>12</td><td>Tennis Court</td><td>1</td></tr>
+            <tr><td>13</td><td>Tenni-Coit Courts</td><td>2</td></tr>
+            <tr><td>14</td><td>Throwball Courts</td><td>2</td></tr>
+            <tr><td>15</td><td>Table-Tennis (Indoor)</td><td>2</td></tr>
+            <tr><td>16</td><td>Volleyball Courts</td><td>4</td></tr>
+            <tr><td>17</td><td>Walker's Track</td><td>1</td></tr>
+            <tr><td>18</td><td>Gym (12 Stations)</td><td>1</td></tr>
+            <tr><td>19</td><td>Gym (16 Stations)</td><td>1</td></tr>
+          </tbody>
+        </table>
+
+        <h5 className="infra-sub-heading">Contact Information</h5>
+        <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
+          <strong>Address:</strong> Department of Physical Education, JNTU-GV, Dwarapudi (Post), Vizianagaram – 535003, AP, India.<br />
+          <strong>Phone:</strong> 08922-277918 | <strong>Mobile:</strong> 9849777784<br />
+          <strong>Email:</strong> phyedu@jntugvcev.edu.in
+        </Typography>
       </div>
     </div>
   );

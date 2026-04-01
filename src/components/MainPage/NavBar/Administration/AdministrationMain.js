@@ -1,55 +1,70 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
-import "./AdminandDirectorates.css"
+import "./Administration.css"
 const AdministrationMain = () => {
   const location = useLocation();
 
+  const getTitle = (pathname) => {
+    switch (pathname) {
+      case "/administration/chancellor":
+        return "Chancellor";
+      case "/administration/vice-chancellor":
+        return "Vice Chancellor";
+      case "/administration/registrar":
+        return "Registrar";
+      case "/administration/osd":
+        return "Officer on Special Duty (OSD)";
+      case "/administration/chairpersons":
+        return "Chairpersons";
+      default:
+        return "Administration";
+    }
+  };
+
   return (
-    <div className="AD-Main">
-      <div className="ADallLeftMenu">
-         {/* Navigation links for Chancellor, Vice Chancellor, and Registrar */}
-         <Link
+    <div className="admin-main-container">
+      <div className="admin-left-menu">
+        <Link
           to="chancellor"
-          className={`menuButton ${
-            location.pathname === "/administration/chancellor" ? "active" : ""
-          }`}
+          className={`admin-menu-button ${location.pathname === "/administration/chancellor" ? "active" : ""
+            }`}
         >
           Chancellor
         </Link>
         <Link
           to="vice-chancellor"
-          className={`menuButton ${
-            location.pathname === "/administration/vice-chancellor" ? "active" : ""
-          }`}
+          className={`admin-menu-button ${location.pathname === "/administration/vice-chancellor" ? "active" : ""
+            }`}
         >
           Vice Chancellor
         </Link>
         <Link
           to="registrar"
-          className={`menuButton ${
-            location.pathname === "/administration/registrar" ? "active" : ""
-          }`}
+          className={`admin-menu-button ${location.pathname === "/administration/registrar" ? "active" : ""
+            }`}
         >
           Registrar
         </Link>
         <Link
           to="osd"
-          className={`menuButton ${
-            location.pathname === "/administration/osd" ? "active" : ""
-          }`}
+          className={`admin-menu-button ${location.pathname === "/administration/osd" ? "active" : ""
+            }`}
         >
           Officer on Special Duty (OSD)
         </Link>
-        
-        {/* <Link
+        <Link
           to="chairpersons"
-          className={`menuButton ${
-            location.pathname === "/administration/chairpersons" ? "active" : ""
-          }`}
+          className={`admin-menu-button ${location.pathname === "/administration/chairpersons" ? "active" : ""
+            }`}
         >
           Chairpersons
-        </Link> */}
+        </Link>
       </div>
-      <Outlet />
+      <div className="admin-right-content">
+        <div className="admin-right-content-heading">
+          {getTitle(location.pathname)}
+        </div>
+        <Outlet />
+      </div>
     </div>
   );
 };
