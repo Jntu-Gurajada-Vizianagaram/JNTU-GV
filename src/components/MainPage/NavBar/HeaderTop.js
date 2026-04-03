@@ -33,71 +33,43 @@ const HeaderTop = () => {
 
 const NavBar = () => {
   const links = [
-    { "icon": null, "name": `Anti-Ragging`, "path": "/anti-ragging/about" },
-    { "icon": null, "name": `Ideaclub`, "path": "https://ideaclub.jntugv.edu.in" },
-    // {"icon":null, "name": `GreenCampus`, "path": "https://greencampus.jntugv.edu.in"},
-    // {"icon":null, "name":`Job Opportunities` , "path":"https://uyopportunities.jntugv.edu.in/"},
-    { "icon": null, "name": `MoUs`, "path": "https://mou.jntugv.edu.in" },
-    { "icon": null, "name": `Events`, "path": "https://events.jntugv.edu.in" },
-    // {"icon":null, "name": `Yogandhra`, "path": "https://yogandhra.jntugv.edu.in" },
+    { name: `Anti-Ragging`, path: "/anti-ragging" },
+    { name: `Idea Club`, path: "https://ideaclub.jntugv.edu.in" },
+    { name: `MoUs`, path: "https://mou.jntugv.edu.in" },
+    { name: `Events`, path: "https://events.jntugv.edu.in" },
+    { name: `JNTU_Act 8 of 1967`, path: "/assets/acts/act_8_of_1967.pdf", isExternal: true },
+    { name: `JNTU_Act 30 of 2008`, path: "/assets/acts/act_30_of_2008.pdf", isExternal: true },
+    { name: `JNTU_Act 22 of 2021`, path: "/assets/acts/act_22_of_2021.pdf", isExternal: true },
   ]
 
 
   return (
     <>
-      <style>
-        {`
-          .custom-navbar {
-            background-image: linear-gradient(to left, #370a68, #55b2e7);
-            color: white;
-            padding: 0;
-          }
-          .custom-navbar .nav-link, i {
-            color: white;
-           
-            transition: color 0.3s ease;
-            
-          }
-          .custom-navbar .nav-link:hover {
-            color: #55b2e7; /* Light blue hover effect */
-          }
-
-          /* Responsive font size for nav links */
-          .custom-navbar .nav-link {
-           font-size: 0.9rem;/* Default size */
-          }
-
-          @media (max-width: 768px) {
-            .custom-navbar .nav-link {
-              font-size: 0.8rem; /* Smaller size for tablets */
-            }
-              .topnavbar{
-              display:none;}
-          }
-          @media (max-width: 576px) {
-            .custom-navbar .nav-link {
-              font-size: 0.7rem; /* Even smaller size for phones */
-            }
-          }
-        `}
-      </style>
       <nav className="topnavbar navbar navbar-expand custom-navbar shadow-sm">
         <div className="container-fluid">
-
-          {/* Navigation links */}
-          <div className="navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
+          <div className="navbar-collapse d-flex justify-content-end" id="navbarNav">
+            <ul className="top-nav-list ms-auto">
               {links.map((link, index) => (
-                <li key={index} className="nav-item">
-
-                  <Link className="nav-link" to={link.path}>
-                    {link.name} <span className="pl-2 "><b>|</b></span>
-                  </Link>
+                <li key={index}>
+                  {link.path.startsWith('http') || link.isExternal ? (
+                    <a
+                      href={link.path}
+                      className="top-nav-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link className="top-nav-link" to={link.path}>
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
           </div>
-          <div className="bigSearch">
+          <div className="bigSearch ms-3">
             <Search />
           </div>
         </div>

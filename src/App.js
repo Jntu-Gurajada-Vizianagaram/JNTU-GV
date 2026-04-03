@@ -13,6 +13,7 @@ import ScrollToTop from "./components/HomePage/AboutUsMain/ScrollToTop";
 import Footer from "./components/MainPage/Footer/Footer";
 import Homepage from "./components/HomePage/Homepage";
 import Sitemap from "./components/MainPage/NavBar/Sitemap";
+import LastUpdated from "./components/MainPage/LastUpdated/LastUpdated";
 
 
 const AboutJNTUGV = React.lazy(() => import("./components/MainPage/NavBar/Aboutus/AboutJNTUGV"));
@@ -37,6 +38,7 @@ const IQAC = React.lazy(() => import("./components/MainPage/NavBar/Directorates/
 const Placements = React.lazy(() => import("./components/MainPage/NavBar/Directorates/Placements"));
 const Research = React.lazy(() => import("./components/MainPage/NavBar/Directorates/Research"));
 const SportsAdministration = React.lazy(() => import("./components/MainPage/NavBar/Directorates/SportsAdministration"));
+const AboutDirectorates = React.lazy(() => import("./components/MainPage/NavBar/Directorates/AboutDirectorates"));
 
 const Boschairman = React.lazy(() => import("./components/MainPage/NavBar/Academics/Bos-chairman/Boschairman"));
 
@@ -69,7 +71,7 @@ const NewsAndEvents = React.lazy(() => import("./components/HomePage/NewsAndEven
 const PrivacyPolicy = React.lazy(() => import("./components/MainPage/Footer/PrivacyPolicy"));
 const Regulations = React.lazy(() => import("./components/MainPage/NavBar/Academics/Regulations/Regulations"));
 const Syllabus = React.lazy(() => import("./components/MainPage/NavBar/Academics/Syllabus/Syllabus"));
-const Chairpersons = React.lazy(() => import("./components/MainPage/NavBar/Administration/Chairpersons/Chairpersons"));
+// const Chairpersons = React.lazy(() => import("./components/MainPage/NavBar/Administration/Chairpersons/Chairpersons"));
 const Antiragging = React.lazy(() => import("./components/MainPage/NavBar/AntiRagging/AntiRagging"));
 const HeaderTop = React.lazy(() => import("./components/MainPage/NavBar/HeaderTop"));
 const Banks = React.lazy(() => import("./components/MainPage/NavBar/Infrastructure/Banks/Banks"));
@@ -124,6 +126,8 @@ function App() {
             <Route path="osd" element={<OSD />} />
           </Route>
           <Route path="/directorates" element={<DirectoratesMain />}>
+            <Route index element={<AboutDirectorates />} />
+            <Route path="about-directorates" element={<AboutDirectorates />} />
             <Route path="academic-audit" element={<AcademicAudit />} />{" "}
             <Route path="academic-planning" element={<AcademicPlanning />} />
             <Route path="academic-audit-planning" element={<AcademicAuditPlanning />} />
@@ -194,6 +198,7 @@ function App() {
         </Routes>
       </Suspense>
       {/* <Chatbot/> */}
+      <LastUpdated />
       <Footer />
     </div>
   );

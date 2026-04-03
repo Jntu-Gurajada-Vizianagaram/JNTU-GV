@@ -12,11 +12,11 @@
   gap: 10px;
   flex-wrap: wrap;
   align-items: center;
-  min-width: 140px;
+  justify-content: space-evenly;
 }
 
 .admin-menu-button {
-  width: 240px;
+  width: 180px;
   height: 60px;
   flex-shrink: 0;
   border-radius: 7px;
@@ -27,7 +27,7 @@
   text-decoration: none !important;
   cursor: pointer;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   border: 1px solid #370a68;
   background: #fff;
@@ -73,8 +73,8 @@
 }
 
 .admin-profile-image img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 320px;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   object-fit: cover;

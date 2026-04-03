@@ -165,5 +165,6 @@
 @media screen and (max-width: 600px) {
   .infra-item-link {
     width: 100%;
+    display: none;
   }
 }

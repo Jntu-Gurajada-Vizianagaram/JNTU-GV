@@ -1,0 +1,24 @@
+.last-updated-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 40px;
+  background-color: #ffffff;
+  /* border-top: 1px solid #eee; */
+  margin-top: 20px;
+}
+
+.last-updated-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #fb8c00;
+  font-style: italic;
+  margin: 0;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1024px) {
+  .last-updated-container {
+    justify-content: center;
+    padding: 10px 20px;
+  }
+}

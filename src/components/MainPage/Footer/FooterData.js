@@ -29,19 +29,19 @@ export const Academic_Research = [
   { title: "Admissions", link: "/academics/admissions" },
   { title: "Affiliated Colleges", link: "/academics/affliated-colleges" },
   { title: "Research and Development Cell", link: "https://drd.jntugv.edu.in/" },
-  { title: "Training & Placement", link: "https://placementcell.jntugv.edu.in/" },
-  { title: "Dr.YSR Central Library", link: "/infrastructure/about-library" },
+  { title: "Training & Placement", link: "https://jntugvcev.edu.in/placements/training-placements-cell/" },
+  { title: "Dr.YSR Central Library", link: "https://jntugvcev.edu.in/facilities/library/" },
 ];
 
 // 4. Campus Infrastructure
 export const Campus_Infrastructure = [
-  { title: "University Hostels", link: "/infrastructure/about-hostels" },
-  { title: "Engineering Cell", link: "/infrastructure/about-engineering-cell" },
+  { title: "University Hostels", link: "https://jntugvcev.edu.in/facilities/hostels/" },
+  { title: "Engineering Cell", link: "https://jntugvcev.edu.in/facilities/engineering-cell/" },
   { title: "Guest House", link: "/infrastructure/about-guest-house" },
   { title: "Staff Quarters", link: "/infrastructure/about-staff-quarters" },
-  { title: "Canteen", link: "/infrastructure/about-canteen" },
+  { title: "Canteen", link: "https://jntugvcev.edu.in/facilities/canteen/" },
   { title: "Bank", link: "/infrastructure/about-banks" },
-  { title: "Dispensary", link: "/infrastructure/about-dispensary" },
+  { title: "Dispensary", link: "https://jntugvcev.edu.in/facilities/dispensary/" },
 ];
 
 // 5. University Cells
@@ -55,9 +55,9 @@ export const University_Cells = [
 export const Student_Corner = [
   { title: "Anti-Ragging", link: "/anti-ragging/about" },
   { title: "NSS", link: "https://nss.jntugv.edu.in" },
-  { title: "Sports & Fitness", link: "/infrastructure/about-sports-and-fitness" },
-  { title: "Music Club", link: "/infrastructure/about-music-club" },
-  { title: "Student Activity Club", link: "/infrastructure/about-student-activity-club" },
+  { title: "Sports & Fitness", link: "https://jntugvcev.edu.in/facilities/sports-fitness/" },
+  { title: "Music Club", link: "https://jntugvcev.edu.in/facilities/campus-life/music-club/" },
+  { title: "Student Activity Club", link: "https://jntugvcev.edu.in/facilities/campus-life/student-activity-club/" },
 ];
 
 // 7. Governance & Disclosure

@@ -191,10 +191,10 @@ function Footer() {
         </div>
       </div>
 
-      <hr className="footerHr" />
-      <div className="subcontainer3Footer">
+      <hr className="footerHr text-left" />
+      <div className="subcontainer3Footer text-left">
         <p className="subheadingFooter">Contact Us: </p>
-        <p className="px-2 text-center">
+        <p className="px-2 text-left justify-content-left">
           JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY-GURAJADA VIZIANAGARAM,
           DWARAPUDI, VIZIANAGARAM, ANDHRA PRADESH - 535 003, INDIA.
         </p>
@@ -221,13 +221,15 @@ function Footer() {
         </div>
       </div>
 
-      <div className="text-center mt-3">
-        <Link to="/privacy" className="sublinksFooter mx-3">Privacy & Policy</Link>
+      <div className="text-center mt-2">
+        <Link to="/privacy" className="sublinksFooter mx-4">Privacy & Policy</Link>
       </div>
 
-      <div className="mobilefooter ">
+      <div className="mobilefooter text-left ">
         <p>Copyright © 2024 <a className="sublinksFooter " href="http://jntugv.edu.in"> <strong>JNTU-GV Vizianagaram</strong> </a>. All Rights Reserved.</p>
-        <p>Designed and Developed by <a className="sublinksFooter " href="https://dmc.jntugv.edu.in "><strong>Digital Monitoring Cell, JNTU-GV</strong></a></p>
+        <p>Designed , Developed and Maintained by <a className="sublinksFooter " href="https://anilsinthu.vercel.app "><strong>Anil Sinthu</strong></a> &nbsp;
+          under the Department of <a className="sublinksFooter " href="https://dmc.jntugv.edu.in "><strong>Digital Monitoring Cell, JNTU-GV</strong></a>
+        </p>
       </div>
     </div>
   );

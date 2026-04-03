@@ -49,8 +49,8 @@ function Library() {
 
         <h5 className="infra-sub-heading">Officer In-Charge</h5>
         <div style={{ marginBottom: '24px' }}>
-          <Typography variant="h6" className="infra-accent-text">Dr. Ch. Srinivasa Rao</Typography>
-          <Typography variant="body1">Professor of Mathematics & Officer In-Charge, Library</Typography>
+          <Typography variant="h6" className="infra-accent-text">R. D. D. V. Siva Ram</Typography>
+          <Typography variant="body1">Asst. Professor of COmputer Science & Officer In-Charge, Library</Typography>
         </div>
 
         <h5 className="infra-sub-heading">Building and Infrastructure</h5>
@@ -164,7 +164,7 @@ function Library() {
 
         <h5 className="infra-sub-heading">Digital Library & E-Resources</h5>
         <Typography variant="body1" sx={{ lineHeight: 1.8, mb: 3 }}>
-          The digital library features 24 networked systems for accessing databases, E-journals, and other E-resources, with plans for expansion. 
+          The digital library features 24 networked systems for accessing databases, E-journals, and other E-resources, with plans for expansion.
           Available sources include DELNET and various academic E-journals.
         </Typography>
 
@@ -179,7 +179,7 @@ function Library() {
             </tr>
           </thead>
           <tbody>
-            <tr><td>1</td><td>Dr. Ch. Srinivasa Rao</td><td>Ph.D</td><td>Professor & Officer In-Charge</td></tr>
+            <tr><td>1</td><td>R.D.D.V. Siva Ram</td><td>Ph.D</td><td>Asst. Prof. of CSE & Officer In-Charge</td></tr>
             <tr><td>2</td><td>B. Ramu</td><td>MLISc</td><td>Library Assistant</td></tr>
             <tr><td>3</td><td>G. Sanyasappadu</td><td>MLISc</td><td>Library Assistant</td></tr>
             <tr><td>4</td><td>S. Bhaskra Rao</td><td>BLISc</td><td>Library Assistant</td></tr>
@@ -190,7 +190,7 @@ function Library() {
 
         <h5 className="infra-sub-heading">Ekeeda Digital Library</h5>
         <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-          Under an MoU with Ekeeda Pvt. Ltd., Mumbai, students have access to a video library containing 90,000+ high-quality engineering videos and notes 
+          Under an MoU with Ekeeda Pvt. Ltd., Mumbai, students have access to a video library containing 90,000+ high-quality engineering videos and notes
           via the Ekeeda website and mobile app.
         </Typography>
       </div>

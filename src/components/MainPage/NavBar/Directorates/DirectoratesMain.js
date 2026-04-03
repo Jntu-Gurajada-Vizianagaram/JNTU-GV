@@ -6,6 +6,8 @@ const DirectoratesMain = () => {
 
   const getTitle = (pathname) => {
     switch (pathname) {
+      case "/directorates/about-directorates":
+        return "About JNTU-GV Directorates";
       case "/directorates/academic-audit-planning":
         return "Director of Academic Audit and Planning";
       case "/directorates/evaluation":
@@ -35,12 +37,17 @@ const DirectoratesMain = () => {
     <div className="dir-main-container">
       <div className="dir-left-menu">
         <Link
+          to="about-directorates"
+          className={`dir-menu-button ${location.pathname === "/directorates/about-directorates" || location.pathname === "/directorates" ? "active" : ""}`}
+        >
+          About Directorates
+        </Link>
+        <Link
           to="academic-audit-planning"
           className={`dir-menu-button ${location.pathname === "/directorates/academic-audit-planning" ? "active" : ""}`}
         >
           Director of Academic Audit and Planning
         </Link>
-
         <Link
           to="evaluation"
           className={`dir-menu-button ${location.pathname === "/directorates/evaluation" ? "active" : ""}`}
@@ -53,21 +60,18 @@ const DirectoratesMain = () => {
         >
           Director of Research & Development
         </Link>
-
         <Link
           to="placements"
           className={`dir-menu-button ${location.pathname === "/directorates/placements" ? "active" : ""}`}
         >
           Director of Industrial Relations & Placements
         </Link>
-
         <Link
           to="iqac"
           className={`dir-menu-button ${location.pathname === "/directorates/iqac" ? "active" : ""}`}
         >
           Director of Internal Quality Assurance Cell
         </Link>
-
         <Link
           to="alumni-relations"
           className={`dir-menu-button ${location.pathname === "/directorates/alumni-relations" ? "active" : ""}`}

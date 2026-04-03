@@ -56,16 +56,16 @@ const AntiRaggingContent = () => {
       {
         "Sno": 4,
         "name": "Dr. G.J. Naga Raju",
-        "designation": "Director of IR & P i/c",
+        "designation": "Director of IR & P",
         "role": "Member",
         "email": "dirp@jntugv.edu.in"
       },
       {
         "Sno": 5,
         "name": "Dr. B. Nalini",
-        "designation": "WEGC Co-Ordinator",
+        "designation": "Women Empowerment and Grievance Cell [WE&GC] Co-Ordinator",
         "role": "Member",
-        "email": "wegc.secretary@jntugvcev.edu.in"
+        "email": "wegc@jntugv.edu.in"
       },
       {
         "Sno": 6,
@@ -90,7 +90,7 @@ const AntiRaggingContent = () => {
           <Typography id="about" variant="h4" align="center" gutterBottom className="antiragging-title">
             About Anti-Ragging
           </Typography>
-          
+
           <Grid container spacing={3} className="antiragging-info-grid">
             {content.sections.map((section, index) => (
               <Grid item xs={12} key={index}>

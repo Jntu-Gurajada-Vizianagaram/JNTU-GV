@@ -6,3 +6,66 @@
   .bigSearch {
       display: none;
   }
+
+  .custom-navbar {
+      background-image: linear-gradient(to left, #370a68, #55b2e7);
+      color: white;
+      padding: 5px 0;
+  }
+
+  .top-nav-list {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+
+  .top-nav-link {
+      color: white !important;
+      text-decoration: none !important;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      /* background-color: rgba(255, 255, 255, 0.08); */
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: inline-block;
+  }
+
+  .top-nav-link:hover {
+      /* background-color: rgba(255, 255, 255, 0.2); */
+      transform: translateY(-2px);
+      color: #fff !important;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 992px) {
+      .top-nav-list {
+          gap: 8px;
+      }
+
+      .top-nav-link {
+          font-size: 0.75rem;
+          padding: 4px 10px;
+      }
+  }
+
+  @media (min-width: 768px) {
+      .top-nav-link {
+          font-size: smaller;
+          padding: 2px 8px;
+      }
+
+      .top-nav-link {
+          gap: 8px;
+      }
+  }
+
+  @media (max-width: 768px) {
+      .top-nav-link {
+          display: none;
+      }
+  }
