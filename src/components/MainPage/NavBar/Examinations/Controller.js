@@ -6,6 +6,9 @@ function Controller() {
   return (
     <div className="exam-profile-container">
       {/* Profile Section */}
+      <div className="exam-content-area-header">
+        <h3>Controller of Examinations</h3>
+      </div>
       <center>
         <div className="exam-profile-image">
           <img src={Controlleri} alt="Profile" />
@@ -22,7 +25,7 @@ function Controller() {
       </center>
 
       <hr />
-      
+
       {/* Profile Details */}
       <div className="exam-profile-details">
         <p>

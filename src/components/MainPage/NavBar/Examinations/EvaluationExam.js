@@ -5,6 +5,9 @@ import { MdOutlineMailOutline } from "react-icons/md";
 function EvaluationExam() {
   return (
     <div className="exam-profile-container">
+      <div className="exam-content-area-header">
+        <h3>Director of Evaluation</h3>
+      </div>
       {/* Profile Section */}
       <center>
         <div className="exam-profile-image">

@@ -5,6 +5,9 @@ import { MdOutlineMailOutline } from "react-icons/md";
 function Controller1() {
   return (
     <div className="exam-profile-container">
+      <div className="exam-content-area-header">
+        <h3>Additional Controller of Examinations</h3>
+      </div>
       {/* Profile Section */}
       <center>
         <div className="exam-profile-image">
@@ -22,7 +25,7 @@ function Controller1() {
       </center>
 
       <hr />
-      
+
       {/* Profile Details */}
       <div className="exam-profile-details">
         <p>

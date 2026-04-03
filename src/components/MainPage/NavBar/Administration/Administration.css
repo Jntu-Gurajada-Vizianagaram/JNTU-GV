@@ -136,4 +136,19 @@
   .admin-menu-button {
     width: 100%;
   }
+
+  .admin-left-menu {
+    display: none !important;
+  }
+
+  .admin-right-content {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .admin-right-content-heading {
+    display: block !important;
+  }
 }

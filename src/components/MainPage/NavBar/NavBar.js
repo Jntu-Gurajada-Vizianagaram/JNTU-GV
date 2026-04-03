@@ -183,7 +183,7 @@ const NavBar = () => {
       subItems: [
         {
           label: "Anti-Ragging",
-          path: "/anti-ragging/about",
+          path: "/anti-ragging",
         },
         {
           label: "Ideaclub",
@@ -205,6 +205,9 @@ const NavBar = () => {
           label: "Events",
           path: "https://events.jntugv.edu.in",
         },
+        { label: `JNTU_Act 8 of 1967`, path: "/assets/acts/act_8_of_1967.pdf", isExternal: true },
+        { label: `JNTU_Act 30 of 2008`, path: "/assets/acts/act_30_of_2008.pdf", isExternal: true },
+        { label: `JNTU_Act 22 of 2021`, path: "/assets/acts/act_22_of_2021.pdf", isExternal: true },
         // {
         //   label: "Yogandhra",
         //   path: "https://yogandhra.jntugv.edu.in",
