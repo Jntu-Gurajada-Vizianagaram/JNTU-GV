@@ -44,7 +44,7 @@ const Eclectique = () => {
               }`}
               onClick={() => setCurrentIndex(index)}
             >
-              <img src={image} alt={`Republic Day ${index + 1}`} />
+              <img src={image} alt={`Republic Day ${index + 1}`} loading="lazy" />
             </div>
           ))}
         </div>
@@ -68,6 +68,7 @@ const Eclectique = () => {
             alt={`Republic Day ${currentIndex + 1}`}
             // width={1000}
             height={500}
+            loading="lazy"
           />
         </div>
         <div className="rp-icons">

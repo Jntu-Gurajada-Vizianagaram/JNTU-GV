@@ -4,7 +4,8 @@ export const Administration_Wing = [
   { title: "Vice Chancellor", link: "/administration/vice-chancellor" },
   { title: "Registrar", link: "/administration/registrar" },
   { title: "Officer on Special Duty (OSD)", link: "/administration/osd" },
-  { title: "Chairpersons", link: "/administration/chairpersons" },
+  { title: "University Coordinators", link: "/university/coordinators" },
+  { title: "Chairpersons", link: "/academics/bos-chairman" },
 ];
 
 // 2. Constituent Colleges
@@ -63,6 +64,7 @@ export const Student_Corner = [
 // 7. Governance & Disclosure
 export const Governance_Disclosure = [
   { title: "RTI", link: "https://rti.jntugv.edu.in" },
+  { title: "UGC Mandatory Disclosures", link: "/mandatory-disclosures" },
   { title: "Ombudsman", link: "https://drive.google.com/file/d/15riRLxVtiJOrtLiYWmh7kvIQlTLV7Ocl/view?usp=sharing" },
   { title: "Student Grievance", link: "/grievance-form" },
   { title: "Recruitment Grievance", link: "mailto:recruitmentgrievances@jntugv.edu.in" },

@@ -104,29 +104,33 @@ const AntiRaggingContent = () => {
             ))}
           </Grid>
 
-          <Typography id="committee" variant="h4" align="center" className="antiragging-table-title" style={{ marginTop: '40px', marginBottom: '20px' }}>
+          <Typography id="committee" variant="h4" align="center" className="antiragging-table-title" style={{ marginTop: '60px', marginBottom: '30px' }}>
             Anti-Ragging Committee Members
           </Typography>
 
-          <TableContainer component={Paper} className="antiragging-table-container">
-            <Table>
-              <TableHead style={{ backgroundColor: '#370a68' }}>
+          <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid #eee', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
+            <Table stickyHeader>
+              <TableHead>
                 <TableRow>
-                  <TableCell style={{ color: 'white', fontWeight: 'bold' }}>S.No</TableCell>
-                  <TableCell style={{ color: 'white', fontWeight: 'bold' }}>Name</TableCell>
-                  <TableCell style={{ color: 'white', fontWeight: 'bold' }}>Designation</TableCell>
-                  <TableCell style={{ color: 'white', fontWeight: 'bold' }}>Role</TableCell>
-                  <TableCell style={{ color: 'white', fontWeight: 'bold' }}>Email ID</TableCell>
+                  <TableCell sx={{ backgroundColor: '#370a68', color: 'white', fontWeight: 'bold', textTransform: 'uppercase', fontSize: '0.85rem' }}>S.No</TableCell>
+                  <TableCell sx={{ backgroundColor: '#370a68', color: 'white', fontWeight: 'bold', textTransform: 'uppercase', fontSize: '0.85rem' }}>Name of the Official</TableCell>
+                  <TableCell sx={{ backgroundColor: '#370a68', color: 'white', fontWeight: 'bold', textTransform: 'uppercase', fontSize: '0.85rem' }}>Designation / Department</TableCell>
+                  <TableCell sx={{ backgroundColor: '#370a68', color: 'white', fontWeight: 'bold', textTransform: 'uppercase', fontSize: '0.85rem' }}>Committee Role</TableCell>
+                  <TableCell align="center" sx={{ backgroundColor: '#370a68', color: 'white', fontWeight: 'bold', textTransform: 'uppercase', fontSize: '0.85rem' }}>Email ID</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 {committee.members.map((row) => (
-                  <TableRow key={row.Sno}>
-                    <TableCell>{row.Sno}</TableCell>
-                    <TableCell>{row.name}</TableCell>
-                    <TableCell>{row.designation}</TableCell>
-                    <TableCell>{row.role}</TableCell>
+                  <TableRow key={row.Sno} hover sx={{ '&:nth-child(even)': { backgroundColor: '#fcfcfc' } }}>
+                    <TableCell align="center" sx={{ fontWeight: 'bold', color: '#666' }}>{row.Sno}</TableCell>
+                    <TableCell sx={{ fontWeight: 600, color: '#333' }}>{row.name}</TableCell>
+                    <TableCell sx={{ color: '#555' }}>{row.designation}</TableCell>
                     <TableCell>
+                      <span className={`role-tag ${row.role.toLowerCase()}`}>
+                        {row.role}
+                      </span>
+                    </TableCell>
+                    <TableCell align="center">
                       <a href={`mailto:${row.email.trim()}`} className="antiragging-email-link">
                         {row.email}
                       </a>

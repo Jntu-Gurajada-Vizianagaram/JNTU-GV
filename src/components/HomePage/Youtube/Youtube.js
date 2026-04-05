@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import './Youtube.css' 
+import './Youtube.css'
 import {
   Card,
   CardMedia,
@@ -13,14 +13,22 @@ import {
 
 const videos = [
   {
+    id: 'jxxqEBetGZQ',
+    title: 'JNTU-GV Theme Song'
+  },
+  {
+    id: 'o6Fku5fkDmw',
+    title: 'JNTU-GV Campus Tour 2026'
+  },
+  {
     id: 'NVZ9koF6pFY',
     title: 'JNTU-GV CEV Autonomous Sports Day 2025 (Part 1)',
-    
+
   },
   {
     id: '_5WjFlrbrZU',
     title: 'JNTU-GV CEV Autonomous Sports Day 2025 (Part 2)',
-   
+
   },
   {
     id: 'hRNQfUUPV5c',
@@ -30,7 +38,7 @@ const videos = [
   {
     id: 'mCINzWh3AF4',
     title: 'JNTU-GV CEV Annual Day Event (Part 2) 04-04-2025',
-    
+
   },
   {
     id: '9o75Bv05MJs',
@@ -41,7 +49,7 @@ const videos = [
     id: 'fxgVpqB43yE',
     title: 'Motivational Session by Sri VV Lakshmi Narayana (JD) CBI X (JD)',
   },
-   {
+  {
     id: 'qMmk5l2kjeE',
     title: "Hon'ble Vice-Chancellor's (i/c) Speech on Republic Day (JNTUGV)",
   },
@@ -87,13 +95,13 @@ const YouTubeCarousel = () => {
   return (
     <Box sx={{ px: 3, py: 5 }}>
 
-<div className="youtube-logo-wrapper">
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
-    alt="YouTube"
-    className="youtube-logo-banner"
-  />
-</div>
+      <div className="youtube-logo-wrapper">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+          alt="YouTube"
+          className="youtube-logo-banner"
+        />
+      </div>
 
 
       <Slider {...settings}>
@@ -108,8 +116,8 @@ const YouTubeCarousel = () => {
               />
               <CardContent>
                 <Typography variant="h6">{video.title}</Typography>
-                <Typography variant="body2" color="text.secondary">  
-                               
+                <Typography variant="body2" color="text.secondary">
+
                 </Typography>
               </CardContent>
             </Card>

@@ -50,7 +50,7 @@ const AdministrationMain = React.lazy(() => import("./components/MainPage/NavBar
 const ContactUs = React.lazy(() => import("./components/MainPage/NavBar/Contact-Us/ContactUs"));
 const DirectoratesMain = React.lazy(() => import("./components/MainPage/NavBar/Directorates/DirectoratesMain"));
 const Controller = React.lazy(() => import("./components/MainPage/NavBar/Examinations/Controller"));
-const Controller1 = React.lazy(() => import("./components/MainPage/NavBar/Examinations/Controller1"));
+const Controller4 = React.lazy(() => import("./components/MainPage/NavBar/Examinations/Controller1"));
 const Controller2 = React.lazy(() => import("./components/MainPage/NavBar/Examinations/Controller2"));
 const Controller3 = React.lazy(() => import("./components/MainPage/NavBar/Examinations/Controller3"));
 const ControllerPG = React.lazy(() => import("./components/MainPage/NavBar/Examinations/ControllerPG"));
@@ -86,6 +86,9 @@ const MusicClub = React.lazy(() => import("./components/MainPage/NavBar/Infrastr
 const SportsandFitness = React.lazy(() => import("./components/MainPage/NavBar/Infrastructure/SportsandFitness/SportsandFitness"));
 const StaffQuarters = React.lazy(() => import("./components/MainPage/NavBar/Infrastructure/StaffQuarters/StaffQuarters"));
 const Studentactivityclub = React.lazy(() => import("./components/MainPage/NavBar/Infrastructure/Studentactivityclub/Studentactivityclub"));
+const NotFound = React.lazy(() => import("./components/MainPage/NotFound/NotFound"));
+const MandatoryDisclosures = React.lazy(() => import("./components/MainPage/NavBar/MandatoryDisclosures/MandatoryDisclosures"));
+const Coordinators = React.lazy(() => import("./components/MainPage/NavBar/Administration/Coordinators"));
 
 function App() {
   return (
@@ -151,7 +154,7 @@ function App() {
             <Route path="director" element={<EvaluationExam />} />
             <Route path="controller" element={<Controller />} />
             <Route path="controller-sdc" element={<ControllerSDC />} />
-            <Route path="controller1" element={<Controller1 />} />
+            <Route path="controller4" element={<Controller4 />} />
             <Route path="controller2" element={<Controller2 />} />
             <Route path="controller3" element={<Controller3 />} />
             <Route path="controller-pg" element={<ControllerPG />} />
@@ -172,6 +175,8 @@ function App() {
           <Route path="/events/eclectique-2k24" element={<Eclectique />} />
           <Route path="/events/ityuktha-2k24" element={<Ityuktha />} />
 
+          <Route path="/university/coordinators" element={<Coordinators />} />
+          {/* <Route path="/university/bos-chairman" element={<Boschairman />} /> */}
 
 
           <Route path="/infrastructure" element={<InfrastructureMain />}>
@@ -193,7 +198,9 @@ function App() {
               element={<Studentactivityclub />}
             />
           </Route>
+          <Route path="/mandatory-disclosures" element={<MandatoryDisclosures />} />
           <Route path="/privacy" element={<PrivacyPolicy />}></Route>
+          <Route path="*" element={<NotFound />} />
 
         </Routes>
       </Suspense>

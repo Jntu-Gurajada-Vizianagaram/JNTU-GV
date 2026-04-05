@@ -25,6 +25,9 @@ const AboutDirectorates = () => {
           ❖ Oversight of the examination system, evaluation procedures, and timely declaration of results.
           <br />
           ❖ Implementation of transparent and merit-based institutional policies.
+          <br />
+          ❖ Conducting examinations for all constituent and affiliated colleges.
+
         </p>
 
         <p className="dir-sub-heading">3. Directorate of Research & Development (DRD)</p>

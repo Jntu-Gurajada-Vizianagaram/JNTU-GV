@@ -15,7 +15,7 @@ const Notification = ({ displayData }) => {
     return daysDifference;
   };
 
-  
+
   return (
 
     <div className="updatesContainer">
@@ -50,8 +50,8 @@ const Notification = ({ displayData }) => {
               <>
                 <div className="dateTimeContainer px-2 py-2">
                   <div className="dateDiv">
-                <span>{entry.day < 10 ? `0${entry.day}` : entry.day}</span>                   
-                    </div>
+                    <span>{Number(entry.day) < 10 ? `0${Number(entry.day)}` : entry.day}</span>
+                  </div>
                   <div className="monYear">
                     <div className="monthDiv">{entry.month}</div>
                     <div className="yearDiv">{entry.year}</div>
@@ -70,16 +70,16 @@ const Notification = ({ displayData }) => {
                     {entry.title}
 
                     {daysAgo(`${entry.month} ${entry.day}, ${entry.year}`) <=
-                    5 && (
-                      <img
-                        src={newGif}
-                        alt="newimg"
-                        height="20vh"
-                        width="50vh"
-                      />
-                    )}
+                      1 && (
+                        <img
+                          src={newGif}
+                          alt="newimg"
+                          height="20vh"
+                          width="50vh"
+                        />
+                      )}
                   </a>
-                 
+
                   <div>
                     {/* condition for button*/}
                     {entry.external_text && (

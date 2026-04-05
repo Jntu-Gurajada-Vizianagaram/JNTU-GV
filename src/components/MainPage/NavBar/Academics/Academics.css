@@ -1,65 +1,108 @@
 .Academicmain-Main {
   display: flex;
   margin-left: 30px;
+  padding-top: 20px;
 }
 
 .allLeftMenuAOP {
-  margin-top: 30px;
-  margin-right: 60px;
+  margin-top: 10px;
+  margin-right: 40px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  min-width: 260px;
+}
+
+.menu-category-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-category-header {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #370A68;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0 10px;
+  border-left: 3px solid #370A68;
+  margin-bottom: 5px;
+}
+
+.menu-category-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .allLeftMenuAOP .menubutton {
-  width: 240px;
-  height: 60px;
+  width: 100%;
+  height: 48px;
   flex-shrink: 0;
-  border-radius: 7px;
-  color: black;
-  padding: 10px;
-  text-align: center;
+  border-radius: 8px;
+  color: #444;
+  padding: 0 15px;
+  text-align: left;
   text-decoration: none;
   cursor: pointer;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border: 1px solid #370a68;
-  background: #fff;
-  gap: 15px;
-  font-weight: 600;
+  border: 1px solid transparent;
+  background: #f8f9fa;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
 }
 
 /* Hover state */
 .allLeftMenuAOP .menubutton:hover {
-  background-color: #370a68;
-  color: #fff;
+  background-color: #f0ecf7;
+  color: #370A68;
+  border-color: #370A68;
 }
 
 /* Selected state */
 .allLeftMenuAOP .menubutton.active {
-  background-color: #370a68;
+  background-color: #370A68;
   color: #fff;
-  box-shadow: 0px 4px 22px 0px rgba(123, 124, 134, 0.36);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(55, 10, 104, 0.2);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .Academicmain-Main {
-    display: flex;
+    margin-left: 15px;
+  }
+  .allLeftMenuAOP {
+    margin-right: 20px;
+    min-width: 220px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Academicmain-Main {
     flex-direction: column;
-    margin-left: 10px;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .allLeftMenuAOP {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-right: 0;
+  }
+
+  .menu-category-section {
+    width: 100%;
   }
 
   .allLeftMenuAOP .menubutton {
-    width: fit-content;
-    height: auto;
-    padding: 5px;
-  }
-
-  .allLeftMenuAOP{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    width: auto;
+    display: inline-flex;
+    height: 40px;
   }
 }

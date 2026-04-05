@@ -1,0 +1,90 @@
+/* MandatoryDisclosures.css */
+
+.disclosures-portal {
+  padding: 40px 20px;
+  min-height: 80vh;
+}
+
+.portal-title {
+  color: #370A68;
+  font-weight: 800 !important;
+  margin-bottom: 8px !important;
+}
+
+.portal-subtitle {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto !important;
+}
+
+.disclosures-tab-container {
+  margin-top: 20px;
+  background: white;
+  border: 1px solid #eee;
+}
+
+.tab-content-area {
+  min-height: 400px;
+}
+
+/* Disclosure Table Styling */
+.disclosure-table-wrapper {
+  margin-top: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.disclosure-table th {
+  padding: 16px 20px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.05em;
+  border: none !important;
+}
+
+.disclosure-table td {
+  padding: 14px 20px !important;
+  border-bottom: 1px solid #eee !important;
+  color: #444;
+  font-weight: 500;
+}
+
+.disclosure-table tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* Download/Action Links */
+.download-link {
+  display: inline-flex;
+  align-items: center;
+  color: #370A68;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 4px 12px;
+  border: 1px solid #370A68;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.download-link:hover {
+  background: #370A68;
+  color: white;
+  box-shadow: 0 4px 12px rgba(55, 10, 104, 0.2);
+}
+
+@media (max-width: 600px) {
+  .disclosures-portal {
+    padding: 20px 10px;
+  }
+  
+  .portal-title {
+    font-size: 2rem !important;
+  }
+
+  .tab-content-area {
+    padding: 20px !important;
+  }
+}

@@ -1,52 +1,126 @@
 .AffiliatedColleges {
-  /* height: 90vh; */
-  width: 80vw;
-  padding-top: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.accordion-affiliated {
-  margin-top: 20px;
+.college-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  gap: 20px;
 }
 
 .AffiliatedColleges-title {
-  font-size: 26px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #370A68;
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.search-section {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.table-container {
+  width: 100%;
+}
+
+.accordion-affiliated {
+  border: 1px solid #eee !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.status-tag {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
   font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-tag.permanent {
+  background: #e6fced;
+  color: #1e7e34;
+}
+
+.status-tag.temporary {
+  background: #fff4e6;
+  color: #d47500;
+}
+
+.college-web-link {
+  color: #370A68;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #370A68;
+  padding: 4px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.college-web-link:hover {
+  background: #370A68;
+  color: #fff;
+}
+
+.MuiTablePagination-root {
+  background-color: #f8f9fa;
+  border-top: 1px solid #eee;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  color: #370A68 !important;
+  font-weight: 600 !important;
+}
+
+.MuiTablePagination-selectLabel, .MuiTablePagination-displayedRows {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.05em;
+}
+
+.MuiTablePagination-actions {
   color: #370A68;
 }
 
-tr:nth-child(even +) {
-  background-color: #f2f2f2;
+.MuiTablePagination-select {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-.AffiliatedColleges-search {
-  width: max-content;
-  padding-bottom: 0.4rem;
-  margin-left: 70%;
+.footer-note {
+  margin-top: 30px;
+  text-align: right;
+  color: #888;
+  font-size: 0.85rem;
+  font-style: italic;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
+  .college-list-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-section {
+    justify-content: flex-start;
+  }
+  
   .AffiliatedColleges {
-    padding-top: 4rem;
-    margin-left: 0px;
-    width: 99%;
-  }
-
-  .table-container {
-    width: 100%;
-    padding: 0rem;
-  }
-
-  .AffiliatedColleges-search {
-    width: 50%;
-    padding-bottom: 0.5rem;
-    margin-left: 50%;
-  }
-
-  .AffiliatedColleges-title {
-    padding-left: 0rem;
-    padding-top: 2rem;
-    padding-bottom: 0.5rem;
-    font-size: 26px;
-    color: #690001;
+    padding: 20px;
   }
 }

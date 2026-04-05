@@ -30,13 +30,6 @@ const ExaminationMain = () => {
           Addt. Controller Of Examinations SDC
         </Link>
         <Link
-          to="controller1"
-          className={`exam-item-link ${location.pathname === "/examination/controller1" ? "active" : ""
-            }`}
-        >
-          Addt. Controller Of Examinations 1
-        </Link>
-        <Link
           to="controller2"
           className={`exam-item-link ${location.pathname === "/examination/controller2" ? "active" : ""
             }`}
@@ -49,6 +42,13 @@ const ExaminationMain = () => {
             }`}
         >
           Addt. Controller Of Examinations 3
+        </Link>
+        <Link
+          to="controller4"
+          className={`exam-item-link ${location.pathname === "/examination/controller4" ? "active" : ""
+            }`}
+        >
+          Addt. Controller Of Examinations 4
         </Link>
         <Link
           to="controller-pg"

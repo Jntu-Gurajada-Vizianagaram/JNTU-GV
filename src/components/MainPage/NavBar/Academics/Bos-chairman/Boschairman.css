@@ -1,36 +1,69 @@
 .tableBoschairman {
-    height: 90vh;
-    width: 80vw;
-    padding-top: 10px;
-  }
-  .searchBoschairman {
-    width: 100%;
-  }
-  .headBoschairman {
-    color: #370A68;
-    font-weight: 600;
-    font-size: 26px;
-    width: 400px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: calc(100vh - 200px);
+}
+
+.bos-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.headBoschairman {
+  color: #370A68;
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0;
+  position: relative;
+}
+
+.headBoschairman::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: #370A68;
+  border-radius: 2px;
+}
+
+.searchTextBoschairman {
+  width: 350px;
+}
+
+.search-field-root {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.table-paper-root {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 12px !important;
+  border: 1px solid #eee;
+  overflow: hidden;
+}
+
+.searchBoschairman {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .bos-header-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   .searchTextBoschairman {
-    width: 30%;
-    padding-bottom: 0.5rem;
-    margin-left: 50%;
+    width: 100%;
   }
-  
-  @media screen and (max-width: 500px) {
-    .searchBoschairman {
-      width: 100%;
-    }
-    .tableBoschairman {
-      height: 80vh;
-      width: 100%;
-    }
-    .searchTextBoschairman {
-      width: 50%;
-      padding-bottom: 0.5rem;
-      margin-left: 55%;
-    }
+
+  .headBoschairman {
+    font-size: 24px;
   }
-  
+}

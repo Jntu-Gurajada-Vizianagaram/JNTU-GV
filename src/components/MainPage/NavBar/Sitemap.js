@@ -95,6 +95,12 @@ const dropdownItems = [
       { label: "Clubs and Societies", path: "/student-corner/clubs-societies" },
     ],
   },
+  {
+    label: "MANDATORY DISCLOSURES",
+    subItems: [
+      { label: "UGC Mandatory Disclosures", path: "/mandatory-disclosures" },
+    ],
+  },
 ];
 
 const Sitemap = () => {

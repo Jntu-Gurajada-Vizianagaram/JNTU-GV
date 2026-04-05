@@ -1,32 +1,160 @@
-.allRightContentAOP{
-  margin-top: 10px;
-
-}
-
-.clgnamediv {
-  width: 100px;
-  height: 10vh;
-  text-decoration: none;
-  color: #2e0669;
-  margin-left: 100px;
-  margin-top: 10px;
-}
-
-.clgdiv {
-  margin-top: -20px;
+.allRightContentAOP {
+  margin-top: 20px;
+  padding: 0 40px;
 }
 
 .clgheaddiv {
   color: #370A68;
-  font-weight: 500;
-  font-size: 26px;
-  /* width: 400px; */
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 8px;
+  position: relative;
 }
 
-.clgtextdivOP {
-  background-color: whitesmoke;
-  height: 40px;
+.clgheaddiv::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #370A68;
+  border-radius: 2px;
+}
+
+.clgsubtitle {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+.constituent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.constituent-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.constituent-card.highlighted-category {
+  border: 2px solid #370A68;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(55, 10, 104, 0.15);
+  z-index: 2;
+}
+
+.constituent-card.dimmed-category {
+  opacity: 0.85;
+  filter: grayscale(0.2);
+}
+
+.constituent-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  filter: none;
+}
+
+.card-header {
+  padding: 15px 20px;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.college-code {
+  font-weight: bold;
+  color: #370A68;
+  font-size: 0.85rem;
+  background: #fff;
+  padding: 2px 8px;
+  border: 1px solid #370A68;
+  border-radius: 4px;
+}
+
+.college-type {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.card-body {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.card-body h3 {
+  font-size: 1.15rem;
+  color: #333;
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+}
+
+.college-desc {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.college-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: auto;
+}
+
+.meta-icon {
+  vertical-align: middle;
+  margin-right: 5px;
+  color: #370A68;
+}
+
+.college-link {
+  text-decoration: none;
+  color: #370A68;
+  font-weight: 500;
+}
+
+.card-footer {
+  padding: 15px 20px;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+  text-align: center;
+}
+
+.visit-button {
+  display: block;
+  width: 100%;
   padding: 10px;
-  font-weight: 400;
-  font-size: medium;
+  background: #370A68;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.visit-button:hover {
+  background: #2e0669;
+}
+
+@media screen and (max-width: 768px) {
+  .allRightContentAOP {
+    padding: 0 20px;
+  }
 }

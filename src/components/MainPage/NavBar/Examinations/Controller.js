@@ -29,6 +29,9 @@ function Controller() {
       {/* Profile Details */}
       <div className="exam-profile-details">
         <p>
+          Controller of Examinations will be responsible to handle of examination procedures of I B.Tech, I B.Pharmacy
+        </p>
+        <p>
           Dr. Ch. Bindu Madhuri, an esteemed Associate Professor in the Department of Information Technology at JNTU-GV College of Engineering (CEV) (A), Vizianagaram, is a distinguished academic and researcher with a rich background in engineering and technology. With her extensive experience and contributions to the field, she has become a pivotal figure in shaping the future of information technology education and research.
         </p>
 

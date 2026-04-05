@@ -6,7 +6,7 @@ function Controller1() {
   return (
     <div className="exam-profile-container">
       <div className="exam-content-area-header">
-        <h3>Additional Controller of Examinations</h3>
+        <h3>Additional Controller of Examinations-4</h3>
       </div>
       {/* Profile Section */}
       <center>
@@ -15,7 +15,7 @@ function Controller1() {
         </div>
         <div className="exam-profile-name">
           <h3>Dr. Chinta Neelima Devi</h3>
-          <h4>Additional Controller of Examinations</h4>
+          <h4>Additional Controller of Examinations-4 </h4>
           <h6>for IV B.Tech and IV B.Pharmacy</h6>
           <h4>Associate Professor in the Department of Mechanical Engineering</h4>
           <p className="exam-profile-email">
@@ -40,7 +40,7 @@ function Controller1() {
 
         <p className="exam-sub-heading">Positions Held/Handling</p>
         <p>❖ Served as Head of the Mechanical Engineering from 04-08-2022 to 05-08-2024</p>
-        <p>❖ Served as Officer –In charge of Library, JNTUGV-College of Engineering Vizianagaram (A) from 2024-2025</p>
+        <p>❖ Served as Officer –In charge of Library, JNTUGV-College of Engineering Vizianagaram (A) from 18-08-2023 to 27-10-2024</p>
         <p>❖ Served as I/c Head of the Mechanical Engineering from 21-12-2018 to 03-08-2022</p>
         <p>❖ Served as Officer-in-Charge of Examinations and Admissions</p>
         <p>❖ Served as Deputy Warden for Girls Hostel</p>

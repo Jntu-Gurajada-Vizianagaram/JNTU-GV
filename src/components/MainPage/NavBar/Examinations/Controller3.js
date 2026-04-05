@@ -6,7 +6,7 @@ function Controller3() {
   return (
     <div className="exam-profile-container">
       <div className="exam-content-area-header">
-        <h3>Additional Controller of Examinations</h3>
+        <h3>Additional Controller of Examinations-3</h3>
       </div>
       {/* Profile Section */}
       <center>
@@ -15,7 +15,7 @@ function Controller3() {
         </div>
         <div className="exam-profile-name">
           <h3>Mr. D D V Sivaram Rolangi</h3>
-          <h4>Additional Controller of Examinations 3</h4>
+          <h4>Additional Controller of Examinations-3</h4>
           <h6>for III B.Tech and III B.Pharmacy</h6>
           <h4>Assistant Professor, Department of Computer Science & Engineering</h4>
           <p className="exam-profile-email">
@@ -29,23 +29,25 @@ function Controller3() {
       {/* Profile Details */}
       <div className="exam-profile-details">
         <p>
-          Mr. D D V Sivaram Rolangi, currently working as Assistant Professor, Department of Information Technology, JNTU-GV College of Engineering (CEV) (A)College of Engineering (CEV) (A) Vizianagaram-JNTU-GV, Vizianagaram, completed his B. Tech in Computer Science and Engineering from V R Siddhartha Engineering College, Vijayawada. M.Tech in Information Technology and currently pursuing his Ph.D under Visveswaraya PhD scheme from Andhra JNTU-GV College of Engineering (CEV) (A), Andhra University, Visakhapatnam.
+          Mr. D D V Sivaram Rolangi, currently working as Assistant Professor, Department of Computer Science Engineering, JNTU-GV College of Engineering (A), Vizianagaram, completed his B. Tech in Computer Science and Engineering from V R Siddhartha Engineering College, Vijayawada. M.Tech in Information Technology and currently pursuing his Ph.D under Visveswaraya PhD scheme from University College of Engineering, Andhra University, Visakhapatnam.
         </p>
         <p>
           His areas of interests include Theoretical Computer Science, Compiler technologies, Network programming. He has about 19 years of experience in teaching. His research interests include Machine learning, Computer vision, Deep learning, IoT and Assistive Technologies.
         </p>
 
         <p className="exam-sub-heading">Additional Roles carried out so far :</p>
+        <p>❖ Additional Controller of Examinations -SDC</p>
+        <p>❖ Officer In charge of Hostels</p>
         <p>❖ Network & systems coordinator.</p>
         <p>❖ Deputy Warden.</p>
         <p>❖ Training & Placement Officer (TPO).</p>
-        <p>❖ Officer In charge of Hostels (OIH).</p>
+        {/* <p>❖ Officer In charge of Hostels (OIH).</p> */}
 
         <p className="exam-sub-heading">Present administrative roles: </p>
         <p>❖ Dispensary Coordinator</p>
         <p>❖ Public Relations Officer(PRO) of JNTU-GV</p>
         <p>❖ Additional Controller of Examinations -III ( ACE-3)</p>
-        <p>❖ Additional Controller of Examinations-SDC</p>
+        <p>❖ Additional Controller of Examinations-II (ACE -2)</p>
       </div>
     </div>
   );

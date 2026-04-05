@@ -108,6 +108,16 @@ const NavBar = () => {
         // { label: "Empowerment of Women & Grievances", path: "/directorates/empowerment" },
       ],
     },
+    // {
+    //   icon: <DescriptionIcon />,
+    //   label: "MANDATORY DISCLOSURES",
+    //   path: "/disclosures",
+    //   subItems: [
+    //     { label: "Internal Complaint Committee (ICC)", path: "/disclosures/icc" },
+    //     { label: "SC/ST and OBC Cell", path: "/disclosures/scst-cell" },
+    //     { label: "Annual Reports & Financials", path: "/disclosures/annual-reports" },
+    //   ],
+    // },
     {
       icon: <DescriptionIcon />,
       label: " EXAMINATIONS",
@@ -126,16 +136,16 @@ const NavBar = () => {
           path: "/examination/controller-sdc",
         },
         {
-          label: "Additional Controller of Examinations-1",
-          path: "/examination/controller1",
-        },
-        {
           label: "Additional Controller of Examinations-2",
           path: "/examination/controller2",
         },
         {
           label: "Additional Controller of Examinations-3",
           path: "/examination/controller3",
+        },
+        {
+          label: "Additional Controller of Examinations-4",
+          path: "/examination/controller4",
         },
         {
           label: "Additional Controller of Examinations-PG",
@@ -184,6 +194,10 @@ const NavBar = () => {
         {
           label: "Anti-Ragging",
           path: "/anti-ragging",
+        },
+        {
+          label: 'UGC Mandatory Disclosures',
+          path: '/mandatory-disclosures',
         },
         {
           label: "Ideaclub",
@@ -244,7 +258,7 @@ const NavBar = () => {
         <div className="menu-icon" onClick={handleMenuToggle}>
           <MenuIcon />MENU
         </div>
-        <div className="menu-icon" id="seach-icon">
+        <div className="menu-icon" id="search-icon">
           <Search />
         </div>
       </div>
@@ -277,6 +291,9 @@ const NavBar = () => {
             ) : null}
           </div>
         ))}
+        {!menuState && <div className="bigSearch ms-3">
+          <Search />
+        </div>}
       </div>
 
     </nav>

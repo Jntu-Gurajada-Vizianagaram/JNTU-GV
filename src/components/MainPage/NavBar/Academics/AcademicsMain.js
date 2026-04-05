@@ -1,87 +1,66 @@
+import React from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import './Academics.css'
+import './Academics.css';
 
 const AcademicsMain = () => {
   const location = useLocation();
 
+  const menuSections = [
+    {
+      title: "Category: General",
+      links: [
+        { to: "programs-offered", label: "Programs Offered" },
+        { to: "admissions", label: "Admissions" },
+        { to: "Calendar", label: "Academic Calendar" },
+        { to: "academic-syllabus", label: "Academic Syllabus" },
+        { to: "academic-regulations", label: "Academic Regulations" },
+        { to: "bos-chairman", label: "BOS Chairpersons" },
+      ]
+    },
+    {
+      title: "Category: Engineering",
+      links: [
+        { to: "constituent-colleges", label: "Constituent Colleges", state: { category: "engineering" } },
+        { to: "affliated-colleges", label: "Affiliated Colleges", state: { category: "engineering" } },
+        { to: "autonomous-colleges", label: "Autonomous Colleges", state: { category: "engineering" } },
+      ]
+    },
+    {
+      title: "Category: Pharmacy",
+      links: [
+        { to: "constituent-colleges", label: "Constituent Colleges", state: { category: "pharmacy" } },
+        { to: "affliated-colleges", label: "Affiliated Colleges", state: { category: "pharmacy" } },
+        { to: "autonomous-colleges", label: "Autonomous Colleges", state: { category: "pharmacy" } },
+      ]
+    },
+    {
+      title: "Category: Management",
+      links: [
+        { to: "affliated-colleges", label: "Affiliated Colleges", state: { category: "management" } },
+      ]
+    }
+  ];
+
   return (
     <div className="Academicmain-Main">
       <div className="allLeftMenuAOP">
-        <Link
-          to="programs-offered"
-          className={`menubutton ${
-            location.pathname === "/academics/programs-offered" ? "active" : ""
-          }`}
-        >
-          Programs Offered
-        </Link>
-        <Link
-          to="admissions"
-          className={`menubutton ${
-            location.pathname === "/academics/admissions" ? "active" : ""
-          }`}
-        >
-          Admissions
-        </Link>
-        <Link
-          to="constituent-colleges"
-          className={`menubutton ${
-            location.pathname === "/academics/constituent-colleges" ? "active" : ""
-          }`}
-        >
-          Constituent Colleges
-        </Link>
-        <Link
-          to="affliated-colleges"
-          className={`menubutton ${
-            location.pathname === "/academics/affliated-colleges" ? "active" : ""
-          }`}
-        >
-          Affiliated Colleges
-        </Link>
-
-        <Link
-          to="autonomous-colleges"
-          className={`menubutton ${
-            location.pathname === "/academics/autonomous-colleges" ? "active" : ""
-          }`}
-        >
-          Autonomous Colleges
-        </Link>
-
-
-        <Link
-          to="bos-chairman"
-          className={`menubutton ${
-            location.pathname === "/academics/bos-chairman" ? "active" : ""
-          }`}
-        >
-          BOS Chairman
-        </Link>
-        <Link
-          to="Calendar"
-          className={`menubutton ${
-            location.pathname === "/academics/Calendar" ? "active" : ""
-          }`}
-        >
-        Academic Calendar
-        </Link>
-        <Link
-          to="academic-syllabus"
-          className={`menubutton ${
-            location.pathname === "/academics/academic-syllabus" ? "active" : ""
-          }`}
-        >
-          Academic Syllabus
-        </Link>
-        <Link
-          to="academic-regulations"
-          className={`menubutton ${
-            location.pathname === "/academics/academic-regulations" ? "active" : ""
-          }`}
-        >
-          Academic Regulations
-        </Link>
+        {menuSections.map((section, idx) => (
+          <div key={idx} className="menu-category-section">
+            <div className="menu-category-header">{section.title}</div>
+            <div className="menu-category-links">
+              {section.links.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  state={link.state}
+                  className={`menubutton ${location.pathname.includes(link.to) ? "active" : ""}`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
       <Outlet />
     </div>

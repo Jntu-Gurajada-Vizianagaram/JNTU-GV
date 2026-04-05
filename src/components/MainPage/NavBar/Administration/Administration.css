@@ -152,3 +152,119 @@
     display: block !important;
   }
 }
+
+/* Coordinators Card Grid - Modern UI */
+.coordinators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  padding-bottom: 40px;
+}
+
+.coordinator-card {
+  background: #ffffff;
+  border-radius: 15px;
+  border: 1px solid #eef0f2;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.coordinator-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #370a68, #5a189a);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.coordinator-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(55, 10, 104, 0.12);
+  border-color: #370a6822;
+}
+
+.coordinator-card:hover::after {
+  opacity: 1;
+}
+
+.card-header {
+  margin-bottom: 20px;
+}
+
+.coordinator-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 6px 0;
+  line-height: 1.2;
+}
+
+.coordinator-designation {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #370a68;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.info-icon {
+  color: #370a68;
+  margin-top: 2px;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+.coordinator-email {
+  color: #370a68;
+  text-decoration: none;
+  font-weight: 700;
+  word-break: break-all;
+  transition: all 0.2s;
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgba(55, 10, 104, 0.1);
+}
+
+.coordinator-email:hover {
+  color: #5a189a;
+  border-bottom-color: #5a189a;
+}
+
+@media screen and (max-width: 768px) {
+  .coordinators-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .coordinator-card {
+    padding: 22px;
+  }
+}

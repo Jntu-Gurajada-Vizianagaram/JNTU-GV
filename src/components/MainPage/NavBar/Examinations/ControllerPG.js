@@ -5,6 +5,9 @@ import { MdOutlineMailOutline } from "react-icons/md";
 function ControllerPG() {
   return (
     <div className="exam-profile-container">
+      <div className="exam-content-area-header">
+        <h3>Additional Controller of Examinations-PG</h3>
+      </div>
       {/* Profile Section */}
       <center>
         <div className="exam-profile-image">
@@ -12,7 +15,7 @@ function ControllerPG() {
         </div>
         <div className="exam-profile-name">
           <h3>Mr. Anil Wurity</h3>
-          <h4>Additional Controller of Examinations PG</h4>
+          <h4>Additional Controller of Examinations-PG</h4>
           <h4>Assistant Professor, Dept. of Information Technology</h4>
           <p className="exam-profile-email">
             <MdOutlineMailOutline size="20px" /> acepg@jntugv.edu.in
@@ -21,7 +24,7 @@ function ControllerPG() {
       </center>
 
       <hr />
-      
+
       {/* Profile Details */}
       <div className="exam-profile-details">
         <p>

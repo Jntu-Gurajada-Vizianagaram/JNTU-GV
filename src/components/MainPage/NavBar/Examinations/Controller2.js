@@ -6,7 +6,7 @@ function Controller2() {
   return (
     <div className="exam-profile-container">
       <div className="exam-content-area-header">
-        <h3>Additional Controller of Examinations</h3>
+        <h3>Additional Controller of Examinations-2</h3>
       </div>
       {/* Profile Section */}
       <center>
@@ -28,17 +28,19 @@ function Controller2() {
       {/* Profile Details */}
       <div className="exam-profile-details">
         <p>
-          Mr. D D V Sivaram Rolangi, currently working as Assistant Professor, Department of Information Technology, JNTU-GV College of Engineering (CEV) (A)College of Engineering (CEV) (A) Vizianagaram-JNTU-GV, Vizianagaram, completed his B. Tech in Computer Science and Engineering from V R Siddhartha Engineering College, Vijayawada. M.Tech in Information Technology and currently pursuing his Ph.D under Visveswaraya PhD scheme from Andhra JNTU-GV College of Engineering (CEV) (A), Andhra University, Visakhapatnam.
+          Mr. D D V Sivaram Rolangi, currently working as Assistant Professor, Department of Computer Science Engineering, JNTU-GV College of Engineering (CEV), Vizianagaram, completed his B. Tech in Computer Science and Engineering from V R Siddhartha Engineering College, Vijayawada. M.Tech in Information Technology and currently pursuing his Ph.D under Visveswaraya PhD scheme from University College of Engineering, Andhra University, Visakhapatnam.
         </p>
         <p>
           His areas of interests include Theoretical Computer Science, Compiler technologies, Network programming. He has about 19 years of experience in teaching. His research interests include Machine learning, Computer vision, Deep learning, IoT and Assistive Technologies.
         </p>
 
         <p className="exam-sub-heading">Additional Roles carried out so far :</p>
+        <p>❖ Additional Controller of Examinations -SDC</p>
+        <p>❖ Officer In charge of Hostels</p>
         <p>❖ Network & systems coordinator.</p>
         <p>❖ Deputy Warden.</p>
         <p>❖ Training & Placement Officer (TPO).</p>
-        <p>❖ Officer In charge of Hostels (OIH).</p>
+        {/* <p>❖ Officer In charge of Hostels (OIH).</p> */}
 
         <p className="exam-sub-heading">Present administrative roles: </p>
         <p>❖ Dispensary Coordinator</p>
