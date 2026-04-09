@@ -5,6 +5,9 @@ import { MdOutlineMailOutline } from "react-icons/md";
 function ControllerSDC() {
   return (
     <div className="exam-profile-container">
+      <div className="exam-content-area-header">
+        <h3>Additional Controller of Examinations SDC</h3>
+      </div>
       {/* Profile Section */}
       <center>
         <div className="exam-profile-image">
@@ -15,13 +18,13 @@ function ControllerSDC() {
           <h4>Additional Controller of Examinations-SDC</h4>
           <h4>Assistant Professor, Dept. of Information Technology</h4>
           <p className="exam-profile-email">
-            <MdOutlineMailOutline size="20px" /> acesdc@jntugv.edu.in, acepg@jntugv.edu.in
+            <MdOutlineMailOutline size="20px" /> acesdc@jntugv.edu.in
           </p>
         </div>
       </center>
 
       <hr />
-      
+
       {/* Profile Details */}
       <div className="exam-profile-details">
         <p>

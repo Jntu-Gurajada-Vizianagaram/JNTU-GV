@@ -41,7 +41,7 @@ const NavBar = () => {
       name: 'UGC Mandatory Disclosures',
       path: '/mandatory-disclosures',
     },
-    { name: `JNTU_Act 8 of 1967`, path: "/assets/acts/act_8_of_1967.pdf", isExternal: true },
+    { name: `JNTU_Act 8 of 2026`, path: "/assets/acts/act_8_of_2026.pdf", isExternal: true },
     { name: `JNTU_Act 30 of 2008`, path: "/assets/acts/act_30_of_2008.pdf", isExternal: true },
     { name: `JNTU_Act 22 of 2021`, path: "/assets/acts/act_22_of_2021.pdf", isExternal: true },
   ]
