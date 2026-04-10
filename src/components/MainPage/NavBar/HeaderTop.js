@@ -1,6 +1,6 @@
-import { React, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
-import Search from '../NavBar/Search/Search';
+import Search from './Search/Search';
 import './HeaderTop.css';
 // import PsychologyIcon from '@mui/icons-material/Psychology';
 // import PersonOffIcon from '@mui/icons-material/PersonOff';
