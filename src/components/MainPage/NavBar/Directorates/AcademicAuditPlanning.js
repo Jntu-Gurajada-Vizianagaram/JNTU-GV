@@ -16,14 +16,14 @@ function AcademicAuditPlanning() {
         <div className="dir-profile-info">
           <h3>Prof. Dr. G. Jaya Suma</h3>
           <h4>Director of Academic Audit and Planning</h4>
-          <h4>Professor, Dept. of Information Technology</h4>
+          <h4>Professor of Information Technology</h4>
           <p className="dir-profile-email">
-            <MdOutlineMailOutline size="20px" /> daa@jntugv.edu.in, dap@jntugv.edu.in
+            <MdOutlineMailOutline size="20px" /> daap@jntugv.edu.in
           </p>
 
           <div className="dir-profile-website">
-            <a href="https://dap.jntugv.edu.in" className="dir-action-link" target="_blank" rel="noopener noreferrer">Website for Directorate of Academic Planning</a>
-            <a href="https://daa.jntugv.edu.in" className="dir-action-link" target="_blank" rel="noopener noreferrer">Website for Directorate of Academic Audit</a>
+            <a href="https://daap.jntugv.edu.in" className="dir-action-link" target="_blank" rel="noopener noreferrer">Website for Directorate of Academic Audit & Planning</a> 
+            {/* <a href="https://daa.jntugv.edu.in" className="dir-action-link" target="_blank" rel="noopener noreferrer">Website for Directorate of Academic Audit</a> */}
           </div>
 
         </div>

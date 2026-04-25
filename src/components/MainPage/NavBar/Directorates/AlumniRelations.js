@@ -14,7 +14,7 @@ function AlumniRelations() {
         </div>
         <div className="dir-profile-info">
           <h3>Prof. Dr. G. Jaya Suma</h3>
-          <h4>Director <sup>i/c</sup> of Alumni Relations</h4>
+          <h4>Director of Alumni Relations <sub>i/c</sub></h4> 
           <h4>Professor, Department of Information Technology</h4>
           <p className="dir-profile-email">
             <MdOutlineMailOutline size="20px" /> dar@jntugv.edu.in

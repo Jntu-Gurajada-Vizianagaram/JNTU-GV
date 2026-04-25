@@ -14,7 +14,7 @@ function IQAC() {
         </div>
         <div className="dir-profile-info">
           <h3>Dr. Shaik Kalesha Vali</h3>
-          <h4>Director i/c of Internal Quality Assurance Cell (IQAC)</h4>
+          <h4>Director of Internal Quality Assurance Cell (IQAC) <sub>i/c</sub></h4>
           <h4>Professor of Mathematics, Dept. of BS&HSS</h4>
           <p className="dir-profile-email">
             <MdOutlineMailOutline size="20px" /> diqac@jntugv.edu.in

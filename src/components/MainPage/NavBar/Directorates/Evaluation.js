@@ -14,7 +14,7 @@ function Evaluation() {
         </div>
         <div className="dir-profile-info">
           <h3>Dr. K. Babulu</h3>
-          <h4>Director of Admissions & Director <sup>i/c</sup> of Evaluation</h4>
+          <h4>Director of Admissions & Director of Evaluation <sub>i/c</sub></h4>
           <h4>Professor, Deptartment of Electronics and Communications Engineering</h4>
           <p className="dir-profile-email">
             <MdOutlineMailOutline size="20px" /> de@jntugv.edu.in, da@jntugv.edu.in

@@ -37,6 +37,7 @@ const NavBar = () => {
     { name: `Idea Club`, path: "https://ideaclub.jntugv.edu.in" },
     { name: `MoUs`, path: "https://mou.jntugv.edu.in" },
     { name: `Events`, path: "https://events.jntugv.edu.in" },
+    {name: `Alumni Connect`, path: "https://alumni.jntugv.edu.in"},
     {
       name: 'UGC Mandatory Disclosures',
       path: '/mandatory-disclosures',

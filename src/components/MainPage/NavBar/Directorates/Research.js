@@ -14,7 +14,7 @@ function Research() {
         </div>
         <div className="dir-profile-info">
           <h3>Prof. G. Swami Naidu</h3>
-          <h4>Director i/c of Research & Development</h4>
+          <h4>Director of Research & Development <sub>i/c</sub></h4>
           <h4>Professor of Metallurgical Engineering</h4>
           <p className="dir-profile-email">
             <MdOutlineMailOutline size="20px" /> dr@jntugv.edu.in

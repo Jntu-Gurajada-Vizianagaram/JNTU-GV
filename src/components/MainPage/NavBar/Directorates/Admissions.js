@@ -13,7 +13,7 @@ function Admissions() {
         <div className="dir-profile-info">
           <h3>Dr. K. Babulu</h3>
           <h4>Director of Admissions</h4>
-          <h4>Professor, Dept. of Electronics and Communications Engineering</h4>
+          <h4>Professor of Electronics and Communications Engineering</h4>
           <p className="dir-profile-email">
             <MdOutlineMailOutline size="20px" /> da@jntugv.edu.in
           </p>

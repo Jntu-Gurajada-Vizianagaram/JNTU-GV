@@ -13,7 +13,7 @@ function AcademicPlanning() {
         <div className="dir-profile-info">
           <h3>Prof. Dr. G. Jaya Suma</h3>
           <h4>Director of Academic Planning</h4>
-          <h4>Professor, Dept. of Information Technology</h4>
+          <h4>Professor of Information Technology</h4>
           <p className="dir-profile-email">
             <MdOutlineMailOutline size="20px" /> dap@jntugv.edu.in
           </p>
