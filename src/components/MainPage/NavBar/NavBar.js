@@ -168,7 +168,7 @@ const NavBar = () => {
         },
         {
           label: "Emerging Technologies",
-          path: "https://emergingtechnologies.jntugv.edu.in"
+          path: "https://emergingtechnologiesbyjntugv.netlify.app/",
         }
       ],
     },

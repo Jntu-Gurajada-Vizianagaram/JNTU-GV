@@ -2,6 +2,97 @@ import React, { useState, useEffect } from "react";
 import "./MobileAnnouncement.css";
 import newGif from "../../../assets/new.gif";
 
+// ✅ STATIC ANNOUNCEMENTS - Displayed first with highest priority
+// These will scroll continuously every day until manually removed
+// To add new static announcements, add objects to this array
+const staticAnnouncements = [
+  {
+    id: "static-1",
+    date: "2026-04-25",
+    title: "Connect the Alumni Association of JNTUGV with this Google form",
+    file_path: "",
+    external_text: "Click here to Join Alumni Network",
+    external_link: "https://docs.google.com/forms/d/e/1FAIpQLSdke9d4vfKeJm6802cXX4K1_ljZ9A3OMv096Aq9-x4nf9g8tg/viewform?usp=sf_link",
+    main_page: "yes",
+    scrolling: "yes",
+    update_type: "circular",
+    update_status: "update",
+    submitted_by: "admin",
+    admin_approval: "accepted",
+    file_link: "",
+    day: 25,
+    month: "Apr",
+    year: 2026,
+    isStatic: true, // Mark as static for identification
+  },
+
+  {
+"id": "static-2",
+"date": "2026-04-17",
+"title": "Registrar - JNTUGV - Request for Sponsorship of Gold Medals for First Convocation - Reg",
+"file_path": "JNTUGV - Request for Sponsorship of Gold Medals_ Cash Awards  for First Convocation.pdf",
+"external_text": "Click here to record Sponsorship",
+"external_link": "https://forms.gle/L8R51nXrUNar1aUS7",
+"main_page": "yes",
+"scrolling": "yes",
+"update_type": "circular",
+"update_status": "update",
+"submitted_by": "admin",
+"admin_approval": "accepted",
+"file_link": "https://api.jntugv.edu.in/media/JNTUGV - Request for Sponsorship of Gold Medals_ Cash Awards  for First Convocation.pdf",
+"day": 17,
+"month": "Apr",
+"year": 2026,
+"isStatic": true, // Mark as static for identification
+},
+
+
+// Add more static announcements here by copying the structure above
+];
+
+// ✅ Function to expand notifications with both file and external links into two separate notifications
+const expandNotificationsWithBothLinks = (notifications) => {
+  return notifications.flatMap((note) => {
+    // If notification has both file_link and external_link, split into two
+    if (note.file_link && note.external_link) {
+      const baseTitle = note.title;
+      return [
+        {
+          ...note,
+          id: note.id + "-file",
+          title: `${baseTitle}`,
+          displayLink: note.file_link,
+          linkType: "file",
+        },
+        {
+          ...note,
+          id: note.id + "-action",
+          title: `${note.external_text || "Action Required"} - ${baseTitle}`,
+          displayLink: note.external_link,
+          linkType: "action",
+        },
+      ];
+    }
+    // If only file_link
+    if (note.file_link) {
+      return [{
+        ...note,
+        displayLink: note.file_link,
+        linkType: "file",
+      }];
+    }
+    // If only external_link
+    if (note.external_link) {
+      return [{
+        ...note,
+        displayLink: note.external_link,
+        linkType: "action",
+      }];
+    }
+    return [note];
+  });
+};
+
 const getNotificationDate = (note) => {
   if (!note || note.day == null || !note.month || note.year == null) {
     return null;
@@ -91,8 +182,13 @@ const AnnouncementMobile = () => {
 
   useEffect(() => {
     const load = async () => {
-      const data = await fetchNotifications();
-      setNotifications(data);
+      const dynamicData = await fetchNotifications();
+      // ✅ Expand static and dynamic announcements that have both file and external links
+      const expandedStatic = expandNotificationsWithBothLinks(staticAnnouncements);
+      const expandedDynamic = expandNotificationsWithBothLinks(dynamicData);
+      // ✅ Combine expanded static announcements first (priority) + expanded dynamic announcements
+      const combinedData = [...expandedStatic, ...expandedDynamic];
+      setNotifications(combinedData);
     };
     load();
   }, []);
@@ -111,21 +207,24 @@ const AnnouncementMobile = () => {
         }
       >
         <div className="ticker-content">
+          {/* ✅ Loop twice for continuous scroll: static + dynamic repeated */}
           {[...notifications, ...notifications].map((note, index) => {
             const expirationText = getExpirationDate(note);
+            const linkHref = note.displayLink || note.file_link || note.external_link || "#";
             return (
               <a
                 key={index}
-                href={note.file_link || note.external_link || "#"}
+                href={linkHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ticker-item"
+                className={`ticker-item ${note.isStatic ? "" : ""}`}
+                title={note.isStatic ? "Static Announcement (Daily Scroll)" : ""}
               >
-                🔔 {note.title}
+                {note.isStatic ? "📌" : "🔔"} {note.title}
                 {expirationText && (
                   <span className="expiry-label">Expires: {expirationText}</span>
                 )}
-                {daysAgo(note.day, note.month, note.year) <= 3 && (
+                {!note.isStatic && daysAgo(note.day, note.month, note.year) <= 3 && (
                   <img src={newGif} alt="new" className="new-icon" />
                 )}
               </a>

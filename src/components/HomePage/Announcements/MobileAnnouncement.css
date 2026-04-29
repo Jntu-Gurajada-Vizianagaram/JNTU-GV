@@ -49,6 +49,16 @@
   white-space: nowrap;
 }
 
+/* ✅ Styling for static announcements - visual distinction */
+.ticker-item-static {
+  border-left: 3px solid #340468;
+  border-right: 3px solid #340468;
+  padding: 0 40px;
+  font-weight: 600;
+  color: #340468;
+  letter-spacing: 0.3px;
+}
+
 .expiry-label {
   display: inline-block;
   margin-left: 8px;
