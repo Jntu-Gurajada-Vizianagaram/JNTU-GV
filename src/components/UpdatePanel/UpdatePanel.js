@@ -276,7 +276,7 @@ function UpdatePanel() {
   const workshopList = [];
   const recruitmentList = [];
   const sportsList = [];
-  const eventsList = [];
+  // const eventsList = [];
   const calendarList = [];
   const tenderList =[];
   const syllabusList =[];
@@ -341,7 +341,6 @@ function UpdatePanel() {
         break;
       case "events":
         notificationList.push(entry);
-        eventsList.push(entry);
         break;
       case "calendar":
         notificationList.push(entry);
@@ -399,10 +398,10 @@ function UpdatePanel() {
     setActiveButton(button);
   };
 
-  const handleEvents = (button) => {
-    setDisplayData(eventsList);
-    setActiveButton(button);
-  };
+  // const handleEvents = (button) => {
+  //   setDisplayData(eventsList);
+  //   setActiveButton(button);
+  // };
 
  
  const notificationData = notificationList;
@@ -490,7 +489,7 @@ function UpdatePanel() {
           >
             Sports
           </button>
-          <button
+          {/* <button
             style={{
               ...buttonStyles,
               backgroundColor: activeButton === "Events" ? "#370a68" : "white",
@@ -500,7 +499,7 @@ function UpdatePanel() {
           >
             
             Events
-          </button>
+          </button> */}
           
           
 

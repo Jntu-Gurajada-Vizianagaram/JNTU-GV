@@ -31,7 +31,7 @@ const websiteData = [
     "id": 5,
     "title": "Directorate Research & Development",
     "image": "DRD.jpg",
-    "link": "https://drd.jntugv.edu.in/"
+    "link": "https://drnd.jntugv.edu.in/"
   },
   {
     "id": 6,
@@ -45,12 +45,12 @@ const websiteData = [
     "image": "NSS.jpg",
     "link": "https://nss.jntugv.edu.in/"
   },
-  {
-    "id": 8,
-    "title": "Placements Cell",
-    "image": "PLACEMENTS.jpg",
-    "link": "https://placementcell.jntugv.edu.in/"
-  },
+  // {
+  //   "id": 8,
+  //   "title": "Placements Cell",
+  //   "image": "PLACEMENTS.jpg",
+  //   "link": "https://placementcell.jntugv.edu.in/"
+  // },
   {
     "id": 9,
     "title": "Digital Monitoring Cell",

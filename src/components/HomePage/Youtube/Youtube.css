@@ -1,20 +1,467 @@
-.youtube-logo-wrapper {
+/* YouTube Section Container */
+.youtube-section {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 16px;
+  margin: 20px 0;
+}
+
+/* Header Styling - Two columns: Logo+Title Center | Button Right */
+.youtube-header {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Logo and Title combined in center */
+.youtube-center-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex: 1;
+  justify-content: center;
+}
+
+.youtube-logo {
+  width: 56px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.youtube-logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 12px rgba(52, 4, 104, 0.4));
+}
+
+.youtube-title {
+  font-weight: 700 !important;
+  color: #340468 !important;
+  font-size: 1.75rem !important;
+}
+
+/* View All Button - Right aligned */
+.youtube-button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.view-all-button .MuiButton-root {
+  background: linear-gradient(135deg, #340468 0%, #5a1d89 100%) !important;
+  color: #ffffff !important;
+  padding: 10px 24px !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  text-transform: none !important;
+  box-shadow: 0 3px 12px rgba(52, 4, 104, 0.35) !important;
+  transition: all 0.3s ease !important;
+}
+
+.view-all-button .MuiButton-root:hover {
+  background: linear-gradient(135deg, #2a0358 0%, #340468 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(52, 4, 104, 0.45) !important;
+}
+
+.view-all-button .MuiButton-root .MuiButton-icon {
+  color: #ffffff !important;
+  margin-right: 6px !important;
+  font-size: 1.2rem !important;
+}
+
+/* Video Grid */
+.video-grid {
   margin-bottom: 30px;
 }
 
-.youtube-logo-banner {
-  width: 200px;
-  max-width: 80%;
-  height: auto;
-  transition: transform 0.3s ease;
+/* Video Card - Enhanced Hover Effects */
+.video-card {
+  cursor: pointer !important;
+  height: 100%;
+  border-radius: 16px !important;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  background: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  position: relative;
 }
 
-.youtube-logo-banner:hover {
-  transform: scale(1.05);
+.video-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(52, 4, 104, 0.08) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
 }
-.MuiCard-root:hover {
-  transform: translateY(-5px);
+
+.video-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+  border-color: rgba(52, 4, 104, 0.25) !important;
+}
+
+.video-card:hover::before {
+  opacity: 1;
+}
+
+/* Thumbnail Wrapper */
+.thumbnail-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-thumbnail {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  height: 220px !important;
+  object-fit: cover;
+}
+
+.video-card:hover .video-thumbnail {
+  transform: scale(1.12);
+}
+
+/* Play Overlay - Enhanced */
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.video-card:hover .play-overlay {
+  opacity: 1;
+}
+
+/* Play Button - Enhanced Animation */
+.play-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.25),
+    0 0 0 0 rgba(52, 4, 104, 0.4);
+}
+
+.video-card:hover .play-button {
+  transform: scale(1.15);
+  background: #340468;
+  box-shadow: 
+    0 8px 25px rgba(52, 4, 104, 0.5),
+    0 0 0 8px rgba(52, 4, 104, 0.15);
+}
+
+.play-button:hover {
+  transform: scale(1.25) !important;
+  background: #5a1d89 !important;
+}
+
+.play-button:active {
+  transform: scale(1.1) !important;
+}
+
+.play-icon {
+  font-size: 42px !important;
+  color: #340468;
+  margin-left: 4px;
+  transition: color 0.3s ease;
+}
+
+.play-button:hover .play-icon {
+  color: #ffffff;
+}
+
+/* YouTube Badge */
+.youtube-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 32px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.youtube-badge img {
+  width: 100%;
+  height: auto;
+}
+
+/* Video Content - Enhanced */
+.video-content {
+  padding: 18px !important;
+  background: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.video-card:hover .video-content {
+  background: #fafafa;
+}
+
+.video-title {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #1a1a1a !important;
+  line-height: 1.4 !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.8rem;
+  transition: color 0.3s ease;
+}
+
+.video-card:hover .video-title {
+  color: #340468 !important;
+}
+
+.video-description {
+  font-size: 0.8rem !important;
+  margin-top: 10px;
+  color: #666 !important;
+  font-weight: 500;
+}
+
+/* Show Less Button - Properly styled */
+.toggle-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.toggle-button-wrapper .MuiButton-root {
+  border: 2px solid #340468 !important;
+  color: #340468 !important;
+  background: transparent !important;
+  padding: 12px 32px !important;
+  border-radius: 30px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.toggle-button-wrapper .MuiButton-root:hover {
+  background: rgba(52, 4, 104, 0.08) !important;
+  border-color: #2a0358 !important;
+  transform: translateY(-2px);
+}
+
+.toggle-button-wrapper .MuiButton-root .MuiButton-icon {
+  color: #340468 !important;
+}
+
+/* Video Dialog */
+.video-dialog .MuiDialog-paper {
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+.dialog-content {
+  padding: 0 !important;
+  position: relative;
+  background: #000000;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75) !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;
+  padding: 10px !important;
+  transition: all 0.3s ease !important;
+}
+
+.close-button:hover {
+  background: rgba(0, 0, 0, 0.9) !important;
+  transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 960px) {
+  .youtube-section {
+    padding: 30px 16px;
+  }
+  
+  .youtube-header {
+    margin-bottom: 24px;
+  }
+  
+  .youtube-logo {
+    width: 48px;
+  }
+  
+  .youtube-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .video-thumbnail {
+    height: 200px !important;
+  }
+  
+  .play-button {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .play-icon {
+    font-size: 36px !important;
+  }
+  
+  .video-card:hover {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 600px) {
+  .youtube-section {
+    padding: 20px 12px;
+  }
+  
+  .youtube-header {
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .youtube-center-wrapper,
+  .youtube-button-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .youtube-button-wrapper {
+    order: 3;
+  }
+  
+  .youtube-logo {
+    width: 40px;
+  }
+  
+  .youtube-title {
+    font-size: 1.25rem !important;
+  }
+  
+  .video-title {
+    font-size: 0.9rem !important;
+    min-height: 2.5rem;
+  }
+  
+  .video-content {
+    padding: 14px !important;
+  }
+  
+  .video-thumbnail {
+    height: 180px !important;
+  }
+  
+  .play-button {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .play-icon {
+    font-size: 30px !important;
+  }
+  
+  .youtube-badge {
+    width: 28px;
+    height: 18px;
+  }
+  
+  .view-all-button .MuiButton-root {
+    padding: 8px 18px !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .video-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .video-card:hover .video-thumbnail {
+    transform: scale(1.08);
+  }
+}
+
+/* Animation for cards appearing */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.video-card {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.video-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.video-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.video-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Pulse animation for play button on hover */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 4, 104, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(52, 4, 104, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 4, 104, 0);
+  }
+}
+
+.video-card:hover .play-button {
+  animation: pulse 1s ease infinite;
 }

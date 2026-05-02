@@ -2,6 +2,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState, useCallback } from "react";
 import { Carousel, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Typography, Box, Button } from "@mui/material";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import "./ImageGallery.css";
 import "./TypingEffect.css";
 
@@ -9,7 +12,7 @@ const TypingEffect = ({ text, speed = 100 }) => {
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
-    setDisplayedText(""); // Reset on text change
+    setDisplayedText("");
     let index = 0;
     let timerId;
 
@@ -22,7 +25,7 @@ const TypingEffect = ({ text, speed = 100 }) => {
     };
 
     type();
-    return () => clearTimeout(timerId); // Cleanup
+    return () => clearTimeout(timerId);
   }, [text, speed]);
 
   return (
@@ -34,7 +37,6 @@ const TypingEffect = ({ text, speed = 100 }) => {
     </div>
   );
 };
-
 
 function ImageGallery() {
   const [images, setImages] = useState([]);
@@ -66,52 +68,68 @@ function ImageGallery() {
   }, [fetchImages]);
 
   return (
-    <div className="mainDivIG">
-      <div className="leftDivGallery">
+    <Box className="mainDivIG">
+      <Box className="leftDivGallery">
         <TypingEffect text="Welcome to JNTU Gurajada, Vizianagaram" speed={100} />
-        <p>
+        <Typography variant="body1" className="gallery-description">
           At JNTU Gurajada, Vizianagaram, we are dedicated to sculpting minds through innovative teaching, cutting-edge research, and a vibrant community engagement. Our mission is to empower students with a thirst for knowledge that transcends borders.
-          <br />
+        </Typography>
+        <Typography variant="body2" className="gallery-subtext">
           Located across six districts, offering diverse programs in Engineering, Pharmacy, and Management. With a rich history JNTU-GV stands as a beacon of academic excellence and community synergy.
-        </p>
+        </Typography>
         <Link to="/about-us/about-jntugv">
-          <button type="button" className="btn view-more btn-info">View More</button>
+          <Button 
+            variant="contained" 
+            className="view-more-btn"
+            endIcon={<ArrowForwardIcon />}
+          >
+            View More
+          </Button>
         </Link>
-      </div>
+      </Box>
 
-      <div className="mainImageGallery fixed-carousel-height">
+      <Box className="mainImageGallery fixed-carousel-height">
         {loading ? (
-          <div className="spinner-placeholder">
+          <Box className="spinner-placeholder">
             <Spinner animation="grow" variant="primary" role="status" />
-          </div>
+          </Box>
         ) : (
-          <Carousel fade interval={4000}>
+          <Carousel fade interval={4000} className="image-carousel">
             {images.map((image, index) => (
               <Carousel.Item key={index}>
-                <img
-                  className="ig-image"
-                  src={image.imglink}
-                  alt={image.title !== "NA" ? image.title : image.description}
-                  width="1200"
-                  height="400"
-                  {...(index === 0
-                    ? { fetchpriority: "high" }
-                    : { loading: "lazy" }
+                <Box className="carousel-item-wrapper">
+                  <img
+                    className="ig-image"
+                    src={image.imglink}
+                    alt={image.title !== "NA" ? image.title : image.description}
+                    width="1200"
+                    height="400"
+                    {...(index === 0
+                      ? { fetchpriority: "high" }
+                      : { loading: "lazy" }
+                    )}
+                    style={{ objectFit: "cover" }}
+                  />
+                  <Box className="carousel-overlay"></Box>
+                  {image.title !== "NA" && (
+                    <Carousel.Caption className="carousel-caption-wrapper">
+                      <Box className="carouselText">{image.title}</Box>
+                    </Carousel.Caption>
                   )}
-                  style={{ objectFit: "cover" }}
-                />
-                {image.title !== "NA" && (
-                  <Carousel.Caption>
-                    <div className="carouselText">{image.title}</div>
-                  </Carousel.Caption>
-                )}
+                </Box>
               </Carousel.Item>
             ))}
           </Carousel>
-
         )}
-      </div>
-    </div>
+      </Box>
+      
+      {/* Link to full gallery */}
+      <Link to="/gallery" className="gallery-link">
+        <PhotoLibraryIcon className="gallery-link-icon" />
+        <span>View Full Gallery</span>
+        <ArrowForwardIcon className="arrow-icon" />
+      </Link>
+    </Box>
   );
 }
 

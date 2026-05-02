@@ -1,23 +1,22 @@
 // import Inauguration from "../../assets/Gallery/Inauguration Event/WhatsApp Image 2024-02-16 at 14.57.53 (1).jpeg";
-import Republic from "../../assets/Gallery/Republic Day/IMG-20240129-WA0001.jpg";
-import WomensDay from "../../assets/Gallery/Womensday celebrations 2024/WhatsApp Image 2024-03-13 at 16.15.46.jpeg";
-import Eisen from "../../assets/Gallery/Eisen 2K24/IMG_20240306_112031.jpg";
-import Cresense from "../../assets/Gallery/Cresense 2K24/IMG_20240301_110135.jpeg";
-import Eclectique from "../../assets/Gallery/Eclectique 2K24/1f8e87ff-ace4-496e-96bd-997ed08b9edf.jpg"
-import Ityuktha from "../../assets/Gallery/Ityuktha 2K24/WhatsApp Image 2024-03-30 at 14.16.17.jpeg"
-
+  // import Republic from "../../assets/Gallery/Republic Day/IMG-20240129-WA0001.jpg";
+  // import WomensDay from "../../assets/Gallery/Womensday celebrations 2024/WhatsApp Image 2024-03-13 at 16.15.46.jpeg";
+  // import Eisen from "../../assets/Gallery/Eisen 2K24/IMG_20240306_112031.jpg";
+  // import Cresense from "../../assets/Gallery/Cresense 2K24/IMG_20240301_110135.jpeg";
+  // import Eclectique from "../../assets/Gallery/Eclectique 2K24/1f8e87ff-ace4-496e-96bd-997ed08b9edf.jpg"
+  // import Ityuktha from "../../assets/Gallery/Ityuktha 2K24/WhatsApp Image 2024-03-30 at 14.16.17.jpeg"
 export const Data = [
 
-  {
-    title: `Ityuktha  2K24`,
-    update_type: "events",
-    file_link: `/events/ityuktha-2k24`,
-    image: Ityuktha,
-    day: "16",
-    month: "Mar",
-    year: "2024",
-    isLink: true,
-  },
+  // {
+  //   title: `Ityuktha  2K24`,
+  //   update_type: "events",
+  //   file_link: `/events/ityuktha-2k24`,
+  //   image: Ityuktha,
+  //   day: "16",
+  //   month: "Mar",
+  //   year: "2024",
+  //   isLink: true,
+  // },
 
 
   {
@@ -30,48 +29,48 @@ export const Data = [
     year: "2024",
     isLink: true,
   },
-  {
-    title: `Eclectique  2K24`,
-    update_type: "events",
-    file_link: `/events/eclectique-2k24`,
-    image: Eclectique,
-    day: "8",
-    month: "Mar",
-    year: "2024",
-    isLink: true,
-  },
+  // {
+  //   title: `Eclectique  2K24`,
+  //   update_type: "events",
+  //   file_link: `/events/eclectique-2k24`,
+  //   image: Eclectique,
+  //   day: "8",
+  //   month: "Mar",
+  //   year: "2024",
+  //   isLink: true,
+  // },
 
-  {
-    title: `Women's Day celebration 2024`,
-    update_type: "events",
-    file_link: `/events/womens-day`,
-    image: WomensDay,
-    day: "8",
-    month: "Mar",
-    year: "2024",
-    isLink: true,
-  },
+  // {
+  //   title: `Women's Day celebration 2024`,
+  //   update_type: "events",
+  //   file_link: `/events/womens-day`,
+  //   image: WomensDay,
+  //   day: "8",
+  //   month: "Mar",
+  //   year: "2024",
+  //   isLink: true,
+  // },
 
-  {
-    title: `Eisen 2K24`,
-    update_type: "events",
-    file_link: `/events/eisen-2k24`,
-    image: Eisen,
-    day: "6",
-    month: "Mar",
-    year: "2024",
-    isLink: true,
-  },
-  {
-    title: `Cresense 2K24`,
-    update_type: "events",
-    file_link: `/events/cresense-2k24`,
-    image: Cresense,
-    day: "1",
-    month: "Mar",
-    year: "2024",
-    isLink: true,
-  },
+  // {
+  //   title: `Eisen 2K24`,
+  //   update_type: "events",
+  //   file_link: `/events/eisen-2k24`,
+  //   image: Eisen,
+  //   day: "6",
+  //   month: "Mar",
+  //   year: "2024",
+  //   isLink: true,
+  // },
+  // {
+  //   title: `Cresense 2K24`,
+  //   update_type: "events",
+  //   file_link: `/events/cresense-2k24`,
+  //   image: Cresense,
+  //   day: "1",
+  //   month: "Mar",
+  //   year: "2024",
+  //   isLink: true,
+  // },
 
   {
     title: `A PROGRAMME ON ANDHRA PRADESH DEVELOPMENT DIALOGUE DAY 29-01-2024 AT JNTU-GV VIZIANAGARAM`,
@@ -146,16 +145,16 @@ export const Data = [
   //   year: "2024",
   //   isLink: true,
   // },
-  {
-    title: `Republic Day at JNTU-GV`,
-    update_type: "events",
-    file_link: `/events/republic-day`,
-    image: Republic,
-    day: "16",
-    month: "Feb",
-    year: "2024",
-    isLink: true,
-  },
+  // {
+  //   title: `Republic Day at JNTU-GV`,
+  //   update_type: "events",
+  //   file_link: `/events/republic-day`,
+  //   image: Republic,
+  //   day: "16",
+  //   month: "Feb",
+  //   year: "2024",
+  //   isLink: true,
+  // },
   {
     title: `One Day Orientation Programme on BCDE Activities and Benefits” organized by the Govt. of AP-BCDE and hosted by JNTU-GV`,
     update_type: "workshop",
