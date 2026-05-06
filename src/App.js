@@ -165,7 +165,7 @@ function App() {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/grievance-form" element={<Grievance />} />
           <Route path="/news-and-events" element={<NewsAndEvents />} />
-          <Route path="/gallery" element={<CompleteGallery />} />
+          {/* <Route path="/gallery" element={<CompleteGallery />} /> */}
           <Route path="/events" element={<CompleteGallery />} />
 
           <Route path="/events/republic-day" element={<RepublicDay />} />
