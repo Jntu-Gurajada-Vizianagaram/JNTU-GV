@@ -34,7 +34,8 @@ function CompleteGallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedDescription, setSelectedDescription] = useState('');
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState('events');
+  const [activeTab, setActiveTab] = useState('gallery');
+
 
   const [eventPhotoCounts, setEventPhotoCounts] = useState({});
   const [eventPhotoImagesByCategory, setEventPhotoImagesByCategory] = useState({});
@@ -154,15 +155,16 @@ function CompleteGallery() {
 
   return (
     <Box className="complete-gallery-container">
-      <Typography variant="h4" className="gallery-main-heading">
-        <PhotoLibraryIcon className="heading-icon" />
-        Gallery of JNTUGV
-      </Typography>
-
-      <Link to="/" className="back-to-home">
-        <ArrowBackIcon />
-        Back to Homepage
-      </Link>
+      <div className="gallery-header">
+        <Typography variant="h4" className="gallery-main-heading">
+          <PhotoLibraryIcon className="heading-icon" />
+          Gallery of JNTUGV
+        </Typography>
+        <Link to="/" className="back-to-home">
+          <ArrowBackIcon />
+          Back to Homepage
+        </Link>
+      </div>
 
       <Tabs 
         value={activeTab} 

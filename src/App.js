@@ -26,8 +26,8 @@ const Chancellor = React.lazy(() => import("./components/MainPage/NavBar/Adminis
 const OSD = React.lazy(() => import("./components/MainPage/NavBar/Administration/OSD/OSD"));
 const Registrar = React.lazy(() => import("./components/MainPage/NavBar/Administration/Registrar"));
 const ViceChancellor = React.lazy(() => import("./components/MainPage/NavBar/Administration/ViceChancellor"));
-const AcademicAudit = React.lazy(() => import("./components/MainPage/NavBar/Directorates/AcademicAudit"));
-const AcademicPlanning = React.lazy(() => import("./components/MainPage/NavBar/Directorates/AcademicPlanning"));
+// const AcademicAudit = React.lazy(() => import("./components/MainPage/NavBar/Directorates/AcademicAudit"));
+// const AcademicPlanning = React.lazy(() => import("./components/MainPage/NavBar/Directorates/AcademicPlanning"));
 const AcademicAuditPlanning = React.lazy(() => import("./components/MainPage/NavBar/Directorates/AcademicAuditPlanning"));
 const Admissions = React.lazy(() => import("./components/MainPage/NavBar/Directorates/Admissions"));
 const AlumniRelations = React.lazy(() => import("./components/MainPage/NavBar/Directorates/AlumniRelations"));
@@ -89,6 +89,8 @@ const Studentactivityclub = React.lazy(() => import("./components/MainPage/NavBa
 const NotFound = React.lazy(() => import("./components/MainPage/NotFound/NotFound"));
 const MandatoryDisclosures = React.lazy(() => import("./components/MainPage/NavBar/MandatoryDisclosures/MandatoryDisclosures"));
 const Coordinators = React.lazy(() => import("./components/MainPage/NavBar/Administration/Coordinators"));
+// const PrivacyPolicy = React.lazy(() => import("./components/MainPage/Footer/PrivacyPolicy"));
+const gallery= React.lazy(() => import("./components/Gallery/CompleteGallery"));
 
 function App() {
   return (
@@ -165,8 +167,8 @@ function App() {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/grievance-form" element={<Grievance />} />
           <Route path="/news-and-events" element={<NewsAndEvents />} />
-          {/* <Route path="/gallery" element={<CompleteGallery />} /> */}
-          <Route path="/events" element={<CompleteGallery />} />
+          <Route path="/gallery" element={<CompleteGallery />} />
+
 
           <Route path="/events/republic-day" element={<RepublicDay />} />
           <Route path="/events/inauguration-event" element={<Inauguration />} />
