@@ -8,7 +8,7 @@ function Evaluation() {
   return (
     <div className="dir-profile-container">
       {/* Profile Header Block - Persistent */}
-      <div className="dir-profile-header">
+      {/* <div className="dir-profile-header">
         <div className="dir-profile-image">
           <img src={doe} alt="Dr. K. Babulu" />
         </div>
@@ -19,8 +19,8 @@ function Evaluation() {
           <p className="dir-profile-email">
             <MdOutlineMailOutline size="20px" /> de@jntugv.edu.in, da@jntugv.edu.in
           </p>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
 
       {/* Internal Tabs */}
       <div className="dir-tabs-container">
@@ -30,12 +30,12 @@ function Evaluation() {
         >
           About Directorate
         </button>
-        <button 
+        {/* <button 
           className={`dir-tab-button ${activeTab === "profile" ? "active" : ""}`}
           onClick={() => setActiveTab("profile")}
         >
           Director Profile
-        </button>
+        </button> */}
       </div>
 
       {activeTab === "about" && (
@@ -49,10 +49,16 @@ function Evaluation() {
           <p>❖ Issuance of degree certificates, transcripts, and other academic records with high integrity.</p>
           <p>❖ Implementation of examination reforms and technology-driven valuation systems to ensure transparency and efficiency.</p>
           <p>❖ Redressal of students' grievances related to examinations and evaluations.</p>
+          <p className="dir-sub-heading">Current Status</p>
+          <p>
+            The Director of Evaluations has been relieved. All information related to the Directorate of Evaluation is currently handled by the Registrar.
+          </p>
+
+
         </div>
       )}
 
-      {activeTab === "profile" && (
+      {/* {activeTab === "profile" && (
         <div className="dir-profile-details">
           <p className="dir-sub-heading">Educational Qualifications:</p>
           <p>❖ B.E from Andhra University with Electronics and Communication Engineering.</p>
@@ -113,7 +119,7 @@ function Evaluation() {
           <p>❖ RESOURCE PERSON: 10.</p>
           <p>❖ CHAIR PERSON: 01.</p>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

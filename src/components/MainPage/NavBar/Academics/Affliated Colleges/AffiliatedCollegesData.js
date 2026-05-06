@@ -76,7 +76,7 @@ export const rowsEngg = [
     CollegeName: "Simhadri Educational Society Group of Institutions Engineering College",
     District: "Anakapalli",
     CollegeType: "Engineering",
-    wURL: "https://simhadhriedu.org/",
+    wURL: "https://simhadhriedu.com/",
     Type: "Temporary",
     JnanaBhumiCode: "22803",
   },

@@ -1,24 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import ImageModal from "../HomePage/NewsAndEvents/ImageModal";
 import {
   Box,
   Typography,
-  Button,
   Card,
   CardMedia,
   CardContent,
   Grid,
   CircularProgress,
-  Chip
+  Chip,
+  Tabs,
+  Tab
 } from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import './CompleteGallery.css';
 
-// Event categories with metadata
+// Static event categories - now using local assets in src/assets/Gallery/
 const eventCategories = [
   { key: 'ityuktha-2k24', label: 'Ityuktha 2K24', color: '#e91e63' },
   { key: 'eclectique-2k24', label: 'Eclectique 2K24', color: '#9c27b0' },
@@ -29,71 +28,116 @@ const eventCategories = [
 ];
 
 function CompleteGallery() {
-  const [images, setImages] = useState([]);
+  const [allImages, setAllImages] = useState([]);
   const [carouselArchives, setCarouselArchives] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedDescription, setSelectedDescription] = useState('');
   const [loading, setLoading] = useState(true);
-  const [expandedCategory, setExpandedCategory] = useState(null);
+  const [activeTab, setActiveTab] = useState('events');
 
-  // Fetch images from the API
+  const [eventPhotoCounts, setEventPhotoCounts] = useState({});
+  const [eventPhotoImagesByCategory, setEventPhotoImagesByCategory] = useState({});
+
+  // Fetch gallery images, carousel archives, and event photos for the Events Gallery cards
   useEffect(() => {
-    const fetchImages = async () => {
+    const fetchData = async () => {
       try {
         setLoading(true);
-        const [galleryResponse, carouselResponse] = await Promise.all([
+
+        const [galleryResponse, carouselResponse, eventPhotosResponse] = await Promise.all([
           fetch("https://api.jntugv.edu.in/api/gallery/all-gallery-images"),
-          fetch("https://api.jntugv.edu.in/api/webadmin/carousel-images")
+          fetch("https://api.jntugv.edu.in/api/webadmin/carousel-images"),
         ]);
 
         const galleryData = await galleryResponse.json();
         const carouselData = await carouselResponse.json();
 
-        // Extract images from all events
-        const allImages = galleryData.map(photo => ({
-          image: photo.imagelink,
+        // Gallery images
+        const galleryImages = (Array.isArray(galleryData) ? galleryData : []).map((photo, index) => ({
+          id: `gallery-${index}`,
+          image: photo.imagelink || photo.image_link || photo.image || photo.imagelink_url || photo.imglink,
+          description: photo.description || 'JNTUGV Gallery Photo'
+        }));
+
+        // Carousel archives (older images)
+        const sortedCarousel = (Array.isArray(carouselData) ? carouselData : []).slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+        const archives = sortedCarousel.slice(5).map((photo, index) => ({
+          id: photo.id ,
+          image: photo.imglink,
           description: photo.description,
-          event: photo.event || 'general'
+          date: photo.date
         }));
 
-        // Extract older carousel images (excluding the top 5 recent ones)
-        const sortedCarousel = carouselData.sort((a, b) => new Date(b.date) - new Date(a.date));
-        const olderCarouselImages = sortedCarousel.slice(5).map(photo => {
-          const dateObj = new Date(photo.date);
-          const monthYear = isNaN(dateObj) ? "Archived Events" : dateObj.toLocaleString("default", { month: "long", year: "numeric" });
-          
-          return {
-            image: photo.imglink,
-            description: photo.description !== "NA" ? photo.description : "Carousel Archive",
-            monthYear: monthYear
-          };
-        });
+        // Event photos for the Events Gallery section
+        // NOTE: we are not fetching Events API here (eventApiData is undefined in this component).
+        // Keeping this section disabled for now.
+        const eventsFromApi = [];
 
-        // Group older images by month and year
-        const groupedArchives = {};
-        olderCarouselImages.forEach(img => {
-          if (!groupedArchives[img.monthYear]) {
-            groupedArchives[img.monthYear] = [];
-          }
-          groupedArchives[img.monthYear].push(img);
-        });
+        // Map API events to our category keys (best-effort using common fields)
+        // We support multiple possible naming: key/name/file_link/category/name_slug
+        const toKey = (value) => (typeof value === 'string' ? value.trim().toLowerCase() : '');
 
-        const groupedArchivesArray = Object.keys(groupedArchives).map(key => ({
-          monthYear: key,
-          images: groupedArchives[key]
-        }));
-        
-        setImages(allImages);
-        setCarouselArchives(groupedArchivesArray);
+        const categoryKeyByEvent = (ev) => {
+          const candidates = [
+            ev?.file_link,
+            ev?.fileLink,
+            ev?.category_key,
+            ev?.categoryKey,
+            ev?.category,
+            ev?.name,
+            ev?.event_name,
+            ev?.eventName,
+            ev?.event_slug,
+            ev?.eventSlug,
+            ev?.slug,
+            ev?.description
+          ];
+          const joined = candidates.map(toKey).filter(Boolean).join(' ');
+
+          // API returns event_name like: Republic Day, Inauguration Event, ITYUKTA2K24, ECLECTIQUE2K24 etc.
+          // Existing routes use keys like: republic-day, inauguration-event, itiyuktha-2k24, eclectique-2k24, etc.
+          // Map by substring match against category.label and a couple of known aliases.
+          const found = eventCategories.find((c) => {
+            const label = toKey(c.label);
+            const key = toKey(c.key);
+            // direct key match often won't work because API uses event_name, not slugs.
+            return joined.includes(label) || joined.includes(key) || joined.replace(/\s+/g, '-').includes(key);
+          });
+
+          return found?.key;
+        };
+
+        const imagesByCategory = {};
+        const countsByCategory = {};
+        for (const ev of eventsFromApi) {
+          const catKey = categoryKeyByEvent(ev);
+          if (!catKey) continue;
+
+          const img = ev?.imagelink || ev?.image_link || ev?.image || ev?.imagelink_url;
+          if (!img) continue;
+
+          if (!imagesByCategory[catKey]) imagesByCategory[catKey] = [];
+          imagesByCategory[catKey].push(img);
+        }
+
+        for (const cat of eventCategories) {
+          const imgs = imagesByCategory[cat.key] || [];
+          countsByCategory[cat.key] = imgs.length;
+        }
+
+        setEventPhotoImagesByCategory(imagesByCategory);
+        setEventPhotoCounts(countsByCategory);
+        setAllImages(galleryImages);
+        setCarouselArchives(archives);
       } catch (error) {
-        console.error("Failed to fetch images:", error);
+        console.error("Failed to fetch data:", error);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchImages();
+    fetchData();
   }, []);
 
   const handleShowModal = (image, description) => {
@@ -108,28 +152,6 @@ function CompleteGallery() {
     setSelectedDescription('');
   };
 
-  const toggleCategory = (category) => {
-    setExpandedCategory(expandedCategory === category ? null : category);
-  };
-
-  const getCategoryColor = (category) => {
-    const found = eventCategories.find(c => c.key === category);
-    return found ? found.color : '#340468';
-  };
-
-  const getCategoryLabel = (category) => {
-    const found = eventCategories.find(c => c.key === category);
-    return found ? found.label : category;
-  };
-
-  // Filter images by event category
-  const getImagesByCategory = (category) => {
-    return images.filter(img => 
-      img.event?.toLowerCase().includes(category.split('-')[0]) || 
-      category === 'all'
-    );
-  };
-
   return (
     <Box className="complete-gallery-container">
       <Typography variant="h4" className="gallery-main-heading">
@@ -142,122 +164,85 @@ function CompleteGallery() {
         Back to Homepage
       </Link>
 
+      <Tabs 
+        value={activeTab} 
+        onChange={(e, newValue) => setActiveTab(newValue)}
+        className="gallery-tabs"
+        centered
+      >
+        {/* <Tab label="Events Gallery" value="events" /> */}
+        <Tab label="Photo Gallery" value="gallery" />
+        <Tab label="Archives" value="archives" />
+      </Tabs>
+
       {loading ? (
         <Box className="loading-wrapper">
           <CircularProgress style={{ color: "#340468" }} />
         </Box>
       ) : (
         <>
-          {/* Event Links - Improved Card Style */}
-          <Box className="event-links-section">
-            <Typography variant="h5" className="section-title">
-              Event Galleries
-            </Typography>
-            <Grid container spacing={2} className="event-grid">
-              {eventCategories.map((category) => (
-                <Grid item xs={6} sm={4} md={2} key={category.key}>
-                  <Link to={`/events/${category.key}`} className="event-card-link">
-                    <Box 
-                      className="event-card"
-                      style={{ borderColor: category.color }}
+
+          {activeTab === 'gallery' && (
+            <Box className="images-section">
+              <Typography variant="h5" className="section-title">
+                Photo Gallery ({allImages.length} photos)
+              </Typography>
+              <Grid container spacing={2}>
+                {allImages.map((imageObj, index) => (
+                  <Grid item xs={6} sm={4} md={3} lg={3} key={imageObj.id}>
+                    <Card 
+                      className="image-card"
+                      onClick={() => handleShowModal(imageObj.image, imageObj.description)}
                     >
-                      <PhotoLibraryIcon 
-                        className="event-icon" 
-                        style={{ color: category.color }}
+                      <Box className="image-card-overlay">
+                        <PhotoLibraryIcon className="zoom-icon" />
+                      </Box>
+                      <CardMedia
+                        component="img"
+                        height="200"
+                        image={imageObj.image}
+                        alt={imageObj.description}
+                        className="grid-image"
+                        loading="lazy"
+                        style={{objectFit: 'cover'}}
                       />
-                      <Typography 
-                        variant="body2" 
-                        className="event-label"
-                      >
-                        {category.label}
-                      </Typography>
-                      <Chip 
-                        label={getImagesByCategory(category.key).length} 
-                        size="small"
-                        className="image-count-chip"
-                        style={{ backgroundColor: category.color }}
-                      />
-                    </Box>
-                  </Link>
-                </Grid>
-              ))}
-            </Grid>
-          </Box>
+                      <CardContent className="image-card-content">
+                        <Typography variant="body2" className="image-description">
+                          {imageObj.description}
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                ))}
+              </Grid>
+            </Box>
+          )}
 
-          {/* Main Image Grid */}
-          <Box className="images-section">
-            <Typography variant="h5" className="section-title">
-              All Photos ({images.length})
-            </Typography>
-            <Grid container spacing={2}>
-              {images.map((imageObj, index) => (
-                <Grid item xs={6} sm={4} md={3} key={`img-${index}`}>
-                  <Card 
-                    className="image-card"
-                    onClick={() => handleShowModal(imageObj.image, imageObj.description)}
-                  >
-                    <Box className="image-card-overlay">
-                      <PhotoLibraryIcon className="zoom-icon" />
-                    </Box>
-                    <CardMedia
-                      component="img"
-                      height="160"
-                      image={imageObj.image}
-                      alt={`JNTUGV ${index + 1}`}
-                      className="grid-image"
-                      loading="lazy"
-                    />
-                    <CardContent className="image-card-content">
-                      <Typography variant="body2" className="image-description">
-                        {imageObj.description || `Photo ${index + 1}`}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
-          </Box>
-
-          {/* Archived Carousel Images */}
-          {carouselArchives.length > 0 && (
+          {activeTab === 'archives' && carouselArchives.length > 0 && (
             <Box className="archives-section">
               <Typography variant="h5" className="section-title archive-title">
                 <PhotoLibraryIcon className="archive-icon" />
-                Archived Carousel Images
+                Carousel Archives ({carouselArchives.length})
               </Typography>
-              {carouselArchives.map((group, groupIndex) => (
-                <Box key={`group-${groupIndex}`} className="archive-group">
-                  <Box className="archive-header">
-                    <Typography variant="h6" className="archive-month">
-                      {group.monthYear}
-                    </Typography>
-                    <Chip 
-                      label={`${group.images.length} photos`} 
-                      size="small"
-                      className="archive-chip"
-                    />
-                  </Box>
-                  <Grid container spacing={2}>
-                    {group.images.map((imageObj, index) => (
-                      <Grid item xs={6} sm={4} md={3} key={`carousel-${groupIndex}-${index}`}>
-                        <Card 
-                          className="image-card"
-                          onClick={() => handleShowModal(imageObj.image, imageObj.description)}
-                        >
-                          <CardMedia
-                            component="img"
-                            height="140"
-                            image={imageObj.image}
-                            alt={`Archived ${group.monthYear} ${index + 1}`}
-                            loading="lazy"
-                            className="grid-image"
-                          />
-                        </Card>
-                      </Grid>
-                    ))}
+              <Grid container spacing={2}>
+                {carouselArchives.map((imageObj, index) => (
+                  <Grid item xs={6} sm={4} md={3} lg={3} key={imageObj.id}>
+                    <Card 
+                      className="image-card"
+                      onClick={() => handleShowModal(imageObj.image, imageObj.image)}
+                    >
+                      <CardMedia
+                        component="img"
+                        height="200"
+                        image={imageObj.image}
+                        alt={imageObj.description}
+                        className="grid-image"
+                        loading="lazy"
+                      />
+                    </Card>
                   </Grid>
-                </Box>
-              ))}
+                ))}
+              </Grid>
             </Box>
           )}
         </>
@@ -274,3 +259,4 @@ function CompleteGallery() {
 }
 
 export default CompleteGallery;
+

@@ -92,7 +92,9 @@ const NavBar = () => {
           label: "Academic Audit and Planning",
           path: "/directorates/academic-audit-planning",
         },
-        { label: "Evaluation & Admissions", path: "/directorates/evaluation" },
+        { label: "Admissions",
+          path: "/directorates/admissions" },
+        { label: "Evaluation", path: "/directorates/evaluation" },
         { label: "Research & Development", path: "/directorates/research" },
         {
           label: "Industrial Relations & Placements",

@@ -139,7 +139,7 @@
 
 /* Carousel Caption */
 .carouselText {
-  background: rgba(52, 4, 104, 0.85);
+  /* background: rgba(52, 4, 104, 0.85); */
   padding: 12px 24px;
   color: #ffffff;
   text-align: center;
@@ -148,7 +148,7 @@
   border-radius: 30px;
   max-width: 80%;
   margin: 0 auto;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
 }
 
 .carousel-caption-wrapper {
@@ -167,10 +167,10 @@
   text-decoration: none;
   font-weight: 600;
   padding: 12px 24px;
-  background: rgba(255, 255, 255, 0.15);
+  /* background: rgba(255, 255, 255, 0.15); */
   border-radius: 30px;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
 }
 
 .gallery-link:hover {
@@ -315,15 +315,15 @@
 /* Carousel controls styling */
 .image-carousel .carousel-control-prev-icon,
 .image-carousel .carousel-control-next-icon {
-  background-color: #340468;
+  /* background-color: #340468; */
   border-radius: 50%;
   padding: 20px;
 }
 
 .image-carousel .carousel-indicators button {
-  background-color: #340468;
+  /* background-color: #340468; */
 }
 
 .image-carousel .carousel-indicators .active {
-  background-color: #5a1d89;
+  /* background-color: #5a1d89; */
 }

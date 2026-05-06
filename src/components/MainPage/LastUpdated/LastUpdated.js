@@ -5,7 +5,7 @@ const LastUpdated = () => {
   return (
     <div className="last-updated-container">
       <p className="last-updated-text">
-        Last Updated: May 02 | 10:00 AM
+        Last Updated: May 06 | 02:00 AM
       </p>
     </div>
   );

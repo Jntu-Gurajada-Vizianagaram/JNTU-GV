@@ -227,8 +227,7 @@ function Footer() {
 
       <div className="mobilefooter text-left ">
         <p>Copyright © 2024 <a className="sublinksFooter " href="http://jntugv.edu.in"> <strong>JNTU-GV Vizianagaram</strong> </a>. All Rights Reserved.</p>
-        <p>Designed , Developed and Maintained by <a className="sublinksFooter " href="https://anilsinthu.vercel.app "><strong>Anil Sinthu</strong></a> &nbsp;
-          under the Department of <a className="sublinksFooter " href="https://dmc.jntugv.edu.in "><strong>Digital Monitoring Cell, JNTU-GV</strong></a>
+        <p>Designed , Developed and Maintained by <a className="sublinksFooter " href="https://dmc.jntugv.edu.in "><strong>Digital Monitoring Cell, JNTU-GV</strong></a>
         </p>
       </div>
     </div>

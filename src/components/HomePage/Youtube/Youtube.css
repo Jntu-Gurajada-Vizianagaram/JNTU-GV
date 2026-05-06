@@ -257,33 +257,72 @@
 }
 
 /* Show Less Button - Properly styled */
-.toggle-button-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 24px;
-  width: 100%;
-}
-
-.toggle-button-wrapper .MuiButton-root {
-  border: 2px solid #340468 !important;
-  color: #340468 !important;
-  background: transparent !important;
-  padding: 12px 32px !important;
-  border-radius: 30px !important;
+/* Floating View All Button - YouTube Red Theme */
+.youtube-floating-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%) !important;
+  color: #ffffff !important;
+  border-radius: 50px !important;
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  width: 220px;
+  height: 56px;
   font-weight: 600 !important;
+  font-size: 0.95rem !important;
   text-transform: none !important;
-  transition: all 0.3s ease !important;
+  padding: 0 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+  text-align: center !important;
 }
 
-.toggle-button-wrapper .MuiButton-root:hover {
-  background: rgba(52, 4, 104, 0.08) !important;
-  border-color: #2a0358 !important;
-  transform: translateY(-2px);
+.youtube-floating-button:hover {
+  transform: translateY(-6px) scale(1.05) !important;
+  box-shadow: 0 12px 35px rgba(255, 0, 0, 0.6) !important;
+  background: linear-gradient(135deg, #ff4444 0%, #ff0000 100%) !important;
 }
 
-.toggle-button-wrapper .MuiButton-root .MuiButton-icon {
-  color: #340468 !important;
+.youtube-floating-button .MuiSvgIcon-root {
+  font-size: 24px !important;
 }
+
+/* Larger Thumbnails */
+.video-card .thumbnail-wrapper,
+.video-card .CardMedia-root {
+  height: 280px !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .youtube-floating-button {
+    width: 180px;
+    height: 48px;
+    font-size: 0.85rem !important;
+    bottom: 20px;
+    right: 20px;
+    gap: 8px !important;
+  }
+  
+  .youtube-floating-button .MuiSvgIcon-root {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .youtube-floating-button {
+    width: 160px;
+    height: 44px;
+    font-size: 0.8rem !important;
+    gap: 6px !important;
+  }
+}
+
 
 /* Video Dialog */
 .video-dialog .MuiDialog-paper {

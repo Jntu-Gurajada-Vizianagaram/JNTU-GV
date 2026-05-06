@@ -10,8 +10,10 @@ const DirectoratesMain = () => {
         return "About JNTU-GV Directorates";
       case "/directorates/academic-audit-planning":
         return "Director of Academic Audit and Planning";
+      case "/directorates/admissions":
+        return "Director of  Admissions";
       case "/directorates/evaluation":
-        return "Director of Evaluation & Admissions";
+        return "Director of Evaluation";
       case "/directorates/research":
         return "Director of Research & Development";
       case "/directorates/placements":
@@ -20,8 +22,6 @@ const DirectoratesMain = () => {
         return "Director of Internal Quality Assurance Cell";
       case "/directorates/alumni-relations":
         return "Director of Alumni Relations";
-      case "/directorates/admissions":
-        return "Director of Admissions";
       case "/directorates/sports-administration":
         return "Director of University Games & Sports Administration";
       case "/directorates/faculty-development-cell":
@@ -49,11 +49,19 @@ const DirectoratesMain = () => {
           Director of Academic Audit and Planning
         </Link>
         <Link
+          to="admissions"
+          className={`dir-menu-button ${location.pathname === "/directorates/admissions" ? "active" : ""}`}
+        >
+          Director of Admissions
+        </Link>
+
+        <Link
           to="evaluation"
           className={`dir-menu-button ${location.pathname === "/directorates/evaluation" ? "active" : ""}`}
         >
-          Director of Evaluation & Admissions
+          Director of Evaluation
         </Link>
+        
         <Link
           to="research"
           className={`dir-menu-button ${location.pathname === "/directorates/research" ? "active" : ""}`}
@@ -78,12 +86,7 @@ const DirectoratesMain = () => {
         >
           Director of Alumni Relations
         </Link>
-        {/* <Link
-          to="admissions"
-          className={`dir-menu-button ${location.pathname === "/directorates/admissions" ? "active" : ""}`}
-        >
-          Director of Admissions
-        </Link> */}
+       
         {/* <Link
           to="faculty-development-cell"
           className={`dir-menu-button ${location.pathname === "/directorates/faculty-development-cell" ? "active" : ""}`}

@@ -1,86 +1,130 @@
 import React from "react";
-import da from "../../../../assets/AdminDirectoratesImages/da.jpg";
+// import da from "../../../../assets/AdminDirectoratesImages/da.jpg";
+import diqac from "../../../../assets/AdminDirectoratesImages/diqac.jpg";
 import { MdOutlineMailOutline } from "react-icons/md";
+import { useState } from "react";
+
+
 
 function Admissions() {
+
+  const [activeTab, setActiveTab] = useState("about");
   return (
     <div className="dir-profile-container">
       {/* Profile Header Block */}
       <div className="dir-profile-header">
         <div className="dir-profile-image">
-          <img src={da} alt="Dr. K. Babulu" />
+          <img src={diqac} alt="Dr. Shaik Kalesha Vali" />
         </div>
         <div className="dir-profile-info">
-          <h3>Dr. K. Babulu</h3>
-          <h4>Director of Admissions</h4>
-          <h4>Professor of Electronics and Communications Engineering</h4>
+          <h3>Dr. Shaik Kalesha Vali</h3>
+          <h4>Director of Admissions <sub>i/c</sub></h4>
+          <h4>Professor of Mathematics, Dept. of BS&HSS</h4>
           <p className="dir-profile-email">
             <MdOutlineMailOutline size="20px" /> da@jntugv.edu.in
           </p>
         </div>
       </div>
 
-      {/* Profile Details Block */}
-      <div className="dir-profile-details">
-        <p className="dir-sub-heading">Educational Qualifications:</p>
-        <p>❖ B.E from Andhra University with Electronics and Communication Engineering.</p>
-        <p>❖ M.Tech from REC, Warangal with Electronic Instrumentation.</p>
-        <p>❖ Ph.D from J.N.T. University, Anantapur in the area of VLSI & Embedded System Design.</p>
-
-        <p className="dir-sub-heading">Industrial Experience:</p>
-        <p>❖ “Engineer Trainee” in Vijaya Electronics Pvt.Ltd, Hyderabad for a period of 1 year and 6 months.</p>
-        <p>❖ “Instrumentation Engineer” in Andhra Paper Mills Ltd. Rajahmundry for a period of 6 Months.</p>
-
-        <p className="dir-sub-heading">Teaching Experience:</p>
-        <p>❖ “Lecturer in the Department of ECE”, at NBKR Institute of Science & Technology, Vidyanagar for a Period of 1 year.</p>
-        <p>❖ “Assistant Professor in the Department of ECE”, at NBKR Institute of Science & Technology, Vidyanagar for a period of 2 years and 6 months.</p>
-        <p>❖ “Associate Professor in the Department of ECE”, at NBKR Institute of Science & Technology, Vidyanagar for a period of 3 years.</p>
-        <p>❖ “Associate Professor in the Department of ECE”, at JNTU College of Engineering, Anantapur for a period of 4 years</p>
-        <p>❖ “Associate Professor in the Department of ECE”, at University College of Engineering, JNTUK, Kakinada for a period of 3 years and 5 months.</p>
-        <p>❖ “Professor in the Department of ECE”, at University College of Engineering, JNTUK, Kakinada for a period of 9 years and 11 months.</p>
-        <p>❖ “Professor in the Department of ECE”, at University College of Engineering, JNTUK, Vizianagaram for a period of 1 year and 3 months.</p>
-        <p>❖ Working as Professor at JNTU-GV College of Engineering (CEV) (A), Vizianagaram since January 2022.</p>
-
-        <p className="dir-sub-heading">Memberships:</p>
-        <p>❖ Life Member of ISTE.</p>
-        <p>❖ Fellow of IETE (F235351).</p>
-        <p>❖ Fellow of IE (F1184004).</p>
-
-        <p className="dir-sub-heading">Administrative Responsibilities:</p>
-        <p>❖ Director, Director Research & Development and Admissions (i/c), JNTU-GV, Vizianagaram.</p>
-        <p>❖ Director, Library Science & Entrepreneurs Development Centre, JNTUK, Kakinada.</p>
-        <p>❖ Controller of Examinations at JNTUK, Kakinada.</p>
-        <p>❖ BOS Chairman for ECE Department at JNTU-GV College of Engineering (CEV) (A) (Autonomous), JNTUK, Kakinada during 2014-2015.</p>
-        <p>❖ Head of ECE Department at JNTU-GV College of Engineering (CEV) (A), JNTUK, Kakinada.</p>
-        <p>❖ Procurement Nodal Officer for TEQIP-II at University College of Engineering, JNTUK, Kakinada.</p>
-        <p>❖ BOS Member for JNTUK, Kakinada, JNTUA, Anantapur and SVUCE, Tirupati.</p>
-        <p>❖ Taskforce Committee Member for Private Engineering Colleges in Ranga Reddy District, Andhra Pradesh.</p>
-        <p>❖ Additional controller of Examinations at JNTUK, Kakinada</p>
-        <p>❖ Convener and Member for Fact Finding Committees of JNTUA, Anatapur, JNTUK, Kakinada and JNTU-GV, Vizianagaram.</p>
-        <p>❖ In-Charge Head of ECE Department at JNTU College of Engineering, Anantapur.</p>
-        <p>❖ Staff Coordinator for IEEE Student branch at JNTU College of Engineering, Anantapur.</p>
-        <p>❖ Student Union Coordinator at JNTU College of Engineering, Anantapur.</p>
-        <p>❖ Executive Member for ISTE Student chapter at NBKR Institute of Science & Technology, Vidyanagar.</p>
-
-        <p className="dir-sub-heading">List of Publications:</p>
-        <p>❖ International Journals: 47.</p>
-        <p>❖ National Journals: 02</p>
-        <p>❖ International Conferences : 31</p>
-        <p>❖ National Conferences : 14</p>
-
-        <p className="dir-sub-heading">Ph.D s:</p>
-        <p>❖ Number of Ph.D s Awarded: 05.</p>
-        <p>❖ Number of Ph.D Scholars Pursing: 08.</p>
-
-        <p className="dir-sub-heading">Others:</p>
-        <p>❖ AWARDS: 05.</p>
-        <p>❖ SHORT TERM TRAINING PROGRAMS (STTP) ATTEND: 03.</p>
-        <p>❖ WORKSHOPS ATTENED: 11.</p>
-        <p>❖ REFRESHER COURSE/TRAINING PROGRAMMES ATTENED: 04.</p>
-        <p>❖ CONFERENCES/TRAINING PROGRAMMES/ WORKSHOPS CONDUCTED: 11.</p>
-        <p>❖ RESOURCE PERSON: 10.</p>
-        <p>❖ CHAIR PERSON: 01.</p>
+        {/* Internal Tabs */}
+      <div className="dir-tabs-container">
+        <button 
+          className={`dir-tab-button ${activeTab === "about" ? "active" : ""}`}
+          onClick={() => setActiveTab("about")}
+        >
+          About Directorate
+        </button>
+        <button 
+          className={`dir-tab-button ${activeTab === "profile" ? "active" : ""}`}
+          onClick={() => setActiveTab("profile")}
+        >
+          Director Profile
+        </button>
       </div>
+
+      {activeTab === "about" && (
+        <div className="dir-profile-details">
+          <p className="dir-sub-heading">Directorate of Admissions </p>
+            <p>
+              The Directorate of Admissions at JNTU-GV is responsible for managing the admission process for various undergraduate and postgraduate programs. Its core duties include:
+            </p>
+            <p>❖ Managing the online application process and ensuring a smooth admission experience for candidates.</p>
+            <p>❖ Conducting various entrance examinations and selection processes for different programs.</p>
+            <p>❖ Preparing and maintaining records of all admission-related activities and communications.</p>
+            <p>❖ Providing timely updates and information to prospective students and their families.</p>
+            <p>❖ Coordinating with other departments to ensure seamless integration of admitted students into the academic environment.</p>
+          </div>
+      )}
+
+      {/* Profile Details Block */}
+      {activeTab === "profile" && (
+        <div className="dir-profile-details">
+          <p>
+            Dr. S Kalesha Vali is currently working as professor of Mathematics in the department of BS&HSS at JNTU-GV College of Engineering (CEV) (A). Received his M.Sc., M.Phil., Ph. D degrees in Mathematics from Andhra University, Visakhapatnam. He is having 28 years of teaching and Research experience in reputed Engineering Colleges/Universities. He received Two medals and Two awards. Published more than 50 research papers in reputed Journals and published 2 Patents. Guided 5 Ph.Ds 2 M. Phils and guiding 12 Ph.Ds. Completed one funded research project and authored two textbooks.
+          </p>
+
+          <p className="dir-sub-heading">Teaching experience :</p>
+          <p>❖ Working as professor of Mathematics in the department of BS&HSS at JNTU-GV College of Engineering (CEV) (A)since June 2025.</p>
+          <p>❖ Worked as Professor of Mathematics at JNTUK UCEV, Vizianagaram/ JNTUK Kakinada/Andhra University, Visakhapatnam for 13 years.</p>
+          <p>❖ Worked as Associate Professor of Mathematics at GITAM University, Visakhapatnam for 5 years.</p>
+          <p>❖ Worked as Assistant Professor of Mathematics at GITAM University, Visakhapatnam / PVP Sidhartha Institute of Technology, Vijayawada for 8 years.</p>
+          <p>❖ Worked as Lecturer of Mathematics at Nimra College of Engineering and Technology, Vijayawada for 2 years.</p>
+
+          <p className="dir-sub-heading">Administration Contributions :</p>
+          <p>❖ Officer on Special duty (OSD)(i/c) to the Hon’ble Vice-Chancellor, JNTU-GV since July 2025.</p>
+          <p>❖ Director (i/c), IQAC, JNTU-GV since July 2025.</p>
+          <p>❖ Head, Department of BS&HSS, JNTUK JNTU-GV College of Engineering (CEV) (A), Vizianagaram for 6 years.</p>
+          <p>❖ Officer In-Charge, Library, JNTUK JNTU-GV College of Engineering (CEV) (A), Vizianagaram for 1 year.</p>
+          <p>❖ Convener, FFC visits to Engineering, MCA, Management and Pharmacy Colleges affiliated to JNTUK, JNTU-GV since 2013.</p>
+          <p>❖ Member, College Academic Committee and Departmental Committee, JNTUK JNTU-GV College of Engineering (CEV) (A), Vizianagaram for 10 years.</p>
+          <p>❖ Chief Coordinator, Spot Valuations, Andhra University, Visakhapatnam for 3 years.</p>
+          <p>❖ Nodal Officer, Examinations, Andhra University, Visakhapatnam for 1 year.</p>
+          <p>❖ Controller of Examinations, GITAM University, Visakhapatnam for 3 years.</p>
+          <p>❖ Addl. Controller of Examinations, GITAM University, Visakhapatnam for 1 year.</p>
+          <p>❖ Coordinator, GAT (GITAM Admission Test) admissions Counselling (online), GITAM University, Visakhapatnam for 2 years.</p>
+          <p>❖ Coordinator, Convocations, GITAM University, Visakhapatnam, first 3 Convocations.</p>
+          <p>❖ Head, Department of BS&HSS, PVP Sidhartha Institute of Technology, Vijayawada for 4 years.</p>
+          <p>❖ Head, Department of Mathematics, Nimra College of Engineering and Technology, Vijayawada for 2 years.</p>
+          <p>❖ Member, Expert Visit Committee to visit different Technical Institutions, AICTE, New Delhi.</p>
+          <p>❖ Member, Academic Affairs Committee, Discipline Committee, Departmental Committee, Proctorial Committee, Anti-Ragging Committee, Information Management (IMG) Committee, GITAM University, Visakhapatnam for 2 years.</p>
+
+          <p className="dir-sub-heading">Academic Contributions :</p>
+          <p>❖ Authored textbook ‘Engineering Mathematics-I’, Cengage Learning, 2018.</p>
+          <p>❖ Authored textbook ‘Differential equations and Vector Calculus’, Cengage Learning, 2025.</p>
+          <p>❖ One of the Reviewer of the Textbooks ‘Intermediate Mathematics’, IA, IB, IIA, IIB of Telugu & Sanskrit Academy of Andhra Pradesh during 2022–2024.</p>
+          <p>❖ Chairman, Board of Studies, BS&HSS, JNTUK JNTU-GV College of Engineering (CEV) (A), Vizianagaram for 3 years.</p>
+          <p>❖ Member, Research Review Committee, Department of BS&HSS(Mathematics) JNTU-GV since November 2024.</p>
+          <p>❖ Member, Research Review Committee, JNTUK Kakinada since 2013.</p>
+          <p>❖ Member, Board of Studies, JNTUK-Kakinada, JNTUA-Anantapur, Andhra University-Visakhapatnam, Dr. B R Ambedkar University-Srikakulam, UCEV-Vizianagaram, UCEK-Kakinada, GITAM University-Visakhapatnam and number of autonomous colleges in Andhra Pradesh.</p>
+
+          <p className="dir-sub-heading">Research Contributions :</p>
+          <p>❖ Areas of Research include Algebra, Lattice theory and Mathematical Modelling (Epidemic models).</p>
+          <p>❖ Awarded 5 Ph.Ds., 2 M.Phils.,  submitted 2 Ph.Ds., 12 Scholars are working for Ph. D at present.</p>
+          <p>❖ Published 2 patents.</p>
+          <p>❖ Published 52 papers in National/International journals, 12 papers presented in Conferences.</p>
+          <p>❖ Organised 01 Conference, 08 Workshops, attended workshops/Short term Courses/seminars 37, Chaired sessions 04 and delivered 06 talks.</p>
+          <p>❖ Visited Hong Kong to present a paper and deliver a talk in the International Conference in July 2016.</p>
+          <p>❖ Completed UGC funded research project of worth Rs 4.12 Lakhs.</p>
+          <p>❖ Consultancy carried out as technical team member for Greater Visakha Municipal Corporation (GVMC) at GITAM University, Visakhapatnam.</p>
+
+          <p className="dir-sub-heading">Professional Contributions :</p>
+          <p>❖ Life member, Andhra Pradesh Society for Mathematical Sciences (Regd. No. 1310/1986).</p>
+          <p>❖ Life member, Prof. Minakshi Sundaram Memorial Society (Regd. No. 103/2010).</p>
+          <p>❖ Served as Vice-President , Andhra Pradesh Society for Mathematical Sciences (Regd. No. 1310/1986) for 2 years.</p>
+
+          <p className="dir-sub-heading">Societal Contributions :</p>
+          <p>❖ Worked as Member / Treasurer , Moulana Abul Kamal Azaad Trust (Regd. No: 78/2003) for 20 years.</p>
+          <p>❖ Member, Islamic Centre (Regd.No.58/1969), Visakhapatnam since 2015.</p>
+          <p>❖ Served as President, Teachers Association, UCEV (Regd.No.153/2013) for one year.</p>
+
+          <p className="dir-sub-heading">Academic Achievements :</p>
+          <p>❖ Academic Excellence Award-2019 by MAKAT on National Education Day 2019.</p>
+          <p>❖ Conferred with SOMASS Award for proficiency in Mathematics at Post Graduation Studies.</p>
+          <p>❖ Secured Certificate of Merit and a Medal issued by ROTARY CLUB International Rajahmundry, for higher proficiency in Post Graduation Studies.</p>
+          <p>❖ Won B.R.M. Memorial Medal for proficiency in Mathematics at School level.</p>
+          <p>❖ College Topper at Degree and PG level.</p>
+        </div>
+      )}
     </div>
   );
 }

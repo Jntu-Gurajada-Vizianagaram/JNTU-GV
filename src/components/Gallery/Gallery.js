@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ImageModal from "../HomePage/NewsAndEvents/ImageModal";
 import "./Gallery.css";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -13,6 +13,8 @@ function Gallery() {
   const [selectedDescription, setSelectedDescription] = useState('');
   const [displayCount, setDisplayCount] = useState(12);
   const [totalCount, setTotalCount] = useState(0);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -96,7 +98,7 @@ function Gallery() {
             ))}
           </div>
 
-          {hasMore && (
+          {/* {hasMore && (
             <div className="gallery-actions">
               <button 
                 className="view-more-btn"
@@ -105,7 +107,7 @@ function Gallery() {
                 View More (+{images.length - displayCount} remaining)
               </button>
             </div>
-          )}
+          )} */}
         </>
       )}
 
@@ -116,9 +118,14 @@ function Gallery() {
         imageDescription={selectedDescription}
       />
 
-      <Link to="/gallery" className="show-all-link">
-        View Full Gallery
-      </Link>
+      <div className="gallery-actions">
+              <button 
+                className="view-more-btn"
+                onClick ={() => navigate("/gallery")}
+              >
+               view Complete Gallery
+              </button>
+            </div>
     </div>
   );
 }

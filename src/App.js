@@ -131,8 +131,8 @@ function App() {
           <Route path="/directorates" element={<DirectoratesMain />}>
             <Route index element={<AboutDirectorates />} />
             <Route path="about-directorates" element={<AboutDirectorates />} />
-            <Route path="academic-audit" element={<AcademicAudit />} />{" "}
-            <Route path="academic-planning" element={<AcademicPlanning />} />
+            {/* <Route path="academic-audit" element={<AcademicAudit />} />{" "}
+            <Route path="academic-planning" element={<AcademicPlanning />} /> */}
             <Route path="academic-audit-planning" element={<AcademicAuditPlanning />} />
             <Route path="admissions" element={<Admissions />} />
             <Route path="alumni-relations" element={<AlumniRelations />} />{" "}
@@ -166,6 +166,7 @@ function App() {
           <Route path="/grievance-form" element={<Grievance />} />
           <Route path="/news-and-events" element={<NewsAndEvents />} />
           <Route path="/gallery" element={<CompleteGallery />} />
+          <Route path="/events" element={<CompleteGallery />} />
 
           <Route path="/events/republic-day" element={<RepublicDay />} />
           <Route path="/events/inauguration-event" element={<Inauguration />} />

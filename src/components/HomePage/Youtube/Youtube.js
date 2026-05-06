@@ -15,6 +15,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import CloseIcon from '@mui/icons-material/Close';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import { Link } from 'react-router-dom';
 import './Youtube.css';
 
 // Videos ordered by latest first (2025 → 2024)
@@ -184,19 +185,12 @@ const YouTubeCarousel = () => {
         ))}
       </Grid>
 
-      {/* Show Less Button (only visible when all videos are shown) */}
-      {showAll && videos.length > 3 && (
-        <div className="toggle-button-wrapper">
-          <Button 
-            variant="outlined" 
-            className="show-less-button"
-            onClick={toggleShowAll}
-            startIcon={<ExpandLessIcon />}
-          >
-            Show Less
-          </Button>
-        </div>
-      )}
+{/* Floating View All Button - Always visible in bottom right */}
+      <Link to="/youtube-full" className="youtube-floating-button">
+        <YouTubeIcon />
+        View All Videos ({videos.length})
+      </Link>
+
 
       {/* Video Dialog */}
       <Dialog 

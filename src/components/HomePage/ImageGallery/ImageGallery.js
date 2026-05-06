@@ -123,12 +123,12 @@ function ImageGallery() {
         )}
       </Box>
       
-      {/* Link to full gallery */}
+      {/* Link to full gallery
       <Link to="/gallery" className="gallery-link">
         <PhotoLibraryIcon className="gallery-link-icon" />
         <span>View Full Gallery</span>
         <ArrowForwardIcon className="arrow-icon" />
-      </Link>
+      </Link> */}
     </Box>
   );
 }
