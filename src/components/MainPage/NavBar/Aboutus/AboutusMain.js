@@ -32,6 +32,14 @@ const AboutusMain = () => {
         >
           Mission
         </Link>
+        <Link
+          to="about-vizianagaram"
+          className={`menuButton ${
+            location.pathname === "/about-us/about-vizianagaram" ? "active" : ""
+          }`}
+        >
+          About Vizianagaram
+        </Link>
       </div>
       <br></br>
       <Outlet />

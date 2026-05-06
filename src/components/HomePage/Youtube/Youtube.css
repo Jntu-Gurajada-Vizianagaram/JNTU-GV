@@ -6,6 +6,24 @@
   margin: 20px 0;
 }
 
+/* Make Youtube full page width like home section */
+.youtube-full-container {
+  width: 100%;
+}
+
+.youtube-full-width {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  border-radius: 16px;
+}
+
+.youtube-full-title {
+  font-weight: 800 !important;
+  color: #340468 !important;
+}
+
+
 /* Header Styling - Two columns: Logo+Title Center | Button Right */
 .youtube-header {
   display: flex;

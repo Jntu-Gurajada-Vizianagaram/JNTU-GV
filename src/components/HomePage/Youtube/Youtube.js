@@ -12,10 +12,9 @@ import {
   IconButton
 } from '@mui/material';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+// import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import CloseIcon from '@mui/icons-material/Close';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import { Link } from 'react-router-dom';
 import './Youtube.css';
 
 // Videos ordered by latest first (2025 → 2024)
@@ -84,22 +83,22 @@ const YouTubeCarousel = () => {
     setActiveVideo(null);
   };
 
-  const handleViewAllClick = () => {
-    if (!showAll) {
-      setShowAll(true);
-      // Scroll to videos section
-      setTimeout(() => {
-        document.getElementById('youtube-videos-section')?.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }, 100);
-    }
-  };
+  // const handleViewAllClick = () => {
+  //   if (!showAll) {
+  //     setShowAll(true);
+  //     // Scroll to videos section
+  //     setTimeout(() => {
+  //       document.getElementById('youtube-videos-section')?.scrollIntoView({ 
+  //         behavior: 'smooth',
+  //         block: 'start'
+  //       });
+  //     }, 100);
+  //   }
+  // };
 
-  const toggleShowAll = () => {
-    setShowAll(!showAll);
-  };
+  // const toggleShowAll = () => {
+  //   setShowAll(!showAll);
+  // };
 
   return (
     <Box className="youtube-section">
@@ -123,9 +122,10 @@ const YouTubeCarousel = () => {
             <div className="view-all-button">
               <Button 
                 variant="contained" 
-                onClick={handleViewAllClick}
+                onClick={() => window.location.href = '/youtube-full'}
                 startIcon={<YouTubeIcon />}
               >
+
                 View All ({videos.length})
               </Button>
             </div>

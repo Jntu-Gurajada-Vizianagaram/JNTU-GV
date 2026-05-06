@@ -90,7 +90,7 @@ const NotFound = React.lazy(() => import("./components/MainPage/NotFound/NotFoun
 const MandatoryDisclosures = React.lazy(() => import("./components/MainPage/NavBar/MandatoryDisclosures/MandatoryDisclosures"));
 const Coordinators = React.lazy(() => import("./components/MainPage/NavBar/Administration/Coordinators"));
 // const PrivacyPolicy = React.lazy(() => import("./components/MainPage/Footer/PrivacyPolicy"));
-const gallery= React.lazy(() => import("./components/Gallery/CompleteGallery"));
+const YoutubeFull = React.lazy(() => import("./components/HomePage/Youtube/YoutubeFull"));
 
 function App() {
   return (
@@ -108,6 +108,7 @@ function App() {
             <Route path="about-jntugv" element={<AboutJNTUGV id="about-jntugv" />} />
             <Route path="vision" element={<AboutJNTUGV id="vision" />} />
             <Route path="mission" element={<AboutJNTUGV id="mission" />} />
+            <Route path="about-vizianagaram" element={<AboutJNTUGV id="about-vizianagaram" />} />
           </Route>
           <Route path="/academics" element={<AcademicsMain />}>
             <Route
@@ -168,6 +169,7 @@ function App() {
           <Route path="/grievance-form" element={<Grievance />} />
           <Route path="/news-and-events" element={<NewsAndEvents />} />
           <Route path="/gallery" element={<CompleteGallery />} />
+          <Route path="/youtube-full" element={<YoutubeFull />} />
 
 
           <Route path="/events/republic-day" element={<RepublicDay />} />

@@ -2,9 +2,9 @@
 import React from "react";
 import "./Aboutus.css";
 import data from "./About.json";
-import Typography from "@mui/material/Typography";
 
 function AboutJNTUGV({ id }) {
+
   const section = data.sections.find((sec) => sec.id === id);
 
   if (!section) {
@@ -12,19 +12,27 @@ function AboutJNTUGV({ id }) {
   }
 
   return (
-    <div className="ABOUTmainContainer">
+    <section className="ABOUTmainContainer" aria-labelledby="about-section-title">
       <div className="allRightContent">
-        <div className="allRightContentHeading">{section.title}</div>
-        <div className="allRight-ContentProfile">
-          {section.content.map((item, index) => (
-            <Typography key={index}>
-              ❖ {item} <br /><br />
-            </Typography>
-          ))}
+        <h2 id="about-section-title" className="allRightContentHeading">
+          {section.title}
+        </h2>
+
+        <div className="allRight-ContentProfile" role="list">
+          <ul className="about-contentList">
+            {section.content.map((item, index) => (
+              <li key={index} className="about-contentListItem">
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
+
+
 export default AboutJNTUGV;
+

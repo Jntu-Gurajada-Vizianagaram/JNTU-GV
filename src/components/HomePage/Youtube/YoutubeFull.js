@@ -70,27 +70,34 @@ const videos = [
 function YoutubeFull() {
   return (
     <Box className="youtube-full-container">
-      <AppBar position="static" className="youtube-appbar">
-        <Toolbar>
-          <Link to="/" style={{ color: 'inherit', textDecoration: 'none', marginRight: 'auto' }}>
-            <Button startIcon={<ArrowBackIcon />}>
-              Back to Home
-            </Button>
-          </Link>
-          <Typography variant="h6" className="youtube-appbar-title">
-            <YouTubeIcon className="youtube-header-icon" />
-            JNTUGV Videos
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <Box className="youtube-section youtube-full-width">
+        <Box className="youtube-header">
+          <div className="youtube-center-wrapper">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+              alt="YouTube"
+              className="youtube-logo"
+            />
+            <Typography variant="h5" className="youtube-title">
+              Complete Video Gallery
+            </Typography>
+          </div>
 
-      <Container maxWidth="lg">
-        <Typography variant="h4" className="youtube-full-title" sx={{ mt: 4, mb: 3 }}>
-          Complete Video Gallery ({videos.length} Videos)
-        </Typography>
+          <div className="youtube-button-wrapper">
+            <Link
+              to="/"
+              className="view-all-button"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <Button variant="contained" startIcon={<ArrowBackIcon />}>
+                Back to Home
+              </Button>
+            </Link>
+          </div>
+        </Box>
 
-        <Grid container spacing={3}>
-          {videos.map((video, index) => (
+        <Grid container spacing={3} className="video-grid" sx={{ mb: 2 }}>
+          {videos.map((video) => (
             <Grid item xs={12} sm={6} md={4} lg={3} key={video.id}>
               <Card className="video-card video-card-full" sx={{ height: '100%' }}>
                 <div className="thumbnail-wrapper">
@@ -110,16 +117,16 @@ function YoutubeFull() {
                     <YouTubeIcon />
                   </div>
                 </div>
-                
+
                 <CardContent className="video-content">
                   <Typography variant="h6" className="video-title">
                     {video.title}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Click to watch on YouTube
+                  <Typography variant="body2" className="video-description" color="text.secondary">
+                    Watch on YouTube
                   </Typography>
                 </CardContent>
-                
+
                 <Button
                   component="a"
                   href={`https://www.youtube.com/watch?v=${video.id}`}
@@ -135,10 +142,11 @@ function YoutubeFull() {
             </Grid>
           ))}
         </Grid>
-      </Container>
+      </Box>
     </Box>
   );
 }
+
 
 export default YoutubeFull;
 
