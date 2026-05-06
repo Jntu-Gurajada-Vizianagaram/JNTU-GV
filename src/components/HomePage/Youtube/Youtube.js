@@ -185,12 +185,6 @@ const YouTubeCarousel = () => {
         ))}
       </Grid>
 
-{/* Floating View All Button - Always visible in bottom right */}
-      <Link to="/youtube-full" className="youtube-floating-button">
-        <YouTubeIcon />
-        View All Videos ({videos.length})
-      </Link>
-
 
       {/* Video Dialog */}
       <Dialog 
