@@ -51,7 +51,7 @@ function Evaluation() {
           <p>❖ Redressal of students' grievances related to examinations and evaluations.</p>
           <p className="dir-sub-heading">Current Status</p>
           <p>
-            The Director of Evaluations has been relieved. All information related to the Directorate of Evaluation is currently handled by the Registrar.
+           All information related to the Directorate of Evaluation is currently handled by the Registrar.
           </p>
 
 
