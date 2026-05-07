@@ -102,8 +102,8 @@ function ImageGallery() {
                     className="ig-image"
                     src={image.imglink}
                     alt={image.title !== "NA" ? image.title : image.description}
-                    width="1200"
-                    height="400"
+                    width="1100"
+                    height="450"
                     {...(index === 0
                       ? { fetchpriority: "high" }
                       : { loading: "lazy" }

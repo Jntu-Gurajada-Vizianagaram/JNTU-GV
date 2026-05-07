@@ -116,10 +116,16 @@ button:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  /* Allow items to wrap on medium screens */
+  flex-wrap: nowrap;
+  /* Keep all top-level items in a single row on laptop/desktop */
   width: auto;
 }
+
+/* Prevent nav labels from breaking into multiple lines */
+.topnav a {
+  white-space: nowrap;
+}
+
 
 @media screen and (max-width: 1010px) {
   .menu-icon {

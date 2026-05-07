@@ -28,24 +28,27 @@
 
 .mainImageGallery {
   background-color: transparent;
-  width: 100%;
-  max-width: 55vw;
-  margin: 0 auto;
+  flex: 1 1 auto;
+  width: auto;
+  max-width: 65vw;
+  margin: 0;
   position: relative;
 }
 
+
 /* Left Section */
 .leftDivGallery {
-  width: 100%;
-  max-width: 35vw;
+  flex: 0 0 35%;
+  max-width: 35%;
+  width: auto;
   height: auto;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin: 0;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 
 .typing-container {
   margin-bottom: 1rem;
@@ -107,18 +110,19 @@
 
 /* Main Container */
 .mainDivIG {
-  flex-direction: row;
   height: auto;
   min-height: 85vh;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  gap: 2rem;
   background: linear-gradient(90deg, #ffffff 0%, #f8f9fa 50%, #340468 100%);
   padding: 2rem;
   position: relative;
 }
+
 
 /* Carousel Item Wrapper */
 .carousel-item-wrapper {
@@ -132,7 +136,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 120px;
+  height: 100px;
   background: linear-gradient(to top, rgba(52, 4, 104, 0.6), transparent);
   pointer-events: none;
 }
@@ -194,21 +198,21 @@
 /* Responsive */
 @media screen and (max-width: 1200px) {
   .mainDivIG {
-    flex-direction: column;
-    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 50%, #340468 100%);
+    flex-direction: row;
+    background: linear-gradient(90deg, #ffffff 0%, #f8f9fa 50%, #340468 100%);
     padding: 1.5rem;
+    gap: 1.25rem;
+    flex-wrap: nowrap;
   }
 
   .leftDivGallery {
-    max-width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    align-items: center;
+    flex: 0 0 38%;
+    max-width: 38%;
+    padding: 1rem;
   }
 
   .mainImageGallery {
-    max-width: 90%;
-    margin: 1.5rem auto;
+    max-width: 62%;
   }
 
   .typing-container h1 {
@@ -227,23 +231,32 @@
   }
 }
 
+
 @media screen and (max-width: 768px) {
   .mainDivIG {
     padding: 1rem;
+    gap: 1rem;
+    /* keep same row but prevent overlap/squeezing */
+    flex-wrap: nowrap;
   }
 
   .leftDivGallery {
-    max-width: 100%;
-    padding: 1rem;
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 0.75rem;
+    min-width: 0;
   }
 
   .mainImageGallery {
-    max-width: 100%;
+    flex: 1 1 auto;
+    max-width: 60%;
+    min-width: 0;
   }
 
   .typing-container h1 {
     font-size: 1.25rem;
   }
+
 
   .ig-image {
     height: 320px;
@@ -270,9 +283,26 @@
 }
 
 @media screen and (max-width: 480px) {
+  .mainDivIG {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  .leftDivGallery {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+
+  .mainImageGallery {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+
   .leftDivGallery h3 {
     font-size: 1.25rem;
   }
+
 
   .leftDivGallery p {
     font-size: 0.875rem;
