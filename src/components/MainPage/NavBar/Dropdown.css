@@ -61,7 +61,7 @@ button {
   background-color: #2e0669;
   box-shadow: 1px 7px 15px 2px rgba(0, 0, 0, 0.2);
   z-index: 5;
-  width: 200px;
+  width: 300px;
   transform: translateY(-10px);
   /* start slightly above */
   transition: opacity 1s ease, transform 1s ease, visibility 0.3s ease;
