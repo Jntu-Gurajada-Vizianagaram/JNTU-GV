@@ -125,10 +125,10 @@ const NavBar = () => {
       label: " EXAMINATIONS",
       path: "/examination",
       subItems: [
-        {
-          label: "Director of Evaluation",
-          path: "/examination/director",
-        },
+        // {
+        //   label: "Director of Evaluation",
+        //   path: "/examination/director",
+        // },
         {
           label: "Controller of Examinations",
           path: "/examination/controller",

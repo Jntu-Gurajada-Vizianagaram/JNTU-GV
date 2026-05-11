@@ -1,0 +1,153 @@
+.best-practices-container {
+  margin: 2rem 1rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.best-practices-heading {
+  color: #370a68;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.best-practices-heading::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #370a68, #6b46c1);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.best-practices-tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.best-practices-tab-button {
+  background-color: white;
+  color: #370a68;
+  padding: 12px 24px;
+  border: 2px solid #370a68;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(55, 10, 104, 0.1);
+}
+
+.best-practices-tab-button:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(55, 10, 104, 0.15);
+}
+
+.best-practices-tab-button.active {
+  background-color: #370a68;
+  color: white;
+  box-shadow: 0 4px 15px rgba(55, 10, 104, 0.3);
+}
+
+.best-practices-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.best-practices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.best-practice-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
+  border-left: 5px solid #370a68;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.best-practice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.best-practice-number {
+  background: #370a68;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(55, 10, 104, 0.3);
+}
+
+.best-practice-details {
+  flex: 1;
+}
+
+.best-practice-title {
+  color: #370a68;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.best-practice-description {
+  color: #555;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .best-practices-container {
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+  }
+
+  .best-practices-heading {
+    font-size: 2rem;
+  }
+
+  .best-practices-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .best-practice-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .best-practice-number {
+    align-self: center;
+  }
+}

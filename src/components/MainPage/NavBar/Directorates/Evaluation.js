@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import doe from "../../../../assets/AdminDirectoratesImages/da.jpg";
-import { MdOutlineMailOutline } from "react-icons/md";
+// import doe from "../../../../assets/AdminDirectoratesImages/da.jpg";
+// import { MdOutlineMailOutline } from "react-icons/md";
 
 function Evaluation() {
   const [activeTab, setActiveTab] = useState("about");
