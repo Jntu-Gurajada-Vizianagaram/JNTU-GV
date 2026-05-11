@@ -91,6 +91,7 @@ const MandatoryDisclosures = React.lazy(() => import("./components/MainPage/NavB
 const Coordinators = React.lazy(() => import("./components/MainPage/NavBar/Administration/Coordinators"));
 // const PrivacyPolicy = React.lazy(() => import("./components/MainPage/Footer/PrivacyPolicy"));
 const YoutubeFull = React.lazy(() => import("./components/HomePage/Youtube/YoutubeFull"));
+const BestPracticesPage = React.lazy(() => import("./components/HomePage/BestPractices/BestPractices"));
 
 function App() {
   return (
@@ -181,6 +182,7 @@ function App() {
           <Route path="/events/ityuktha-2k24" element={<Ityuktha />} />
 
           <Route path="/university/coordinators" element={<Coordinators />} />
+          <Route path="/university/best-practices" element={<BestPracticesPage />} />
           {/* <Route path="/university/bos-chairman" element={<Boschairman />} /> */}
 
 

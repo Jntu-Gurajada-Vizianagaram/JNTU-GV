@@ -13,7 +13,6 @@ import Youtube from "./Youtube/Youtube";
 import Portals from "./Portals/PortalsSection";
 import AnnouncementMobile from "./Announcements/MobileAnnouncement";
 import Colleges from "./ConstituentColleges/Colleges";
-import BestPractices from "./BestPractices/BestPractices";
 function Homepage() {
   return (
     <div>
@@ -21,7 +20,6 @@ function Homepage() {
       <ImageGallery />
       <AboutUs />
       <Colleges/>
-      {/* <BestPractices /> */}
       <UpdatePanel className="update-panel" />
       <Portals/>
       <NewsAndEvents />

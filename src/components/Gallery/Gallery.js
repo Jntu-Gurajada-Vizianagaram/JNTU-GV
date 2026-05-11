@@ -10,6 +10,7 @@ function Gallery() {
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedTitle, setSelectedTitle] = useState('');
   const [selectedDescription, setSelectedDescription] = useState('');
   const [displayCount, setDisplayCount] = useState(12);
   const [totalCount, setTotalCount] = useState(0);
@@ -24,10 +25,15 @@ function Gallery() {
         
         setTotalCount(data.length);
         
-        const allImages = data.map(photo => ({
-          image: photo.imagelink,
-          description: photo.description,
-        }));
+        const allImages = data.map(photo => {
+          const rawDescription = photo.description || "";
+          const fallbackTitle = rawDescription.split(/\r?\n/)[0] || "";
+          return {
+            image: photo.imagelink,
+            title: photo.event_name || photo.title || fallbackTitle || "Gallery Image",
+            description: rawDescription,
+          };
+        });
         
         setImages(allImages);
       } catch (error) {
@@ -40,15 +46,17 @@ function Gallery() {
     fetchImages();
   }, []);
 
-  const handleShowModal = (image, description) => {
+  const handleShowModal = (image, title, description) => {
     setSelectedImage(image);
-    setSelectedDescription(description);
+    setSelectedTitle(title || '');
+    setSelectedDescription(description || '');
     setShowModal(true);
   };
 
   const handleCloseModal = () => {
     setShowModal(false);
     setSelectedImage(null);
+    setSelectedTitle('');
     setSelectedDescription('');
   };
 
@@ -80,19 +88,19 @@ function Gallery() {
               <div
                 key={index}
                 className="gallery-image-card"
-                onClick={() => handleShowModal(image.image, image.description)}
+                onClick={() => handleShowModal(image.image, image.title, image.description)}
               >
                 <div className="image-overlay">
                   <PhotoLibraryIcon className="view-icon" />
                 </div>
                 <img
                   src={image.image}
-                  alt={`JNTUGV ${image.description}`}
+                  alt={`JNTUGV - ${image.title || 'Gallery Image'}`}
                   className="gallery-image"
                   loading="lazy"
                 />
-                {image.description && (
-                  <div className="image-caption">{image.description}</div>
+                {image.title && (
+                  <div className="image-caption">{image.title}</div>
                 )}
               </div>
             ))}
@@ -115,6 +123,7 @@ function Gallery() {
         show={showModal}
         handleClose={handleCloseModal}
         imageSrc={selectedImage}
+        imageTitle={selectedTitle}
         imageDescription={selectedDescription}
       />
 
@@ -123,7 +132,7 @@ function Gallery() {
                 className="view-more-btn"
                 onClick ={() => navigate("/gallery")}
               >
-               view Complete Gallery
+               View Complete Gallery
               </button>
             </div>
     </div>

@@ -5,42 +5,42 @@ const websiteData = [
  
   {
     "id": 1,
-    "title": "Directorate of Academic Planning",
-    "image": "DAP.jpg",
-    "link": "https://dap.jntugv.edu.in/"
+    "title": "Directorate of Academic Audit & Planning",
+    "image": "DAAP.png",
+    "link": "https://daap.jntugv.edu.in/"
   },
+  // {
+  //   "id": 2,
+  //   "title": "Directorate of Academic Audit Cell",
+  //   "image": "DAA.jpg",
+  //   "link": "https://daa.jntugv.edu.in/"
+  // },
   {
     "id": 2,
-    "title": "Directorate of Academic Audit Cell",
-    "image": "DAA.jpg",
-    "link": "https://daa.jntugv.edu.in/"
-  },
-  {
-    "id": 3,
     "title": "JNTUGV Examination Results",
     "image": "RESULTS.jpg",
     "link": "https://exams.jntugv.edu.in/results"
   },
   {
-    "id": 4,
+    "id": 3,
     "title": "Directorate of Industrial Relations and Placements",
     "image": "DIRP.jpg",
     "link": "https://dirp.jntugv.edu.in/"
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "Directorate Research & Development",
     "image": "DRD.jpg",
     "link": "https://drnd.jntugv.edu.in/"
   },
   {
-    "id": 6,
+    "id": 5,
     "title": "Internal Quality Assurance Cell",
     "image": "IQAC.jpg",
     "link": "https://iqac.jntugv.edu.in/"
   },
   {
-    "id": 7,
+    "id": 6,
     "title": "National Service Scheme",
     "image": "NSS.jpg",
     "link": "https://nss.jntugv.edu.in/"
@@ -52,20 +52,23 @@ const websiteData = [
   //   "link": "https://placementcell.jntugv.edu.in/"
   // },
   {
-    "id": 9,
+    "id": 7,
     "title": "Digital Monitoring Cell",
     "image": "DMC.jpg",
     "link": "https://dmc.jntugv.edu.in/"
   },
- {
-"id" : 10,
-"title": "Certification Courses",
-'image': "Certification_courses.jpg",
-"link": "https://emergingtechnologiesbyjntugv.netlify.app/"
-
- },
-
-  
+  {
+    "id": 8,
+    "title": "Certification Courses",
+    "image": "Certification_courses.jpg",
+    "link": "https://emergingtechnologiesbyjntugv.netlify.app/"
+  },
+  {
+    "id": 9,
+    "title": "University Best Practices",
+    "image": "Best Practices.png",
+    "link": "/university/best-practices"
+  }
 ];
 
 const Portals = () => {

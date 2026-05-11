@@ -191,26 +191,29 @@ function CompleteGallery() {
               </Typography>
               <Grid container spacing={2}>
                 {allImages.map((imageObj, index) => (
-                  <Grid item xs={6} sm={4} md={3} lg={3} key={imageObj.id}>
+                      <Grid item xs={12} sm={6} md={6} lg={6} key={imageObj.id}>
+
                     <Card 
                       className="image-card"
-                      onClick={() => handleShowModal(imageObj.image, imageObj.description)}
+                      onClick={() => handleShowModal(imageObj.image, imageObj.title)}
                     >
                       <Box className="image-card-overlay">
                         <PhotoLibraryIcon className="zoom-icon" />
                       </Box>
                       <CardMedia
                         component="img"
-                        height="200"
+                        width="1200"
+                        height={100}
+
                         image={imageObj.image}
-                        alt={imageObj.description}
+                        alt={imageObj.event_name || imageObj.title || 'Gallery Image'}
                         className="grid-image"
                         loading="lazy"
                         style={{objectFit: 'cover'}}
                       />
                       <CardContent className="image-card-content">
                         <Typography variant="body2" className="image-description">
-                          {imageObj.description}
+                          {imageObj.event_name || imageObj.title || 'JNTUGV Gallery Photo'}
                         </Typography>
                       </CardContent>
                     </Card>
@@ -228,7 +231,8 @@ function CompleteGallery() {
               </Typography>
               <Grid container spacing={2}>
                 {carouselArchives.map((imageObj, index) => (
-                  <Grid item xs={6} sm={4} md={3} lg={3} key={imageObj.id}>
+                  <Grid item xs={6} sm={4} md={4} lg={4} key={imageObj.id}>
+
                     <Card 
                       className="image-card"
                       onClick={() => handleShowModal(imageObj.image, imageObj.image)}
