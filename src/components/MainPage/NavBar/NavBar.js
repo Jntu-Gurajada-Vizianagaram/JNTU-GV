@@ -92,8 +92,10 @@ const NavBar = () => {
           label: "Academic Audit and Planning",
           path: "/directorates/academic-audit-planning",
         },
-        { label: "Admissions",
-          path: "/directorates/admissions" },
+        {
+          label: "Admissions",
+          path: "/directorates/admissions"
+        },
         { label: "Evaluation", path: "/directorates/evaluation" },
         { label: "Research & Development", path: "/directorates/research" },
         {
@@ -175,10 +177,15 @@ const NavBar = () => {
       ],
     },
 
+    // {
+    //   icon: <WorkIcon />,
+    //   label: "JOB OPPORTUNITIES",
+    //   path: "https://uyopportunities.jntugv.edu.in/",
+    // },
     {
-      icon: <WorkIcon />,
-      label: "JOB OPPORTUNITIES",
-      path: "https://uyopportunities.jntugv.edu.in/",
+      icon: <DescriptionIcon />,
+      label: " RECRUITMENT",
+      path: "/recruitment",
     },
 
     {
@@ -213,6 +220,10 @@ const NavBar = () => {
           label: " Job Opportunities",
           path: "https://uyopportunities.jntugv.edu.in/",
         },
+        // {
+        //   label: " Recruitment",
+        //   path: "/recruitment",
+        // },
         {
           label: "MoUs",
           path: "https://mou.jntugv.edu.in",

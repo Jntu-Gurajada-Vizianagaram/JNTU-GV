@@ -101,6 +101,13 @@ const dropdownItems = [
       { label: "UGC Mandatory Disclosures", path: "/mandatory-disclosures" },
     ],
   },
+  {
+    label: "RECRUITMENT",
+    path: "/recruitment",
+    subItems: [
+      { label: "Latest Notifications", path: "/recruitment" },
+    ],
+  },
 ];
 
 const Sitemap = () => {

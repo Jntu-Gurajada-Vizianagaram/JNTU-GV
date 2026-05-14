@@ -1,0 +1,63 @@
+.recruitment-container-simple {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.recruitment-header-simple {
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid #370a68;
+  padding-bottom: 20px;
+}
+
+.recruitment-header-simple h1 {
+  color: #370a68;
+  font-weight: bold;
+}
+
+.recruitment-table-simple {
+  margin-bottom: 40px;
+}
+
+.recruitment-table-simple .MuiTableCell-head {
+  background-color: #370a68;
+  color: white;
+  font-weight: bold;
+}
+
+.badge-simple {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge-simple.active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.badge-simple.closed {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.recruitment-footer-info {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #370a68;
+}
+
+.recruitment-footer-info h6 {
+  color: #370a68;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .recruitment-container-simple {
+    margin: 20px auto;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./MobileAnnouncement.css";
 import newGif from "../../../assets/new.gif";
 
@@ -6,6 +7,26 @@ import newGif from "../../../assets/new.gif";
 // These will scroll continuously every day until manually removed
 // To add new static announcements, add objects to this array
 const staticAnnouncements = [
+  {
+    id: "static-0",
+    date: "2026-05-15",
+    title: "JNTU-GV Annoucement: Recruitment Notification 2026 for Professor, Associate Professor, Assistant Professor positions were released. Click here to view details. -- ప్రకటన: 2026 సంవత్సరానికి ప్రొఫెసర్, అసోసియేట్ ప్రొఫెసర్, అసిస్టెంట్ ప్రొఫెసర్ ఉద్యోగాల నియామక ప్రకటన విడుదల చేయబడింది. పూర్తి వివరాల కోసం ఇక్కడ క్లిక్ చేయండి.",
+    file_path: "",
+    external_text: "View Recruitment Details",
+    external_link: "https://jntugv.edu.in/recruitment-notification-2026/",
+    main_page: "yes",
+    scrolling: "yes",
+    update_type: "recruitment",
+    update_status: "update",
+    submitted_by: "admin",
+    admin_approval: "accepted",
+    file_link: "",
+    day: 15,
+    month: "May",
+    year: 2026,
+    isStatic: true, // Mark as static for identification
+
+  },
   {
     id: "static-1",
     date: "2026-04-25",
@@ -27,27 +48,27 @@ const staticAnnouncements = [
   },
 
   {
-"id": "static-2",
-"date": "2026-04-17",
-"title": "Registrar - JNTUGV - Request for Sponsorship of Gold Medals for First Convocation - Reg",
-"file_path": "JNTUGV - Request for Sponsorship of Gold Medals_ Cash Awards  for First Convocation.pdf",
-"external_text": "Click here to record Sponsorship",
-"external_link": "https://forms.gle/L8R51nXrUNar1aUS7",
-"main_page": "yes",
-"scrolling": "yes",
-"update_type": "circular",
-"update_status": "update",
-"submitted_by": "admin",
-"admin_approval": "accepted",
-"file_link": "https://api.jntugv.edu.in/media/JNTUGV - Request for Sponsorship of Gold Medals_ Cash Awards  for First Convocation.pdf",
-"day": 17,
-"month": "Apr",
-"year": 2026,
-"isStatic": true, // Mark as static for identification
-},
+    "id": "static-2",
+    "date": "2026-04-17",
+    "title": "Registrar - JNTUGV - Request for Sponsorship of Gold Medals for First Convocation - Reg",
+    "file_path": "JNTUGV - Request for Sponsorship of Gold Medals_ Cash Awards  for First Convocation.pdf",
+    "external_text": "Click here to record Sponsorship",
+    "external_link": "https://forms.gle/L8R51nXrUNar1aUS7",
+    "main_page": "yes",
+    "scrolling": "yes",
+    "update_type": "circular",
+    "update_status": "update",
+    "submitted_by": "admin",
+    "admin_approval": "accepted",
+    "file_link": "https://api.jntugv.edu.in/media/JNTUGV - Request for Sponsorship of Gold Medals_ Cash Awards  for First Convocation.pdf",
+    "day": 17,
+    "month": "Apr",
+    "year": 2026,
+    "isStatic": true, // Mark as static for identification
+  },
 
 
-// Add more static announcements here by copying the structure above
+  // Add more static announcements here by copying the structure above
 ];
 
 // ✅ Function to expand notifications with both file and external links into two separate notifications
@@ -170,6 +191,7 @@ const isExpired = (note) => {
 
 const AnnouncementMobile = () => {
   const [notifications, setNotifications] = useState([]);
+  const navigate = useNavigate();
 
   // ✅ Function to calculate days difference
   const daysAgo = (day, month, year) => {
@@ -198,12 +220,12 @@ const AnnouncementMobile = () => {
       <div
         className="ticker-container"
         onMouseEnter={(e) =>
-          (e.currentTarget.querySelector(".ticker-content").style.animationPlayState =
-            "paused")
+        (e.currentTarget.querySelector(".ticker-content").style.animationPlayState =
+          "paused")
         }
         onMouseLeave={(e) =>
-          (e.currentTarget.querySelector(".ticker-content").style.animationPlayState =
-            "running")
+        (e.currentTarget.querySelector(".ticker-content").style.animationPlayState =
+          "running")
         }
       >
         <div className="ticker-content">
@@ -214,11 +236,17 @@ const AnnouncementMobile = () => {
             return (
               <a
                 key={index}
-                href={linkHref}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={note.update_type === "recruitment" || note.update_type === "recruitments" ? "/recruitment" : linkHref}
+                target={note.update_type === "recruitment" || note.update_type === "recruitments" ? "_self" : "_blank"}
+                rel={note.update_type === "recruitment" || note.update_type === "recruitments" ? "" : "noopener noreferrer"}
                 className={`ticker-item ${note.isStatic ? "" : ""}`}
                 title={note.isStatic ? "Static Announcement (Daily Scroll)" : ""}
+                onClick={(e) => {
+                  if (note.update_type === "recruitment" || note.update_type === "recruitments") {
+                    e.preventDefault();
+                    navigate("/recruitment");
+                  }
+                }}
               >
                 {note.isStatic ? "📌" : "🔔"} {note.title}
                 {expirationText && (

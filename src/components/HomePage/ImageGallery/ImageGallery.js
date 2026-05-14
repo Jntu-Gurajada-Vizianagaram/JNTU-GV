@@ -70,7 +70,7 @@ function ImageGallery() {
   return (
     <Box className="mainDivIG">
       <Box className="leftDivGallery">
-        <TypingEffect text="Welcome to JNTU Gurajada, Vizianagaram" speed={100} />
+        <TypingEffect text="Welcome to JNTU Gurajada, Vizianagaram" speed={200} />
         <Typography variant="body1" className="gallery-description">
           At JNTU Gurajada, Vizianagaram, we are dedicated to sculpting minds through innovative teaching, cutting-edge research, and a vibrant community engagement. Our mission is to empower students with a thirst for knowledge that transcends borders.
         </Typography>
@@ -78,8 +78,8 @@ function ImageGallery() {
           Located across six districts, offering diverse programs in Engineering, Pharmacy, and Management. With a rich history JNTU-GV stands as a beacon of academic excellence and community synergy.
         </Typography>
         <Link to="/about-us/about-jntugv">
-          <Button 
-            variant="contained" 
+          <Button
+            variant="contained"
             className="view-more-btn"
             endIcon={<ArrowForwardIcon />}
           >
@@ -94,7 +94,7 @@ function ImageGallery() {
             <Spinner animation="grow" variant="primary" role="status" />
           </Box>
         ) : (
-          <Carousel fade interval={4000} className="image-carousel">
+          <Carousel slide={false} interval={4000} className="image-carousel">
             {images.map((image, index) => (
               <Carousel.Item key={index}>
                 <Box className="carousel-item-wrapper">
@@ -122,7 +122,7 @@ function ImageGallery() {
           </Carousel>
         )}
       </Box>
-      
+
       {/* Link to full gallery
       <Link to="/gallery" className="gallery-link">
         <PhotoLibraryIcon className="gallery-link-icon" />

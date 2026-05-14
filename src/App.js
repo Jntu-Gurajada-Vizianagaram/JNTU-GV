@@ -92,6 +92,7 @@ const Coordinators = React.lazy(() => import("./components/MainPage/NavBar/Admin
 // const PrivacyPolicy = React.lazy(() => import("./components/MainPage/Footer/PrivacyPolicy"));
 const YoutubeFull = React.lazy(() => import("./components/HomePage/Youtube/YoutubeFull"));
 const BestPracticesPage = React.lazy(() => import("./components/HomePage/BestPractices/BestPractices"));
+const Recruitment = React.lazy(() => import("./components/MainPage/NavBar/Recruitment/Recruitment"));
 
 function App() {
   return (
@@ -167,6 +168,7 @@ function App() {
           <Route path="/anti-ragging" element={<Antiragging />} />
 
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/recruitment" element={<Recruitment />} />
           <Route path="/grievance-form" element={<Grievance />} />
           <Route path="/news-and-events" element={<NewsAndEvents />} />
           <Route path="/gallery" element={<CompleteGallery />} />
