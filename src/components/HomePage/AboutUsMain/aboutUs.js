@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import "./aboutUs.css";
 
 import chancellor from "../../../assets/AdminDirectoratesImages/chancellor.jpeg";
-// import registrar from "../../../assets/AdminDirectoratesImages/registrar.jpeg";
 import registrar from "../../../assets/AdminDirectoratesImages/registrar_new.jpeg";
 import vc from "../../../assets/AdminDirectoratesImages/vc.png";
 
@@ -24,8 +25,6 @@ const AboutUs = () => {
       image: vc,
       link: "administration/vice-chancellor"
     },
-
-
     {
       id: 3,
       name: "Prof. D. Rajya Lakshmi",
@@ -37,36 +36,64 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="aboutUs">
-      <h2 className="about-heading">Administration</h2>
-      <div className="administration-grid">
-        {administrationData.map((person) => (
-          <Link
-            to={person.link}
-            className="more-link"
-            key={person.id}
-          >
-            <div className="aboutUs-card">
-              <div className="aboutUs-image-container">
-                <img
-                  src={person.image}
-                  alt={person.name}
-                  className="aboutUs-image"
-                  loading="lazy"
-                />
+    <section className="executive-board-section">
+      <div className="board-container">
+        
+        {/* Full Width Top Editorial Panel */}
+        <div className="board-editorial-panel-top">
+          <div className="editorial-icon-badge">
+            <AccountBalanceIcon />
+          </div>
+          <span className="editorial-tag">Governance</span>
+          <h2 className="editorial-title">University Leadership</h2>
+          <p className="editorial-lead">
+            Guided by distinguished administrators, academic visionaries, and leaders driving excellence in technological education.
+          </p>
+          <div className="editorial-decorative-line"></div>
+        </div>
+
+        {/* Unified 3-Column Profile Track Layout */}
+        <div className="board-showcase-row-grid">
+          {administrationData.map((person) => (
+            <Link
+              to={person.link}
+              className="board-member-anchor"
+              key={person.id}
+            >
+              <div className="board-member-showcase">
+                
+                {/* Image Wrapper Frame with Ambient Background Block */}
+                <div className="member-image-frame">
+                  <div className="member-bg-block"></div>
+                  <img
+                    src={person.image}
+                    alt={person.name}
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Typography and Meta Info Blocks */}
+                <div className="member-profile-details">
+                  <span className="member-role-label">{person.role}</span>
+                  <h3 className="member-fullname">{person.name}</h3>
+                  {person.designation && (
+                    <p className="member-credentials">{person.designation}</p>
+                  )}
+                  
+                  {/* Modern Underline Action Trigger */}
+                  <div className="member-action-trigger">
+                    <span>View Profile</span>
+                    <ArrowForwardIcon className="arrow-transition-svg" />
+                  </div>
+                </div>
+
               </div>
-              <div className="aboutUs-content">
-                <p className="aboutUs-name">{person.name}</p>
-                {person.designation ? (
-                  <p className="aboutUs-designation">{person.designation}</p>
-                ) : <br></br>}
-                <p className="aboutUs-designation highlight">{person.role}</p>
-              </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 

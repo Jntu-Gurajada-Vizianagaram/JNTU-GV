@@ -1,235 +1,234 @@
-.aboutUs {
-  background: linear-gradient(135deg, #370b69 0%, #2a0850 100%);
-  padding: 2rem 0;
-  position: relative;
-  overflow: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
+
+:root {
+  --univ-purple: #340468;
+  --univ-accent-cyan: #55b2e7;
+  --univ-dark-slate: #1a1224;
+  --univ-soft-muted: #6c6278;
+  --univ-bg-light: #fbf9fe;
+  --bezier-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.aboutUs::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.03"><polygon fill="%23ffffff" points="0,1000 1000,0 1000,1000"/></svg>');
-  background-size: cover;
+.executive-board-section {
+  background: linear-gradient(180deg, #ffffff 0%, var(--univ-bg-light) 100%);
+  padding: 90px 40px;
+  font-family: "Inter", sans-serif;
 }
 
-.about-heading {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 3rem;
-  position: relative;
-  text-align: center;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.about-heading::after {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, #55b2e7, #6ecbf5);
-  margin: 15px auto 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(85, 178, 231, 0.4);
-}
-
-/* Card Container */
-.administration-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
+.board-container {
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
 
-/* Card Styles */
-.aboutUs-card {
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-  border-radius: 20px;
-  padding: 2rem 1.5rem;
+/* --- Top Editorial Row Styling --- */
+.board-editorial-panel-top {
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.aboutUs-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+.editorial-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background: rgba(52, 4, 104, 0.05);
+  color: var(--univ-purple);
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.editorial-icon-badge svg {
+  font-size: 1.6rem;
+}
+
+.editorial-tag {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--univ-accent-cyan);
+  margin-bottom: 8px;
+}
+
+.editorial-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--univ-purple);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px 0;
+}
+
+.editorial-lead {
+  color: var(--univ-soft-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.editorial-decorative-line {
+  width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #55b2e7, #370b69);
+  background: var(--univ-purple);
+  border-radius: 2px;
+  margin: 0 auto;
 }
 
-.aboutUs-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 40px rgba(55, 11, 105, 0.3);
+/* --- Clean 3-Column Profile Grid Track --- */
+.board-showcase-row-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Forms exactly 3 even tracks across 1 single row */
+  gap: 40px;
 }
 
-.aboutUs-card:active {
-  transform: translateY(-8px);
+.board-member-anchor {
+  text-decoration: none !important;
+  display: block;
+  height: 100%;
 }
 
-/* Image Styles */
-.aboutUs-image-container {
+.board-member-showcase {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  height: 100%;
   position: relative;
-  margin-bottom: 1.5rem;
+  transition: var(--bezier-smooth);
 }
 
-.aboutUs-image {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
+/* --- Profile Frame Core Styles --- */
+.member-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3.8; /* Adjusted frame for clean alignment in a 3-column setup */
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.member-bg-block {
+  position: absolute;
+  inset: 0;
+  background: var(--univ-purple);
+  opacity: 0.03;
+  border-radius: 16px;
+  transition: var(--bezier-smooth);
+  z-index: 1;
+}
+
+.member-image-frame img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: 4px solid #370b69;
-  box-shadow: 0 8px 20px rgba(55, 11, 105, 0.3);
-  transition: all 0.3s ease;
-  background: white;
-}
-
-.aboutUs-card:hover .aboutUs-image {
-  transform: scale(1.05);
-  border-color: #55b2e7;
-  box-shadow: 0 12px 25px rgba(85, 178, 231, 0.4);
-}
-
-/* Content Styles */
-.aboutUs-content {
+  filter: grayscale(15%);
   position: relative;
   z-index: 2;
+  transition: var(--bezier-smooth);
 }
 
-.aboutUs-name {
-  color: #370b69;
-  font-family: "Poppins", sans-serif;
+/* --- Details Content Space --- */
+.member-profile-details {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 4px;
+}
+
+.member-role-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--univ-accent-cyan);
+  margin-bottom: 6px;
+  transition: var(--bezier-smooth);
+}
+
+.member-fullname {
+  color: var(--univ-dark-slate);
+  font-family: "Inter", sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
+  margin: 0 0 6px 0;
+  line-height: 1.35;
+}
+
+.member-credentials {
+  color: var(--univ-soft-muted);
+  font-size: 0.9rem;
   line-height: 1.4;
-  margin-bottom: 0.5rem;
-  text-align: center;
+  margin: 0 0 16px 0;
 }
 
-.aboutUs-designation {
-  color: #555;
-  font-family: "Poppins", sans-serif;
-  font-size: 0.95rem;
-  font-weight: 500;
-  line-height: 1.5;
-  margin-bottom: 0.25rem;
-  text-align: center;
+/* --- Custom Action Triggers --- */
+.member-action-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
 }
 
-.aboutUs-designation.highlight {
-  color: #55b2e7;
-  font-weight: 600;
-  font-size: 1rem;
+.member-action-trigger span {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--univ-purple);
+  position: relative;
 }
 
-/* Link Styles */
-.more-link {
-  text-decoration: none;
-  display: block;
-  transition: all 0.3s ease;
+.member-action-trigger span::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--univ-purple);
+  transition: var(--bezier-smooth);
 }
 
-.more-link:hover {
-  text-decoration: none;
+.member-action-trigger .arrow-transition-svg {
+  font-size: 1.1rem;
+  color: var(--univ-purple);
+  transition: var(--bezier-smooth);
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .administration-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-  }
+/* --- Hover System Actions --- */
+.board-member-anchor:hover .member-bg-block {
+  opacity: 1;
+  background: var(--univ-purple);
+  transform: scale(0.96) translateY(8px);
 }
 
-@media (max-width: 768px) {
-  .aboutUs {
-    padding: 3rem 0;
-  }
-  
-  .about-heading {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .administration-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    gap: 1.5rem;
-  }
-  
-  .aboutUs-card {
-    padding: 1.5rem 1rem;
-  }
-  
-  .aboutUs-image {
-    width: 140px;
-    height: 140px;
-  }
-  
-  .aboutUs-name {
-    font-size: 1.2rem;
-  }
-  
-  .aboutUs-designation {
-    font-size: 0.9rem;
-  }
+.board-member-anchor:hover .member-image-frame img {
+  transform: scale(1.03) translateY(-4px);
+  filter: grayscale(0%);
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(52, 4, 104, 0.12);
 }
 
-@media (max-width: 480px) {
-  .aboutUs {
-    padding: 2rem 0;
-  }
-  
-  .about-heading {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .about-heading::after {
-    width: 80px;
-    margin-top: 10px;
-  }
-  
-  .administration-grid {
-    padding: 0 0.5rem;
-  }
-  
-  .aboutUs-card {
-    padding: 1.25rem 0.75rem;
-    border-radius: 16px;
-  }
-  
-  .aboutUs-image {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .aboutUs-name {
-    font-size: 1.1rem;
-  }
-  
-  .aboutUs-designation {
-    font-size: 0.85rem;
-  }
+.board-member-anchor:hover .member-role-label {
+  color: var(--univ-purple);
 }
 
-/* Loading animation */
-@keyframes fadeInUp {
+.board-member-anchor:hover .member-action-trigger span::after {
+  width: 100%;
+}
+
+.board-member-anchor:hover .member-action-trigger .arrow-transition-svg {
+  transform: translateX(5px);
+}
+
+/* Entrance Animations */
+@keyframes profileEntranceReveal {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -237,14 +236,42 @@
   }
 }
 
-.aboutUs-card {
-  animation: fadeInUp 0.6s ease-out;
+.board-member-showcase {
+  animation: profileEntranceReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.aboutUs-card:nth-child(2) {
-  animation-delay: 0.2s;
+/* --- Responsive Media Adjustments --- */
+@media (max-width: 992px) {
+  .board-showcase-row-grid {
+    grid-template-columns: repeat(2, 1fr); /* Drops down to a 2-column layout on tablets */
+    gap: 30px;
+  }
+  .editorial-title {
+    font-size: 2.2rem;
+  }
 }
 
-.aboutUs-card:nth-child(3) {
-  animation-delay: 0.4s;
+@media (max-width: 768px) {
+  .executive-board-section {
+    padding: 60px 24px;
+  }
+  .editorial-title {
+    font-size: 2rem;
+  }
+  .board-showcase-row-grid {
+    grid-template-columns: 1fr; /* Stacks completely as clean independent portrait blocks on mobile */
+    gap: 35px;
+  }
+  .member-image-frame {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .editorial-title {
+    font-size: 1.75rem;
+  }
+  .member-fullname {
+    font-size: 1.2rem;
+  }
 }
