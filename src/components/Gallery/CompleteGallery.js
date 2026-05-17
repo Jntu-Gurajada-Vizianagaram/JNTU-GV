@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ImageModal from "../HomePage/NewsAndEvents/ImageModal";
 import {
@@ -9,44 +9,30 @@ import {
   CardContent,
   Grid,
   CircularProgress,
-  Chip,
   Tabs,
   Tab
 } from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import './CompleteGallery.css';
-
-// Static event categories - now using local assets in src/assets/Gallery/
-const eventCategories = [
-  { key: 'ityuktha-2k24', label: 'Ityuktha 2K24', color: '#e91e63' },
-  { key: 'eclectique-2k24', label: 'Eclectique 2K24', color: '#9c27b0' },
-  { key: 'womens-day', label: "Women's Day", color: '#e91e63' },
-  { key: 'eisen-2k24', label: 'Eisen 2K24', color: '#ff5722' },
-  { key: 'cresense-2k24', label: 'Cresense 2K24', color: '#3f51b5' },
-  { key: 'republic-day', label: 'Republic Day', color: '#009688' }
-];
 
 function CompleteGallery() {
   const [allImages, setAllImages] = useState([]);
   const [carouselArchives, setCarouselArchives] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedTitle, setSelectedTitle] = useState('');
   const [selectedDescription, setSelectedDescription] = useState('');
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('gallery');
 
-
-  const [eventPhotoCounts, setEventPhotoCounts] = useState({});
-  const [eventPhotoImagesByCategory, setEventPhotoImagesByCategory] = useState({});
-
-  // Fetch gallery images, carousel archives, and event photos for the Events Gallery cards
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
 
-        const [galleryResponse, carouselResponse, eventPhotosResponse] = await Promise.all([
+        const [galleryResponse, carouselResponse] = await Promise.all([
           fetch("https://api.jntugv.edu.in/api/gallery/all-gallery-images"),
           fetch("https://api.jntugv.edu.in/api/webadmin/carousel-images"),
         ]);
@@ -54,85 +40,28 @@ function CompleteGallery() {
         const galleryData = await galleryResponse.json();
         const carouselData = await carouselResponse.json();
 
-        // Gallery images
+        // Process Main Photo Gallery
         const galleryImages = (Array.isArray(galleryData) ? galleryData : []).map((photo, index) => ({
           id: `gallery-${index}`,
           image: photo.imagelink || photo.image_link || photo.image || photo.imagelink_url || photo.imglink,
-          description: photo.description || 'JNTUGV Gallery Photo'
+          title: photo.event_name || 'Campus Event',
+          description: photo.description || 'JNTUGV Campus Event Gallery Image'
         }));
 
-        // Carousel archives (older images)
-        const sortedCarousel = (Array.isArray(carouselData) ? carouselData : []).slice().sort((a, b) => new Date(b.date) - new Date(a.date));
-        const archives = sortedCarousel.slice(5).map((photo, index) => ({
-          id: photo.id ,
+        // Process Carousel Archives (slice older items past top 5)
+        const sortedCarousel = (Array.isArray(carouselData) ? carouselData : []).sort((a, b) => new Date(b.date) - new Date(a.date));
+        const archives = sortedCarousel.slice(5).map((photo) => ({
+          id: photo.id || Math.random().toString(),
           image: photo.imglink,
-          description: photo.description,
-          date: photo.date
+          title: photo.title !== "NA" ? photo.title : "Archive Event",
+          description: photo.description || 'JNTUGV Archived Historical Record Asset',
+          date: photo.date ? new Date(photo.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' }) : null
         }));
 
-        // Event photos for the Events Gallery section
-        // NOTE: we are not fetching Events API here (eventApiData is undefined in this component).
-        // Keeping this section disabled for now.
-        const eventsFromApi = [];
-
-        // Map API events to our category keys (best-effort using common fields)
-        // We support multiple possible naming: key/name/file_link/category/name_slug
-        const toKey = (value) => (typeof value === 'string' ? value.trim().toLowerCase() : '');
-
-        const categoryKeyByEvent = (ev) => {
-          const candidates = [
-            ev?.file_link,
-            ev?.fileLink,
-            ev?.category_key,
-            ev?.categoryKey,
-            ev?.category,
-            ev?.name,
-            ev?.event_name,
-            ev?.eventName,
-            ev?.event_slug,
-            ev?.eventSlug,
-            ev?.slug,
-            ev?.description
-          ];
-          const joined = candidates.map(toKey).filter(Boolean).join(' ');
-
-          // API returns event_name like: Republic Day, Inauguration Event, ITYUKTA2K24, ECLECTIQUE2K24 etc.
-          // Existing routes use keys like: republic-day, inauguration-event, itiyuktha-2k24, eclectique-2k24, etc.
-          // Map by substring match against category.label and a couple of known aliases.
-          const found = eventCategories.find((c) => {
-            const label = toKey(c.label);
-            const key = toKey(c.key);
-            // direct key match often won't work because API uses event_name, not slugs.
-            return joined.includes(label) || joined.includes(key) || joined.replace(/\s+/g, '-').includes(key);
-          });
-
-          return found?.key;
-        };
-
-        const imagesByCategory = {};
-        const countsByCategory = {};
-        for (const ev of eventsFromApi) {
-          const catKey = categoryKeyByEvent(ev);
-          if (!catKey) continue;
-
-          const img = ev?.imagelink || ev?.image_link || ev?.image || ev?.imagelink_url;
-          if (!img) continue;
-
-          if (!imagesByCategory[catKey]) imagesByCategory[catKey] = [];
-          imagesByCategory[catKey].push(img);
-        }
-
-        for (const cat of eventCategories) {
-          const imgs = imagesByCategory[cat.key] || [];
-          countsByCategory[cat.key] = imgs.length;
-        }
-
-        setEventPhotoImagesByCategory(imagesByCategory);
-        setEventPhotoCounts(countsByCategory);
         setAllImages(galleryImages);
         setCarouselArchives(archives);
       } catch (error) {
-        console.error("Failed to fetch data:", error);
+        console.error("Failed to fetch gallery bundle data assets:", error);
       } finally {
         setLoading(false);
       }
@@ -141,8 +70,9 @@ function CompleteGallery() {
     fetchData();
   }, []);
 
-  const handleShowModal = (image, description) => {
+  const handleShowModal = (image, title, description) => {
     setSelectedImage(image);
+    setSelectedTitle(title);
     setSelectedDescription(description);
     setShowModal(true);
   };
@@ -150,114 +80,132 @@ function CompleteGallery() {
   const handleCloseModal = () => {
     setShowModal(false);
     setSelectedImage(null);
+    setSelectedTitle('');
     setSelectedDescription('');
   };
 
   return (
-    <Box className="complete-gallery-container">
-      <div className="gallery-header">
-        <Typography variant="h4" className="gallery-main-heading">
-          <PhotoLibraryIcon className="heading-icon" />
-          Gallery of JNTUGV
-        </Typography>
-        <Link to="/" className="back-to-home">
-          <ArrowBackIcon />
-          Back to Homepage
-        </Link>
+    <Box className="premium-complete-gallery">
+      <div className="gallery-layout-wrapper">
+        
+        {/* Header Branding Panel */}
+        <header className="university-gallery-header">
+          <div className="header-branding">
+            <PhotoLibraryIcon className="brand-icon-logo" />
+            <div>
+              <Typography variant="h3" className="main-platform-title">University Media Gallery</Typography>
+              <Typography variant="subtitle2" className="sub-platform-title">Jawaharlal Nehru Technological University Gurajada, Vizianagaram</Typography>
+            </div>
+          </div>
+          <Link to="/" className="action-back-link">
+            <ArrowBackIcon className="arrow-svg" />
+            <span>Return to Home</span>
+          </Link>
+        </header>
+
+        {/* Navigation Control Tabs */}
+        <div className="tab-navigation-container">
+          <Tabs 
+            value={activeTab} 
+            onChange={(e, newValue) => setActiveTab(newValue)}
+            className="modern-pill-tabs"
+            centered
+          >
+            <Tab label={`Photo Gallery (${allImages.length})`} value="gallery" />
+            <Tab label={`Carousel Archives (${carouselArchives.length})`} value="archives" />
+          </Tabs>
+        </div>
+
+        {/* Dynamic Display Grid Content Area */}
+        {loading ? (
+          <Box className="gallery-fallback-loader">
+            <CircularProgress size={50} style={{ color: "#340468" }} />
+            <Typography variant="body1" className="loader-text-status">Loading Media Assets...</Typography>
+          </Box>
+        ) : (
+          <main className="gallery-view-viewport">
+            
+            {/* Active Mode View Tab: Photo Gallery */}
+            {activeTab === 'gallery' && (
+              <Box className="view-grid-space animate-fade-in">
+                <Grid container spacing={4}>
+                  {allImages.map((imageObj) => (
+                    <Grid item xs={12} sm={6} md={4} key={imageObj.id}>
+                      <Card 
+                        className="premium-media-card"
+                        onClick={() => handleShowModal(imageObj.image, imageObj.title, imageObj.description)}
+                      >
+                        <div className="media-frame-wrapper">
+                          <CardMedia
+                            component="img"
+                            image={imageObj.image}
+                            alt={imageObj.title}
+                            className="premium-grid-img"
+                            loading="lazy"
+                          />
+                          <div className="media-hover-overlay">
+                            <span className="overlay-explore-badge">Expand Photo</span>
+                          </div>
+                        </div>
+                        <CardContent className="media-text-content">
+                          <Typography variant="h6" className="media-card-heading">{imageObj.title}</Typography>
+                          <Typography variant="body2" className="media-card-paragraph">{imageObj.description}</Typography>
+                        </CardContent>
+                      </Card>
+                    </Grid>
+                  ))}
+                </Grid>
+              </Box>
+            )}
+
+            {/* Active Mode View Tab: Historical Archive */}
+            {activeTab === 'archives' && (
+              <Box className="view-grid-space animate-fade-in">
+                <Grid container spacing={4}>
+                  {carouselArchives.map((imageObj) => (
+                    <Grid item xs={12} sm={6} md={4} key={imageObj.id}>
+                      <Card 
+                        className="premium-media-card archive-variant-card"
+                        onClick={() => handleShowModal(imageObj.image, imageObj.title, imageObj.description)}
+                      >
+                        <div className="media-frame-wrapper">
+                          <CardMedia
+                            component="img"
+                            image={imageObj.image}
+                            alt={imageObj.title}
+                            className="premium-grid-img"
+                            loading="lazy"
+                          />
+                          {imageObj.date && (
+                            <div className="archive-timeline-tag">
+                              <CalendarMonthIcon />
+                              <span>{imageObj.date}</span>
+                            </div>
+                          )}
+                          <div className="media-hover-overlay">
+                            <span className="overlay-explore-badge">Expand Archive</span>
+                          </div>
+                        </div>
+                        <CardContent className="media-text-content">
+                          <h4 className="media-card-heading">{imageObj.title}</h4>
+                          <p className="media-card-paragraph">{imageObj.description}</p>
+                        </CardContent>
+                      </Card>
+                    </Grid>
+                  ))}
+                </Grid>
+              </Box>
+            )}
+            
+          </main>
+        )}
       </div>
-
-      <Tabs 
-        value={activeTab} 
-        onChange={(e, newValue) => setActiveTab(newValue)}
-        className="gallery-tabs"
-        centered
-      >
-        {/* <Tab label="Events Gallery" value="events" /> */}
-        <Tab label="Photo Gallery" value="gallery" />
-        <Tab label="Archives" value="archives" />
-      </Tabs>
-
-      {loading ? (
-        <Box className="loading-wrapper">
-          <CircularProgress style={{ color: "#340468" }} />
-        </Box>
-      ) : (
-        <>
-
-          {activeTab === 'gallery' && (
-            <Box className="images-section">
-              <Typography variant="h5" className="section-title">
-                Photo Gallery ({allImages.length} photos)
-              </Typography>
-              <Grid container spacing={2}>
-                {allImages.map((imageObj, index) => (
-                      <Grid item xs={12} sm={6} md={6} lg={6} key={imageObj.id}>
-
-                    <Card 
-                      className="image-card"
-                      onClick={() => handleShowModal(imageObj.image, imageObj.title)}
-                    >
-                      <Box className="image-card-overlay">
-                        <PhotoLibraryIcon className="zoom-icon" />
-                      </Box>
-                      <CardMedia
-                        component="img"
-                        width="1200"
-                        height={100}
-
-                        image={imageObj.image}
-                        alt={imageObj.event_name || imageObj.title || 'Gallery Image'}
-                        className="grid-image"
-                        loading="lazy"
-                        style={{objectFit: 'cover'}}
-                      />
-                      <CardContent className="image-card-content">
-                        <Typography variant="body2" className="image-description">
-                          {imageObj.event_name || imageObj.title || 'JNTUGV Gallery Photo'}
-                        </Typography>
-                      </CardContent>
-                    </Card>
-                  </Grid>
-                ))}
-              </Grid>
-            </Box>
-          )}
-
-          {activeTab === 'archives' && carouselArchives.length > 0 && (
-            <Box className="archives-section">
-              <Typography variant="h5" className="section-title archive-title">
-                <PhotoLibraryIcon className="archive-icon" />
-                Carousel Archives ({carouselArchives.length})
-              </Typography>
-              <Grid container spacing={2}>
-                {carouselArchives.map((imageObj, index) => (
-                  <Grid item xs={6} sm={4} md={4} lg={4} key={imageObj.id}>
-
-                    <Card 
-                      className="image-card"
-                      onClick={() => handleShowModal(imageObj.image, imageObj.image)}
-                    >
-                      <CardMedia
-                        component="img"
-                        height="200"
-                        image={imageObj.image}
-                        alt={imageObj.description}
-                        className="grid-image"
-                        loading="lazy"
-                      />
-                    </Card>
-                  </Grid>
-                ))}
-              </Grid>
-            </Box>
-          )}
-        </>
-      )}
 
       <ImageModal
         show={showModal}
         handleClose={handleCloseModal}
         imageSrc={selectedImage}
+        imageTitle={selectedTitle}
         imageDescription={selectedDescription}
       />
     </Box>
@@ -265,4 +213,3 @@ function CompleteGallery() {
 }
 
 export default CompleteGallery;
-
