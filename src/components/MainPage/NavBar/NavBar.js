@@ -112,6 +112,11 @@ const NavBar = () => {
         // { label: "Empowerment of Women & Grievances", path: "/directorates/empowerment" },
       ],
     },
+    {
+      icon: <WorkIcon />,
+      label: "BEST PRACTICES",
+      path: "/university/best-practices",
+    },
     // {
     //   icon: <DescriptionIcon />,
     //   label: "MANDATORY DISCLOSURES",

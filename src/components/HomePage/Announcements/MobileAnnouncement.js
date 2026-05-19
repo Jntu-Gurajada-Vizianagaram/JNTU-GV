@@ -3,9 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./MobileAnnouncement.css";
 import newGif from "../../../assets/new.gif";
 
-// ✅ STATIC ANNOUNCEMENTS - Displayed first with highest priority
-// These will scroll continuously every day until manually removed
-// To add new static announcements, add objects to this array
+
 const staticAnnouncements = [
   {
     id: "static-0",
@@ -13,7 +11,7 @@ const staticAnnouncements = [
     title: "JNTU-GV Annoucement: Recruitment Notification 2026 for Professor, Associate Professor, Assistant Professor positions were released. Click here to view details. -- ప్రకటన: 2026 సంవత్సరానికి ప్రొఫెసర్, అసోసియేట్ ప్రొఫెసర్, అసిస్టెంట్ ప్రొఫెసర్ ఉద్యోగాల నియామక ప్రకటన విడుదల చేయబడింది. పూర్తి వివరాల కోసం ఇక్కడ క్లిక్ చేయండి.",
     file_path: "",
     external_text: "View Recruitment Details",
-    external_link: "https://jntugv.edu.in/recruitment-notification-2026/",
+    external_link: "https://jntugv.edu.in/recruitment",
     main_page: "yes",
     scrolling: "yes",
     update_type: "recruitment",
