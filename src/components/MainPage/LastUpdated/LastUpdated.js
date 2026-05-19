@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useMemo } from "react";
 import "./LastUpdated.css";
 
-const formatTimestamp = (value) => {
-  if (!value) return "Unknown";
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return String(value);
+const formatTimestamp = (date) => {
+  if (!(date instanceof Date)) date = new Date(date);
+  if (Number.isNaN(date.getTime())) return "Unknown";
 
   return date.toLocaleString("en-US", {
     month: "short",
@@ -16,17 +15,18 @@ const formatTimestamp = (value) => {
 };
 
 const LastUpdated = () => {
-  const [lastUpdated, setLastUpdated] = useState("Checking live update status...");
+  const buildTimestamp = process.env.REACT_APP_BUILD_TIMESTAMP;
+  const lastUpdatedText = useMemo(() => {
+    if (!buildTimestamp) {
+      return "Last Updated: unknown";
+    }
 
-  useEffect(() => {
-    const rawLastModified = document?.lastModified;
-    const formatted = formatTimestamp(rawLastModified);
-    setLastUpdated(`Last Updated: ${formatted}`);
-  }, []);
+    return `Last Updated: ${formatTimestamp(buildTimestamp)}`;
+  }, [buildTimestamp]);
 
   return (
     <div className="last-updated-container">
-      <p className="last-updated-text">{lastUpdated}</p>
+      <p className="last-updated-text">{lastUpdatedText}</p>
     </div>
   );
 };

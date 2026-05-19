@@ -38,7 +38,7 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "react-scripts start",
-    "build": "CI=false react-scripts build",
+    "build": "node scripts/build-with-timestamp.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
