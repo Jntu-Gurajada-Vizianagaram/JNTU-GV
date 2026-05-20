@@ -1,106 +1,188 @@
-name: Auto Deploy to Production
+name: Production Deploy - JNTU-GV
 
 on:
   push:
-    tags:
-      - 'v*'
-  pull_request:
-    types: [closed]
+    branches:
+      - main
 
 jobs:
   deploy:
-    name: Deploy to SSH host (on tag push or merged PR to main)
+    name: Deploy to Production Server
     runs-on: ubuntu-latest
-    if: |
-      github.event_name == 'push' || (
-        github.event_name == 'pull_request' && github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
-      )
 
     steps:
-      - name: Execute remote deploy (safe pull, build, health-check, rollback)
-        uses: appleboy/ssh-action@v0.1.8
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Verify Build Locally
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy Application via SSH
+        uses: appleboy/ssh-action@v1.0.3
+
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+
           script: |
-            set -euo pipefail
-            TARGET_DIR=/home/jntugv/htdocs/jntugv.edu.in/JNTU-GV
-            BRANCH=main
-            HEALTH_URL=http://127.0.0.1:3000/
+            set -e
 
-            echo "Starting remote deploy: branch=${BRANCH} target=${TARGET_DIR}"
-            if [ ! -d "$TARGET_DIR" ]; then
-              echo "ERROR: target dir not found: $TARGET_DIR" >&2
-              exit 2
+            APP_DIR=/home/jntugv/htdocs/jntugv.edu.in/JNTU-GV
+            DIST_DIR=$APP_DIR/dist
+
+            PM2_NAME=JNTU-GV
+
+            HEALTH_URL_LOCAL=http://127.0.0.1:3000
+            HEALTH_URL_PUBLIC=https://jntugv.edu.in
+
+            MAINTENANCE_FILE=/home/jntugv/maintenance.html
+
+            echo "======================================="
+            echo "Starting Production Deployment"
+            echo "======================================="
+
+            cd $APP_DIR
+
+            echo "Current Directory:"
+            pwd
+
+            echo "Fetching Latest Code"
+            git fetch origin
+
+            CURRENT_COMMIT=$(git rev-parse HEAD)
+
+            BACKUP_DIR="${APP_DIR}_backup_$(date +%Y%m%d_%H%M%S)"
+
+            echo "Creating Backup at:"
+            echo "$BACKUP_DIR"
+
+            mkdir -p $BACKUP_DIR
+
+            cp -r \
+              dist \
+              $BACKUP_DIR 2>/dev/null || true
+
+            echo "======================================="
+            echo "Enabling Maintenance Mode"
+            echo "======================================="
+
+            if [ -f "$MAINTENANCE_FILE" ]; then
+              cp $MAINTENANCE_FILE $DIST_DIR/index.html
+              echo "Maintenance page enabled"
+            else
+              echo "Maintenance file not found"
             fi
 
-            cd "$TARGET_DIR"
-            git fetch origin --prune
-            git checkout "$BRANCH"
+            echo "Resetting Repository to Latest Main"
 
-            CURRENT_COMMIT=$(git rev-parse --short HEAD)
-            TS=$(date +%s)
-            BACKUP_DIR="${TARGET_DIR}/build_backup_${CURRENT_COMMIT}_${TS}"
+            git fetch origin
+            git checkout main
+            git reset --hard origin/main
 
-            if [ -d build ]; then
-              echo "Backing up current build to $BACKUP_DIR"
-              mv build "$BACKUP_DIR"
-            fi
+            echo "Installing Dependencies"
 
-            echo "Attempting safe pull (fast-forward only) from origin/$BRANCH"
-            if ! git pull --ff-only origin "$BRANCH"; then
-              echo "Git pull failed (non-fast-forward). Restoring backup and exiting." >&2
-              if [ -d "$BACKUP_DIR" ]; then
-                mv "$BACKUP_DIR" build || true
-              fi
-              exit 3
-            fi
+            npm install
 
-            echo "Installing dependencies"
-            npm ci
+            echo "Building Production Application"
 
-            echo "Building production assets"
             if ! npm run build; then
-              echo "Build failed. Restoring previous build and exiting." >&2
-              rm -rf build || true
-              if [ -d "$BACKUP_DIR" ]; then
-                mv "$BACKUP_DIR" build || true
+
+              echo "======================================="
+              echo "BUILD FAILED - STARTING ROLLBACK"
+              echo "======================================="
+
+              git reset --hard $CURRENT_COMMIT
+
+              if [ -d "$BACKUP_DIR/dist" ]; then
+                rm -rf dist
+                cp -r $BACKUP_DIR/dist ./dist
               fi
-              exit 4
+
+              pm2 reload $PM2_NAME || pm2 restart $PM2_NAME
+
+              echo "Rollback Completed"
+
+              exit 1
             fi
 
-            PM2_PROCESS_NAME="${{ secrets.PM2_PROCESS_NAME }}"
-            PM2_PROCESS_NAME="${PM2_PROCESS_NAME:-jntugv}"
-            echo "Reloading pm2 process ${PM2_PROCESS_NAME}"
-            if command -v pm2 >/dev/null 2>&1; then
-              pm2 reload "$PM2_PROCESS_NAME" || pm2 restart "$PM2_PROCESS_NAME" || true
+            echo "======================================="
+            echo "Reloading PM2 Process"
+            echo "======================================="
+
+            pm2 reload $PM2_NAME || pm2 restart $PM2_NAME
+
+            echo "Saving PM2 Process List"
+
+            pm2 save
+
+            echo "Waiting for Application Startup"
+
+            sleep 50
+
+            echo "======================================="
+            echo "Running Health Checks"
+            echo "======================================="
+
+            LOCAL_STATUS=0
+            PUBLIC_STATUS=0
+
+            echo "Checking Local Application URL"
+
+            if curl --silent --fail $HEALTH_URL_LOCAL > /dev/null; then
+              echo "Local Health Check Passed"
+              LOCAL_STATUS=1
             else
-              echo "WARNING: pm2 not found; skipping reload"
+              echo "Local Health Check Failed"
             fi
 
-            echo "Performing health check: $HEALTH_URL"
-            if command -v curl >/dev/null 2>&1; then
-              if curl --fail --silent --show-error --max-time 10 "$HEALTH_URL" >/dev/null; then
-                echo "Health check passed; removing backup"
-                if [ -d "$BACKUP_DIR" ]; then
-                  rm -rf "$BACKUP_DIR" || true
-                fi
-                exit 0
-              else
-                echo "Health check failed; rolling back to backup" >&2
-                rm -rf build || true
-                if [ -d "$BACKUP_DIR" ]; then
-                  mv "$BACKUP_DIR" build || true
-                fi
-                if command -v pm2 >/dev/null 2>&1; then
-                  pm2 reload "$PM2_PROCESS_NAME" || pm2 restart "$PM2_PROCESS_NAME" || true
-                fi
-                exit 5
-              fi
+            echo "Checking Public Website URL"
+
+            if curl --silent --fail $HEALTH_URL_PUBLIC > /dev/null; then
+              echo "Public Health Check Passed"
+              PUBLIC_STATUS=1
             else
-              echo "curl missing; skipping health check (deploy considered complete)"
-              exit 0
+              echo "Public Health Check Failed"
             fi
+
+            if [ $LOCAL_STATUS -eq 1 ] || [ $PUBLIC_STATUS -eq 1 ]; then
+
+              echo "======================================="
+              echo "Deployment Successful"
+              echo "======================================="
+
+              rm -rf $BACKUP_DIR
+
+            else
+
+              echo "======================================="
+              echo "ALL HEALTH CHECKS FAILED"
+              echo "STARTING ROLLBACK"
+              echo "======================================="
+
+              git reset --hard $CURRENT_COMMIT
+
+              if [ -d "$BACKUP_DIR/dist" ]; then
+                rm -rf dist
+                cp -r $BACKUP_DIR/dist ./dist
+              fi
+
+              pm2 reload $PM2_NAME || pm2 restart $PM2_NAME
+
+              echo "Rollback Completed"
+
+              exit 1
+            fi
+
+            echo "======================================="
+            echo "Production Deployment Finished"
+            echo "======================================="
