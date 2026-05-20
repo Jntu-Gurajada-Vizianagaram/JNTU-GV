@@ -145,6 +145,10 @@ const NavBar = () => {
           path: "/examination/controller-sdc",
         },
         {
+          label: "Additional Controller of Examinations-1",
+          path: "/examination/controller1",
+        },
+        {
           label: "Additional Controller of Examinations-2",
           path: "/examination/controller2",
         },
