@@ -16,6 +16,7 @@
     "bootstrap-icons": "^1.11.0",
     "clsx": "^2.1.1",
     "framer-motion": "^6.5.1",
+    "lucide-react": "^1.16.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.8.0",
     "react-data-grid": "^7.0.0-beta.40",
@@ -37,11 +38,10 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "react-scripts start",
-    "build": "CI=false react-scripts build",
+    "build": "node scripts/build-with-timestamp.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -51,7 +51,6 @@
       "no-unused-vars": "warn"
     }
   },
-
   "browserslist": {
     "production": [
       ">0.2%",
@@ -64,6 +63,5 @@
       "last 1 safari version"
     ]
   },
-
   "packageManager": "yarn@1.22.22"
 }

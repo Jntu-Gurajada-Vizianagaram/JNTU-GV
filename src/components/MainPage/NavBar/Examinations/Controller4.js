@@ -6,7 +6,7 @@ function Controller1() {
   return (
     <div className="exam-profile-container">
       <div className="exam-content-area-header">
-        <h3>Additional Controller of Examinations-1</h3>
+        <h3>Additional Controller of Examinations-4</h3>
       </div>
       {/* Profile Section */}
       <center>
@@ -15,11 +15,11 @@ function Controller1() {
         </div>
         <div className="exam-profile-name">
           <h3>Dr. Chinta Neelima Devi</h3>
-          <h4>Additional Controller of Examinations-1 </h4>
-          <h6>for I B.Tech and I B.Pharmacy</h6>
+          <h4>Additional Controller of Examinations-4 </h4>
+          <h6>for IV B.Tech and IV B.Pharmacy</h6>
           <h4>Associate Professor in the Department of Mechanical Engineering</h4>
           <p className="exam-profile-email">
-            <MdOutlineMailOutline size="20px" /> ace1@jntugv.edu.in
+            <MdOutlineMailOutline size="20px" /> ace4@jntugv.edu.in
           </p>
         </div>
       </center>

@@ -118,13 +118,6 @@ const data = {
           pdfLink: "https://api.jntugv.edu.in/media/JNTU-GV BBA  & BBA (Honors) full syllabus.pdf",
         },
       ],
-      PG: [
-        {
-          sno: 1,
-          branch: "MASTER OF BUSINESS ADMINISTRATION ",
-          pdfLink: "https://api.jntugv.edu.in/media/R24%20MBA%20Syllabus.pdf",
-        },
-      ],
     },
     R13: {
       UG: [

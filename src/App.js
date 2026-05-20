@@ -50,9 +50,10 @@ const AdministrationMain = React.lazy(() => import("./components/MainPage/NavBar
 const ContactUs = React.lazy(() => import("./components/MainPage/NavBar/Contact-Us/ContactUs"));
 const DirectoratesMain = React.lazy(() => import("./components/MainPage/NavBar/Directorates/DirectoratesMain"));
 const Controller = React.lazy(() => import("./components/MainPage/NavBar/Examinations/Controller"));
-const Controller4 = React.lazy(() => import("./components/MainPage/NavBar/Examinations/Controller1"));
+const Controller1 = React.lazy(() => import("./components/MainPage/NavBar/Examinations/Controller1"));
 const Controller2 = React.lazy(() => import("./components/MainPage/NavBar/Examinations/Controller2"));
 const Controller3 = React.lazy(() => import("./components/MainPage/NavBar/Examinations/Controller3"));
+const Controller4 = React.lazy(() => import("./components/MainPage/NavBar/Examinations/Controller4"));
 const ControllerPG = React.lazy(() => import("./components/MainPage/NavBar/Examinations/ControllerPG"));
 const ControllerSDC = React.lazy(() => import("./components/MainPage/NavBar/Examinations/ControllerSDC"));
 const EvaluationExam = React.lazy(() => import("./components/MainPage/NavBar/Examinations/EvaluationExam"));
@@ -159,9 +160,11 @@ function App() {
             <Route path="director" element={<EvaluationExam />} />
             <Route path="controller" element={<Controller />} />
             <Route path="controller-sdc" element={<ControllerSDC />} />
-            <Route path="controller4" element={<Controller4 />} />
+
+            <Route path="controller1" element={<Controller1 />} />
             <Route path="controller2" element={<Controller2 />} />
             <Route path="controller3" element={<Controller3 />} />
+            <Route path="controller4" element={<Controller4 />} />
             <Route path="controller-pg" element={<ControllerPG />} />
             <Route path="examresults" element={<ExamResults />} />
           </Route>
