@@ -53,6 +53,7 @@ const NavBar = () => {
         { label: "Chancellor", path: "/administration/chancellor" },
         { label: "Vice Chancellor", path: "/administration/vice-chancellor" },
         { label: "Registrar", path: "/administration/registrar" },
+        { label: "Chairpersons", path: "/administration/chairpersons" },
         { label: "Officer on Special Duty (OSD)", path: "/administration/osd" },
         // Add more sub-items as needed
       ],
@@ -92,11 +93,7 @@ const NavBar = () => {
           label: "Academic Audit and Planning",
           path: "/directorates/academic-audit-planning",
         },
-        {
-          label: "Admissions",
-          path: "/directorates/admissions"
-        },
-        { label: "Evaluation", path: "/directorates/evaluation" },
+        { label: "Evaluation & Admissions", path: "/directorates/evaluation" },
         { label: "Research & Development", path: "/directorates/research" },
         {
           label: "Industrial Relations & Placements",
@@ -112,25 +109,15 @@ const NavBar = () => {
         // { label: "Empowerment of Women & Grievances", path: "/directorates/empowerment" },
       ],
     },
-    // {
-    //   icon: <DescriptionIcon />,
-    //   label: "MANDATORY DISCLOSURES",
-    //   path: "/disclosures",
-    //   subItems: [
-    //     { label: "Internal Complaint Committee (ICC)", path: "/disclosures/icc" },
-    //     { label: "SC/ST and OBC Cell", path: "/disclosures/scst-cell" },
-    //     { label: "Annual Reports & Financials", path: "/disclosures/annual-reports" },
-    //   ],
-    // },
     {
       icon: <DescriptionIcon />,
       label: " EXAMINATIONS",
       path: "/examination",
       subItems: [
-        // {
-        //   label: "Director of Evaluation",
-        //   path: "/examination/director",
-        // },
+        {
+          label: "Director of Evaluation",
+          path: "/examination/director",
+        },
         {
           label: "Controller of Examinations",
           path: "/examination/controller",
@@ -140,16 +127,16 @@ const NavBar = () => {
           path: "/examination/controller-sdc",
         },
         {
+          label: "Additional Controller of Examinations-1",
+          path: "/examination/controller1",
+        },
+        {
           label: "Additional Controller of Examinations-2",
           path: "/examination/controller2",
         },
         {
           label: "Additional Controller of Examinations-3",
           path: "/examination/controller3",
-        },
-        {
-          label: "Additional Controller of Examinations-4",
-          path: "/examination/controller4",
         },
         {
           label: "Additional Controller of Examinations-PG",
@@ -172,20 +159,21 @@ const NavBar = () => {
         },
         {
           label: "Emerging Technologies",
-          path: "https://emergingtechnologiesbyjntugv.netlify.app/",
+          path: "https://emergingtechnologies.jntugv.edu.in"
         }
       ],
     },
 
-    // {
-    //   icon: <WorkIcon />,
-    //   label: "JOB OPPORTUNITIES",
-    //   path: "https://uyopportunities.jntugv.edu.in/",
-    // },
     {
-      icon: <DescriptionIcon />,
-      label: " RECRUITMENT",
+      icon: <GroupsIcon />,
+      label: "RECRUITMENT",
       path: "/recruitment",
+    },
+
+    {
+      icon: <WorkIcon />,
+      label: "JOB OPPORTUNITIES",
+      path: "https://uyopportunities.jntugv.edu.in/",
     },
 
     {
@@ -202,11 +190,7 @@ const NavBar = () => {
       subItems: [
         {
           label: "Anti-Ragging",
-          path: "/anti-ragging",
-        },
-        {
-          label: 'UGC Mandatory Disclosures',
-          path: '/mandatory-disclosures',
+          path: "/anti-ragging/about",
         },
         {
           label: "Ideaclub",
@@ -220,10 +204,6 @@ const NavBar = () => {
           label: " Job Opportunities",
           path: "https://uyopportunities.jntugv.edu.in/",
         },
-        // {
-        //   label: " Recruitment",
-        //   path: "/recruitment",
-        // },
         {
           label: "MoUs",
           path: "https://mou.jntugv.edu.in",
@@ -232,9 +212,6 @@ const NavBar = () => {
           label: "Events",
           path: "https://events.jntugv.edu.in",
         },
-        { label: `JNTU_Act 8 of 1967`, path: "/assets/acts/act_8_of_1967.pdf", isExternal: true },
-        { label: `JNTU_Act 30 of 2008`, path: "/assets/acts/act_30_of_2008.pdf", isExternal: true },
-        { label: `JNTU_Act 22 of 2021`, path: "/assets/acts/act_22_of_2021.pdf", isExternal: true },
         // {
         //   label: "Yogandhra",
         //   path: "https://yogandhra.jntugv.edu.in",
@@ -271,7 +248,7 @@ const NavBar = () => {
         <div className="menu-icon" onClick={handleMenuToggle}>
           <MenuIcon />MENU
         </div>
-        <div className="menu-icon" id="search-icon">
+        <div className="menu-icon" id="seach-icon">
           <Search />
         </div>
       </div>
@@ -304,9 +281,6 @@ const NavBar = () => {
             ) : null}
           </div>
         ))}
-        {!menuState && <div className="bigSearch ms-3">
-          <Search />
-        </div>}
       </div>
 
     </nav>

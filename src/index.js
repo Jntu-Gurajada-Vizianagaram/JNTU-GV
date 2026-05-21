@@ -10,3 +10,10 @@ root.render(
     <App />
   </BrowserRouter>,
 );
+
+if (typeof window !== "undefined") {
+  window.__JNTU_GV_APP_LOADED__ = true;
+  if (typeof window.showApp === "function") {
+    window.showApp();
+  }
+}

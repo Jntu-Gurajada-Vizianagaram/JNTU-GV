@@ -1,0 +1,188 @@
+name: Production Deploy - JNTU-GV
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to Production Server
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Verify Build Locally
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy Application via SSH
+        uses: appleboy/ssh-action@v1.0.3
+
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+          script: |
+            set -e
+
+            APP_DIR=/home/jntugv/htdocs/jntugv.edu.in/JNTU-GV
+            DIST_DIR=$APP_DIR/dist
+
+            PM2_NAME=JNTU-GV
+
+            HEALTH_URL_LOCAL=http://127.0.0.1:3000
+            HEALTH_URL_PUBLIC=https://jntugv.edu.in
+
+            MAINTENANCE_FILE=/home/jntugv/maintenance.html
+
+            echo "======================================="
+            echo "Starting Production Deployment"
+            echo "======================================="
+
+            cd $APP_DIR
+
+            echo "Current Directory:"
+            pwd
+
+            echo "Fetching Latest Code"
+            git fetch origin
+
+            CURRENT_COMMIT=$(git rev-parse HEAD)
+
+            BACKUP_DIR="${APP_DIR}_backup_$(date +%Y%m%d_%H%M%S)"
+
+            echo "Creating Backup at:"
+            echo "$BACKUP_DIR"
+
+            mkdir -p $BACKUP_DIR
+
+            cp -r \
+              dist \
+              $BACKUP_DIR 2>/dev/null || true
+
+            echo "======================================="
+            echo "Enabling Maintenance Mode"
+            echo "======================================="
+
+            if [ -f "$MAINTENANCE_FILE" ]; then
+              cp $MAINTENANCE_FILE $DIST_DIR/index.html
+              echo "Maintenance page enabled"
+            else
+              echo "Maintenance file not found"
+            fi
+
+            echo "Resetting Repository to Latest Main"
+
+            git fetch origin
+            git checkout main
+            git reset --hard origin/main
+
+            echo "Installing Dependencies"
+
+            npm install
+
+            echo "Building Production Application"
+
+            if ! npm run build; then
+
+              echo "======================================="
+              echo "BUILD FAILED - STARTING ROLLBACK"
+              echo "======================================="
+
+              git reset --hard $CURRENT_COMMIT
+
+              if [ -d "$BACKUP_DIR/dist" ]; then
+                rm -rf dist
+                cp -r $BACKUP_DIR/dist ./dist
+              fi
+
+              pm2 reload $PM2_NAME || pm2 restart $PM2_NAME
+
+              echo "Rollback Completed"
+
+              exit 1
+            fi
+
+            echo "======================================="
+            echo "Reloading PM2 Process"
+            echo "======================================="
+
+            pm2 reload $PM2_NAME || pm2 restart $PM2_NAME
+
+            echo "Saving PM2 Process List"
+
+            pm2 save
+
+            echo "Waiting for Application Startup"
+
+            sleep 50
+
+            echo "======================================="
+            echo "Running Health Checks"
+            echo "======================================="
+
+            LOCAL_STATUS=0
+            PUBLIC_STATUS=0
+
+            echo "Checking Local Application URL"
+
+            if curl --silent --fail $HEALTH_URL_LOCAL > /dev/null; then
+              echo "Local Health Check Passed"
+              LOCAL_STATUS=1
+            else
+              echo "Local Health Check Failed"
+            fi
+
+            echo "Checking Public Website URL"
+
+            if curl --silent --fail $HEALTH_URL_PUBLIC > /dev/null; then
+              echo "Public Health Check Passed"
+              PUBLIC_STATUS=1
+            else
+              echo "Public Health Check Failed"
+            fi
+
+            if [ $LOCAL_STATUS -eq 1 ] || [ $PUBLIC_STATUS -eq 1 ]; then
+
+              echo "======================================="
+              echo "Deployment Successful"
+              echo "======================================="
+
+              rm -rf $BACKUP_DIR
+
+            else
+
+              echo "======================================="
+              echo "ALL HEALTH CHECKS FAILED"
+              echo "STARTING ROLLBACK"
+              echo "======================================="
+
+              git reset --hard $CURRENT_COMMIT
+
+              if [ -d "$BACKUP_DIR/dist" ]; then
+                rm -rf dist
+                cp -r $BACKUP_DIR/dist ./dist
+              fi
+
+              pm2 reload $PM2_NAME || pm2 restart $PM2_NAME
+
+              echo "Rollback Completed"
+
+              exit 1
+            fi
+
+            echo "======================================="
+            echo "Production Deployment Finished"
+            echo "======================================="

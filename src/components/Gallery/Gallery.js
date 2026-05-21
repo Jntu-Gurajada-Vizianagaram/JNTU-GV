@@ -60,12 +60,8 @@ function Gallery() {
     setSelectedDescription('');
   };
 
-  const handleViewMore = () => {
-    setDisplayCount(prev => prev + 12);
-  };
 
   const visibleImages = images.slice(0, displayCount);
-  const hasMore = displayCount < images.length;
 
   return (
     <div className="gallery-container">
