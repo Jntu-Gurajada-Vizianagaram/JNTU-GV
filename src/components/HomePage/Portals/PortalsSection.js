@@ -9,12 +9,6 @@ const websiteData = [
     "image": "DAAP.png",
     "link": "https://daap.jntugv.edu.in/"
   },
-  // {
-  //   "id": 2,
-  //   "title": "Directorate of Academic Audit Cell",
-  //   "image": "DAA.jpg",
-  //   "link": "https://daa.jntugv.edu.in/"
-  // },
   {
     "id": 2,
     "title": "JNTUGV Examination Results",
@@ -42,7 +36,7 @@ const websiteData = [
   {
     "id": 6,
     "title": "Alumni Relations",
-    "image": "ALUMNI.jpg",
+    "image": "ALUMNI.png",
     "link": "https://alumni.jntugv.edu.in/"
   }
   ,
