@@ -13,41 +13,19 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-import { Description as DescriptionIcon } from "@mui/icons-material";
+import membersData from "./members.json";
 import "./MandatoryDisclosures.css";
 
 const MandatoryDisclosures = () => {
   const [selectedTab, setSelectedTab] = useState(0);
+  const { iccMembers, scstMembers } = membersData;
 
   const handleChangeTab = (event, newValue) => {
     setSelectedTab(newValue);
   };
 
-  const reports = [
-    { title: "Annual Report 2023-24", link: "#", status: "Pending Release" },
-    { title: "Annual Report 2022-23", link: "#", status: "Available" },
-    { title: "Financial Statement 2023-24", link: "#", status: "Pending Audit" },
-    { title: "Financial Statement 2022-23", link: "#", status: "Available" },
-    { title: "NAAC Institutional Grade Sheet", link: "#", status: "Available" },
-    { title: "NIRF 2024 Submission Details", link: "#", status: "Available" },
-  ];
-
-  const iccMembers = [
-    { designation: "Senior Female Faculty Member", role: "Chairperson", contact: "icc.chairperson@jntugv.edu.in" },
-    { designation: "Representative (Faculty)", role: "Member", contact: "-" },
-    { designation: "Representative (Non-Teaching Staff)", role: "Member", contact: "-" },
-    { designation: "Representative (NGO/Social Worker)", role: "External Member", contact: "-" },
-  ];
-
-  const scstMembers = [
-    { designation: "Liaison Officer / Coordinator", role: "Chairperson", dept: "-" },
-    { designation: "Faculty Representative (SC/ST)", role: "Member", dept: "-" },
-    { designation: "Faculty Representative (OBC)", role: "Member", dept: "-" },
-    { designation: "Administrative Staff", role: "Member Secretary", dept: "-" },
-  ];
-
   return (
-    <Container maxWidth="lg" className="disclosures-portal">
+    <Container maxWidth={false} disableGutters className="disclosures-portal">
       <Box className="disclosures-header" sx={{ mb: 4, textAlign: "center" }}>
         <Typography variant="h3" className="portal-title">UGC Mandatory Disclosures</Typography>
         <Typography variant="body1" className="portal-subtitle">
@@ -70,32 +48,36 @@ const MandatoryDisclosures = () => {
             "& .Mui-selected": { color: "#370A68 !important" },
           }}
         >
-          <Tab label="ICC (POSH)" />
-          <Tab label="SC/ST & OBC Cell" />
-          <Tab label="Annual Reports & Financials" />
+          <Tab label="WE&G Cell / ICC (POSH)" />
+          
+          {/* <Tab label="SC/ST & OBC Cell" /> */}
+          {/* <Tab label="Annual Reports & Financials" /> */}
         </Tabs>
 
         <Box className="tab-content-area" sx={{ p: 4 }}>
           {selectedTab === 0 && (
             <Box className="icc-section">
               <Typography variant="h5" sx={{ color: "#370A68", mb: 2, fontWeight: 700 }}>
-                Internal Complaint Committee (ICC)
+                Women Empowerment and Grievances Cell (WE&G Cell)
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, textAlign: "justify" }}>
-                Constituted in accordance with the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013, to provide a safe and conducive environment for all women stakeholders.
+                The Women Empowerment and Grievances Cell (WE&G Cell), also functioning as the Internal Complaint Committee (ICC), has been constituted in accordance with the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013.
+                It is headed by the Chairperson and supported by the Convenor, Secretary, and external members drawn from the university community, including representatives from various colleges, law, and social activism.
               </Typography>
               <TableContainer component={Paper} elevation={0} className="disclosure-table-wrapper">
                 <Table className="disclosure-table">
                   <TableHead>
                     <TableRow sx={{ background: "#370A68" }}>
+                      <TableCell sx={{ color: "white", fontWeight: "bold" }}>Member Name</TableCell>
                       <TableCell sx={{ color: "white", fontWeight: "bold" }}>Designation</TableCell>
-                      <TableCell sx={{ color: "white", fontWeight: "bold" }}>Role in ICC</TableCell>
+                      <TableCell sx={{ color: "white", fontWeight: "bold" }}>Role in WE&GC</TableCell>
                       <TableCell sx={{ color: "white", fontWeight: "bold" }}>Contact</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
                     {iccMembers.map((member, i) => (
                       <TableRow key={i} hover>
+                        <TableCell>{member.name}</TableCell>
                         <TableCell>{member.designation}</TableCell>
                         <TableCell>{member.role}</TableCell>
                         <TableCell>{member.contact}</TableCell>
@@ -144,7 +126,7 @@ const MandatoryDisclosures = () => {
             </Box>
           )}
 
-          {selectedTab === 2 && (
+          {/* {selectedTab === 2 && (
             <Box className="reports-section">
               <Typography variant="h5" sx={{ color: "#370A68", mb: 2, fontWeight: 700 }}>
                 Annual Reports & Financial Statements
@@ -181,7 +163,7 @@ const MandatoryDisclosures = () => {
                 </Table>
               </TableContainer>
             </Box>
-          )}
+          )} */}
         </Box>
       </Paper>
     </Container>

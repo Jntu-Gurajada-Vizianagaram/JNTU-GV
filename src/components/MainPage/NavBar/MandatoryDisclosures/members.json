@@ -1,0 +1,58 @@
+{
+  "iccMembers": [
+    {
+    "name": "Prof. G. Jaya Suma",
+      "designation": " Professor of IT ",
+      "role": "Chairperson",
+      "contact": ""
+    },
+    {
+        "name": "Dr. B. Nalini",
+      "designation": " Associate Professor of ECE, JNTU-GV CEV",
+      "role": "Convener",
+      "contact": "wegc@jntugv.edu.in"
+    },
+    {
+      "name": "Dr. M. Hema",
+      "designation": " Associate Professor of ECE, JNTU-GV CEV",
+      "role": "Secretary",
+      "contact": "wegc.secretary@jntugvcev.edu.in"
+    },
+    {
+         "name": "Dr. B. Devi Madhavi",
+      "designation": "M.D., Professor of Community Medicine & Principal, Govt. Medical College Vizianagaram",
+      "role": "Member",
+      "contact": "-"
+    },
+    {
+         "name": "Dr. Rifat Khan",
+      "designation": "Assistant Professor, Damodaram Sanjivayya National Law University, Visakhapatnam",
+      "role": "Member",
+      "contact": "-"
+    },
+    {
+      "name": "Venigandla Padmaja",
+      "designation": "Executive Trustee, Jattu Ashramam, Parvathipuram, Manyam District",
+      "role": "Member",
+      "contact": "-"
+    },
+    {
+      "name": "Dr. P. Ujjvala Kanthi Prabha",
+      "designation": "Professor of ECE, MVGR College of Engineering",
+      "role": "Member",
+      "contact": "-"
+    },
+    {
+      "name": "Dr. K. Mrudula Devi",
+      "designation": "Associate Professor of BS&HS, Vignan Institute of Information Technology",
+      "role": "Member",
+      "contact": "-"
+    },
+    {
+        "name": "Dr. P. Janaki",
+      "designation": "Associate Professor of EEE, Lendi Institute of Technology",
+      "role": "Member",
+      "contact": "-"
+    }
+  ]
+}

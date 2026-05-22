@@ -6,13 +6,7 @@ import {
   Typography,
   Box,
   Grid,
-  IconButton,
-  Container,
-  AppBar,
-  Toolbar,
   Button,
-  Tabs,
-  Tab
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';

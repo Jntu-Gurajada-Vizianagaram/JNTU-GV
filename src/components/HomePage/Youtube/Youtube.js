@@ -68,7 +68,7 @@ const videos = [
 const YouTubeCarousel = () => {
   const [open, setOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
-  const [showAll, setShowAll] = useState(false);
+  const [showAll] = useState(false);
 
   // Show first 3 latest videos initially
   const visibleVideos = showAll ? videos : videos.slice(0, 3);

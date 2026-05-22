@@ -1,19 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Recruitment.css";
 import { Typography, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Button, CircularProgress, Box } from "@mui/material";
-import DescriptionIcon from "@mui/icons-material/Description";
+// import DescriptionIcon from "@mui/icons-material/Description";
 
-// const staticRecruitment = {
-//   id: "static-0",
-//   date: "2026-05-15",
-//   title: "JNTU-GV Annoucement: Recruitment Notification 2026 for Professor, Associate Professor, Assistant Professor positions were released. Click here to view details.",
-//   external_link: "https://jntugv.edu.in/recruitment-notification-2026/",
-//   update_type: "recruitment",
-//   day: 15,
-//   month: "May",
-//   year: 2026,
-//   isStatic: true,
-// };
 
 function Recruitment() {
   const [notifications, setNotifications] = useState([]);

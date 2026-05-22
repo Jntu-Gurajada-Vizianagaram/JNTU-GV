@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import "./ConstituentCollegesOP.css";
 import { constituentColleges } from "./ConstituentCollegesData";

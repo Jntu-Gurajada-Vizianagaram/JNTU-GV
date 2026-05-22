@@ -1,7 +1,7 @@
 import React from "react";
 // import da from "../../../../assets/AdminDirectoratesImages/da.jpg";
-import diqac from "../../../../assets/AdminDirectoratesImages/diqac.jpg";
-import { MdOutlineMailOutline } from "react-icons/md";
+// import diqac from "../../../../assets/AdminDirectoratesImages/diqac.jpg";
+// import { MdOutlineMailOutline } from "react-icons/md";
 import { useState } from "react";
 
 

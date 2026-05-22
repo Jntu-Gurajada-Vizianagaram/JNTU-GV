@@ -12,7 +12,7 @@ function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedTitle, setSelectedTitle] = useState('');
   const [selectedDescription, setSelectedDescription] = useState('');
-  const [displayCount, setDisplayCount] = useState(12);
+  const [displayCount] = useState(12);
   const [totalCount, setTotalCount] = useState(0);
 
   const navigate = useNavigate();
@@ -23,8 +23,6 @@ function Gallery() {
         const response = await fetch("https://api.jntugv.edu.in/api/gallery/all-gallery-images");
         const data = await response.json();
         
-        setTotalCount(data.length);
-        
         const allImages = data.map(photo => {
           const rawDescription = photo.description || "";
           const fallbackTitle = rawDescription.split(/\r?\n/)[0] || "";
@@ -34,8 +32,17 @@ function Gallery() {
             description: rawDescription,
           };
         });
-        
-        setImages(allImages);
+
+        const seenTitles = new Set();
+        const uniqueImages = allImages.filter((item) => {
+          const titleKey = (item.title || "").trim().toLowerCase();
+          if (seenTitles.has(titleKey)) return false;
+          seenTitles.add(titleKey);
+          return true;
+        });
+
+        setTotalCount(uniqueImages.length);
+        setImages(uniqueImages);
       } catch (error) {
         console.error("Failed to fetch images:", error);
       } finally {
@@ -91,7 +98,7 @@ function Gallery() {
                 </div>
                 <img
                   src={image.image}
-                  alt={`JNTUGV - ${image.title || 'Gallery Image'}`}
+                  alt={`JNTUGV - ${image.title}`}
                   className="gallery-image"
                   loading="lazy"
                 />
@@ -101,17 +108,6 @@ function Gallery() {
               </div>
             ))}
           </div>
-
-          {/* {hasMore && (
-            <div className="gallery-actions">
-              <button 
-                className="view-more-btn"
-                onClick={handleViewMore}
-              >
-                View More (+{images.length - displayCount} remaining)
-              </button>
-            </div>
-          )} */}
         </>
       )}
 
