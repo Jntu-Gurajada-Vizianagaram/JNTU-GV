@@ -39,8 +39,8 @@ const NavBar = () => {
     // { name: `Events`, path: "https://events.jntugv.edu.in" },
     {name: `Alumni Connect`, path: "https://alumni.jntugv.edu.in"},
     {
-      name: 'UGC Mandatory Disclosures',
-      path: '/mandatory-disclosures',
+      name: 'University Cells & Committees',
+      path: '/university/cells-and-committees',
     },
     { name: `JNTU_Act 8 of 2026`, path: "/assets/acts/act_8_of_2026.pdf", isExternal: true },
     { name: `JNTU_Act 30 of 2008`, path: "/assets/acts/act_30_of_2008.pdf", isExternal: true },

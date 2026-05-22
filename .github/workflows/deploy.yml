@@ -76,9 +76,12 @@ jobs:
             echo "Enabling Maintenance Mode"
             echo "======================================="
 
-            if [ ! -L "$MAINTENANCE_LINK" ]; then
-              ln -sf "$MAINTENANCE_SOURCE" "$MAINTENANCE_LINK" || true
+            if [ -e "$MAINTENANCE_LINK" ] && [ ! -L "$MAINTENANCE_LINK" ]; then
+              rm -f "$MAINTENANCE_LINK"
             fi
+
+            ln -sf "$MAINTENANCE_SOURCE" "$MAINTENANCE_LINK" || true
+            echo "Created symlink: $MAINTENANCE_LINK -> $MAINTENANCE_SOURCE"
 
             if [ -f "$MAINTENANCE_SOURCE" ] && [ -d "$BUILD_DIR" ]; then
               cp "$MAINTENANCE_SOURCE" "$BUILD_DIR/index.html"
