@@ -138,15 +138,21 @@
 .thumbnail-wrapper {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
-.video-thumbnail {
+.video-thumbnail,
+.video-thumbnail-full {
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  height: 220px !important;
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
+  display: block;
 }
 
-.video-card:hover .video-thumbnail {
+.video-card:hover .video-thumbnail,
+.video-card:hover .video-thumbnail-full {
   transform: scale(1.12);
 }
 
@@ -187,6 +193,7 @@
   box-shadow: 
     0 4px 15px rgba(0, 0, 0, 0.25),
     0 0 0 0 rgba(52, 4, 104, 0.4);
+  cursor: pointer;
 }
 
 .video-card:hover .play-button {
@@ -217,6 +224,40 @@
   color: #ffffff;
 }
 
+/* Publisher Badge */
+.publisher-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  min-width: 40px;
+  max-width: 120px;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.76);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  z-index: 3;
+  text-align: center;
+}
+
+.publisher-badge img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.publisher-badge span {
+  display: block;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
 /* YouTube Badge */
 .youtube-badge {
   position: absolute;
@@ -236,6 +277,30 @@
 .youtube-badge img {
   width: 100%;
   height: auto;
+}
+
+.embed-blocked-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  padding: 24px;
+  background: rgba(244, 244, 246, 0.95);
+  border: 1px solid rgba(52, 4, 104, 0.12);
+  border-radius: 16px;
+  color: #2c2c2c;
+  text-align: center;
+}
+
+.watch-on-youtube-button {
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%) !important;
+  color: #ffffff !important;
+  text-transform: none !important;
+  font-weight: 700 !important;
+}
+
+.watch-on-youtube-button:hover {
+  background: linear-gradient(135deg, #cc0000 0%, #a30000 100%) !important;
 }
 
 /* Video Content - Enhanced */
@@ -346,12 +411,38 @@
 .video-dialog .MuiDialog-paper {
   border-radius: 16px !important;
   overflow: hidden;
+  width: calc(100% - 24px) !important;
+  max-width: 960px !important;
+  margin: 12px auto !important;
 }
 
 .dialog-content {
   padding: 0 !important;
   position: relative;
   background: #000000;
+}
+
+.dialog-content iframe {
+  width: 100%;
+  min-height: 55vh;
+  max-height: 80vh;
+}
+
+@media (max-width: 960px) {
+  .dialog-content iframe {
+    min-height: 45vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .video-dialog .MuiDialog-paper {
+    width: calc(100% - 16px) !important;
+    margin: 8px auto !important;
+  }
+
+  .dialog-content iframe {
+    min-height: 40vh;
+  }
 }
 
 .close-button {
