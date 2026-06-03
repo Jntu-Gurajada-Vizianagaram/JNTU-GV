@@ -35,9 +35,15 @@ const getPublisherLogo = (publisher) => publisherLogos[publisher] || null;
 
 const getYoutubeWatchUrl = (videoId) => `https://www.youtube.com/watch?v=${videoId}`;
 
+const getYoutubeEmbedUrl = (videoId) => {
+  const origin = typeof window !== 'undefined' ? encodeURIComponent(window.location.origin) : '';
+  return `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1${origin ? `&origin=${origin}` : ''}`;
+};
+
 const YouTubeCarousel = () => {
   const [open, setOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
+  const [iframeError, setIframeError] = useState(false);
   const [showAll] = useState(false);
 
   const activeVideoData = activeVideo ? videos.find((video) => video.id === activeVideo) : null;
@@ -47,12 +53,14 @@ const YouTubeCarousel = () => {
 
   const handleOpen = (videoId) => {
     setActiveVideo(videoId);
+    setIframeError(false);
     setOpen(true);
   };
 
   const handleClose = () => {
     setOpen(false);
     setActiveVideo(null);
+    setIframeError(false);
   };
 
   // const handleViewAllClick = () => {
@@ -179,21 +187,22 @@ const YouTubeCarousel = () => {
           </IconButton>
           {activeVideoData && (
             <>
-              {!activeVideoData.embedBlocked ? (
+              {!activeVideoData.embedBlocked && !iframeError ? (
                 <Box
                   component="iframe"
                   width="100%"
                   height="60vh"
-                  src={`https://www.youtube.com/embed/${activeVideoData.id}?autoplay=1`}
+                  src={getYoutubeEmbedUrl(activeVideoData.id)}
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
+                  onError={() => setIframeError(true)}
                 />
               ) : (
                 <Box className="embed-blocked-message">
                   <Typography variant="body1" sx={{ mb: 2 }}>
-                    This video cannot be embedded on this site due to publisher restrictions.
+                    This video cannot be embedded on this site due to publisher restrictions or playback configuration.
                     Please open it directly on YouTube.
                   </Typography>
                 </Box>

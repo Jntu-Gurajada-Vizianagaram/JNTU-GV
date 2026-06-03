@@ -19,14 +19,19 @@ import { Link } from 'react-router-dom';
 import './Youtube.css';
 import videos from './youtube_vedios.json';
 
-  
+const getYoutubeEmbedUrl = (videoId) => {
+  const origin = typeof window !== 'undefined' ? encodeURIComponent(window.location.origin) : '';
+  return `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1${origin ? `&origin=${origin}` : ''}`;
+};
 
 function YoutubeFull() {
   const [open, setOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
+  const [iframeError, setIframeError] = useState(false);
 
   const handleOpen = (video) => {
     setActiveVideo(video);
+    setIframeError(false);
     setOpen(true);
   };
 
@@ -114,16 +119,37 @@ function YoutubeFull() {
             <CloseIcon />
           </IconButton>
           {activeVideo && (
-            <Box
-              component="iframe"
-              width="100%"
-              height="60vh"
-              src={`https://www.youtube.com/embed/${activeVideo.id}?autoplay=1`}
-              title={activeVideo.title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
+            !iframeError ? (
+              <Box
+                component="iframe"
+                width="100%"
+                height="60vh"
+                src={getYoutubeEmbedUrl(activeVideo.id)}
+                title={activeVideo.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                onError={() => setIframeError(true)}
+              />
+            ) : (
+              <Box className="embed-blocked-message">
+                <Typography variant="body1" sx={{ mb: 2 }}>
+                  This video cannot be embedded on this site due to playback configuration or publisher restrictions.
+                  Please open it directly on YouTube.
+                </Typography>
+                <Button
+                  component="a"
+                  href={`https://www.youtube.com/watch?v=${activeVideo.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="contained"
+                  fullWidth
+                  className="watch-on-youtube-button"
+                >
+                  Watch on YouTube
+                </Button>
+              </Box>
+            )
           )}
         </DialogContent>
       </Dialog>
