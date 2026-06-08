@@ -1,128 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Jawaharlal Nehru Technological University - Gurajada Vizianagaram"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <title>JNTU-GV</title>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Jawaharlal Nehru Technological University - Gurajada Vizianagaram" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <!-- ✅ Preconnect for faster Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Preconnect to speed up API and image fetches -->
-    <link rel="preconnect" href="https://api.jntugv.edu.in" crossorigin />
-    <link rel="preconnect" href="https://img.youtube.com" crossorigin />
+  <title>JNTU-GV</title>
 
-    <!-- ✅ Google Fonts with display=swap -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- ✅ Preconnect for faster Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Preconnect to speed up API and image fetches -->
+  <link rel="preconnect" href="https://api.jntugv.edu.in" crossorigin />
+  <link rel="preconnect" href="https://img.youtube.com" crossorigin />
 
-    <!-- Google Tag -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=GT-KTBBC4TX"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "GT-KTBBC4TX");
-    </script>
+  <!-- ✅ Google Fonts with display=swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <style>
-      body {
-        margin: 0;
-        min-height: 100vh;
-        font-family: "Inter", sans-serif;
-        background: #020617;
-        color: #ffffff;
-      }
+  <!-- Google Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-KTBBC4TX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "GT-KTBBC4TX");
+  </script>
 
-      #maintenance {
-        position: fixed;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem;
-        background: radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 40%),
-          #020617;
-        z-index: 9999;
-      }
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Inter", sans-serif;
+      background: #020617;
+      color: #ffffff;
+    }
 
-      .maintenance-card {
-        width: 100%;
-        max-width: 920px;
-        border-radius: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(5, 14, 35, 0.92);
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
-        overflow: hidden;
-      }
+    #maintenance {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 40%),
+        #020617;
+      z-index: 9999;
+    }
 
-      .maintenance-card h1 {
-        margin: 0;
-        padding: 1.25rem 1.5rem 0.75rem;
-        font-size: clamp(1.05rem, 1.8vw, 1.35rem);
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #79c7ff;
-      }
+    .maintenance-card {
+      width: 100%;
+      max-width: 920px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(5, 14, 35, 0.92);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+    }
 
-      .maintenance-card .maintenance-text {
-        margin: 0;
-        padding: 0 1.5rem 1.25rem;
-        font-size: 0.96rem;
-        line-height: 1.6;
-        color: #dce7ff;
-      }
+    .maintenance-card h1 {
+      margin: 0;
+      padding: 1.25rem 1.5rem 0.75rem;
+      font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #79c7ff;
+    }
 
-      .maintenance-marquee {
-        position: relative;
-        overflow: hidden;
-        background: #06122c;
-        padding: 0.75rem 1rem;
-      }
+    .maintenance-card .maintenance-text {
+      margin: 0;
+      padding: 0 1.5rem 1.25rem;
+      font-size: 0.96rem;
+      line-height: 1.6;
+      color: #dce7ff;
+    }
 
-      .maintenance-marquee span {
-        display: inline-block;
-        white-space: nowrap;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        animation: marquee 18s linear infinite;
+    .maintenance-marquee {
+      position: relative;
+      overflow: hidden;
+      background: #06122c;
+      padding: 0.75rem 1rem;
+    }
+
+    .maintenance-marquee span {
+      display: inline-block;
+      white-space: nowrap;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      animation: marquee 18s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
       }
 
-      @keyframes marquee {
-        0% {
-          transform: translateX(100%);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
+      100% {
+        transform: translateX(-100%);
       }
+    }
 
-      .app-hidden {
-        display: none !important;
-      }
-    </style>
-  </head>
+    .app-hidden {
+      display: none !important;
+    }
+  </style>
+</head>
 
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <div id="maintenance">
+  <!-- <div id="maintenance">
       <div class="maintenance-card">
         <h1>Under Maintenance</h1>
         <p class="maintenance-text">
@@ -135,29 +128,30 @@
           </span>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div id="root" class="app-hidden"></div>
-    <script>
-      window.showApp = function () {
-        const maintenance = document.getElementById("maintenance");
-        const root = document.getElementById("root");
-        if (maintenance) maintenance.style.display = "none";
-        if (root) root.classList.remove("app-hidden");
-      };
+  <div id="root"></div>
+  <script>
+    window.showApp = function () {
+      const maintenance = document.getElementById("maintenance");
+      const root = document.getElementById("root");
+      if (maintenance) maintenance.style.display = "none";
+      if (root) root.classList.remove("app-hidden");
+    };
 
-      window.showMaintenance = function () {
-        const maintenance = document.getElementById("maintenance");
-        const root = document.getElementById("root");
-        if (maintenance) maintenance.style.display = "flex";
-        if (root) root.classList.add("app-hidden");
-      };
+    window.showMaintenance = function () {
+      const maintenance = document.getElementById("maintenance");
+      const root = document.getElementById("root");
+      if (maintenance) maintenance.style.display = "flex";
+      if (root) root.classList.add("app-hidden");
+    };
 
-      setTimeout(function () {
-        if (!window.__JNTU_GV_APP_LOADED__) {
-          window.showMaintenance();
-        }
-      }, 5000);
-    </script>
-  </body>
+    setTimeout(function () {
+      if (!window.__JNTU_GV_APP_LOADED__) {
+        window.showMaintenance();
+      }
+    }, 5000);
+  </script>
+</body>
+
 </html>

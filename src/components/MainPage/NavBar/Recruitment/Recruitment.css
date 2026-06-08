@@ -1,22 +1,110 @@
-.scroll-notice {
-  --scroll-duration: 18s;
-  background: linear-gradient(90deg, var(--brand-purple), #2b084f);
+/* JNTU-GV Recruitment Page Styles - Mobile First Design System */
+
+:root {
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 16px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 20px rgba(3, 43, 91, 0.06);
+  --shadow-lg: 0 16px 36px rgba(3, 43, 91, 0.1);
+}
+
+/* ==========================================================================
+   Base & Layout Container
+   ========================================================================== */
+.recruitment-container {
+  padding: 16px 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fdfeff;
+  border-radius: var(--border-radius-md);
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .recruitment-container {
+    padding: 24px 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .recruitment-container {
+    padding: 36px 32px;
+  }
+}
+
+/* ==========================================================================
+   Breadcrumb Navigation
+   ========================================================================== */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  gap: 4px;
+}
+
+.breadcrumb-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.breadcrumb-link:hover {
+  color: var(--brand-purple);
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  color: #cbd5e1;
+  padding: 0 4px;
+}
+
+.breadcrumb-current {
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Scrolling Notice Banner
+   ========================================================================== */
+.scroll-notice-container {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid rgba(59, 13, 102, 0.12);
+  border-radius: var(--border-radius-md);
+  margin-bottom: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.scroll-notice-label {
+  background: linear-gradient(135deg, var(--brand-purple), #21043d);
   color: #fff;
-  margin-bottom: 20px;
-  border-radius: 10px;
   padding: 10px 16px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-weight: 600;
-  box-shadow: 0 8px 30px rgba(43,8,79,0.08);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
-.scroll-notice::before {
-  content: "📢";
-  display: inline-block;
-  font-size: 18px;
-  line-height: 1;
+.scroll-notice {
+  background: #fbf8ff;
+  color: var(--brand-purple);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  flex: 1;
 }
 
 .scroll-viewport {
@@ -28,281 +116,485 @@
   display: inline-block;
   padding-left: 100%;
   white-space: nowrap;
-  animation: scroll-left var(--scroll-duration) linear infinite;
+  font-weight: 600;
+  font-size: 14px;
+  animation: scroll-left 25s linear infinite;
   will-change: transform;
 }
 
-.scroll-notice:hover .scroll-track,
-.scroll-notice:focus-within .scroll-track {
+.scroll-notice-container:hover .scroll-track {
   animation-play-state: paused;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .scroll-track {
-    animation: none;
-    transform: none;
-    padding-left: 0;
-  }
-}
-
 @keyframes scroll-left {
-  0% {
-    transform: translateX(0);
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@media (min-width: 768px) {
+  .scroll-notice-container {
+    flex-direction: row;
+    align-items: stretch;
   }
-
-  100% {
-    transform: translateX(-100%);
+  .scroll-notice-label {
+    border-radius: 0;
+    padding: 0 20px;
   }
 }
 
-.apply-banner {
-  background: linear-gradient(135deg, #e8fff0, #f5fff8);
-  border: 1px solid #c6f6d5;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-}
-
-.recruitment-container {
-  padding: 22px 18px;
-  max-width: 1100px;
-  margin: 0 auto;
-  background: #fbfdff;
-  border-radius: 10px;
-}
-
-.recruitment-header {
-  margin-bottom: 18px;
-}
-
-.recruitment-header h4,
-.recruitment-header h2 {
-  margin: 0 0 6px 0;
-}
-
-.recruitment-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 14px;
-  align-items: start;
-}
-
-/* Header centered and styled like Andhra University */
+/* ==========================================================================
+   Header Section
+   ========================================================================== */
 .recruitment-header {
   text-align: center;
-  margin-bottom: 18px;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  padding: 0 8px;
 }
 
-.recruitment-header h3,
-.recruitment-header h1 {
+.recruitment-title {
   color: var(--brand-purple);
-  font-weight: 700;
-  letter-spacing: 0.25px;
-  font-size: 20px;
-  margin-bottom: 6px;
+  font-weight: 800 !important;
+  font-size: 24px !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.5px !important;
+  margin-bottom: 10px !important;
+}
+
+.recruitment-subtitle {
+  color: #475569 !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  max-width: 720px;
+  margin: 0 auto !important;
 }
 
 .header-divider {
-  height: 3px;
-  background: var(--brand-purple);
-  width: 100%;
-  margin: 18px 0 26px 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--brand-purple) 25%, var(--accent) 50%, var(--brand-purple) 75%, transparent);
+  width: 120px;
+  margin: 16px auto 28px auto;
+  border-radius: 999px;
 }
 
-:root { /* theme variables moved to src/App.css for global consistency */ }
-
-.recruitment-header {
-  border-left: 6px solid var(--primary);
-  padding-left: 14px;
+@media (min-width: 768px) {
+  .recruitment-title {
+    font-size: 32px !important;
+  }
+  .recruitment-subtitle {
+    font-size: 16px !important;
+  }
 }
 
-.breadcrumb {
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 12px;
+/* ==========================================================================
+   Apply Banner
+   ========================================================================== */
+.apply-banner {
+  background: linear-gradient(135deg, rgba(3, 43, 91, 0.02) 0%, rgba(59, 13, 102, 0.04) 100%);
+  border: 1px solid rgba(3, 43, 91, 0.08);
+  border-left: 6px solid var(--accent);
+  padding: 20px 18px;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
 }
 
-.breadcrumb a {
+.apply-banner-content h2 {
   color: var(--primary);
-  text-decoration: none;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+
+.apply-banner-content p {
+  color: #475569;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.btn-apply-now {
+  background-color: #10b981 !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  padding: 10px 24px !important;
+  font-size: 15px !important;
+  border-radius: var(--border-radius-sm) !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2) !important;
+  transition: var(--transition-smooth) !important;
+  width: 100%;
+}
+
+.btn-apply-now:hover {
+  background-color: #059669 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3) !important;
+}
+
+@media (min-width: 768px) {
+  .apply-banner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 24px 32px;
+    gap: 24px;
+  }
+  
+  .apply-banner-content h2 {
+    font-size: 22px;
+  }
+
+  .btn-apply-now {
+    width: auto;
+    white-space: nowrap;
+  }
+}
+
+/* ==========================================================================
+   Recruitment Grid & Cards
+   ========================================================================== */
+.recruitment-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 640px) {
+  .recruitment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .recruitment-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .recruitment-card {
   background: #fff;
-  border: 1px solid rgba(15,23,36,0.06);
-  border-radius: 10px;
+  border: 1px solid rgba(3, 43, 91, 0.08);
+  border-radius: var(--border-radius-md);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+  position: relative;
 }
 
-.card-top {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 12px 14px 0 14px;
-}
-
-.card-badge {
-  background: rgba(59,13,102,0.08);
-  color: var(--brand-purple);
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.card-type {
-  background: rgba(3,43,91,0.04);
-  color: var(--primary);
-  padding: 5px 8px;
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 11px;
-}
-
-.role-badges {
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.role-badge {
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.role-badge.badge-assistant { background: linear-gradient(180deg,#1fb2a8,#0ea38f); }
-.role-badge.badge-associate { background: linear-gradient(180deg,#4aa3ff,#2b83ff); }
-.role-badge.badge-professor { background: linear-gradient(180deg,#d4a017,#b57900); }
-.role-badge.badge-press { background: rgba(0,0,0,0.12); color: #111; }
-.role-badge.badge-detailed { background: linear-gradient(180deg,#f6c84c,#e2a800); color: #111; }
-
-.status-badge.active {
-  background: linear-gradient(90deg, rgba(212,160,23,0.12), rgba(3,43,91,0));
-  color: var(--primary);
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.card-body {
-  padding: 14px 16px 16px 16px;
-  flex: 1 1 auto;
-}
-
-.card-title {
-  font-size: 14px;
-  color: #0f1724;
-  margin: 0 0 8px 0;
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-.card-file {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #fbfdff;
-  padding: 8px 10px;
-  border-radius: 6px;
-  color: var(--muted);
-  font-size: 12px;
-  margin-bottom: 10px;
+.recruitment-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.card-file::before {
-  content: "📄";
-  display: inline-block;
-  margin-right: 10px;
-  font-size: 16px;
-  line-height: 1;
-}
-
-.card-actions {
-  display: flex;
-  gap: 10px;
-  padding: 10px 12px 14px 12px;
-  align-items: center;
-}
-
-.card-actions .MuiButton-root {
-  text-transform: none;
-  border-radius: 8px;
-  padding: 6px 10px;
-  font-size: 13px;
-}
-
-.btn-view {
-  background: transparent;
-  border: 1px solid rgba(59,13,102,0.12);
-  color: var(--brand-purple);
-  flex: 0 0 40%;
-}
-
-.btn-download {
-  background: linear-gradient(180deg, var(--brand-purple), #2b084f);
-  color: #fff;
-  box-shadow: 0 6px 18px rgba(59,13,102,0.12);
-  flex: 0 0 60%;
+  height: 4px;
+  background: var(--brand-purple);
+  transition: var(--transition-smooth);
 }
 
 .recruitment-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 45px rgba(59,13,102,0.09);
-  border-color: rgba(59,13,102,0.12);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(59, 13, 102, 0.2);
 }
 
-.empty-state {
-  padding: 28px;
-  text-align: center;
-  color: var(--muted);
+.recruitment-card:hover::before {
+  background: var(--accent);
 }
 
-.apply-banner {
-  background: linear-gradient(135deg, #f7fbff, #ffffff);
-  border: 1px solid rgba(3,43,91,0.06);
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 25px;
+.card-top {
+  padding: 18px 18px 0 18px;
+}
+
+.badge-wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
   align-items: center;
-  gap: 15px;
 }
 
-/* Component-specific overrides (kept minimal to use global theme variables) */
+.card-badge {
+  background: rgba(59, 13, 102, 0.08);
+  color: var(--brand-purple);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
 
-@media (max-width: 480px) {
-  .apply-banner {
-    flex-direction: column;
-    align-items: flex-start;
+.card-type {
+  background: rgba(3, 43, 91, 0.06);
+  color: var(--primary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.role-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.1px;
+}
+
+.role-badge.badge-assistant { background: linear-gradient(135deg, #1fb2a8, #0ea38f); }
+.role-badge.badge-associate { background: linear-gradient(135deg, #4aa3ff, #2b83ff); }
+.role-badge.badge-professor { background: linear-gradient(135deg, #d4a017, #b57900); }
+.role-badge.badge-press { background: #64748b; }
+.role-badge.badge-detailed { background: linear-gradient(135deg, #f59e0b, #d97706); }
+
+.card-body {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 15px;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 65px; /* Fixed height to align cards nicely */
+}
+
+.card-file {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 8px 10px;
+  border-radius: var(--border-radius-sm);
+  color: #475569;
+  font-size: 11px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.card-file::before {
+  content: "📄";
+  font-size: 14px;
+}
+
+.card-date {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: auto;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  padding: 14px 18px 18px 18px;
+  border-top: 1px solid #f1f5f9;
+  background: #fdfeff;
+}
+
+.card-actions .MuiButton-root {
+  text-transform: none !important;
+  border-radius: var(--border-radius-sm) !important;
+  padding: 6px 12px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  flex: 1;
+}
+
+.btn-view {
+  border-color: rgba(3, 43, 91, 0.25) !important;
+  color: var(--primary) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.btn-view:hover {
+  background-color: rgba(3, 43, 91, 0.04) !important;
+  border-color: var(--primary) !important;
+}
+
+.btn-download {
+  background: linear-gradient(135deg, var(--brand-purple), #260548) !important;
+  color: #fff !important;
+  transition: var(--transition-smooth) !important;
+  box-shadow: 0 4px 10px rgba(59, 13, 102, 0.15) !important;
+}
+
+.btn-download:hover {
+  background: linear-gradient(135deg, #4b1280, #31085c) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(59, 13, 102, 0.22) !important;
+}
+
+/* ==========================================================================
+   Empty State
+   ========================================================================== */
+.empty-state {
+  padding: 48px 24px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid rgba(3, 43, 91, 0.08);
+  border-radius: var(--border-radius-md);
+  color: var(--muted);
+  box-shadow: var(--shadow-sm);
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.empty-state h6 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   Queries Contact Footer Card
+   ========================================================================== */
+.recruitment-footer-card {
+  background: #ffffff;
+  border: 1px solid rgba(3, 43, 91, 0.08);
+  border-radius: var(--border-radius-lg);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-md);
+  margin-top: 48px;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  text-align: center;
+  letter-spacing: -0.2px;
+}
+
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-icon-wrapper {
+  background: rgba(3, 43, 91, 0.06);
+  color: var(--primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.footer-icon {
+  font-size: 20px !important;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #64748b;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.footer-link {
+  color: var(--brand-purple);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: var(--transition-smooth);
+}
+
+.footer-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.footer-value {
+  color: #334155;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .recruitment-footer-card {
+    padding: 36px;
   }
 
-  .card-title { font-size: 13px; }
+  .footer-title {
+    font-size: 22px;
+    margin-bottom: 32px;
+  }
 
-  .card-actions { flex-direction: column; gap: 8px; }
+  .footer-grid {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 32px;
+  }
 
-  .btn-view, .btn-download { flex: 1 1 auto; width: 100%; }
-}
+  .footer-item {
+    flex: 1;
+    gap: 16px;
+  }
 
-@media (min-width: 900px) {
-  .card-top { flex-direction: row; align-items: center; }
+  .footer-icon-wrapper {
+    width: 48px;
+    height: 48px;
+  }
+
+  .footer-icon {
+    font-size: 24px !important;
+  }
+
+  /* Add border lines between footer elements */
+  .footer-item:not(:last-child) {
+    border-right: 1px solid #f1f5f9;
+    padding-right: 24px;
+  }
 }

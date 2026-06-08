@@ -6,6 +6,13 @@ import {
   CircularProgress,
   Box,
 } from "@mui/material";
+import DownloadIcon from "@mui/icons-material/Download";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import EmailIcon from "@mui/icons-material/Email";
+import CallIcon from "@mui/icons-material/Call";
+import PlaceIcon from "@mui/icons-material/Place";
+import CampaignIcon from "@mui/icons-material/Campaign";
+import HomeIcon from "@mui/icons-material/Home";
 
 function Recruitment() {
   const [notifications, setNotifications] = useState([]);
@@ -103,25 +110,36 @@ function Recruitment() {
     <main className="recruitment-container" role="main" aria-labelledby="recruitment-heading">
 
       <nav className="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> / Recruitment
+        <a href="/" className="breadcrumb-link">
+          <HomeIcon fontSize="inherit" sx={{ mr: 0.5, verticalAlign: 'middle' }} />
+          Home
+        </a>
+        <span className="breadcrumb-separator">/</span>
+        <span className="breadcrumb-current">Recruitment</span>
       </nav>
 
       {/* Scrolling Notice */}
-      <div className="scroll-notice" role="status" aria-live="polite" aria-atomic="true">
-        <div className="scroll-viewport">
-          <div className="scroll-track">
-            📢 Faculty Recruitment–2026: Last date for online application submission and registration fee payment extended to 15-06-2026. Hard copy submission deadline extended to 22-06-2026.
+      <div className="scroll-notice-container">
+        <div className="scroll-notice-label">
+          <CampaignIcon sx={{ mr: 1, color: '#fff', fontSize: '20px' }} />
+          <span>Latest Announcement</span>
+        </div>
+        <div className="scroll-notice" role="status" aria-live="polite" aria-atomic="true">
+          <div className="scroll-viewport">
+            <div className="scroll-track">
+              Faculty Recruitment–2026: Last date for online application submission and registration fee payment extended to 15-06-2026. Hard copy submission deadline extended to 22-06-2026.
+            </div>
           </div>
         </div>
       </div>
 
       {/* Page Header */}
       <div className="recruitment-header">
-        <Typography id="recruitment-heading" variant="h3" fontWeight={700} component="h1" style={{color: 'var(--brand-purple)'}}>
+        <Typography id="recruitment-heading" variant="h3" fontWeight={700} component="h1" className="recruitment-title">
           Faculty Recruitment Notifications — 2026
         </Typography>
 
-        <Typography variant="body1" color="text.secondary">
+        <Typography variant="body1" className="recruitment-subtitle">
           Latest notifications, application links, and important dates. Use the links provided to view or download official documents.
         </Typography>
       </div>
@@ -129,9 +147,8 @@ function Recruitment() {
 
       {/* Apply Banner */}
       <div className="apply-banner">
-        <div>
+        <div className="apply-banner-content">
           <h2>Faculty Recruitment 2026</h2>
-
           <p>
             Online application submission and registration
             fee payment extended up to 15-06-2026.
@@ -141,8 +158,9 @@ function Recruitment() {
         <Button
           variant="contained"
           color="success"
-          href="https://recruitment.jntugv.edu.in"
+          href="https://apuniversitiesrecruitment.apcfss.in/"
           target="_blank"
+          className="btn-apply-now"
         >
           Apply Now
         </Button>
@@ -166,7 +184,7 @@ function Recruitment() {
               <Typography variant="h6" gutterBottom>
                 No active recruitment notifications at the moment
               </Typography>
-              <Typography variant="body2" sx={{mb:2}}>
+              <Typography variant="body2" sx={{ mb: 3 }}>
                 Check back later or visit the recruitment portal for archived notices.
               </Typography>
               <Button variant="contained" color="primary" href="https://apuniversitiesrecruitment.apcfss.in/" target="_blank" rel="noopener noreferrer">
@@ -210,7 +228,7 @@ function Recruitment() {
                 return (
                   <article className="recruitment-card" key={row.id || index} aria-labelledby={`title-${index}`}>
                     <div className="card-top">
-                      <div style={{display:'flex',gap:8,alignItems:'center',flexWrap:'wrap'}}>
+                      <div className="badge-wrapper">
                         <span className="card-badge">Recruitment</span>
                         <span className="card-type">{tag}</span>
                         <div className="role-badges" aria-hidden>
@@ -223,7 +241,7 @@ function Recruitment() {
 
                     <div className="card-body">
                       <h3 className="card-title" id={`title-${index}`}>{row.title}</h3>
-                      {filename && <div className="card-file">{filename}</div>}
+                      {filename && <div className="card-file" title={filename}>{filename}</div>}
                       <div className="card-date">📅 {row.displayDate}</div>
                     </div>
 
@@ -236,6 +254,7 @@ function Recruitment() {
                         rel="noopener noreferrer"
                         aria-label={`View ${row.title}`}
                         className="btn-view"
+                        startIcon={<VisibilityIcon />}
                       >
                         View
                       </Button>
@@ -250,6 +269,7 @@ function Recruitment() {
                         download={Boolean(row.file_link)}
                         aria-label={`Download ${row.title}`}
                         className="btn-download"
+                        startIcon={<DownloadIcon />}
                       >
                         Download
                       </Button>
@@ -262,23 +282,44 @@ function Recruitment() {
         </div>
       )}
 
-      {/* Footer */}
-      <div className="recruitment-footer">
-        <Typography variant="h6">
-          Contact for Queries
-        </Typography>
-
-        <Typography variant="body2">
-          Email: jntugvrecruitment@jntugv.edu.in
-        </Typography>
-
-        <Typography variant="body2">
-          Phone: +91-7780351078
-        </Typography>
-
-        <Typography variant="body2">
-          Address: JNTU-GV, Vizianagaram
-        </Typography>
+      {/* Contact Footer */}
+      <div className="recruitment-footer-card">
+        <h3 className="footer-title">Contact for Queries</h3>
+        <div className="footer-grid">
+          <div className="footer-item">
+            <div className="footer-icon-wrapper">
+              <EmailIcon className="footer-icon" />
+            </div>
+            <div className="footer-text">
+              <span className="footer-label">Email Support</span>
+              <a href="mailto:jntugvrecruitment@jntugv.edu.in" className="footer-link">
+                jntugvrecruitment@jntugv.edu.in
+              </a>
+            </div>
+          </div>
+          <div className="footer-item">
+            <div className="footer-icon-wrapper">
+              <CallIcon className="footer-icon" />
+            </div>
+            <div className="footer-text">
+              <span className="footer-label">Phone Helpline</span>
+              <a href="tel:+917780351078" className="footer-link">
+                +91-7780351078
+              </a>
+            </div>
+          </div>
+          <div className="footer-item">
+            <div className="footer-icon-wrapper">
+              <PlaceIcon className="footer-icon" />
+            </div>
+            <div className="footer-text">
+              <span className="footer-label">Office Address</span>
+              <span className="footer-value">
+                JNTU-GV Campus, Vizianagaram
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );
