@@ -99,15 +99,37 @@
 .tab-navigation-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 0 10px;
 }
 
 .modern-pill-tabs {
+  width: 100%;
   background: #ffffff;
   padding: 6px;
   border-radius: 50px;
   border: 1px solid #eedff7;
   box-shadow: 0 8px 24px rgba(52, 4, 104, 0.04);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modern-pill-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.modern-pill-tabs .MuiTabs-flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modern-pill-tabs .MuiTab-root {
+  flex: 1 1 auto;
+  min-width: 160px;
+  max-width: 100%;
 }
 
 .modern-pill-tabs .MuiTabs-indicator {
@@ -129,13 +151,18 @@
 
 .modern-pill-tabs .MuiTab-root:hover {
   color: var(--primary-indigo) !important;
-  background: rgba(52, 4, 104, 0.04);
+  background: rgba(52, 4, 104, 0.08) !important;
 }
 
 .modern-pill-tabs .Mui-selected {
   color: #ffffff !important;
   background: var(--primary-indigo) !important;
   box-shadow: 0 4px 15px rgba(52, 4, 104, 0.2) !important;
+}
+
+.modern-pill-tabs .Mui-selected:hover {
+  color: #ffffff !important;
+  background: var(--primary-indigo) !important;
 }
 
 /* --- Premium Structural Media Cards Grid --- */

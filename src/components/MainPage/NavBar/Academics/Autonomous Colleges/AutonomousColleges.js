@@ -140,7 +140,35 @@ const AutonomousColleges = () => {
 
   return (
     <div className="autonomousColleges">
-      ...
+      <div className="college-list-header">
+        <div>
+          <div className="AutonomousColleges-title">Autonomous Colleges</div>
+          <p className="subtitle">
+            {location.state?.category 
+              ? `Explore JNTU-GV's autonomous institutions (Highlighted: ${location.state.category.charAt(0).toUpperCase() + location.state.category.slice(1)})` 
+              : "Discover JNTU-GV's Autonomous Colleges across various disciplines"}
+          </p>
+        </div>
+        <div className="search-section">
+          <div className="search-bar-wrapper" style={{ width: "60%" }}>
+            <TextField
+              fullWidth
+              placeholder="Search colleges by name, code, district, or year"
+              value={searchQuery}
+              onChange={(event) => setSearchQuery(event.target.value)}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon color="action" />
+                  </InputAdornment>
+                ),
+              }}
+              variant="outlined"
+              size="small"
+            />
+          </div>
+        </div>
+      </div>
       <div className="table-container">
         <AutonomousCollegeTable 
           rows={rowsEngg} 
@@ -157,7 +185,6 @@ const AutonomousColleges = () => {
           onToggle={handleToggle("pharmacy")}
         />
       </div>
-      ...
     </div>
   );
 };

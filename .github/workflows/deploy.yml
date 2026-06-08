@@ -38,14 +38,14 @@ jobs:
             set -e
 
             APP_DIR=/home/jntugv/htdocs/jntugv.edu.in/JNTU-GV
-            DIST_DIR=$APP_DIR/dist
+            BUILD_DIR=$APP_DIR/build
+            MAINTENANCE_SOURCE=$APP_DIR/public/system/maintenance.html
+            MAINTENANCE_LINK=/home/jntugv/maintenance.html
 
             PM2_NAME=JNTU-GV
 
             HEALTH_URL_LOCAL=http://127.0.0.1:3000
             HEALTH_URL_PUBLIC=https://jntugv.edu.in
-
-            MAINTENANCE_FILE=/home/jntugv/maintenance.html
 
             echo "======================================="
             echo "Starting Production Deployment"
@@ -69,18 +69,25 @@ jobs:
             mkdir -p $BACKUP_DIR
 
             cp -r \
-              dist \
+              build \
               $BACKUP_DIR 2>/dev/null || true
 
             echo "======================================="
             echo "Enabling Maintenance Mode"
             echo "======================================="
 
-            if [ -f "$MAINTENANCE_FILE" ]; then
-              cp $MAINTENANCE_FILE $DIST_DIR/index.html
+            if [ -e "$MAINTENANCE_LINK" ] && [ ! -L "$MAINTENANCE_LINK" ]; then
+              rm -f "$MAINTENANCE_LINK"
+            fi
+
+            ln -sf "$MAINTENANCE_SOURCE" "$MAINTENANCE_LINK" || true
+            echo "Created symlink: $MAINTENANCE_LINK -> $MAINTENANCE_SOURCE"
+
+            if [ -f "$MAINTENANCE_SOURCE" ] && [ -d "$BUILD_DIR" ]; then
+              cp "$MAINTENANCE_SOURCE" "$BUILD_DIR/index.html"
               echo "Maintenance page enabled"
             else
-              echo "Maintenance file not found"
+              echo "Maintenance page not enabled: source or build directory missing"
             fi
 
             echo "Resetting Repository to Latest Main"
@@ -103,9 +110,9 @@ jobs:
 
               git reset --hard $CURRENT_COMMIT
 
-              if [ -d "$BACKUP_DIR/dist" ]; then
-                rm -rf dist
-                cp -r $BACKUP_DIR/dist ./dist
+              if [ -d "$BACKUP_DIR/build" ]; then
+                rm -rf build
+                cp -r $BACKUP_DIR/build ./build
               fi
 
               pm2 reload $PM2_NAME || pm2 restart $PM2_NAME
@@ -171,9 +178,9 @@ jobs:
 
               git reset --hard $CURRENT_COMMIT
 
-              if [ -d "$BACKUP_DIR/dist" ]; then
-                rm -rf dist
-                cp -r $BACKUP_DIR/dist ./dist
+              if [ -d "$BACKUP_DIR/build" ]; then
+                rm -rf build
+                cp -r $BACKUP_DIR/build ./build
               fi
 
               pm2 reload $PM2_NAME || pm2 restart $PM2_NAME

@@ -1,285 +1,368 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import {
-  Briefcase,
+  Award,
+  BriefcaseBusiness,
   Building2,
-  BrainCircuit,
-  Hotel,
+  Cpu,
   GraduationCap,
-  Trees,
+  HeartHandshake,
+  Laptop2,
+  Target,
   Users,
-  Scale,
-  Rocket,
-  Globe2,
+  X,
 } from "lucide-react";
 
+import bestPracticesData from "./BestPracticesData.json";
 import "./BestPractices.css";
+
+const iconMap = {
+  Award,
+  BriefcaseBusiness,
+  Building2,
+  Cpu,
+  GraduationCap,
+  HeartHandshake,
+  Laptop2,
+  Target,
+  Users,
+};
+
+const impactLabels = {
+  activeMoUs: "Active MoUs",
+  certificationPrograms: "Certification Programs",
+  annualBeneficiaries: "Annual Beneficiaries",
+  placementTarget: "Placement Target",
+  employabilityImprovement: "Employability Improvement",
+  internshipImplementation: "Internship Implementation",
+};
+
+const renderIcon = (iconName, size = 28) => {
+  const Icon = iconMap[iconName] || Target;
+  return <Icon size={size} strokeWidth={1.9} />;
+};
+
+const importImages = (context) =>
+  context
+    .keys()
+    .sort((first, second) => first.localeCompare(second, undefined, { numeric: true }))
+    .map(context);
+
+const jobOpportunityImages = importImages(
+  require.context(
+    "../../../assets/Gallery/bestPractices/Job Opputunities",
+    false,
+    /\.(jpe?g)$/i
+  )
+);
+
+const smartHostelImages = importImages(
+  require.context(
+    "../../../assets/Gallery/bestPractices/Smart Hostel",
+    false,
+    /\.(jpe?g)$/i
+  )
+);
+
+const walkWithNatureImages = importImages(
+  require.context(
+    "../../../assets/Gallery/bestPractices/Walk with nature",
+    false,
+    /\.(jpe?g)$/i
+  )
+);
+
+const practiceImageGroups = {
+  "bp-01": {
+    coverIndex: 0,
+    gallery: jobOpportunityImages,
+  },
+  "bp-02": {
+    coverIndex: 0,
+    gallery: smartHostelImages,
+  },
+  "bp-03": {
+    coverIndex: 4,
+    gallery: smartHostelImages,
+  },
+  "bp-04": {
+    coverIndex: 0,
+    gallery: walkWithNatureImages,
+  },
+  "bp-05": {
+    coverIndex: 8,
+    gallery: jobOpportunityImages,
+  },
+};
+
+const getPracticeImages = (practiceId) => {
+  const imageGroup = practiceImageGroups[practiceId] || practiceImageGroups["bp-01"];
+  const fallbackGallery = walkWithNatureImages.length
+    ? walkWithNatureImages
+    : smartHostelImages;
+  const gallery = imageGroup.gallery.length ? imageGroup.gallery : fallbackGallery;
+  const cover = gallery[imageGroup.coverIndex % gallery.length] || gallery[0];
+
+  return {
+    cover,
+    gallery,
+  };
+};
 
 const BestPractices = () => {
   const [selectedPractice, setSelectedPractice] = useState(null);
 
-  const practices = [
-    {
-      id: 1,
-      icon: <Briefcase size={28} />,
-      title: "AI-Enabled Career Intelligence Ecosystem",
-      image:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
-      description:
-        "A centralized employability platform providing AI-driven career guidance, internships, jobs, apprenticeships, and certification opportunities for students and unemployed youth.",
-      highlights: [
-        "Opportunity Horizon Initiative",
-        "AI-driven Career Guidance",
-        "Digital Employability Platform",
-      ],
-    },
+  const { institution, overview, institutionalImpact, bestPractices } =
+    bestPracticesData;
 
-    {
-      id: 2,
-      icon: <Building2 size={28} />,
-      title: "Industry & MSME Integrated Skilling",
-      image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
-      description:
-        "45+ MoUs with industries, MSMEs, and organizations including NASSCOM, EXCELR, and NIRMAAN for industry-integrated skilling and entrepreneurship.",
-      highlights: [
-        "Industry Collaborations",
-        "MSME Integration",
-        "Entrepreneurship Support",
-      ],
-    },
-
-    {
-      id: 3,
-      icon: <BrainCircuit size={28} />,
-      title: "Certification-Driven Emerging Technologies",
-      image:
-        "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
-      description:
-        "Certification programs in Generative AI, AWS, IoT, Cyber Security, and Entrepreneurial Skills preparing students for Industry 5.0.",
-      highlights: [
-        "Generative AI",
-        "AWS & Cloud",
-        "Cyber Security",
-      ],
-    },
-
-    {
-      id: 4,
-      icon: <Hotel size={28} />,
-      title: "AI-Enabled Smart Hostel Management",
-      image:
-        "https://images.unsplash.com/photo-1555854877-bab0e564b8d5",
-      description:
-        "Developed by B.Tech IT students for smart hostel automation, grievance handling, and resource management using Artificial Intelligence.",
-      highlights: [
-        "AI Automation",
-        "Smart Monitoring",
-        "Digital Grievance System",
-      ],
-    },
-
-    {
-      id: 5,
-      icon: <GraduationCap size={28} />,
-      title: "Experiential Learning & Campus Internships",
-      image:
-        "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
-      description:
-        "Students participate in real-time campus infrastructure, maintenance, and technology projects for practical learning experience.",
-      highlights: [
-        "Hands-on Learning",
-        "Campus Projects",
-        "Practical Exposure",
-      ],
-    },
-
-    {
-      id: 6,
-      icon: <Trees size={28} />,
-      title: "Walk with Nature Initiative",
-      image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-      description:
-        "Weekly health and wellness initiative promoting physical fitness, environmental sustainability, and mental well-being.",
-      highlights: [
-        "Health & Wellness",
-        "Green Campus",
-        "Mental Well-being",
-      ],
-    },
-
-    {
-      id: 7,
-      icon: <Users size={28} />,
-      title: "Community Outreach & Vidyanjali",
-      image:
-        "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
-      description:
-        "Community engagement initiatives including digital literacy, school volunteering, awareness programs, and SDG-oriented outreach.",
-      highlights: [
-        "Digital Literacy",
-        "School Volunteering",
-        "SDG Outreach",
-      ],
-    },
-
-    {
-      id: 8,
-      icon: <Scale size={28} />,
-      title: "AI, Technology & Law Programme",
-      image:
-        "https://images.unsplash.com/photo-1589829545856-d10d557cf95f",
-      description:
-        "Interdisciplinary PG certification integrating Artificial Intelligence, emerging technologies, ethics, and legal frameworks.",
-      highlights: [
-        "AI & Ethics",
-        "Technology Law",
-        "Future-ready Curriculum",
-      ],
-    },
-
-    {
-      id: 9,
-      icon: <Rocket size={28} />,
-      title: "Innovation & Startup Ecosystem",
-      image:
-        "https://images.unsplash.com/photo-1516321165247-4aa89a48be28",
-      description:
-        "Hackathons, startup incubation, innovation challenges, and entrepreneurship development programs for student innovators.",
-      highlights: [
-        "Hackathons",
-        "Startup Support",
-        "Innovation Culture",
-      ],
-    },
-
-    {
-      id: 10,
-      icon: <Globe2 size={28} />,
-      title: "Global Academic Collaborations",
-      image:
-        "https://images.unsplash.com/photo-1521791136064-7986c2920216",
-      description:
-        "National and international collaborations strengthening research, internships, industry projects, and academic excellence.",
-      highlights: [
-        "International MoUs",
-        "Research Collaboration",
-        "Global Exposure",
-      ],
-    },
-  ];
+  const impactStats = useMemo(
+    () =>
+      Object.entries(institutionalImpact || {}).map(([key, value]) => ({
+        label: impactLabels[key] || key,
+        value,
+      })),
+    [institutionalImpact]
+  );
 
   return (
-    <div className="bp-container">
-      {/* HERO SECTION */}
-      <div className="bp-hero">
-        <div className="bp-overlay"></div>
+    <section className="best-practices-page">
+      <div className="best-practices-hero">
+        <div className="best-practices-hero-inner">
+          <span className="best-practices-kicker">{institution.shortName}</span>
+          <h1>{overview.title}</h1>
+          <p>{overview.description}</p>
 
-        <div className="bp-hero-content">
-          <span className="bp-badge">
-            JNTU-GV • Best Practices 2025-26
-          </span>
-
-          <h1>
-            Innovation Driven <span>University Ecosystem</span>
-          </h1>
-
-          <p>
-            Empowering students through employability, sustainability,
-            innovation, entrepreneurship, and community engagement.
-          </p>
+          <div className="hero-meta-row">
+            <span>{institution.category}</span>
+            <span>{institution.academicYears.join(" | ")}</span>
+          </div>
         </div>
       </div>
 
-      {/* SECTION TITLE */}
-      <div className="bp-section-header">
-        <h2>Institutional Best Practices</h2>
-
-        <p>
-          Building a future-ready university aligned with SDGs,
-          Industry 5.0, Innovation, and Inclusive Education.
-        </p>
-      </div>
-
-      {/* GRID */}
-      <div className="bp-grid">
-        {practices.map((practice) => (
-          <div
-            className="bp-card"
-            key={practice.id}
-            onClick={() => setSelectedPractice(practice)}
-          >
-            <div className="bp-image-wrapper">
-              <img
-                src={practice.image}
-                alt={practice.title}
-                className="bp-image"
-              />
-
-              <div className="bp-icon">
-                {practice.icon}
-              </div>
-            </div>
-
-            <div className="bp-card-content">
-              <span className="bp-number">
-                0{practice.id}
-              </span>
-
-              <h3>{practice.title}</h3>
-
-              <p>{practice.description}</p>
-
-              <div className="bp-tags">
-                {practice.highlights.map((tag, index) => (
-                  <span key={index}>{tag}</span>
-                ))}
-              </div>
-
-              <button className="bp-button">
-                View Details →
-              </button>
-            </div>
+      <div className="best-practices-content">
+        <div className="overview-panel">
+          <div>
+            <span className="section-label">Theme</span>
+            <h2>{institution.theme}</h2>
+            <p>{overview.vision}</p>
           </div>
-        ))}
+
+          <div className="focus-tags">
+            {overview.focusAreas.map((area) => (
+              <span key={area}>{area}</span>
+            ))}
+          </div>
+        </div>
+
+        <div className="impact-grid">
+          {impactStats.map((stat) => (
+            <div className="impact-card" key={stat.label}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="section-heading">
+          <span className="section-label">Institutional Best Practices</span>
+          <h2>Future-ready education through measurable campus initiatives</h2>
+        </div>
+
+        <div className="best-practices-grid">
+          {bestPractices.map((practice) => {
+            const practiceImages = getPracticeImages(practice.id);
+
+            return (
+              <article
+                className="best-practice-card"
+                key={practice.id}
+                style={{ "--practice-color": practice.themeColor }}
+              >
+                <div className="practice-image-wrap">
+                  <img
+                    src={practiceImages.cover}
+                    alt={practice.title}
+                    className="practice-image"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="card-body">
+                  <div className="card-topline">
+                    <div className="practice-icon">
+                      {renderIcon(practice.icon, 30)}
+                    </div>
+                    <div>
+                      <span>{practice.category}</span>
+                      <h3>{practice.title}</h3>
+                    </div>
+                  </div>
+
+                  <p>{practice.shortDescription}</p>
+
+                  <div className="practice-stats">
+                    {practice.statistics.map((stat) => (
+                      <div key={`${practice.id}-${stat.label}`}>
+                        <strong>{stat.value}</strong>
+                        <span>{stat.label}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {practice.technologies?.length > 0 && (
+                    <div className="technology-tags">
+                      {practice.technologies.slice(0, 4).map((technology) => (
+                        <span key={technology}>{technology}</span>
+                      ))}
+                    </div>
+                  )}
+
+                  <button
+                    className="details-button"
+                    type="button"
+                    onClick={() => setSelectedPractice(practice)}
+                  >
+                    View Details
+                  </button>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+
+        <div className="future-roadmap">
+          <span className="section-label">Roadmap</span>
+          <h2>{bestPracticesData.futureVision.title}</h2>
+          <div className="roadmap-grid">
+            {bestPracticesData.futureVision.goals.map((goal) => (
+              <span key={goal}>{goal}</span>
+            ))}
+          </div>
+        </div>
       </div>
 
-      {/* MODAL */}
       {selectedPractice && (
         <div
-          className="bp-modal-overlay"
+          className="practice-modal-backdrop"
           onClick={() => setSelectedPractice(null)}
         >
           <div
-            className="bp-modal"
-            onClick={(e) => e.stopPropagation()}
+            className="practice-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="practice-modal-title"
+            onClick={(event) => event.stopPropagation()}
           >
-            <img
-              src={selectedPractice.image}
-              alt={selectedPractice.title}
+            <button
+              className="modal-close"
+              type="button"
+              aria-label="Close details"
+              onClick={() => setSelectedPractice(null)}
+            >
+              <X size={20} />
+            </button>
+
+            <div className="modal-header">
+              <div
+                className="practice-icon"
+                style={{ "--practice-color": selectedPractice.themeColor }}
+              >
+                {renderIcon(selectedPractice.icon, 32)}
+              </div>
+              <div>
+                <span>{selectedPractice.academicYear}</span>
+                <h2 id="practice-modal-title">{selectedPractice.title}</h2>
+                <p>{selectedPractice.shortDescription}</p>
+              </div>
+            </div>
+
+            <PracticeGallery
+              title={selectedPractice.title}
+              images={getPracticeImages(selectedPractice.id).gallery}
             />
 
-            <div className="bp-modal-content">
-              <h2>{selectedPractice.title}</h2>
-
-              <p>{selectedPractice.description}</p>
-
-              <div className="bp-modal-tags">
-                {selectedPractice.highlights.map((tag, index) => (
-                  <span key={index}>{tag}</span>
-                ))}
-              </div>
-
-              <button
-                className="bp-close-btn"
-                onClick={() => setSelectedPractice(null)}
-              >
-                Close
-              </button>
+            <div className="modal-sections">
+              <PracticeList title="Objectives" items={selectedPractice.objectives} />
+              <PracticeInitiatives items={selectedPractice.initiatives} />
+              <PracticeList title="Outcomes" items={selectedPractice.outcomes} />
+              <PracticeTags title="SDG Alignment" items={selectedPractice.sdgAlignment} />
+              <PracticeTags title="Partners" items={selectedPractice.partners} />
             </div>
           </div>
         </div>
       )}
+    </section>
+  );
+};
+
+const PracticeGallery = ({ title, images }) => {
+  if (!images?.length) {
+    return null;
+  }
+
+  return (
+    <div className="practice-gallery" aria-label={`${title} images`}>
+      {images.map((image, index) => (
+        <img
+          src={image}
+          alt={`${title} ${index + 1}`}
+          key={image}
+          loading="lazy"
+        />
+      ))}
+    </div>
+  );
+};
+
+const PracticeList = ({ title, items }) => {
+  if (!items?.length) {
+    return null;
+  }
+
+  return (
+    <div className="modal-section">
+      <h3>{title}</h3>
+      <ul>
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+const PracticeInitiatives = ({ items }) => {
+  if (!items?.length) {
+    return null;
+  }
+
+  return (
+    <div className="modal-section modal-section-wide">
+      <h3>Key Initiatives</h3>
+      <div className="initiative-grid">
+        {items.map((initiative) => (
+          <div className="initiative-card" key={initiative.title}>
+            <h4>{initiative.title}</h4>
+            <p>{initiative.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const PracticeTags = ({ title, items }) => {
+  if (!items?.length) {
+    return null;
+  }
+
+  return (
+    <div className="modal-section">
+      <h3>{title}</h3>
+      <div className="modal-tags">
+        {items.map((item) => (
+          <span key={item}>{item}</span>
+        ))}
+      </div>
     </div>
   );
 };

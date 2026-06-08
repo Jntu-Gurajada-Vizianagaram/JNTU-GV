@@ -1,5 +1,6 @@
 import {
   Apartment as ApartmentIcon,
+  BusinessCenter as BusinessCenterIcon,
   Description as DescriptionIcon,
   Drafts as DraftsIcon,
   Groups as GroupsIcon,
@@ -43,6 +44,8 @@ const NavBar = () => {
         { label: "About JNTU-GV", path: "/about-us/about-jntugv" },
         { label: "Vision", path: "/about-us/vision" },
         { label: "Mission", path: "/about-us/mission" },
+        {label: "University Best Practices", path: "/university/best-practices"},
+        // { label: "Cells and Committees", path: "/university/cells-and-committees" },
       ],
     },
     {
@@ -55,7 +58,6 @@ const NavBar = () => {
         { label: "Registrar", path: "/administration/registrar" },
         { label: "Chairpersons", path: "/administration/chairpersons" },
         { label: "Officer on Special Duty (OSD)", path: "/administration/osd" },
-        // Add more sub-items as needed
       ],
     },
     {
@@ -81,7 +83,6 @@ const NavBar = () => {
           label: "Academic Regulations",
           path: "/academics/academic-regulations",
         },
-        // Add more sub-items as needed
       ],
     },
     {
@@ -93,7 +94,8 @@ const NavBar = () => {
           label: "Academic Audit and Planning",
           path: "/directorates/academic-audit-planning",
         },
-        { label: "Evaluation & Admissions", path: "/directorates/evaluation" },
+        {label: "Admissions", path: "/directorates/admissions"},
+        { label: "Evaluation", path: "/directorates/evaluation" },
         { label: "Research & Development", path: "/directorates/research" },
         {
           label: "Industrial Relations & Placements",
@@ -114,10 +116,6 @@ const NavBar = () => {
       label: " EXAMINATIONS",
       path: "/examination",
       subItems: [
-        {
-          label: "Director of Evaluation",
-          path: "/examination/director",
-        },
         {
           label: "Controller of Examinations",
           path: "/examination/controller",
@@ -165,7 +163,7 @@ const NavBar = () => {
     },
 
     {
-      icon: <GroupsIcon />,
+      icon: <BusinessCenterIcon />,
       label: "RECRUITMENT",
       path: "/recruitment",
     },

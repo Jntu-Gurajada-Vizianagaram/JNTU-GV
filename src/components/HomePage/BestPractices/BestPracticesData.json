@@ -1,0 +1,422 @@
+{
+  "institution": {
+    "name": "Jawaharlal Nehru Technological University-Gurajada, Vizianagaram",
+    "shortName": "JNTU-GV",
+    "category": "University Best Practices",
+    "theme": "Employability-Driven, Inclusive, Industry-Integrated & Community-Centered Higher Education",
+    "academicYears": ["2024-25", "2025-26"]
+  },
+
+  "overview": {
+    "title": "JNTU-GV Best Practices",
+    "description": "JNTU-GV is transforming higher education through industry-integrated employability ecosystems, experiential learning, multidisciplinary skilling, MSME engagement, community outreach, and sustainable development initiatives aligned with NEP 2020, SDGs, and Industry 5.0.",
+    "vision": "To position JNTU-GV as a national model for employability-driven, inclusive, innovation-oriented, and future-ready higher education.",
+    "focusAreas": [
+      "Employability",
+      "Industry Collaboration",
+      "MSME Integration",
+      "Experiential Learning",
+      "Artificial Intelligence",
+      "Community Development",
+      "Sustainable Development Goals",
+      "Innovation & Entrepreneurship",
+      "Future-Ready Education"
+    ]
+  },
+
+  "institutionalImpact": {
+    "activeMoUs": "45+",
+    "certificationPrograms": "38",
+    "annualBeneficiaries": "4000+",
+    "placementTarget": "80%+",
+    "employabilityImprovement": "30%",
+    "internshipImplementation": "100%"
+  },
+
+  "bestPractices": [
+    {
+      "id": "bp-01",
+      "category": "Employability & Industry Integration",
+      "title": "Integrated Job, Industry, and MSME-Driven Employability Ecosystem",
+      "slug": "integrated-job-industry-msme-driven-employability-ecosystem",
+      "icon": "BriefcaseBusiness",
+      "themeColor": "#0F4C81",
+      "academicYear": "2025-26",
+      "featured": true,
+
+      "shortDescription": "A comprehensive employability ecosystem integrating industry partnerships, MSME engagement, certification-driven skilling, and centralized career opportunities for students and unemployed youth.",
+
+      "objectives": [
+        "Strengthen industry-academia collaboration",
+        "Provide centralized access to jobs and internships",
+        "Promote MSME-based industrial exposure",
+        "Enhance workforce readiness",
+        "Expand inclusive employability support"
+      ],
+
+      "initiatives": [
+        {
+          "title": "Centralized Job & Opportunities Portal",
+          "description": "Unified digital platform providing real-time access to jobs, internships, apprenticeships, and certification-linked opportunities."
+        },
+        {
+          "title": "Opportunity Horizon Initiative",
+          "description": "Inclusive employability outreach for MBA, MCA, M.Pharm, B.Tech, B.Pharm, B.Sc, B.Com, BCA, BBM, Diploma, and ITI students."
+        },
+        {
+          "title": "Industry Collaborations",
+          "description": "Established 45+ MoUs with NASSCOM, EXCELR, MSME partners, NIRMAAN Organization, and Torch Fintech India Ltd."
+        },
+        {
+          "title": "MSME Integration",
+          "description": "Hands-on industrial exposure, entrepreneurship support, and technology transfer initiatives."
+        },
+        {
+          "title": "Certification-Driven Skilling",
+          "description": "Conducted 38 certification courses in Generative AI, AWS, Cyber Security, IoT, and Entrepreneurial Skills."
+        }
+      ],
+
+      "statistics": [
+        {
+          "label": "Industry MoUs",
+          "value": "45+"
+        },
+        {
+          "label": "Certification Courses",
+          "value": "38"
+        },
+        {
+          "label": "Annual Beneficiaries",
+          "value": "4000+"
+        },
+        {
+          "label": "Placement Goal",
+          "value": "80%+"
+        }
+      ],
+
+      "technologies": [
+        "Generative AI",
+        "AWS",
+        "Cyber Security",
+        "IoT",
+        "Entrepreneurship"
+      ],
+
+      "partners": [
+        "NASSCOM",
+        "EXCELR",
+        "NIRMAAN Organization",
+        "Torch Fintech India Ltd.",
+        "MSME Sector Partners"
+      ],
+
+      "outcomes": [
+        "Enhanced workforce readiness",
+        "Strengthened industry-academia collaboration",
+        "Expanded employability access",
+        "Improved multidisciplinary skilling",
+        "Regional skill development"
+      ],
+
+      "sdgAlignment": [
+        "SDG 4",
+        "SDG 8",
+        "SDG 10"
+      ]
+    },
+
+    {
+      "id": "bp-02",
+      "category": "Experiential Learning & Innovation",
+      "title": "Experiential Learning, Internship, and Community Engagement Model",
+      "slug": "experiential-learning-internship-community-engagement-model",
+      "icon": "Laptop2",
+      "themeColor": "#00695C",
+      "academicYear": "2025-26",
+      "featured": true,
+
+      "shortDescription": "An experiential and innovation-driven learning framework integrating practical exposure, in-house internships, infrastructure engagement, and AI-enabled smart campus development.",
+
+      "objectives": [
+        "Promote hands-on technical learning",
+        "Integrate practical exposure into academics",
+        "Encourage real-world problem solving",
+        "Develop innovation-driven learning ecosystems",
+        "Enhance community engagement"
+      ],
+
+      "initiatives": [
+        {
+          "title": "Campus Civil Maintenance Participation",
+          "description": "B.Tech Civil Engineering students actively participated in campus civil maintenance and infrastructure-related works."
+        },
+        {
+          "title": "AI-Enabled Hostel Management System",
+          "description": "B.Tech IT students developed an AI-enabled Hostel Management System for smart monitoring, grievance handling, automation, and resource management."
+        },
+        {
+          "title": "Experiential Learning-Based Programs",
+          "description": "Strengthened implementation of in-house internships and practical learning-oriented degree programs."
+        },
+        {
+          "title": "Innovation & Smart Campus Initiatives",
+          "description": "Promoted practical application of Artificial Intelligence and automation for campus development."
+        }
+      ],
+
+      "statistics": [
+        {
+          "label": "Internship Implementation",
+          "value": "100%"
+        },
+        {
+          "label": "Innovation Projects",
+          "value": "Multiple"
+        },
+        {
+          "label": "Student Engagement",
+          "value": "High"
+        }
+      ],
+
+      "technologies": [
+        "Artificial Intelligence",
+        "Automation",
+        "Smart Monitoring",
+        "Infrastructure Management"
+      ],
+
+      "outcomes": [
+        "Enhanced hands-on technical skills",
+        "Improved real-time problem-solving abilities",
+        "Strengthened practical infrastructure exposure",
+        "Promoted innovation-driven learning",
+        "Enabled smart campus development"
+      ],
+
+      "sdgAlignment": [
+        "SDG 4",
+        "SDG 8",
+        "SDG 9"
+      ]
+    },
+
+    {
+      "id": "bp-03",
+      "category": "Multidisciplinary Skilling",
+      "title": "Multidisciplinary, Certification-Driven, and Inclusive Skilling Framework",
+      "slug": "multidisciplinary-certification-driven-inclusive-skilling-framework",
+      "icon": "GraduationCap",
+      "themeColor": "#6A1B9A",
+      "academicYear": "2025-26",
+      "featured": true,
+
+      "shortDescription": "A multidisciplinary and future-oriented skilling framework integrating emerging technologies, legal awareness, certification programs, and inclusive learning ecosystems.",
+
+      "objectives": [
+        "Promote interdisciplinary learning",
+        "Integrate technology with legal and ethical dimensions",
+        "Enhance future-ready competencies",
+        "Strengthen multidisciplinary education",
+        "Encourage inclusive certification-driven skilling"
+      ],
+
+      "initiatives": [
+        {
+          "title": "PG Certification Programme in AI, Technology & Law",
+          "description": "Introduced an interdisciplinary postgraduate certification course integrating Artificial Intelligence, emerging technologies, legal frameworks, and ethics."
+        },
+        {
+          "title": "Certification-Based Learning",
+          "description": "Expanded certification-driven education aligned with Industry 5.0 and future technologies."
+        },
+        {
+          "title": "Multidisciplinary Education Framework",
+          "description": "Integrated flexible and interdisciplinary learning opportunities across academic disciplines."
+        }
+      ],
+
+      "statistics": [
+        {
+          "label": "Interdisciplinary Programs",
+          "value": "Multiple"
+        },
+        {
+          "label": "Future Technology Domains",
+          "value": "AI & Emerging Tech"
+        }
+      ],
+
+      "technologies": [
+        "Artificial Intelligence",
+        "Legal Technology",
+        "Digital Ethics",
+        "Industry 5.0"
+      ],
+
+      "outcomes": [
+        "Enhanced interdisciplinary knowledge",
+        "Improved technology awareness",
+        "Strengthened legal and ethical understanding",
+        "Prepared learners for AI-driven ecosystems"
+      ],
+
+      "sdgAlignment": [
+        "SDG 4",
+        "SDG 8",
+        "SDG 9",
+        "SDG 10"
+      ]
+    },
+
+    {
+      "id": "bp-04",
+      "category": "Community Development & Well-Being",
+      "title": "Vidyanjali Community Outreach & SDG-Driven Well-Being Initiative",
+      "slug": "vidyanjali-community-outreach-and-sdg-driven-wellbeing",
+      "icon": "HeartHandshake",
+      "themeColor": "#0F766E",
+      "academicYear": "2025-26",
+      "featured": true,
+
+      "shortDescription": "A community-centered outreach initiative integrating education, health awareness, environmental sustainability, and social responsibility through Vidyanjali and public engagement programs.",
+
+      "objectives": [
+        "Promote social responsibility among students and stakeholders",
+        "Support community wellbeing and public health awareness",
+        "Strengthen school-community engagement",
+        "Encourage sustainable development practices"
+      ],
+
+      "initiatives": [
+        {
+          "title": "Vidyanjali Volunteer Program",
+          "description": "Community volunteers engaged with government schools to promote health awareness, hygiene education, digital literacy, and science workshops."
+        },
+        {
+          "title": "Career Guidance & Educational Support",
+          "description": "Conducted career guidance sessions and improved learning environments for school students."
+        },
+        {
+          "title": "Walk with Nature Initiative",
+          "description": "Weekly JNTU-GV Health Hour initiative promoting physical fitness, mental well-being, and ecological awareness."
+        },
+        {
+          "title": "Environmental Sustainability Activities",
+          "description": "Tree plantation drives, green campus initiatives, waste management awareness, and environmental conservation programs."
+        }
+      ],
+
+      "statistics": [
+        {
+          "label": "SDG Focus Areas",
+          "value": "3+"
+        },
+        {
+          "label": "Community Outreach Programs",
+          "value": "Multiple"
+        }
+      ],
+
+      "outcomes": [
+        "Improved community health awareness",
+        "Enhanced student engagement",
+        "Strengthened school-community relationships",
+        "Promoted sustainable campus development"
+      ],
+
+      "sdgAlignment": [
+        "SDG 3",
+        "SDG 4",
+        "SDG 12"
+      ]
+    },
+
+    {
+      "id": "bp-05",
+      "category": "Public Service & Nation Building",
+      "title": "MSME-Based Community Engagement, Public Service & Nation Building",
+      "slug": "msme-based-community-engagement-and-public-service",
+      "icon": "Building2",
+      "themeColor": "#7C3AED",
+      "academicYear": "2025-26",
+      "featured": true,
+
+      "shortDescription": "An MSME-driven community engagement model focused on entrepreneurship awareness, employability, public service, healthcare outreach, and nation-building initiatives.",
+
+      "objectives": [
+        "Support MSME development and entrepreneurship",
+        "Promote public service and nation building",
+        "Enhance employability and business awareness",
+        "Strengthen academia-community linkages"
+      ],
+
+      "initiatives": [
+        {
+          "title": "Pharmaceutical Entrepreneurship Awareness",
+          "description": "Conducted awareness programs on pharmaceutical entrepreneurship and MSME opportunities."
+        },
+        {
+          "title": "MSME Interaction Programs",
+          "description": "Facilitated interactions with local pharmacy owners, MSME stakeholders, and manufacturers."
+        },
+        {
+          "title": "Business Skills & Regulatory Training",
+          "description": "Training sessions on business skills, regulatory compliance, and entrepreneurial development."
+        },
+        {
+          "title": "Health Camps & Medicine Distribution",
+          "description": "Organized free health check-up camps, medicine distribution drives, and community health awareness programs."
+        }
+      ],
+
+      "statistics": [
+        {
+          "label": "Public Service Initiatives",
+          "value": "Active"
+        },
+        {
+          "label": "MSME Awareness Programs",
+          "value": "Regular"
+        }
+      ],
+
+      "outcomes": [
+        "Enhanced entrepreneurial thinking",
+        "Strengthened academia-society linkage",
+        "Improved employability skills",
+        "Promoted ethical healthcare practices"
+      ],
+
+      "sdgAlignment": [
+        "SDG 3",
+        "SDG 4",
+        "SDG 8"
+      ]
+    }
+  ],
+
+  "futureVision": {
+    "title": "Future Roadmap of JNTU-GV",
+    "goals": [
+      "Develop AI-Driven Career Intelligence Ecosystem",
+      "Expand collaborations to 150+ national and international MoUs",
+      "Strengthen MSME ecosystem integration",
+      "Align curriculum with Industry 5.0",
+      "Expand global internships and certification programs",
+      "Strengthen startup incubation and innovation ecosystems",
+      "Promote inclusive skilling aligned with NEP 2020 and SDGs"
+    ]
+  },
+
+  "websiteDisplay": {
+    "homepageFeatured": true,
+    "showStatistics": true,
+    "showSDGAlignment": true,
+    "enableAnimations": true,
+    "layout": "card-grid",
+    "theme": "modern-university"
+  }
+}

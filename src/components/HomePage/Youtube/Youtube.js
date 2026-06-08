@@ -16,71 +16,51 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import CloseIcon from '@mui/icons-material/Close';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import './Youtube.css';
+import videos from './youtube_vedios.json';
 
-// Videos ordered by latest first (2025 → 2024)
-const videos = [
-  {
-    id: 'nZrDBmIszLI',
-    title: 'JNTUGV- CEV - Annual & Sports Day Celebrations 2025 - Part 1'
-  },
-  {
-    id: 'o6Fku5fkDmw',
-    title: 'JNTU-GV Campus Tour 2026'
-  },
-  {
-    id: 'hRNQfUUPV5c',
-    title: 'JNTU-GV CEV Annual Day Event 2024 (Part 3) 04-04-2025'
-  },
-  {
-    id: 'mCINzWh3AF4',
-    title: 'JNTU-GV CEV Annual Day Event 2024 (Part 2) 04-04-2025'
-  },
-  {
-    id: '9o75Bv05MJs',
-    title: 'JNTU-GV CEV Annual Day Event 2024 (Part 1) 04-04-2025'
-  },
-  {
-    id: 'NVZ9koF6pFY',
-    title: 'JNTU-GV CEV Autonomous Sports Day 2024 (Part 1)'
-  },
-  {
-    id: '_5WjFlrbrZU',
-    title: 'JNTU-GV CEV Autonomous Sports Day 2024 (Part 2)'
-  },
-  {
-    id: 'fxgVpqB43yE',
-    title: 'Motivational Session by Sri VV Lakshmi Narayana (JD) CBI X (JD)'
-  },
-  {
-    id: 'jxxqEBetGZQ',
-    title: 'JNTU-GV Theme Song'
-  },
-  {
-    id: 'qMmk5l2kjeE',
-    title: "Hon'ble Vice-Chancellor's (i/c) Speech on Republic Day (JNTUGV)"
-  },
-  {
-    id: '4HOC6P8N28Q',
-    title: 'Jawaharlal Nehru Technological University - Gurajada Vizianagaram Drone View'
-  }
-];
+const publisherLogos = {
+  'E-TV Andhra Pradesh': 'https://logodix.com/logo/2167692.jpg',
+  'JNTU-GV': 'http://jntugv.edu.in/static/media/jntugvcev.b33bb43b07b2037ab043.jpg'
+};
+
+const getPublisherInitials = (publisher) =>
+  publisher
+    .split(' ')
+    .map((word) => word[0])
+    .join('')
+    .toUpperCase()
+    .slice(0, 3);
+
+const getPublisherLogo = (publisher) => publisherLogos[publisher] || null;
+
+const getYoutubeWatchUrl = (videoId) => `https://www.youtube.com/watch?v=${videoId}`;
+
+const getYoutubeEmbedUrl = (videoId) => {
+  const origin = typeof window !== 'undefined' ? encodeURIComponent(window.location.origin) : '';
+  return `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1${origin ? `&origin=${origin}` : ''}`;
+};
 
 const YouTubeCarousel = () => {
   const [open, setOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
-  const [showAll, setShowAll] = useState(false);
+  const [iframeError, setIframeError] = useState(false);
+  const [showAll] = useState(false);
+
+  const activeVideoData = activeVideo ? videos.find((video) => video.id === activeVideo) : null;
 
   // Show first 3 latest videos initially
   const visibleVideos = showAll ? videos : videos.slice(0, 3);
 
   const handleOpen = (videoId) => {
     setActiveVideo(videoId);
+    setIframeError(false);
     setOpen(true);
   };
 
   const handleClose = () => {
     setOpen(false);
     setActiveVideo(null);
+    setIframeError(false);
   };
 
   // const handleViewAllClick = () => {
@@ -155,12 +135,16 @@ const YouTubeCarousel = () => {
                     <PlayArrowIcon className="play-icon" />
                   </div>
                 </div>
-                {/* YouTube Icon Badge */}
-                <div className="youtube-badge">
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" 
-                    alt="YouTube"
-                  />
+                {/* Publisher Badge */}
+                <div className="publisher-badge" title={`Publisher: ${video.publisher}`}>
+                  {getPublisherLogo(video.publisher) ? (
+                    <img
+                      src={getPublisherLogo(video.publisher)}
+                      alt={video.publisher}
+                    />
+                  ) : (
+                    <span>{getPublisherInitials(video.publisher)}</span>
+                  )}
                 </div>
               </div>
               
@@ -201,17 +185,41 @@ const YouTubeCarousel = () => {
           >
             <CloseIcon />
           </IconButton>
-          {activeVideo && (
-            <Box
-              component="iframe"
-              width="100%"
-              height="60vh"
-              src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
+          {activeVideoData && (
+            <>
+              {!activeVideoData.embedBlocked && !iframeError ? (
+                <Box
+                  component="iframe"
+                  width="100%"
+                  height="60vh"
+                  src={getYoutubeEmbedUrl(activeVideoData.id)}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  onError={() => setIframeError(true)}
+                />
+              ) : (
+                <Box className="embed-blocked-message">
+                  <Typography variant="body1" sx={{ mb: 2 }}>
+                    This video cannot be embedded on this site due to publisher restrictions or playback configuration.
+                    Please open it directly on YouTube.
+                  </Typography>
+                </Box>
+              )}
+              <Button
+                component="a"
+                href={getYoutubeWatchUrl(activeVideoData.id)}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="contained"
+                fullWidth
+                className="watch-on-youtube-button"
+                sx={{ mt: 2 }}
+              >
+                Watch on YouTube
+              </Button>
+            </>
           )}
         </DialogContent>
       </Dialog>

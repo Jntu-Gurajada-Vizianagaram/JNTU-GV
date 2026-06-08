@@ -9,12 +9,6 @@ const websiteData = [
     "image": "DAAP.png",
     "link": "https://daap.jntugv.edu.in/"
   },
-  // {
-  //   "id": 2,
-  //   "title": "Directorate of Academic Audit Cell",
-  //   "image": "DAA.jpg",
-  //   "link": "https://daa.jntugv.edu.in/"
-  // },
   {
     "id": 2,
     "title": "JNTUGV Examination Results",
@@ -41,6 +35,14 @@ const websiteData = [
   },
   {
     "id": 6,
+    "title": "Alumni Relations",
+    "image": "ALUMNI.png",
+    "link": "https://alumni.jntugv.edu.in/"
+  }
+  ,
+
+  {
+    "id": 7,
     "title": "National Service Scheme",
     "image": "NSS.jpg",
     "link": "https://nss.jntugv.edu.in/"
@@ -52,19 +54,19 @@ const websiteData = [
   //   "link": "https://placementcell.jntugv.edu.in/"
   // },
   {
-    "id": 7,
+    "id": 8,
     "title": "Digital Monitoring Cell",
     "image": "DMC.jpg",
     "link": "https://dmc.jntugv.edu.in/"
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Certification Courses",
     "image": "Certification_courses.jpg",
     "link": "https://emergingtechnologiesbyjntugv.netlify.app/"
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "University Best Practices",
     "image": "Best Practices.png",
     "link": "/university/best-practices"

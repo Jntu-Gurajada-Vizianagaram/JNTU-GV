@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Card,
   CardMedia,
@@ -6,68 +6,40 @@ import {
   Typography,
   Box,
   Grid,
-  IconButton,
-  Container,
-  AppBar,
-  Toolbar,
   Button,
-  Tabs,
-  Tab
+  Dialog,
+  DialogContent,
+  IconButton,
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import CloseIcon from '@mui/icons-material/Close';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Link } from 'react-router-dom';
 import './Youtube.css';
+import videos from './youtube_vedios.json';
 
-const videos = [
-  {
-    id: 'nZrDBmIszLI',
-    title: 'JNTUGV- CEV - Annual & Sports Day Celebrations 2025 - Part 1'
-  },
-  {
-    id: 'o6Fku5fkDmw',
-    title: 'JNTU-GV Campus Tour 2026'
-  },
-  {
-    id: 'hRNQfUUPV5c',
-    title: 'JNTU-GV CEV Annual Day Event 2024 (Part 3) 04-04-2025'
-  },
-  {
-    id: 'mCINzWh3AF4',
-    title: 'JNTU-GV CEV Annual Day Event 2024 (Part 2) 04-04-2025'
-  },
-  {
-    id: '9o75Bv05MJs',
-    title: 'JNTU-GV CEV Annual Day Event 2024 (Part 1) 04-04-2025'
-  },
-  {
-    id: 'NVZ9koF6pFY',
-    title: 'JNTU-GV CEV Autonomous Sports Day 2024 (Part 1)'
-  },
-  {
-    id: '_5WjFlrbrZU',
-    title: 'JNTU-GV CEV Autonomous Sports Day 2024 (Part 2)'
-  },
-  {
-    id: 'fxgVpqB43yE',
-    title: 'Motivational Session by Sri VV Lakshmi Narayana (JD) CBI X (JD)'
-  },
-  {
-    id: 'jxxqEBetGZQ',
-    title: 'JNTU-GV Theme Song'
-  },
-  {
-    id: 'qMmk5l2kjeE',
-    title: "Hon'ble Vice-Chancellor's (i/c) Speech on Republic Day (JNTUGV)"
-  },
-  {
-    id: '4HOC6P8N28Q',
-    title: 'Jawaharlal Nehru Technological University - Gurajada Vizianagaram Drone View'
-  }
-];
+const getYoutubeEmbedUrl = (videoId) => {
+  const origin = typeof window !== 'undefined' ? encodeURIComponent(window.location.origin) : '';
+  return `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1${origin ? `&origin=${origin}` : ''}`;
+};
 
 function YoutubeFull() {
+  const [open, setOpen] = useState(false);
+  const [activeVideo, setActiveVideo] = useState(null);
+  const [iframeError, setIframeError] = useState(false);
+
+  const handleOpen = (video) => {
+    setActiveVideo(video);
+    setIframeError(false);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setActiveVideo(null);
+  };
+
   return (
     <Box className="youtube-full-container">
       <Box className="youtube-section youtube-full-width">
@@ -109,7 +81,7 @@ function YoutubeFull() {
                     className="video-thumbnail-full"
                   />
                   <div className="play-overlay">
-                    <div className="play-button">
+                    <div className="play-button" onClick={() => handleOpen(video)}>
                       <PlayArrowIcon className="play-icon" />
                     </div>
                   </div>
@@ -128,10 +100,7 @@ function YoutubeFull() {
                 </CardContent>
 
                 <Button
-                  component="a"
-                  href={`https://www.youtube.com/watch?v=${video.id}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() => handleOpen(video)}
                   fullWidth
                   variant="contained"
                   className="watch-button"
@@ -143,6 +112,47 @@ function YoutubeFull() {
           ))}
         </Grid>
       </Box>
+
+      <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth className="video-dialog">
+        <DialogContent className="dialog-content">
+          <IconButton className="close-button" onClick={handleClose}>
+            <CloseIcon />
+          </IconButton>
+          {activeVideo && (
+            !iframeError ? (
+              <Box
+                component="iframe"
+                width="100%"
+                height="60vh"
+                src={getYoutubeEmbedUrl(activeVideo.id)}
+                title={activeVideo.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                onError={() => setIframeError(true)}
+              />
+            ) : (
+              <Box className="embed-blocked-message">
+                <Typography variant="body1" sx={{ mb: 2 }}>
+                  This video cannot be embedded on this site due to playback configuration or publisher restrictions.
+                  Please open it directly on YouTube.
+                </Typography>
+                <Button
+                  component="a"
+                  href={`https://www.youtube.com/watch?v=${activeVideo.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="contained"
+                  fullWidth
+                  className="watch-on-youtube-button"
+                >
+                  Watch on YouTube
+                </Button>
+              </Box>
+            )
+          )}
+        </DialogContent>
+      </Dialog>
     </Box>
   );
 }

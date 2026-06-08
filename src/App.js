@@ -188,6 +188,7 @@ function App() {
 
           <Route path="/university/coordinators" element={<Coordinators />} />
           <Route path="/university/best-practices" element={<BestPracticesPage />} />
+          <Route path="/university/cells-and-committees" element={<MandatoryDisclosures />} />
           {/* <Route path="/university/bos-chairman" element={<Boschairman />} /> */}
 
 
