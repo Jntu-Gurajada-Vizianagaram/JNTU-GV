@@ -1,63 +1,308 @@
-.recruitment-container-simple {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
+.scroll-notice {
+  --scroll-duration: 18s;
+  background: linear-gradient(90deg, var(--brand-purple), #2b084f);
+  color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  box-shadow: 0 8px 30px rgba(43,8,79,0.08);
 }
 
-.recruitment-header-simple {
-  margin-bottom: 30px;
-  text-align: center;
-  border-bottom: 2px solid #370a68;
-  padding-bottom: 20px;
+.scroll-notice::before {
+  content: "📢";
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
 }
 
-.recruitment-header-simple h1 {
-  color: #370a68;
-  font-weight: bold;
+.scroll-viewport {
+  overflow: hidden;
+  width: 100%;
 }
 
-.recruitment-table-simple {
-  margin-bottom: 40px;
+.scroll-track {
+  display: inline-block;
+  padding-left: 100%;
+  white-space: nowrap;
+  animation: scroll-left var(--scroll-duration) linear infinite;
+  will-change: transform;
 }
 
-.recruitment-table-simple .MuiTableCell-head {
-  background-color: #370a68;
-  color: white;
-  font-weight: bold;
+.scroll-notice:hover .scroll-track,
+.scroll-notice:focus-within .scroll-track {
+  animation-play-state: paused;
 }
 
-.badge-simple {
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.badge-simple.active {
-  background-color: #d4edda;
-  color: #155724;
-}
-
-.badge-simple.closed {
-  background-color: #f8d7da;
-  color: #721c24;
-}
-
-.recruitment-footer-info {
-  background-color: #f8f9fa;
-  padding: 20px;
-  border-radius: 8px;
-  border-left: 5px solid #370a68;
-}
-
-.recruitment-footer-info h6 {
-  color: #370a68;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 600px) {
-  .recruitment-container-simple {
-    margin: 20px auto;
+@media (prefers-reduced-motion: reduce) {
+  .scroll-track {
+    animation: none;
+    transform: none;
+    padding-left: 0;
   }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.apply-banner {
+  background: linear-gradient(135deg, #e8fff0, #f5fff8);
+  border: 1px solid #c6f6d5;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.recruitment-container {
+  padding: 22px 18px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fbfdff;
+  border-radius: 10px;
+}
+
+.recruitment-header {
+  margin-bottom: 18px;
+}
+
+.recruitment-header h4,
+.recruitment-header h2 {
+  margin: 0 0 6px 0;
+}
+
+.recruitment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+
+/* Header centered and styled like Andhra University */
+.recruitment-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.recruitment-header h3,
+.recruitment-header h1 {
+  color: var(--brand-purple);
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.header-divider {
+  height: 3px;
+  background: var(--brand-purple);
+  width: 100%;
+  margin: 18px 0 26px 0;
+}
+
+:root { /* theme variables moved to src/App.css for global consistency */ }
+
+.recruitment-header {
+  border-left: 6px solid var(--primary);
+  padding-left: 14px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.breadcrumb a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.recruitment-card {
+  background: #fff;
+  border: 1px solid rgba(15,23,36,0.06);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 14px 0 14px;
+}
+
+.card-badge {
+  background: rgba(59,13,102,0.08);
+  color: var(--brand-purple);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.card-type {
+  background: rgba(3,43,91,0.04);
+  color: var(--primary);
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.role-badges {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.role-badge.badge-assistant { background: linear-gradient(180deg,#1fb2a8,#0ea38f); }
+.role-badge.badge-associate { background: linear-gradient(180deg,#4aa3ff,#2b83ff); }
+.role-badge.badge-professor { background: linear-gradient(180deg,#d4a017,#b57900); }
+.role-badge.badge-press { background: rgba(0,0,0,0.12); color: #111; }
+.role-badge.badge-detailed { background: linear-gradient(180deg,#f6c84c,#e2a800); color: #111; }
+
+.status-badge.active {
+  background: linear-gradient(90deg, rgba(212,160,23,0.12), rgba(3,43,91,0));
+  color: var(--primary);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.card-body {
+  padding: 14px 16px 16px 16px;
+  flex: 1 1 auto;
+}
+
+.card-title {
+  font-size: 14px;
+  color: #0f1724;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.card-file {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fbfdff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 10px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-file::before {
+  content: "📄";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  padding: 10px 12px 14px 12px;
+  align-items: center;
+}
+
+.card-actions .MuiButton-root {
+  text-transform: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.btn-view {
+  background: transparent;
+  border: 1px solid rgba(59,13,102,0.12);
+  color: var(--brand-purple);
+  flex: 0 0 40%;
+}
+
+.btn-download {
+  background: linear-gradient(180deg, var(--brand-purple), #2b084f);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(59,13,102,0.12);
+  flex: 0 0 60%;
+}
+
+.recruitment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(59,13,102,0.09);
+  border-color: rgba(59,13,102,0.12);
+}
+
+.empty-state {
+  padding: 28px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.apply-banner {
+  background: linear-gradient(135deg, #f7fbff, #ffffff);
+  border: 1px solid rgba(3,43,91,0.06);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Component-specific overrides (kept minimal to use global theme variables) */
+
+@media (max-width: 480px) {
+  .apply-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-title { font-size: 13px; }
+
+  .card-actions { flex-direction: column; gap: 8px; }
+
+  .btn-view, .btn-download { flex: 1 1 auto; width: 100%; }
+}
+
+@media (min-width: 900px) {
+  .card-top { flex-direction: row; align-items: center; }
 }

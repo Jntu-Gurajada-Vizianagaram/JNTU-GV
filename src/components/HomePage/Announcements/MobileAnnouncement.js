@@ -7,6 +7,26 @@ import newGif from "../../../assets/new.gif";
 const staticAnnouncements = [
   {
     id: "static-0",
+    date: "2026-06-08",
+    title: "JNTU-GV Announcement: Faculty Recruitment 2026 in the State Public Universities of Andhra Pradesh Extension of the application timeline by one week. Click here to view details. -- ప్రకటన: జెఎన్‌టీయూ-జీవి నియామక ప్రకటన 2026 - ఆంధ్రప్రదేశ్ రాష్ట్ర ప్రభుత్వ విశ్వవిద్యాలయాలలో ఫ్యాకల్టీ నియామక 2026 కోసం దరఖాస్తు సమయం ఒక వారంతో పొడిగించబడింది. పూర్తి వివరాల కోసం ఇక్కడ క్లిక్ చేయండి.",
+    file_path: "https://api.jntugv.edu.in/media/AP_PressNote_Extension.pdf",
+    external_text: "View Recruitment Details",
+    external_link: "https://jntugv.edu.in/recruitment",
+    main_page: "yes",
+    scrolling: "yes",
+    update_type: "recruitment",
+    update_status: "update",
+    submitted_by: "admin",
+    admin_approval: "accepted",
+    file_link: "",
+    day: 8,
+    month: "Jun",
+    year: 2026,
+    isStatic: true, // Mark as static for identification
+  },
+
+  {
+    id: "static-1",
     date: "2026-05-15",
     title: "JNTU-GV Announcement: Recruitment Notification 2026 for Professor, Associate Professor, Assistant Professor positions were released. Click here to view details. -- ప్రకటన: 2026 సంవత్సరానికి ప్రొఫెసర్, అసోసియేట్ ప్రొఫెసర్, అసిస్టెంట్ ప్రొఫెసర్ ఉద్యోగాల నియామక ప్రకటన విడుదల చేయబడింది. పూర్తి వివరాల కోసం ఇక్కడ క్లిక్ చేయండి.",
     file_path: "",
@@ -26,7 +46,7 @@ const staticAnnouncements = [
 
   },
   {
-    id: "static-1",
+    id: "static-2",
     date: "2026-04-25",
     title: "Connect the Alumni Association of JNTUGV with this Google form",
     file_path: "",
@@ -46,7 +66,7 @@ const staticAnnouncements = [
   },
 
   {
-    "id": "static-2",
+    "id": "static-4",
     "date": "2026-04-17",
     "title": "Registrar - JNTUGV - Request for Sponsorship of Gold Medals for First Convocation - Reg",
     "file_path": "JNTUGV - Request for Sponsorship of Gold Medals_ Cash Awards  for First Convocation.pdf",
