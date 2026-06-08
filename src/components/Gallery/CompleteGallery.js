@@ -26,13 +26,25 @@ function CompleteGallery() {
   const [selectedTitle, setSelectedTitle] = useState('');
   const [selectedDescription, setSelectedDescription] = useState('');
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState('news');
+  
+  const [activeTab, setActiveTab] = useState(() => {
+    const params = new URLSearchParams(location.search);
+    const tabParam = params.get('tab');
+    if (tabParam === 'gallery' || tabParam === 'news') {
+      return tabParam;
+    }
+    return (location.state && location.state.activeTab) || 'news';
+  });
 
   useEffect(() => {
-    if (location.state && location.state.activeTab) {
+    const params = new URLSearchParams(location.search);
+    const tabParam = params.get('tab');
+    if (tabParam === 'gallery' || tabParam === 'news') {
+      setActiveTab(tabParam);
+    } else if (location.state && location.state.activeTab) {
       setActiveTab(location.state.activeTab);
     }
-  }, [location.state]);
+  }, [location]);
 
   useEffect(() => {
     const fetchData = async () => {

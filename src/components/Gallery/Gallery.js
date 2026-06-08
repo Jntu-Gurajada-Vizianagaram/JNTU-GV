@@ -122,7 +122,7 @@ function Gallery() {
       <div className="gallery-actions">
         <button
           className="view-more-btn"
-          onClick={() => navigate("/gallery", { state: { activeTab: "news" } })}
+          onClick={() => navigate("/gallery?tab=news")}
         >
           View Complete Gallery
         </button>

@@ -137,7 +137,7 @@ function ImageGallery() {
               </Carousel>
               
               {/* Floating Full Gallery Trigger */}
-              <Link to="/gallery" state={{ activeTab: "gallery" }} className="floating-gallery-link">
+              <Link to="/gallery?tab=gallery" className="floating-gallery-link">
                 <PhotoLibraryIcon className="trigger-icon" />
                 <span>Explore Full Gallery</span>
                 <ArrowForwardIcon className="arrow-pulse" />
