@@ -23,7 +23,7 @@ jobs:
       - name: Verify Build Locally
         run: |
           npm install
-          npm run build
+          REACT_APP_MAINTENANCE_MODE=true npm run build
 
       - name: Deploy Application via SSH
         uses: appleboy/ssh-action@v1.0.3
@@ -102,7 +102,7 @@ jobs:
 
             echo "Building Production Application"
 
-            if ! npm run build; then
+            if ! REACT_APP_MAINTENANCE_MODE=true npm run build; then
 
               echo "======================================="
               echo "BUILD FAILED - STARTING ROLLBACK"

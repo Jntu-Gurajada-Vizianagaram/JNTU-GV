@@ -14,7 +14,7 @@ import Footer from "./components/MainPage/Footer/Footer";
 import Homepage from "./components/HomePage/Homepage";
 import Sitemap from "./components/MainPage/NavBar/Sitemap";
 import LastUpdated from "./components/MainPage/LastUpdated/LastUpdated";
-
+import MaintenancePage from "./components/Maintenance/MaintenancePage";
 
 const AboutJNTUGV = React.lazy(() => import("./components/MainPage/NavBar/Aboutus/AboutJNTUGV"));
 const AdmissionsOP = React.lazy(() => import("./components/MainPage/NavBar/Academics/Admissions/AdmissionsOP"));
@@ -95,7 +95,13 @@ const YoutubeFull = React.lazy(() => import("./components/HomePage/Youtube/Youtu
 const BestPracticesPage = React.lazy(() => import("./components/HomePage/BestPractices/BestPractices"));
 const Recruitment = React.lazy(() => import("./components/MainPage/NavBar/Recruitment/Recruitment"));
 
+const isMaintenanceMode = process.env.REACT_APP_MAINTENANCE_MODE === 'true';
+
 function App() {
+  if (isMaintenanceMode) {
+    return <MaintenancePage />;
+  }
+
   return (
     <div>
       {/* <BelowBar /> */}
