@@ -38,21 +38,13 @@ const websiteData = [
     "title": "Alumni Relations",
     "image": "ALUMNI.png",
     "link": "https://alumni.jntugv.edu.in/"
-  }
-  ,
-
+  },
   {
     "id": 7,
     "title": "National Service Scheme",
     "image": "NSS.jpg",
     "link": "https://nss.jntugv.edu.in/"
   },
-  // {
-  //   "id": 8,
-  //   "title": "Placements Cell",
-  //   "image": "PLACEMENTS.jpg",
-  //   "link": "https://placementcell.jntugv.edu.in/"
-  // },
   {
     "id": 8,
     "title": "Digital Monitoring Cell",

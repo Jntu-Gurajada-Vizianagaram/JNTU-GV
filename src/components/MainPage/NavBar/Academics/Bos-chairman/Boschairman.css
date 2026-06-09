@@ -1,23 +1,23 @@
 .tableBoschairman {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  min-height: calc(100vh - 200px);
+  max-width: 100%;
+  margin: 0;
+  padding: 16px 12px;
+  min-height: auto;
 }
 
 .bos-header-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-  gap: 20px;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 16px;
 }
 
 .headBoschairman {
   color: #370A68;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 20px;
   margin: 0;
   position: relative;
 }
@@ -25,16 +25,16 @@
 .headBoschairman::after {
   content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: -6px;
   left: 0;
-  width: 60px;
-  height: 4px;
+  width: 40px;
+  height: 3px;
   background-color: #370A68;
   border-radius: 2px;
 }
 
 .searchTextBoschairman {
-  width: 350px;
+  width: 100%;
 }
 
 .search-field-root {
@@ -53,17 +53,57 @@
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  .bos-header-container {
-    flex-direction: column;
-    align-items: flex-start;
+/* Make tables horizontally scrollable on narrow screens */
+.table-paper-root .MuiTable-root,
+.table-paper-root table,
+.searchBoschairman table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-paper-root .MuiTableContainer-root,
+.searchBoschairman .MuiTableContainer-root,
+.table-paper-root,
+.searchBoschairman {
+  overflow-x: auto;
+}
+
+/* Slightly reduce table font on small devices */
+@media screen and (max-width: 420px) {
+  .table-paper-root td, .table-paper-root th {
+    font-size: 13px;
+    padding: 8px 6px;
   }
-  
+}
+
+/* Make search input full width on very small screens */
+@media screen and (max-width: 500px) {
   .searchTextBoschairman {
     width: 100%;
   }
+}
+
+@media screen and (min-width: 769px) {
+  .tableBoschairman {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: calc(100vh - 200px);
+  }
+
+  .bos-header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
 
   .headBoschairman {
-    font-size: 24px;
+    font-size: 28px;
+  }
+
+  .searchTextBoschairman {
+    width: 350px;
   }
 }

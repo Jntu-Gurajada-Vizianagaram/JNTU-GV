@@ -1,12 +1,12 @@
 .allRightContentAOP {
-  margin-top: 20px;
-  padding: 0 40px;
+  margin-top: 12px;
+  padding: 0 16px;
 }
 
 .clgheaddiv {
   color: #370A68;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 20px;
   margin-bottom: 8px;
   position: relative;
 }
@@ -30,9 +30,9 @@
 
 .constituent-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
 }
 
 .constituent-card {
@@ -153,8 +153,18 @@
   background: #2e0669;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
   .allRightContentAOP {
-    padding: 0 20px;
+    padding: 0 40px;
+  }
+
+  .clgheaddiv {
+    font-size: 28px;
+  }
+
+  .constituent-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
   }
 }

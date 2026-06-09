@@ -43,7 +43,7 @@ const AcademicsMain = () => {
 
   return (
     <div className="Academicmain-Main">
-      <div className="allLeftMenuAOP">
+      <aside className="allLeftMenuAOP">
         {menuSections.map((section, idx) => (
           <div key={idx} className="menu-category-section">
             <div className="menu-category-header">{section.title}</div>
@@ -61,8 +61,10 @@ const AcademicsMain = () => {
             </div>
           </div>
         ))}
-      </div>
-      <Outlet />
+      </aside>
+      <main className="academic-content">
+        <Outlet />
+      </main>
     </div>
   );
 };

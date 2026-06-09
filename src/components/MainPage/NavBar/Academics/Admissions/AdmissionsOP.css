@@ -1,10 +1,9 @@
 .allRightContentHolderHeading {
   color: #370A68;
   font-weight: 600;
-  font-size: 26px;
-  width: 400px;
+  font-size: 22px;
+  width: auto;
   margin-top: 10px;
-
 }
 .allRightContentHolderContent h6 {
   /* text-decoration: underline; */
@@ -20,33 +19,31 @@
 }
 
 
-@media (max-width: 767px) {
+/* Mobile-first defaults above. Larger-screen adjustments */
+@media screen and (min-width: 769px) {
   .actualContainer {
-    flex-direction: column;
-    /* margin-left: 4px; */
+    flex-direction: row;
   }
 
   .allRightContentHolder {
-    width: 95%;
+    width: auto;
   }
+
   .allRightContentHolderContent{
-    padding:0 5px 0 0;
+    padding:0 0 0 0;
   }
 
   .allRightContentHolderContent h3 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .allRightContentHolderContent p {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 30px;
   }
-  .allRightContentHolderHeading {
-    font-weight: 600;
-    font-size: 26px;
-    width: auto;
-    margin-top: 10px;
 
-  
+  .allRightContentHolderHeading {
+    font-size: 26px;
+    width: 400px;
   }
 }

@@ -59,7 +59,7 @@ const Chatbot = () => {
               width: '100%',
               height: '100%'
             }}
-            title="GVtron" // Added title for accessibility
+            title="GVtron"
           />
         </div>
       )}
