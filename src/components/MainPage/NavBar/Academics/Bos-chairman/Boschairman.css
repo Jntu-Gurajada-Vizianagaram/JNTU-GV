@@ -53,6 +53,24 @@
   width: 100%;
 }
 
+.table-paper-root .MuiTableContainer-root,
+.table-paper-root .MuiTable-root,
+.table-paper-root table {
+  width: 100%;
+}
+
+.table-paper-root .MuiTableContainer-root {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (max-width: 480px) {
+  .table-paper-root td, .table-paper-root th {
+    font-size: 13px;
+    padding: 8px 6px;
+  }
+}
+
 /* Make tables horizontally scrollable on narrow screens */
 .table-paper-root .MuiTable-root,
 .table-paper-root table,

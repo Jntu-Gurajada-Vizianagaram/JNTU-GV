@@ -150,7 +150,7 @@ const AutonomousColleges = () => {
           </p>
         </div>
         <div className="search-section">
-          <div className="search-bar-wrapper" style={{ width: "60%" }}>
+          <div className="search-bar-wrapper" style={{ width: "100%" }}>
             <TextField
               fullWidth
               placeholder="Search colleges by name, code, district, or year"
@@ -165,6 +165,7 @@ const AutonomousColleges = () => {
               }}
               variant="outlined"
               size="small"
+              sx={{ width: "100%", maxWidth: 400, background: "white" }}
             />
           </div>
         </div>
