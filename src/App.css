@@ -1,5 +1,15 @@
 /*  */
 
+:root {
+  --primary: #032b5b; /* university navy */
+  --accent: #d4a017;  /* university gold */
+  --brand-purple: #3b0d66; /* Andhra University-like header purple */
+  --muted: #6b7280;
+  --surface: #ffffff;
+  --card-border: rgba(3,43,91,0.06);
+  --elev-shadow: 0 12px 30px rgba(3,43,91,0.08);
+}
+
 
 .App {
   text-align: center;

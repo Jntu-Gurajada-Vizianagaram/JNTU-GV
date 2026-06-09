@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ImageModal from "../HomePage/NewsAndEvents/ImageModal";
 import {
   Box,
@@ -18,6 +18,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import './CompleteGallery.css';
 
 function CompleteGallery() {
+  const location = useLocation();
   const [allImages, setAllImages] = useState([]);
   const [carouselArchives, setCarouselArchives] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -25,7 +26,25 @@ function CompleteGallery() {
   const [selectedTitle, setSelectedTitle] = useState('');
   const [selectedDescription, setSelectedDescription] = useState('');
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState('gallery');
+  
+  const [activeTab, setActiveTab] = useState(() => {
+    const params = new URLSearchParams(location.search);
+    const tabParam = params.get('tab');
+    if (tabParam === 'gallery' || tabParam === 'news') {
+      return tabParam;
+    }
+    return (location.state && location.state.activeTab) || 'news';
+  });
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const tabParam = params.get('tab');
+    if (tabParam === 'gallery' || tabParam === 'news') {
+      setActiveTab(tabParam);
+    } else if (location.state && location.state.activeTab) {
+      setActiveTab(location.state.activeTab);
+    }
+  }, [location]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -87,7 +106,7 @@ function CompleteGallery() {
   return (
     <Box className="premium-complete-gallery">
       <div className="gallery-layout-wrapper">
-        
+
         {/* Header Branding Panel */}
         <header className="university-gallery-header">
           <div className="header-branding">
@@ -105,14 +124,14 @@ function CompleteGallery() {
 
         {/* Navigation Control Tabs */}
         <div className="tab-navigation-container">
-          <Tabs 
-            value={activeTab} 
+          <Tabs
+            value={activeTab}
             onChange={(e, newValue) => setActiveTab(newValue)}
             className="modern-pill-tabs"
             centered
           >
-            <Tab label={`Photo Gallery (${allImages.length})`} value="gallery" />
-            <Tab label={`Carousel Archives (${carouselArchives.length})`} value="archives" />
+            <Tab label={`News Articles (${allImages.length})`} value="news" />
+            <Tab label={`Photo Gallery (${carouselArchives.length})`} value="gallery" />
           </Tabs>
         </div>
 
@@ -124,14 +143,14 @@ function CompleteGallery() {
           </Box>
         ) : (
           <main className="gallery-view-viewport">
-            
+
             {/* Active Mode View Tab: Photo Gallery */}
-            {activeTab === 'gallery' && (
+            {activeTab === 'news' && (
               <Box className="view-grid-space animate-fade-in">
                 <Grid container spacing={4}>
                   {allImages.map((imageObj) => (
                     <Grid item xs={12} sm={6} md={4} key={imageObj.id}>
-                      <Card 
+                      <Card
                         className="premium-media-card"
                         onClick={() => handleShowModal(imageObj.image, imageObj.title, imageObj.description)}
                       >
@@ -159,12 +178,12 @@ function CompleteGallery() {
             )}
 
             {/* Active Mode View Tab: Historical Archive */}
-            {activeTab === 'archives' && (
+            {activeTab === 'gallery' && (
               <Box className="view-grid-space animate-fade-in">
                 <Grid container spacing={4}>
                   {carouselArchives.map((imageObj) => (
                     <Grid item xs={12} sm={6} md={4} key={imageObj.id}>
-                      <Card 
+                      <Card
                         className="premium-media-card archive-variant-card"
                         onClick={() => handleShowModal(imageObj.image, imageObj.title, imageObj.description)}
                       >
@@ -196,7 +215,7 @@ function CompleteGallery() {
                 </Grid>
               </Box>
             )}
-            
+
           </main>
         )}
       </div>

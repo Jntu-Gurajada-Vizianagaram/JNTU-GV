@@ -178,6 +178,7 @@ function App() {
 
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/recruitment" element={<Recruitment />} />
+          <Route path="/recruitments" element={<Recruitment />} />
           <Route path="/grievance-form" element={<Grievance />} />
           <Route path="/news-and-events" element={<NewsAndEvents />} />
           <Route path="/gallery" element={<CompleteGallery />} />

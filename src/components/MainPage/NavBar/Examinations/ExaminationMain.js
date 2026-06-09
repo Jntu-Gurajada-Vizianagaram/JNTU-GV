@@ -8,13 +8,13 @@ const ExaminationMain = () => {
   return (
     <div className="exam-container">
       <div className="exam-left-menu">
-        <Link
+        {/* <Link
           to="director"
           className={`exam-item-link ${location.pathname === "/examination/director" ? "active" : ""
             }`}
         >
           Director Of Evaluation
-        </Link>
+        </Link> */}
         <Link
           to="controller"
           className={`exam-item-link ${location.pathname === "/examination/controller" ? "active" : ""
@@ -29,6 +29,14 @@ const ExaminationMain = () => {
         >
           Addt. Controller Of Examinations SDC
         </Link>
+        <Link
+          to="controller1"
+          className={`exam-item-link ${location.pathname === "/examination/controller1" ? "active" : ""
+            }`}
+        >
+          Addt. Controller Of Examinations 1
+        </Link>
+
         <Link
           to="controller2"
           className={`exam-item-link ${location.pathname === "/examination/controller2" ? "active" : ""

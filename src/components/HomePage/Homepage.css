@@ -9,3 +9,92 @@
     }
     
 }
+
+
+.homepage-recruitment-cta {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, rgba(3, 43, 91, 0.02) 0%, rgba(59, 13, 102, 0.04) 100%);
+    border: 1px solid rgba(3, 43, 91, 0.08);
+    border-left: 5px solid var(--accent);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 12px;
+    gap: 16px;
+    box-shadow: 0 8px 20px rgba(3, 43, 91, 0.05);
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.homepage-recruitment-cta .cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-width: 0;
+}
+
+.homepage-recruitment-cta .cta-content h3 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--primary);
+}
+
+.homepage-recruitment-cta .cta-content p {
+    margin: 0;
+    color: #475569;
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+.homepage-recruitment-cta .cta-link {
+    background: linear-gradient(135deg, var(--brand-purple), #260548);
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(59, 13, 102, 0.15);
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.homepage-recruitment-cta .cta-link:hover,
+.homepage-recruitment-cta .cta-link:focus-visible {
+    background: linear-gradient(135deg, #4b1280, #31085c);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(59, 13, 102, 0.22);
+}
+
+@media (min-width: 768px) {
+    .homepage-recruitment-cta {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 24px 32px;
+        margin: 30px auto;
+        max-width: 1100px;
+        gap: 24px;
+    }
+
+    .homepage-recruitment-cta .cta-content h3 {
+        font-size: 22px;
+    }
+
+    .homepage-recruitment-cta .cta-content p {
+        font-size: 14.5px;
+    }
+
+    .homepage-recruitment-cta .cta-link {
+        width: auto;
+        min-width: 170px;
+    }
+}

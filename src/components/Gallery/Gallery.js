@@ -22,7 +22,7 @@ function Gallery() {
       try {
         const response = await fetch("https://api.jntugv.edu.in/api/gallery/all-gallery-images");
         const data = await response.json();
-        
+
         const allImages = data.map(photo => {
           const rawDescription = photo.description || "";
           const fallbackTitle = rawDescription.split(/\r?\n/)[0] || "";
@@ -120,13 +120,13 @@ function Gallery() {
       />
 
       <div className="gallery-actions">
-              <button 
-                className="view-more-btn"
-                onClick ={() => navigate("/gallery")}
-              >
-               View Complete Gallery
-              </button>
-            </div>
+        <button
+          className="view-more-btn"
+          onClick={() => navigate("/gallery?tab=news")}
+        >
+          View Complete Gallery
+        </button>
+      </div>
     </div>
   );
 }
