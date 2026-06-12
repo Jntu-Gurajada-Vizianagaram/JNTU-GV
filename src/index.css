@@ -22,3 +22,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html, body {
+  min-height: 100%;
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+img, svg, picture, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+a {
+  word-break: break-word;
+}
+
+.container, .content-wrapper, .section-wrapper {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  padding: 0 1rem;
+}

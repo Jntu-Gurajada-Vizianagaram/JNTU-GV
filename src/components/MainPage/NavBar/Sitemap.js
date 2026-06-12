@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const dropdownItems = [
   {
     label: "Home",
-    path: "https//jntugv.edu.in",
+    path: "https://jntugv.edu.in",
   },
   {
     label: "ABOUT US",
@@ -112,68 +112,103 @@ const dropdownItems = [
 
 const Sitemap = () => {
   return (
-    <div className="sitemap-container">
+    <main className="sitemap-container">
       <style>
         {`
           .sitemap-container {
-            padding: 40px;
+            padding: 40px 24px;
             font-family: Arial, sans-serif;
-          }
-          .sitemap-section {
-            margin-bottom: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
           }
           .sitemap-title {
-            font-size: 1.8rem;
-            font-weight: bold;
+            font-size: clamp(2rem, 4vw, 2.6rem);
+            margin-bottom: 1rem;
             color: #4a148c;
-            margin-bottom: 10px;
+          }
+          .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 24px;
+          }
+          .sitemap-section {
+            padding: 1rem;
+            background: #fff;
+            border: 1px solid rgba(59, 13, 102, 0.08);
+            border-radius: 14px;
+            box-shadow: 0 10px 24px rgba(59, 13, 102, 0.05);
+          }
+          .sitemap-section-title {
+            margin: 0 0 0.75rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #2e0669;
           }
           .sitemap-links {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
-          }
-          .sitemap-links li {
-            margin-bottom: 8px;
+            margin: 0;
+            display: grid;
+            gap: 0.5rem;
           }
           .sitemap-links a {
             text-decoration: none;
             color: #333;
-            font-size: 1rem;
-            transition: color 0.3s ease;
+            font-size: 0.95rem;
+            transition: color 0.25s ease;
+            display: inline-block;
+            width: 100%;
           }
           .sitemap-links a:hover {
             color: #4a148c;
           }
+          .sitemap-links li {
+            margin: 0;
+          }
+          .sitemap-empty {
+            min-height: 1rem;
+          }
+          @media (max-width: 767px) {
+            .sitemap-container {
+              padding: 24px 16px;
+            }
+          }
         `}
       </style>
-      <h1>Sitemap</h1>
-      {dropdownItems.map((section, index) => (
-        <div key={index} className="sitemap-section">
-          {/* Render section title */}
-          <li className="">{section.label}</li> 
-
-          {/* Conditionally render sub-items if they exist */}
-          {section.subItems ? (
-            <ul className="sitemap-links">
-              {section.subItems.map((item, subIndex) => (
-                <li key={subIndex}>
-                  {/* Conditional rendering for internal and external links */}
-                  {item.path.startsWith("http") ? (
-                    <a href={item.path} target="_blank" rel="noopener noreferrer">
-                      {item.label}
-                    </a>
-                  ) : (
-                    <Link to={item.path}>{item.label}</Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p></p> // Placeholder text for empty sections
-          )}
-        </div>
-      ))}
-    </div>
+      <h1 className="sitemap-title">Sitemap</h1>
+      <div className="sitemap-grid">
+        {dropdownItems.map((section) => (
+          <section key={section.label} className="sitemap-section">
+            <h2 className="sitemap-section-title">{section.label}</h2>
+            {section.subItems?.length ? (
+              <ul className="sitemap-links">
+                {section.subItems.map((item) => (
+                  <li key={item.label}>
+                    {item.path ? (
+                      item.path.startsWith("http") ? (
+                        <a href={item.path} target="_blank" rel="noopener noreferrer">
+                          {item.label}
+                        </a>
+                      ) : (
+                        <Link to={item.path}>{item.label}</Link>
+                      )
+                    ) : (
+                      <span>{item.label}</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            ) : section.path ? (
+              <p>
+                <Link to={section.path}>{section.path}</Link>
+              </p>
+            ) : (
+              <div className="sitemap-empty" />
+            )}
+          </section>
+        ))}
+      </div>
+    </main>
   );
 };
 

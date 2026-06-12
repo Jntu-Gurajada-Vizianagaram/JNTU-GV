@@ -12,6 +12,7 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   height: auto;
+  flex-wrap: wrap;
 }
 
 button {
@@ -48,9 +49,20 @@ button {
   color: #ffffff;
 }
 
+.dropbtn {
+  cursor: pointer;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
+}
+
+.dropdown:focus-within .dropdown-content {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .dropdown-content {

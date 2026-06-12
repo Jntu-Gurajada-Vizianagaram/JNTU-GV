@@ -6,8 +6,10 @@
 
 .rp-imagescroll {
   display: flex;
-  overflow-x: scroll;
-  width: 100vw;
+  overflow-x: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  gap: 8px;
 }
 
 .rp-thumbnail {
@@ -15,6 +17,7 @@
   padding: 5px;
   margin: 5px;
   border: 1px solid #ccc;
+  flex: 0 0 auto;
 }
 .back-to-home{
   padding-left: 10px;

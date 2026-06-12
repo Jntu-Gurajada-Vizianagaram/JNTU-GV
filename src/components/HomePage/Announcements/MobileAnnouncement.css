@@ -5,15 +5,17 @@
   overflow: hidden;
   width: 100%;
   position: relative;
-  height: 40px;
+  height: clamp(36px, 7vw, 40px);
   margin: 0;
 }
+
 .new-icon {
-  height: 25px;
-  width: 50px;
-  margin-left: 6px;
+  height: clamp(20px, 4vw, 25px);
+  width: auto;
+  margin-left: clamp(4px, 1vw, 6px);
   vertical-align: middle;
 }
+
 /* Container for the scrolling line */
 .ticker-container {
   width: 100%;
@@ -22,26 +24,21 @@
   display: flex;
   align-items: center;
   background-color: #fff;
-  height: 40px;
+  height: 100%;
 }
 
 /* Scrolling content */
 .ticker-content {
   display: flex;
   white-space: nowrap;
-  animation: ticker-scroll 220s linear infinite; /* slower scroll */
+  animation: ticker-scroll 220s linear infinite;
   will-change: transform;
-}
-
-/* Pause the scroll when hovered */
-.ticker-container:hover .ticker-content {
-  animation-play-state: paused;
 }
 
 .ticker-item {
   display: inline-block;
-  padding: 0 50px;
-  font-size: 0.95rem;
+  padding: 0 clamp(24px, 4vw, 50px);
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
   color: #340468;
   text-decoration: none;
   font-weight: 500;
@@ -53,7 +50,7 @@
 .ticker-item-static {
   border-left: 3px solid #340468;
   border-right: 3px solid #340468;
-  padding: 0 40px;
+  padding: 0 clamp(20px, 3vw, 40px);
   font-weight: 600;
   color: #340468;
   letter-spacing: 0.3px;
@@ -61,15 +58,10 @@
 
 .expiry-label {
   display: inline-block;
-  margin-left: 8px;
-  font-size: 0.78rem;
+  margin-left: 6px;
+  font-size: clamp(0.65rem, 1.5vw, 0.78rem);
   color: #6e00a3;
   vertical-align: middle;
-}
-
-.ticker-item:hover {
-  color: #007bff;
-  text-decoration: underline;
 }
 
 /* Infinite smooth loop */

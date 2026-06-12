@@ -10,66 +10,46 @@
 }
 
 .magazine-news-section {
-  background-color: #ffffff; /* Warm upscale editorial cream-tint overlay background */
-  padding: 100px 40px;
+  background-color: #ffffff;
+  padding: clamp(40px, 8vw, 100px) clamp(20px, 5vw, 40px);
   font-family: "Inter", sans-serif;
   color: var(--editorial-ink);
 }
 
 .magazine-container {
-  max-width: 1350px;
+  max-width: min(1350px, 100%);
   margin: 0 auto;
+  width: 100%;
+  padding: 0 8px;
 }
 
-/* --- Premium Editorial Header Area --- */
 .magazine-header-block {
   text-align: left;
-  margin-bottom: 70px;
-  max-width: 800px;
-}
-
-.accent-pill-indicator {
-  display: inline-block;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  color: #ffffff;
-  background-color: var(--editorial-purple);
-  padding: 6px 16px;
-  border-radius: 4px;
-  margin-bottom: 20px;
+  margin-bottom: clamp(40px, 8vw, 70px);
+  max-width: 100%;
 }
 
 .magazine-title {
-  font-family: "Cinzel", serif; /* Gives the heading a premium academic feel */
-  font-size: 3.2rem;
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
   font-weight: 700;
   color: var(--editorial-purple);
   letter-spacing: -0.01em;
   margin: 0 0 16px 0;
 }
 
-.magazine-subtitle {
-  color: var(--editorial-body);
-  font-size: 1.15rem;
-  line-height: 1.6;
-  font-weight: 400;
-  margin: 0 0 25px 0;
-}
-
-.editorial-ruler {
-  height: 2px;
-  width: 100%;
-  background-color: rgba(52, 4, 104, 0.08);
-}
-
-/* --- Master Magazine Split-Grid Viewport Framework --- */
 .magazine-grid-viewport {
   display: grid;
-  grid-template-columns: 52% 48%; /* Imbalances columns for visual interest */
-  gap: 50px;
+  grid-template-columns: 1fr;
+  gap: 40px;
   align-items: start;
+}
+
+@media (min-width: 992px) {
+  .magazine-grid-viewport {
+    grid-template-columns: 52% 48%;
+    gap: 50px;
+  }
 }
 
 /* --- Left Main Showcase Panel: Spotlight Card Layout --- */

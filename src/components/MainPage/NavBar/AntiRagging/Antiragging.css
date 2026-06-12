@@ -1,15 +1,10 @@
-html {
-  scroll-behavior: smooth;
-}
-
-/* Mobile-First: Default styles for mobile devices */
 .Antiragging-Main {
   display: flex;
   flex-direction: column;
   background-color: #f8f9fa;
-  min-height: 100vh;
-  gap: 20px;
-  padding: 16px;
+  min-height: auto;
+  gap: 16px;
+  padding: clamp(12px, 4vw, 16px);
 }
 
 .allLeftMenuAOP {
@@ -19,19 +14,19 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
   z-index: 10;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .allLeftMenuAOP .menubutton {
   width: 100%;
-  max-width: 200px;
-  height: 48px;
+  max-width: 160px;
+  height: auto;
+  padding: 10px 12px;
   flex-shrink: 0;
   border-radius: 8px;
   color: #333;
-  padding: 12px 16px;
   text-align: center;
   border: 2px solid #370a68;
   background: #fff;
@@ -39,7 +34,7 @@ html {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  font-size: 0.95rem;
+  font-size: clamp(0.75rem, 1.5vw, 0.95rem);
 }
 
 .allLeftMenuAOP .menubutton:active,
@@ -50,49 +45,21 @@ html {
   box-shadow: 0 4px 12px rgba(55, 10, 104, 0.15);
 }
 
-.antiragging-content-wrapper {
-  flex: 1;
-  width: 100%;
-}
-
-.antiragging-merged-container {
-  padding: 0 !important;
-  max-width: 100% !important;
-}
-
-.antiragging-main-card {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
-  border-radius: 12px !important;
-  overflow: hidden;
-  background: #fff;
-}
-
-.antiragging-banner-image {
-  height: 200px;
-  object-fit: cover;
-  width: 100%;
-}
-
 .antiragging-title {
   color: #370a68;
   font-weight: 700 !important;
-  margin: 24px 0 !important;
+  margin: 16px 0 !important;
   position: relative;
   padding-bottom: 12px;
-  font-size: 1.75rem !important;
+  font-size: clamp(1.3rem, 4vw, 1.75rem) !important;
   text-align: center;
 }
 
-.antiragging-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background-color: #f4c430;
-  border-radius: 2px;
+.antiragging-banner-image {
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .antiragging-section-title {

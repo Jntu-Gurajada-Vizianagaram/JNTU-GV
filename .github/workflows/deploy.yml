@@ -47,6 +47,13 @@ jobs:
             HEALTH_URL_LOCAL=http://127.0.0.1:3000
             HEALTH_URL_PUBLIC=https://jntugv.edu.in
 
+            disable_maintenance() {
+              if [ -L "$MAINTENANCE_LINK" ] || [ -f "$MAINTENANCE_LINK" ]; then
+                rm -f "$MAINTENANCE_LINK"
+                echo "Maintenance mode disabled: $MAINTENANCE_LINK"
+              fi
+            }
+
             echo "======================================="
             echo "Starting Production Deployment"
             echo "======================================="
@@ -117,6 +124,7 @@ jobs:
 
               pm2 reload $PM2_NAME || pm2 restart $PM2_NAME
 
+              disable_maintenance
               echo "Rollback Completed"
 
               exit 1
@@ -167,6 +175,7 @@ jobs:
               echo "Deployment Successful"
               echo "======================================="
 
+              disable_maintenance
               rm -rf $BACKUP_DIR
 
             else
@@ -185,6 +194,7 @@ jobs:
 
               pm2 reload $PM2_NAME || pm2 restart $PM2_NAME
 
+              disable_maintenance
               echo "Rollback Completed"
 
               exit 1

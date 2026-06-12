@@ -11,81 +11,61 @@
 
 .executive-board-section {
   background: linear-gradient(180deg, #ffffff 0%, var(--univ-bg-light) 100%);
-  padding: 90px 40px;
+  padding: clamp(40px, 8vw, 90px) clamp(20px, 5vw, 40px);
   font-family: "Inter", sans-serif;
 }
 
 .board-container {
-  max-width: 1300px;
+  max-width: min(1300px, 100%);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: clamp(30px, 6vw, 60px);
+  padding: 0 8px;
 }
 
 /* --- Top Editorial Row Styling --- */
 .board-editorial-panel-top {
   text-align: center;
-  max-width: 700px;
+  max-width: 100%;
   margin: 0 auto;
-}
-
-.editorial-icon-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 54px;
-  height: 54px;
-  background: rgba(52, 4, 104, 0.05);
-  color: var(--univ-purple);
-  border-radius: 12px;
-  margin-bottom: 16px;
-}
-
-.editorial-icon-badge svg {
-  font-size: 1.6rem;
-}
-
-.editorial-tag {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--univ-accent-cyan);
-  margin-bottom: 8px;
 }
 
 .editorial-title {
   font-family: "Poppins", sans-serif;
-  font-size: 2.6rem;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
   font-weight: 800;
   color: var(--univ-purple);
   line-height: 1.2;
-  letter-spacing: -0.02em;
   margin: 0 0 12px 0;
 }
 
 .editorial-lead {
   color: var(--univ-soft-muted);
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
   line-height: 1.6;
   margin-bottom: 20px;
-}
-
-.editorial-decorative-line {
-  width: 60px;
-  height: 4px;
-  background: var(--univ-purple);
-  border-radius: 2px;
-  margin: 0 auto;
 }
 
 /* --- Clean 3-Column Profile Grid Track --- */
 .board-showcase-row-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Forms exactly 3 even tracks across 1 single row */
-  gap: 40px;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .board-showcase-row-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .board-showcase-row-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
 }
 
 .board-member-anchor {

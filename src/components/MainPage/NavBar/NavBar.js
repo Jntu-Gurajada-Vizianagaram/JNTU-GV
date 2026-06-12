@@ -25,9 +25,13 @@ const NavBar = () => {
     setMenuState(!menuState);
   };
 
+  const closeMenu = () => {
+    setMenuState(false);
+  };
+
   const handleNavigation = (path) => {
     navigate(path);
-    setMenuState(false);
+    closeMenu();
   };
 
   const dropdownItems = [
@@ -229,9 +233,10 @@ const NavBar = () => {
     const isExternal = path.startsWith("http");
 
     return isExternal ? (
-      <button > <a className="link-btn" href={path} target="_blank" rel="noopener noreferrer">
-        {label}
-      </a>
+      <button onClick={closeMenu}>
+        <a className="link-btn" href={path} target="_blank" rel="noopener noreferrer">
+          {label}
+        </a>
       </button>
     ) : (
       <button onClick={() => handleNavigation(path)}>
@@ -262,7 +267,7 @@ const NavBar = () => {
                   {item.icon}<span className="ms-2"></span> {item.label}
                 </div>
               ) : (
-                <div className="drop-icon" onClick={handleMenuToggle}>
+                <div className="drop-icon" onClick={closeMenu}>
                   <Link className="px-0 d-flex align-items-center" to={item.path}>
                     {item.icon}<span className="ms-2" ></span>{item.label}
                   </Link>
