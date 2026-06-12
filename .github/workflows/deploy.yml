@@ -109,7 +109,7 @@ jobs:
 
             echo "Building Production Application"
 
-            if ! REACT_APP_MAINTENANCE_MODE=true npm run build; then
+            if npm run build; then
 
               echo "======================================="
               echo "BUILD FAILED - STARTING ROLLBACK"
