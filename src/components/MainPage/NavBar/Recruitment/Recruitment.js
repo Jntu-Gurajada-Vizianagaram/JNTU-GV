@@ -127,7 +127,7 @@ function Recruitment() {
         <div className="scroll-notice" role="status" aria-live="polite" aria-atomic="true">
           <div className="scroll-viewport">
             <div className="scroll-track">
-              Faculty Recruitment–2026: Last date for online application submission and registration fee payment extended to 15-06-2026. Hard copy submission deadline extended to 22-06-2026.
+              Faculty Recruitment–2026: Applications Closed.
             </div>
           </div>
         </div>
@@ -150,8 +150,7 @@ function Recruitment() {
         <div className="apply-banner-content">
           <h2>Faculty Recruitment 2026</h2>
           <p>
-            Online application submission and registration
-            fee payment extended up to 15-06-2026.
+            Applications Closed
           </p>
         </div>
 

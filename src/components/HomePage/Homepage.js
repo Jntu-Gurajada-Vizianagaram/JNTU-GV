@@ -17,25 +17,25 @@ import { Link } from "react-router-dom";
 function Homepage() {
   return (
     <div>
-      <AnnouncementMobile/>
-       <div className="homepage-recruitment-cta">
+      <AnnouncementMobile />
+      <div className="homepage-recruitment-cta">
         <div className="cta-content">
           <h3>Faculty Recruitment 2026</h3>
-          <p>Latest notifications and application details — apply now or view details.</p>
+          <p>Applications are Closed </p>
         </div>
         <Link to="/recruitments" className="cta-link">View Recruitment</Link>
       </div>
       <ImageGallery />
       <AboutUs />
-      <Colleges/>
+      <Colleges />
       <UpdatePanel className="update-panel" />
-     
-      <Portals/>
+
+      <Portals />
       <NewsAndEvents />
 
-     
-      <Youtube/>
-       
+
+      <Youtube />
+
       <Gallery />
       <br />
     </div>

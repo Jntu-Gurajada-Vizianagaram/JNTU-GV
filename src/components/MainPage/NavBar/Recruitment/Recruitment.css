@@ -127,8 +127,13 @@
 }
 
 @keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 @media (min-width: 768px) {
@@ -136,6 +141,7 @@
     flex-direction: row;
     align-items: stretch;
   }
+
   .scroll-notice-label {
     border-radius: 0;
     padding: 0 20px;
@@ -181,6 +187,7 @@
   .recruitment-title {
     font-size: 32px !important;
   }
+
   .recruitment-subtitle {
     font-size: 16px !important;
   }
@@ -245,7 +252,7 @@
     padding: 24px 32px;
     gap: 24px;
   }
-  
+
   .apply-banner-content h2 {
     font-size: 22px;
   }
@@ -359,11 +366,25 @@
   letter-spacing: 0.1px;
 }
 
-.role-badge.badge-assistant { background: linear-gradient(135deg, #1fb2a8, #0ea38f); }
-.role-badge.badge-associate { background: linear-gradient(135deg, #4aa3ff, #2b83ff); }
-.role-badge.badge-professor { background: linear-gradient(135deg, #d4a017, #b57900); }
-.role-badge.badge-press { background: #64748b; }
-.role-badge.badge-detailed { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.role-badge.badge-assistant {
+  background: linear-gradient(135deg, #1fb2a8, #0ea38f);
+}
+
+.role-badge.badge-associate {
+  background: linear-gradient(135deg, #4aa3ff, #2b83ff);
+}
+
+.role-badge.badge-professor {
+  background: linear-gradient(135deg, #d4a017, #b57900);
+}
+
+.role-badge.badge-press {
+  background: #64748b;
+}
+
+.role-badge.badge-detailed {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
 
 .card-body {
   padding: 16px 18px;
@@ -382,7 +403,10 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  height: 65px; /* Fixed height to align cards nicely */
+  text-wrap: wrap;
+  white-space: normal !important;
+  height: 65px;
+  /* Fixed height to align cards nicely */
 }
 
 .card-file {
