@@ -38,23 +38,23 @@ const AntiRaggingContent = () => {
       {
         "Sno": 1,
         "name": "Dr. G. Jaya Suma",
-        "designation": "Registrar",
+        "designation": "Professor of I.T. and Director of A.A.P",
         "role": "Chairperson",
-        "email": "registrar@jntugv.edu.in"
+        "email": "daap@jntugv.edu.in"
       },
       {
         "Sno": 2,
         "name": "Dr. K.C.B. Rao",
-        "designation": "Director of Academic and Planning",
+        "designation": "Processor of E.C.E and Principal of JNTU-GV College of Engineering, Vizianagaram",
         "role": "Convener",
-        "email": "dap@jntugv.edu.in"
+        "email": "principal@jntugvcev.edu.in"
       },
       {
         "Sno": 3,
         "name": "Dr. R. Rajeswara Rao",
-        "designation": "Director of Academic Audit",
+        "designation": "Professor of C.S.E ",
         "role": "Member",
-        "email": "daa@jntugv.edu.in"
+        "email": "raob4u@jntugvcev.edu.in"
       },
       {
         "Sno": 4,
